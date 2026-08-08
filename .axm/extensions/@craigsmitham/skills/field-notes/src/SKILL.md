@@ -15,9 +15,11 @@ description: >
 Operate the field notes practice: declare **subjects** worth observing, and
 triage recorded **notes** into **findings**.
 
-Capture is not this skill's job. The `@craigsmitham/rules/field-notes` rule
-records notes inline during ordinary work. This skill sets up what gets
-recorded and decides what to do with it afterward.
+## Responsibility boundary
+
+The `@craigsmitham/rules/field-notes` rule owns in-situ capture. This skill owns
+subject lifecycle and batch triage; never use it to create a note or judge
+capture eligibility.
 
 Concepts — open before classifying anything under
 `.axm/extensions/@craigsmitham/knowledge/field-notes/src/`:
@@ -28,23 +30,17 @@ retire), and `closure-explainer.md` (triage / promote / close).
 
 - **Dry-run first.** Show the proposed edit; write only after confirm, or when
   the user said "apply".
-- **Never author a note.** Notes come from observed work. Writing one here would
-  fabricate evidence.
 - **Never invent a target condition** the user has not agreed to. Propose;
   do not assert.
 - Respect the host's existing paths and instruction file. Do not impose layout.
 
-## Layout
+## Artifact contract
 
-| Artifact | Location |
+| Artifact | Contract |
 | --- | --- |
-| Active subjects | `## Field note subjects` table in the workspace instruction file |
-| Notes | `field-notes/<subject>/<YYYY-MM-DD>-<key>.md` |
-| Findings | `field-notes/findings/<key>.md` |
-
-The subjects table lives in the human-authored part of the instruction file,
-**outside** any `axm:` managed region. Managed regions are regenerated on every
-rules operation and edits there are lost.
+| Active subjects | `## Field note subjects` in the human-authored part of the workspace instruction file, outside `axm:` managed regions |
+| Observed notes | Read and triage `field-notes/<subject>/<YYYY-MM-DD>-<key>.md` |
+| Findings | Write and maintain `field-notes/findings/<key>.md` |
 
 ## Operations
 

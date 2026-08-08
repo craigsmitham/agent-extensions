@@ -121,6 +121,12 @@ If a secret is exposed, stop publishing and revoke or rotate it first. Removing
 the file or rewriting Git history is secondary and does not undo copies,
 clones, caches, or prior access.
 
+## Field note subjects
+
+| Subject | Mode | Scope | Target condition | Retire when |
+| --- | --- | --- | --- | --- |
+| axm-cli | survey | any session running `axm` | — | a target condition can be stated |
+
 <!-- axm:start region=knowledge-base -->
 ## Knowledge Base
 

@@ -151,10 +151,10 @@ skills:
     owner: "@craigsmitham"
     extensionType: skill
     name: field-notes
-    version: 0.1.0
+    version: 0.1.1
     installedAt: 2026-08-08T14:41:02.229Z
-    updatedAt: 2026-08-08T16:57:06.552Z
-    sourceHash: 92f502604e931a975f4bfc5c51b24bb03829e274fbf6f20ea2cbb88160b94629
+    updatedAt: 2026-08-08T17:42:29.912Z
+    sourceHash: eb50354a2e85c435817d41df03036166a957ef9350d6b622b62f931e4771367d
   author-docs:
     type: workspace
     owner: "@craigsmitham"
