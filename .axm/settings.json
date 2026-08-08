@@ -28,14 +28,6 @@
     "effect-v4-streams": "workspace:@craigsmitham/skills/effect-v4-streams",
     "effect-v4-structured-concurrency": "workspace:@craigsmitham/skills/effect-v4-structured-concurrency",
     "effect-v4-testing": "workspace:@craigsmitham/skills/effect-v4-testing",
-    "author-guide": {
-      "source": "workspace:@craigsmitham/skills/author-guide",
-      "enabled": false
-    },
-    "review-docs": {
-      "source": "workspace:@craigsmitham/skills/review-docs",
-      "enabled": false
-    },
     "improve-whatever": "workspace:@craigsmitham/skills/improve-whatever",
     "field-notes": "workspace:@craigsmitham/skills/field-notes",
     "author-docs": "workspace:@craigsmitham/skills/author-docs",

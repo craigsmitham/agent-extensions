@@ -128,24 +128,6 @@ skills:
     installedAt: 2026-08-08T11:38:45.293Z
     updatedAt: 2026-08-08T11:50:40.085Z
     sourceHash: d11223815110bf6a74ca53e6e9c8b8de44bb74668218cf61976b82e35bff0f23
-  review-docs:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: review-docs
-    version: 0.1.2
-    installedAt: 2026-08-08T11:38:52.899Z
-    updatedAt: 2026-08-08T16:59:46.090Z
-    sourceHash: ba22ad3ef3b1a68a41ccb702a4452cf962acbfab52d932b0d84e31524e6841f6
-  author-guide:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: author-guide
-    version: 0.1.3
-    installedAt: 2026-08-08T11:38:52.906Z
-    updatedAt: 2026-08-08T16:59:45.527Z
-    sourceHash: 23df93f387d5d62af0d05f87350dd28049d499e85d6b28411947559d349d3cb5
   temporal-dates:
     type: workspace
     owner: "@craigsmitham"
@@ -180,8 +162,8 @@ skills:
     name: author-docs
     version: 0.1.0
     installedAt: 2026-08-08T16:11:29.673Z
-    updatedAt: 2026-08-08T16:57:05.452Z
-    sourceHash: 37448ee34385339e86128dc78c91802d89398d82520a910857eff4a612a966f4
+    updatedAt: 2026-08-08T17:20:50.632Z
+    sourceHash: 44c0c866fa9114ea4347ed9f495ca7df164e156afece078aee53da8478d38220
   author-okf:
     type: workspace
     owner: "@craigsmitham"

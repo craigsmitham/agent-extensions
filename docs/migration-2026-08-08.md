@@ -39,6 +39,15 @@ releases from the AXM registry rather than authoring parallel copies.
 verb-first skill naming. The old package remains available but deprecated so
 existing installations continue to resolve and receive a migration notice.
 
+## Subsequent documentation skill consolidation
+
+`@craigsmitham/skills/author-guide` and
+`@craigsmitham/skills/review-docs` were superseded on 2026-08-08 by
+`@craigsmitham/packs/docs` 0.2.0. The pack pairs the documentation knowledge
+bundle with the consolidated `@craigsmitham/skills/author-docs` routing skill.
+The old packages remain available but deprecated so existing installations
+continue to resolve and receive a migration notice.
+
 ## Review performed
 
 - Scanned package content and metadata for credentials, personal identifiers,

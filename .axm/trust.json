@@ -163,22 +163,6 @@
         "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Overall guidance for effective documentation (Diátaxis-inspired); not implementation details\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"docs\",\"documentation\",\"diataxis\",\"guides\",\"authoring\"],\"license\":\"CC-BY-SA-4.0\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/docs\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
       }
     },
-    "skill:review-docs": {
-      "extensionType": "skill",
-      "name": "review-docs",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/review-docs",
-      "resolvedVersion": "0.1.2",
-      "contentIdentity": "ba22ad3ef3b1a68a41ccb702a4452cf962acbfab52d932b0d84e31524e6841f6"
-    },
-    "skill:author-guide": {
-      "extensionType": "skill",
-      "name": "author-guide",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/author-guide",
-      "resolvedVersion": "0.1.3",
-      "contentIdentity": "23df93f387d5d62af0d05f87350dd28049d499e85d6b28411947559d349d3cb5"
-    },
     "knowledge:docs": {
       "extensionType": "knowledge",
       "name": "docs",
@@ -252,7 +236,7 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/author-docs",
       "resolvedVersion": "0.1.0",
-      "contentIdentity": "37448ee34385339e86128dc78c91802d89398d82520a910857eff4a612a966f4"
+      "contentIdentity": "44c0c866fa9114ea4347ed9f495ca7df164e156afece078aee53da8478d38220"
     },
     "knowledge:workflow-automation": {
       "extensionType": "knowledge",
