@@ -1,0 +1,27 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "author-guide",
+  "version": "0.1.1",
+  "description": "Create or revise contributor how-to guides using Diátaxis-oriented docs craft",
+  "keywords": [
+    "docs",
+    "guide",
+    "how-to",
+    "authoring",
+    "documentation",
+    "diataxis"
+  ],
+  "recommendedPacks": [
+    "@craigsmitham/packs/docs"
+  ],
+  "standalone": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/skills/author-guide"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "CC-BY-SA-4.0"
+}

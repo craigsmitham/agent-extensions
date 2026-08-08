@@ -1,0 +1,23 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "temporal-dates",
+  "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/skills/temporal-dates"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "description": "Guides JavaScript date, time, timezone, duration, and calendar code toward the Temporal API",
+  "keywords": [
+    "javascript",
+    "temporal",
+    "date",
+    "time",
+    "timezone",
+    "duration"
+  ]
+}

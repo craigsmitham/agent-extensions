@@ -1,0 +1,43 @@
+{
+  "agents": [
+    "claude-code",
+    "codex",
+    "cursor",
+    "github-copilot-cli",
+    "zed"
+  ],
+  "rulesConfig": {
+    "instructions": {
+      "fileName": "AGENTS.md",
+      "gitignoreAliases": true
+    }
+  },
+  "skills": {
+    "axm": "@agentxm/skills/axm",
+    "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
+    "okf-author": "workspace:@craigsmitham/skills/okf-author",
+    "eval-whatever": "workspace:@craigsmitham/skills/eval-whatever",
+    "effect-v4-async-coordination": "workspace:@craigsmitham/skills/effect-v4-async-coordination",
+    "effect-v4-branded-types": "workspace:@craigsmitham/skills/effect-v4-branded-types",
+    "effect-v4-config": "workspace:@craigsmitham/skills/effect-v4-config",
+    "effect-v4-error-modeling": "workspace:@craigsmitham/skills/effect-v4-error-modeling",
+    "effect-v4-observability": "workspace:@craigsmitham/skills/effect-v4-observability",
+    "effect-v4-optics": "workspace:@craigsmitham/skills/effect-v4-optics",
+    "effect-v4-request-batching-and-cache": "workspace:@craigsmitham/skills/effect-v4-request-batching-and-cache",
+    "effect-v4-resource-safety": "workspace:@craigsmitham/skills/effect-v4-resource-safety",
+    "effect-v4-schema-boundaries": "workspace:@craigsmitham/skills/effect-v4-schema-boundaries",
+    "effect-v4-services-and-layers": "workspace:@craigsmitham/skills/effect-v4-services-and-layers",
+    "effect-v4-streams": "workspace:@craigsmitham/skills/effect-v4-streams",
+    "effect-v4-structured-concurrency": "workspace:@craigsmitham/skills/effect-v4-structured-concurrency",
+    "effect-v4-testing": "workspace:@craigsmitham/skills/effect-v4-testing",
+    "author-guide": "workspace:@craigsmitham/skills/author-guide",
+    "review-docs": "workspace:@craigsmitham/skills/review-docs"
+  },
+  "knowledge": {
+    "docs": "workspace:@craigsmitham/knowledge/docs"
+  },
+  "packs": {
+    "effect-v4": "workspace:@craigsmitham/packs/effect-v4",
+    "docs": "workspace:@craigsmitham/packs/docs"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "eval-whatever",
+  "version": "0.0.3",
+  "description": "Evaluates anything for what is true, honorable, just, pure, lovely, commendable, excellent, and praiseworthy",
+  "keywords": [
+    "evaluation",
+    "quality",
+    "discernment",
+    "excellence",
+    "attention",
+    "philippians",
+    "review"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/skills/eval-whatever"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT"
+}
