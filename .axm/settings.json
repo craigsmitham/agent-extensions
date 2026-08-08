@@ -16,7 +16,6 @@
     "axm": "@agentxm/skills/axm",
     "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
     "okf-author": "workspace:@craigsmitham/skills/okf-author",
-    "eval-whatever": "workspace:@craigsmitham/skills/eval-whatever",
     "effect-v4-async-coordination": "workspace:@craigsmitham/skills/effect-v4-async-coordination",
     "effect-v4-branded-types": "workspace:@craigsmitham/skills/effect-v4-branded-types",
     "effect-v4-config": "workspace:@craigsmitham/skills/effect-v4-config",
@@ -31,7 +30,8 @@
     "effect-v4-structured-concurrency": "workspace:@craigsmitham/skills/effect-v4-structured-concurrency",
     "effect-v4-testing": "workspace:@craigsmitham/skills/effect-v4-testing",
     "author-guide": "workspace:@craigsmitham/skills/author-guide",
-    "review-docs": "workspace:@craigsmitham/skills/review-docs"
+    "review-docs": "workspace:@craigsmitham/skills/review-docs",
+    "improve-whatever": "workspace:@craigsmitham/skills/improve-whatever"
   },
   "knowledge": {
     "docs": "workspace:@craigsmitham/knowledge/docs"

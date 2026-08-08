@@ -24,7 +24,7 @@ expected=(
   skills/effect-v4-streams
   skills/effect-v4-structured-concurrency
   skills/effect-v4-testing
-  skills/eval-whatever
+  skills/improve-whatever
   skills/okf-author
   skills/review-docs
   skills/temporal-dates

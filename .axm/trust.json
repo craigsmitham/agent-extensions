@@ -204,13 +204,13 @@
       "resolvedVersion": "0.0.2",
       "contentIdentity": "2dc10231ad34cea1345d401ec794cfa32497b567cb03ac3af032f40000120afc"
     },
-    "skill:eval-whatever": {
+    "skill:improve-whatever": {
       "extensionType": "skill",
-      "name": "eval-whatever",
+      "name": "improve-whatever",
       "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/eval-whatever",
-      "resolvedVersion": "0.0.3",
-      "contentIdentity": "535f74359cad2cbaac3d14c4b77db8a5117f8497578b3084bc940cb90ebf8abe"
+      "sourceIdentity": "workspace:@craigsmitham/skills/improve-whatever",
+      "resolvedVersion": "0.0.5",
+      "contentIdentity": "2a7002b455b9ff4ae35d719a12d215fc55da9db5eda3c09b502fab6a3da8989a"
     }
   }
 }

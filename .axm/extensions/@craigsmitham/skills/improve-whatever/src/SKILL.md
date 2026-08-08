@@ -1,9 +1,9 @@
 ---
-name: eval-whatever
-description: Evaluate the quality of anything through what is true, honorable, just, pure, lovely, commendable, excellent, and praiseworthy. Use when discerning the worth of an artifact, plan, decision, practice, experience, relationship, system, or other subject; when asking what is good, worthy, excellent, or worth preserving; or when invoking eval-whatever, Philippians 4, Paul's criteria, or "whatever is...". Not for a narrow conformance check whose supplied rubric should control the evaluation.
+name: improve-whatever
+description: Evaluate the quality of anything through what is true, honorable, just, pure, lovely, commendable, excellent, and praiseworthy, then recommend improvements. Use when discerning the worth of an artifact, plan, decision, practice, experience, relationship, system, or other subject; when asking what is good, worthy, excellent, or worth preserving; or when invoking improve-whatever, eval-whatever, Philippians 4, Paul's criteria, or "whatever is...". Not for a narrow conformance check whose supplied rubric should control the evaluation.
 ---
 
-# Eval whatever
+# Improve whatever
 
 Evaluate whatever is presented by attending to what is true, honorable, just,
 pure, lovely, commendable, excellent, and praiseworthy according to the nature
@@ -18,13 +18,19 @@ its source when that source matters.
 ## Evaluate
 
 1. Identify the subject's kind, purpose, audience, constraints, and stakes.
-   Establish what excellence means for this kind of thing. State consequential
-   assumptions; ask only when missing context would materially change the
-   evaluation.
+   Establish what excellence means for this kind of thing, and locate where
+   that knowledge already lives — a standard, tradition, exemplar, or the
+   tooling that produces and checks the kind — then consult what is within
+   reach. State consequential assumptions; ask only when missing context
+   would materially change the evaluation.
 2. Gather domain-appropriate evidence before judging. Inspect, test, measure,
-   or research when the claims require it. Separate observation, inference, and
-   unknowns, noting the source of each: what you inspected, ran, measured, or
-   consulted.
+   or research when the claims require it. When tools can run the subject's
+   own checks — tests, validators, builds, previews — run them and cite their
+   output rather than predicting what they would say. Probe without altering
+   the subject: keep experiments in scratch space, avoid side effects the
+   owner has not sanctioned, and note any state the probing did change.
+   Separate observation, inference, and unknowns, noting the source of each:
+   what you inspected, ran, measured, or consulted.
 3. Begin with what is praiseworthy. Do not let fault-finding make genuine good
    invisible.
 4. Apply each criterion contextually:
@@ -35,7 +41,7 @@ its source when that source matters.
    | Honorable | Is it responsible, well-made, dignified, and worthy of respect? |
    | Just | Is it fair, proportionate, rightly ordered, and considerate of affected parties? |
    | Pure | Is it coherent and uncorrupted by manipulation, contamination, needless complexity, or hidden compromise? |
-   | Lovely | Is it fitting, harmonious, delightful, beautiful, or life-giving for its kind? |
+   | Lovely | Is it fitting, harmonious, delightful, beautiful, or life-giving for its kind — including the experience it creates, directly or through a mediator, for those who receive or use it? |
    | Commendable | Can it responsibly be recommended, celebrated, or offered as an example? |
    | Excellent | How well does it fulfill the standards proper to its kind? |
    | Praiseworthy | What specifically merits recognition, gratitude, imitation, and preservation? |
@@ -76,10 +82,31 @@ Scale the response to the request. Usually provide:
    strengths, weaknesses, tensions, and unknowns.
 4. **Basis** — what was examined and what was not, and which standards or
    authorities supplied the bar, or evaluator judgment where none did.
-5. **Action** — prioritized recommendations using verbs such as preserve,
-   strengthen, correct, remove, investigate, or reconsider.
+5. **Improvements** — one numbered item per finding from Discernment,
+   citing it, ordered by priority.
+
+   - Open by noting that items are independent, not sequential, and that
+     letters are alternative remedies.
+   - Under each item, letter options differing in approach, scope, or
+     ambition; include a keep-as-is option that accepts the defect when
+     reasonable. Write options as nested bullets styled as in the example
+     (markdown does not treat letters as list markers, so bare lettered
+     lines lose their indentation), and mark exactly one option per item
+     as `Recommended:`.
+   - Keep-as-is options belong in Improvements, never in Praiseworthy:
+     Praiseworthy names strengths, while keep-as-is accepts a defect.
+     Propose preservation only when it needs a concrete step.
+   - Close by inviting a reply naming items or options (e.g., "do 1 and 3c").
+
+   ```
+   1. **Redundant phrasing** (Pure — intro repeats the summary):
+      - **a. Recommended:** *Tighten* — cut redundant clauses to half length.
+      - **b.** *Keep as-is* — accept the repetition as emphasis.
+   ```
 6. **Overall judgment** — a concise account of the whole, including confidence
    and the most important tradeoff.
 
-For a small tactical choice, compress this to a few sentences. For a complex or
-high-stakes subject, use a table and show the evidence behind each conclusion.
+For a small tactical choice, compress this to a few sentences and fold
+Improvements into plain recommendations without lettered options. For a complex
+or high-stakes subject, use a table and show the evidence behind each
+conclusion.
