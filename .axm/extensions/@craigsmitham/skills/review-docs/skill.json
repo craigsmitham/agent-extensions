@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "review-docs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Review documentation for type fit, authority, accuracy, and link health",
   "keywords": [
     "docs",
@@ -12,10 +12,6 @@
     "documentation",
     "maintenance"
   ],
-  "recommendedPacks": [
-    "@craigsmitham/packs/docs"
-  ],
-  "standalone": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/craigsmitham/agent-extensions",

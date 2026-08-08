@@ -42,14 +42,35 @@ The public publisher identity `@craigsmitham`, this repository URL, and content
 Craig deliberately publishes under his own name are allowed. That exception
 does not extend to incidental operational or personal detail.
 
-## Portability and package boundaries
+## Extension isolation and package boundaries
 
-- Reference files inside one skill relative to that skill's `src/` root.
-- Use AXM's canonical cross-extension path only for another member of the same
-  pack, and declare the pack in `recommendedPacks`.
+Treat every extension as independently installed. Canonical package content
+must not assume another extension is present merely because it shares an owner,
+repository, workspace, or common installation.
+
+- An extension may reference its own files relative to its `src/` root.
+- Do not name, invoke, delegate to, link to, read from, or otherwise require
+  another extension unless both are direct members of the same pack. This
+  includes extension names, FQNs, canonical paths, agent projections, commands,
+  examples, and routing instructions.
+- A same-pack reference is permitted only when all of these are true:
+  - One pack manifest lists both extensions as direct dependencies.
+  - The referencing extension sets `standalone: false` and names that pack in
+    `recommendedPacks`.
+  - A required file uses AXM's canonical cross-extension path under
+    `.axm/extensions/<@owner>/<plural-type>/<name>/src/`.
+- `recommendedPacks` alone is not proof of co-installation. Neither is a shared
+  owner, repository, workspace, lockfile, trust record, or local installation.
+- Never reference another extension through an agent projection such as
+  `.agents/skills` or `.claude/skills`, a pack-relative path, or `..` traversal.
+- Without a qualifying common pack, keep the extension self-contained, describe
+  an optional capability generically without implying availability, accept the
+  needed input from the caller, or create an intentional pack.
+- Pack manifests may name their dependencies. Package metadata may declare
+  recommended packs. Repository catalogs, migrations, and publishing docs may
+  name packages for distribution purposes, but must not create a runtime or
+  authoring dependency between unrelated extensions.
 - Public packs may depend only on public, active extensions.
-- Do not reference agent projections such as `.agents/skills` or
-  `.claude/skills` from canonical package content.
 - Treat generated AXM state as reviewable content; do not assume manifests,
   lockfiles, trust records, or symlinks are harmless merely because a tool
   produced them.
@@ -77,12 +98,17 @@ Before committing or publishing:
 
 1. Inspect the complete diff, untracked files, generated files, and symlink
    targets.
-2. Run `scripts/check-public-safety.sh`.
-3. Verify provenance, attribution, licenses, and synthetic examples manually;
+2. Audit every changed package for cross-extension references. For each other
+   extension name, FQN, or canonical extension path in package content, prove
+   that it is a direct sibling in a common pack and that the referencing package
+   satisfies the rules above. Current workspace installation state is not
+   evidence; an unexplained reference is a release blocker.
+3. Run `scripts/check-public-safety.sh`.
+4. Verify provenance, attribution, licenses, and synthetic examples manually;
    scanners cannot establish these properties.
-4. Use `axm publish --preview --json` and confirm the exact package and
+5. Use `axm publish --preview --json` and confirm the exact package and
    dependency selection.
-5. Bump every package whose published archive changes. Existing registry
+6. Bump every package whose published archive changes. Existing registry
    versions are immutable.
 
 Publish public packages only from this repository. The private repository may
@@ -103,4 +129,81 @@ clones, caches, or prior access.
 | Bundle | Description |
 | --- | --- |
 | [docs](.axm/extensions/@craigsmitham/knowledge/docs/src/index.md) | Portable documentation craft: *-explainer + *-guide pairs for overall craft and each Diátaxis type, plus workflow remediation and quality theory |
+| [field-notes](.axm/extensions/@craigsmitham/knowledge/field-notes/src/index.md) | Observing work in progress and converting it into durable improvement: work-as-imagined vs work-as-done, survey and target subjects, recurrence thresholds, and verified closure |
+| [workflow-automation](.axm/extensions/@craigsmitham/knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end region=knowledge-base -->
+<!-- axm:start region=rules -->
+<!-- axm:rule @craigsmitham/rules/field-notes@0.1.0 -->
+## Field notes
+
+Record how work actually goes, so recurring obstacles become durable
+improvements instead of repeated friction.
+
+Subjects under observation are declared in the `## Field note subjects` table in
+this file. **If that section is missing or has no rows, this rule is inactive —
+do nothing.**
+
+Recording a field note is expected behavior, not an admission of failure. Notes
+about your own confusion, retries, and improvised workarounds are the most
+valuable kind.
+
+### When to record
+
+While doing ordinary work, if the work falls within a declared subject and any
+of these hold, append one field note:
+
+- What happened differed from what the instructions, docs, or command output led
+  you to expect.
+- You retried, guessed, or searched to get past something.
+- You succeeded by improvising a step no document describes. Record these — an
+  undocumented workaround that worked is a finding, not a non-event.
+- A subject in `target` mode was blocked from its target condition.
+
+Do not record your own typos, a restatement of a note you already wrote this
+session, or speculation with no observed incident behind it.
+
+### How to record
+
+Write one new file per note. Never edit an existing note — a second occurrence
+is a second file, and that recurrence is the signal.
+
+Path: `field-notes/<subject>/<YYYY-MM-DD>-<key>.md`, where `<key>` is a short
+kebab slug of surface and symptom. Use a different root if the subjects section
+names one.
+
+```markdown
+---
+subject: <subject key>
+key: <slug>
+date: <YYYY-MM-DD>
+kind: gap | workaround | blocked
+status: open
+---
+
+**Expected:** what should have happened, and what led you to expect it
+**Actual:** what happened instead
+**Gap:** why the two differed
+**Suggests:** the smallest durable change that would close the gap
+
+Evidence: commands run, exit codes, paths, quoted output.
+```
+
+Report a specific incident with observable detail. A general impression is not a
+field note.
+
+### Stay in the work
+
+Log and continue. Do not investigate the note, fix what it describes, open an
+issue, or discuss it beyond one short line at the end of your response.
+
+Two exceptions:
+
+- What you observed is a live correctness, data-loss, or security problem —
+  raise it now rather than filing it.
+- You are genuinely blocked on ambiguous architecture, data model, or
+  destructive scope — stop and ask, naming the ambiguity in one sentence with
+  two or three options.
+
+To declare subjects, triage notes, or promote them into findings, use the
+`field-notes` skill. Never do that work inline.
+<!-- axm:end region=rules -->

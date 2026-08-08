@@ -19,8 +19,7 @@ units on their own.
 | Extension | Role |
 | --- | --- |
 | `@craigsmitham/knowledge/docs` | `*-explainer` + `*-guide` concepts for documentation craft and each Diátaxis type |
-| `@craigsmitham/skills/author-guide` | Create or revise docs (default how-to) against that craft |
-| `@craigsmitham/skills/review-docs` | Audit docs for type fit, ownership, accuracy, and link health |
+| `@craigsmitham/skills/author-docs` | Create, revise, classify, review, and maintain docs by loading only the relevant craft concepts |
 
 ## Install
 
@@ -37,9 +36,10 @@ axm install
 
 ## Usage
 
-- **Author:** ask for a guide (or tutorial / reference / explanation); dry-run
-  is the default before apply.
-- **Review:** name paths or a change set; dry-run is the default before apply.
+- **Author:** ask to create or revise a guide, tutorial, reference, explanation,
+  README, or other repository documentation.
+- **Review:** ask to classify, audit, refresh, or restructure named paths or a
+  change set.
 - **Doctrine:** open concepts under the `docs` knowledge bundle — for example
   `docs-explainer` / `docs-guide`, `how-to-explainer` / `how-to-guide` (via
   `axm knowledge search` / `axm knowledge open`).
@@ -49,5 +49,4 @@ the quality bar, not a layout standard.
 
 ## License
 
-CC-BY-4.0. Attribute as: "AgentXM docs pack, © AgentXM, CC-BY-4.0" with a link
-to https://agentxm.ai.
+CC-BY-SA-4.0. See the repository for source attribution and provenance.

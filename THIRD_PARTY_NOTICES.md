@@ -13,7 +13,7 @@ material has been reorganized, summarized, and adapted for agent use.
 
 ## Open Knowledge Format
 
-`okf-author/src/references/SPEC.md` is a vendored copy of the
+`author-okf/src/references/SPEC.md` is a vendored copy of the
 [Open Knowledge Format v0.2 specification](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
 from GoogleCloudPlatform's `knowledge-catalog` repository, pinned in the file's
 header to upstream commit `3fcbb9f828c2f23d109c855ee403c3a4c81f3a96` and

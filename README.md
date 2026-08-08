@@ -13,14 +13,21 @@ and are not published from this repository.
 | Pack | Purpose | Install |
 | --- | --- | --- |
 | `effect-v4` | Effect v4 patterns for types, services, failures, resources, schemas, concurrency, streams, testing, and observability | `axm install @craigsmitham/packs/effect-v4` |
-| `docs` | Diátaxis-oriented documentation knowledge plus authoring and review skills | `axm install @craigsmitham/packs/docs` |
+| `docs` | Diátaxis-oriented documentation knowledge plus one consolidated authoring and review skill | `axm install @craigsmitham/packs/docs` |
+| `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
+
+## Standalone knowledge
+
+| Bundle | Purpose | Install |
+| --- | --- | --- |
+| `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |
 
 ## Standalone skills
 
 | Skill | Purpose | Install |
 | --- | --- | --- |
 | `temporal-dates` | JavaScript Temporal type selection, API usage, interoperability, and pitfalls | `axm install @craigsmitham/skills/temporal-dates` |
-| `okf-author` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/okf-author` |
+| `author-okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/author-okf` |
 | `eval-whatever` | Evidence-based evaluation through the lens of Philippians 4:8–9 | `axm install @craigsmitham/skills/eval-whatever` |
 
 ## Layout

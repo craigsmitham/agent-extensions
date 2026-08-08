@@ -1,14 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.1.1",
-  "type": "pack",
-  "name": "docs",
-  "dependencies": {
-    "@craigsmitham/knowledge/docs": "^0.4.0",
-    "@craigsmitham/skills/author-guide": "^0.1.0",
-    "@craigsmitham/skills/review-docs": "^0.1.0"
-  },
+  "version": "0.2.0",
   "description": "Overall guidance for effective documentation (Diátaxis-inspired); not implementation details",
   "keywords": [
     "docs",
@@ -17,11 +10,17 @@
     "guides",
     "authoring"
   ],
-  "license": "CC-BY-SA-4.0",
-  "homepage": "https://github.com/craigsmitham/agent-extensions",
   "repository": {
     "type": "git",
     "url": "https://github.com/craigsmitham/agent-extensions",
     "directory": ".axm/extensions/@craigsmitham/packs/docs"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "CC-BY-SA-4.0",
+  "type": "pack",
+  "name": "docs",
+  "dependencies": {
+    "@craigsmitham/knowledge/docs": "^0.4.0",
+    "@craigsmitham/skills/author-docs": "^0.1.0"
   }
 }

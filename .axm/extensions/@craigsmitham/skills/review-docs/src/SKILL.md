@@ -5,26 +5,17 @@ description: >
   explanation), single source of truth, audience clarity, accuracy, and broken
   links. Use when "docs review", "stale docs", "refresh this guide", or
   pre-merge doc hygiene. Not for trimming always-on agent instruction files
-  (use improve-instructions). Not for creating a new guide from scratch (use
-  author-guide). Not for imposing a folder taxonomy on the host.
+  or creating a new guide from scratch. Not for imposing a folder taxonomy on
+  the host.
 ---
 
 # review-docs
 
 Audit existing documentation and propose (or apply) maintenance fixes.
 
-Shared definitions — open `@craigsmitham/knowledge/docs` concepts before classifying
-findings:
-
-- `docs-explainer` (always)
-- Type **explainers** for job fit: `tutorial-explainer`, `how-to-explainer`,
-  `reference-explainer`, `explanation-explainer`
-- Matching type **guides** when judging structure quality
-  (`tutorial-guide`, `how-to-guide`, `reference-guide`, `explanation-guide`);
-  `docs-guide` for overall authoring process
-
-Companion: `author-guide` creates or restructures guides. Instruction-file
-audit is **`improve-instructions`**.
+Classify each document by its primary job: a tutorial teaches through a learning
+experience, a how-to guide enables a practical goal, reference supports lookup,
+and an explanation builds understanding.
 
 ## Defaults
 
@@ -53,14 +44,14 @@ Confirm: paths or bundle, mode, dry-run vs apply.
 
 ### 2. Load doctrine
 
-Read the `@craigsmitham/knowledge/docs` concepts listed above. Open local
-documentation guidelines if they exist.
+Open local documentation guidelines if they exist. Use only review criteria
+contained here or supplied by the host.
 
 ### 3. Inventory
 
 For each target document:
 
-- Primary type vs `docs-explainer` / type explainers (job fit, not folder path)
+- Primary type by job fit, not folder path
 - Mixing of jobs that should be split or linked
 - Accuracy and link health
 - Overlap with another document that already owns the topic
@@ -87,7 +78,7 @@ Present:
 1. Health one-liner
 2. Findings table — location · class · why · proposed change · risk
 3. Draft patches for refresh/retype modes
-4. Out of scope (needs `author-guide`, design work, or `improve-instructions`)
+4. Out of scope (needs authoring, design, or instruction-file work)
 
 Stop for confirm unless apply was pre-authorized.
 
@@ -110,6 +101,7 @@ On confirm only:
 - Dry-run default; confirm destructive deletes and renames.
 - **Link, do not copy** when fixing duplication.
 - Do not use this skill to rewrite always-on instruction files end-to-end —
-  hand off to `improve-instructions`.
+  hand off to an applicable instruction-authoring capability if one is already
+  available.
 - Portable skill text must not prescribe monorepo paths, command names, or a
   universal docs tree.

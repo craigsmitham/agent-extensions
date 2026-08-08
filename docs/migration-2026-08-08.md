@@ -32,6 +32,13 @@ releases from the AXM registry rather than authoring parallel copies.
 | `@craigsmitham/skills/okf-author` | `0.0.2` |
 | `@craigsmitham/skills/eval-whatever` | `0.0.3` |
 
+## Subsequent package rename
+
+`@craigsmitham/skills/okf-author` was superseded by
+`@craigsmitham/skills/author-okf` on 2026-08-08 to align with the repository's
+verb-first skill naming. The old package remains available but deprecated so
+existing installations continue to resolve and receive a migration notice.
+
 ## Review performed
 
 - Scanned package content and metadata for credentials, personal identifiers,

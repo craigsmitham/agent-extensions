@@ -15,7 +15,6 @@
   "skills": {
     "axm": "@agentxm/skills/axm",
     "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
-    "okf-author": "workspace:@craigsmitham/skills/okf-author",
     "effect-v4-async-coordination": "workspace:@craigsmitham/skills/effect-v4-async-coordination",
     "effect-v4-branded-types": "workspace:@craigsmitham/skills/effect-v4-branded-types",
     "effect-v4-config": "workspace:@craigsmitham/skills/effect-v4-config",
@@ -29,15 +28,30 @@
     "effect-v4-streams": "workspace:@craigsmitham/skills/effect-v4-streams",
     "effect-v4-structured-concurrency": "workspace:@craigsmitham/skills/effect-v4-structured-concurrency",
     "effect-v4-testing": "workspace:@craigsmitham/skills/effect-v4-testing",
-    "author-guide": "workspace:@craigsmitham/skills/author-guide",
-    "review-docs": "workspace:@craigsmitham/skills/review-docs",
-    "improve-whatever": "workspace:@craigsmitham/skills/improve-whatever"
+    "author-guide": {
+      "source": "workspace:@craigsmitham/skills/author-guide",
+      "enabled": false
+    },
+    "review-docs": {
+      "source": "workspace:@craigsmitham/skills/review-docs",
+      "enabled": false
+    },
+    "improve-whatever": "workspace:@craigsmitham/skills/improve-whatever",
+    "field-notes": "workspace:@craigsmitham/skills/field-notes",
+    "author-docs": "workspace:@craigsmitham/skills/author-docs",
+    "author-okf": "workspace:@craigsmitham/skills/author-okf"
+  },
+  "rules": {
+    "field-notes": "workspace:@craigsmitham/rules/field-notes"
   },
   "knowledge": {
-    "docs": "workspace:@craigsmitham/knowledge/docs"
+    "docs": "workspace:@craigsmitham/knowledge/docs",
+    "field-notes": "workspace:@craigsmitham/knowledge/field-notes",
+    "workflow-automation": "workspace:@craigsmitham/knowledge/workflow-automation"
   },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",
-    "docs": "workspace:@craigsmitham/packs/docs"
+    "docs": "workspace:@craigsmitham/packs/docs",
+    "field-notes": "workspace:@craigsmitham/packs/field-notes"
   }
 }

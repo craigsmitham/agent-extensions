@@ -8,9 +8,15 @@ axm lint --strict
 
 expected=(
   knowledge/docs
+  knowledge/field-notes
+  knowledge/workflow-automation
   packs/docs
   packs/effect-v4
+  packs/field-notes
+  rules/field-notes
+  skills/author-docs
   skills/author-guide
+  skills/author-okf
   skills/effect-v4-async-coordination
   skills/effect-v4-branded-types
   skills/effect-v4-config
@@ -24,8 +30,8 @@ expected=(
   skills/effect-v4-streams
   skills/effect-v4-structured-concurrency
   skills/effect-v4-testing
+  skills/field-notes
   skills/improve-whatever
-  skills/okf-author
   skills/review-docs
   skills/temporal-dates
 )
@@ -33,13 +39,13 @@ expected=(
 expected_list="$(printf '%s\n' "${expected[@]}")"
 actual_list="$(
   find .axm/extensions/@craigsmitham -type f \
-    \( -name skill.json -o -name pack.json -o -name knowledge.json \) \
+    \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
     | sed -E 's#^.axm/extensions/@craigsmitham/([^/]+/[^/]+)/.*#\1#' \
     | sort
 )"
 
 if [[ "$expected_list" != "$actual_list" ]]; then
-  echo "Public package inventory differs from the approved 21-package set." >&2
+  echo "Public package inventory differs from the approved 27-package set." >&2
   diff <(printf '%s\n' "$expected_list") <(printf '%s\n' "$actual_list") || true
   exit 1
 fi
@@ -79,13 +85,15 @@ while IFS= read -r manifest; do
     (.repository.directory | startswith(".axm/extensions/@craigsmitham/"))
   ' "$manifest" >/dev/null
 done < <(find .axm/extensions/@craigsmitham -type f \
-  \( -name skill.json -o -name pack.json -o -name knowledge.json \))
+  \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \))
 
 if jq -e '
-  ([.skills | to_entries[] | select(.key != "axm") | .value] +
+  ([.skills | to_entries[] | select(.key != "axm") |
+      (.value | if type == "object" then .source else . end)] +
    [.knowledge | to_entries[] | .value] +
-   [.packs | to_entries[] | .value]) |
-  length == 21 and
+   [.packs | to_entries[] | .value] +
+   [.rules | to_entries[] | .value]) |
+  length == 27 and
   all(type == "string" and startswith("workspace:@craigsmitham/"))
 ' .axm/settings.json >/dev/null; then
   :
@@ -95,5 +103,6 @@ else
 fi
 
 axm knowledge lint --path .axm/extensions/@craigsmitham/knowledge/docs
+axm knowledge lint --path .axm/extensions/@craigsmitham/knowledge/workflow-automation
 
 echo "Public extension safety checks passed."
