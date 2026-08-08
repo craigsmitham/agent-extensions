@@ -5,7 +5,7 @@
   "type": "pack",
   "name": "field-notes",
   "dependencies": {
-    "@craigsmitham/knowledge/field-notes": "^0.1.0",
+    "@craigsmitham/knowledge/field-notes": "^0.1.1",
     "@craigsmitham/rules/field-notes": "^0.1.0",
     "@craigsmitham/skills/field-notes": "^0.1.0"
   },

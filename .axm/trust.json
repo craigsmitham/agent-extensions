@@ -217,13 +217,13 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/field-notes",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "ea4a8d3f29fd63948c7ed52d1256587753b93c393f95cb2e9810c54eb4bfd466",
+      "contentIdentity": "86a93c5efe1de48b1c472c47f829d72a69b98811e15393949c83614048d32d2b",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "field-notes",
         "version": "0.1.0",
         "dependencies": {
-          "@craigsmitham/knowledge/field-notes": "^0.1.0",
+          "@craigsmitham/knowledge/field-notes": "^0.1.1",
           "@craigsmitham/rules/field-notes": "^0.1.0",
           "@craigsmitham/skills/field-notes": "^0.1.0"
         },

@@ -323,7 +323,7 @@ packs:
     extensionType: pack
     name: field-notes
     version: 0.1.0
-    sourceHash: ea4a8d3f29fd63948c7ed52d1256587753b93c393f95cb2e9810c54eb4bfd466
+    sourceHash: 86a93c5efe1de48b1c472c47f829d72a69b98811e15393949c83614048d32d2b
     installedAt: 2026-08-08T14:41:07.141Z
     updatedAt: 2026-08-08T14:41:07.143Z
     resolvedSkills:
@@ -331,7 +331,7 @@ packs:
         source: workspace
         version: 0.1.0
         sourceIdentity: workspace:@craigsmitham/skills/field-notes
-        contentIdentity: 18013be7d835426962c6a1097e74018e4b632e1d502157ecd0aca3e318b9611b
+        contentIdentity: 92f502604e931a975f4bfc5c51b24bb03829e274fbf6f20ea2cbb88160b94629
     resolvedMcpServers: {}
     resolvedSubagents: {}
     resolvedRules:
@@ -339,11 +339,11 @@ packs:
         source: workspace
         version: 0.1.0
         sourceIdentity: workspace:@craigsmitham/rules/field-notes
-        contentIdentity: 65fd2a836310ad0885b46328d409aea816b28f2b55c431f9a7b44ffb331e383e
+        contentIdentity: f5f954014efa2f65ecf21abab703c5bfd855793225e34edb59ee81b9f2c67f5c
     resolvedHooks: {}
     resolvedKnowledge:
       "@craigsmitham/knowledge/field-notes":
         source: workspace
-        version: 0.1.0
+        version: 0.1.1
         sourceIdentity: workspace:@craigsmitham/knowledge/field-notes
-        contentIdentity: a42294f70967d820b5aa1834b1168636fd5bea6df6e026e2a50abe116d47daac
+        contentIdentity: a2ce7a9156f72eac0e074c00e4831277f6bd62960cdf03c5040578d3dd59fe60
