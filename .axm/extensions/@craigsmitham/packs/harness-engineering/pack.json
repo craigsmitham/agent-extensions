@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Context-gardening knowledge and workflows for improving project context and agent instructions",
   "keywords": [
     "harness",
@@ -25,6 +25,6 @@
   "dependencies": {
     "@craigsmitham/skills/improve-instructions": "^0.1.0",
     "@craigsmitham/knowledge/harness-engineering": "^0.1.0",
-    "@craigsmitham/skills/garden-context": "^0.0.1"
+    "@craigsmitham/skills/garden-context": "^0.0.2"
   }
 }

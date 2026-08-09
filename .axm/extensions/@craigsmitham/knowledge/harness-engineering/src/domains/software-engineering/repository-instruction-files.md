@@ -19,7 +19,11 @@ sources:
     title: Anthropic — Effective context engineering for AI agents
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-09T19:52:22Z
+  at: 2026-08-09T22:12:38Z
+verified:
+  - by: codex/gpt-5.6
+    at: 2026-08-09T22:13:44Z
+stale_after: 2027-02-09
 ---
 
 # Repository instruction files
@@ -144,6 +148,22 @@ taste invariants mechanically while allowing local implementation freedom.[^open
 
 Actionable check failures can return both evidence and remediation into the
 agent's context. This closes a feedback loop that prose alone cannot guarantee.
+
+## Audit finding classes
+
+| Class | Signal | Typical response |
+| --- | --- | --- |
+| Duplicate body | Restates a guide or parent instruction | Cut the copy and keep the route |
+| Procedure in always-on context | Long reusable how-to in an instruction file | Move it to a skill or guide and leave a trigger |
+| Weak trigger | Descriptive topic label does not establish when to act | Rewrite it as a receivable imperative |
+| Missing route | Agents repeatedly rediscover an existing owner | Add the smallest useful route |
+| Stale | Dead path, retired command, or superseded policy | Correct, retire, or remove it |
+| Wrong layer | Local detail appears at a broad scope | Move it to the nearest truthful owner |
+| Unjustified file | A local instruction file adds no distinct guidance | Remove it after confirming no hidden role |
+| Index over-cut risk | A proposed trim strands useful depth | Reject the cut or regroup the routes |
+
+These classes support evidence-led audits; they do not require a rewrite when
+the current instruction surface already serves its scope well.
 
 ## Living interfaces
 

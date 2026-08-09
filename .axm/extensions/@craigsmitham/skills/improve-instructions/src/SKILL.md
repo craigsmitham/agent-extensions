@@ -14,9 +14,6 @@ description: >
 Improve **always-on** agent instruction files so they stay small, accurate, and
 discoverable.
 
-Before classifying large edits, read
-`.axm/extensions/@craigsmitham/knowledge/harness-engineering/src/domains/software-engineering/repository-instruction-files.md`.
-
 ## Defaults
 
 - **Dry-run** proposals first; write files only after explicit confirm (or the
@@ -61,20 +58,11 @@ For each target file:
 - Overlap with parent instruction files and with linked guides
 - Nested instruction files that should own local detail
 
-### 4. Rubric (per finding)
+### 4. Classify findings
 
-Classify each issue:
-
-| Class | Signal | Typical fix |
-| --- | --- | --- |
-| **Duplicate body** | Restates a guide/parent | Cut; keep link |
-| **Procedure in always-on** | Long how-to in root | Move to guide/skill; leave index row |
-| **Weak trigger** | Descriptive index phrasing | Verb-first imperative |
-| **Missing route** | Agents rediscover the same doc | Add index entry |
-| **Stale** | Dead path, retired command | Update or remove |
-| **Wrong layer** | Surface detail at root | Push to local instruction file |
-| **Unjustified file** | Local file adds nothing | Delete file (confirm) |
-| **Index over-cut risk** | Proposal drops router rows "for length" | Reject; re-group instead |
+Use the audit finding classes in the loaded repository-instruction doctrine.
+Require concrete evidence for every finding and reject any proposed cut that
+would strand still-useful knowledge.
 
 ### 5. Propose
 

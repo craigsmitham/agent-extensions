@@ -259,16 +259,16 @@
       "name": "improve-instructions",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/improve-instructions",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "fe90e51954531cc55446f892b8955dd638bd7151c6f8948aa3d852260af2d753"
+      "resolvedVersion": "0.1.1",
+      "contentIdentity": "5766c5d6a17e43fe801ea25f7f76f2bb7d7ee6862e048bb406d6d3a1c0bdcaf3"
     },
     "knowledge:harness-engineering": {
       "extensionType": "knowledge",
       "name": "harness-engineering",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/knowledge/harness-engineering",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "58dd3acd462ca7072dcce2bf7ef0fc721337f576747805f008d0fb46f8b05ae0"
+      "resolvedVersion": "0.1.1",
+      "contentIdentity": "1fa287158b34a341fcb4d2d448cd4ce328c55392dfb77a0008bb321006e90ae3"
     },
     "pack:harness-engineering": {
       "extensionType": "pack",
@@ -276,15 +276,15 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/harness-engineering",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "58329e09367b8c873bbf83118454d44b3b3d13b91bc8bec3a3a08287f033db25",
+      "contentIdentity": "a179fb1ccb0448c8dc495fb4ac92a52af1e02faef88cf5566f69a3b8e1367d3f",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "harness-engineering",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "dependencies": {
           "@craigsmitham/skills/improve-instructions": "^0.1.0",
           "@craigsmitham/knowledge/harness-engineering": "^0.1.0",
-          "@craigsmitham/skills/garden-context": "^0.0.1"
+          "@craigsmitham/skills/garden-context": "^0.0.2"
         },
         "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Context-gardening knowledge and workflows for improving project context and agent instructions\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"harness\",\"context-gardening\",\"context-engineering\",\"workspace\",\"coding-agents\",\"agents.md\",\"instructions\",\"progressive-disclosure\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/harness-engineering\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
       }
@@ -294,8 +294,8 @@
       "name": "garden-context",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/garden-context",
-      "resolvedVersion": "0.0.1",
-      "contentIdentity": "b97196e2a345316cdd69a192fa63b791d5cada544c6c24b26e26bf715d12041b"
+      "resolvedVersion": "0.0.2",
+      "contentIdentity": "606b8bfef652b68176931731c31a23704bae2749f360682dc294a74e68c826aa"
     }
   }
 }

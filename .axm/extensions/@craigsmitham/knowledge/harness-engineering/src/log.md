@@ -2,6 +2,12 @@
 
 ## 2026-08-09
 
+- **Trust**: Machine-confirmed all 16 stable concepts against their cited
+  sources with `codex/gpt-5.6` and set a six-month freshness review date;
+  human review remains a distinct, unclaimed trust signal.
+- **Ownership**: Made knowledge concepts authoritative for context-gardening
+  and repository-instruction finding classes so skills can focus on control
+  flow without duplicating doctrine.
 - **Specification practice**: Added
   [spec-driven development](domains/software-engineering/practices/spec-driven-development.md)
   as the umbrella software-engineering practice, separating its shared

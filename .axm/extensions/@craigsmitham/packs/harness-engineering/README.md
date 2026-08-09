@@ -13,7 +13,8 @@ keeping always-on instruction surfaces small and useful.
 | `@craigsmitham/skills/garden-context` | Audits and improves project or workspace context by routing observed concerns to the relevant knowledge concepts and cultivation moves |
 | `@craigsmitham/skills/improve-instructions` | Audits, trims, reindexes, and localizes `AGENTS.md`, `CLAUDE.md`, and related instruction files |
 
-The members are not standalone; install them through this pack.
+The two skills are coupled to direct siblings and should be installed through
+this pack. The knowledge bundle may also be installed independently.
 
 ## Install
 

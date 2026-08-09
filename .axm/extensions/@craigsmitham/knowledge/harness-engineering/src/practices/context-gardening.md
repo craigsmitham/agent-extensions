@@ -16,7 +16,11 @@ sources:
     title: Cursor — Continually improving our agent harness
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-09T20:53:20Z
+  at: 2026-08-09T22:12:38Z
+verified:
+  - by: codex/gpt-5.6
+    at: 2026-08-09T22:13:44Z
+stale_after: 2027-02-09
 ---
 
 # Context gardening
@@ -78,6 +82,25 @@ actually behaves. The gardener then asks which kind of failure occurred:
 Only then is a durable change selected. Cursor describes harness improvement
 similarly as a product discipline driven by hypotheses, evaluations,
 instrumentation, and real usage rather than by intuition alone.[^cursor-harness-improvement]
+
+## Finding classes
+
+Use stable classes so repeated audits can be compared without turning every
+possible reorganization into a defect.
+
+| Class | Meaning |
+| --- | --- |
+| Missing | Needed context has no durable owner |
+| Undiscoverable | Useful context exists but likely entry points do not route to it |
+| Wrong scope | Context arrives too broadly, too narrowly, or in the wrong environment |
+| Stale | Context no longer matches its claimed authority or lifecycle |
+| Redundant | Multiple surfaces repeat a claim without a reason to co-own it |
+| Contradictory | Surfaces make incompatible claims without a precedence rule |
+| Unverifiable | Guidance lacks a practical check or observable feedback path |
+| Wrong owner | The concern belongs in a different harness element or system of record |
+
+A finding needs observable evidence and a consequence for representative work.
+A preference for another taxonomy, filename, or layout is not sufficient.
 
 ## Typical gardening moves
 

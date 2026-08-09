@@ -12,14 +12,18 @@ remote, and distributed runtimes. It also captures reusable structures and
 operating disciplines such as progressive disclosure and context gardening.
 
 Harness elements include agent skills, `AGENTS.md`, `CLAUDE.md`, and related
-harness surfaces. The bundle is paired with the `garden-context` and
-`improve-instructions` skills in the harness-engineering pack.
+harness surfaces. The knowledge bundle is independently installable. The
+harness-engineering pack pairs it with the coupled `garden-context` and
+`improve-instructions` workflows.
 
 ## Install
 
 ```bash
-axm packs install @craigsmitham/packs/harness-engineering
+axm install @craigsmitham/knowledge/harness-engineering
 ```
+
+Install `@craigsmitham/packs/harness-engineering` instead when you also want
+the context-gardening and instruction-file workflows.
 
 ## Usage
 
@@ -39,6 +43,9 @@ axm knowledge open harness-engineering practices/context-gardening
 
 The bundle was migrated from the original `@agentxm` package while preserving
 its content provenance.
+
+Stable concepts record machine generation and verification events in OKF
+frontmatter. Machine confirmation does not claim human review.
 
 ## License
 

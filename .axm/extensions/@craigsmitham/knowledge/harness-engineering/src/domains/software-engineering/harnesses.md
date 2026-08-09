@@ -17,6 +17,10 @@ sources:
 generated:
   by: codex/gpt-5.6
   at: 2026-08-09T20:53:20Z
+verified:
+  - by: codex/gpt-5.6
+    at: 2026-08-09T22:13:44Z
+stale_after: 2027-02-09
 ---
 
 # Software engineering harnesses

@@ -5,10 +5,11 @@ across projects and workspaces. It maps authority, lifecycle, ownership, and
 discovery across instructions, specifications, documentation, skills, code,
 tests, tools, and runtime evidence before selecting focused cultivation moves.
 
-Use it to garden, audit, organize, prune, or improve repository, project,
-workspace, coding-agent, memory-bank, or AI context. Use a focused instruction
-or documentation skill when the responsible surface is already known and the
-broader context system does not need evaluation.
+Use it to garden, audit, organize, prune, or improve project or workspace
+context, a coding-agent harness, a memory bank, or AI context. Use a focused
+instruction or documentation skill when the responsible surface is already
+known and the broader context system does not need evaluation. It is not a
+generic repository-cleanup or code-refactoring skill.
 
 The skill progressively opens the relevant concepts from the
 harness-engineering knowledge bundle and is distributed through the

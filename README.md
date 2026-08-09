@@ -21,6 +21,7 @@ and are not published from this repository.
 
 | Bundle | Purpose | Install |
 | --- | --- | --- |
+| `harness-engineering` | Harness and context engineering principles, domain profiles, elements, patterns, practices, and guides | `axm install @craigsmitham/knowledge/harness-engineering` |
 | `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |
 
 ## Standalone skills

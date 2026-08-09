@@ -23,6 +23,10 @@ sources:
 generated:
   by: codex/gpt-5.6
   at: 2026-08-09T21:16:04Z
+verified:
+  - by: codex/gpt-5.6
+    at: 2026-08-09T22:13:44Z
+stale_after: 2027-02-09
 ---
 
 # Spec-driven development

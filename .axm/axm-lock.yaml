@@ -379,21 +379,21 @@ packs:
     owner: "@craigsmitham"
     extensionType: pack
     name: harness-engineering
-    version: 0.0.1
-    sourceHash: 58329e09367b8c873bbf83118454d44b3b3d13b91bc8bec3a3a08287f033db25
+    version: 0.0.2
+    sourceHash: a179fb1ccb0448c8dc495fb4ac92a52af1e02faef88cf5566f69a3b8e1367d3f
     installedAt: 2026-08-09T19:36:55.489Z
     updatedAt: 2026-08-09T19:36:55.492Z
     resolvedSkills:
       "@craigsmitham/skills/improve-instructions":
         source: workspace
-        version: 0.1.0
+        version: 0.1.1
         sourceIdentity: workspace:@craigsmitham/skills/improve-instructions
-        contentIdentity: db366a0b88c3a58d2d46610583633a85cb60ccd2ded51613fb7f692b1b951cf5
+        contentIdentity: 5766c5d6a17e43fe801ea25f7f76f2bb7d7ee6862e048bb406d6d3a1c0bdcaf3
       "@craigsmitham/skills/garden-context":
         source: workspace
-        version: 0.0.1
+        version: 0.0.2
         sourceIdentity: workspace:@craigsmitham/skills/garden-context
-        contentIdentity: b8b2d471cad65be59ba9a351459f5dd91dea927b1206039998603b384e864105
+        contentIdentity: 606b8bfef652b68176931731c31a23704bae2749f360682dc294a74e68c826aa
     resolvedMcpServers: {}
     resolvedSubagents: {}
     resolvedRules: {}
@@ -401,6 +401,6 @@ packs:
     resolvedKnowledge:
       "@craigsmitham/knowledge/harness-engineering":
         source: workspace
-        version: 0.1.0
+        version: 0.1.1
         sourceIdentity: workspace:@craigsmitham/knowledge/harness-engineering
-        contentIdentity: 369d5d4e7730dc8a3e8405ce37fc7920d4effaa99607320d01317936efcbd903
+        contentIdentity: 1fa287158b34a341fcb4d2d448cd4ce328c55392dfb77a0008bb321006e90ae3

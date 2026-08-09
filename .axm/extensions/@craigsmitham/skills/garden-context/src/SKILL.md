@@ -4,10 +4,11 @@ description: >
   Evaluates and improves project or workspace context for software-engineering
   agents by mapping authority, discovery, scope, freshness, and ownership
   across instructions, specifications, documentation, skills, code, tests,
-  tools, and runtime evidence. Use when asked to garden, audit, organize,
-  prune, clean up, or improve repository, project, workspace, coding-agent,
-  memory-bank, or AI context. Not for editing one known instruction file,
-  ordinary documentation cleanup, or feature implementation.
+  tools, and runtime evidence. Use when asked to garden, audit, organize, prune,
+  clean up, or improve project or workspace context, a coding-agent harness,
+  memory bank, or AI context. Not for generic repository cleanup, code
+  refactoring, editing one known instruction file, ordinary documentation
+  cleanup, or feature implementation.
 ---
 
 # garden-context
@@ -121,37 +122,16 @@ selected.
 
 ### 5. Classify findings
 
-Require concrete evidence and classify each finding as one of:
-
-| Class | Meaning |
-| --- | --- |
-| Missing | Needed context has no durable owner |
-| Undiscoverable | Useful context exists but likely entry points do not route to it |
-| Wrong scope | Context arrives too broadly, too narrowly, or in the wrong environment |
-| Stale | Context no longer matches its claimed authority or lifecycle |
-| Redundant | Multiple surfaces repeat a claim without a reason to co-own it |
-| Contradictory | Surfaces make incompatible claims without a precedence rule |
-| Unverifiable | Guidance lacks a practical check or observable feedback path |
-| Wrong owner | The concern belongs in a different harness element or system of record |
+Require concrete evidence and use the finding classes in the governing context-
+gardening practice. Do not create a finding merely because a surface could be
+organized differently.
 
 ### 6. Choose cultivation moves
 
-Choose the smallest move that addresses the evidence:
-
-- **Plant** missing context with an explicit owner and scope.
-- **Prune** irrelevant or redundant active context without erasing needed history.
-- **Transplant** material to the surface that truthfully owns it.
-- **Connect** missing routes, triggers, indexes, and links.
-- **Promote** recurring procedure or mechanically decidable policy into a skill,
-  tool, schema, test, or check.
-- **Retire** superseded context and remove it from active selection.
-- **Verify** discovery, authority, and behavior on representative work.
-
-Broad invariants and routes belong in scoped instructions; reusable procedure
-and judgment belong in skills; detailed durable facts belong in knowledge or
-reference; executable contracts belong in code, tests, schemas, or checks; live
-facts belong behind tools and observations; transient goals belong in task
-state.
+Choose the smallest cultivation move and truthful owner described by the
+governing practice. Preserve needed history and do not promote prose into
+always-on instructions when a skill, tool, check, reference, observation, or
+task record owns it better.
 
 ### 7. Propose or apply
 
