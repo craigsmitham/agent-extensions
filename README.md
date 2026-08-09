@@ -51,13 +51,8 @@ Read [AGENTS.md](./AGENTS.md) before changing or adding an extension. Public
 content must be portable, rights-cleared, intentionally safe to disclose, and
 free of private dependencies or real sensitive data.
 
-Run the local gate before committing:
-
-```bash
-scripts/check-public-safety.sh
-```
-
-Preflight registry publication before uploading anything:
+Follow [How to review and publish public extensions](./docs/publishing.md) for
+the complete commit and release gate. For a catalog-wide registry preflight:
 
 ```bash
 axm publish --authored --owner @craigsmitham --preview --json

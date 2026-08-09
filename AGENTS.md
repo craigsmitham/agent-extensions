@@ -94,22 +94,10 @@ forward Effect v3 conventions.
 
 ## Review and publishing gate
 
-Before committing or publishing:
-
-1. Inspect the complete diff, untracked files, generated files, and symlink
-   targets.
-2. Audit every changed package for cross-extension references. For each other
-   extension name, FQN, or canonical extension path in package content, prove
-   that it is a direct sibling in a common pack and that the referencing package
-   satisfies the rules above. Current workspace installation state is not
-   evidence; an unexplained reference is a release blocker.
-3. Run `scripts/check-public-safety.sh`.
-4. Verify provenance, attribution, licenses, and synthetic examples manually;
-   scanners cannot establish these properties.
-5. Use `axm publish --preview --json` and confirm the exact package and
-   dependency selection.
-6. Bump every package whose published archive changes. Existing registry
-   versions are immutable.
+Before committing or publishing, follow
+[How to review and publish public extensions](docs/publishing.md). An
+unexplained cross-extension reference is a release blocker; current workspace
+installation state is not proof of co-installation.
 
 Publish public packages only from this repository. The private repository may
 install them from the registry but must not retain a second workspace-authored
@@ -140,7 +128,7 @@ clones, caches, or prior access.
 | [workflow-automation](.axm/extensions/@craigsmitham/knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end region=knowledge-base -->
 <!-- axm:start region=rules -->
-<!-- axm:rule @craigsmitham/rules/field-notes@0.1.0 -->
+<!-- axm:rule @craigsmitham/rules/field-notes@0.1.2 -->
 ## Field notes
 
 Record how work actually goes, so recurring obstacles become durable
@@ -150,66 +138,33 @@ Subjects under observation are declared in the `## Field note subjects` table in
 this file. **If that section is missing or has no rows, this rule is inactive —
 do nothing.**
 
-Recording a field note is expected behavior, not an admission of failure. Notes
-about your own confusion, retries, and improvised workarounds are the most
-valuable kind.
-
 ### When to record
 
-While doing ordinary work, if the work falls within a declared subject and any
-of these hold, append one field note:
+While doing ordinary work within a declared subject, record one note when:
 
-- What happened differed from what the instructions, docs, or command output led
-  you to expect.
-- You retried, guessed, or searched to get past something.
-- You succeeded by improvising a step no document describes. Record these — an
-  undocumented workaround that worked is a finding, not a non-event.
-- A subject in `target` mode was blocked from its target condition.
+- reality differs from instructions, documentation, or command output;
+- you retry, guess, search, or improvise an undocumented workaround; or
+- a `target`-mode subject is blocked from its target condition.
 
-Do not record your own typos, a restatement of a note you already wrote this
-session, or speculation with no observed incident behind it.
+Do not record your own typo, a note already captured this session, or speculation
+without an observed incident.
 
 ### How to record
 
-Write one new file per note. Never edit an existing note — a second occurrence
-is a second file, and that recurrence is the signal.
-
-Path: `field-notes/<subject>/<YYYY-MM-DD>-<key>.md`, where `<key>` is a short
-kebab slug of surface and symptom. Use a different root if the subjects section
-names one.
-
-```markdown
----
-subject: <subject key>
-key: <slug>
-date: <YYYY-MM-DD>
-kind: gap | workaround | blocked
-status: open
----
-
-**Expected:** what should have happened, and what led you to expect it
-**Actual:** what happened instead
-**Gap:** why the two differed
-**Suggests:** the smallest durable change that would close the gap
-
-Evidence: commands run, exit codes, paths, quoted output.
-```
-
-Report a specific incident with observable detail. A general impression is not a
-field note.
+On the first qualifying incident, read the
+[capture instructions](.axm/extensions/@craigsmitham/rules/field-notes/src/capture.md)
+and append one note. Recording it is expected behavior, not an admission of
+failure.
 
 ### Stay in the work
 
 Log and continue. Do not investigate the note, fix what it describes, open an
 issue, or discuss it beyond one short line at the end of your response.
 
-Two exceptions:
-
-- What you observed is a live correctness, data-loss, or security problem —
-  raise it now rather than filing it.
-- You are genuinely blocked on ambiguous architecture, data model, or
-  destructive scope — stop and ask, naming the ambiguity in one sentence with
-  two or three options.
+Raise a live correctness, data-loss, or security problem immediately instead of
+filing it. Stop to ask only when genuinely blocked on ambiguous architecture,
+data model, or destructive scope; name the ambiguity in one sentence with two or
+three options.
 
 To declare subjects, triage notes, or promote them into findings, use the
 `field-notes` skill. Never do that work inline.

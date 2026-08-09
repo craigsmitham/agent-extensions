@@ -197,10 +197,10 @@ rules:
     owner: "@craigsmitham"
     extensionType: rule
     name: field-notes
-    version: 0.1.0
+    version: 0.1.2
     installedAt: 2026-08-08T14:41:01.584Z
-    updatedAt: 2026-08-08T14:54:05.286Z
-    sourceHash: f5f954014efa2f65ecf21abab703c5bfd855793225e34edb59ee81b9f2c67f5c
+    updatedAt: 2026-08-09T21:57:04.925Z
+    sourceHash: 3eb8d462e7e88bc8edfffa0204fe02038450d35fa8a986cdb7e963128ec20af1
 knowledge:
   docs:
     type: workspace

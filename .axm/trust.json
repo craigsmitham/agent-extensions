@@ -192,8 +192,8 @@
       "name": "field-notes",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/rules/field-notes",
-      "resolvedVersion": "0.1.1",
-      "contentIdentity": "cb584a6f2044eb50447595f4e773a7634670e77c981843d2557af0a32ef8281c"
+      "resolvedVersion": "0.1.2",
+      "contentIdentity": "3eb8d462e7e88bc8edfffa0204fe02038450d35fa8a986cdb7e963128ec20af1"
     },
     "skill:field-notes": {
       "extensionType": "skill",
