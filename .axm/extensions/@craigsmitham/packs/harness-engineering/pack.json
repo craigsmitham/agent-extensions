@@ -1,0 +1,30 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "owner": "@craigsmitham",
+  "version": "0.0.1",
+  "description": "Context-gardening knowledge and workflows for improving project context and agent instructions",
+  "keywords": [
+    "harness",
+    "context-gardening",
+    "context-engineering",
+    "workspace",
+    "coding-agents",
+    "agents.md",
+    "instructions",
+    "progressive-disclosure"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/packs/harness-engineering"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "type": "pack",
+  "name": "harness-engineering",
+  "dependencies": {
+    "@craigsmitham/skills/improve-instructions": "^0.1.0",
+    "@craigsmitham/knowledge/harness-engineering": "^0.1.0",
+    "@craigsmitham/skills/garden-context": "^0.0.1"
+  }
+}

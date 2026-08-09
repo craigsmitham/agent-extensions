@@ -31,7 +31,9 @@
     "improve-whatever": "workspace:@craigsmitham/skills/improve-whatever",
     "field-notes": "workspace:@craigsmitham/skills/field-notes",
     "author-docs": "workspace:@craigsmitham/skills/author-docs",
-    "author-okf": "workspace:@craigsmitham/skills/author-okf"
+    "author-okf": "workspace:@craigsmitham/skills/author-okf",
+    "improve-instructions": "workspace:@craigsmitham/skills/improve-instructions",
+    "garden-context": "workspace:@craigsmitham/skills/garden-context"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"
@@ -39,11 +41,13 @@
   "knowledge": {
     "docs": "workspace:@craigsmitham/knowledge/docs",
     "field-notes": "workspace:@craigsmitham/knowledge/field-notes",
-    "workflow-automation": "workspace:@craigsmitham/knowledge/workflow-automation"
+    "workflow-automation": "workspace:@craigsmitham/knowledge/workflow-automation",
+    "harness-engineering": "workspace:@craigsmitham/knowledge/harness-engineering"
   },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",
     "docs": "workspace:@craigsmitham/packs/docs",
-    "field-notes": "workspace:@craigsmitham/packs/field-notes"
+    "field-notes": "workspace:@craigsmitham/packs/field-notes",
+    "harness-engineering": "workspace:@craigsmitham/packs/harness-engineering"
   }
 }

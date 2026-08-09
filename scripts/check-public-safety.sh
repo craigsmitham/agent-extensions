@@ -9,10 +9,12 @@ axm lint --strict
 expected=(
   knowledge/docs
   knowledge/field-notes
+  knowledge/harness-engineering
   knowledge/workflow-automation
   packs/docs
   packs/effect-v4
   packs/field-notes
+  packs/harness-engineering
   rules/field-notes
   skills/author-docs
   skills/author-okf
@@ -30,6 +32,8 @@ expected=(
   skills/effect-v4-structured-concurrency
   skills/effect-v4-testing
   skills/field-notes
+  skills/garden-context
+  skills/improve-instructions
   skills/improve-whatever
   skills/temporal-dates
 )
@@ -43,7 +47,7 @@ actual_list="$(
 )"
 
 if [[ "$expected_list" != "$actual_list" ]]; then
-  echo "Public package inventory differs from the approved 25-package set." >&2
+  echo "Public package inventory differs from the approved 29-package set." >&2
   diff <(printf '%s\n' "$expected_list") <(printf '%s\n' "$actual_list") || true
   exit 1
 fi
@@ -91,7 +95,7 @@ if jq -e '
    [.knowledge | to_entries[] | .value] +
    [.packs | to_entries[] | .value] +
    [.rules | to_entries[] | .value]) |
-  length == 25 and
+  length == 29 and
   all(type == "string" and startswith("workspace:@craigsmitham/"))
 ' .axm/settings.json >/dev/null; then
   :
@@ -101,6 +105,7 @@ else
 fi
 
 axm knowledge lint --path .axm/extensions/@craigsmitham/knowledge/docs
+axm knowledge lint --path .axm/extensions/@craigsmitham/knowledge/harness-engineering
 axm knowledge lint --path .axm/extensions/@craigsmitham/knowledge/workflow-automation
 
 echo "Public extension safety checks passed."

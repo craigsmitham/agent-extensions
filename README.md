@@ -15,6 +15,7 @@ and are not published from this repository.
 | `effect-v4` | Effect v4 patterns for types, services, failures, resources, schemas, concurrency, streams, testing, and observability | `axm install @craigsmitham/packs/effect-v4` |
 | `docs` | Diátaxis-oriented documentation knowledge plus one consolidated authoring and review skill | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
+| `harness-engineering` | Garden project context, improve agent instructions, and apply harness- and context-engineering knowledge | `axm install @craigsmitham/packs/harness-engineering` |
 
 ## Standalone knowledge
 

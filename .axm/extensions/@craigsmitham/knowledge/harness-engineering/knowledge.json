@@ -1,0 +1,45 @@
+{
+  "$schema": "https://axm.sh/schemas/knowledge.schema.json",
+  "owner": "@craigsmitham",
+  "name": "harness-engineering",
+  "version": "0.1.0",
+  "type": "knowledge",
+  "format": {
+    "name": "okf",
+    "version": "0.2"
+  },
+  "bundleRoot": "src",
+  "description": "Harness and context engineering principles, domain profiles, elements, patterns, and practices for reliable agent systems",
+  "keywords": [
+    "harness",
+    "harness-engineering",
+    "harness-elements",
+    "agent-experience",
+    "agent-legibility",
+    "context-engineering",
+    "agent-runtime",
+    "coding-agents",
+    "coding-harness",
+    "software-engineering",
+    "agents.md",
+    "agent-skills",
+    "instructions",
+    "context",
+    "context-gardening",
+    "progressive-disclosure",
+    "spec-driven-development",
+    "spec-first",
+    "spec-anchored",
+    "spec-as-source",
+    "playbooks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/knowledge/harness-engineering"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "recommendedPacks": ["@craigsmitham/packs/harness-engineering"],
+  "standalone": false
+}

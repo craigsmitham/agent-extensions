@@ -1,0 +1,26 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "garden-context",
+  "version": "0.0.1",
+  "description": "Audits and improves project context by clarifying authority, discovery, scope, ownership, and lifecycle",
+  "keywords": [
+    "context-gardening",
+    "context-engineering",
+    "harness-engineering",
+    "workspace",
+    "coding-agents",
+    "progressive-disclosure",
+    "specifications"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/skills/garden-context"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "recommendedPacks": ["@craigsmitham/packs/harness-engineering"],
+  "standalone": false
+}

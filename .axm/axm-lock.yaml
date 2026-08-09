@@ -173,6 +173,24 @@ skills:
     installedAt: 2026-08-08T16:36:20.225Z
     updatedAt: 2026-08-08T16:57:33.184Z
     sourceHash: 49d7945baedb06c62b097b58ff1ed9928a82029727125cee985730d4e1da96e0
+  improve-instructions:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: improve-instructions
+    version: 0.1.0
+    installedAt: 2026-08-09T19:36:54.414Z
+    updatedAt: 2026-08-09T19:36:54.417Z
+    sourceHash: db366a0b88c3a58d2d46610583633a85cb60ccd2ded51613fb7f692b1b951cf5
+  garden-context:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: garden-context
+    version: 0.0.1
+    installedAt: 2026-08-09T21:26:24.295Z
+    updatedAt: 2026-08-09T21:26:24.301Z
+    sourceHash: b8b2d471cad65be59ba9a351459f5dd91dea927b1206039998603b384e864105
 rules:
   field-notes:
     type: workspace
@@ -211,6 +229,15 @@ knowledge:
     installedAt: 2026-08-08T16:14:58.341Z
     updatedAt: 2026-08-08T16:30:44.472Z
     sourceHash: 8355be6f86b4fa052c68f3964f261e4f87392ad3ef03c88775d5b8ecd8d7285f
+  harness-engineering:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: knowledge
+    name: harness-engineering
+    version: 0.1.0
+    installedAt: 2026-08-09T19:36:54.969Z
+    updatedAt: 2026-08-09T20:55:23.663Z
+    sourceHash: 369d5d4e7730dc8a3e8405ce37fc7920d4effaa99607320d01317936efcbd903
 packs:
   effect-v4:
     type: workspace
@@ -347,3 +374,33 @@ packs:
         version: 0.1.1
         sourceIdentity: workspace:@craigsmitham/knowledge/field-notes
         contentIdentity: a2ce7a9156f72eac0e074c00e4831277f6bd62960cdf03c5040578d3dd59fe60
+  harness-engineering:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: pack
+    name: harness-engineering
+    version: 0.0.1
+    sourceHash: 58329e09367b8c873bbf83118454d44b3b3d13b91bc8bec3a3a08287f033db25
+    installedAt: 2026-08-09T19:36:55.489Z
+    updatedAt: 2026-08-09T19:36:55.492Z
+    resolvedSkills:
+      "@craigsmitham/skills/improve-instructions":
+        source: workspace
+        version: 0.1.0
+        sourceIdentity: workspace:@craigsmitham/skills/improve-instructions
+        contentIdentity: db366a0b88c3a58d2d46610583633a85cb60ccd2ded51613fb7f692b1b951cf5
+      "@craigsmitham/skills/garden-context":
+        source: workspace
+        version: 0.0.1
+        sourceIdentity: workspace:@craigsmitham/skills/garden-context
+        contentIdentity: b8b2d471cad65be59ba9a351459f5dd91dea927b1206039998603b384e864105
+    resolvedMcpServers: {}
+    resolvedSubagents: {}
+    resolvedRules: {}
+    resolvedHooks: {}
+    resolvedKnowledge:
+      "@craigsmitham/knowledge/harness-engineering":
+        source: workspace
+        version: 0.1.0
+        sourceIdentity: workspace:@craigsmitham/knowledge/harness-engineering
+        contentIdentity: 369d5d4e7730dc8a3e8405ce37fc7920d4effaa99607320d01317936efcbd903
