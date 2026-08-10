@@ -30,7 +30,7 @@ and are not published from this repository.
 | --- | --- | --- |
 | `temporal-dates` | JavaScript Temporal type selection, API usage, interoperability, and pitfalls | `axm install @craigsmitham/skills/temporal-dates` |
 | `author-okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/author-okf` |
-| `eval-whatever` | Evidence-based evaluation through the lens of Philippians 4:8–9 | `axm install @craigsmitham/skills/eval-whatever` |
+| `improve-whatever` | Evidence-based evaluation through the lens of Philippians 4:8–9 | `axm install @craigsmitham/skills/improve-whatever` |
 
 ## Layout
 
@@ -40,6 +40,7 @@ Canonical packages live under:
 .axm/extensions/@craigsmitham/
 ├── knowledge/
 ├── packs/
+├── rules/
 └── skills/
 ```
 
