@@ -191,6 +191,33 @@ skills:
     installedAt: 2026-08-09T21:26:24.295Z
     updatedAt: 2026-08-09T21:26:24.301Z
     sourceHash: b8b2d471cad65be59ba9a351459f5dd91dea927b1206039998603b384e864105
+  frame-codebase-research:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: frame-codebase-research
+    version: 0.0.2
+    installedAt: 2026-08-10T20:51:07.467Z
+    updatedAt: 2026-08-10T21:40:02.113Z
+    sourceHash: f72889d16e48df560c4cb6f7c7216a20614ad8153501f2af15032e788165bb42
+  conduct-codebase-research:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: conduct-codebase-research
+    version: 0.0.1
+    installedAt: 2026-08-10T20:51:08.331Z
+    updatedAt: 2026-08-10T20:51:08.336Z
+    sourceHash: fe43138a787e202050d35a9df2a6b52b112f3abbe912c6a7aa89a20d09c6dee6
+  workshop-codebase-design:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: workshop-codebase-design
+    version: 0.0.1
+    installedAt: 2026-08-10T21:12:59.081Z
+    updatedAt: 2026-08-10T21:12:59.086Z
+    sourceHash: db051b6c9b26e24a8e19bd85dba8f1664824f6cf64dc124c384ffad4a0281251
 rules:
   field-notes:
     type: workspace
@@ -404,3 +431,33 @@ packs:
         version: 0.1.1
         sourceIdentity: workspace:@craigsmitham/knowledge/harness-engineering
         contentIdentity: 1fa287158b34a341fcb4d2d448cd4ce328c55392dfb77a0008bb321006e90ae3
+  codebase-change-workflow:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: pack
+    name: codebase-change-workflow
+    version: 0.0.2
+    sourceHash: 9284e4e71e62e3385f29dfd76335a525afc593a5e108165ce2afc42164d098a6
+    installedAt: 2026-08-10T21:18:11.160Z
+    updatedAt: 2026-08-10T21:18:11.164Z
+    resolvedSkills:
+      "@craigsmitham/skills/conduct-codebase-research":
+        source: workspace
+        version: 0.0.1
+        sourceIdentity: workspace:@craigsmitham/skills/conduct-codebase-research
+        contentIdentity: 2873585e57c11b9f4368c409b50b8bf44402c4c6ec29b22b0ece7308a5fc5acd
+      "@craigsmitham/skills/workshop-codebase-design":
+        source: workspace
+        version: 0.0.1
+        sourceIdentity: workspace:@craigsmitham/skills/workshop-codebase-design
+        contentIdentity: 97736fa584f394e9b451931b008f28ff284c00d76245b6761f1718c732e7140f
+      "@craigsmitham/skills/frame-codebase-research":
+        source: workspace
+        version: 0.0.2
+        sourceIdentity: workspace:@craigsmitham/skills/frame-codebase-research
+        contentIdentity: f72889d16e48df560c4cb6f7c7216a20614ad8153501f2af15032e788165bb42
+    resolvedMcpServers: {}
+    resolvedSubagents: {}
+    resolvedRules: {}
+    resolvedHooks: {}
+    resolvedKnowledge: {}

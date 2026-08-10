@@ -1,0 +1,26 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "frame-codebase-research",
+  "version": "0.0.2",
+  "description": "Turns bug reports and feature ideas into neutral, evidence-oriented codebase research briefs",
+  "keywords": [
+    "codebase",
+    "research",
+    "questions",
+    "bug-report",
+    "feature-request",
+    "context-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/skills/frame-codebase-research"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "recommendedPacks": [
+    "@craigsmitham/packs/codebase-change-workflow"
+  ]
+}

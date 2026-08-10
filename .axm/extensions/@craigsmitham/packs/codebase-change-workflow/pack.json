@@ -1,0 +1,28 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "owner": "@craigsmitham",
+  "version": "0.0.2",
+  "description": "Moves codebase changes from neutral research questions through current-state evidence to explicit design decisions",
+  "keywords": [
+    "codebase",
+    "research",
+    "software-design",
+    "architecture",
+    "change-workflow",
+    "decision-making"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/packs/codebase-change-workflow"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "type": "pack",
+  "name": "codebase-change-workflow",
+  "dependencies": {
+    "@craigsmitham/skills/conduct-codebase-research": "^0.0.1",
+    "@craigsmitham/skills/workshop-codebase-design": "^0.0.1",
+    "@craigsmitham/skills/frame-codebase-research": "^0.0.2"
+  }
+}

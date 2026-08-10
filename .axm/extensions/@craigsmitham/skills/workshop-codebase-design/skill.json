@@ -1,0 +1,26 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "workshop-codebase-design",
+  "version": "0.0.1",
+  "description": "Workshops evidence-grounded codebase designs and records explicit human decisions",
+  "keywords": [
+    "software-design",
+    "architecture",
+    "design-workshop",
+    "decision-record",
+    "refactoring",
+    "context-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/skills/workshop-codebase-design"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "recommendedPacks": [
+    "@craigsmitham/packs/codebase-change-workflow"
+  ]
+}

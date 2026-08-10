@@ -296,6 +296,49 @@
       "sourceIdentity": "workspace:@craigsmitham/skills/garden-context",
       "resolvedVersion": "0.0.2",
       "contentIdentity": "606b8bfef652b68176931731c31a23704bae2749f360682dc294a74e68c826aa"
+    },
+    "skill:frame-codebase-research": {
+      "extensionType": "skill",
+      "name": "frame-codebase-research",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/frame-codebase-research",
+      "resolvedVersion": "0.0.2",
+      "contentIdentity": "f72889d16e48df560c4cb6f7c7216a20614ad8153501f2af15032e788165bb42"
+    },
+    "skill:conduct-codebase-research": {
+      "extensionType": "skill",
+      "name": "conduct-codebase-research",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/conduct-codebase-research",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "2873585e57c11b9f4368c409b50b8bf44402c4c6ec29b22b0ece7308a5fc5acd"
+    },
+    "skill:workshop-codebase-design": {
+      "extensionType": "skill",
+      "name": "workshop-codebase-design",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/workshop-codebase-design",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "97736fa584f394e9b451931b008f28ff284c00d76245b6761f1718c732e7140f"
+    },
+    "pack:codebase-change-workflow": {
+      "extensionType": "pack",
+      "name": "codebase-change-workflow",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/packs/codebase-change-workflow",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "9284e4e71e62e3385f29dfd76335a525afc593a5e108165ce2afc42164d098a6",
+      "packManifest": {
+        "owner": "@craigsmitham",
+        "name": "codebase-change-workflow",
+        "version": "0.0.2",
+        "dependencies": {
+          "@craigsmitham/skills/conduct-codebase-research": "^0.0.1",
+          "@craigsmitham/skills/workshop-codebase-design": "^0.0.1",
+          "@craigsmitham/skills/frame-codebase-research": "^0.0.2"
+        },
+        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Moves codebase changes from neutral research questions through current-state evidence to explicit design decisions\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"codebase\",\"research\",\"software-design\",\"architecture\",\"change-workflow\",\"decision-making\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/codebase-change-workflow\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
+      }
     }
   }
 }

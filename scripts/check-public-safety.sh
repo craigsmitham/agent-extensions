@@ -11,6 +11,7 @@ expected=(
   knowledge/field-notes
   knowledge/harness-engineering
   knowledge/workflow-automation
+  packs/codebase-change-workflow
   packs/docs
   packs/effect-v4
   packs/field-notes
@@ -18,6 +19,7 @@ expected=(
   rules/field-notes
   skills/author-docs
   skills/author-okf
+  skills/conduct-codebase-research
   skills/effect-v4-async-coordination
   skills/effect-v4-branded-types
   skills/effect-v4-config
@@ -32,10 +34,12 @@ expected=(
   skills/effect-v4-structured-concurrency
   skills/effect-v4-testing
   skills/field-notes
+  skills/frame-codebase-research
   skills/garden-context
   skills/improve-instructions
   skills/improve-whatever
   skills/temporal-dates
+  skills/workshop-codebase-design
 )
 
 expected_list="$(printf '%s\n' "${expected[@]}")"
@@ -47,7 +51,7 @@ actual_list="$(
 )"
 
 if [[ "$expected_list" != "$actual_list" ]]; then
-  echo "Public package inventory differs from the approved 29-package set." >&2
+  echo "Public package inventory differs from the approved 33-package set." >&2
   diff <(printf '%s\n' "$expected_list") <(printf '%s\n' "$actual_list") || true
   exit 1
 fi
@@ -95,7 +99,7 @@ if jq -e '
    [.knowledge | to_entries[] | .value] +
    [.packs | to_entries[] | .value] +
    [.rules | to_entries[] | .value]) |
-  length == 29 and
+  length == 33 and
   all(type == "string" and startswith("workspace:@craigsmitham/"))
 ' .axm/settings.json >/dev/null; then
   :

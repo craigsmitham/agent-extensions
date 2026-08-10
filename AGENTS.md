@@ -113,7 +113,7 @@ clones, caches, or prior access.
 
 | Subject | Mode | Scope | Target condition | Retire when |
 | --- | --- | --- | --- | --- |
-| axm-cli | survey | any session running `axm` | — | a target condition can be stated |
+| axm-cli-interactions | survey | Sessions that directly run `axm` to complete work in this workspace or manually validate AXM behavior; automated test invocations excluded | — | Recurring notes support a specific target condition, or two triage reviews find no pattern |
 
 <!-- axm:start region=knowledge-base -->
 ## Knowledge Base
