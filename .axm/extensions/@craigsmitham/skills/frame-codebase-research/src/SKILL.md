@@ -1,29 +1,32 @@
 ---
 name: frame-codebase-research
-description: Turns a bug report, incident symptom, feature request, or change idea into neutral current-state codebase research questions and a standalone brief. Use as a proactive question-framing stage before investigating or planning a non-trivial change when behavior, ownership, data flow, contracts, dependencies, failure conditions, or tests are uncertain. Completion is an intermediate handoff, not fulfillment of a request for research answers, diagnosis, design, planning, implementation, or code changes. Not for trivial changes with no material codebase uncertainty.
+description: Turns a bug report, incident symptom, feature request, or change idea into neutral current-state codebase research questions and a standalone, time-aware brief. Use as a proactive question-framing stage before investigating or planning a non-trivial change when behavior, ownership, data flow, contracts, dependencies, failure conditions, tests, or codebase drift are uncertain. Completion is an intermediate handoff, not fulfillment of a request for research answers, diagnosis, design, planning, implementation, or code changes. Not for trivial changes with no material codebase uncertainty.
 ---
 
 # Frame codebase research
 
-Create a brief that lets a fresh researcher discover the relevant current state
-without inheriting the source request's presumed cause or preferred solution.
+Create a brief for discovering relevant current state without inheriting the
+source request's presumed cause or preferred solution.
 
 ## Operating contract
 
-- Frame inquiry; do not answer it.
-- Preserve reported observations, reproduction evidence, environment facts, and
-  explicit research boundaries needed for the inquiry. Use desired outcomes and
-  future-facing constraints to select questions, but keep them and proposed
-  solutions out of the research handoff.
+- Frame inquiry; do not answer it or recommend a change.
+- Preserve only the reported observations, reproduction evidence, environment
+  facts, and boundaries needed for research. Use desired outcomes, constraints,
+  and implementation preferences to select questions, but omit them from the
+  handoff.
+- Distinguish observation time, report time, affected snapshot or environment,
+  brief time, and anchor-verification snapshot. Never transfer evidence from one
+  point in time to another.
 - Ask only questions that repository, runtime, history, or authoritative external
   evidence can answer. Keep human or product clarification gaps separate.
 - Perform shallow discovery only to verify repository terminology and anchors.
   Do not trace the implementation deeply enough to become the researcher.
-- Do not edit implementation files or recommend a design, fix, refactor, or plan.
+- Do not edit implementation files.
 - Scale the brief to the uncertainty. Do not force a fixed question count or a
   research phase when no material codebase uncertainty remains.
-- When framing is one stage of a broader request, treat the brief as an
-  intermediate handoff and do not claim the caller's later outcome is complete.
+- In a broader request, treat the brief as an intermediate handoff rather than
+  claiming the later outcome is complete.
 
 ## Workflow
 
@@ -31,29 +34,31 @@ without inheriting the source request's presumed cause or preferred solution.
 
 Extract:
 
-- reported observations or current behavior;
-- desired behavior or user outcome;
-- reproduction details, environment, logs, and version information for a bug;
-- use cases, success criteria, compatibility constraints, and exclusions for a
-  feature;
+- reported observations, reproduction details, logs, and their provenance;
+- desired behavior, success criteria, constraints, and exclusions;
 - unverified causes, implementation preferences, and other assumptions.
 
 Do not turn missing reporter knowledge into a codebase question. Resolve it from
-available context or list it under `Human input gaps`. Mark the brief not ready
-for handoff when such a gap prevents meaningful research. Put only reported
-facts the researcher needs but cannot discover under `Reported evidence`; defer
-choices about future behavior or implementation to design rather than listing
-them as input gaps.
+available context or list indispensable non-repository facts under `Human Input
+Gaps`. Mark a material missing time, snapshot, or environment fact `Unknown`;
+omit irrelevant provenance categories rather than enumerating them. Put reported
+facts under `Reported Evidence`, but keep their times, snapshots, and environment
+identifiers only in the timeline. Do not list deferred design choices as gaps.
+If missing input makes the subject unidentifiable, stop after `Human Input Gaps`
+instead of inventing generic research questions.
 
 ### 2. Learn the codebase vocabulary
 
-Read applicable repository instructions and inspect only high-level structure,
-exact request terms, and directly named files. Verify likely subsystem, symbol,
-and path names before using them as anchors. Do not include a guessed anchor.
+Read applicable repository instructions; inspect only high-level structure,
+request terms, and named files. Verify likely subsystem, symbol,
+and path names before using them as anchors. Record the verification time,
+repository, branch, commit, and worktree state, plus only the configuration,
+dependency, deployment, or runtime versions material to the anchors. Do not
+include a guessed anchor.
 
 ### 3. Select consequential questions
 
-Cover only uncertainties relevant to the request. Useful dimensions include:
+Cover only relevant uncertainties, such as:
 
 - entry points, ownership, and end-to-end control and data flow;
 - state transitions, persistence, contracts, invariants, and consumers;
@@ -61,68 +66,31 @@ Cover only uncertainties relevant to the request. Useful dimensions include:
 - configuration, authorization, dependency, deployment, and compatibility
   boundaries.
 
-For a bug, consider reproduction conditions, the point where expected and
-observed behavior diverge, error translation or suppression, state and timing,
-and regression history. For a feature, consider the closest existing capability,
-extension boundaries, affected contracts and consumers, and how comparable
-behavior is verified.
+For a bug, consider reproduction, divergence, error handling, state, timing, and
+scoped regression history. When report and framing snapshots differ, ask whether
+current behavior still matches the report and which relevant changes matter. For
+a feature, consider analogous capability, extension boundaries, contracts,
+consumers, and verification.
 
 Each question must:
 
-- ask about current state, not what should be built;
-- contain one research concern;
+- ask one current-state research concern;
 - avoid presuming a cause, location, or solution;
 - be answerable with identifiable evidence;
-- add information not already established by the source request; and
-- state the evidence sought rather than why a future change needs it.
+- add information not already established; and
+- state the evidence sought, not why a future change needs it.
 
 Merge overlaps and remove generic checklist questions that do not affect this
 request.
 
 ### 4. Produce the brief
 
-Use this shape:
+Read `references/codebase-research-brief.md` and adapt its shape rather than
+leaving empty boilerplate.
 
-```markdown
-# Codebase Research Brief: <neutral topic>
-
-**Handoff status:** <Ready | Blocked — reason>
-**Review status:** <Accepted | Requested | Not required>
-
-## Scope
-<Current behavior or capability to investigate, without a presumed cause or
-solution.>
-
-## Reported Evidence
-- <Reported observation, reproduction detail, environment, or version needed
-  for research; label it as reported rather than verified. Omit when empty.>
-
-## Known Anchors
-- `<verified path, symbol, subsystem, or user-visible term>`
-
-## Human Input Gaps
-- <Only unresolved facts that codebase research cannot supply. Omit when empty.>
-
-## Research Questions
-
-### Q1 — <short current-state label>
-**Question:** <one neutral, evidence-answerable question>
-**Evidence sought:** <definitions, references, runtime observations, tests,
-history, configuration, or authoritative external documentation>
-
-## Boundaries
-- <Intentionally excluded systems or concerns.>
-
-## Completion Criteria
-- Every question is answered, partially answered, or explicitly unresolved with
-  the evidence searched.
-```
-
-Do not copy the original ticket, proposed solution, or presumed cause into the
-brief. Use desired behavior only to select relevant current-state questions; do
-not restate the desired outcome, future-facing constraint, or future change
-mechanism anywhere in the research handoff. Include only enough neutral
-current-state scope and reported evidence to make the questions answerable.
+Include only enough neutral current-state scope and reported evidence to make
+the questions answerable. Keep the original ticket, desired outcome, future
+constraint, presumed cause, and proposed mechanism out of the brief.
 
 Return the brief in the response unless the caller specifies a path or the
 repository has an explicit location for temporary research artifacts. Do not
@@ -130,27 +98,28 @@ invent a durable documentation home or commit the brief without authorization.
 
 ## Review and handoff
 
-Treat the generated brief as a draft. For a consequential change, ask the caller
-to accept or revise the reported evidence, question coverage, omissions, and
-boundaries before research begins. Until then, set `Review status` to `Requested`
-and `Handoff status` to `Blocked`. For a low-stakes inquiry where review would
-add no material judgment, use `Not required`. Set the handoff to `Blocked`
-whenever an indispensable human input is missing; otherwise set it to `Ready`
-after the applicable review condition is satisfied.
+Treat the generated brief as a draft. Set `Brief status` to `Blocked` only when
+an indispensable human input prevents meaningful research; otherwise use
+`Ready`. When question coverage, omissions, or boundaries require material human
+judgment, set `Review status` to `Requested` until the caller accepts or revises
+them. Pending review means research authorization is pending, not that a complete
+brief is blocked. Use `Not required` for low-stakes inquiry where review adds no
+material judgment.
 
 ## Handoff check
 
 Before handing off, confirm that:
 
-- all anchors are verified;
-- every question is neutral and evidence-answerable;
-- no question asks for design or implementation advice;
-- human input gaps are visibly separate and contain no deferred design choice;
-- reported evidence contains no presumed cause, desired outcome, proposed
-  solution, or future-facing constraint;
-- scope contains no desired outcome or future change mechanism;
-- handoff and review statuses agree with the unresolved gaps and review state;
-  and
+- anchors are verified, the timeline contains provenance rather than duplicated
+  observations, and material unknowns are not invented;
+- every question is neutral, single-concern, and evidence-answerable;
+- human input gaps contain only indispensable non-repository facts, and no
+  generic questions appear when those gaps leave the subject unidentifiable;
+- reported evidence and scope contain no desired outcome, deferred design
+  choice, presumed cause, proposed mechanism, or repeated timeline fact;
+- potentially material drift is covered by a scoped question or explicitly
+  identified as unassessable from the available provenance;
+- brief and review statuses agree with missing inputs and review state; and
 - the brief stands alone without exposing unnecessary source-request framing.
 
-Recommend giving only the brief to a fresh research context when practical.
+When practical, give only the brief to a fresh research context.

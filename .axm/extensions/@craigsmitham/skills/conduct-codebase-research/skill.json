@@ -3,15 +3,17 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "conduct-codebase-research",
-  "version": "0.0.1",
-  "description": "Answers codebase research questions with a cited current-state technical map",
+  "version": "0.0.3",
+  "description": "Answers codebase research questions with a cited, snapshot-bound current-state technical map",
   "keywords": [
     "codebase",
     "research",
     "technical-map",
     "program-comprehension",
     "bug-investigation",
-    "architecture"
+    "architecture",
+    "evidence-provenance",
+    "snapshot-drift"
   ],
   "repository": {
     "type": "git",

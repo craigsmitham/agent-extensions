@@ -1,9 +1,11 @@
 # frame-codebase-research
 
 Turns a bug report, incident symptom, feature request, or change idea into a
-neutral set of current-state questions for a fresh codebase researcher. It is
-for engineers and coding-agent workflows that need an evidence-grounded
-technical map before choosing a design or implementation plan.
+neutral set of current-state questions for a fresh codebase researcher. It
+preserves when evidence was observed and reported, when the brief was prepared,
+and which repository snapshot supplied its anchors. It is for engineers and
+coding-agent workflows that need an evidence-grounded technical map before
+choosing a design or implementation plan.
 
 ## Use it when
 
@@ -32,9 +34,10 @@ Ask your agent:
 > exports sometimes remain pending. Treat the proposed queue rewrite as an
 > assumption, not a research conclusion.
 
-When research is warranted, the skill returns a reviewed-or-blocked brief
-containing verified anchors, reported evidence, human input gaps, neutral
-questions, boundaries, and completion criteria.
+When research is warranted, the skill returns a brief with independent readiness
+and review states, a provenance-only evidence timeline, verified anchors,
+reported evidence, human input gaps, neutral questions, drift coverage,
+boundaries, and completion criteria.
 
 ## Inspiration
 

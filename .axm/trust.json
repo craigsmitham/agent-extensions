@@ -302,24 +302,24 @@
       "name": "frame-codebase-research",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/frame-codebase-research",
-      "resolvedVersion": "0.0.2",
-      "contentIdentity": "f72889d16e48df560c4cb6f7c7216a20614ad8153501f2af15032e788165bb42"
+      "resolvedVersion": "0.0.4",
+      "contentIdentity": "c66d82992ce8abde007263c0714975e2d53cbdf5204433da27c894f31feeb070"
     },
     "skill:conduct-codebase-research": {
       "extensionType": "skill",
       "name": "conduct-codebase-research",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/conduct-codebase-research",
-      "resolvedVersion": "0.0.1",
-      "contentIdentity": "2873585e57c11b9f4368c409b50b8bf44402c4c6ec29b22b0ece7308a5fc5acd"
+      "resolvedVersion": "0.0.3",
+      "contentIdentity": "4d764966816ba4e8af2036c7a6e77e3e0db9194963e5ac2bd6bd5f6aaef329d1"
     },
     "skill:workshop-codebase-design": {
       "extensionType": "skill",
       "name": "workshop-codebase-design",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/workshop-codebase-design",
-      "resolvedVersion": "0.0.1",
-      "contentIdentity": "97736fa584f394e9b451931b008f28ff284c00d76245b6761f1718c732e7140f"
+      "resolvedVersion": "0.0.3",
+      "contentIdentity": "afed44c80e43cd43e15f347f2271d2d3981c778bd3a47457563f4775f1e95dec"
     },
     "pack:codebase-change-workflow": {
       "extensionType": "pack",
@@ -327,18 +327,36 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/codebase-change-workflow",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "9284e4e71e62e3385f29dfd76335a525afc593a5e108165ce2afc42164d098a6",
+      "contentIdentity": "561bb161400f1db6f963497be01c15cb273061390866940b95fbba549bccc4b5",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "codebase-change-workflow",
-        "version": "0.0.2",
+        "version": "0.0.4",
         "dependencies": {
-          "@craigsmitham/skills/conduct-codebase-research": "^0.0.1",
-          "@craigsmitham/skills/workshop-codebase-design": "^0.0.1",
-          "@craigsmitham/skills/frame-codebase-research": "^0.0.2"
+          "@craigsmitham/skills/frame-codebase-research": "^0.0.4",
+          "@craigsmitham/skills/conduct-codebase-research": "^0.0.3",
+          "@craigsmitham/skills/workshop-codebase-design": "^0.0.3",
+          "@craigsmitham/skills/specify-codebase-change": "^0.0.2",
+          "@craigsmitham/skills/plan-codebase-change": "^0.0.2"
         },
-        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Moves codebase changes from neutral research questions through current-state evidence to explicit design decisions\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"codebase\",\"research\",\"software-design\",\"architecture\",\"change-workflow\",\"decision-making\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/codebase-change-workflow\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
+        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Moves codebase changes from time-aware research through accepted design, specification, and implementation planning\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"codebase\",\"research\",\"software-design\",\"functional-specification\",\"technical-specification\",\"implementation-plan\",\"vertical-slices\",\"architecture\",\"change-workflow\",\"decision-making\",\"evidence-provenance\",\"snapshot-drift\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/codebase-change-workflow\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
       }
+    },
+    "skill:specify-codebase-change": {
+      "extensionType": "skill",
+      "name": "specify-codebase-change",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/specify-codebase-change",
+      "resolvedVersion": "0.0.2",
+      "contentIdentity": "9eb04d0336549582bde85a81cf85ec444b86c42492cb183a7937628644821f1f"
+    },
+    "skill:plan-codebase-change": {
+      "extensionType": "skill",
+      "name": "plan-codebase-change",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/plan-codebase-change",
+      "resolvedVersion": "0.0.2",
+      "contentIdentity": "ed46ca3874189336000f48661ce80a74d2db18e8202525e6709f70d1c70614ff"
     }
   }
 }

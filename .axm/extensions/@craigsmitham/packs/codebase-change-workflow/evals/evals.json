@@ -1,0 +1,23 @@
+{
+  "pack_name": "codebase-change-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "protocol": "Run the five prompts in evals/cases.md as consecutive turns in one isolated session, explicitly invoking the named stage at each turn and withholding the assertions until grading.",
+      "files": [
+        "evals/files/webhook-redelivery-workflow.md",
+        "evals/files/webhook-planning-supplement.md"
+      ],
+      "expected_output": "A ready brief, cited report, explicitly accepted design and specification, a scoped planning research block on reachable response classes, and a ready plan after the withheld evidence answers that exact question.",
+      "assertions": [
+        "The brief is neutral and Ready, and its accepted Q identifiers are preserved in the research report.",
+        "The report stays descriptive, binds findings to w100, and passes only evidence plus the original change intent into design.",
+        "The design accepts only the human-selected options, records O/B/D/C identifiers and w100, and contains no specification or plan.",
+        "The accepted specification preserves O/B/D/C identifiers, adds traceable S identifiers, and contains no implementation tasks.",
+        "The first planning attempt blocks on the exact 1xx/3xx reachability question and issues no executable P work.",
+        "After the withheld supplement answers that question without changing accepted behavior, the Ready plan preserves O/B/D/C/S identifiers and supplies P items, dependencies, checkpoints, and completion evidence.",
+        "Every transition observes its status gate; no later artifact is produced before explicit acceptance, and the scoped research detour does not reopen unaffected decisions."
+      ]
+    }
+  ]
+}

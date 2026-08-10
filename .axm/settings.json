@@ -41,7 +41,9 @@
     "garden-context": "workspace:@craigsmitham/skills/garden-context",
     "frame-codebase-research": "workspace:@craigsmitham/skills/frame-codebase-research",
     "conduct-codebase-research": "workspace:@craigsmitham/skills/conduct-codebase-research",
-    "workshop-codebase-design": "workspace:@craigsmitham/skills/workshop-codebase-design"
+    "workshop-codebase-design": "workspace:@craigsmitham/skills/workshop-codebase-design",
+    "specify-codebase-change": "workspace:@craigsmitham/skills/specify-codebase-change",
+    "plan-codebase-change": "workspace:@craigsmitham/skills/plan-codebase-change"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"

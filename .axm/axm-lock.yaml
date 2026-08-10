@@ -196,28 +196,46 @@ skills:
     owner: "@craigsmitham"
     extensionType: skill
     name: frame-codebase-research
-    version: 0.0.2
+    version: 0.0.3
     installedAt: 2026-08-10T20:51:07.467Z
-    updatedAt: 2026-08-10T21:40:02.113Z
-    sourceHash: f72889d16e48df560c4cb6f7c7216a20614ad8153501f2af15032e788165bb42
+    updatedAt: 2026-08-10T21:50:05.941Z
+    sourceHash: 8b665352ff00bd93c52d5cfb4341325f499a7b183c157a0d70458aef374a9ac7
   conduct-codebase-research:
     type: workspace
     owner: "@craigsmitham"
     extensionType: skill
     name: conduct-codebase-research
-    version: 0.0.1
+    version: 0.0.2
     installedAt: 2026-08-10T20:51:08.331Z
-    updatedAt: 2026-08-10T20:51:08.336Z
-    sourceHash: fe43138a787e202050d35a9df2a6b52b112f3abbe912c6a7aa89a20d09c6dee6
+    updatedAt: 2026-08-10T21:50:05.866Z
+    sourceHash: d47c7b8dc715c877a8b9cf627cc8bfcbac51835ae8b4d6566a714ea830f90d22
   workshop-codebase-design:
     type: workspace
     owner: "@craigsmitham"
     extensionType: skill
     name: workshop-codebase-design
-    version: 0.0.1
+    version: 0.0.2
     installedAt: 2026-08-10T21:12:59.081Z
-    updatedAt: 2026-08-10T21:12:59.086Z
-    sourceHash: db051b6c9b26e24a8e19bd85dba8f1664824f6cf64dc124c384ffad4a0281251
+    updatedAt: 2026-08-10T21:50:06.006Z
+    sourceHash: c90295116acd6e47ac56b30939f35da1f1750d75f292bfb86b924676b72cf770
+  specify-codebase-change:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: specify-codebase-change
+    version: 0.0.1
+    installedAt: 2026-08-10T22:01:04.941Z
+    updatedAt: 2026-08-10T22:12:49.716Z
+    sourceHash: aaa83f2b9a26003a1a5d3cd57e796b7e7d42fd08097915c9d1cd363a9862b172
+  plan-codebase-change:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: plan-codebase-change
+    version: 0.0.1
+    installedAt: 2026-08-10T22:01:05.815Z
+    updatedAt: 2026-08-10T22:12:50.329Z
+    sourceHash: 4590497a72173c9747588c89a33c4b49aeaadf9da762ff1a5793ca62dfdaa66a
 rules:
   field-notes:
     type: workspace
@@ -436,26 +454,36 @@ packs:
     owner: "@craigsmitham"
     extensionType: pack
     name: codebase-change-workflow
-    version: 0.0.2
-    sourceHash: 9284e4e71e62e3385f29dfd76335a525afc593a5e108165ce2afc42164d098a6
+    version: 0.0.4
+    sourceHash: 561bb161400f1db6f963497be01c15cb273061390866940b95fbba549bccc4b5
     installedAt: 2026-08-10T21:18:11.160Z
     updatedAt: 2026-08-10T21:18:11.164Z
     resolvedSkills:
-      "@craigsmitham/skills/conduct-codebase-research":
-        source: workspace
-        version: 0.0.1
-        sourceIdentity: workspace:@craigsmitham/skills/conduct-codebase-research
-        contentIdentity: 2873585e57c11b9f4368c409b50b8bf44402c4c6ec29b22b0ece7308a5fc5acd
-      "@craigsmitham/skills/workshop-codebase-design":
-        source: workspace
-        version: 0.0.1
-        sourceIdentity: workspace:@craigsmitham/skills/workshop-codebase-design
-        contentIdentity: 97736fa584f394e9b451931b008f28ff284c00d76245b6761f1718c732e7140f
       "@craigsmitham/skills/frame-codebase-research":
         source: workspace
-        version: 0.0.2
+        version: 0.0.4
         sourceIdentity: workspace:@craigsmitham/skills/frame-codebase-research
-        contentIdentity: f72889d16e48df560c4cb6f7c7216a20614ad8153501f2af15032e788165bb42
+        contentIdentity: c66d82992ce8abde007263c0714975e2d53cbdf5204433da27c894f31feeb070
+      "@craigsmitham/skills/conduct-codebase-research":
+        source: workspace
+        version: 0.0.3
+        sourceIdentity: workspace:@craigsmitham/skills/conduct-codebase-research
+        contentIdentity: 4d764966816ba4e8af2036c7a6e77e3e0db9194963e5ac2bd6bd5f6aaef329d1
+      "@craigsmitham/skills/workshop-codebase-design":
+        source: workspace
+        version: 0.0.3
+        sourceIdentity: workspace:@craigsmitham/skills/workshop-codebase-design
+        contentIdentity: afed44c80e43cd43e15f347f2271d2d3981c778bd3a47457563f4775f1e95dec
+      "@craigsmitham/skills/specify-codebase-change":
+        source: workspace
+        version: 0.0.2
+        sourceIdentity: workspace:@craigsmitham/skills/specify-codebase-change
+        contentIdentity: 9eb04d0336549582bde85a81cf85ec444b86c42492cb183a7937628644821f1f
+      "@craigsmitham/skills/plan-codebase-change":
+        source: workspace
+        version: 0.0.2
+        sourceIdentity: workspace:@craigsmitham/skills/plan-codebase-change
+        contentIdentity: ed46ca3874189336000f48661ce80a74d2db18e8202525e6709f70d1c70614ff
     resolvedMcpServers: {}
     resolvedSubagents: {}
     resolvedRules: {}

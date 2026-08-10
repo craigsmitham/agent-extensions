@@ -3,15 +3,17 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "frame-codebase-research",
-  "version": "0.0.2",
-  "description": "Turns bug reports and feature ideas into neutral, evidence-oriented codebase research briefs",
+  "version": "0.0.4",
+  "description": "Turns bug reports and feature ideas into neutral, time-aware codebase research briefs",
   "keywords": [
     "codebase",
     "research",
     "questions",
     "bug-report",
     "feature-request",
-    "context-engineering"
+    "context-engineering",
+    "evidence-provenance",
+    "snapshot-drift"
   ],
   "repository": {
     "type": "git",

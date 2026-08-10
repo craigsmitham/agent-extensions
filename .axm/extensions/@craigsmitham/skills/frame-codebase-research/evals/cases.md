@@ -16,13 +16,14 @@ Prompt:
 
 Expected invariants:
 
-- The reported symptom, population, and time boundary appear only as reported
-  evidence.
+- The reported absence of email appears only under `Reported Evidence`; the EU
+  population may bound `Scope`, and observation time appears only in the
+  evidence timeline.
 - The alleged EventBus cause is absent from the research handoff.
 - Questions cover the current checkout-to-email flow, error handling,
   observability, state or timing, and relevant history only where evidence can
   answer them.
-- A consequential brief requests human review and remains blocked until review.
+- The complete brief is `Ready` while its `Review status` is `Requested`.
 
 ### 2. Feature request with a proposed mechanism
 
@@ -52,8 +53,9 @@ Expected invariants:
 - The brief does not invent which report, value, user, environment, or observed
   discrepancy the reporter meant.
 - Indispensable missing facts appear under `Human Input Gaps`.
-- `Handoff status` is `Blocked` with a concrete reason.
-- No generic repository-wide question list substitutes for the missing input.
+- `Brief status` is `Blocked` with a concrete missing-input reason.
+- The brief omits `Research Questions` rather than substituting a generic list
+  for the missing input.
 
 ### 4. No material codebase uncertainty
 
@@ -70,6 +72,27 @@ Expected invariants:
   the larger request.
 - It does not perform the rename, because implementation remains outside this
   stage.
+
+### 5. Report and framing snapshots differ
+
+Prompt:
+
+> Payment retries began duplicating charges on release 2.4 two weeks ago. The
+> bug was filed yesterday. The repository is now on release 2.6, and several
+> payment files have changed. Frame the research before we discuss a fix.
+
+Expected invariants:
+
+- The evidence timeline distinguishes observation time, report time, affected
+  release, brief preparation time, and current anchor snapshot.
+- Unavailable material provenance is marked unknown rather than invented;
+  irrelevant version categories are omitted.
+- The questions cover whether the symptom reproduces at the research snapshot
+  and which relevant intervening changes affect the inquiry.
+- The brief neither assumes the bug remains present nor concludes that a change
+  fixed it.
+- The drift question stays scoped to the affected boundaries instead of asking
+  for a repository-wide history audit.
 
 ## Routing cases
 

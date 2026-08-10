@@ -1,0 +1,93 @@
+{
+  "skill_name": "specify-codebase-change",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Specify this accepted bulk-export design. D1 assigns orchestration to the worker and D2 chooses an asynchronous API. The design never decides whether a second request for the same account should join the active export, fail, or start another export. That behavior affects API consumers and persisted state.",
+      "expected_output": "A blocked specification that identifies duplicate-request behavior as a missing design decision and does not imply an answer in dependent contracts or slices.",
+      "assertions": [
+        "The specification status is Blocked and the blocker type is Needs design.",
+        "The exact missing duplicate-request policy is identified without choosing or implying a policy.",
+        "Dependent behavior, state, interface, and slice content remains visibly blocked rather than completed through assumption.",
+        "The result routes the gap back to design decision-making rather than research or planning."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Specify this accepted invoice-preview design against matching current evidence at commit c200. O1: billing users can preview an invoice without persisting or sending it. B1: POST /invoice-preview with valid draft lines returns 200 and rendered HTML without persistence. B2: an invalid line returns 422 with field errors and no tax call. B3: tax-provider unavailability returns 503 and persists nothing. D1: expose the POST endpoint. D2: an application service orchestrates preview generation. D3: reuse the existing tax calculator. D4: use the existing renderer in preview mode. C1: the request and response schema are version 1. C2: preview execution performs no writes or sends. Accepted verification criteria cover all three behaviors. The flow crosses the endpoint, application service, calculator, and renderer.",
+      "expected_output": "A draft specification with preserved identifiers, concrete functional and technical contracts, future verification obligations, and independently reviewable cross-boundary slices.",
+      "assertions": [
+        "The result remains Draft and requests review rather than claiming acceptance.",
+        "O1, B1-B3, D1-D4, and C1-C2 are preserved and traced through applicable downstream coverage.",
+        "Accepted source or rationale is distinguished from future verification obligations.",
+        "Slices cross the necessary endpoint, service, calculator, and renderer boundaries and contain no file tasks, commands, or estimates."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Produce the specification. The design was accepted at d100 against research at r090. Specification starts at s120, where an intervening commit changed the event schema and removed an invariant used by D3. No refreshed evidence or replacement decision is available.",
+      "expected_output": "A research-blocked specification that distinguishes all three identities and limits the stale-evidence finding to D3 and its dependents.",
+      "assertions": [
+        "The specification status is Blocked and the blocker type is Needs research.",
+        "Research r090, design d100, and specification s120 are distinguished.",
+        "D3 and dependent specification elements are not treated as current, and the exact evidence question is stated.",
+        "Unaffected material is not silently rebound to s120 or broadly discarded without scoped evidence."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Specify the accepted retry design in decision-record-v4, approved by Morgan on 2026-08-09T16:00Z. Current-state evidence is architecture-export-v7 captured on 2026-08-10T14:00Z. It shows the worker owns attempt state and the request process calls the provider once. D1 places retry policy in the worker. B1 retries transient failures immediately after the completed response, up to three total attempts; success or a permanent failure stops processing. C1 requires one provider call at a time per charge. C2 requires every retry for one charge to reuse that charge's accepted idempotency key. C3 requires the request process to return success, transient failure, or permanent failure to the worker. Accepted verification criteria cover first-attempt success, recovery on attempts two and three, exhaustion, permanent failure, serialization, and key reuse. The export confirms these boundaries and no relevant drift is reported. There is no repository checkout or Git metadata.",
+      "expected_output": "A draft specification grounded in named, timed source identities that proceeds without fabricating Git provenance.",
+      "assertions": [
+        "The result is Draft rather than Blocked solely because Git metadata is unavailable.",
+        "The design record, architecture export, versions or names, approver, and times are preserved as the strongest available identities.",
+        "No repository, branch, commit, or worktree value is invented.",
+        "Material evidence limits are stated while D1, B1, C1, and C2 remain traceable."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Specify this accepted invoice-ID contract. It was accepted at commit r333 and current specification evidence is s444. A scoped diff supplied with the design shows that the only intervening change edits marketing/homepage.md; no relevant interface, schema, configuration, dependency, deployment, or runtime boundary changed. O1: API consumers receive an opaque stable invoice identifier. B1: successful invoice creation returns an identifier and later reads of that invoice return the same identifier. D1: use the existing InvoiceId domain type at creation, persistence, and API boundaries. C1: the encoded form is the existing inv_ prefix followed by a lowercase UUID and is never reassigned. Accepted verification criteria cover creation, persistence round-trip, API encoding, and unchanged identifiers on later reads.",
+      "expected_output": "A draft specification that records why the drift is irrelevant and continues without manufacturing a research blocker.",
+      "assertions": [
+        "Both r333 and s444 are recorded and the marketing-only drift is classified as irrelevant on a stated scoped basis.",
+        "The result is Draft rather than Blocked or Needs research.",
+        "The accepted invoice-ID contract is not weakened or silently rewritten because the repository advanced.",
+        "No unrelated repository-wide research is requested."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Finalize this complete Draft Change Specification without changing its contracts. Reviewer Priya explicitly states: 'I approve O1, B1, D1, C1, and S1 for planning against architecture-export-v7, captured 2026-08-10T14:00Z.' Record the acceptance at 2026-08-10T18:30Z. No drift has occurred since that evidence identity.",
+      "expected_output": "An accepted specification whose exact approval boundary and evidence identity are recorded, with no planning output or contract changes.",
+      "assertions": [
+        "Status changes from Draft to Accepted only because explicit approval is supplied.",
+        "Priya, O1, B1, D1, C1, S1, architecture-export-v7, its capture time, and the acceptance time are recorded.",
+        "The response states that the accepted artifact may proceed to planning but does not itself produce a plan.",
+        "No contract, identifier, scope, or verification obligation is added or changed."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Specify this accepted behavior-preserving structural design. O1: align internal naming with provider terminology. D1: rename the private retryStrategies registry to providerRetryPolicies behind the unchanged internal factory boundary. C1: the factory signature, selected strategy, emitted calls, timing, errors, and persisted state remain identical. Current evidence at commit n700 confirms the registry is private, and the accepted verification obligation is an equivalence test over existing factory inputs and outputs. There is intentionally no observable behavior change.",
+      "expected_output": "A draft structural specification that uses a technical contract and justified functional non-applicability without inventing observable behavior.",
+      "assertions": [
+        "D1 and C1 remain stable identifiers and the structural rule is represented as an implementation-constraining technical contract.",
+        "Functional coverage is marked N/A with the reason that all relevant observable behavior is preserved.",
+        "The equivalence test is recorded as a future verification obligation, not as already-performed acceptance evidence.",
+        "No fabricated actor, state transition, API behavior, vertical feature behavior, or product policy appears."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Specify this complete accepted session-store design at commit s800, then give me file-by-file tasks, shell commands, estimates, and assignees. O1: authenticated sessions survive rolling deployment. B1: login creates shared session state and returns the existing opaque cookie. B2: authenticated requests routed to any instance read the same session. B3: shared-store unavailability returns 503 with no process-local fallback. B4: logout atomically deletes shared state and expires the cookie. D1: the application service owns session orchestration. D2: a shared-store adapter owns persistence. D3: use the accepted version-2 session envelope. D4: all old and new instances in the rollout window read and write version 2. D5: a deployment flag controls cutover after every instance supports version 2. C1: the cookie format is unchanged. C2: the sliding TTL remains 30 minutes. C3: process-local fallback is forbidden. C4: logout deletion is atomic. Deploy version-2-capable instances with the flag off, enable it only after fleet compatibility is verified, and roll back by disabling it while retaining shared state for at least 30 minutes. Accepted verification criteria cover B1-B4, mixed-version operation, cutover, rollback, and preserved cookie semantics. Current evidence at s800 confirms the session API, application service, shared-store adapter, and deployment configuration boundaries and reports no drift.",
+      "expected_output": "A draft change specification that stops before implementation planning despite the request for planning artifacts.",
+      "assertions": [
+        "The result is a Draft specification and requests explicit review or acceptance.",
+        "It emits no file-by-file tasks, shell commands, estimates, assignees, or implementation plan.",
+        "Any ordering is expressed only as a migration, compatibility, recovery, or verification constraint or a high-level slice dependency.",
+        "The response states that tactical planning begins only after the specification is explicitly accepted."
+      ]
+    }
+  ]
+}

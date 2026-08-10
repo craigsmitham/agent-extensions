@@ -1,6 +1,6 @@
 ---
 name: conduct-codebase-research
-description: Investigates a codebase from a research brief or explicit set of questions and produces an evidence-backed current-state research report and technical map. Use when asked to answer codebase research questions, trace existing behavior, locate ownership, explain control or data flow, identify contracts and invariants, or map relevant architecture before design. Not for proposing changes, choosing a design, writing an implementation plan, reviewing code quality, or editing code.
+description: Investigates a codebase from a research brief or explicit questions and produces an evidence-backed, snapshot-bound current-state report and technical map. Use when asked to answer codebase research questions, trace existing behavior, locate ownership, explain control or data flow, identify contracts and invariants, assess relevant drift since a report or brief, or map architecture before design. Not for proposing changes, choosing a design, writing an implementation plan, reviewing code quality, or editing code.
 ---
 
 # Conduct codebase research
@@ -15,6 +15,8 @@ snapshot. Produce evidence another engineer or agent can inspect and challenge.
 - Preserve the supplied question IDs and account for every question.
 - Distinguish observed behavior, implemented behavior, declared intent, and
   inference. Never present one as another.
+- Bind material claims to the code, configuration, dependency, deployment, and
+  runtime snapshot that supports them. A date alone does not establish validity.
 - Prefer the source that owns each claim: runtime evidence for observed behavior,
   current code and configuration for implementation, tests or specifications for
   declared contracts, version history for rationale, and official version-matched
@@ -28,9 +30,17 @@ snapshot. Produce evidence another engineer or agent can inspect and challenge.
 
 Read the brief or questions and applicable repository instructions completely.
 Do not seek the originating ticket or desired solution unless the brief names it
-as required evidence. Record the repository, branch, commit, research time, and
-relevant runtime or dependency versions. Note pre-existing worktree changes and
-leave them untouched.
+as required evidence. Extract the time and snapshot of each supplied observation
+and the brief's preparation and anchor snapshot. Mark missing provenance unknown;
+do not infer it.
+
+Record the research time and current repository, branch, commit, worktree state,
+configuration, dependency, deployment, and runtime versions relevant to the
+questions. Note pre-existing worktree changes and leave them untouched. Compare
+the current snapshot with each available reported or brief snapshot using scoped
+history, diffs, or environment evidence around the affected boundaries. Record
+whether intervening drift is relevant, irrelevant, or unassessable; do not turn
+this into a repository-wide change audit.
 
 Classify each question as current behavior, structure, dependency, history, or
 runtime investigation. Identify boundaries that require evidence outside the
@@ -47,9 +57,11 @@ locate ownership, then narrow to relevant symbols and flows:
    state changes and outputs.
 3. Find the closest analogous behavior and document the pattern without judging
    whether it is desirable.
-4. For bugs, safely reproduce when practical, narrow the affected region, compare
+4. For bugs, safely reproduce at the research snapshot when practical, relate
+   the result to the reported snapshot, narrow the affected region, compare
    expected and observed paths, and inspect state, timing, error handling, and
-   regression history as the questions require.
+   relevant intervening or regression history. If the symptom no longer
+   reproduces, establish what changed only as far as the evidence permits.
 5. For external semantics, use primary documentation matching the installed
    version. Label any version mismatch.
 
@@ -81,48 +93,8 @@ artifacts supplementary to fresh inspection.
 
 ### 4. Produce the report
 
-Use this shape, adapting sections rather than leaving empty boilerplate:
-
-```markdown
-# Codebase Research Report: <topic>
-
-## Snapshot
-- Repository: ...
-- Branch and commit: ...
-- Researched at: ...
-- Relevant environment or versions: ...
-
-## Current-State Technical Map
-<Concise end-to-end explanation of relevant components and boundaries.>
-
-## Question Status
-| Question | Status | Evidence |
-| --- | --- | --- |
-| Q1 | Answered, Partial, Unanswered, or Blocked | <key references> |
-
-## Findings by Question
-
-### Q1 — <label>
-**Answer:** ...
-**Evidence:** ...
-**Inference:** ... <!-- only when needed -->
-
-## Contracts and Invariants
-<Relevant interfaces, schemas, state rules, compatibility constraints, and
-ownership.>
-
-## Tests and Observability
-<Existing tests, logs, metrics, traces, and what they establish.>
-
-## Historical Context
-<Only history needed to explain current state.>
-
-## Contradictions and Open Questions
-<Conflicting sources, missing evidence, and remaining uncertainty.>
-
-## Evidence Index
-<Paths, symbols, permalinks, commands, and primary external sources.>
-```
+Read `references/codebase-research-report.md` and adapt its shape rather than
+leaving empty boilerplate.
 
 Return the report in the response unless the caller specifies a path or the
 repository defines a temporary research location. Do not invent a durable
@@ -136,6 +108,8 @@ Before handing off, confirm that:
 - every supplied question has an explicit status and evidence trail;
 - the technical map crosses every material boundary found;
 - material claims are cited and inferences are labeled;
+- material claims identify the snapshot that supports them;
+- chronology, relevant drift, and unassessable provenance remain explicit;
 - snapshot and version metadata make citations reproducible;
 - contradictions and missing evidence remain visible; and
 - the report contains no recommendation, design choice, or implementation plan.

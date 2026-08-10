@@ -1,15 +1,21 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.0.2",
-  "description": "Moves codebase changes from neutral research questions through current-state evidence to explicit design decisions",
+  "version": "0.0.4",
+  "description": "Moves codebase changes from time-aware research through accepted design, specification, and implementation planning",
   "keywords": [
     "codebase",
     "research",
     "software-design",
+    "functional-specification",
+    "technical-specification",
+    "implementation-plan",
+    "vertical-slices",
     "architecture",
     "change-workflow",
-    "decision-making"
+    "decision-making",
+    "evidence-provenance",
+    "snapshot-drift"
   ],
   "repository": {
     "type": "git",
@@ -21,8 +27,10 @@
   "type": "pack",
   "name": "codebase-change-workflow",
   "dependencies": {
-    "@craigsmitham/skills/conduct-codebase-research": "^0.0.1",
-    "@craigsmitham/skills/workshop-codebase-design": "^0.0.1",
-    "@craigsmitham/skills/frame-codebase-research": "^0.0.2"
+    "@craigsmitham/skills/frame-codebase-research": "^0.0.4",
+    "@craigsmitham/skills/conduct-codebase-research": "^0.0.3",
+    "@craigsmitham/skills/workshop-codebase-design": "^0.0.3",
+    "@craigsmitham/skills/specify-codebase-change": "^0.0.2",
+    "@craigsmitham/skills/plan-codebase-change": "^0.0.2"
   }
 }

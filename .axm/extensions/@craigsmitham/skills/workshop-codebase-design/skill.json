@@ -3,15 +3,19 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "workshop-codebase-design",
-  "version": "0.0.1",
-  "description": "Workshops evidence-grounded codebase designs and records explicit human decisions",
+  "version": "0.0.3",
+  "description": "Workshops snapshot-aware functional and technical codebase designs with explicit human decisions",
   "keywords": [
     "software-design",
     "architecture",
     "design-workshop",
     "decision-record",
+    "functional-design",
+    "technical-design",
+    "traceability",
     "refactoring",
-    "context-engineering"
+    "evidence-freshness",
+    "snapshot-drift"
   ],
   "repository": {
     "type": "git",

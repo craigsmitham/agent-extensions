@@ -1,0 +1,47 @@
+{
+  "skill_name": "conduct-codebase-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Research this brief against the synthetic repository description. The failed export was observed on commit a111 with worker image 3.2 and reported three days later. The brief was prepared on b222. Research runs on c333, where the export state machine changed between b222 and c333. Q1: What is the current export flow? Q2: Does the reported failure reproduce, and what relevant intervening changes affect that result?",
+      "expected_output": "A snapshot-bound report that distinguishes all temporal stages, answers at c333, relates rather than substitutes the reproduction, scopes drift to export boundaries, and recommends no fix.",
+      "files": [
+        "evals/files/export-repository.md"
+      ],
+      "assertions": [
+        "The report distinguishes observation, report, brief, and research times or snapshots.",
+        "The current-state answers are explicitly bound to c333 and its relevant environment.",
+        "The drift check is scoped to export boundaries and does not present correlation as cause.",
+        "Reproduction at c333 is related to but not substituted for the observation at a111, and no fix or design is recommended."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Investigate why webhook deliveries were reported as delayed. The brief does not identify the affected commit, deployment, or dependency versions. Answer the current-state questions against the checked-out repository at commit w200.",
+      "expected_output": "A current-state report at w200 that preserves missing incident provenance as unknown, labels historical comparison unassessable, and continues with answerable research.",
+      "files": [
+        "evals/files/webhook-repository.md"
+      ],
+      "assertions": [
+        "Missing report provenance remains explicitly unknown and is not inferred from w200.",
+        "Current-state research proceeds for questions that remain answerable.",
+        "Historical comparison is labeled unassessable rather than silently omitted or made a blocker without cause.",
+        "Material findings identify w200 as their supporting research snapshot."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Research the current invoice-number allocation flow. The brief was prepared at d444; the checkout is now e555. The only intervening commits change the documentation site and an unrelated image optimizer.",
+      "expected_output": "A report at e555 that records why drift is irrelevant, answers the current-state questions normally, and avoids a repository-wide change narrative.",
+      "files": [
+        "evals/files/invoice-repository.md"
+      ],
+      "assertions": [
+        "The report records both snapshots and evidence that the drift is irrelevant to invoice boundaries.",
+        "It does not expand into a repository-wide change narrative.",
+        "It answers at e555 using evidence classifications and citations.",
+        "It recommends no design or implementation change."
+      ]
+    }
+  ]
+}

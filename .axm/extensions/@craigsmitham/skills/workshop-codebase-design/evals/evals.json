@@ -1,0 +1,93 @@
+{
+  "skill_name": "workshop-codebase-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Workshop the retry ownership decision. The research report was produced at commit r111, where the API process owned retry scheduling. Design starts at d222, where an intervening commit moved scheduling into the worker, but the report has not been refreshed.",
+      "expected_output": "A design frame that identifies material ownership drift, pauses the retry ownership decision as Needs research, and asks a precise current-state question without using stale evidence to recommend or accept an option.",
+      "assertions": [
+        "The frame distinguishes research commit r111 from design commit d222 and names the ownership drift.",
+        "The retry ownership decision is Needs research and is not recommended or accepted.",
+        "The response asks a precise current-state question and does not broaden into general research.",
+        "The response does not use unrelated areas as grounds for broader research."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Workshop how invoice IDs should be exposed to consumers. Research was completed at r333; design begins at d444. The intervening changes affect only the marketing site and do not touch relevant interfaces, configuration, dependencies, deployment, or runtime behavior.",
+      "expected_output": "A workshop frame that records the research and design snapshots, treats the evidenced marketing-only drift as irrelevant, and proceeds to confirmation without manufacturing a new research phase.",
+      "assertions": [
+        "The response records both snapshots and the basis for classifying the drift as irrelevant.",
+        "It does not demand refreshed research merely because the repository advanced.",
+        "It confirms the frame before resolving the invoice-ID decision.",
+        "No option is recommended or accepted from snapshot labels alone without the relevant current-state findings."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Continue this design workshop. Decisions were discussed against d555, but the repository advanced to d666 before acceptance. One intervening change modifies the persistence schema used by an accepted candidate design.",
+      "expected_output": "A reopened, unaccepted design whose persistence-dependent decisions require scoped revalidation against d666 before acceptance.",
+      "assertions": [
+        "The response repeats a scoped drift check against d666 before acceptance.",
+        "Persistence-dependent decisions are reopened and cannot remain accepted while evidence is stale.",
+        "The record remains Discussing or Blocked rather than Accepted.",
+        "Any later acceptance must record the exact validated snapshot and time."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Finish the design for bulk export. Architecture decisions are accepted, but the discussion never decided what an API consumer observes when it submits a duplicate request while an export is active. That choice changes response semantics, persisted state, and operator expectations. Mark the remaining work as deferred and accept the design.",
+      "expected_output": "A still-unaccepted design that identifies duplicate-request behavior as a consequential functional decision and marks it as specification-blocking unless that behavior is explicitly excluded from coherent accepted scope.",
+      "assertions": [
+        "Duplicate-request behavior receives a stable behavior identifier and is not treated as an implementation detail.",
+        "The design is not accepted for scope that still includes duplicate requests.",
+        "Deferral blocks specification unless the behavior is coherently excluded from accepted scope.",
+        "Acceptance additionally requires the material design-time evidence identity."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Workshop retry ownership from this versioned architecture export. There is no research report or repository checkout. Export billing-architecture-v7 was captured on 2026-08-09 and shows that the request process calls the provider once, while the worker records failures but never retries. We need failed charges retried without duplicate attempts.",
+      "expected_output": "A workshop frame that uses the named export and capture time as direct evidence, states evidence limits without inventing Git provenance, and proceeds unless a material retry or idempotency fact must be researched.",
+      "assertions": [
+        "The response identifies direct evidence mode and preserves the export name and capture time.",
+        "It invents no branch, commit, worktree, or formal research report.",
+        "It distinguishes evidence limits and precise research needs from candidate designs.",
+        "It asks the developer to confirm or correct the frame before resolving a design option."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "The frame is confirmed. We must decide both where retry policy lives and how consumers learn that retries are exhausted. Present the final design for both decisions now. Current evidence at commit c777 shows the worker owns attempt state and the API exposes a terminal failed status.",
+      "expected_output": "A dependency-ordered agenda followed by options and a recommendation for only the first decision, ending with a request for explicit human choice while the second decision remains proposed.",
+      "assertions": [
+        "Both decisions appear on the agenda but only the first is actively resolved.",
+        "The first decision has two or three viable options, tradeoffs, and an explicit recommendation.",
+        "The response asks for an explicit choice and accepts neither decision by default.",
+        "It does not announce a final design for both decisions."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Workshop the design for moving session state from memory to a shared store, then give me the file-by-file tasks, shell commands, and review increments. Current evidence at commit s888 shows sessions are process-local and rolling deploys route clients across old and new instances.",
+      "expected_output": "A design-level workshop response that declines implementation planning, treats migration order only as a possible compatibility or availability constraint, and presents one consequential design decision for explicit choice.",
+      "assertions": [
+        "The response emits no tasks, commands, file-by-file steps, review increments, or implementation plan.",
+        "Planning artifacts are deferred to a separate later workflow rather than promised as part of this workshop.",
+        "Any ordering discussion is limited to a behavior, migration safety, compatibility, or recoverability constraint.",
+        "The response asks the developer to confirm the frame before resolving the first consequential decision.",
+        "No design option is accepted by default."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Workshop the design for renaming the local variable retries to retryCount inside one private function. Tests and observable behavior remain unchanged.",
+      "expected_output": "A concise explanation that the behavior-preserving local rename has no consequential design choice and does not warrant a formal workshop or Codebase Design Record.",
+      "assertions": [
+        "The response says a formal workshop is disproportionate because no consequential design choice is present.",
+        "It does not manufacture options, a decision agenda, stable IDs, or a Codebase Design Record.",
+        "It does not produce implementation tasks or code changes."
+      ]
+    }
+  ]
+}
