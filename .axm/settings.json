@@ -12,13 +12,8 @@
       "gitignoreAliases": true
     }
   },
-  "lint": {
-    "rules": {
-      "workspace/authored-content-unpublished": "info"
-    }
-  },
   "skills": {
-    "axm": "@agentxm/skills/axm",
+    "axm": "@agentxm/skills/axm@0.26.2",
     "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
     "effect-v4-async-coordination": "workspace:@craigsmitham/skills/effect-v4-async-coordination",
     "effect-v4-branded-types": "workspace:@craigsmitham/skills/effect-v4-branded-types",
@@ -62,5 +57,10 @@
     "harness-engineering": "workspace:@craigsmitham/packs/harness-engineering",
     "codebase-change-workflow": "workspace:@craigsmitham/packs/codebase-change-workflow",
     "work-management": "workspace:@craigsmitham/packs/work-management"
+  },
+  "lint": {
+    "rules": {
+      "workspace/authored-content-unpublished": "info"
+    }
   }
 }

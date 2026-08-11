@@ -21,7 +21,10 @@ jobs:
           node-version: 24
 
       - name: Install AXM
-        run: npm install --global axm.sh@0.25.7
+        run: npm install --global axm.sh@0.26.2
 
-      - name: Validate public packages
-        run: scripts/check-public-safety.sh
+      - name: Test the Git-index safety gate
+        run: scripts/test-public-safety.sh
+
+      - name: Validate the proposed commit
+        run: scripts/check-public-safety.sh --view git-index

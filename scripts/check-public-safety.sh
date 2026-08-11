@@ -1,10 +1,100 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+readonly required_axm_version="0.26.2"
+
+usage() {
+  echo "Usage: $0 [--view workspace|git-index]" >&2
+}
+
+view="workspace"
+if [[ $# -gt 0 ]]; then
+  if [[ $# -ne 2 || "$1" != "--view" ]]; then
+    usage
+    exit 2
+  fi
+  view="$2"
+fi
+
+if [[ "$view" != "workspace" && "$view" != "git-index" ]]; then
+  usage
+  exit 2
+fi
+
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
-axm lint --strict
+if ! command -v axm >/dev/null 2>&1; then
+  echo "AXM ${required_axm_version} is required. Install it from https://axm.sh." >&2
+  exit 1
+fi
+
+installed_axm_version="$(axm --version)"
+if [[ "$installed_axm_version" != "$required_axm_version" ]]; then
+  echo "AXM ${required_axm_version} is required; found ${installed_axm_version}." >&2
+  exit 1
+fi
+
+git_index_fingerprint() {
+  local digest
+  digest="$(git ls-files --stage -z | sha256sum | cut -d ' ' -f 1)"
+  printf 'sha256:%s\n' "$digest"
+}
+
+assert_index_unchanged() {
+  local current_fingerprint
+  current_fingerprint="$(git_index_fingerprint)"
+  if [[ "$current_fingerprint" != "$expected_index_fingerprint" ]]; then
+    echo "The Git index changed during public safety validation; rerun the commit." >&2
+    exit 1
+  fi
+}
+
+snapshot_root=""
+cleanup() {
+  if [[ -n "$snapshot_root" ]]; then
+    rm -rf -- "$snapshot_root"
+  fi
+}
+trap cleanup EXIT
+
+validation_root="$repo_root"
+if [[ "$view" == "git-index" ]]; then
+  expected_index_fingerprint="$(git_index_fingerprint)"
+
+  lint_output="$(mktemp "${TMPDIR:-/tmp}/public-safety-lint.XXXXXX")"
+  snapshot_root="$(mktemp -d "${TMPDIR:-/tmp}/public-safety-git-index.XXXXXX")"
+  trap 'rm -f -- "$lint_output"; cleanup' EXIT
+
+  if ! axm lint --view git-index --strict --json >"$lint_output"; then
+    cat "$lint_output"
+    exit 1
+  fi
+
+  reported_index_fingerprint="$(
+    jq -er '
+      select(.ok == true and .result.input.view == "git-index") |
+      .result.input.fingerprint
+    ' "$lint_output"
+  )"
+  if [[ "$reported_index_fingerprint" != "$expected_index_fingerprint" ]]; then
+    echo "AXM validated a different Git index; rerun the commit." >&2
+    exit 1
+  fi
+  assert_index_unchanged
+
+  materialized_index_fingerprint="$(
+    scripts/materialize-git-index.sh "$snapshot_root"
+  )"
+  if [[ "$materialized_index_fingerprint" != "$expected_index_fingerprint" ]]; then
+    echo "The materialized snapshot does not match the Git index AXM validated." >&2
+    exit 1
+  fi
+  assert_index_unchanged
+  validation_root="$snapshot_root"
+else
+  axm lint --view workspace --strict
+fi
 
 expected=(
   knowledge/docs
@@ -48,9 +138,9 @@ expected=(
 
 expected_list="$(printf '%s\n' "${expected[@]}")"
 actual_list="$(
-  find .axm/extensions/@craigsmitham -type f \
+  find "$validation_root/.axm/extensions/@craigsmitham" -type f \
     \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
-    | sed -E 's#^.axm/extensions/@craigsmitham/([^/]+/[^/]+)/.*#\1#' \
+    | sed -E "s#^${validation_root}/.axm/extensions/@craigsmitham/([^/]+/[^/]+)/.*#\\1#" \
     | sort
 )"
 
@@ -62,30 +152,30 @@ fi
 
 if rg -n --hidden \
   '(/Users/|/home/[A-Za-z0-9._-]+|~/(Code|Notes|OneDrive)|agent-extensions-private|personal-os|\.exe\.xyz|craig@)' \
-  .axm/extensions/@craigsmitham; then
+  "$validation_root/.axm/extensions/@craigsmitham"; then
   echo "Found a private or machine-specific identifier in public package content." >&2
   exit 1
 fi
 
 if rg -n --hidden -i \
   '(api[_-]?key|client[_-]?secret|access[_-]?token|private[_-]?key|password)[[:space:]]*[:=][[:space:]]*[^$<{[:space:]]' \
-  .axm/extensions/@craigsmitham; then
+  "$validation_root/.axm/extensions/@craigsmitham"; then
   echo "Found a possible hard-coded secret in public package content." >&2
   exit 1
 fi
 
-while IFS= read -r link; do
+while IFS= read -r -d '' link; do
   resolved="$(realpath "$link")"
   case "$resolved" in
-    "$repo_root"/*) ;;
+    "$validation_root"/*) ;;
     *)
-      echo "Symlink escapes repository: $link -> $resolved" >&2
+      echo "Symlink escapes validation root: $link -> $resolved" >&2
       exit 1
       ;;
   esac
-done < <(find . -path ./.git -prune -o -type l -print)
+done < <(find "$validation_root" -path "$validation_root/.git" -prune -o -type l -print0)
 
-while IFS= read -r manifest; do
+while IFS= read -r -d '' manifest; do
   jq -e '
     (.description | type == "string" and length > 0) and
     (.keywords | type == "array" and length > 0) and
@@ -94,8 +184,8 @@ while IFS= read -r manifest; do
     (.repository.url == "https://github.com/craigsmitham/agent-extensions") and
     (.repository.directory | startswith(".axm/extensions/@craigsmitham/"))
   ' "$manifest" >/dev/null
-done < <(find .axm/extensions/@craigsmitham -type f \
-  \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \))
+done < <(find "$validation_root/.axm/extensions/@craigsmitham" -type f \
+  \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) -print0)
 
 if jq -e '
   ([.skills | to_entries[] | select(.key != "axm") |
@@ -105,15 +195,19 @@ if jq -e '
    [.rules | to_entries[] | .value]) |
   length == 37 and
   all(type == "string" and startswith("workspace:@craigsmitham/"))
-' .axm/settings.json >/dev/null; then
+' "$validation_root/.axm/settings.json" >/dev/null; then
   :
 else
   echo "A public package is not owned by this workspace." >&2
   exit 1
 fi
 
-axm knowledge lint --path .axm/extensions/@craigsmitham/knowledge/docs
-axm knowledge lint --path .axm/extensions/@craigsmitham/knowledge/harness-engineering
-axm knowledge lint --path .axm/extensions/@craigsmitham/knowledge/workflow-automation
+axm knowledge lint --path "$validation_root/.axm/extensions/@craigsmitham/knowledge/docs"
+axm knowledge lint --path "$validation_root/.axm/extensions/@craigsmitham/knowledge/harness-engineering"
+axm knowledge lint --path "$validation_root/.axm/extensions/@craigsmitham/knowledge/workflow-automation"
 
-echo "Public extension safety checks passed."
+if [[ "$view" == "git-index" ]]; then
+  assert_index_unchanged
+fi
+
+echo "Public extension safety checks passed for the ${view} view."

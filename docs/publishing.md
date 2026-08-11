@@ -12,6 +12,19 @@ package.
 - Read the `axm` skill and the relevant AXM help for the package type and
   command you will use.
 - Know which changed packages are intended for this release.
+- Install AXM 0.26.2. The safety gate deliberately rejects other versions so
+  local and CI validation use the same contract.
+
+Activate the repository's tracked pre-commit hook once per clone:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+The hook validates the exact Git index—the proposed commit—not unstaged or
+untracked work. It fails closed when AXM is missing or has the wrong version.
+If formatters are added later, run them and stage their output before this
+safety gate so the gate remains the final check of commit contents.
 
 ## Review the complete change
 
@@ -32,7 +45,21 @@ package.
    scripts/check-public-safety.sh
    ```
 
+   With no arguments, this publishing preflight validates the complete working
+   tree. The pre-commit hook and CI instead run:
+
+   ```bash
+   scripts/check-public-safety.sh --view git-index
+   ```
+
+   That mode materializes one temporary snapshot of the exact staged tree and
+   runs every custom validator against it. Untracked and unstaged content is
+   excluded. An unmerged or concurrently changing index fails the check.
+
 Review every finding before continuing.
+
+Use `git commit --no-verify` only for an emergency local bypass. CI runs the
+same Git-index validation independently and remains authoritative.
 
 An unpublished change to a workspace-authored package reports
 `workspace/authored-content-unpublished` as an informational finding. This is
