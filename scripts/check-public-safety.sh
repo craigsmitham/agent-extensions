@@ -35,6 +35,13 @@ if [[ "$installed_axm_version" != "$required_axm_version" ]]; then
   exit 1
 fi
 
+for dependency in jq rg realpath sha256sum; do
+  if ! command -v "$dependency" >/dev/null 2>&1; then
+    echo "The public safety gate requires '$dependency', but it is not installed." >&2
+    exit 1
+  fi
+done
+
 git_index_fingerprint() {
   local digest
   digest="$(git ls-files --stage -z | sha256sum | cut -d ' ' -f 1)"

@@ -23,6 +23,11 @@ jobs:
       - name: Install AXM
         run: npm install --global axm.sh@0.26.2
 
+      - name: Install safety dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes ripgrep
+
       - name: Test the Git-index safety gate
         run: scripts/test-public-safety.sh
 
