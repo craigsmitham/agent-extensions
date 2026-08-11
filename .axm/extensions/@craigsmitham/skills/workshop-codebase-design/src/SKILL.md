@@ -35,8 +35,10 @@ evidence limit and proceed when the supplied evidence is sufficient. Record the
 basis for classifying encountered drift as irrelevant. If drift or missing
 provenance may invalidate material evidence, state the precise current-state
 question, mark only dependent decisions `Needs research`, and pause them. Do not
-broaden into general codebase research or guess. If the change has no
-consequential design choice, explain why a formal workshop is unnecessary.
+broaden into general codebase research or guess. When drift pauses design
+acceptance, state that later acceptance must record both the exact revalidated
+identity and its validation time. If the change has no consequential design
+choice, explain why a formal workshop is unnecessary.
 
 ## Working agreement
 
@@ -48,12 +50,12 @@ consequential design choice, explain why a formal workshop is unnecessary.
 - Maintain a decision ledger. Use `Proposed`, `Accepted`, `Deferred`,
   `Needs research`, or `Superseded`; a recommendation is never `Accepted` by
   default.
-- Give material in-scope outcomes, observable behaviors, accepted decisions, and
-  contracts stable identifiers when later artifacts must trace them. Preserve
-  identifiers supplied by the caller. Assign an identifier as soon as an
-  unresolved behavior or contract blocks specification; do not wait for it to
-  be accepted. Record whether each unresolved or deferred item blocks
-  specification of the accepted scope.
+- Give material in-scope outcomes, observable behaviors, consequential
+  decisions, and contracts stable identifiers when later artifacts must trace
+  them. Preserve identifiers supplied by the caller. Assign an identifier as
+  soon as an unresolved decision, behavior, or contract blocks specification;
+  do not wait for acceptance. Record whether each unresolved or deferred item
+  blocks specification of the accepted scope.
 - Before resolving each consequential decision, confirm that its constraining
   evidence still applies to the current design-time evidence identity. Recheck
   only affected evidence when that identity changes during the workshop.
@@ -76,10 +78,26 @@ the developer to confirm or correct this frame before resolving design choices.
 
 ### 2. Build the decision agenda
 
-Identify only decisions that materially affect responsibilities, behavior,
-contracts, state, boundaries, failure handling, compatibility, operations, or
-the cost of later change. Order them by dependency and label each `Decide now`,
-`Constrained`, `Defer`, or `Needs research`.
+Derive the agenda from the confirmed outcomes and affected current-state flows:
+
+- **Functional:** identify unresolved observer-visible behavior, policy, state
+  transitions, and failure or boundary semantics.
+- **Technical:** at each affected boundary, identify choices about responsibility
+  and authority, state and invariant enforcement, coordination and failure
+  recovery, interfaces and compatibility, or quality and operational constraints.
+  Trace each new responsibility from trigger through completion; do not let a
+  component's current participation or a candidate mechanism silently assign
+  ownership.
+
+Promote a candidate only when viable alternatives have materially different
+consequences, risks, reversibility, or cost of later change. If evidence or an
+accepted constraint permits only one choice, record the conclusion as an
+evidenced `C<n>` contract or invariant with `Constrained` agenda status; do not
+manufacture options or present it as a human decision. Use `D<n>` for actual
+decision candidates. Order the agenda by dependency. Give each item a
+functional, technical, or coupled type and a `Decide now`, `Constrained`,
+`Defer`, or `Needs research` status, and record the evidence or forces that
+justify that status.
 
 ### 3. Resolve one decision at a time
 
@@ -89,17 +107,22 @@ For each `Decide now` item:
    and source or snapshot identity that constrain it.
 2. Present viable options with their fit, tradeoffs, consequences, and
    reversibility. Exclude an option only for a stated constraint or invariant.
-3. Classify the affected elements using the change model below.
-4. Recommend one option and explain why it best fits the agreed outcomes and
+3. For a technical or coupled decision, state the forces that make the choice
+   consequential and the affected boundaries or contracts.
+4. Classify the affected elements using the change model below.
+5. Recommend one option and explain why it best fits the agreed outcomes and
    constraints.
-5. Ask for an explicit choice or revision. Record the response and its rationale
+6. Ask for an explicit choice or revision. Record the response and its rationale
    before moving to a dependent decision.
 
 ### 4. Model structure and behavior
 
 Use `O<n>` for material outcomes, `B<n>` for observable behaviors, `D<n>` for
-accepted decisions, and `C<n>` for material contracts or invariants that must
-trace into later artifacts.
+consequential decisions, and `C<n>` for material contracts or invariants that
+must trace into later artifacts. A `D<n>` status determines whether later
+artifacts may rely on it. When an unresolved decision governs a material
+observer-visible behavior, assign both the decision and the behavior stable
+identifiers; do not let its `D<n>` substitute for the corresponding `B<n>`.
 
 Classify every affected element as:
 
@@ -132,13 +155,19 @@ responsibilities and boundaries, control and data flow, interfaces and
 contracts, state and invariants, failure behavior, compatibility and migration,
 security, performance, operations, and design-level verification.
 
+Derive every material end-state rule from an accepted decision, an evidenced
+preserved `C<n>` contract or invariant, or a visibly unresolved agenda item. If
+a technical choice first appears during synthesis, give it a `D<n>` identifier,
+promote it to the agenda with explicit specification impact, and resolve or
+defer it rather than silently adding it to the design.
+
 Pressure-test it against the original intent and revalidated current-state
 evidence. Look for contradictory decisions, externally visible structural
 changes, partial failure, concurrency and lifecycle gaps, migration hazards,
 snapshot drift, uncovered acceptance scenarios, and speculative structure with
-no present purpose. Trace every in-scope outcome and behavior to accepted
-decisions, contracts, and design-level verification. Reopen any decision
-invalidated by the test.
+no present purpose. Trace every in-scope outcome, behavior, and material
+end-state rule to accepted decisions, contracts, preserved constraints, and
+design-level verification. Reopen any decision invalidated by the test.
 
 ### 6. Obtain design acceptance
 
@@ -149,10 +178,11 @@ decisions. Keep the record `Discussing` until acceptance is explicit; use
 `Blocked` when unresolved evidence prevents progress and `Accepted` only after
 approval. Do not accept an in-scope design while a consequential behavior,
 contract, or technical choice remains unresolved; explicitly exclude genuinely
-deferred scope. Acceptance requires the material snapshot or source identity
-against which the design was validated; if it is unavailable, keep the record
-`Blocked` rather than inferring provenance from reported prior acceptance.
-Record that exact identity so later work can detect drift.
+deferred scope. Name each unresolved item and state its specification impact
+explicitly. Acceptance requires the material snapshot or source identity against
+which the design was validated; if it is unavailable, keep the record `Blocked`
+rather than inferring provenance from reported prior acceptance. Record that
+exact identity and its validation time so later work can detect drift.
 
 ## Codebase Design Record
 
@@ -162,6 +192,8 @@ inapplicable sections rather than leaving boilerplate.
 
 Before handoff, confirm that no accepted decision depends on stale evidence;
 material in-scope outcomes, behaviors, decisions, and contracts have stable
-identifiers and design-level verification; deferred scope and specification
-impact are explicit; paused decisions are `Needs research`; and the acceptance
-snapshot or evidence identity is sufficient to detect later material change.
+identifiers and design-level verification; no material technical rule first
+appears in synthesis; deferred scope and specification impact are explicit;
+each `Constrained` agenda item traces to an evidenced `C<n>` contract or
+invariant; paused decisions are `Needs research`; and the acceptance snapshot or
+evidence identity is sufficient to detect later material change.

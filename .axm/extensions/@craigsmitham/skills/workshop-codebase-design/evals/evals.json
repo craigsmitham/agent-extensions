@@ -1,8 +1,10 @@
 {
   "skill_name": "workshop-codebase-design",
+  "pass_condition": "The prompt set passes when design decisions never rely on materially stale evidence, direct evidence is usable without invented provenance, irrelevant drift does not cause unnecessary research, the workshop preserves explicit human choice and its design boundary, and acceptance is tied to a reproducible snapshot or evidence identity. The workshop must derive consequential technical and cross-cutting choices when the caller has not named them, avoid manufacturing alternatives when evidence constrains the design, represent constrained conclusions as evidenced contracts rather than human decisions, and prevent material technical rules from first appearing during synthesis. Accepted scope must be functionally and technically complete, traceable, operationally credible, and ready for specification.",
   "evals": [
     {
       "id": 1,
+      "name": "Relevant research-to-design drift",
       "prompt": "Workshop the retry ownership decision. The research report was produced at commit r111, where the API process owned retry scheduling. Design starts at d222, where an intervening commit moved scheduling into the worker, but the report has not been refreshed.",
       "expected_output": "A design frame that identifies material ownership drift, pauses the retry ownership decision as Needs research, and asks a precise current-state question without using stale evidence to recommend or accept an option.",
       "assertions": [
@@ -14,6 +16,7 @@
     },
     {
       "id": 2,
+      "name": "Irrelevant research-to-design drift",
       "prompt": "Workshop how invoice IDs should be exposed to consumers. Research was completed at r333; design begins at d444. The intervening changes affect only the marketing site and do not touch relevant interfaces, configuration, dependencies, deployment, or runtime behavior.",
       "expected_output": "A workshop frame that records the research and design snapshots, treats the evidenced marketing-only drift as irrelevant, and proceeds to confirmation without manufacturing a new research phase.",
       "assertions": [
@@ -25,6 +28,7 @@
     },
     {
       "id": 3,
+      "name": "Snapshot changes before acceptance",
       "prompt": "Continue this design workshop. Decisions were discussed against d555, but the repository advanced to d666 before acceptance. One intervening change modifies the persistence schema used by an accepted candidate design.",
       "expected_output": "A reopened, unaccepted design whose persistence-dependent decisions require scoped revalidation against d666 before acceptance.",
       "assertions": [
@@ -36,6 +40,7 @@
     },
     {
       "id": 4,
+      "name": "Functional ambiguity blocks an otherwise complete design",
       "prompt": "Finish the design for bulk export. Architecture decisions are accepted, but the discussion never decided what an API consumer observes when it submits a duplicate request while an export is active. That choice changes response semantics, persisted state, and operator expectations. Mark the remaining work as deferred and accept the design.",
       "expected_output": "A still-unaccepted design that identifies duplicate-request behavior as a consequential functional decision and marks it as specification-blocking unless that behavior is explicitly excluded from coherent accepted scope.",
       "assertions": [
@@ -47,6 +52,7 @@
     },
     {
       "id": 5,
+      "name": "Direct evidence without Git or a research report",
       "prompt": "Workshop retry ownership from this versioned architecture export. There is no research report or repository checkout. Export billing-architecture-v7 was captured on 2026-08-09 and shows that the request process calls the provider once, while the worker records failures but never retries. We need failed charges retried without duplicate attempts.",
       "expected_output": "A workshop frame that uses the named export and capture time as direct evidence, states evidence limits without inventing Git provenance, and proceeds unless a material retry or idempotency fact must be researched.",
       "assertions": [
@@ -58,6 +64,7 @@
     },
     {
       "id": 6,
+      "name": "One consequential decision at a time",
       "prompt": "The frame is confirmed. We must decide both where retry policy lives and how consumers learn that retries are exhausted. Present the final design for both decisions now. Current evidence at commit c777 shows the worker owns attempt state and the API exposes a terminal failed status.",
       "expected_output": "A dependency-ordered agenda followed by options and a recommendation for only the first decision, ending with a request for explicit human choice while the second decision remains proposed.",
       "assertions": [
@@ -69,8 +76,9 @@
     },
     {
       "id": 7,
+      "name": "Design request that also asks for implementation planning",
       "prompt": "Workshop the design for moving session state from memory to a shared store, then give me the file-by-file tasks, shell commands, and review increments. Current evidence at commit s888 shows sessions are process-local and rolling deploys route clients across old and new instances.",
-      "expected_output": "A design-level workshop response that declines implementation planning, treats migration order only as a possible compatibility or availability constraint, and presents one consequential design decision for explicit choice.",
+      "expected_output": "A design-level workshop response that declines implementation planning, treats migration order only as a possible compatibility or availability constraint, and asks the developer to confirm the frame before resolving a consequential design decision.",
       "assertions": [
         "The response emits no tasks, commands, file-by-file steps, review increments, or implementation plan.",
         "Planning artifacts are deferred to a separate later workflow rather than promised as part of this workshop.",
@@ -81,12 +89,88 @@
     },
     {
       "id": 8,
+      "name": "No consequential design choice",
       "prompt": "Workshop the design for renaming the local variable retries to retryCount inside one private function. Tests and observable behavior remain unchanged.",
       "expected_output": "A concise explanation that the behavior-preserving local rename has no consequential design choice and does not warrant a formal workshop or Codebase Design Record.",
       "assertions": [
         "The response says a formal workshop is disproportionate because no consequential design choice is present.",
         "It does not manufacture options, a decision agenda, stable IDs, or a Codebase Design Record.",
         "It does not produce implementation tasks or code changes."
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Discover technical decisions without a supplied agenda",
+      "prompt": "Workshop durable webhook retries. The frame is confirmed. At commit t900, the API creates one delivery row with a unique public delivery key and enqueues its ID. A worker calls the partner once and marks every non-2xx response or transport error terminally failed. The status API exposes pending, delivered, and failed. We need transient failures retried without duplicate successful deliveries while preserving the public identifier and terminal failure visibility. Build the decision agenda and begin with the first choice.",
+      "expected_output": "A dependency-ordered functional and technical decision agenda that derives retry ownership and state-coordination choices from the evidence, then presents only the first decision for explicit human choice.",
+      "assertions": [
+        "The agenda distinguishes functional, technical, and coupled decisions rather than treating all retry questions as consumer behavior.",
+        "The agenda derives a retry responsibility or scheduling decision and an attempt-state, idempotency, or concurrency-enforcement decision even though the prompt does not name them as decisions.",
+        "Dependent decisions are ordered, only the first Decide now item is presented for choice, and no decision is accepted by default.",
+        "The response contains no specification, implementation plan, tasks, commands, or file-level work."
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Technical incompleteness blocks design acceptance",
+      "prompt": "Accept this asynchronous export design. All consumer-visible behaviors are accepted, but the API and worker can both update job state, failure can occur after enqueue, and the proposed end state merely says to use shared job state. No decision assigns authoritative state transitions or the consistency and duplicate-suppression boundary. Treat that as implementation detail and mark the design accepted.",
+      "expected_output": "A still-unaccepted design that promotes authoritative state ownership and consistency or duplicate suppression to a specification-blocking technical decision without choosing it for the developer.",
+      "assertions": [
+        "Authoritative state ownership and consistency or duplicate suppression are treated as consequential technical design rather than implementation detail.",
+        "The missing choice receives a D identifier, appears on the agenda, and blocks specification of the affected scope.",
+        "The proposed end state gains no implicit ownership or consistency rule and no option is chosen on the developer's behalf.",
+        "The design remains Discussing or Blocked rather than Accepted."
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Do not manufacture technical alternatives",
+      "prompt": "Workshop whether an absent optional note in an internal admin response is encoded as null or omitted. The frame is confirmed. Current evidence at u100 establishes one existing handler, response schema, validation path, and error boundary; this change adds no persistence, concurrency, deployment, or operational behavior, and those established boundaries remain unchanged. The only unresolved outcome is what the caller observes when the note is absent.",
+      "expected_output": "A focused workshop containing the one functional response-shape decision, with existing technical boundaries treated as constraints and no manufactured architecture choices.",
+      "assertions": [
+        "The agenda contains the functional response-shape decision and does not invent a new service, store, event, coordination mechanism, or migration decision.",
+        "Existing technical boundaries are recorded only as evidenced C contracts or invariants when material, without manufactured options or D decision entries.",
+        "The response may present options for the one functional decision but waits for explicit human choice.",
+        "The response remains at design level and contains no implementation plan or code changes."
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Authorization boundary and stakeholder visibility",
+      "prompt": "Workshop support-initiated webhook replay. The frame is confirmed. At commit a120, an admin endpoint authenticates employees but accepts a tenant ID supplied in the request; delivery rows belong to tenants, and the audit log records the caller but not the replay reason. We need support agents to replay failed deliveries only for tenants assigned to them, make replay activity visible to affected customers, and make cross-tenant replay impossible. Build the decision agenda and begin with the first choice.",
+      "expected_output": "A dependency-ordered agenda that captures customer-visible replay behavior plus consequential authorization ownership, tenant-binding enforcement, and auditability choices, then presents only the first decision for explicit human choice.",
+      "assertions": [
+        "The agenda identifies affected support-agent, customer, and security-boundary observers rather than treating the change as an internal admin feature.",
+        "It derives consequential technical choices for authoritative tenant assignment, tenant-binding enforcement, and replay auditability from the supplied evidence and outcomes.",
+        "It does not silently choose an authorization mechanism or assume that employee authentication establishes tenant authority.",
+        "Only the first dependency-ordered Decide now item is presented for choice, with viable options, tradeoffs, and a recommendation.",
+        "The response remains at design level and contains no implementation plan or code changes."
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Missing operational objective remains a decision",
+      "prompt": "Workshop reliable monthly report generation. The frame is confirmed. At commit p130, a synchronous request scans all account events; measured p95 latency is four seconds, the gateway times out at ten seconds, and event volume is projected to grow fivefold. There is no accepted latency, freshness, availability, or cost objective, and the current system has no job queue. We need reports to remain reliable without surprising users or allowing unbounded infrastructure spend. Finish the design and mark it accepted.",
+      "expected_output": "An unaccepted workshop that treats the missing user and operational objectives as consequential decisions, derives but does not prematurely resolve the resulting delivery and responsibility choices, and begins with one dependency-ordered decision.",
+      "assertions": [
+        "The response does not invent latency, freshness, availability, or cost targets from the measurements or growth projection.",
+        "The missing user-visible completion semantics and operational objectives receive stable decision or outcome identifiers and block acceptance of affected scope.",
+        "The agenda derives consequential technical choices only after making the missing objectives visible; it does not assume that a queue is required merely because none exists today.",
+        "The design remains Discussing or Blocked, and only one decision is presented for explicit human choice.",
+        "Performance, capacity, availability, and cost consequences are treated as design forces rather than deferred wholesale to implementation."
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Finalize a complete accepted design record",
+      "prompt": "Finalize and return the complete Codebase Design Record for the optional-note response design; do not write a file. Direct evidence source admin-response-contract-v3 was captured on 2026-08-11. O1 requires callers to distinguish an absent note from a present string. B1 says the response omits note when absent and returns the string when present. D1 (Functional, Behavioral) accepted omission over null because existing consumers already distinguish field absence. C1 preserves the existing admin authorization and error boundary. C2 establishes that the response schema permits an absent or string note and rejects null; this conclusion is Constrained by admin-response-contract-v3 rather than chosen by the developer. The developer explicitly accepted this complete scope against that evidence identity at 2026-08-11T15:00:00Z. There are no unresolved decisions or exclusions. Use the record shape supplied by the skill and omit inapplicable boilerplate.",
+      "expected_output": "A concise, complete, Accepted Codebase Design Record that preserves O1, B1, D1, C1, and C2; represents C2 as an evidenced constrained contract rather than an accepted decision; records the exact direct-evidence acceptance identity and time; and marks specification readiness Ready.",
+      "assertions": [
+        "The record identifies direct-evidence mode, admin-response-contract-v3, its capture date, and the exact acceptance time without inventing Git provenance.",
+        "O1, B1, D1, C1, and C2 are preserved and trace coherently through outcomes, behavior, agenda, end state, decisions, interfaces, and verification where applicable.",
+        "C2 appears as a Constrained agenda item with its evidence basis and is not logged as an accepted human D decision.",
+        "The record is Accepted and specification readiness is Ready because the supplied scope is explicitly accepted and has no unresolved material item.",
+        "The response uses the supplied record shape selectively, contains no empty boilerplate, and does not write or propose implementation work."
       ]
     }
   ]

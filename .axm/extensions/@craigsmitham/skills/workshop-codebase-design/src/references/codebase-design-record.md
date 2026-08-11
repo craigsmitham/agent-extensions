@@ -25,6 +25,14 @@ Status: Discussing | Accepted | Blocked
 | ID | Outcome, constraint, or non-goal | Observer | Verification |
 | --- | --- | --- | --- |
 
+## Decision Agenda
+| ID | Decision question or constraint | Type | Status | Depends on | Basis or why consequential |
+| --- | --- | --- | --- | --- | --- |
+
+Use `D<n>` for decision candidates. Use `C<n>` for evidence-determined
+`Constrained` items and carry the same identifier into Interfaces and
+Invariants; do not log those items as accepted human decisions.
+
 ## Functional Behavior and Acceptance Scenarios
 ### B1 — <observable behavior>
 - Observer: ...
@@ -52,13 +60,18 @@ Status: Discussing | Accepted | Blocked
 compatibility, or recoverability.>
 
 ## Proposed End State
-<Responsibilities, flows, interfaces, state, and failure behavior.>
+<Responsibilities, flows, interfaces, state, and failure behavior. Trace each
+material rule to an accepted decision, evidenced preserved `C<n>` constraint, or
+unresolved agenda item.>
 
 ## Decision Log
 ### D1 — <decision>
 - Status: Proposed | Accepted | Deferred | Needs research | Superseded
+- Decision type: Functional | Technical | Coupled
 - Change kind: Behavioral | Structural | Mixed
 - Context, evidence, and supporting identity: ...
+- Forces and constraints: ...
+- Affected boundaries or contracts: ...
 - Options considered: ...
 - Decision: ...
 - Rationale and consequences: ...

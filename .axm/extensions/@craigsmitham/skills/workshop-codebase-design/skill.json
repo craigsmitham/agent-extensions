@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "workshop-codebase-design",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Workshops snapshot-aware functional and technical codebase designs with explicit human decisions",
   "keywords": [
     "software-design",

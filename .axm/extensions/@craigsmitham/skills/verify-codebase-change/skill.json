@@ -1,0 +1,26 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "verify-codebase-change",
+  "version": "0.0.1",
+  "description": "Verifies implemented codebase changes against accepted contracts and objective evidence",
+  "keywords": [
+    "change-verification",
+    "implementation-verification",
+    "requirements-traceability",
+    "software-validation",
+    "evidence",
+    "codebase-change"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/skills/verify-codebase-change"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "recommendedPacks": [
+    "@craigsmitham/packs/codebase-change-workflow"
+  ]
+}

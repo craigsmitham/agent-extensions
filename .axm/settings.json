@@ -40,7 +40,9 @@
     "specify-codebase-change": "workspace:@craigsmitham/skills/specify-codebase-change",
     "plan-codebase-change": "workspace:@craigsmitham/skills/plan-codebase-change",
     "refine-work": "workspace:@craigsmitham/skills/refine-work",
-    "prune-work": "workspace:@craigsmitham/skills/prune-work"
+    "prune-work": "workspace:@craigsmitham/skills/prune-work",
+    "assess-codebase-change-readiness": "workspace:@craigsmitham/skills/assess-codebase-change-readiness",
+    "verify-codebase-change": "workspace:@craigsmitham/skills/verify-codebase-change"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"

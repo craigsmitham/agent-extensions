@@ -1,0 +1,113 @@
+{
+  "skill_name": "assess-codebase-change-readiness",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Assess whether the accepted webhook-replay change is ready for implementation. The plan says it resolved the missing in-flight behavior with the simplest response.",
+      "expected_output": "A Not Ready assessment that identifies the plan-invented in-flight response as a consequential contract gap and routes it to design and specification without choosing a policy.",
+      "files": ["evals/files/webhook-replay-readiness.md"],
+      "assertions": [
+        "Disposition is Not Ready rather than Ready or Blocked.",
+        "The assessment identifies the plan's invented 409 response as unsupported by the accepted contract.",
+        "The blocker routes to Needs design and Needs specification and does not choose an in-flight policy.",
+        "Accepted unaffected scope, current-state evidence, and verification coverage remain visible rather than being rejected wholesale."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Assess this small internal diagnostic-field change for implementation readiness. Apply only checks material to its stated risk and evidence.",
+      "expected_output": "A Ready assessment grounded in the accepted contract, verified anchor, bounded risk, work item, and executable tests without demanding irrelevant rollout or migration artifacts.",
+      "files": ["evals/files/diagnostic-field-readiness.md"],
+      "assertions": [
+        "Disposition is Ready and the assessment explains why the low-risk evidence is sufficient.",
+        "The accepted behavior, current anchor, planned edit, preservation constraint, and tests are traceable.",
+        "The response does not invent migration, rollback, security-review, deployment, or stakeholder gates unrelated to the change.",
+        "No missing template field is treated as a blocker merely for checklist completeness."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Assess this draft audit-export change for implementation readiness. Distinguish a known missing approval from an unavailable assessment boundary.",
+      "expected_output": "A Not Ready assessment that routes the complete but unaccepted contract to Needs acceptance rather than treating the assessment as Blocked.",
+      "files": ["evals/files/unaccepted-audit-export-readiness.md"],
+      "assertions": [
+        "Disposition is Not Ready rather than Blocked.",
+        "The missing product-owner acceptance is the blocker and routes to Needs acceptance.",
+        "The assessment recognizes that the contract, current evidence, plan, and verification methods are otherwise available.",
+        "The response does not reopen design, invent another approver, or create implementation work."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Assess whether the supplied role-policy rewrite can begin implementation. Name exactly what is needed if a defensible disposition cannot yet be reached.",
+      "expected_output": "A Blocked assessment because the governing contract and authority cannot be identified, with a precise request for provenance or an authoritative scope decision.",
+      "files": ["evals/files/unknown-role-policy-authority.md"],
+      "assertions": [
+        "Disposition is Blocked rather than Not Ready or Ready.",
+        "The assessment explains that it cannot establish which policy governs the requested scope.",
+        "The handoff requests provenance or a decision from the named policy authority sufficient to establish the governing contract.",
+        "The response does not choose a policy, merge the documents, or infer authority from recency."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Assess this internal cache-key change for implementation readiness, including the explicitly accepted rollout risk.",
+      "expected_output": "A Ready assessment that retains the named accepted risk while showing complete contract, work, and verification coverage.",
+      "files": ["evals/files/accepted-cache-risk-readiness.md"],
+      "assertions": [
+        "Disposition is Ready and the latency exposure is classified as Accepted risk.",
+        "The assessment names the accepting authority, rationale, affected scope, and rollout limit.",
+        "Every material behavior and preservation obligation still has planned work and an executable verification method.",
+        "Risk acceptance is not used to excuse a missing contract, test, rollback, or observation gate."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Assess the accepted notification-retry change for implementation readiness without resolving contradictions between governing sources.",
+      "expected_output": "A Not Ready assessment that identifies the incompatible accepted retry limits and routes authoritative reconciliation without choosing either limit.",
+      "files": ["evals/files/contradictory-retry-contracts.md"],
+      "assertions": [
+        "Disposition is Not Ready rather than Blocked because the contradiction is established from accessible governing sources.",
+        "The assessment identifies the incompatible three-attempt and unlimited-until-expiry rules.",
+        "The blocker routes to Needs acceptance and Needs specification, or equivalently separates authority reconciliation from contract correction.",
+        "The response preserves unaffected accepted scope and does not select a retry limit."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Assess this invoice-delivery change against the current snapshot after the reported ownership and queue drift.",
+      "expected_output": "A Not Ready assessment that limits Needs research to the drifted implementation anchors, preserves the accepted behavior, and defers plan repair until current facts are known.",
+      "files": ["evals/files/invoice-delivery-drift.md"],
+      "assertions": [
+        "Disposition is Not Ready with a Needs research blocker for the changed ownership and queue semantics.",
+        "The accepted delivery behavior and unaffected authorization contract remain preserved.",
+        "The response does not treat stale paths or symbols as current evidence and does not invent replacement anchors.",
+        "Planning is resumed only after research re-establishes the affected implementation facts."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Assess this feature-flag retirement change for readiness. Audit whether accepted obligations have executable implementation and verification coverage.",
+      "expected_output": "A Not Ready assessment that routes the omitted rollback safeguard and verification to Needs planning without revising the accepted design.",
+      "files": ["evals/files/flag-retirement-plan-gap.md"],
+      "assertions": [
+        "Disposition is Not Ready with a Needs planning blocker.",
+        "The assessment identifies C2 rollback preservation and its verification as absent from the plan.",
+        "The accepted contract and current anchors are treated as sufficient rather than reopened.",
+        "The response names the smallest planning action but does not write the missing work item or test."
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Assess this encryption-key migration for implementation readiness with scrutiny proportionate to its irreversible and confidentiality-sensitive boundaries.",
+      "expected_output": "A Not Ready assessment that separates missing accepted retirement semantics from missing reconciliation, recovery, and verification work.",
+      "files": ["evals/files/encryption-key-migration-readiness.md"],
+      "assertions": [
+        "Disposition is Not Ready and the irreversible key-retirement boundary is treated as material.",
+        "The missing accepted retirement criterion routes to Needs design and Needs specification without being invented.",
+        "Missing complete-record reconciliation, recovery, and failure-mode verification route to Needs planning.",
+        "The response preserves the accepted staged migration behavior and does not mark the change Ready because most artifacts are present."
+      ]
+    }
+  ]
+}

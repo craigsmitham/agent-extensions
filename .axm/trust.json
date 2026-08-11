@@ -318,8 +318,8 @@
       "name": "workshop-codebase-design",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/workshop-codebase-design",
-      "resolvedVersion": "0.0.3",
-      "contentIdentity": "afed44c80e43cd43e15f347f2271d2d3981c778bd3a47457563f4775f1e95dec"
+      "resolvedVersion": "0.0.4",
+      "contentIdentity": "68c1d42f211e365f2681e36ecdc201beca130af9fb3b4521b3858f2f50a77d14"
     },
     "pack:codebase-change-workflow": {
       "extensionType": "pack",
@@ -327,19 +327,21 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/codebase-change-workflow",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "561bb161400f1db6f963497be01c15cb273061390866940b95fbba549bccc4b5",
+      "contentIdentity": "bd9b791503a8e1b7b5283e13c73d6f227c24e2d01e23ef81f91986f4bf6f8be6",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "codebase-change-workflow",
-        "version": "0.0.4",
+        "version": "0.1.0",
         "dependencies": {
           "@craigsmitham/skills/frame-codebase-research": "^0.0.4",
           "@craigsmitham/skills/conduct-codebase-research": "^0.0.3",
-          "@craigsmitham/skills/workshop-codebase-design": "^0.0.3",
+          "@craigsmitham/skills/workshop-codebase-design": "^0.0.4",
           "@craigsmitham/skills/specify-codebase-change": "^0.0.2",
-          "@craigsmitham/skills/plan-codebase-change": "^0.0.2"
+          "@craigsmitham/skills/plan-codebase-change": "^0.0.2",
+          "@craigsmitham/skills/assess-codebase-change-readiness": "^0.0.1",
+          "@craigsmitham/skills/verify-codebase-change": "^0.0.1"
         },
-        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Moves codebase changes from time-aware research through accepted design, specification, and implementation planning\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"codebase\",\"research\",\"software-design\",\"functional-specification\",\"technical-specification\",\"implementation-plan\",\"vertical-slices\",\"architecture\",\"change-workflow\",\"decision-making\",\"evidence-provenance\",\"snapshot-drift\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/codebase-change-workflow\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
+        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Moves codebase changes from current-state research through implementation readiness and post-change verification\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"codebase\",\"research\",\"software-design\",\"functional-specification\",\"technical-specification\",\"implementation-plan\",\"implementation-readiness\",\"change-verification\",\"vertical-slices\",\"architecture\",\"change-workflow\",\"decision-making\",\"evidence-provenance\",\"snapshot-drift\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/codebase-change-workflow\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
       }
     },
     "skill:specify-codebase-change": {
@@ -391,6 +393,22 @@
       "sourceIdentity": "workspace:@craigsmitham/skills/prune-work",
       "resolvedVersion": "0.0.1",
       "contentIdentity": "821ecc7c4411e6bfc7dbb2bc5592f78ea8fb06645aae98e9f5da26de7717b226"
+    },
+    "skill:assess-codebase-change-readiness": {
+      "extensionType": "skill",
+      "name": "assess-codebase-change-readiness",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/assess-codebase-change-readiness",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "dbda115bd4a9bc5d5878231b80bffdf53cad8dd1fdc575831c5cca35265b2db4"
+    },
+    "skill:verify-codebase-change": {
+      "extensionType": "skill",
+      "name": "verify-codebase-change",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/verify-codebase-change",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "8f6aaa027de3a18aae7725e531f0b03e3689de26c6a24df6e2082d2ceb9edf98"
     }
   }
 }

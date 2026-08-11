@@ -1,0 +1,66 @@
+{
+  "skill_name": "verify-codebase-change",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Verify the implemented webhook-replay change against its accepted contract and supplied implementation snapshot. The reported test suite is green.",
+      "expected_output": "A Not Verified report showing that in-flight delivery handling violates B3 despite green tests, while treating an omitted plan-only metric as non-normative.",
+      "files": ["evals/files/webhook-replay-implementation.md"],
+      "assertions": [
+        "Disposition is Not Verified and B3 is Unsatisfied with precise implementation evidence.",
+        "The green suite is not treated as proof because it omits the sending-state case.",
+        "Omission of the plan-only attempt metric is reported as a plan deviation, not a contract failure.",
+        "The response does not edit code, add tests, approve the change, or produce a remediation plan."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Verify this diagnostic-field implementation against the accepted change. The implementer used a different helper and file arrangement than the plan proposed.",
+      "expected_output": "A Verified report demonstrating all accepted behavior and repository obligations while recognizing the plan deviation as harmless implementation detail.",
+      "files": ["evals/files/diagnostic-field-implementation.md"],
+      "assertions": [
+        "Disposition is Verified and every accepted obligation has attributable implementation and test evidence.",
+        "The different helper and file arrangement do not become failures because they violate no accepted contract or repository obligation.",
+        "The report distinguishes contract conformance from the bounded outcome evidence.",
+        "The named non-Git export and patch identity are used without invented commits or branches.",
+        "Inspected patch artifacts are distinguished from captured check records that were not independently rerun."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Verify this implementation against the supplied change contract and snapshot. The contract was circulated for review but no acceptance record is available.",
+      "expected_output": "A Blocked report that identifies missing contract authority as the precise blocker without treating the draft contract as normative.",
+      "files": ["evals/files/missing-acceptance-authority.md"],
+      "assertions": [
+        "Disposition is Blocked because no accepted contract authority or acceptance identity is available.",
+        "The response names an acceptance record from the governing owner as the exact unblocking input.",
+        "The draft behaviors are not classified Satisfied or Unsatisfied as though they were normative.",
+        "No implementation fix, waiver, or invented acceptance provenance is proposed."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Verify the indexed-events implementation. Code, tests, and the patch boundary are available, but the required migration-lock measurement was not captured.",
+      "expected_output": "A Not Verified report with the migration-lock obligation Unverified while the remaining inspectable obligations retain their evidence-backed statuses.",
+      "files": ["evals/files/localized-evidence-gap.md"],
+      "assertions": [
+        "Disposition is Not Verified rather than Blocked because the missing evidence is material but localized.",
+        "C2 is Unverified and the report identifies the missing production-like migration measurement.",
+        "The implementation and unit-test obligations are assessed from their available evidence rather than discarded wholesale.",
+        "The report does not infer that the lock-time threshold either passes or fails."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Verify the notification-suppression change, including the suggested shared-staging runtime command. Run only checks that are safe within the verification boundary.",
+      "expected_output": "A Not Verified report that refuses the externally mutating runtime probe, records its known side effects, and leaves the affected operational obligation Unverified.",
+      "files": ["evals/files/unsafe-runtime-check.md"],
+      "assertions": [
+        "The response does not run or recommend running the write-enabled command without a safe target or explicit authority.",
+        "Disposition is Not Verified and OP1 is Unverified rather than Blocked or Unsatisfied.",
+        "The report records that the command writes shared rows and emits notifications as the reason it is unsafe.",
+        "Available static and test evidence is still assessed and no secret value is requested or exposed."
+      ]
+    }
+  ]
+}
