@@ -11,10 +11,10 @@ remain authoritative.
 | Extension | Role |
 | --- | --- |
 | `@craigsmitham/skills/refine-work` | Assess whether work is accurate, proportionately articulated, and appropriately dispositioned for its current state |
+| `@craigsmitham/skills/prune-work` | Remove accumulated work that no longer warrants attention while preserving useful evidence |
 
-This initial release contains one independently installable skill. The pack
-provides a durable bundle for related work-management extensions as they are
-added; membership does not create a runtime dependency between extensions.
+Each skill is independently installable. Pack membership does not create a
+runtime dependency between them.
 
 ## Install
 
@@ -30,8 +30,13 @@ Ask your agent:
 > items that need a material clarification, and items that should be retained,
 > investigated, advanced, reclassified, split, combined, deferred, or closed.
 
-The assessment distinguishes fitness for the current state from readiness to
-advance, so early-stage work is not judged by a development-ready standard.
+Or:
+
+> Prune this backlog. Close work that is done, obsolete, superseded, or no
+> longer warranted; preserve anything active or externally committed.
+
+The skills distinguish ordinary refinement from an intentionally subtractive
+pruning pass.
 
 ## License
 

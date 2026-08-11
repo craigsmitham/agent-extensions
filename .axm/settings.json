@@ -39,7 +39,8 @@
     "workshop-codebase-design": "workspace:@craigsmitham/skills/workshop-codebase-design",
     "specify-codebase-change": "workspace:@craigsmitham/skills/specify-codebase-change",
     "plan-codebase-change": "workspace:@craigsmitham/skills/plan-codebase-change",
-    "refine-work": "workspace:@craigsmitham/skills/refine-work"
+    "refine-work": "workspace:@craigsmitham/skills/refine-work",
+    "prune-work": "workspace:@craigsmitham/skills/prune-work"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"

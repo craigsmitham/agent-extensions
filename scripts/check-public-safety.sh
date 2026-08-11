@@ -137,6 +137,7 @@ expected=(
   skills/improve-instructions
   skills/improve-whatever
   skills/plan-codebase-change
+  skills/prune-work
   skills/refine-work
   skills/specify-codebase-change
   skills/temporal-dates
@@ -152,7 +153,7 @@ actual_list="$(
 )"
 
 if [[ "$expected_list" != "$actual_list" ]]; then
-  echo "Public package inventory differs from the approved 37-package set." >&2
+  echo "Public package inventory differs from the approved 38-package set." >&2
   diff <(printf '%s\n' "$expected_list") <(printf '%s\n' "$actual_list") || true
   exit 1
 fi
@@ -200,7 +201,7 @@ if jq -e '
    [.knowledge | to_entries[] | .value] +
    [.packs | to_entries[] | .value] +
    [.rules | to_entries[] | .value]) |
-  length == 37 and
+  length == 38 and
   all(type == "string" and startswith("workspace:@craigsmitham/"))
 ' "$validation_root/.axm/settings.json" >/dev/null; then
   :

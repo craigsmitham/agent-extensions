@@ -372,16 +372,25 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/work-management",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "d3b00f1a45b2b9bbc19150b03ccf086820b9805db2b90a016990d235f19d6846",
+      "contentIdentity": "a7ca8507a58c9f626ed0c5d47178fe911c3d193f4730a1417f6d5de71a2af140",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "work-management",
-        "version": "0.0.1",
+        "version": "0.1.0",
         "dependencies": {
-          "@craigsmitham/skills/refine-work": "^0.0.1"
+          "@craigsmitham/skills/refine-work": "^0.0.1",
+          "@craigsmitham/skills/prune-work": "^0.0.1"
         },
-        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Bundles portable extensions for managing work across its lifecycle without imposing a tracker or workflow\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"work-management\",\"backlog\",\"refinement\",\"grooming\",\"triage\",\"issues\",\"tickets\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/work-management\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
+        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Bundles portable extensions for managing work across its lifecycle without imposing a tracker or workflow\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"work-management\",\"backlog\",\"pruning\",\"cleanup\",\"refinement\",\"grooming\",\"triage\",\"issues\",\"tickets\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/work-management\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
       }
+    },
+    "skill:prune-work": {
+      "extensionType": "skill",
+      "name": "prune-work",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/prune-work",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "821ecc7c4411e6bfc7dbb2bc5592f78ea8fb06645aae98e9f5da26de7717b226"
     }
   }
 }

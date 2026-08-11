@@ -1,11 +1,13 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Bundles portable extensions for managing work across its lifecycle without imposing a tracker or workflow",
   "keywords": [
     "work-management",
     "backlog",
+    "pruning",
+    "cleanup",
     "refinement",
     "grooming",
     "triage",
@@ -22,6 +24,7 @@
   "type": "pack",
   "name": "work-management",
   "dependencies": {
-    "@craigsmitham/skills/refine-work": "^0.0.1"
+    "@craigsmitham/skills/refine-work": "^0.0.1",
+    "@craigsmitham/skills/prune-work": "^0.0.1"
   }
 }
