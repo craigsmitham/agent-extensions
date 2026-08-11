@@ -43,7 +43,8 @@
     "conduct-codebase-research": "workspace:@craigsmitham/skills/conduct-codebase-research",
     "workshop-codebase-design": "workspace:@craigsmitham/skills/workshop-codebase-design",
     "specify-codebase-change": "workspace:@craigsmitham/skills/specify-codebase-change",
-    "plan-codebase-change": "workspace:@craigsmitham/skills/plan-codebase-change"
+    "plan-codebase-change": "workspace:@craigsmitham/skills/plan-codebase-change",
+    "refine-work": "workspace:@craigsmitham/skills/refine-work"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"
@@ -59,6 +60,7 @@
     "docs": "workspace:@craigsmitham/packs/docs",
     "field-notes": "workspace:@craigsmitham/packs/field-notes",
     "harness-engineering": "workspace:@craigsmitham/packs/harness-engineering",
-    "codebase-change-workflow": "workspace:@craigsmitham/packs/codebase-change-workflow"
+    "codebase-change-workflow": "workspace:@craigsmitham/packs/codebase-change-workflow",
+    "work-management": "workspace:@craigsmitham/packs/work-management"
   }
 }

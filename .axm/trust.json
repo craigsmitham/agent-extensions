@@ -192,8 +192,8 @@
       "name": "field-notes",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/rules/field-notes",
-      "resolvedVersion": "0.1.2",
-      "contentIdentity": "3eb8d462e7e88bc8edfffa0204fe02038450d35fa8a986cdb7e963128ec20af1"
+      "resolvedVersion": "0.1.4",
+      "contentIdentity": "eac0dca44b58bdf07777ec3c9a2f46466a6f181de6a828c88cefb9c90f61161f"
     },
     "skill:field-notes": {
       "extensionType": "skill",
@@ -357,6 +357,31 @@
       "sourceIdentity": "workspace:@craigsmitham/skills/plan-codebase-change",
       "resolvedVersion": "0.0.2",
       "contentIdentity": "ed46ca3874189336000f48661ce80a74d2db18e8202525e6709f70d1c70614ff"
+    },
+    "skill:refine-work": {
+      "extensionType": "skill",
+      "name": "refine-work",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/refine-work",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "365a4ae37a0f04430542ea992009f3d33a8dcf668a10771d84fb4f8401b146b5"
+    },
+    "pack:work-management": {
+      "extensionType": "pack",
+      "name": "work-management",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/packs/work-management",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "d3b00f1a45b2b9bbc19150b03ccf086820b9805db2b90a016990d235f19d6846",
+      "packManifest": {
+        "owner": "@craigsmitham",
+        "name": "work-management",
+        "version": "0.0.1",
+        "dependencies": {
+          "@craigsmitham/skills/refine-work": "^0.0.1"
+        },
+        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Bundles portable extensions for managing work across its lifecycle without imposing a tracker or workflow\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"work-management\",\"backlog\",\"refinement\",\"grooming\",\"triage\",\"issues\",\"tickets\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/work-management\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
+      }
     }
   }
 }

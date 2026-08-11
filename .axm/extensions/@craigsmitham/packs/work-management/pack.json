@@ -1,0 +1,27 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "owner": "@craigsmitham",
+  "version": "0.0.1",
+  "description": "Bundles portable extensions for managing work across its lifecycle without imposing a tracker or workflow",
+  "keywords": [
+    "work-management",
+    "backlog",
+    "refinement",
+    "grooming",
+    "triage",
+    "issues",
+    "tickets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/packs/work-management"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "type": "pack",
+  "name": "work-management",
+  "dependencies": {
+    "@craigsmitham/skills/refine-work": "^0.0.1"
+  }
+}

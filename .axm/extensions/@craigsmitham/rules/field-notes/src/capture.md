@@ -21,7 +21,9 @@ status: open
 **Gap:** why the two differed
 **Suggests:** the smallest durable change that would close the gap
 
-Evidence: commands run, exit codes, paths, quoted output.
+Evidence: the minimum observable facts needed to verify, interpret, and compare
+the incident. Include material context that could change the outcome; mark an
+unavailable material fact as unknown rather than inferring it.
 ```
 
 Report one specific incident with observable evidence. Do not substitute a
