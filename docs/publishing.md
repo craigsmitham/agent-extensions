@@ -32,7 +32,13 @@ package.
    scripts/check-public-safety.sh
    ```
 
-Resolve every finding before continuing.
+Review every finding before continuing.
+
+An unpublished change to a workspace-authored package reports
+`workspace/authored-content-unpublished` as an informational finding. This is
+the expected pre-publication state: keep the advisory visible, but do not treat
+it as a reason to stop the release. Resolve every warning and error before
+continuing; strict lint and the complete safety gate still fail on either.
 
 ## Version changed packages
 

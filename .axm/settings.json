@@ -12,6 +12,11 @@
       "gitignoreAliases": true
     }
   },
+  "lint": {
+    "rules": {
+      "workspace/authored-content-unpublished": "info"
+    }
+  },
   "skills": {
     "axm": "@agentxm/skills/axm",
     "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
