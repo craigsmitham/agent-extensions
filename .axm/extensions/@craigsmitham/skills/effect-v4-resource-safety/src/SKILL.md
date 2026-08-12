@@ -1,6 +1,7 @@
 ---
 name: effect-v4-resource-safety
 description: Makes Effect v4 acquisition and cleanup safe under success, failure, and interruption. Use for open/close pairs, `try/finally`, clients, files, locks, subscriptions, servers, or background work whose owner or cancellation cleanup is unclear—even before Scope APIs are used. Skip values with no release action or externally owned lifetimes this code must not close.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Effect v4 resource safety

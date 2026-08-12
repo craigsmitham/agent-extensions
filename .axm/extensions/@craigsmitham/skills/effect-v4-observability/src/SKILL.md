@@ -1,6 +1,7 @@
 ---
 name: effect-v4-observability
 description: Designs coherent Effect v4 logs, traces, and metrics. Use when code scatters `console.log`, lacks request correlation, times operations manually, emits inconsistent telemetry, exposes secrets, or makes production failures hard to explain—even without existing Effect observability APIs. Skip temporary local debugging that will not ship.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Effect v4 observability

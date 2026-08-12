@@ -1,6 +1,7 @@
 ---
 name: effect-v4-branded-types
 description: Prevent invalid primitive substitutions and centralize scalar invariants in Effect v4. Use when IDs or units share representations, validation is duplicated or ad hoc, raw strings or numbers cross meaningful boundaries, or APIs would benefit from distinguishing semantically different values—even without existing Brand usage. Skip short-lived primitives with no interchange or invariant risk and values needing a runtime wrapper.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Branded types in Effect v4

@@ -1,6 +1,7 @@
 ---
 name: effect-v4-request-batching-and-cache
 description: Designs Effect v4 request batching and keyed reuse. Use for N+1 access, repeated identical lookups, duplicate in-flight work, homemade `Map` caches, bulk-capable backends, TTL decisions, or cache lifetime bugs—even without existing Request or Cache APIs. Skip cheap pure computation; skip caching, but not necessarily batching, when freshness or side effects prohibit reuse.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Effect v4 request batching and cache

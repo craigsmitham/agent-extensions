@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-error-modeling",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Designs precise typed failures and recovery boundaries with Effect v4",
   "keywords": [
     "effect",

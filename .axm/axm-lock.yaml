@@ -272,6 +272,69 @@ skills:
     installedAt: 2026-08-11T21:32:51.621Z
     updatedAt: 2026-08-11T21:32:51.625Z
     sourceHash: b34b895862092d75ff81f08f52f13a65fcd28983b05c24027166681ffdb7bdaf
+  effect-v4-collections:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: effect-v4-collections
+    version: 0.0.1
+    installedAt: 2026-08-12T05:00:48.771Z
+    updatedAt: 2026-08-12T05:00:48.778Z
+    sourceHash: 9ad5a473403107b89421b697500d927a9023b158a97981bbcba41b67fe33ce16
+  effect-v4-filesystem:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: effect-v4-filesystem
+    version: 0.0.1
+    installedAt: 2026-08-12T05:00:50.105Z
+    updatedAt: 2026-08-12T05:00:50.113Z
+    sourceHash: b3a6b3a34b0a85f7549039832912c7f29ef54634c515444a569bd9d487ece038
+  effect-v4-iteration:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: effect-v4-iteration
+    version: 0.0.1
+    installedAt: 2026-08-12T05:00:51.486Z
+    updatedAt: 2026-08-12T05:00:51.494Z
+    sourceHash: 2530148b0e725d44ff1f748ea323e3f4baf0d780d3bc307cb144e457fbeac97e
+  effect-v4-option:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: effect-v4-option
+    version: 0.0.1
+    installedAt: 2026-08-12T05:00:52.842Z
+    updatedAt: 2026-08-12T05:00:52.850Z
+    sourceHash: 7b10294d4c1ddab79327644171335b14005d9818602d9c79a83b5d16a3d42fc1
+  effect-v4-wrapping:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: effect-v4-wrapping
+    version: 0.0.1
+    installedAt: 2026-08-12T05:00:54.201Z
+    updatedAt: 2026-08-12T05:00:54.209Z
+    sourceHash: e269a42403b9424f87320f1b5cc9b4da5776d6fe6369be9b830e29fd3b846835
+  effect-v4-http-api:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: effect-v4-http-api
+    version: 0.0.1
+    installedAt: 2026-08-12T05:00:55.505Z
+    updatedAt: 2026-08-12T05:00:55.514Z
+    sourceHash: ebb933b38fcc040ea15021ab7a1cb4c00f455f2d44a3f52ae8aa5ae4f78db4df
+  effect-v4-cloudflare-workers:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: effect-v4-cloudflare-workers
+    version: 0.0.1
+    installedAt: 2026-08-12T05:00:56.896Z
+    updatedAt: 2026-08-12T05:00:56.904Z
+    sourceHash: ed57f48e6f4c3257572846199017197b56a170c99ba09c1506338e943c838643
 rules:
   field-notes:
     type: workspace

@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-branded-types",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Prevents invalid primitive substitutions with Effect v4 branded types",
   "keywords": [
     "effect",

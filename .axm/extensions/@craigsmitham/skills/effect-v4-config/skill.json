@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-config",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Centralizes typed, validated, and testable configuration with Effect v4",
   "keywords": [
     "effect",

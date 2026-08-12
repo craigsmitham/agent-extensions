@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-structured-concurrency",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Structures Effect v4 concurrency so child work has bounded lifetime and parallelism",
   "keywords": [
     "effect",

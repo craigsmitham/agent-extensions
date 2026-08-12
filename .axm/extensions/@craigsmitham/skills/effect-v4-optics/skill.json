@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-optics",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Builds reusable immutable focus and update logic with Effect v4 optics",
   "keywords": [
     "effect",

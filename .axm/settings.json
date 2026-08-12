@@ -42,7 +42,14 @@
     "refine-work": "workspace:@craigsmitham/skills/refine-work",
     "prune-work": "workspace:@craigsmitham/skills/prune-work",
     "assess-codebase-change-readiness": "workspace:@craigsmitham/skills/assess-codebase-change-readiness",
-    "verify-codebase-change": "workspace:@craigsmitham/skills/verify-codebase-change"
+    "verify-codebase-change": "workspace:@craigsmitham/skills/verify-codebase-change",
+    "effect-v4-collections": "workspace:@craigsmitham/skills/effect-v4-collections",
+    "effect-v4-filesystem": "workspace:@craigsmitham/skills/effect-v4-filesystem",
+    "effect-v4-iteration": "workspace:@craigsmitham/skills/effect-v4-iteration",
+    "effect-v4-option": "workspace:@craigsmitham/skills/effect-v4-option",
+    "effect-v4-wrapping": "workspace:@craigsmitham/skills/effect-v4-wrapping",
+    "effect-v4-http-api": "workspace:@craigsmitham/skills/effect-v4-http-api",
+    "effect-v4-cloudflare-workers": "workspace:@craigsmitham/skills/effect-v4-cloudflare-workers"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"

@@ -121,10 +121,16 @@ expected=(
   skills/conduct-codebase-research
   skills/effect-v4-async-coordination
   skills/effect-v4-branded-types
+  skills/effect-v4-cloudflare-workers
+  skills/effect-v4-collections
   skills/effect-v4-config
   skills/effect-v4-error-modeling
+  skills/effect-v4-filesystem
+  skills/effect-v4-http-api
+  skills/effect-v4-iteration
   skills/effect-v4-observability
   skills/effect-v4-optics
+  skills/effect-v4-option
   skills/effect-v4-request-batching-and-cache
   skills/effect-v4-resource-safety
   skills/effect-v4-schema-boundaries
@@ -132,6 +138,7 @@ expected=(
   skills/effect-v4-streams
   skills/effect-v4-structured-concurrency
   skills/effect-v4-testing
+  skills/effect-v4-wrapping
   skills/field-notes
   skills/frame-codebase-research
   skills/garden-context
@@ -155,7 +162,7 @@ actual_list="$(
 )"
 
 if [[ "$expected_list" != "$actual_list" ]]; then
-  echo "Public package inventory differs from the approved 40-package set." >&2
+  echo "Public package inventory differs from the approved 47-package set." >&2
   diff <(printf '%s\n' "$expected_list") <(printf '%s\n' "$actual_list") || true
   exit 1
 fi
@@ -203,7 +210,7 @@ if jq -e '
    [.knowledge | to_entries[] | .value] +
    [.packs | to_entries[] | .value] +
    [.rules | to_entries[] | .value]) |
-  length == 40 and
+  length == 47 and
   all(type == "string" and startswith("workspace:@craigsmitham/"))
 ' "$validation_root/.axm/settings.json" >/dev/null; then
   :

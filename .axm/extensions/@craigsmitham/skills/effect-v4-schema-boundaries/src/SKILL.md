@@ -1,6 +1,7 @@
 ---
 name: effect-v4-schema-boundaries
 description: Designs Effect v4 Schema boundaries between unknown, encoded, and domain values. Use when JSON or external input is cast, validation is duplicated or ad hoc, wire and domain representations differ, constructors bypass invariants, or output is encoded manually—even without current Schema usage. Skip data already trusted and kept inside a validated boundary.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Effect v4 Schema boundaries
@@ -29,3 +30,43 @@ Decode once at ingress, use trusted domain values internally, and encode at egre
 - Test round trips and representative invalid inputs, especially at transformations.
 
 Do not validate repeatedly after a value has crossed a trustworthy boundary.
+
+## Keep names and types aligned
+
+```ts
+import { Schema } from "effect"
+
+export const UserSchema = Schema.Struct({
+  id: UserIdSchema,
+  displayName: Schema.String,
+})
+
+export type User = typeof UserSchema.Type
+```
+
+- Name a reusable schema `<TypeName>Schema` and derive `<TypeName>` from its
+  `.Type`. Export them together when consumers need both runtime and static
+  contracts.
+- Use `.Encoded` when code truly works with the wire representation; do not
+  substitute it for the trusted domain type.
+- Define branded scalar invariants once and reuse their schema at every ingress.
+- Avoid parallel TypeScript interfaces whose fields can drift from the schema.
+
+## Decode, construct, and encode intentionally
+
+- Decode `unknown` input with a Schema decoder and retain structured issues long
+  enough to report the failing path.
+- Use `Schema.make`/`makeEffect` only for already-typed construction that still
+  needs schema-side validation or transformation.
+- Put defaults, optionality, nullish conversion, and representation transforms
+  in the schema that owns that boundary.
+- Test valid decode, representative invalid paths, domain construction, encode,
+  and round-trip laws where the transform claims reversibility.
+
+## Review checklist
+
+- Every external input enters as `unknown` and is decoded once.
+- Schema and derived type share one exported naming pair.
+- Encoded and domain representations are not mixed inside feature logic.
+- Transformations and defaults have explicit direction and compatibility rules.
+- Error translation preserves useful schema paths at the protocol boundary.

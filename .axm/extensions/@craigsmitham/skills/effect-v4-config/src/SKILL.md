@@ -1,6 +1,7 @@
 ---
 name: effect-v4-config
 description: Centralizes typed and validated configuration with Effect v4. Use when code reads `process.env` directly, repeats parsing or defaults, starts before configuration is validated, mishandles secrets, or is hard to configure in tests—even without current Config usage. Skip runtime business data and values that should be explicit function inputs.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Effect v4 config

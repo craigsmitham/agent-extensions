@@ -21,7 +21,15 @@ jobs:
           node-version: 24
 
       - name: Install AXM
-        run: npm install --global axm.sh@0.26.2
+        run: |
+          curl --fail --location --proto '=https' --tlsv1.2 \
+            https://github.com/agentxm/axm/releases/download/cli-v0.26.2/axm-linux-x64 \
+            --output /tmp/axm
+          echo "be108ac7c15f757fba893bb981b969c48d6ae269532d454952eed5e57eb6a210  /tmp/axm" \
+            | sha256sum --check
+          mkdir -p "$HOME/.local/bin"
+          install -m 755 /tmp/axm "$HOME/.local/bin/axm"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Install safety dependencies
         run: |

@@ -1,6 +1,7 @@
 ---
 name: effect-v4-optics
 description: Design reusable immutable reads and updates with Effect v4 optics. Use when nested property paths repeat, updates target optional data or union variants, collections need filtered traversal, focus logic should compose across modules, or code manually clones nested plain data. Also use when choosing among Lens, Prism, Optional, Iso, or Traversal semantics. Skip one-off shallow updates, mutation-oriented code, and direct path updates on non-plain runtime objects.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Optics in Effect v4

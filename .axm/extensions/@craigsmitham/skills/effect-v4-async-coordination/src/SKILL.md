@@ -1,6 +1,7 @@
 ---
 name: effect-v4-async-coordination
 description: Chooses Effect v4 primitives for asynchronous state, handoff, signaling, broadcast, and admission control. Use when code has homegrown locks, shared mutable arrays, event emitters, polling flags, producer-consumer loops, or concurrency gates—even when Deferred, Queue, PubSub, Ref, or Semaphore are absent. Skip immutable local state and coordination already owned by an external system.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Effect v4 async coordination
