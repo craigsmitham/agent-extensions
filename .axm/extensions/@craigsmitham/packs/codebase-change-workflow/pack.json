@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Moves codebase changes from current-state research through implementation readiness and post-change verification",
   "keywords": [
     "codebase",
@@ -29,9 +29,9 @@
   "type": "pack",
   "name": "codebase-change-workflow",
   "dependencies": {
-    "@craigsmitham/skills/frame-codebase-research": "^0.0.4",
-    "@craigsmitham/skills/conduct-codebase-research": "^0.0.3",
-    "@craigsmitham/skills/workshop-codebase-design": "^0.0.4",
+    "@craigsmitham/skills/frame-codebase-research": "^0.0.5",
+    "@craigsmitham/skills/conduct-codebase-research": "^0.0.4",
+    "@craigsmitham/skills/workshop-codebase-design": "^0.0.6",
     "@craigsmitham/skills/specify-codebase-change": "^0.0.2",
     "@craigsmitham/skills/plan-codebase-change": "^0.0.2",
     "@craigsmitham/skills/assess-codebase-change-readiness": "^0.0.1",
