@@ -334,15 +334,15 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/codebase-change-workflow",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "bd9b791503a8e1b7b5283e13c73d6f227c24e2d01e23ef81f91986f4bf6f8be6",
+      "contentIdentity": "dedf5c16215ee34ec5a0de75a0f06890a94586a9f61d00ff4cb7c6fa75172c80",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "codebase-change-workflow",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "dependencies": {
-          "@craigsmitham/skills/frame-codebase-research": "^0.0.4",
-          "@craigsmitham/skills/conduct-codebase-research": "^0.0.3",
-          "@craigsmitham/skills/workshop-codebase-design": "^0.0.4",
+          "@craigsmitham/skills/frame-codebase-research": "^0.0.5",
+          "@craigsmitham/skills/conduct-codebase-research": "^0.0.4",
+          "@craigsmitham/skills/workshop-codebase-design": "^0.0.6",
           "@craigsmitham/skills/specify-codebase-change": "^0.0.2",
           "@craigsmitham/skills/plan-codebase-change": "^0.0.2",
           "@craigsmitham/skills/assess-codebase-change-readiness": "^0.0.1",
@@ -381,13 +381,13 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/work-management",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "0dd42249e42986ec38dedafdb65f8be616752d7a0fab1956cf2aa935b7c47e3e",
+      "contentIdentity": "3943636c5d9f98ff765463afb1b5d852b80366531eb6ad0c5ca99844f0f4719c",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "work-management",
-        "version": "0.1.1",
+        "version": "0.1.2",
         "dependencies": {
-          "@craigsmitham/skills/refine-work": "^0.0.1",
+          "@craigsmitham/skills/refine-work": "^0.0.2",
           "@craigsmitham/skills/prune-work": "^0.0.1",
           "@craigsmitham/skills/triage-work": "^0.0.1"
         },
