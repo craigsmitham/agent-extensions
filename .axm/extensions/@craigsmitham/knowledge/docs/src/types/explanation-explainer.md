@@ -178,7 +178,7 @@ Expansive examples in reference that grow into *why* starve both jobs.
 ## Related
 
 - [Explanation guide](explanation-guide.md)
-- [Documentation craft](docs-explainer.md)
+- [Documentation craft](../docs-explainer.md)
 - [Tutorial explainer](tutorial-explainer.md)
 - [How-to explainer](how-to-explainer.md)
 - [Reference explainer](reference-explainer.md)

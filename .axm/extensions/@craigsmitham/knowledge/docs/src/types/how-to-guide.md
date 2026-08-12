@@ -118,7 +118,7 @@ against it. Two production-time pitfalls to catch while writing:
 ## Related
 
 - [How-to explainer](how-to-explainer.md)
-- [Documentation craft guide](docs-guide.md)
+- [Documentation craft guide](../docs-guide.md)
 - [Tutorial guide](tutorial-guide.md)
 - [Reference guide](reference-guide.md)
 - [Explanation guide](explanation-guide.md)

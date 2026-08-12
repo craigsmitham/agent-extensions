@@ -43,10 +43,18 @@ Portable **understanding** of documentation quality — not repository layout,
 frontmatter schemas, or tooling. Host projects may add structure, metadata,
 and validators; those local rules win when they exist.
 
-This bundle follows the four documentation types in Diátaxis
-(tutorial, how-to guide, reference, and explanation). Each type has an
-**explainer** (what the type is for) and a **guide** (how to write one). For
-how to apply this craft in practice, see
+On the question of **what kinds of documentation exist**, this bundle adopts
+Diátaxis — tutorial, how-to guide, reference, and explanation — and the
+[types](types/index.md) section develops each as an **explainer** (what the
+type is for) plus a **guide** (how to write one).
+
+That is a commitment on one axis, not a boundary around the subject. Diátaxis
+scopes itself to content, style, and architecture; it has nothing to say about
+what an organization names its artifacts, and concepts covering questions it
+does not address belong in this bundle too — see
+[genres](genres/index.md), and *Genres are not types* below.
+
+For how to apply this craft in practice, see
 [Documentation craft guide](docs-guide.md). For iterative remediation of an
 existing corpus, see [Documentation workflow](workflow-explainer.md). For
 functional vs deep quality, see [Documentation quality](quality-explainer.md).
@@ -56,7 +64,16 @@ functional vs deep quality, see [Documentation quality](quality-explainer.md).
 Documentation must serve the **practitioner in a craft** — someone who both
 **acquires** and **applies** skill, and who needs both **action** (knowing
 *how*) and **cognition** (knowing *that*). Those two dimensions define four
-quarters; there is no fifth kind waiting off the map.
+quarters, and Diátaxis holds that the map they produce is complete: *there are
+four and only four types of documentation, because there is no other territory
+to cover.*
+
+Take that claim at its own scope. It is an argument about the **map of reader
+needs** — no fifth quarter exists on those two axes. It is not a claim that
+documentation has no other concerns, and it does not bear on the questions
+Diátaxis leaves alone: what artifacts get named, how a corpus is published and
+reviewed, or how documentation is kept current. Adding concepts on those
+questions extends the bundle without contradicting the map.
 
 | Need | Type | User mode | Documentation informs |
 | --- | --- | --- | --- |
@@ -73,10 +90,10 @@ job well.
 
 | Need | Type | Explainer | Guide |
 | --- | --- | --- | --- |
-| Learn by doing, first success path | Tutorial | [Tutorial explainer](tutorial-explainer.md) | [Tutorial guide](tutorial-guide.md) |
-| Achieve a concrete goal in a real system | How-to | [How-to explainer](how-to-explainer.md) | [How-to guide](how-to-guide.md) |
-| Look up facts, interfaces, or terms | Reference | [Reference explainer](reference-explainer.md) | [Reference guide](reference-guide.md) |
-| Understand why, context, or tradeoffs | Explanation | [Explanation explainer](explanation-explainer.md) | [Explanation guide](explanation-guide.md) |
+| Learn by doing, first success path | Tutorial | [Tutorial explainer](types/tutorial-explainer.md) | [Tutorial guide](types/tutorial-guide.md) |
+| Achieve a concrete goal in a real system | How-to | [How-to explainer](types/how-to-explainer.md) | [How-to guide](types/how-to-guide.md) |
+| Look up facts, interfaces, or terms | Reference | [Reference explainer](types/reference-explainer.md) | [Reference guide](types/reference-guide.md) |
+| Understand why, context, or tradeoffs | Explanation | [Explanation explainer](types/explanation-explainer.md) | [Explanation guide](types/explanation-guide.md) |
 
 If a draft tries to do two of these at once, prefer splitting or making one
 job primary and linking the rest.
@@ -155,6 +172,45 @@ Worst case: tutorials and how-tos fully collapse, so neither study nor work
 is served. Keep the compass and the hard-boundary sections on
 each type explainer when form starts to slip.
 
+## Genres are not types
+
+The map above is complete on its own axis, and the industry still ships
+documents under **genre** names — playbook, runbook, handbook, SOP, FAQ, field
+guide. There is no contradiction: a genre names an artifact’s **role in an
+organization**, which is a different question from the reader need its content
+serves. A genre is a container, and the craft question is always which of the
+four jobs are inside it and whether each one is done well.
+
+Treat a genre name as a routing problem, not a type:
+
+1. **Keep the name.** It is what the readers and the organization call it;
+   renaming it *How to …* does not make it easier to find.
+2. **Decompose it** into the jobs it actually contains.
+3. **Keep each job recognizable** inside the container, or split it out and
+   link to it.
+
+| Genre | Usually decomposes into |
+| --- | --- |
+| Runbook | One how-to guide, hardened for execution under a trigger |
+| Playbook | Several how-tos, plus the explanation that selects among them |
+| Handbook | Reference (policy) with explanation (values and rationale) |
+| SOP | A how-to guide, plus reference kept for compliance |
+| FAQ | Scattered fragments of all four — usually a symptom, not a type |
+
+The most useful thing to know about a genre is whether it **reduces**. A
+runbook reduces to a single type — it is a how-to guide, and everything else
+in it should be a link. The rest of the table does not reduce, so the craft
+question becomes whether each contained job stays recognizable.
+
+Two genres have explainers here because they are the most often demanded by
+name and the most often confused with each other:
+[Playbook](genres/playbook-explainer.md) and [Runbook](genres/runbook-explainer.md). Their
+[reducibility test](genres/playbook-explainer.md#the-reducibility-test) generalizes
+to any genre a host invents.
+
+A genre label is not a substitute for saying what a document does. Whatever
+the cover says, the opening lines should make the job plain.
+
 ## What this bundle does not define
 
 - Where files must live in a repository
@@ -173,7 +229,8 @@ improvements over empty type shells — see
 - [Documentation craft guide](docs-guide.md)
 - [Documentation workflow](workflow-explainer.md) · [Documentation workflow guide](workflow-guide.md)
 - [Documentation quality](quality-explainer.md)
-- [Tutorial explainer](tutorial-explainer.md) · [Tutorial guide](tutorial-guide.md)
-- [How-to explainer](how-to-explainer.md) · [How-to guide](how-to-guide.md)
-- [Reference explainer](reference-explainer.md) · [Reference guide](reference-guide.md)
-- [Explanation explainer](explanation-explainer.md) · [Explanation guide](explanation-guide.md)
+- [Tutorial explainer](types/tutorial-explainer.md) · [Tutorial guide](types/tutorial-guide.md)
+- [How-to explainer](types/how-to-explainer.md) · [How-to guide](types/how-to-guide.md)
+- [Reference explainer](types/reference-explainer.md) · [Reference guide](types/reference-guide.md)
+- [Explanation explainer](types/explanation-explainer.md) · [Explanation guide](types/explanation-guide.md)
+- [Playbook explainer](genres/playbook-explainer.md) · [Runbook explainer](genres/runbook-explainer.md)

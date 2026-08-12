@@ -66,5 +66,5 @@ drafts against it. Two production-time pitfalls to catch while writing:
 ## Related
 
 - [Reference explainer](reference-explainer.md)
-- [Documentation craft guide](docs-guide.md)
+- [Documentation craft guide](../docs-guide.md)
 - [How-to guide](how-to-guide.md)

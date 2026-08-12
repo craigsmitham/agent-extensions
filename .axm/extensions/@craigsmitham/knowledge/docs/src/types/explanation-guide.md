@@ -130,7 +130,7 @@ writing:
 ## Related
 
 - [Explanation explainer](explanation-explainer.md)
-- [Documentation craft guide](docs-guide.md)
+- [Documentation craft guide](../docs-guide.md)
 - [How-to guide](how-to-guide.md)
 - [Reference guide](reference-guide.md)
 - [Tutorial guide](tutorial-guide.md)

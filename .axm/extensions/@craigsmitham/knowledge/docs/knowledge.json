@@ -2,14 +2,14 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "docs",
-  "version": "0.4.2",
+  "version": "0.6.0",
   "type": "knowledge",
   "format": {
     "name": "okf",
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "Portable documentation craft: *-explainer + *-guide pairs for overall craft and each Diátaxis type, plus workflow remediation and quality theory",
+  "description": "Portable documentation craft: craft, quality, and workflow concepts, the four Diátaxis type pairs, and named genres such as playbooks and runbooks",
   "keywords": [
     "docs",
     "documentation",
@@ -20,7 +20,9 @@
     "explanation",
     "authoring",
     "workflow",
-    "quality"
+    "quality",
+    "playbook",
+    "runbook"
   ],
   "license": "CC-BY-SA-4.0",
   "homepage": "https://github.com/craigsmitham/agent-extensions",

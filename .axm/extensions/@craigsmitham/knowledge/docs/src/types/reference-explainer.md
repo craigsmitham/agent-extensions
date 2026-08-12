@@ -169,7 +169,7 @@ home.
 ## Related
 
 - [Reference guide](reference-guide.md)
-- [Documentation craft](docs-explainer.md)
+- [Documentation craft](../docs-explainer.md)
 - [Tutorial explainer](tutorial-explainer.md)
 - [How-to explainer](how-to-explainer.md)
 - [Explanation explainer](explanation-explainer.md)

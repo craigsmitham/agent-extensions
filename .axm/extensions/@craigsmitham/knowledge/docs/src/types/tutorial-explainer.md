@@ -177,7 +177,7 @@ rollback.”
 ## Related
 
 - [Tutorial guide](tutorial-guide.md)
-- [Documentation craft](docs-explainer.md)
+- [Documentation craft](../docs-explainer.md)
 - [How-to explainer](how-to-explainer.md)
 - [Reference explainer](reference-explainer.md)
 - [Explanation explainer](explanation-explainer.md)
