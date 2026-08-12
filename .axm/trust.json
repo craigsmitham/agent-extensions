@@ -381,16 +381,17 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/work-management",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "a7ca8507a58c9f626ed0c5d47178fe911c3d193f4730a1417f6d5de71a2af140",
+      "contentIdentity": "0dd42249e42986ec38dedafdb65f8be616752d7a0fab1956cf2aa935b7c47e3e",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "work-management",
-        "version": "0.1.0",
+        "version": "0.1.1",
         "dependencies": {
           "@craigsmitham/skills/refine-work": "^0.0.1",
-          "@craigsmitham/skills/prune-work": "^0.0.1"
+          "@craigsmitham/skills/prune-work": "^0.0.1",
+          "@craigsmitham/skills/triage-work": "^0.0.1"
         },
-        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Bundles portable extensions for managing work across its lifecycle without imposing a tracker or workflow\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"work-management\",\"backlog\",\"pruning\",\"cleanup\",\"refinement\",\"grooming\",\"triage\",\"issues\",\"tickets\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/work-management\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
+        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Bundles portable extensions for managing work across its lifecycle without imposing a tracker or workflow\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"work-management\",\"backlog\",\"pruning\",\"cleanup\",\"refinement\",\"grooming\",\"triage\",\"intake\",\"routing\",\"issues\",\"tickets\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/work-management\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
       }
     },
     "skill:prune-work": {
@@ -472,6 +473,14 @@
       "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-cloudflare-workers",
       "resolvedVersion": "0.1.0",
       "contentIdentity": "2895ecc724715ab5ce72dd46a212c6700fed9d750b46566965bf793a69fb73fc"
+    },
+    "skill:triage-work": {
+      "extensionType": "skill",
+      "name": "triage-work",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/triage-work",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "fc36f5bbb3285f26167f0497e86b6d048df5611cdaf2c2b3e3bb83875c358e87"
     }
   }
 }

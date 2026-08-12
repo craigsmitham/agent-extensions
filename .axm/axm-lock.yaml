@@ -335,6 +335,15 @@ skills:
     installedAt: 2026-08-12T05:00:56.896Z
     updatedAt: 2026-08-12T05:00:56.904Z
     sourceHash: ed57f48e6f4c3257572846199017197b56a170c99ba09c1506338e943c838643
+  triage-work:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: triage-work
+    version: 0.0.1
+    installedAt: 2026-08-12T14:02:17.783Z
+    updatedAt: 2026-08-12T14:02:17.787Z
+    sourceHash: fc36f5bbb3285f26167f0497e86b6d048df5611cdaf2c2b3e3bb83875c358e87
 rules:
   field-notes:
     type: workspace
@@ -638,8 +647,8 @@ packs:
     owner: "@craigsmitham"
     extensionType: pack
     name: work-management
-    version: 0.1.0
-    sourceHash: a7ca8507a58c9f626ed0c5d47178fe911c3d193f4730a1417f6d5de71a2af140
+    version: 0.1.1
+    sourceHash: 0dd42249e42986ec38dedafdb65f8be616752d7a0fab1956cf2aa935b7c47e3e
     installedAt: 2026-08-11T12:38:31.750Z
     updatedAt: 2026-08-11T12:38:31.755Z
     resolvedSkills:
@@ -652,7 +661,12 @@ packs:
         source: workspace
         version: 0.0.1
         sourceIdentity: workspace:@craigsmitham/skills/prune-work
-        contentIdentity: b8f5384098c6748813360e3c7e62e36a4de3e63fcc438ab2cad205069fe8c7f8
+        contentIdentity: 821ecc7c4411e6bfc7dbb2bc5592f78ea8fb06645aae98e9f5da26de7717b226
+      "@craigsmitham/skills/triage-work":
+        source: workspace
+        version: 0.0.1
+        sourceIdentity: workspace:@craigsmitham/skills/triage-work
+        contentIdentity: fc36f5bbb3285f26167f0497e86b6d048df5611cdaf2c2b3e3bb83875c358e87
     resolvedMcpServers: {}
     resolvedSubagents: {}
     resolvedRules: {}

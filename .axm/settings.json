@@ -49,7 +49,8 @@
     "effect-v4-option": "workspace:@craigsmitham/skills/effect-v4-option",
     "effect-v4-wrapping": "workspace:@craigsmitham/skills/effect-v4-wrapping",
     "effect-v4-http-api": "workspace:@craigsmitham/skills/effect-v4-http-api",
-    "effect-v4-cloudflare-workers": "workspace:@craigsmitham/skills/effect-v4-cloudflare-workers"
+    "effect-v4-cloudflare-workers": "workspace:@craigsmitham/skills/effect-v4-cloudflare-workers",
+    "triage-work": "workspace:@craigsmitham/skills/triage-work"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"

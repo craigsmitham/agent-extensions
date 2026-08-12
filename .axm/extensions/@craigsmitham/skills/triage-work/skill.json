@@ -1,0 +1,28 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "triage-work",
+  "version": "0.0.1",
+  "description": "Turns incoming work into an explicit initial disposition and next route, for one item or a whole intake queue",
+  "keywords": [
+    "work-management",
+    "triage",
+    "intake",
+    "routing",
+    "requests",
+    "issues",
+    "tickets",
+    "disposition"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/skills/triage-work"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "recommendedPacks": [
+    "@craigsmitham/packs/work-management"
+  ]
+}

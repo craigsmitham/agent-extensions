@@ -10,6 +10,7 @@ remain authoritative.
 
 | Extension | Role |
 | --- | --- |
+| `@craigsmitham/skills/triage-work` | Give incoming work a primary intake disposition and any necessary handling action |
 | `@craigsmitham/skills/refine-work` | Assess whether work is accurate, proportionately articulated, and appropriately dispositioned for its current state |
 | `@craigsmitham/skills/prune-work` | Remove accumulated work that no longer warrants attention while preserving useful evidence |
 
@@ -26,6 +27,12 @@ axm packs install @craigsmitham/packs/work-management
 
 Ask your agent:
 
+> Triage this intake queue. Account for every item and give each one a primary
+> intake disposition plus any necessary handling action without prioritizing
+> accepted work.
+
+Or:
+
 > Review this body of work. Identify items whose current status is appropriate,
 > items that need a material clarification, and items that should be retained,
 > investigated, advanced, reclassified, split, combined, deferred, or closed.
@@ -35,8 +42,8 @@ Or:
 > Prune this backlog. Close work that is done, obsolete, superseded, or no
 > longer warranted; preserve anything active or externally committed.
 
-The skills distinguish ordinary refinement from an intentionally subtractive
-pruning pass.
+The skills distinguish initial intake, lifecycle refinement, and an
+intentionally subtractive pruning pass.
 
 ## License
 
