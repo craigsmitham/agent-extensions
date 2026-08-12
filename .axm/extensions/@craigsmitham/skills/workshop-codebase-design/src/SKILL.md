@@ -70,11 +70,30 @@ choice, explain why a formal workshop is unnecessary.
 
 ## Workshop
 
-### 1. Confirm the frame
+### 1. Orient to the design challenge
 
-Summarize the evidence timeline, relevant drift, current state, desired outcomes,
-constraints, non-goals, known decisions, assumptions, and material unknowns. Ask
-the developer to confirm or correct this frame before resolving design choices.
+Design often passes to someone who did not write the issue or do the research,
+and a neutral research report deliberately omits intent. Reconstruct the whole
+picture before any decision work:
+
+- **Situation:** what exists today and what is wrong or missing, in the domain's
+  terms rather than file names.
+- **Aim:** what should become true, for whom, and why it matters now.
+- **Outcomes and boundaries:** desired outcomes and how they are observed;
+  constraints, non-goals, and already-binding decisions.
+- **Crux:** what makes this a design problem rather than a task — the competing
+  forces, the boundaries under tension, and the shape of the choices ahead.
+- **Evidence and unknowns:** evidence identity, relevant drift, assumptions, and
+  material unknowns.
+
+Make the orientation self-contained, so it stands without the issue or the
+research report. Attribute each claim to evidence, stated intent, or a labeled
+assumption; never carry a reported cause as fact. Do not name a preferred
+mechanism, recommend, or start the agenda here. Scale it to how much the
+participants already hold; a confirmed frame needs only a brief restatement.
+
+Ask the developer to confirm or correct the aim, outcomes, and boundaries.
+Correcting the issue is expected. Do not build the agenda until the frame holds.
 
 ### 2. Build the decision agenda
 
@@ -190,7 +209,8 @@ When first creating or finalizing the living record, read
 `references/codebase-design-record.md` and adapt its shape to the change; omit
 inapplicable sections rather than leaving boilerplate.
 
-Before handoff, confirm that no accepted decision depends on stale evidence;
+Before handoff, confirm that the design brief stands without the issue or the
+research report; no accepted decision depends on stale evidence;
 material in-scope outcomes, behaviors, decisions, and contracts have stable
 identifiers and design-level verification; no material technical rule first
 appears in synthesis; deferred scope and specification impact are explicit;

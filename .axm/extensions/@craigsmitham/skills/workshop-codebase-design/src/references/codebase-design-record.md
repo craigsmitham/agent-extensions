@@ -8,6 +8,14 @@ leave empty boilerplate.
 
 Status: Discussing | Accepted | Blocked
 
+## Design Brief
+<Self-contained orientation for a reader who did not write the issue or do the
+research. Omit nothing material; add nothing that belongs below.>
+- Situation: <what exists today and what is wrong or missing>
+- Aim: <what should become true, for whom, and why it matters now>
+- Crux: <competing forces, boundaries under tension, and the shape of the
+  choices ahead; no preferred mechanism>
+
 ## Inputs, Evidence, and Drift
 - Change intent: <source and relevant times when known>
 - Evidence mode: Snapshot-bound research report | Direct current-state evidence

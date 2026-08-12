@@ -7,10 +7,10 @@
       "authority": "registry",
       "sourceIdentity": "@agentxm/skills/axm",
       "sourceName": "default",
-      "resolvedVersion": "0.26.4",
+      "resolvedVersion": "0.26.6",
       "publisherBindingId": "hbnd_01ks5vvdf0efz9m4w5qsv4q5qp",
-      "integrity": "sha512-+meci6LijLelUY2QFc3mBvJelnDDGYUCbqLFaOKeeQNqjZyOlLZj/9cPpNMHIe0t1O1WtlfqM6BdzqmWALA2jQ==",
-      "contentIdentity": "614ec892e09e785753c0d9c33273abbdf418cabc18184553510822bce2cde8a3"
+      "integrity": "sha512-BF3UctkWygRCFGVvQ7QaAI0rXIvVE1K2wAwpwhUsGNvW/KYeNrhs5yjLBPCxxMEYjs83DzRHStFGTugBpaXtpg==",
+      "contentIdentity": "cb282eaec7b84fda690eaebcd028100f909890ea26cefc9e5f7f3026d529a039"
     },
     "pack:effect-v4": {
       "extensionType": "pack",
@@ -325,8 +325,8 @@
       "name": "workshop-codebase-design",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/workshop-codebase-design",
-      "resolvedVersion": "0.0.4",
-      "contentIdentity": "68c1d42f211e365f2681e36ecdc201beca130af9fb3b4521b3858f2f50a77d14"
+      "resolvedVersion": "0.0.5",
+      "contentIdentity": "b439ed929b1f8e88fdc532512f5875a184aada610a6fa95bf00783db0ff4fb6a"
     },
     "pack:codebase-change-workflow": {
       "extensionType": "pack",
@@ -372,8 +372,8 @@
       "name": "refine-work",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/refine-work",
-      "resolvedVersion": "0.0.1",
-      "contentIdentity": "365a4ae37a0f04430542ea992009f3d33a8dcf668a10771d84fb4f8401b146b5"
+      "resolvedVersion": "0.0.2",
+      "contentIdentity": "c8142a1544649ab87cac11ac8c34fc891c0af280ee5bcbe65f4902883c8b3154"
     },
     "pack:work-management": {
       "extensionType": "pack",

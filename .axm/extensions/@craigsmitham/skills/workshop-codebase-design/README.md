@@ -24,8 +24,11 @@ For example:
 > return a conflict, or create another export. Here is the current request flow,
 > persistence behavior, and API contract captured from release 2.6.
 
-The skill will confirm the evidence and desired outcome, derive both functional
-and technical decision candidates from the affected flows and boundaries,
+The skill will first orient whoever is designing — including someone who did not
+write the issue or do the research — to the situation, aim, desired outcomes,
+boundaries, and the crux of the design challenge, then ask for that frame to be
+confirmed or corrected. It will then derive both functional and technical
+decision candidates from the affected flows and boundaries,
 present viable options and a recommendation for one consequential decision at a
 time, and wait for an explicit choice. It preserves accepted decisions,
 evidenced constraints, and unresolved blockers in the record without

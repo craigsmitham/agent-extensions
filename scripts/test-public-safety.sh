@@ -5,10 +5,6 @@ repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
 real_axm="$(command -v axm)"
-if [[ "$("$real_axm" --version)" != "0.26.4" ]]; then
-  echo "The integration test requires AXM 0.26.4." >&2
-  exit 1
-fi
 
 test_root="$(mktemp -d "${TMPDIR:-/tmp}/public-safety-tests.XXXXXX")"
 cleanup() {

@@ -1,13 +1,17 @@
 ---
 name: refine-work
-description: Refines work items or bodies of work by assessing their accuracy, articulation, and current status or disposition relative to their lifecycle position. Use for backlog refinement or grooming, triage review, issue or ticket hygiene, checking whether work belongs in its current status, or clarifying work without necessarily making it ready for development. Not for prioritizing without supplied goals, planning implementation, or enforcing a particular work-management system.
+description: Refines established work items or bodies of work by assessing their accuracy, articulation, and current status or disposition relative to their lifecycle position. Use for backlog refinement or grooming, lifecycle-state review, issue or ticket hygiene, checking whether established work belongs in its current status, or clarifying it without necessarily making it ready for development. Not for initial intake triage, prioritizing without supplied goals, planning implementation, or enforcing a particular work-management system.
 ---
 
 # Refine work
 
-Make the current treatment of work understandable, proportionate, and
+Make the current treatment of established work understandable, proportionate, and
 defensible. Treat an issue, ticket, request, epic, objective, or collection as
 work; do not assume software development or a particular tracker.
+
+Do not perform initial intake. When the decision is only what a new signal is
+and where it should go next, stop at that intake-routing boundary rather than
+refining it as established work.
 
 ## Judge proportionately
 

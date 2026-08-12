@@ -111,6 +111,7 @@ A dependency-ordered agenda followed by options and a recommendation for only th
 - The first decision has two or three viable options, tradeoffs, and an explicit recommendation.
 - The response asks for an explicit choice and accepts neither decision by default.
 - It does not announce a final design for both decisions.
+- The confirmed frame is restated only briefly and is not re-expanded into a full orientation before the agenda.
 
 ## 7. Design request that also asks for implementation planning
 
@@ -251,6 +252,41 @@ A concise, complete, Accepted Codebase Design Record that preserves O1, B1, D1, 
 - The record is Accepted and specification readiness is Ready because the supplied scope is explicitly accepted and has no unresolved material item.
 - The response uses the supplied record shape selectively, contains no empty boilerplate, and does not write or propose implementation work.
 
+## 15. Cold-start orientation for a designer who did not research
+
+### Prompt
+
+> Workshop the design for issue #482. I am picking this up cold; I did not write the ticket or do the research. The ticket says: "Nightly digest emails are sometimes sent twice; probably a cron misfire. Customers are complaining. Fix the cron." The research report at commit e150 answers only current-state questions: a scheduler row marks each digest run, the sender reads recipients and calls the mail provider per recipient, no send is recorded per recipient, and two application instances run the nightly job without a lease. Support wants duplicates to stop before the next billing cycle.
+
+### Expected output
+
+A self-contained orientation covering the situation, aim, outcomes and boundaries, crux, and evidence and unknowns, which separates the ticket's presumed cron cause from the evidence, and asks the developer to confirm or correct the frame before any decision agenda.
+
+### Assertions
+
+- The response opens with an orientation that states the situation, aim, desired outcomes and boundaries, and the crux before any decision work.
+- The orientation stands on its own and does not require the reader to open issue #482 or the research report.
+- The presumed cron cause is labeled as a reported assumption rather than an established fact, and the evidenced absence of per-recipient send records and instance leasing is distinguished from it.
+- The crux is expressed as competing forces and boundaries under tension without naming a preferred mechanism, and no option is recommended or accepted.
+- The response asks the developer to confirm or correct the aim, outcomes, and boundaries before building the decision agenda.
+
+## 16. Orientation does not adopt the issue author's preferred mechanism
+
+### Prompt
+
+> Workshop the design for concurrent inventory reservations. The ticket author wrote: "Two checkouts can reserve the last unit. We should add a distributed lock in Redis around the reservation path." Evidence at commit f160 shows reservations are written to the primary transactional database, the service already runs multiple instances, there is no Redis dependency today, and the reservation row has no uniqueness or stock constraint. We need overselling to stop without slowing normal checkout.
+
+### Expected output
+
+An orientation that records the distributed lock as a stated preference rather than an accepted approach, frames the crux as the enforcement and contention forces at the reservation boundary, and defers mechanism choice to an explicit human decision.
+
+### Assertions
+
+- The distributed lock is recorded as a stated preference or candidate, not adopted as the design or asserted as a constraint.
+- The crux is stated as competing forces such as correctness enforcement, contention, and adding an operational dependency, rather than as the lock mechanism.
+- The orientation distinguishes evidenced facts from the author's presumed solution and does not treat the absence of Redis as a required addition.
+- Any mechanism choice appears as an unresolved agenda decision awaiting explicit human choice, and no option is accepted by default.
+
 ## Pass condition
 
-The prompt set passes when design decisions never rely on materially stale evidence, direct evidence is usable without invented provenance, irrelevant drift does not cause unnecessary research, the workshop preserves explicit human choice and its design boundary, and acceptance is tied to a reproducible snapshot or evidence identity. The workshop must derive consequential technical and cross-cutting choices when the caller has not named them, avoid manufacturing alternatives when evidence constrains the design, represent constrained conclusions as evidenced contracts rather than human decisions, and prevent material technical rules from first appearing during synthesis. Accepted scope must be functionally and technically complete, traceable, operationally credible, and ready for specification.
+The prompt set passes when a participant who did not write the issue or do the research is oriented to the situation, aim, outcomes, and crux before any decision work, without adopting a reported cause or preferred mechanism as fact; design decisions never rely on materially stale evidence, direct evidence is usable without invented provenance, irrelevant drift does not cause unnecessary research, the workshop preserves explicit human choice and its design boundary, and acceptance is tied to a reproducible snapshot or evidence identity. The workshop must derive consequential technical and cross-cutting choices when the caller has not named them, avoid manufacturing alternatives when evidence constrains the design, represent constrained conclusions as evidenced contracts rather than human decisions, and prevent material technical rules from first appearing during synthesis. Accepted scope must be functionally and technically complete, traceable, operationally credible, and ready for specification.

@@ -12,8 +12,17 @@ package.
 - Read the `axm` skill and the relevant AXM help for the package type and
   command you will use.
 - Know which changed packages are intended for this release.
-- Install AXM 0.26.4. The safety gate deliberately rejects other versions so
-  local and CI validation use the same contract.
+- Upgrade AXM immediately before release work, then update the workspace's AXM
+  skill to the same release so local and CI validation use the current
+  contract:
+
+  ```bash
+  axm upgrade
+  axm update @agentxm/skills/axm --ignore-release-age
+  ```
+
+  The targeted release-age override is intentional here: the release workflow
+  must not keep using an older CLI during the normal 24-hour holdback window.
 
 Activate the repository's tracked pre-commit hook once per clone:
 
@@ -22,7 +31,8 @@ git config core.hooksPath .githooks
 ```
 
 The hook validates the exact Git index—the proposed commit—not unstaged or
-untracked work. It fails closed when AXM is missing or has the wrong version.
+untracked work. It fails closed when AXM is missing; AXM status and lint enforce
+compatibility with the workspace's installed AXM skill.
 If formatters are added later, run them and stage their output before this
 safety gate so the gate remains the final check of commit contents.
 

@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-readonly required_axm_version="0.26.4"
-
 usage() {
   echo "Usage: $0 [--view workspace|git-index]" >&2
 }
@@ -25,13 +23,7 @@ repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
 if ! command -v axm >/dev/null 2>&1; then
-  echo "AXM ${required_axm_version} is required. Install it from https://axm.sh." >&2
-  exit 1
-fi
-
-installed_axm_version="$(axm --version)"
-if [[ "$installed_axm_version" != "$required_axm_version" ]]; then
-  echo "AXM ${required_axm_version} is required; found ${installed_axm_version}." >&2
+  echo "AXM is required. Install the latest release from https://axm.sh." >&2
   exit 1
 fi
 

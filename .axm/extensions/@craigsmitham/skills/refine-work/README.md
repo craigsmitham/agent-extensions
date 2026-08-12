@@ -1,8 +1,8 @@
 # Refine Work
 
-Assess whether a work item or body of work is accurate, proportionately
+Assess whether an established work item or body of work is accurate, proportionately
 articulated, and appropriately dispositioned for its current lifecycle state.
-The skill supports backlog refinement, triage review, and issue hygiene without
+The skill supports backlog refinement, lifecycle-state review, and issue hygiene without
 assuming a particular tracker, workflow, or definition of development-ready.
 
 ## Use it when
@@ -13,8 +13,9 @@ assuming a particular tracker, workflow, or definition of development-ready.
 - Clarifying work while preserving legitimate uncertainty.
 
 It does not prioritize work without supplied goals, plan implementation, or
-require every item to meet a universal completeness standard. Keeping an item
-as-is or confirming that it appropriately remains in triage are valid outcomes.
+perform initial intake triage. It does not require every item to meet a universal
+completeness standard. Keeping an item as-is or confirming that an established
+item appropriately remains in Triage are valid outcomes.
 
 ## Install
 
