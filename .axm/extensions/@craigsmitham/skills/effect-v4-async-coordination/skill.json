@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-async-coordination",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Selects Effect v4 coordination primitives for safe asynchronous state and signaling",
   "keywords": [
     "effect",

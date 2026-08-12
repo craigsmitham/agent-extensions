@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-observability",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Designs coherent logs, traces, and metrics for Effect v4 programs",
   "keywords": [
     "effect",

@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-testing",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Builds deterministic tests for Effect v4 programs, time, services, and fibers",
   "keywords": [
     "effect",

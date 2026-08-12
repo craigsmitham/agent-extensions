@@ -1,6 +1,7 @@
 ---
 name: effect-v4-testing
 description: Builds deterministic tests for Effect v4 programs and their lifetimes. Use when tests sleep in real time, mock repeated internals, depend on real services, leak fibers, or are nondeterministic through time, scheduling, randomness, or concurrency—even when Effect test utilities are not yet used. Skip pure synchronous logic already covered by straightforward value tests.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Effect v4 testing
@@ -30,3 +31,38 @@ Test observable Effect behavior with controlled services and time.
 - Keep integration tests for real adapters, but retain deterministic core tests through service substitution.
 
 Flakiness is usually evidence of an uncontrolled dependency or lifetime, not something to fix with longer delays.
+
+## Use the Effect test runtime
+
+```ts
+import { assert, describe, it } from "@effect/vitest"
+import { Effect } from "effect"
+
+describe("lookup", () => {
+  it.effect("returns a typed failure", () =>
+    Effect.gen(function*() {
+      const error = yield* lookup(missingId).pipe(Effect.flip)
+      assert.strictEqual(error._tag, "UserNotFound")
+    }).pipe(Effect.provide(TestUsers)),
+  )
+})
+```
+
+- Use `it.effect` for ordinary Effect tests and `it.scoped` when the test body
+  requires Scope. Use `it.layer` to share an expensive suite-owned layer with
+  the lifecycle the suite declares.
+- Provide dependencies through Layers; do not call `runPromise` inside Effect
+  tests or mock private implementation functions.
+- Assert typed errors with `Effect.flip` or another typed channel operation.
+  Test defects and interruption separately when they are part of the contract.
+- Advance `TestClock` only after the waiting fiber is started, then join it and
+  verify completion/finalization.
+
+## Review checklist
+
+- Effect tests import from `@effect/vitest` and keep one runtime boundary.
+- Required services are provided through contract-compatible test layers.
+- Time, randomness, logging, and concurrency are deterministic where relevant.
+- Resource tests cover success, failure, and interruption cleanup.
+- Shared suite layers have explicit ownership and do not leak mutable state
+  between tests.

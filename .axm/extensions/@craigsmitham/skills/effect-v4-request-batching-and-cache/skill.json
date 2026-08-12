@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-request-batching-and-cache",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Eliminates duplicate and N+1 Effect v4 work through request batching and caching",
   "keywords": [
     "effect",

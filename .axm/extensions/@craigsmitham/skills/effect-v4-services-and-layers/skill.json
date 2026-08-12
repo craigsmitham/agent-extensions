@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "effect-v4-services-and-layers",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Models Effect v4 dependencies as services and composes their implementations with layers",
   "keywords": [
     "effect",

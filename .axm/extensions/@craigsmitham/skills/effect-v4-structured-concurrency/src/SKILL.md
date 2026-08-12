@@ -1,6 +1,7 @@
 ---
 name: effect-v4-structured-concurrency
 description: Structures Effect v4 parallel and background work around owned lifetimes. Use when code uses detached promises, `Promise.all`, `AbortController`, manual races, orphanable background tasks, or unbounded parallelism—even without existing fibers. Skip sequential work and intentionally external jobs whose lifetime is owned by another system.
+compatibility: Effect 4.0.0-beta.107
 ---
 
 # Effect v4 structured concurrency
@@ -29,3 +30,34 @@ Every child fiber should have an owner, completion policy, and concurrency bound
 - Decide whether sibling failure should fail fast, accumulate results, or be isolated; encode that policy explicitly.
 
 Avoid fire-and-forget effects and accidental fan-out over unbounded inputs.
+
+## Choose parallel failure semantics
+
+- Effect collection operations are sequential by default. Add an explicit
+  numeric concurrency bound for variable-size inputs; reserve unbounded
+  concurrency for a small fixed group.
+- Decide whether the first failure interrupts siblings or whether every outcome
+  is collected as data. Preserve every failure required by the contract.
+- Use timeout/race only when losing work may be interrupted safely. Foreign
+  adapters must accept cancellation or clearly state that interruption only
+  stops waiting.
+- Put admission limits shared across call sites in a Semaphore; keep a local
+  traversal bound local when no cross-call coordination is needed.
+
+## Supervise shutdown
+
+- On shutdown, stop admitting work, signal owned producers, await the accepted
+  drain window, then interrupt remaining child fibers and release resources.
+- Use scoped acquisition for listeners, queues, workers, and connections so
+  parent interruption cannot leak them.
+- Observe every detached fiber's failure through supervision or explicit
+  logging. A daemon with no failure observer is lost work.
+
+## Review checklist
+
+- Parent, scope, or explicit supervisor owns every child fiber.
+- Concurrency is bounded and derived from real capacity.
+- Sibling failure, result accumulation, ordering, and race-loss behavior are
+  explicit.
+- Cancellation reaches adapters and releases scoped resources.
+- Shutdown has a defined admission, drain, interrupt, and observation sequence.
