@@ -34,8 +34,7 @@ them with a scoped check of affected boundaries. If it is not, state the
 evidence limit and proceed when the supplied evidence is sufficient. Record the
 basis for classifying encountered drift as irrelevant. If drift or missing
 provenance may invalidate material evidence, state the precise current-state
-question, mark only dependent decisions `Needs research`, and pause them. Do not
-broaden into general codebase research or guess. When drift pauses design
+question and respond as `Design-time inquiry` directs. When drift pauses design
 acceptance, state that later acceptance must record both the exact revalidated
 identity and its validation time. If the change has no consequential design
 choice, explain why a formal workshop is unnecessary.
@@ -67,6 +66,25 @@ choice, explain why a formal workshop is unnecessary.
   update one living record after each accepted decision. Otherwise maintain the
   ledger in the conversation and return the complete record at the end. Do not
   invent a durable documentation location or commit anything.
+
+## Design-time inquiry
+
+Design generates new current-state questions; answering them is part of the
+workshop, not a detour. Three responses exist, and guessing is not one:
+
+- **Look now** when the question is answerable at a boundary the supplied
+  evidence already covers and its answer settles a pending item. Inspect only
+  that boundary, stop when the item resolves, and record the evidence on the
+  decision it constrains.
+- **Mark `Needs research`** when the answer requires tracing a boundary the
+  evidence does not cover, or would reframe the agenda rather than resolve one
+  item. State the precise question, pause only dependent decisions, and continue
+  with independent items.
+- Never infer an unverified current-state fact to keep a decision moving.
+
+Design-time findings inherit the design snapshot identity. Do not open a
+research brief, produce a report, restate what the supplied evidence already
+answers, or inspect areas no pending decision touches.
 
 ## Workshop
 
@@ -118,14 +136,22 @@ functional, technical, or coupled type and a `Decide now`, `Constrained`,
 `Defer`, or `Needs research` status, and record the evidence or forces that
 justify that status.
 
+Place every new responsibility explicitly: extend, generalize, or compose an
+existing capability, or add a new one. When the evidence identifies a capability
+that plausibly carries it, adding a new one is itself a `D<n>` requiring
+options, never a silent default. When no candidate exists, record that as a
+`Constrained` `C<n>` citing the evidence searched.
+
 ### 3. Resolve one decision at a time
 
 For each `Decide now` item:
 
 1. State the decision as a concrete question and cite the current-state evidence
-   and source or snapshot identity that constrain it.
+   and source or snapshot identity that constrain it. When that evidence is
+   missing, apply `Design-time inquiry` before presenting options.
 2. Present viable options with their fit, tradeoffs, consequences, and
-   reversibility. Exclude an option only for a stated constraint or invariant.
+   reversibility, naming the existing capabilities each option uses, extends, or
+   bypasses. Exclude an option only for a stated constraint or invariant.
 3. For a technical or coupled decision, state the forces that make the choice
    consequential and the affected boundaries or contracts.
 4. Classify the affected elements using the change model below.
@@ -154,7 +180,9 @@ Classify every affected element as:
 
 Ask “observable to whom?” Consider users, API or event consumers, stored data
 and older versions, operators, security boundaries, and performance or
-availability objectives. Require evidence for claimed behavioral equivalence;
+availability objectives. Extending a shared capability makes its existing
+consumers observers; treat that as mixed or boundary unless evidence shows
+otherwise. Require evidence for claimed behavioral equivalence;
 do not assume a refactor is harmless or reversible.
 
 For each behavioral or mixed element, record the observer, preconditions and
@@ -183,8 +211,9 @@ defer it rather than silently adding it to the design.
 Pressure-test it against the original intent and revalidated current-state
 evidence. Look for contradictory decisions, externally visible structural
 changes, partial failure, concurrency and lifecycle gaps, migration hazards,
-snapshot drift, uncovered acceptance scenarios, and speculative structure with
-no present purpose. Trace every in-scope outcome, behavior, and material
+snapshot drift, uncovered acceptance scenarios, re-implementation of capability
+the evidence already provides, and speculative structure with no present
+purpose. Trace every in-scope outcome, behavior, and material
 end-state rule to accepted decisions, contracts, preserved constraints, and
 design-level verification. Reopen any decision invalidated by the test.
 
@@ -213,7 +242,9 @@ Before handoff, confirm that the design brief stands without the issue or the
 research report; no accepted decision depends on stale evidence;
 material in-scope outcomes, behaviors, decisions, and contracts have stable
 identifiers and design-level verification; no material technical rule first
-appears in synthesis; deferred scope and specification impact are explicit;
+appears in synthesis; every new responsibility has an explicit placement;
+design-time findings are recorded on the decisions they constrain;
+deferred scope and specification impact are explicit;
 each `Constrained` agenda item traces to an evidenced `C<n>` contract or
 invariant; paused decisions are `Needs research`; and the acceptance snapshot or
 evidence identity is sufficient to detect later material change.

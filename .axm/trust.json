@@ -309,24 +309,24 @@
       "name": "frame-codebase-research",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/frame-codebase-research",
-      "resolvedVersion": "0.0.4",
-      "contentIdentity": "c66d82992ce8abde007263c0714975e2d53cbdf5204433da27c894f31feeb070"
+      "resolvedVersion": "0.0.5",
+      "contentIdentity": "abec9be2e19b7fe1b48b6449a8be25987210763e73d9695a2e7f09394c2b5e1c"
     },
     "skill:conduct-codebase-research": {
       "extensionType": "skill",
       "name": "conduct-codebase-research",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/conduct-codebase-research",
-      "resolvedVersion": "0.0.3",
-      "contentIdentity": "4d764966816ba4e8af2036c7a6e77e3e0db9194963e5ac2bd6bd5f6aaef329d1"
+      "resolvedVersion": "0.0.4",
+      "contentIdentity": "fa24ba54f4520dd050827e5fd6150dc3b518616b5a7c15dbbe9bd73f7acbf48c"
     },
     "skill:workshop-codebase-design": {
       "extensionType": "skill",
       "name": "workshop-codebase-design",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/workshop-codebase-design",
-      "resolvedVersion": "0.0.5",
-      "contentIdentity": "b439ed929b1f8e88fdc532512f5875a184aada610a6fa95bf00783db0ff4fb6a"
+      "resolvedVersion": "0.0.6",
+      "contentIdentity": "57aaf4e3702147379c0559c3282dee9221ae3b0c3abdcb944a88d2cc85578157"
     },
     "pack:codebase-change-workflow": {
       "extensionType": "pack",

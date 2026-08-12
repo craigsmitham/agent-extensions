@@ -55,8 +55,10 @@ locate ownership, then narrow to relevant symbols and flows:
    directly related tests.
 2. Trace control and data from entry through internal and external boundaries to
    state changes and outputs.
-3. Find the closest analogous behavior and document the pattern without judging
-   whether it is desirable.
+3. Inventory the capabilities within and adjacent to the traced boundaries that
+   already carry responsibility of this kind, with their extension points,
+   constraints, coupling, and consumers. Document what exists without judging
+   whether it fits or is desirable.
 4. For bugs, safely reproduce at the research snapshot when practical, relate
    the result to the reported snapshot, narrow the affected region, compare
    expected and observed paths, and inspect state, timing, error handling, and
@@ -107,6 +109,7 @@ Before handing off, confirm that:
 
 - every supplied question has an explicit status and evidence trail;
 - the technical map crosses every material boundary found;
+- existing capabilities in scope are inventoried, or their absence is stated;
 - material claims are cited and inferences are labeled;
 - material claims identify the snapshot that supports them;
 - chronology, relevant drift, and unassessable provenance remain explicit;

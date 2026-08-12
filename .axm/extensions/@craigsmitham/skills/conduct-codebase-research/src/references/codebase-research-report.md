@@ -26,6 +26,12 @@ leave empty boilerplate.
 ## Current-State Technical Map
 <Concise end-to-end explanation of relevant components and boundaries.>
 
+## Existing Capabilities
+<What already carries responsibility of this kind, without assessing fit. State explicitly when a search found none.>
+
+| Capability | Location | What it does today | Extension points | Constraints and coupling | Consumers |
+| --- | --- | --- | --- | --- | --- |
+
 ## Question Status
 | Question | Status | Evidence |
 | --- | --- | --- |

@@ -51,7 +51,9 @@ instead of inventing generic research questions.
 
 Read applicable repository instructions; inspect only high-level structure,
 request terms, and named files. Verify likely subsystem, symbol,
-and path names before using them as anchors. Record the verification time,
+and path names before using them as anchors, along with the domain vocabulary of
+the capability area, so research can search by concept rather than only the
+request's wording. Record the verification time,
 repository, branch, commit, and worktree state, plus only the configuration,
 dependency, deployment, or runtime versions material to the anchors. Do not
 include a guessed anchor.
@@ -62,15 +64,22 @@ Cover only relevant uncertainties, such as:
 
 - entry points, ownership, and end-to-end control and data flow;
 - state transitions, persistence, contracts, invariants, and consumers;
-- analogous implementations and established tests or observability;
+- existing capabilities carrying responsibility of this kind, and established
+  tests or observability;
 - configuration, authorization, dependency, deployment, and compatibility
   boundaries.
+
+Unless the change would build nothing new, include a standing question about
+what capabilities already exist within and adjacent to the scope and what
+constrains their use. Phrase it as what exists, never as whether a particular
+capability can be reused. Scale it to what the change would build, not to the
+size of the report.
 
 For a bug, consider reproduction, divergence, error handling, state, timing, and
 scoped regression history. When report and framing snapshots differ, ask whether
 current behavior still matches the report and which relevant changes matter. For
-a feature, consider analogous capability, extension boundaries, contracts,
-consumers, and verification.
+a feature, consider extension boundaries, contracts, consumers, and
+verification.
 
 Each question must:
 

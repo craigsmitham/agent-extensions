@@ -216,8 +216,8 @@ skills:
     name: workshop-codebase-design
     version: 0.0.5
     installedAt: 2026-08-10T21:12:59.081Z
-    updatedAt: 2026-08-12T14:44:50.874Z
-    sourceHash: b439ed929b1f8e88fdc532512f5875a184aada610a6fa95bf00783db0ff4fb6a
+    updatedAt: 2026-08-12T14:53:47.776Z
+    sourceHash: 7ef0c3e423697f8e1f8ac2583cd77498f02dea272df8083246170e1278bd2322
   specify-codebase-change:
     type: workspace
     owner: "@craigsmitham"
