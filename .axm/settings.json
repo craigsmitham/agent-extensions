@@ -13,7 +13,7 @@
     }
   },
   "skills": {
-    "axm": "@agentxm/skills/axm@0.26.2",
+    "axm": "@agentxm/skills/axm@0.26.4",
     "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
     "effect-v4-async-coordination": "workspace:@craigsmitham/skills/effect-v4-async-coordination",
     "effect-v4-branded-types": "workspace:@craigsmitham/skills/effect-v4-branded-types",

@@ -7,10 +7,10 @@
       "authority": "registry",
       "sourceIdentity": "@agentxm/skills/axm",
       "sourceName": "default",
-      "resolvedVersion": "0.26.2",
+      "resolvedVersion": "0.26.4",
       "publisherBindingId": "hbnd_01ks5vvdf0efz9m4w5qsv4q5qp",
-      "integrity": "sha512-3A6/eCV/ZcOzZB4jwDF4dWgNRuxNvTpC/FQQ+n0I/OOzLf5n6QcbnDMG4Y9ADM1HTJkA5l6ixdF2B/bN6FjqdQ==",
-      "contentIdentity": "97c7dc1700ab9368cc83e17c9f8aa97b8177c914975b1fa530745eb16c1dfecc"
+      "integrity": "sha512-+meci6LijLelUY2QFc3mBvJelnDDGYUCbqLFaOKeeQNqjZyOlLZj/9cPpNMHIe0t1O1WtlfqM6BdzqmWALA2jQ==",
+      "contentIdentity": "614ec892e09e785753c0d9c33273abbdf418cabc18184553510822bce2cde8a3"
     },
     "pack:effect-v4": {
       "extensionType": "pack",

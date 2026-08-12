@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-readonly required_axm_version="0.26.2"
+readonly required_axm_version="0.26.4"
 
 usage() {
   echo "Usage: $0 [--view workspace|git-index]" >&2
@@ -69,9 +69,26 @@ validation_root="$repo_root"
 if [[ "$view" == "git-index" ]]; then
   expected_index_fingerprint="$(git_index_fingerprint)"
 
+  status_output="$(mktemp "${TMPDIR:-/tmp}/public-safety-status.XXXXXX")"
   lint_output="$(mktemp "${TMPDIR:-/tmp}/public-safety-lint.XXXXXX")"
   snapshot_root="$(mktemp -d "${TMPDIR:-/tmp}/public-safety-git-index.XXXXXX")"
-  trap 'rm -f -- "$lint_output"; cleanup' EXIT
+  trap 'rm -f -- "$status_output" "$lint_output"; cleanup' EXIT
+
+  materialized_index_fingerprint="$(
+    scripts/materialize-git-index.sh "$snapshot_root"
+  )"
+  if [[ "$materialized_index_fingerprint" != "$expected_index_fingerprint" ]]; then
+    echo "The materialized snapshot does not match the Git index." >&2
+    exit 1
+  fi
+  assert_index_unchanged
+  validation_root="$snapshot_root"
+
+  if ! (cd "$validation_root" && axm status --json) >"$status_output"; then
+    cat "$status_output"
+    exit 1
+  fi
+  assert_index_unchanged
 
   if ! axm lint --view git-index --strict --json >"$lint_output"; then
     cat "$lint_output"
@@ -89,17 +106,8 @@ if [[ "$view" == "git-index" ]]; then
     exit 1
   fi
   assert_index_unchanged
-
-  materialized_index_fingerprint="$(
-    scripts/materialize-git-index.sh "$snapshot_root"
-  )"
-  if [[ "$materialized_index_fingerprint" != "$expected_index_fingerprint" ]]; then
-    echo "The materialized snapshot does not match the Git index AXM validated." >&2
-    exit 1
-  fi
-  assert_index_unchanged
-  validation_root="$snapshot_root"
 else
+  axm status
   axm lint --view workspace --strict
 fi
 

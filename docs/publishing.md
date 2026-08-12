@@ -12,7 +12,7 @@ package.
 - Read the `axm` skill and the relevant AXM help for the package type and
   command you will use.
 - Know which changed packages are intended for this release.
-- Install AXM 0.26.2. The safety gate deliberately rejects other versions so
+- Install AXM 0.26.4. The safety gate deliberately rejects other versions so
   local and CI validation use the same contract.
 
 Activate the repository's tracked pre-commit hook once per clone:

@@ -23,9 +23,9 @@ jobs:
       - name: Install AXM
         run: |
           curl --fail --location --proto '=https' --tlsv1.2 \
-            https://github.com/agentxm/axm/releases/download/cli-v0.26.2/axm-linux-x64 \
+            https://github.com/agentxm/axm/releases/download/cli-v0.26.4/axm-linux-x64 \
             --output /tmp/axm
-          echo "be108ac7c15f757fba893bb981b969c48d6ae269532d454952eed5e57eb6a210  /tmp/axm" \
+          echo "6eaa871d723ee5d0bf5fc7cfb9dd5dc7a8ff3814cf6fe07e0b1752d46f9db23d  /tmp/axm" \
             | sha256sum --check
           mkdir -p "$HOME/.local/bin"
           install -m 755 /tmp/axm "$HOME/.local/bin/axm"

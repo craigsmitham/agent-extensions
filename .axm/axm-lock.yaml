@@ -4,13 +4,13 @@ skills:
     type: registry
     owner: "@agentxm"
     name: axm
-    resolvedVersion: 0.26.2
-    integrity: sha512-3A6/eCV/ZcOzZB4jwDF4dWgNRuxNvTpC/FQQ+n0I/OOzLf5n6QcbnDMG4Y9ADM1HTJkA5l6ixdF2B/bN6FjqdQ==
+    resolvedVersion: 0.26.4
+    integrity: sha512-+meci6LijLelUY2QFc3mBvJelnDDGYUCbqLFaOKeeQNqjZyOlLZj/9cPpNMHIe0t1O1WtlfqM6BdzqmWALA2jQ==
     sourceName: default
     publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     installedAt: 2026-08-08T11:38:34.405Z
-    updatedAt: 2026-08-11T20:27:20.244Z
-    sourceHash: 97c7dc1700ab9368cc83e17c9f8aa97b8177c914975b1fa530745eb16c1dfecc
+    updatedAt: 2026-08-12T07:52:56.601Z
+    sourceHash: 614ec892e09e785753c0d9c33273abbdf418cabc18184553510822bce2cde8a3
   effect-v4-config:
     type: workspace
     owner: "@craigsmitham"
