@@ -5,8 +5,8 @@ repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
 real_axm="$(command -v axm)"
-if [[ "$("$real_axm" --version)" != "0.26.2" ]]; then
-  echo "The integration test requires AXM 0.26.2." >&2
+if [[ "$("$real_axm" --version)" != "0.26.4" ]]; then
+  echo "The integration test requires AXM 0.26.4." >&2
   exit 1
 fi
 
@@ -62,9 +62,36 @@ if [[ "$before_status" != "$after_status" || "$before_index" != "$after_index" ]
   exit 1
 fi
 if find "$test_root" -maxdepth 1 \
-  \( -name 'public-safety-git-index.*' -o -name 'public-safety-lint.*' -o -name 'public-safety-index.*' \) \
+  \( -name 'public-safety-git-index.*' -o -name 'public-safety-status.*' -o -name 'public-safety-lint.*' -o -name 'public-safety-index.*' \) \
   -print -quit | grep -q .; then
   echo "The safety gate left temporary snapshot artifacts behind." >&2
+  exit 1
+fi
+
+mismatch_fixture="$(make_fixture)"
+mismatch_manifest=".axm/extensions/@agentxm/skills/axm/skill.json"
+jq '.version = "0.26.3"' "$mismatch_fixture/$mismatch_manifest" \
+  >"$mismatch_fixture/$mismatch_manifest.next"
+mv "$mismatch_fixture/$mismatch_manifest.next" "$mismatch_fixture/$mismatch_manifest"
+git -C "$mismatch_fixture" add "$mismatch_manifest"
+git -C "$mismatch_fixture" show "HEAD:$mismatch_manifest" \
+  >"$mismatch_fixture/$mismatch_manifest"
+mismatch_lint_sentinel="$test_root/mismatch-lint-executed"
+mismatch_wrapper_dir="$(mktemp -d "$test_root/mismatch-wrapper.XXXXXX")"
+cat >"$mismatch_wrapper_dir/axm" <<EOF
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ "\${1:-}" == "lint" ]]; then
+  touch "$mismatch_lint_sentinel"
+fi
+exec "$real_axm" "\$@"
+EOF
+chmod 755 "$mismatch_wrapper_dir/axm"
+expect_failure "staged AXM skill pin mismatch" \
+  env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh --view git-index' \
+  _ "$mismatch_fixture" "$mismatch_wrapper_dir"
+if [[ -e "$mismatch_lint_sentinel" ]]; then
+  echo "The safety gate ran lint after AXM status found a pin mismatch." >&2
   exit 1
 fi
 
