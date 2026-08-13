@@ -15,19 +15,6 @@
   "skills": {
     "axm": "@agentxm/skills/axm@0.26.6",
     "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
-    "effect-v4-async-coordination": "workspace:@craigsmitham/skills/effect-v4-async-coordination",
-    "effect-v4-branded-types": "workspace:@craigsmitham/skills/effect-v4-branded-types",
-    "effect-v4-config": "workspace:@craigsmitham/skills/effect-v4-config",
-    "effect-v4-error-modeling": "workspace:@craigsmitham/skills/effect-v4-error-modeling",
-    "effect-v4-observability": "workspace:@craigsmitham/skills/effect-v4-observability",
-    "effect-v4-optics": "workspace:@craigsmitham/skills/effect-v4-optics",
-    "effect-v4-request-batching-and-cache": "workspace:@craigsmitham/skills/effect-v4-request-batching-and-cache",
-    "effect-v4-resource-safety": "workspace:@craigsmitham/skills/effect-v4-resource-safety",
-    "effect-v4-schema-boundaries": "workspace:@craigsmitham/skills/effect-v4-schema-boundaries",
-    "effect-v4-services-and-layers": "workspace:@craigsmitham/skills/effect-v4-services-and-layers",
-    "effect-v4-streams": "workspace:@craigsmitham/skills/effect-v4-streams",
-    "effect-v4-structured-concurrency": "workspace:@craigsmitham/skills/effect-v4-structured-concurrency",
-    "effect-v4-testing": "workspace:@craigsmitham/skills/effect-v4-testing",
     "improve-whatever": "workspace:@craigsmitham/skills/improve-whatever",
     "field-notes": "workspace:@craigsmitham/skills/field-notes",
     "author-docs": "workspace:@craigsmitham/skills/author-docs",
@@ -43,14 +30,8 @@
     "prune-work": "workspace:@craigsmitham/skills/prune-work",
     "assess-codebase-change-readiness": "workspace:@craigsmitham/skills/assess-codebase-change-readiness",
     "verify-codebase-change": "workspace:@craigsmitham/skills/verify-codebase-change",
-    "effect-v4-collections": "workspace:@craigsmitham/skills/effect-v4-collections",
-    "effect-v4-filesystem": "workspace:@craigsmitham/skills/effect-v4-filesystem",
-    "effect-v4-iteration": "workspace:@craigsmitham/skills/effect-v4-iteration",
-    "effect-v4-option": "workspace:@craigsmitham/skills/effect-v4-option",
-    "effect-v4-wrapping": "workspace:@craigsmitham/skills/effect-v4-wrapping",
-    "effect-v4-http-api": "workspace:@craigsmitham/skills/effect-v4-http-api",
-    "effect-v4-cloudflare-workers": "workspace:@craigsmitham/skills/effect-v4-cloudflare-workers",
-    "triage-work": "workspace:@craigsmitham/skills/triage-work"
+    "triage-work": "workspace:@craigsmitham/skills/triage-work",
+    "craft-effect-v4": "workspace:@craigsmitham/skills/craft-effect-v4"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"
@@ -59,7 +40,8 @@
     "docs": "workspace:@craigsmitham/knowledge/docs",
     "field-notes": "workspace:@craigsmitham/knowledge/field-notes",
     "workflow-automation": "workspace:@craigsmitham/knowledge/workflow-automation",
-    "harness-engineering": "workspace:@craigsmitham/knowledge/harness-engineering"
+    "harness-engineering": "workspace:@craigsmitham/knowledge/harness-engineering",
+    "effect-v4": "workspace:@craigsmitham/knowledge/effect-v4"
   },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",

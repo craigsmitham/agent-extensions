@@ -92,7 +92,8 @@ answers, or inspect areas no pending decision touches.
 
 Design often passes to someone who did not write the issue or do the research,
 and a neutral research report deliberately omits intent. Reconstruct the whole
-picture before any decision work:
+picture before any decision work. Open with one short paragraph carrying the
+situation, the problem it causes, and the intended outcome, then expand it:
 
 - **Situation:** what exists today and what is wrong or missing, in the domain's
   terms rather than file names.

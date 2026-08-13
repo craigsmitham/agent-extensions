@@ -260,10 +260,12 @@ A concise, complete, Accepted Codebase Design Record that preserves O1, B1, D1, 
 
 ### Expected output
 
-A self-contained orientation covering the situation, aim, outcomes and boundaries, crux, and evidence and unknowns, which separates the ticket's presumed cron cause from the evidence, and asks the developer to confirm or correct the frame before any decision agenda.
+A self-contained orientation that opens with a short summary paragraph and then covers the situation, aim, outcomes and boundaries, crux, and evidence and unknowns, which separates the ticket's presumed cron cause from the evidence, and asks the developer to confirm or correct the frame before any decision agenda.
 
 ### Assertions
 
+- The orientation opens with one short paragraph, no more than about four sentences, carrying the situation, the problem it causes, and the intended outcome.
+- The opening paragraph summarizes only what the orientation itself establishes and introduces no material absent from it.
 - The response opens with an orientation that states the situation, aim, desired outcomes and boundaries, and the crux before any decision work.
 - The orientation stands on its own and does not require the reader to open issue #482 or the research report.
 - The presumed cron cause is labeled as a reported assumption rather than an established fact, and the evidenced absence of per-recipient send records and instance leasing is distinguished from it.
@@ -284,6 +286,7 @@ An orientation that records the distributed lock as a stated preference rather t
 
 - The distributed lock is recorded as a stated preference or candidate, not adopted as the design or asserted as a constraint.
 - The crux is stated as competing forces such as correctness enforcement, contention, and adding an operational dependency, rather than as the lock mechanism.
+- The opening summary paragraph states the problem and intended outcome without naming a distributed lock or any other preferred mechanism as the direction.
 - The orientation distinguishes evidenced facts from the author's presumed solution and does not treat the absence of Redis as a required addition.
 - Any mechanism choice appears as an unresolved agenda decision awaiting explicit human choice, and no option is accepted by default.
 

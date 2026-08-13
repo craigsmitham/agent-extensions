@@ -123,6 +123,7 @@ clones, caches, or prior access.
 | Bundle | Description |
 | --- | --- |
 | [docs](.axm/extensions/@craigsmitham/knowledge/docs/src/index.md) | Portable documentation craft: *-explainer + *-guide pairs for overall craft and each Diátaxis type, plus workflow remediation and quality theory |
+| [effect-v4](.axm/extensions/@craigsmitham/knowledge/effect-v4/src/index.md) | Opinionated Effect v4 guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification |
 | [field-notes](.axm/extensions/@craigsmitham/knowledge/field-notes/src/index.md) | Observing work in progress and converting it into durable improvement: work-as-imagined vs work-as-done, survey and target subjects, recurrence thresholds, and verified closure |
 | [harness-engineering](.axm/extensions/@craigsmitham/knowledge/harness-engineering/src/index.md) | Harness and context engineering principles, domain profiles, elements, patterns, and practices for reliable agent systems |
 | [workflow-automation](.axm/extensions/@craigsmitham/knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |

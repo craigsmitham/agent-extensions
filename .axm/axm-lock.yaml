@@ -11,123 +11,6 @@ skills:
     installedAt: 2026-08-08T11:38:34.405Z
     updatedAt: 2026-08-12T14:40:07.240Z
     sourceHash: cb282eaec7b84fda690eaebcd028100f909890ea26cefc9e5f7f3026d529a039
-  effect-v4-config:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-config
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.233Z
-    updatedAt: 2026-08-12T05:27:42.585Z
-    sourceHash: 1a41e00740263dd41f584890825b077806c96023a121a7df12738b2263f816b9
-  effect-v4-optics:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-optics
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.241Z
-    updatedAt: 2026-08-12T05:27:45.141Z
-    sourceHash: 14eb071bd5d61c49ba05189f09933d505195df62c0f10045188d27d1596f2d74
-  effect-v4-streams:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-streams
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.245Z
-    updatedAt: 2026-08-12T05:27:49.341Z
-    sourceHash: 775abc4ad710429c3685227390c58668627601180ab8dc7190c726dc32459d5c
-  effect-v4-testing:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-testing
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.249Z
-    updatedAt: 2026-08-12T05:27:51.036Z
-    sourceHash: 2970f1088b2f2795d2d3d137b0e48f3b7f8a3c2da79674a271aea6aa3ea74fc6
-  effect-v4-branded-types:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-branded-types
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.254Z
-    updatedAt: 2026-08-12T05:27:41.673Z
-    sourceHash: 2623e93462a0fd9cbd02a4899476c61ff040a71fb88a9946087a0964c17cb2a6
-  effect-v4-observability:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-observability
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.258Z
-    updatedAt: 2026-08-12T05:27:44.226Z
-    sourceHash: 0052a91c7b53820dc4f4a073766bd854a462876712d5953258849855ff0516c5
-  effect-v4-error-modeling:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-error-modeling
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.264Z
-    updatedAt: 2026-08-12T05:27:43.382Z
-    sourceHash: 87d8e63616c12d90d2858567a1c0676e759dff59d4e56fefa9c54b079357375e
-  effect-v4-resource-safety:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-resource-safety
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.268Z
-    updatedAt: 2026-08-12T05:27:46.905Z
-    sourceHash: 04db6c39fd0b73689543c197bf0e57b67f57b13c81f83323eb186169360450ec
-  effect-v4-schema-boundaries:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-schema-boundaries
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.273Z
-    updatedAt: 2026-08-12T05:27:47.771Z
-    sourceHash: 600e3e9e9fae7e68ca4fbc8bb4baa31d087f9db099a60f6c4c962e1b4880afa0
-  effect-v4-async-coordination:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-async-coordination
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.277Z
-    updatedAt: 2026-08-12T05:27:40.874Z
-    sourceHash: 4495bbae1dd8d64d6371043bc99fd30fb663680ee6d4270c5fe979a5706af8b5
-  effect-v4-services-and-layers:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-services-and-layers
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.284Z
-    updatedAt: 2026-08-12T05:27:48.565Z
-    sourceHash: cbd2a655a5773bb06f66bd04990b2be7ed15a041a695ec8575af9db0cb392c48
-  effect-v4-structured-concurrency:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-structured-concurrency
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.288Z
-    updatedAt: 2026-08-12T05:27:50.129Z
-    sourceHash: 01c3a3dedc5ae6b7aaa64edeb1212b2c487b8686ebdbbea8a839aafa6382d247
-  effect-v4-request-batching-and-cache:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-request-batching-and-cache
-    version: 0.1.0
-    installedAt: 2026-08-08T11:38:45.293Z
-    updatedAt: 2026-08-12T05:27:46.006Z
-    sourceHash: bef31eb745b47e62ba62d7389a81abc0efd6badd78daf6391926780365772627
   temporal-dates:
     type: workspace
     owner: "@craigsmitham"
@@ -196,28 +79,28 @@ skills:
     owner: "@craigsmitham"
     extensionType: skill
     name: frame-codebase-research
-    version: 0.0.3
+    version: 0.0.5
     installedAt: 2026-08-10T20:51:07.467Z
-    updatedAt: 2026-08-10T21:50:05.941Z
-    sourceHash: 8b665352ff00bd93c52d5cfb4341325f499a7b183c157a0d70458aef374a9ac7
+    updatedAt: 2026-08-12T18:45:01.091Z
+    sourceHash: abec9be2e19b7fe1b48b6449a8be25987210763e73d9695a2e7f09394c2b5e1c
   conduct-codebase-research:
     type: workspace
     owner: "@craigsmitham"
     extensionType: skill
     name: conduct-codebase-research
-    version: 0.0.2
+    version: 0.0.4
     installedAt: 2026-08-10T20:51:08.331Z
-    updatedAt: 2026-08-10T21:50:05.866Z
-    sourceHash: d47c7b8dc715c877a8b9cf627cc8bfcbac51835ae8b4d6566a714ea830f90d22
+    updatedAt: 2026-08-12T18:45:00.557Z
+    sourceHash: fa24ba54f4520dd050827e5fd6150dc3b518616b5a7c15dbbe9bd73f7acbf48c
   workshop-codebase-design:
     type: workspace
     owner: "@craigsmitham"
     extensionType: skill
     name: workshop-codebase-design
-    version: 0.0.5
+    version: 0.0.7
     installedAt: 2026-08-10T21:12:59.081Z
-    updatedAt: 2026-08-12T14:53:47.776Z
-    sourceHash: 7ef0c3e423697f8e1f8ac2583cd77498f02dea272df8083246170e1278bd2322
+    updatedAt: 2026-08-12T18:45:02.116Z
+    sourceHash: 7c4fcd5ad2a4722d431196521adc4b78f805c3ce780138694c0cbbdfd0e5a0f0
   specify-codebase-change:
     type: workspace
     owner: "@craigsmitham"
@@ -272,69 +155,6 @@ skills:
     installedAt: 2026-08-11T21:32:51.621Z
     updatedAt: 2026-08-11T21:32:51.625Z
     sourceHash: b34b895862092d75ff81f08f52f13a65fcd28983b05c24027166681ffdb7bdaf
-  effect-v4-collections:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-collections
-    version: 0.0.1
-    installedAt: 2026-08-12T05:00:48.771Z
-    updatedAt: 2026-08-12T05:00:48.778Z
-    sourceHash: 9ad5a473403107b89421b697500d927a9023b158a97981bbcba41b67fe33ce16
-  effect-v4-filesystem:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-filesystem
-    version: 0.0.1
-    installedAt: 2026-08-12T05:00:50.105Z
-    updatedAt: 2026-08-12T05:00:50.113Z
-    sourceHash: b3a6b3a34b0a85f7549039832912c7f29ef54634c515444a569bd9d487ece038
-  effect-v4-iteration:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-iteration
-    version: 0.0.1
-    installedAt: 2026-08-12T05:00:51.486Z
-    updatedAt: 2026-08-12T05:00:51.494Z
-    sourceHash: 2530148b0e725d44ff1f748ea323e3f4baf0d780d3bc307cb144e457fbeac97e
-  effect-v4-option:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-option
-    version: 0.0.1
-    installedAt: 2026-08-12T05:00:52.842Z
-    updatedAt: 2026-08-12T05:00:52.850Z
-    sourceHash: 7b10294d4c1ddab79327644171335b14005d9818602d9c79a83b5d16a3d42fc1
-  effect-v4-wrapping:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-wrapping
-    version: 0.0.1
-    installedAt: 2026-08-12T05:00:54.201Z
-    updatedAt: 2026-08-12T05:00:54.209Z
-    sourceHash: e269a42403b9424f87320f1b5cc9b4da5776d6fe6369be9b830e29fd3b846835
-  effect-v4-http-api:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-http-api
-    version: 0.0.1
-    installedAt: 2026-08-12T05:00:55.505Z
-    updatedAt: 2026-08-12T05:00:55.514Z
-    sourceHash: ebb933b38fcc040ea15021ab7a1cb4c00f455f2d44a3f52ae8aa5ae4f78db4df
-  effect-v4-cloudflare-workers:
-    type: workspace
-    owner: "@craigsmitham"
-    extensionType: skill
-    name: effect-v4-cloudflare-workers
-    version: 0.0.1
-    installedAt: 2026-08-12T05:00:56.896Z
-    updatedAt: 2026-08-12T05:00:56.904Z
-    sourceHash: ed57f48e6f4c3257572846199017197b56a170c99ba09c1506338e943c838643
   triage-work:
     type: workspace
     owner: "@craigsmitham"
@@ -344,6 +164,15 @@ skills:
     installedAt: 2026-08-12T14:02:17.783Z
     updatedAt: 2026-08-12T14:02:17.787Z
     sourceHash: fc36f5bbb3285f26167f0497e86b6d048df5611cdaf2c2b3e3bb83875c358e87
+  craft-effect-v4:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: skill
+    name: craft-effect-v4
+    version: 0.0.1
+    installedAt: 2026-08-12T16:59:35.149Z
+    updatedAt: 2026-08-12T16:59:35.153Z
+    sourceHash: f200918a164dd68ef3f3fcf961a0c17a1aab2b697d366141fb222b5637a7123c
 rules:
   field-notes:
     type: workspace
@@ -391,6 +220,15 @@ knowledge:
     installedAt: 2026-08-09T19:36:54.969Z
     updatedAt: 2026-08-09T20:55:23.663Z
     sourceHash: 369d5d4e7730dc8a3e8405ce37fc7920d4effaa99607320d01317936efcbd903
+  effect-v4:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: knowledge
+    name: effect-v4
+    version: 0.1.0
+    installedAt: 2026-08-12T16:59:34.338Z
+    updatedAt: 2026-08-12T16:59:34.342Z
+    sourceHash: 4b002232f35a6eb89cc0d4891038bde3ae680b217ac54ef094242b54bb6e3e41
 packs:
   effect-v4:
     type: workspace
@@ -398,115 +236,25 @@ packs:
     extensionType: pack
     name: effect-v4
     version: 0.1.0
-    sourceHash: 883026bd7091dcce3e40821dd25ad81b57dc54845973ca5b0d254b43a1e24f92
+    sourceHash: 68fffb0c8fb00b25f89b067ce72268539a914721975c082e09877f8f562ecfe7
     installedAt: 2026-08-08T11:38:45.221Z
     updatedAt: 2026-08-08T11:39:24.163Z
     resolvedSkills:
-      "@craigsmitham/skills/effect-v4-branded-types":
+      "@craigsmitham/skills/craft-effect-v4":
         source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-branded-types
-        contentIdentity: 2623e93462a0fd9cbd02a4899476c61ff040a71fb88a9946087a0964c17cb2a6
-      "@craigsmitham/skills/effect-v4-optics":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-optics
-        contentIdentity: 14eb071bd5d61c49ba05189f09933d505195df62c0f10045188d27d1596f2d74
-      "@craigsmitham/skills/effect-v4-services-and-layers":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-services-and-layers
-        contentIdentity: cbd2a655a5773bb06f66bd04990b2be7ed15a041a695ec8575af9db0cb392c48
-      "@craigsmitham/skills/effect-v4-error-modeling":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-error-modeling
-        contentIdentity: 87d8e63616c12d90d2858567a1c0676e759dff59d4e56fefa9c54b079357375e
-      "@craigsmitham/skills/effect-v4-resource-safety":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-resource-safety
-        contentIdentity: 04db6c39fd0b73689543c197bf0e57b67f57b13c81f83323eb186169360450ec
-      "@craigsmitham/skills/effect-v4-schema-boundaries":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-schema-boundaries
-        contentIdentity: 600e3e9e9fae7e68ca4fbc8bb4baa31d087f9db099a60f6c4c962e1b4880afa0
-      "@craigsmitham/skills/effect-v4-structured-concurrency":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-structured-concurrency
-        contentIdentity: 01c3a3dedc5ae6b7aaa64edeb1212b2c487b8686ebdbbea8a839aafa6382d247
-      "@craigsmitham/skills/effect-v4-async-coordination":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-async-coordination
-        contentIdentity: 4495bbae1dd8d64d6371043bc99fd30fb663680ee6d4270c5fe979a5706af8b5
-      "@craigsmitham/skills/effect-v4-streams":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-streams
-        contentIdentity: 775abc4ad710429c3685227390c58668627601180ab8dc7190c726dc32459d5c
-      "@craigsmitham/skills/effect-v4-request-batching-and-cache":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-request-batching-and-cache
-        contentIdentity: bef31eb745b47e62ba62d7389a81abc0efd6badd78daf6391926780365772627
-      "@craigsmitham/skills/effect-v4-testing":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-testing
-        contentIdentity: 2970f1088b2f2795d2d3d137b0e48f3b7f8a3c2da79674a271aea6aa3ea74fc6
-      "@craigsmitham/skills/effect-v4-observability":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-observability
-        contentIdentity: 0052a91c7b53820dc4f4a073766bd854a462876712d5953258849855ff0516c5
-      "@craigsmitham/skills/effect-v4-config":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-config
-        contentIdentity: 1a41e00740263dd41f584890825b077806c96023a121a7df12738b2263f816b9
-      "@craigsmitham/skills/effect-v4-collections":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-collections
-        contentIdentity: c3743ff80895e4a01b4073e759793b21978063cbc46bac6ca1569c5e340b297c
-      "@craigsmitham/skills/effect-v4-filesystem":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-filesystem
-        contentIdentity: 451c8b742ba97355f60ba631da7ed00a228b49da653ad427b24f8def2d6f54d2
-      "@craigsmitham/skills/effect-v4-iteration":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-iteration
-        contentIdentity: 61bf89492a068ba28b6ed9682222e9eb6ccb5bf550028aa229dfb695462f46a8
-      "@craigsmitham/skills/effect-v4-option":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-option
-        contentIdentity: fab84f8ae1934fa197de0b478a791f7cc86a2f69d489afccd4718df7865064b6
-      "@craigsmitham/skills/effect-v4-wrapping":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-wrapping
-        contentIdentity: 961ca7050b4f4605c7a7facb348f5af07959f1e2cd4d23727eb3751d3f3b217b
-      "@craigsmitham/skills/effect-v4-http-api":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-http-api
-        contentIdentity: 0b5616334caa8ad9b5942a845d467b6d2960f67236d284183dd23b35305fea41
-      "@craigsmitham/skills/effect-v4-cloudflare-workers":
-        source: workspace
-        version: 0.1.0
-        sourceIdentity: workspace:@craigsmitham/skills/effect-v4-cloudflare-workers
-        contentIdentity: 2895ecc724715ab5ce72dd46a212c6700fed9d750b46566965bf793a69fb73fc
+        version: 0.0.1
+        sourceIdentity: workspace:@craigsmitham/skills/craft-effect-v4
+        contentIdentity: f200918a164dd68ef3f3fcf961a0c17a1aab2b697d366141fb222b5637a7123c
     resolvedMcpServers: {}
     resolvedSubagents: {}
     resolvedRules: {}
     resolvedHooks: {}
-    resolvedKnowledge: {}
+    resolvedKnowledge:
+      "@craigsmitham/knowledge/effect-v4":
+        source: workspace
+        version: 0.1.0
+        sourceIdentity: workspace:@craigsmitham/knowledge/effect-v4
+        contentIdentity: 4b002232f35a6eb89cc0d4891038bde3ae680b217ac54ef094242b54bb6e3e41
   docs:
     type: workspace
     owner: "@craigsmitham"

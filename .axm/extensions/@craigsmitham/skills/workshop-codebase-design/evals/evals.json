@@ -178,8 +178,10 @@
       "id": 15,
       "name": "Cold-start orientation for a designer who did not research",
       "prompt": "Workshop the design for issue #482. I am picking this up cold; I did not write the ticket or do the research. The ticket says: \"Nightly digest emails are sometimes sent twice; probably a cron misfire. Customers are complaining. Fix the cron.\" The research report at commit e150 answers only current-state questions: a scheduler row marks each digest run, the sender reads recipients and calls the mail provider per recipient, no send is recorded per recipient, and two application instances run the nightly job without a lease. Support wants duplicates to stop before the next billing cycle.",
-      "expected_output": "A self-contained orientation covering the situation, aim, outcomes and boundaries, crux, and evidence and unknowns, which separates the ticket's presumed cron cause from the evidence, and asks the developer to confirm or correct the frame before any decision agenda.",
+      "expected_output": "A self-contained orientation that opens with a short summary paragraph and then covers the situation, aim, outcomes and boundaries, crux, and evidence and unknowns, which separates the ticket's presumed cron cause from the evidence, and asks the developer to confirm or correct the frame before any decision agenda.",
       "assertions": [
+        "The orientation opens with one short paragraph, no more than about four sentences, carrying the situation, the problem it causes, and the intended outcome.",
+        "The opening paragraph summarizes only what the orientation itself establishes and introduces no material absent from it.",
         "The response opens with an orientation that states the situation, aim, desired outcomes and boundaries, and the crux before any decision work.",
         "The orientation stands on its own and does not require the reader to open issue #482 or the research report.",
         "The presumed cron cause is labeled as a reported assumption rather than an established fact, and the evidenced absence of per-recipient send records and instance leasing is distinguished from it.",
@@ -195,6 +197,7 @@
       "assertions": [
         "The distributed lock is recorded as a stated preference or candidate, not adopted as the design or asserted as a constraint.",
         "The crux is stated as competing forces such as correctness enforcement, contention, and adding an operational dependency, rather than as the lock mechanism.",
+        "The opening summary paragraph states the problem and intended outcome without naming a distributed lock or any other preferred mechanism as the direction.",
         "The orientation distinguishes evidenced facts from the author's presumed solution and does not treat the absence of Redis as a required addition.",
         "Any mechanism choice appears as an unresolved agenda decision awaiting explicit human choice, and no option is accepted by default."
       ]

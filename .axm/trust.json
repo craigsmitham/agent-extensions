@@ -18,139 +18,17 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/effect-v4",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "883026bd7091dcce3e40821dd25ad81b57dc54845973ca5b0d254b43a1e24f92",
+      "contentIdentity": "68fffb0c8fb00b25f89b067ce72268539a914721975c082e09877f8f562ecfe7",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "effect-v4",
         "version": "0.1.0",
         "dependencies": {
-          "@craigsmitham/skills/effect-v4-branded-types": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-optics": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-services-and-layers": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-error-modeling": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-resource-safety": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-schema-boundaries": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-structured-concurrency": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-async-coordination": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-streams": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-request-batching-and-cache": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-testing": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-observability": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-config": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-collections": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-filesystem": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-iteration": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-option": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-wrapping": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-http-api": "^0.1.0",
-          "@craigsmitham/skills/effect-v4-cloudflare-workers": "^0.1.0"
+          "@craigsmitham/knowledge/effect-v4": "^0.1.0",
+          "@craigsmitham/skills/craft-effect-v4": "^0.0.1"
         },
-        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Effect v4 patterns for types, services, errors, resources, schemas, concurrency, streams, testing, and observability\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"effect\",\"effect-v4\",\"typescript\",\"functional-programming\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/effect-v4\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
+        "metadataIdentity": "{\"$schema\":\"https://axm.sh/schemas/pack.schema.json\",\"description\":\"Effect v4 guidance: a routing skill plus an opinionated knowledge bundle covering types, services, errors, resources, schemas, concurrency, streams, platforms, testing, and observability\",\"homepage\":\"https://github.com/craigsmitham/agent-extensions\",\"keywords\":[\"effect\",\"effect-v4\",\"typescript\",\"functional-programming\"],\"license\":\"MIT\",\"repository\":{\"directory\":\".axm/extensions/@craigsmitham/packs/effect-v4\",\"type\":\"git\",\"url\":\"https://github.com/craigsmitham/agent-extensions\"}}"
       }
-    },
-    "skill:effect-v4-config": {
-      "extensionType": "skill",
-      "name": "effect-v4-config",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-config",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "1a41e00740263dd41f584890825b077806c96023a121a7df12738b2263f816b9"
-    },
-    "skill:effect-v4-optics": {
-      "extensionType": "skill",
-      "name": "effect-v4-optics",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-optics",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "14eb071bd5d61c49ba05189f09933d505195df62c0f10045188d27d1596f2d74"
-    },
-    "skill:effect-v4-streams": {
-      "extensionType": "skill",
-      "name": "effect-v4-streams",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-streams",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "775abc4ad710429c3685227390c58668627601180ab8dc7190c726dc32459d5c"
-    },
-    "skill:effect-v4-testing": {
-      "extensionType": "skill",
-      "name": "effect-v4-testing",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-testing",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "2970f1088b2f2795d2d3d137b0e48f3b7f8a3c2da79674a271aea6aa3ea74fc6"
-    },
-    "skill:effect-v4-branded-types": {
-      "extensionType": "skill",
-      "name": "effect-v4-branded-types",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-branded-types",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "2623e93462a0fd9cbd02a4899476c61ff040a71fb88a9946087a0964c17cb2a6"
-    },
-    "skill:effect-v4-observability": {
-      "extensionType": "skill",
-      "name": "effect-v4-observability",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-observability",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "0052a91c7b53820dc4f4a073766bd854a462876712d5953258849855ff0516c5"
-    },
-    "skill:effect-v4-error-modeling": {
-      "extensionType": "skill",
-      "name": "effect-v4-error-modeling",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-error-modeling",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "87d8e63616c12d90d2858567a1c0676e759dff59d4e56fefa9c54b079357375e"
-    },
-    "skill:effect-v4-resource-safety": {
-      "extensionType": "skill",
-      "name": "effect-v4-resource-safety",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-resource-safety",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "04db6c39fd0b73689543c197bf0e57b67f57b13c81f83323eb186169360450ec"
-    },
-    "skill:effect-v4-schema-boundaries": {
-      "extensionType": "skill",
-      "name": "effect-v4-schema-boundaries",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-schema-boundaries",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "600e3e9e9fae7e68ca4fbc8bb4baa31d087f9db099a60f6c4c962e1b4880afa0"
-    },
-    "skill:effect-v4-async-coordination": {
-      "extensionType": "skill",
-      "name": "effect-v4-async-coordination",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-async-coordination",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "4495bbae1dd8d64d6371043bc99fd30fb663680ee6d4270c5fe979a5706af8b5"
-    },
-    "skill:effect-v4-services-and-layers": {
-      "extensionType": "skill",
-      "name": "effect-v4-services-and-layers",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-services-and-layers",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "cbd2a655a5773bb06f66bd04990b2be7ed15a041a695ec8575af9db0cb392c48"
-    },
-    "skill:effect-v4-structured-concurrency": {
-      "extensionType": "skill",
-      "name": "effect-v4-structured-concurrency",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-structured-concurrency",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "01c3a3dedc5ae6b7aaa64edeb1212b2c487b8686ebdbbea8a839aafa6382d247"
-    },
-    "skill:effect-v4-request-batching-and-cache": {
-      "extensionType": "skill",
-      "name": "effect-v4-request-batching-and-cache",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-request-batching-and-cache",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "bef31eb745b47e62ba62d7389a81abc0efd6badd78daf6391926780365772627"
     },
     "pack:docs": {
       "extensionType": "pack",
@@ -325,8 +203,8 @@
       "name": "workshop-codebase-design",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/workshop-codebase-design",
-      "resolvedVersion": "0.0.6",
-      "contentIdentity": "57aaf4e3702147379c0559c3282dee9221ae3b0c3abdcb944a88d2cc85578157"
+      "resolvedVersion": "0.0.7",
+      "contentIdentity": "7c4fcd5ad2a4722d431196521adc4b78f805c3ce780138694c0cbbdfd0e5a0f0"
     },
     "pack:codebase-change-workflow": {
       "extensionType": "pack",
@@ -418,62 +296,6 @@
       "resolvedVersion": "0.0.1",
       "contentIdentity": "8f6aaa027de3a18aae7725e531f0b03e3689de26c6a24df6e2082d2ceb9edf98"
     },
-    "skill:effect-v4-collections": {
-      "extensionType": "skill",
-      "name": "effect-v4-collections",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-collections",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "c3743ff80895e4a01b4073e759793b21978063cbc46bac6ca1569c5e340b297c"
-    },
-    "skill:effect-v4-filesystem": {
-      "extensionType": "skill",
-      "name": "effect-v4-filesystem",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-filesystem",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "451c8b742ba97355f60ba631da7ed00a228b49da653ad427b24f8def2d6f54d2"
-    },
-    "skill:effect-v4-iteration": {
-      "extensionType": "skill",
-      "name": "effect-v4-iteration",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-iteration",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "61bf89492a068ba28b6ed9682222e9eb6ccb5bf550028aa229dfb695462f46a8"
-    },
-    "skill:effect-v4-option": {
-      "extensionType": "skill",
-      "name": "effect-v4-option",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-option",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "fab84f8ae1934fa197de0b478a791f7cc86a2f69d489afccd4718df7865064b6"
-    },
-    "skill:effect-v4-wrapping": {
-      "extensionType": "skill",
-      "name": "effect-v4-wrapping",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-wrapping",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "961ca7050b4f4605c7a7facb348f5af07959f1e2cd4d23727eb3751d3f3b217b"
-    },
-    "skill:effect-v4-http-api": {
-      "extensionType": "skill",
-      "name": "effect-v4-http-api",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-http-api",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "0b5616334caa8ad9b5942a845d467b6d2960f67236d284183dd23b35305fea41"
-    },
-    "skill:effect-v4-cloudflare-workers": {
-      "extensionType": "skill",
-      "name": "effect-v4-cloudflare-workers",
-      "authority": "workspace",
-      "sourceIdentity": "workspace:@craigsmitham/skills/effect-v4-cloudflare-workers",
-      "resolvedVersion": "0.1.0",
-      "contentIdentity": "2895ecc724715ab5ce72dd46a212c6700fed9d750b46566965bf793a69fb73fc"
-    },
     "skill:triage-work": {
       "extensionType": "skill",
       "name": "triage-work",
@@ -481,6 +303,22 @@
       "sourceIdentity": "workspace:@craigsmitham/skills/triage-work",
       "resolvedVersion": "0.0.1",
       "contentIdentity": "fc36f5bbb3285f26167f0497e86b6d048df5611cdaf2c2b3e3bb83875c358e87"
+    },
+    "knowledge:effect-v4": {
+      "extensionType": "knowledge",
+      "name": "effect-v4",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/knowledge/effect-v4",
+      "resolvedVersion": "0.1.0",
+      "contentIdentity": "4b002232f35a6eb89cc0d4891038bde3ae680b217ac54ef094242b54bb6e3e41"
+    },
+    "skill:craft-effect-v4": {
+      "extensionType": "skill",
+      "name": "craft-effect-v4",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/skills/craft-effect-v4",
+      "resolvedVersion": "0.0.1",
+      "contentIdentity": "f200918a164dd68ef3f3fcf961a0c17a1aab2b697d366141fb222b5637a7123c"
     }
   }
 }

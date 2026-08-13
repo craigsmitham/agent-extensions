@@ -11,6 +11,11 @@ Status: Discussing | Accepted | Blocked
 ## Design Brief
 <Self-contained orientation for a reader who did not write the issue or do the
 research. Omit nothing material; add nothing that belongs below.>
+
+<One short paragraph, two to four sentences: the situation, the problem it
+causes, and the intended outcome. Summarize only what this brief and the
+outcomes below establish; name no preferred mechanism.>
+
 - Situation: <what exists today and what is wrong or missing>
 - Aim: <what should become true, for whom, and why it matters now>
 - Crux: <competing forces, boundaries under tension, and the shape of the
