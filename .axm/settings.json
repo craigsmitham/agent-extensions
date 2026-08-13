@@ -41,7 +41,11 @@
     "field-notes": "workspace:@craigsmitham/knowledge/field-notes",
     "workflow-automation": "workspace:@craigsmitham/knowledge/workflow-automation",
     "harness-engineering": "workspace:@craigsmitham/knowledge/harness-engineering",
-    "effect-v4": "workspace:@craigsmitham/knowledge/effect-v4"
+    "effect-v4": "workspace:@craigsmitham/knowledge/effect-v4",
+    "knowledge-management": "workspace:@craigsmitham/knowledge/knowledge-management",
+    "software-architecture": "workspace:@craigsmitham/knowledge/software-architecture",
+    "product-management": "workspace:@craigsmitham/knowledge/product-management",
+    "strategy": "workspace:@craigsmitham/knowledge/strategy"
   },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",

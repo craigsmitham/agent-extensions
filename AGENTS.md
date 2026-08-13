@@ -122,10 +122,14 @@ clones, caches, or prior access.
 
 | Bundle | Description |
 | --- | --- |
-| [docs](.axm/extensions/@craigsmitham/knowledge/docs/src/index.md) | Portable documentation craft: *-explainer + *-guide pairs for overall craft and each Diátaxis type, plus workflow remediation and quality theory |
+| [docs](.axm/extensions/@craigsmitham/knowledge/docs/src/index.md) | Portable documentation craft: craft, quality, and workflow concepts, the four Diátaxis type pairs, and named genres such as playbooks and runbooks |
 | [effect-v4](.axm/extensions/@craigsmitham/knowledge/effect-v4/src/index.md) | Opinionated Effect v4 guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification |
 | [field-notes](.axm/extensions/@craigsmitham/knowledge/field-notes/src/index.md) | Observing work in progress and converting it into durable improvement: work-as-imagined vs work-as-done, survey and target subjects, recurrence thresholds, and verified closure |
 | [harness-engineering](.axm/extensions/@craigsmitham/knowledge/harness-engineering/src/index.md) | Harness and context engineering principles, domain profiles, elements, patterns, and practices for reliable agent systems |
+| [knowledge-management](.axm/extensions/@craigsmitham/knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
+| [product-management](.axm/extensions/@craigsmitham/knowledge/product-management/src/index.md) | Product management principles for outcomes, product risks, empowered teams, discovery, delivery, evidence, and product strategy |
+| [software-architecture](.axm/extensions/@craigsmitham/knowledge/software-architecture/src/index.md) | Software architecture principles for responsibilities, boundaries, authority, invariants, dependencies, and change |
+| [strategy](.axm/extensions/@craigsmitham/knowledge/strategy/src/index.md) | Strategy as coherent choices about where and how to create advantage, supported by capabilities, evidence, and value creation |
 | [workflow-automation](.axm/extensions/@craigsmitham/knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end region=knowledge-base -->
 <!-- axm:start region=rules -->

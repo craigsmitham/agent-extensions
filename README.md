@@ -22,6 +22,10 @@ and are not published from this repository.
 | Bundle | Purpose | Install |
 | --- | --- | --- |
 | `harness-engineering` | Harness and context engineering principles, domain profiles, elements, patterns, practices, and guides | `axm install @craigsmitham/knowledge/harness-engineering` |
+| `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
+| `product-management` | Product outcomes, risks, empowered teams, discovery, delivery, evidence, and product strategy | `axm install @craigsmitham/knowledge/product-management` |
+| `software-architecture` | Responsibilities, boundaries, authority, invariants, dependencies, and change in software systems | `axm install @craigsmitham/knowledge/software-architecture` |
+| `strategy` | Coherent choices about participation, advantage, capabilities, evidence, and value creation | `axm install @craigsmitham/knowledge/strategy` |
 | `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |
 
 ## Standalone skills

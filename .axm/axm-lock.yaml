@@ -229,6 +229,42 @@ knowledge:
     installedAt: 2026-08-12T16:59:34.338Z
     updatedAt: 2026-08-12T16:59:34.342Z
     sourceHash: 4b002232f35a6eb89cc0d4891038bde3ae680b217ac54ef094242b54bb6e3e41
+  knowledge-management:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: knowledge
+    name: knowledge-management
+    version: 0.1.0
+    installedAt: 2026-08-13T22:16:30.957Z
+    updatedAt: 2026-08-13T22:16:30.960Z
+    sourceHash: 5fe7af010a21cd55c113686ba10b873232020f4ad78e9fdb35abc69922a2bc50
+  software-architecture:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: knowledge
+    name: software-architecture
+    version: 0.1.0
+    installedAt: 2026-08-13T22:16:31.567Z
+    updatedAt: 2026-08-13T22:16:31.571Z
+    sourceHash: 5d2619d4c5a8eb4fc32cba2c6b13e4a607c4e724256d6c72377453bd64793526
+  product-management:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: knowledge
+    name: product-management
+    version: 0.1.0
+    installedAt: 2026-08-13T22:16:32.191Z
+    updatedAt: 2026-08-13T22:16:32.196Z
+    sourceHash: 71cf90fa10e5cb15e48a8e59deaad889e3c001315484e8a49f13ffc99dcd3481
+  strategy:
+    type: workspace
+    owner: "@craigsmitham"
+    extensionType: knowledge
+    name: strategy
+    version: 0.1.0
+    installedAt: 2026-08-13T22:16:32.799Z
+    updatedAt: 2026-08-13T22:16:32.803Z
+    sourceHash: 57ebe5d820f6577b4bfe006e2e7218449b8f87e9ec6151e58891147682397f20
 packs:
   effect-v4:
     type: workspace

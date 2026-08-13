@@ -319,6 +319,38 @@
       "sourceIdentity": "workspace:@craigsmitham/skills/craft-effect-v4",
       "resolvedVersion": "0.0.1",
       "contentIdentity": "f200918a164dd68ef3f3fcf961a0c17a1aab2b697d366141fb222b5637a7123c"
+    },
+    "knowledge:knowledge-management": {
+      "extensionType": "knowledge",
+      "name": "knowledge-management",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/knowledge/knowledge-management",
+      "resolvedVersion": "0.1.0",
+      "contentIdentity": "3f312e5c6b0615cd8761016ae828b8c574a5f711d9b0b5dcfc77c5b8b396c443"
+    },
+    "knowledge:software-architecture": {
+      "extensionType": "knowledge",
+      "name": "software-architecture",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/knowledge/software-architecture",
+      "resolvedVersion": "0.1.0",
+      "contentIdentity": "78ecf332985690a47932bac334d2081afc926c04c00d6dd917f54a11f67720f6"
+    },
+    "knowledge:product-management": {
+      "extensionType": "knowledge",
+      "name": "product-management",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/knowledge/product-management",
+      "resolvedVersion": "0.1.0",
+      "contentIdentity": "21862d3e78ac573cd1ebbf53697209929e9c85a9fbab295d456f0ec7edab1ad3"
+    },
+    "knowledge:strategy": {
+      "extensionType": "knowledge",
+      "name": "strategy",
+      "authority": "workspace",
+      "sourceIdentity": "workspace:@craigsmitham/knowledge/strategy",
+      "resolvedVersion": "0.1.0",
+      "contentIdentity": "efa805d42aa361058507b6c1f74caa1e85740fcd7964815fddfb6f5ac7724589"
     }
   }
 }

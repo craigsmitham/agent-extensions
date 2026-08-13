@@ -105,8 +105,13 @@ fi
 
 expected=(
   knowledge/docs
+  knowledge/effect-v4
   knowledge/field-notes
   knowledge/harness-engineering
+  knowledge/knowledge-management
+  knowledge/product-management
+  knowledge/software-architecture
+  knowledge/strategy
   knowledge/workflow-automation
   packs/codebase-change-workflow
   packs/docs
@@ -119,26 +124,7 @@ expected=(
   skills/author-docs
   skills/author-okf
   skills/conduct-codebase-research
-  skills/effect-v4-async-coordination
-  skills/effect-v4-branded-types
-  skills/effect-v4-cloudflare-workers
-  skills/effect-v4-collections
-  skills/effect-v4-config
-  skills/effect-v4-error-modeling
-  skills/effect-v4-filesystem
-  skills/effect-v4-http-api
-  skills/effect-v4-iteration
-  skills/effect-v4-observability
-  skills/effect-v4-optics
-  skills/effect-v4-option
-  skills/effect-v4-request-batching-and-cache
-  skills/effect-v4-resource-safety
-  skills/effect-v4-schema-boundaries
-  skills/effect-v4-services-and-layers
-  skills/effect-v4-streams
-  skills/effect-v4-structured-concurrency
-  skills/effect-v4-testing
-  skills/effect-v4-wrapping
+  skills/craft-effect-v4
   skills/field-notes
   skills/frame-codebase-research
   skills/garden-context
@@ -163,7 +149,7 @@ actual_list="$(
 )"
 
 if [[ "$expected_list" != "$actual_list" ]]; then
-  echo "Public package inventory differs from the approved 48-package set." >&2
+  echo "Public package inventory differs from the approved 34-package set." >&2
   diff <(printf '%s\n' "$expected_list") <(printf '%s\n' "$actual_list") || true
   exit 1
 fi
@@ -211,7 +197,7 @@ if jq -e '
    [.knowledge | to_entries[] | .value] +
    [.packs | to_entries[] | .value] +
    [.rules | to_entries[] | .value]) |
-  length == 48 and
+  length == 34 and
   all(type == "string" and startswith("workspace:@craigsmitham/"))
 ' "$validation_root/.axm/settings.json" >/dev/null; then
   :
@@ -220,9 +206,10 @@ else
   exit 1
 fi
 
-axm knowledge lint --path "$validation_root/.axm/extensions/@craigsmitham/knowledge/docs"
-axm knowledge lint --path "$validation_root/.axm/extensions/@craigsmitham/knowledge/harness-engineering"
-axm knowledge lint --path "$validation_root/.axm/extensions/@craigsmitham/knowledge/workflow-automation"
+while IFS= read -r -d '' manifest; do
+  axm knowledge lint --path "$(dirname "$manifest")"
+done < <(find "$validation_root/.axm/extensions/@craigsmitham/knowledge" \
+  -mindepth 2 -maxdepth 2 -name knowledge.json -print0)
 
 if [[ "$view" == "git-index" ]]; then
   assert_index_unchanged
