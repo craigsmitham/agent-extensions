@@ -7,10 +7,10 @@
       "authority": "registry",
       "sourceIdentity": "@agentxm/skills/axm",
       "sourceName": "default",
-      "resolvedVersion": "0.26.6",
+      "resolvedVersion": "0.26.7",
       "publisherBindingId": "hbnd_01ks5vvdf0efz9m4w5qsv4q5qp",
-      "integrity": "sha512-BF3UctkWygRCFGVvQ7QaAI0rXIvVE1K2wAwpwhUsGNvW/KYeNrhs5yjLBPCxxMEYjs83DzRHStFGTugBpaXtpg==",
-      "contentIdentity": "cb282eaec7b84fda690eaebcd028100f909890ea26cefc9e5f7f3026d529a039"
+      "integrity": "sha512-vcUdqaX5N/qmybxGc1oy5x4NFDFkTKKeRIgd6fXcKln1m6HzbwU2Eq9uPRxzu5aw0bHU2bePKCIOTC3EaHXG+w==",
+      "contentIdentity": "b27b3e58f448ad52c4c0cebc321109363334def2c87f0b106e6fbf817afb497a"
     },
     "pack:effect-v4": {
       "extensionType": "pack",
@@ -69,8 +69,8 @@
       "name": "improve-whatever",
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/skills/improve-whatever",
-      "resolvedVersion": "0.0.5",
-      "contentIdentity": "2a7002b455b9ff4ae35d719a12d215fc55da9db5eda3c09b502fab6a3da8989a"
+      "resolvedVersion": "0.0.6",
+      "contentIdentity": "0a0175246078cfc20dd9aa0a938137b0728e55beddb74ece996b1808f7750db0"
     },
     "rule:field-notes": {
       "extensionType": "rule",
@@ -212,15 +212,15 @@
       "authority": "workspace",
       "sourceIdentity": "workspace:@craigsmitham/packs/codebase-change-workflow",
       "resolvedVersion": "0.0.1",
-      "contentIdentity": "dedf5c16215ee34ec5a0de75a0f06890a94586a9f61d00ff4cb7c6fa75172c80",
+      "contentIdentity": "f4e563b271b261e7e87cf5aa1d3dbae8188a5a228d7f4f8023f691d1f77a074c",
       "packManifest": {
         "owner": "@craigsmitham",
         "name": "codebase-change-workflow",
-        "version": "0.1.1",
+        "version": "0.1.2",
         "dependencies": {
           "@craigsmitham/skills/frame-codebase-research": "^0.0.5",
           "@craigsmitham/skills/conduct-codebase-research": "^0.0.4",
-          "@craigsmitham/skills/workshop-codebase-design": "^0.0.6",
+          "@craigsmitham/skills/workshop-codebase-design": "^0.0.7",
           "@craigsmitham/skills/specify-codebase-change": "^0.0.2",
           "@craigsmitham/skills/plan-codebase-change": "^0.0.2",
           "@craigsmitham/skills/assess-codebase-change-readiness": "^0.0.1",

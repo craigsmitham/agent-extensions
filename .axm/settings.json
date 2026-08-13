@@ -13,7 +13,7 @@
     }
   },
   "skills": {
-    "axm": "@agentxm/skills/axm@0.26.6",
+    "axm": "@agentxm/skills/axm@0.26.7",
     "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
     "improve-whatever": "workspace:@craigsmitham/skills/improve-whatever",
     "field-notes": "workspace:@craigsmitham/skills/field-notes",

@@ -4,13 +4,13 @@ skills:
     type: registry
     owner: "@agentxm"
     name: axm
-    resolvedVersion: 0.26.6
-    integrity: sha512-BF3UctkWygRCFGVvQ7QaAI0rXIvVE1K2wAwpwhUsGNvW/KYeNrhs5yjLBPCxxMEYjs83DzRHStFGTugBpaXtpg==
+    resolvedVersion: 0.26.7
+    integrity: sha512-vcUdqaX5N/qmybxGc1oy5x4NFDFkTKKeRIgd6fXcKln1m6HzbwU2Eq9uPRxzu5aw0bHU2bePKCIOTC3EaHXG+w==
     sourceName: default
     publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     installedAt: 2026-08-08T11:38:34.405Z
-    updatedAt: 2026-08-12T14:40:07.240Z
-    sourceHash: cb282eaec7b84fda690eaebcd028100f909890ea26cefc9e5f7f3026d529a039
+    updatedAt: 2026-08-13T21:14:55.155Z
+    sourceHash: b27b3e58f448ad52c4c0cebc321109363334def2c87f0b106e6fbf817afb497a
   temporal-dates:
     type: workspace
     owner: "@craigsmitham"
@@ -345,8 +345,8 @@ packs:
     owner: "@craigsmitham"
     extensionType: pack
     name: codebase-change-workflow
-    version: 0.1.1
-    sourceHash: dedf5c16215ee34ec5a0de75a0f06890a94586a9f61d00ff4cb7c6fa75172c80
+    version: 0.1.2
+    sourceHash: f4e563b271b261e7e87cf5aa1d3dbae8188a5a228d7f4f8023f691d1f77a074c
     installedAt: 2026-08-10T21:18:11.160Z
     updatedAt: 2026-08-10T21:18:11.164Z
     resolvedSkills:
@@ -362,9 +362,9 @@ packs:
         contentIdentity: fa24ba54f4520dd050827e5fd6150dc3b518616b5a7c15dbbe9bd73f7acbf48c
       "@craigsmitham/skills/workshop-codebase-design":
         source: workspace
-        version: 0.0.6
+        version: 0.0.7
         sourceIdentity: workspace:@craigsmitham/skills/workshop-codebase-design
-        contentIdentity: 57aaf4e3702147379c0559c3282dee9221ae3b0c3abdcb944a88d2cc85578157
+        contentIdentity: 7c4fcd5ad2a4722d431196521adc4b78f805c3ce780138694c0cbbdfd0e5a0f0
       "@craigsmitham/skills/specify-codebase-change":
         source: workspace
         version: 0.0.2
