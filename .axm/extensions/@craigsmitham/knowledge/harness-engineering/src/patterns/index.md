@@ -1,9 +1,6 @@
-# Harness engineering patterns
+# Former harness pattern routes
 
-Named structural solutions to recurring harness design problems belong here,
-including arrangements for discovery, scoped guidance, verification, and
-handoff.
+Context-specific patterns moved to the context-engineering discipline. Their
+former concept IDs remain here for compatibility.
 
-- [Progressive disclosure](progressive-disclosure.md) - How progressive
-  disclosure keeps initial context small while preserving reliable routes to
-  deeper knowledge, workflows, tools, and state.
+- [Progressive disclosure (former harness route)](progressive-disclosure.md)

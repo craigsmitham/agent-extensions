@@ -1,16 +1,22 @@
 ---
 type: Reference
 title: Harness engineering glossary
-description: Concise definitions for the disciplines, domains, topologies, environments, and elements used throughout the harness-engineering bundle.
-tags: [harness, context, coding-agents, terminology, vocabulary]
+description: Concise definitions for agent systems, harness layers, classification axes, applied profiles, and neighboring disciplines.
+tags: [harness, agent-systems, coding-harness, repository-harness, evaluation-harness, terminology, vocabulary]
 status: stable
 sources:
   - id: microsoft-agent-experience
     resource: https://developer.microsoft.com/blog/the-ax-stack-whats-fixed-where-you-can-win
     title: Microsoft — The AX stack
+  - id: anthropic-evals
+    resource: https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents
+    title: Anthropic — Demystifying evals for AI agents
+  - id: aws-harness-runtime
+    resource: https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-vs-runtime.html
+    title: Amazon Bedrock AgentCore — Agent harnesses and agent runtimes
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-09T20:53:20Z
+  at: 2026-08-14T21:42:14Z
 verified:
   - by: codex/gpt-5.6
     at: 2026-08-09T22:13:44Z
@@ -36,8 +42,13 @@ important distinctions and tradeoffs.
   [Context engineering](foundations/context-engineering.md).
 
 **Prompt engineering**
-: Designing instructions or inputs for a particular model interaction. It is
-  one technique within context engineering, not a synonym for it.
+: The discipline of designing model-facing instructions, inputs, examples,
+  templates, and presentation for reliable interactions. It overlaps context
+  engineering but has a distinct reusable craft and evaluation surface.
+
+**Evaluation engineering**
+: The discipline of designing and operating evidence systems that measure a
+  named target on a relevant task distribution in support of a decision.
 
 ## System and specialization
 
@@ -49,6 +60,44 @@ important distinctions and tradeoffs.
 : The concrete system that mediates among an agent, a task, and a working
   environment. It may provide context, tools, runtime, state, feedback, and
   controls.
+
+**Agent system**
+: The complete operating composition that turns intent into actions and
+  outcomes, potentially including an agent, harness core, adapted environment,
+  runtime substrate, orchestration, and governance. See
+  [Agent-system composition](foundations/agent-system-composition.md).
+
+**Agent host**
+: The process or service that runs an agent and its harness core.
+
+**Harness core**
+: The agent-facing layer that assembles model interactions, exposes tools,
+  advances the loop, and manages run state. It may be embedded in an agent
+  host or supplied by a framework.
+
+**Runtime substrate**
+: Compute, process, isolation, dependency, lifecycle, and durable-execution
+  facilities on which an agent host or harness runs. Supplying runtime does not
+  by itself determine the agent loop.[^aws-harness-runtime]
+
+**Orchestration plane**
+: Facilities that admit and dispatch work, coordinate agents or workers,
+  manage dependencies, and reconcile results across runs.
+
+**Governance or control plane**
+: Shared facilities for identity, policy, approvals, budgets, audit, and
+  organization-wide authority.
+
+**Agent platform**
+: A product or internal service that supplies reusable runtime,
+  orchestration, governance, observability, or integration facilities for
+  multiple agent systems. The label does not imply that every layer is present.
+
+**Evaluation harness**
+: Infrastructure that administers evaluation cases and trials around a target,
+  captures traces and outcomes, invokes graders, and aggregates results. It is
+  distinct from the agent harness being evaluated, though an evaluation run
+  may contain both.[^anthropic-evals]
 
 **Agent experience (AX)**
 : An emerging lens on how effectively an agent can operate with a technology,
@@ -72,24 +121,52 @@ important distinctions and tradeoffs.
 : A documented specialization of general harness principles for one
   application domain.
 
+**Adaptation locus**
+: The system layer where agent-specific adaptation is primarily implemented,
+  such as the agent host, working environment, shared platform, or evaluation
+  system.
+
+**Ownership and adaptation scope**
+: Who owns an adaptation and where it applies, such as a user, repository,
+  subtree, workspace, team, or organization.
+
 **Harness element**
 : An identifiable constituent used to shape or operate a harness, such as an
   instruction file, skill, tool, hook, check, state store, or execution
   environment.
 
 **Coding harness**
-: A common term for a software engineering harness, ranging from a local coding
-  agent with repository context to a distributed remote-agent runtime. See
+: A software-engineering application-domain profile, ranging from a local
+  coding agent to harnesses participating in a distributed coding platform. See
   [Software engineering harnesses](domains/software-engineering/harnesses.md).
 
+**Repository harness**
+: A repository-owned, environment-side adaptation layer that makes a codebase
+  legible, actionable, bounded, and verifiable for coding agents. It composes
+  with, but need not own, a coding-agent host. See
+  [Repository harnesses](domains/software-engineering/repository-harnesses.md).
+
 **Runtime topology**
-: The arrangement in which agents execute and coordinate, such as local,
-  remote, interactive, background, persistent, ephemeral, single-agent, or
-  multi-agent.
+: Shorthand for an arrangement of execution location, interaction mode,
+  continuity, and coordination. Separate those axes when the distinction
+  affects design or evaluation.
 
 **Working environment**
 : The systems and artifacts an agent observes and changes while working, such
   as a repository, worktree, container, browser, CI system, or cloud account.
+
+**Product archetype**
+: A recognizable combination of classification axes used to describe an
+  offering or deployment, such as an interactive copilot, background worker,
+  persistent personal agent, collaborative work agent, multi-agent service, or
+  enterprise agent platform. See
+  [Harness classification](foundations/harness-classification.md).
+
+**AI OS or agent OS**
+: An overloaded market label that may refer to a personal-agent host,
+  enterprise control plane, multi-agent platform, or application suite. Map it
+  to concrete responsibilities and classification axes before using it as an
+  architectural category.
 
 ## Context and continuity
 
@@ -148,8 +225,8 @@ important distinctions and tradeoffs.
 : Establishing with appropriate evidence that an outcome or requirement holds.
 
 **Evaluation**
-: Measuring the behavior or quality of the model–harness–environment system
-  across representative tasks or conditions.
+: Applying cases and grading to measure the behavior or quality of a named
+  target across relevant tasks or conditions in support of a decision.
 
 **Observability**
 : The ability to inspect a harness run and its environment through logs,
@@ -203,3 +280,5 @@ important distinctions and tradeoffs.
   for review, handoff, or audit.
 
 [^microsoft-agent-experience]: Microsoft — The AX stack
+[^anthropic-evals]: Anthropic — Demystifying evals for AI agents
+[^aws-harness-runtime]: Amazon Bedrock AgentCore — Agent harnesses and agent runtimes

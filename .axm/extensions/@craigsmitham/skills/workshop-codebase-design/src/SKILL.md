@@ -45,8 +45,8 @@ choice, explain why a formal workshop is unnecessary.
 - Discuss one consequential decision at a time and wait for an explicit human
   choice before treating it as accepted.
 - Present two or three materially distinct options only when the feasibility
-  gate below establishes that they are viable. Include an explicit
-  recommendation, its rationale, tradeoffs, consequences, and reversibility.
+  gate below establishes that they are viable. Use the decision presentation
+  contract below for the comparison, recommendation, and choice request.
 - Maintain a decision ledger. Use `Proposed`, `Accepted`, `Deferred`,
   `Needs research`, or `Superseded`; a recommendation is never `Accepted` by
   default.
@@ -184,21 +184,62 @@ difference, state that with evidence instead of manufacturing analysis.
 
 ### 3. Resolve one decision at a time
 
+Use this exact relative order for every `Decide now` interaction. Adapt detail,
+but do not move, duplicate, or merge the recommendation into an option:
+
+```markdown
+### D<n> — <decision question>
+Status: Proposed
+
+Evidence and forces: <current identity, criteria, constraints, affected boundaries>
+
+#### Option A — <neutral name>
+- Capability path: ...
+- Feasibility: Established | Conditional — conditions
+- Architecture: Conforms | Exception required — accepted by D<n>
+- Evidence: ...
+- Benefits: ...
+- Tradeoffs and consequences: ...
+- Conditions: ...
+- Reversibility: ...
+
+<Repeat the same fields in the same order for every viable option.>
+
+Excluded candidates: <candidate and evidence-based reason; omit when none>
+Affected elements: <change classification, observers, behaviors, contracts>
+
+Recommendation: <one option and rationale tied to the stated evidence and forces>
+
+Choose Option A, B, or C; revise the options; defer; or request named evidence.
+```
+
+The recommendation appears exactly once, after the complete neutral comparison
+and affected-elements analysis. Never mark an option as recommended in its
+heading or body, reveal a preference before all viable options appear, or repeat
+the recommendation in the choice request. Keep option labels, field order, and
+detail parallel enough for fair comparison. Omit a field only when it is
+genuinely inapplicable and say why when omission could affect the choice.
+For a purely functional decision with no differentiating technical path, state
+the shared evidenced technical constraint once under `Evidence and forces`, use
+`Shared — no differentiating technical path` for the capability, feasibility,
+and architecture fields, and do not manufacture option-specific analysis.
+
 For each `Decide now` item:
 
 1. State the decision as a concrete question and cite the current-state evidence
    and source or snapshot identity that constrain it. When that evidence is
    missing, apply `Design-time inquiry` before presenting options.
-2. Apply the option feasibility gate. Present only viable options with their
+2. State the forces that make a technical or coupled choice consequential, its
+   affected boundaries or contracts, and the criteria the options must satisfy.
+3. Apply the option feasibility gate. Present only viable options with their
    capability path, feasibility and architecture dispositions, supporting
    evidence, tradeoffs, consequences, conditions, and reversibility. Summarize
    materially considered excluded candidates and the evidence-based reason.
-3. For a technical or coupled decision, state the forces that make the choice
-   consequential and the affected boundaries or contracts.
 4. Classify the affected elements using the change model below.
-5. Recommend one option and explain why it best fits the agreed outcomes and
-   constraints.
-6. Ask for an explicit choice or revision. Record the response and its rationale
+5. Recommend one option exactly once and explain why it best fits the agreed
+   outcomes and constraints.
+6. End with an explicit choice or revision request that does not restate the
+   recommendation. Record the response and its rationale
    before moving to a dependent decision.
 
 ### 4. Model structure and behavior

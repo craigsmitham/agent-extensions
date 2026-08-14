@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "improve-instructions",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Audits and trims agent instruction files while protecting discovery indexes",
   "keywords": [
     "harness",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "license": "MIT",
   "recommendedPacks": [
+    "@craigsmitham/packs/context-engineering",
     "@craigsmitham/packs/harness-engineering"
   ],
   "standalone": false

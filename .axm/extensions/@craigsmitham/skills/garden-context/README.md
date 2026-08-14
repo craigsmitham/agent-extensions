@@ -11,14 +11,14 @@ instruction or documentation skill when the responsible surface is already
 known and the broader context system does not need evaluation. It is not a
 generic repository-cleanup or code-refactoring skill.
 
-The skill progressively opens the relevant concepts from the
-harness-engineering knowledge bundle and is distributed through the
-harness-engineering pack.
+The skill progressively opens relevant context- and prompt-engineering
+concepts. It is distributed through the focused context-engineering pack and
+the broader harness-engineering compatibility pack.
 
 ## Install
 
 ```bash
-axm packs install @craigsmitham/packs/harness-engineering
+axm packs install @craigsmitham/packs/context-engineering
 ```
 
 ## Examples

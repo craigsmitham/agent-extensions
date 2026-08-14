@@ -1,38 +1,39 @@
 ---
 type: Explanation
-title: Variance, baselines, and grading
-description: How comparisons, repeated trials, and appropriate graders keep evaluation honest.
-tags: [agent-skills, evaluation, baselines, graders, variance]
+title: Skill comparison surfaces
+description: How skill revisions, ablations, hosts, catalogs, and active cohorts provide attributable comparison surfaces.
+tags: [agent-skills, evaluation, baselines, ablation, hosts, active-cohort]
 status: stable
-generated: { by: "codex/gpt-5.6", at: 2026-08-14T19:36:04Z }
+generated: { by: "codex/gpt-5.6", at: 2026-08-14T21:14:15Z }
 sources:
   - id: skillbench
     resource: https://arxiv.org/abs/2607.13987
     title: SkillBench — Benchmarking Agent Skills
 ---
 
-# Variance, baselines, and grading
+# Skill comparison surfaces
 
-Agent behavior varies across runs, models, hosts, and catalog context. Repeat
-nondeterministic cases enough to reveal material instability and report the
-distribution, not only the best example. Expand repetition when a decision
-would otherwise turn on one run. Recent benchmark work likewise treats skills
-as artifacts that require comparative task evidence.[^skillbench]
+Choose the comparison that can attribute a difference to the skill:
 
-Prefer a meaningful comparison: the same task without the skill, the accepted
-published revision, or a named alternative. Hold model, host, fixtures, and
-grader constant when attributing a difference to the skill.
+- the same task without the skill for incremental value;
+- the accepted published revision for compatibility and regression;
+- the same activated skill across claimed hosts or models for portability;
+- isolation versus semantic neighbors for routing collision;
+- the actual active catalog cohort for deployment behavior; or
+- a named alternative skill only when both claim the same job.
 
-Use the least subjective grader that can observe the contract:
+Hold task, model, host, fixtures, catalog, grader, and trial policy constant
+except for the surface under comparison. Record effective host behavior: an
+identical package can route differently when catalog membership or invocation
+policy changes. Recent benchmark work likewise treats skills as artifacts that
+require comparative task evidence.[^skillbench]
 
-- schema, file, command, and state assertions for structural outcomes;
-- reference-based checks for bounded facts;
-- explicit rubrics with anchored examples for qualitative work; and
-- human review for consequential judgment, safety, or ambiguous value.
+Repeat variable cases under the governing evaluation policy, but interpret the
+result at the skill boundary: was the difference caused by routing metadata,
+activated workflow instructions, packaged resources, coexistence, unavailable
+host capability, or the evaluator?
 
-Define graders before seeing candidate outputs. Keep critical dimensions
-separate from convenience scores, record grader uncertainty, and inspect cases
-where graders disagree. A faster result is not better if it violates authority
-or loses the intended outcome.
+Do not compare an explicitly invoked candidate with an implicitly routed
+baseline; that changes both routing and execution at once.
 
 [^skillbench]: SkillBench — Benchmarking Agent Skills

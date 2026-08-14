@@ -4,7 +4,7 @@ title: Degrees of freedom
 description: How task variability and fragility determine instruction and automation strictness.
 tags: [agent-skills, degrees-of-freedom, judgment, scripts, safety]
 status: stable
-generated: { by: "codex/gpt-5.6", at: 2026-08-14T19:36:04Z }
+generated: { by: "codex/gpt-5.6", at: 2026-08-14T20:25:35Z }
 sources:
   - id: anthropic-best-practices
     resource: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
@@ -22,6 +22,11 @@ freedom to the task rather than making every workflow equally prescriptive.[^ant
 | High | Several approaches are valid and context determines the choice | Goals, heuristics, decision criteria |
 | Medium | A preferred pattern exists but inputs or environment vary | Ordered workflow, bounded options, parameterized helper |
 | Low | Mechanics are fragile, exact, security-sensitive, or repeatedly wrong | Deterministic script, strict template, narrow parameters |
+
+Assign freedom per surface, not once for the whole skill. Discovery and
+analysis may require broad judgment while execution mechanics, presentation
+order, or validation remain exact. Constrain only the surface whose variation
+causes failure.
 
 ## Two opposite failures
 

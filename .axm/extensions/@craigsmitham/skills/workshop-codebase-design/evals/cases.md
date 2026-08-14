@@ -109,6 +109,7 @@ A dependency-ordered agenda followed by options and a recommendation for only th
 
 - Both decisions appear on the agenda but only the first is actively resolved.
 - The first decision has two or three viable options, tradeoffs, and an explicit recommendation.
+- The decision question, evidence, and forces precede parallel option presentations; the recommendation appears exactly once after every option and affected-element analysis, never in an option heading or body.
 - The response asks for an explicit choice and accepts neither decision by default.
 - It does not announce a final design for both decisions.
 - The confirmed frame is restated only briefly and is not re-expanded into a full orientation before the agenda.
@@ -215,6 +216,7 @@ A dependency-ordered agenda that captures customer-visible replay behavior plus 
 - It derives consequential technical choices for authoritative tenant assignment, tenant-binding enforcement, and replay auditability from the supplied evidence and outcomes.
 - It does not silently choose an authorization mechanism or assume that employee authentication establishes tenant authority.
 - Only the first dependency-ordered Decide now item is presented for choice, with viable options, tradeoffs, and a recommendation.
+- The first decision follows the canonical presentation order and ends with a choice request that does not repeat the recommendation.
 - The response remains at design level and contains no implementation plan or code changes.
 
 ## 13. Missing operational objective remains a decision
@@ -363,6 +365,24 @@ A decision response that keeps the established option viable, refuses to treat a
 - Option B is not recommended or accepted while the prerequisite remains unresolved.
 - The response continues to ask for an explicit human choice only among currently viable options.
 
+## 21. Canonical decision presentation
+
+### Prompt
+
+> The frame is confirmed. Present D1 for how new consumers should validate a published event contract. At commit q210, the API owns the canonical event schema, publishes a versioned JSON Schema, and an existing CLI already consumes it. A second independently deployed consumer is planned. The accepted constraints are no new runtime service, incompatible payloads must be rejected, and consumers must remain independently deployable. Three candidates are viable and conforming: each consumer translates the schema into local validation, consumers validate directly against the published schema, or a shared client library wraps the published schema. Current evidence makes direct validation against the published schema the best fit, but the developer has not chosen. Use the canonical decision presentation and ask for an explicit choice.
+
+### Expected output
+
+One Proposed D1 interaction whose question, q210 evidence, forces, and affected boundaries precede three neutrally named parallel options; whose excluded-candidate and affected-element slots precede one dedicated recommendation for direct published-schema validation; and whose final line requests an explicit choice without repeating the recommendation.
+
+### Assertions
+
+- The decision question, Proposed status, q210 evidence, forces, and affected boundaries all appear before the options.
+- All three viable options use parallel labels and field order covering capability path, feasibility, architecture, evidence, benefits, tradeoffs and consequences, conditions, and reversibility.
+- No option heading or body marks itself recommended, and no preference appears before all options, exclusions, and affected-element analysis are complete.
+- A dedicated Recommendation appears exactly once after the neutral comparison and recommends direct validation against the published schema with evidence-based rationale.
+- The response ends with an explicit choice, revision, deferral, or evidence request; it does not repeat the recommendation or accept D1.
+
 ## Pass condition
 
-The prompt set passes when a participant who did not write the issue or do the research is oriented to the situation, aim, outcomes, and crux before any decision work, without adopting a reported cause or preferred mechanism as fact; design decisions never rely on materially stale evidence, direct evidence is usable without invented provenance, irrelevant drift does not cause unnecessary research, the workshop preserves explicit human choice and its design boundary, and acceptance is tied to a reproducible snapshot or evidence identity. The workshop must derive consequential technical and cross-cutting choices when the caller has not named them, avoid manufacturing alternatives when evidence constrains the design, represent constrained conclusions as evidenced contracts rather than human decisions, and prevent material technical rules from first appearing during synthesis. Every materially considered alternative must have an evidence-backed capability path, technical feasibility disposition, and separate architectural disposition; unverified or nonconforming candidates cannot be recommended, unresolved prerequisites cannot masquerade as conditional feasibility, and purely functional choices do not trigger manufactured technical analysis. Accepted scope must be functionally and technically complete, traceable, operationally credible, and ready for specification.
+The prompt set passes when a participant who did not write the issue or do the research is oriented to the situation, aim, outcomes, and crux before any decision work, without adopting a reported cause or preferred mechanism as fact; design decisions never rely on materially stale evidence, direct evidence is usable without invented provenance, irrelevant drift does not cause unnecessary research, the workshop preserves explicit human choice and its design boundary, and acceptance is tied to a reproducible snapshot or evidence identity. The workshop must derive consequential technical and cross-cutting choices when the caller has not named them, avoid manufacturing alternatives when evidence constrains the design, represent constrained conclusions as evidenced contracts rather than human decisions, and prevent material technical rules from first appearing during synthesis. Every materially considered alternative must have an evidence-backed capability path, technical feasibility disposition, and separate architectural disposition; unverified or nonconforming candidates cannot be recommended, unresolved prerequisites cannot masquerade as conditional feasibility, and purely functional choices do not trigger manufactured technical analysis. Every presented decision uses one stable interaction order: question and evidence, forces, parallel viable options and exclusions, affected elements, one recommendation, then an explicit choice request; the recommendation never appears inline with an option or more than once. Accepted scope must be functionally and technically complete, traceable, operationally credible, and ready for specification.

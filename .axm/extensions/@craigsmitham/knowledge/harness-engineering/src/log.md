@@ -2,10 +2,36 @@
 
 ## 2026-08-14
 
+- **Classification**: Added independent axes for application domain,
+  adaptation locus, ownership scope, interaction, execution, continuity,
+  coordination, authority, and evaluation role so category names do not mix
+  unrelated dimensions.
+- **Coding and repository harnesses**: Established coding harness as the
+  software-engineering domain profile and repository harness as a first-class
+  environment-side, repository-owned adaptation profile; documented how they
+  compose in one coding-agent system.
+- **System composition**: Distinguished the agent, harness core, adapted
+  environment, runtime substrate, orchestration plane, governance/control
+  plane, agent platform, and evaluation harness by responsibility.
+- **Market terminology**: Treated assistants, copilots, digital workers,
+  frameworks, platforms, scaffolds, and “AI OS” labels as product claims to map
+  onto explicit axes rather than canonical architectural categories.
+- **Evaluation boundary**: Assigned generic evaluation design and governance to
+  evaluation engineering while retaining runtime identity, environment
+  fidelity, trace capture, isolation, and responsible-surface attribution here.
+- **Discipline boundary**: Extracted detailed context selection, routing,
+  memory, instruction-file, gardening, and specification-authority doctrine to
+  the context-engineering discipline while preserving former concept IDs as
+  deprecated compatibility routes.
+- **System scope**: Added first-class concepts for action and observation
+  interfaces, runtimes and environments, state and continuity, feedback and
+  verification, authority and containment, and whole-system evaluation.
+- **Prompt boundary**: Defined prompt engineering as the owner of reusable
+  model-facing instruction, template, example, presentation, and evaluation
+  practices rather than treating prompts as skill-only guidance.
 - **Skill boundary**: Retained the [Agent skills](elements/agent-skills.md)
-  harness-element model and generic [progressive disclosure](patterns/progressive-disclosure.md),
-  while retiring the detailed skill-authoring guide to a compatibility route so
-  specialized lifecycle guidance has one owner.
+  harness-element model while retiring the detailed skill-authoring guide to a
+  compatibility route so specialized lifecycle guidance has one owner.
 
 ## 2026-08-09
 

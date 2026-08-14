@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "garden-context",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Audits and improves project context by clarifying authority, discovery, scope, ownership, and lifecycle",
   "keywords": [
     "context-gardening",
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "license": "MIT",
   "recommendedPacks": [
+    "@craigsmitham/packs/context-engineering",
     "@craigsmitham/packs/harness-engineering"
   ],
   "standalone": false

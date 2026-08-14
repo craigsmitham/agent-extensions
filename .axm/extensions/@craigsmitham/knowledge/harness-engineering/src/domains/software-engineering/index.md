@@ -1,29 +1,24 @@
 # Software engineering
 
-The software-engineering domain profile for harness and context engineering.
-Use it for coding agents, repository context, development environments, remote
-workers, verification, and delivery integration.
+The software-engineering domain profile for harness engineering. Use it for
+coding agents, development environments, remote workers, verification, and
+delivery integration.
 
 ## Understand
 
-- [Software engineering harnesses](harnesses.md) - How software engineering
-  harnesses apply harness and context engineering across local development,
-  repositories, remote workers, and distributed runtimes.
-- [Repository instruction files](repository-instruction-files.md) - How
-  repository instruction files establish scoped software-engineering invariants
-  and discovery routes without becoming a codebase encyclopedia.
+- [Software engineering harnesses](harnesses.md) - How coding harnesses
+  specialize harness engineering for software work across local,
+  repository-centered, remote, and coordinated systems.
+- [Repository harnesses](repository-harnesses.md) - How repository-owned
+  adaptation composes with coding-agent hosts and external infrastructure to
+  make a codebase legible, actionable, bounded, and verifiable.
 
-## Apply practices and patterns
+## Compatibility
 
-- [Software engineering practices](practices/) - Recurring development
-  approaches that shape how agents and people organize software change,
-  beginning with spec-driven development.
-- [Software engineering patterns](patterns/) - Named authority and lifecycle
-  models for specifications, source code, tests, and related development
-  context.
+Detailed ownership of repository context and specification authority belongs
+to context engineering. Former routes remain for compatibility:
 
-## Do
-
-- [Software engineering guides](guides/) - Goal-oriented workflows whose
-  prerequisites, scope, or verification depend on repositories and software
-  delivery work.
+- [Repository instruction files (former harness route)](repository-instruction-files.md)
+- [Software engineering practices](practices/)
+- [Software engineering patterns](patterns/)
+- [Software engineering guides](guides/)

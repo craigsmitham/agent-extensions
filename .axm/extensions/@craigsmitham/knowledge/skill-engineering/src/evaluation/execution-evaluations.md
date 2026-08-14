@@ -4,7 +4,7 @@ title: Execution evaluations
 description: Cases and evidence for instructions, resources, outcomes, recovery, and authority after activation.
 tags: [agent-skills, evaluation, execution, authority]
 status: stable
-generated: { by: "codex/gpt-5.6", at: 2026-08-14T19:36:04Z }
+generated: { by: "codex/gpt-5.6", at: 2026-08-14T20:25:35Z }
 sources:
   - id: anthropic-best-practices
     resource: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
@@ -30,6 +30,13 @@ Evidence should answer:
 - Were side effects, permissions, and user decisions kept within scope?
 - Did recovery preserve data and expose uncertainty?
 - Was the work materially more reliable or efficient than the baseline?
+
+When presentation is contractual, preserve and grade the final user-visible
+response separately from intermediate correctness. Check required relative
+order, labels, parallel fields, uniqueness, status, and final handoff directly;
+content presence does not excuse a structural failure. For option comparisons,
+vary which position is recommended so the cases do not teach a positional
+shortcut.
 
 Keep evaluator failures distinct from skill failures. An unavailable host,
 credential, or fixture yields an untested expectation, not a passing one.

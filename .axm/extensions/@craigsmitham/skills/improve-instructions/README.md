@@ -8,13 +8,15 @@ progressive discovery.
 Use it to audit, trim, reindex, or localize instruction files. It is not a
 general documentation-authoring or feature-implementation skill.
 
-This skill uses the instruction-file doctrine in the harness-engineering
-knowledge bundle and is distributed through the harness-engineering pack.
+This skill uses the repository instruction-file doctrine in the
+context-engineering knowledge bundle. It is distributed through the focused
+context-engineering pack and the broader harness-engineering compatibility
+pack.
 
 ## Install
 
 ```bash
-axm packs install @craigsmitham/packs/harness-engineering
+axm packs install @craigsmitham/packs/context-engineering
 ```
 
 ## Example

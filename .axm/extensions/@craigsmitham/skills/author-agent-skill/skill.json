@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "author-agent-skill",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Creates and revises portable Agent Skills from concrete workflows, including bounded contracts, governance claims, validation, and representative exercises",
   "keywords": [
     "agent-skills",

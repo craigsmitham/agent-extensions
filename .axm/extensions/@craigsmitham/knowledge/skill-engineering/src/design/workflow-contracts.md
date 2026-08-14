@@ -4,7 +4,7 @@ title: Workflow contracts
 description: How inputs, outputs, authority, decisions, failures, and completion evidence make instructions executable.
 tags: [agent-skills, workflow, inputs, outputs, authority, verification]
 status: stable
-generated: { by: "codex/gpt-5.6", at: 2026-08-14T19:36:04Z }
+generated: { by: "codex/gpt-5.6", at: 2026-08-14T20:25:35Z }
 ---
 
 # Workflow contracts
@@ -24,6 +24,7 @@ is finished. A bag of advice can improve prose yet still fail as a workflow.
 | Authority | Which reads, writes, commands, external actions, and escalations are allowed? |
 | Failures | Which conditions retry, degrade, stop, or request help? |
 | Output | Which artifact, action, or decision is returned? |
+| Presentation | Which fields, labels, relative order, repetition, and visual weight are contractual? |
 | Completion | What objective evidence shows the outcome exists? |
 | Non-goals | Which adjacent work remains elsewhere? |
 
@@ -38,3 +39,20 @@ is finished. A bag of advice can improve prose yet still fail as a workflow.
 
 Avoid aspirations such as “ensure quality” without an observer, condition, or
 check. Avoid rigid steps where the task legitimately admits several approaches.
+
+## Presentation contracts
+
+Semantic completeness does not imply a stable interaction. When placement or
+order changes interpretation, authority, comparison, or downstream use, specify
+the presentation separately from the content:
+
+- name required sections and their relative order;
+- state which sections are optional and what permits omission or compression;
+- require parallel fields and comparable emphasis where alternatives must be
+  weighed fairly;
+- state whether an item may appear more than once; and
+- name the final prompt, handoff, or status the interaction must end with.
+
+Keep one authoritative shape at the step that emits it. Use a strict template
+for a measured consistency requirement; do not scatter equivalent rules across
+prose and examples.

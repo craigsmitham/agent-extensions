@@ -2,9 +2,14 @@
 
 Portable understanding for treating Agent Skills as discoverable, executable,
 evaluated, secure, portable, governed, owned, and maintainable artifacts. It
-covers the open Agent Skills core, workflow and routing design, behavioral
-evaluation, trust, admission, capability governance, host compatibility,
-portfolio coherence, and lifecycle operations.
+covers the open Agent Skills core, workflow, routing, and presentation design,
+behavioral evaluation, trust, admission, capability governance, host
+compatibility, portfolio coherence, and lifecycle operations.
+
+This bundle owns how those concerns specialize to Agent Skills. General prompt
+contracts, examples, templates, response presentation, prompt evaluation, and
+prompt trust belong to the neighboring prompt-engineering discipline and are
+included as a direct sibling in the skill-engineering pack.
 
 Use it while designing, reviewing, evaluating, admitting, governing, or
 maintaining Agent Skills and shared libraries. It does not prescribe general

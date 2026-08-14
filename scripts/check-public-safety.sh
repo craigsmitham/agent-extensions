@@ -128,17 +128,21 @@ else
 fi
 
 expected=(
+  knowledge/context-engineering
   knowledge/docs
   knowledge/effect-v4
+  knowledge/eval-engineering
   knowledge/field-notes
   knowledge/harness-engineering
   knowledge/knowledge-management
   knowledge/product-management
+  knowledge/prompt-engineering
   knowledge/skill-engineering
   knowledge/software-architecture
   knowledge/strategy
   knowledge/workflow-automation
   packs/codebase-change-workflow
+  packs/context-engineering
   packs/docs
   packs/effect-v4
   packs/field-notes

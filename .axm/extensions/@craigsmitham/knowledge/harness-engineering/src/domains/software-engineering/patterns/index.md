@@ -1,15 +1,8 @@
-# Software engineering patterns
+# Former specification pattern routes
 
-Named solutions to recurring relationships among specifications, source code,
-tests, and software change belong here. These patterns specialize the general
-harness patterns for software-engineering work.
+Detailed specification authority moved to context engineering. Former concept
+IDs remain here for compatibility.
 
-- [Spec-first](spec-first.md) - A specification pattern in which a spec guides
-  one change, then yields durable authority to the implemented system rather
-  than remaining a maintained feature contract.
-- [Spec-anchored](spec-anchored.md) - A specification pattern in which a
-  feature spec persists across changes while humans continue maintaining both
-  the specification and implementation.
-- [Spec-as-source](spec-as-source.md) - A specification pattern in which the
-  spec is the canonical human-edited source and implementation artifacts are
-  regenerated from it.
+- [Spec-first (former harness route)](spec-first.md)
+- [Spec-anchored (former harness route)](spec-anchored.md)
+- [Spec-as-source (former harness route)](spec-as-source.md)

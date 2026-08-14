@@ -1,22 +1,22 @@
 # Harness engineering knowledge
 
-Portable knowledge for designing, evaluating, and maintaining the systems
-around agents: their context, runtime, interfaces, state, feedback, and
-controls. The bundle separates explanations, goal-oriented guides, reusable
-patterns, and recurring operating practices.
+Portable knowledge for designing, evaluating, and maintaining the system
+around an agent: runtime, interfaces, state, feedback, authority, containment,
+and operating environment. Context is one harness responsibility, but its
+detailed selection, routing, memory, and lifecycle practices belong to the
+separate context-engineering discipline.
 
-Begin with the general harness- and context-engineering disciplines and the
-principle of agent legibility. Domain profiles apply those foundations to kinds
-of work, starting with software engineering across local, repository-centered,
-remote, and distributed runtimes. It also captures reusable structures and
-operating disciplines such as progressive disclosure and context gardening.
+Begin with harness engineering, agent-system composition, and classification,
+then inspect agent legibility and the concrete system responsibilities under
+harness elements. Domain and environment profiles apply those foundations to
+recognizable work and ownership boundaries, including coding harnesses and
+repository harnesses.
 
-Harness elements include agent skills, `AGENTS.md`, `CLAUDE.md`, and related
-harness surfaces. For Agent Skills, this bundle owns their place in the harness,
-not their detailed authoring, evaluation, security, compatibility, or
-maintenance lifecycle. The knowledge bundle is independently installable. The
-harness-engineering pack pairs it with the coupled `garden-context` and
-`improve-instructions` workflows.
+For context surfaces and Agent Skills, this bundle owns only their place in the
+whole system. Their detailed design and lifecycle belong to their respective
+engineering disciplines. The knowledge bundle is independently installable.
+The harness-engineering pack remains a compatibility umbrella for the broader
+harness and context toolset.
 
 ## Install
 
@@ -33,14 +33,16 @@ Browse from the bundle index or open a concept directly:
 
 ```bash
 axm knowledge open harness-engineering foundations/harness-engineering
+axm knowledge open harness-engineering foundations/agent-system-composition
+axm knowledge open harness-engineering foundations/harness-classification
 axm knowledge open harness-engineering foundations/agent-legibility
-axm knowledge open harness-engineering elements/agent-skills
+axm knowledge open harness-engineering elements/action-and-observation-interfaces
+axm knowledge open harness-engineering elements/runtime-and-environments
+axm knowledge open harness-engineering elements/feedback-and-verification
+axm knowledge open harness-engineering elements/authority-and-containment
 axm knowledge open harness-engineering domains/software-engineering/harnesses
-axm knowledge open harness-engineering domains/software-engineering/practices/spec-driven-development
-axm knowledge open harness-engineering domains/software-engineering/patterns/spec-anchored
-axm knowledge open harness-engineering domains/software-engineering/guides/repository-instruction-files
-axm knowledge open harness-engineering patterns/progressive-disclosure
-axm knowledge open harness-engineering practices/context-gardening
+axm knowledge open harness-engineering domains/software-engineering/repository-harnesses
+axm knowledge open harness-engineering operations/evaluating-and-improving-harnesses
 ```
 
 The bundle was migrated from the original `@agentxm` package while preserving

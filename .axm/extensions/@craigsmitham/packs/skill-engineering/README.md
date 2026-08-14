@@ -13,22 +13,28 @@ maintaining catalog coherence from evidence.
 
 The pack does not own general harness design, repository context, always-on
 instruction files, agent definitions, MCP implementation, or plugin packaging.
-Those may constrain a skill, but they are separate engineering surfaces.
+It includes prompt-engineering knowledge because a skill's instructions,
+templates, examples, and emitted decision support are model-facing prompt
+surfaces. It includes evaluation-engineering knowledge for shared case, trial,
+grader, uncertainty, validity, and lifecycle methods while keeping skill
+routing and activated-execution evidence specialized here.
 
 ## Included extensions
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/skill-engineering` | Concepts and practices for skill boundaries, routing, workflow design, evaluation, trust, governance, portability, and portfolio lifecycle operations |
+| `@craigsmitham/knowledge/skill-engineering` | Concepts and practices for skill boundaries, routing, workflow and presentation design, evaluation, trust, governance, portability, and portfolio lifecycle operations |
+| `@craigsmitham/knowledge/prompt-engineering` | Reusable prompt contracts, structure, examples, templates, presentation, evaluation, trust, and compatibility guidance |
+| `@craigsmitham/knowledge/eval-engineering` | Shared evaluation contracts, task distributions, trials, graders, uncertainty, validity, and suite lifecycle |
 | `@craigsmitham/skills/author-agent-skill` | Creates or revises a skill from concrete workflow evidence and exercises the resulting package |
 | `@craigsmitham/skills/evaluate-agent-skill` | Evaluates routing and execution separately against representative cases and baselines |
 | `@craigsmitham/skills/audit-agent-skill` | Reviews a skill statically for quality, portability, authority, provenance, licensing, and supply-chain risk |
 | `@craigsmitham/skills/admit-agent-skill` | Makes an independent, portfolio-aware admission or reapproval decision for one exact candidate |
 | `@craigsmitham/skills/govern-agent-skill-library` | Assesses ownership, capability policy, lifecycle, coherence, evidence, and utility across a bounded skill library |
 
-The five skills read the shared knowledge bundle and are therefore coupled to
-this pack (`standalone: false`). The knowledge bundle may be installed by
-itself.
+The five skills read direct knowledge siblings and are therefore coupled to
+this pack (`standalone: false`). The knowledge bundles may be installed by
+themselves.
 
 ## Lifecycle
 
@@ -61,5 +67,5 @@ library periodically for ownership, evidence, collision, and lifecycle drift.
 
 ## License
 
-The skills and pack metadata are MIT licensed. The knowledge bundle is
+The skills and pack metadata are MIT licensed. The knowledge bundles are
 CC-BY-SA-4.0; see each member manifest for the applicable license.

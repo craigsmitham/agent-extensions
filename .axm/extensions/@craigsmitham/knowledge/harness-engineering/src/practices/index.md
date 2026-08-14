@@ -1,9 +1,6 @@
-# Harness engineering practices
+# Former harness practice routes
 
-Recurring habits that keep a harness accurate and effective belong here,
-including observation, evaluation, pruning, and knowledge gardening.
+Context-specific practices moved to the context-engineering discipline. Their
+former concept IDs remain here for compatibility.
 
-- [Context gardening](context-gardening.md) - How context gardening
-  continually cultivates useful context by observing work, repairing
-  discovery, pruning noise, and promoting knowledge to the right harness
-  elements.
+- [Context gardening (former harness route)](context-gardening.md)

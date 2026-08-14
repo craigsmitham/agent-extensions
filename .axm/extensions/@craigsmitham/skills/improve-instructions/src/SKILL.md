@@ -44,7 +44,7 @@ instruction file + audit + dry-run.
 ### 2. Load doctrine
 
 Read
-`.axm/extensions/@craigsmitham/knowledge/harness-engineering/src/domains/software-engineering/repository-instruction-files.md`.
+`.axm/extensions/@craigsmitham/knowledge/context-engineering/src/domains/software-engineering/repository-instruction-files.md`.
 If the repo has a harness or instructions guide, prefer that as the system of
 record for repo-specific rules; the knowledge concept is the portable bar.
 

@@ -30,9 +30,10 @@ workers, or external sources that evidence makes relevant.
 
 ## Load knowledge progressively
 
-This skill is coupled to direct siblings in the harness-engineering pack.
-Prefer `axm knowledge open harness-engineering <concept-id>` in project scope;
-use `axm knowledge open --scope user harness-engineering <concept-id>` for a
+This skill is coupled to direct siblings in the context-engineering pack and
+the harness-engineering compatibility pack. Prefer
+`axm knowledge open context-engineering <concept-id>` in project scope; use
+`axm knowledge open --scope user context-engineering <concept-id>` for a
 user-scope installation. When a direct sibling path is necessary, resolve
 `.axm/extensions/...` from the active AXM scope root: the project root for a
 project installation or the user's home directory for a user installation.
@@ -40,22 +41,27 @@ Never route through an agent projection.
 
 Read the governing practice first:
 
-`axm knowledge open harness-engineering practices/context-gardening`
+`axm knowledge open context-engineering operations/context-gardening`
 
 Open only the concepts whose signal is present:
 
 | Signal | Concept ID |
 | --- | --- |
 | Context boundaries or selection are unclear | `foundations/context-engineering` |
-| Intent, state, authority, capability, or feedback is illegible | `foundations/agent-legibility` |
-| Initial context is noisy or deeper material is hard to find | `patterns/progressive-disclosure` |
-| Local, repository, remote, or distributed coding environments interact | `domains/software-engineering/harnesses` |
+| Authority, provenance, scope, relevance, or freshness is unclear | `foundations/context-quality-and-authority` |
+| Persistent, retrieved, observed, working, or memory context is conflated | `foundations/context-forms-and-lifecycles` |
+| Initial context is noisy or deeper material is hard to find | `design/progressive-disclosure` |
+| Context spans instructions, prompts, tools, retrieval, memory, or feedback | `domains/software-engineering/repository-context-map` |
 | Always-on repository guidance is implicated | `domains/software-engineering/repository-instruction-files` |
-| Reusable agent workflows are implicated | `elements/agent-skills` |
-| Specifications, plans, or competing truth claims appear | `domains/software-engineering/practices/spec-driven-development` |
-| A spec guides one change and then becomes historical | `domains/software-engineering/patterns/spec-first` |
-| A spec persists beside human-edited implementation | `domains/software-engineering/patterns/spec-anchored` |
-| Implementation is regenerated from the canonical spec | `domains/software-engineering/patterns/spec-as-source` |
+| Specifications, plans, or competing truth claims appear | `domains/software-engineering/specification-authority` |
+| Context continuity, compaction, or handoff is implicated | `operations/memory-compaction-and-continuity` |
+| Context quality needs objective assessment | `operations/context-evaluation` |
+
+When a finding concerns model-facing wording, templates, examples, or response
+shape, open the smallest relevant concept from the direct prompt-engineering
+sibling, usually `design/prompt-contracts`,
+`design/instruction-structure-and-examples`, or
+`design/response-and-presentation-contracts`.
 
 `axm knowledge open` supplies the concept body but not its OKF frontmatter.
 When a finding concerns provenance, `status`, `generated`, `verified`, or

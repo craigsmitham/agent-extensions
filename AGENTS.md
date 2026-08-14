@@ -122,12 +122,15 @@ clones, caches, or prior access.
 
 | Bundle | Description |
 | --- | --- |
+| [context-engineering](.axm/extensions/@craigsmitham/knowledge/context-engineering/src/index.md) | Context selection, authority, routing, retrieval, memory, compaction, feedback, and lifecycle practices for agent systems |
 | [docs](.axm/extensions/@craigsmitham/knowledge/docs/src/index.md) | Portable documentation craft: craft, quality, and workflow concepts, the four Diátaxis type pairs, and named genres such as playbooks and runbooks |
 | [effect-v4](.axm/extensions/@craigsmitham/knowledge/effect-v4/src/index.md) | Opinionated Effect v4 guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification |
+| [eval-engineering](.axm/extensions/@craigsmitham/knowledge/eval-engineering/src/index.md) | Evaluation design, validity, task sampling, trials, graders, uncertainty, evidence, and lifecycle practices for AI systems |
 | [field-notes](.axm/extensions/@craigsmitham/knowledge/field-notes/src/index.md) | Observing work in progress and converting it into durable improvement: work-as-imagined vs work-as-done, survey and target subjects, recurrence thresholds, and verified closure |
-| [harness-engineering](.axm/extensions/@craigsmitham/knowledge/harness-engineering/src/index.md) | Harness and context engineering principles, domain profiles, elements, patterns, and practices for reliable agent systems |
+| [harness-engineering](.axm/extensions/@craigsmitham/knowledge/harness-engineering/src/index.md) | System design, composition, and classification of agent harnesses, runtimes, interfaces, environments, feedback, authority, and containment |
 | [knowledge-management](.axm/extensions/@craigsmitham/knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-management](.axm/extensions/@craigsmitham/knowledge/product-management/src/index.md) | Product management principles for outcomes, product risks, empowered teams, discovery, delivery, evidence, and product strategy |
+| [prompt-engineering](.axm/extensions/@craigsmitham/knowledge/prompt-engineering/src/index.md) | Prompt design, templating, evaluation, trust, versioning, and adaptation across model-facing instruction surfaces |
 | [skill-engineering](.axm/extensions/@craigsmitham/knowledge/skill-engineering/src/index.md) | Agent Skill design, evaluation, trust, admission, ownership, capability governance, portability, and portfolio lifecycle practices |
 | [software-architecture](.axm/extensions/@craigsmitham/knowledge/software-architecture/src/index.md) | Software architecture principles for responsibilities, boundaries, authority, invariants, dependencies, and change |
 | [strategy](.axm/extensions/@craigsmitham/knowledge/strategy/src/index.md) | Strategy as coherent choices about where and how to create advantage, supported by capabilities, evidence, and value creation |

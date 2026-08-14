@@ -1,8 +1,8 @@
 ---
 type: Explanation
 title: Harness engineering
-description: How harness engineering designs the context, runtime, interfaces, feedback, and controls that turn model capability into reliable agent behavior.
-tags: [harness, agents, runtime, feedback, controls, systems]
+description: How harness engineering designs the runtime, interfaces, state, feedback, authority, and environment adaptation that turn model capability into reliable agent behavior.
+tags: [harness, agents, runtime, feedback, controls, systems, environment-adaptation]
 status: stable
 sources:
   - id: openai-harness-engineering
@@ -13,7 +13,7 @@ sources:
     title: AI Harness Engineering — A Runtime Substrate for Foundation-Model Software Agents
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-09T20:53:20Z
+  at: 2026-08-14T21:42:14Z
 verified:
   - by: codex/gpt-5.6
     at: 2026-08-09T22:13:44Z
@@ -118,21 +118,21 @@ worker determine what is current and continue safely.
 Agent failures are evidence about the system. A recurring miss may indicate a
 context, interface, environment, verification, or authority gap. The durable
 response is the smallest change to the responsible harness surface, followed
-by evaluation on representative work. [Context gardening](../practices/context-gardening.md)
-applies this principle to the context system.
+by evaluation on representative work.
 
-## Domains, topologies, and environments
+## Classify across independent axes
 
 Harness engineering is a general discipline. Its principles are specialized
 through a **domain profile**, such as software engineering, research, or
-operations. The domain is distinct from the **runtime topology**—local,
-remote, background, or multi-agent—and from the **working environment**, such
-as a repository, browser, CI system, or cloud account.
+operations. The domain is distinct from where adaptation lives, who owns it,
+how broadly it applies, how work is initiated, where it executes, how long it
+persists, how agents coordinate, and what authority they receive.
 
-This distinction prevents a domain from being confused with one element or
-deployment choice. A coding harness, for example, may be a local agent working
-in one repository or a distributed service coordinating remote workers. Both
-specialize harness engineering for software work.
+This distinction prevents category errors. A **coding harness** names the
+software-engineering domain; a **repository harness** names environment-side,
+repository-owned adaptation. They often compose, but they are not competing
+names for the same axis. See [Harness classification](harness-classification.md)
+for the axes and recognizable applied profiles.
 
 ## Relationship to neighboring concepts
 
@@ -140,14 +140,21 @@ specialize harness engineering for software work.
   environment and its lifecycle.
 - [Agent legibility](agent-legibility.md) describes whether task-relevant
   intent, state, interfaces, and evidence are usable by the agent.
+- [Agent-system composition](agent-system-composition.md) separates the agent,
+  harness core, adapted environment, runtime substrate, orchestration,
+  governance, and evaluation responsibilities.
+- [Harness classification](harness-classification.md) separates application
+  domain, adaptation locus, ownership scope, topology, continuity, authority,
+  and evaluation role.
 - [Software engineering harnesses](../domains/software-engineering/harnesses.md)
   apply the discipline to software work.
 - [Instruction files](../elements/instruction-files.md) and
   [agent skills](../elements/agent-skills.md) are elements that implement
   parts of a harness; neither is the harness by itself.
-- [Progressive disclosure](../patterns/progressive-disclosure.md) and
-  [context gardening](../practices/context-gardening.md) describe a reusable
-  context structure and its ongoing maintenance practice.
+- Context engineering owns detailed information selection, routing, memory,
+  compaction, and lifecycle practices.
+- Prompt engineering owns reusable model-facing instruction, template,
+  example, presentation, and prompt-evaluation practices.
 - [Glossary](../glossary.md) defines the vocabulary used across the bundle.
 
 [^openai-harness-engineering]: OpenAI — Harness engineering

@@ -31,8 +31,8 @@ confirmed or corrected. It will then derive both functional and technical
 decision candidates from the affected flows and boundaries, establish the
 governing architecture and capability baseline, evaluate each material option
 for technical feasibility and architectural fit, present only viable options and
-a recommendation for one consequential decision at a time, and wait for an
-explicit choice. It preserves accepted decisions,
-evidenced constraints, and unresolved blockers in the record without
+a single recommendation after a parallel comparison for one consequential
+decision at a time, and wait for an explicit choice. It preserves accepted
+decisions, evidenced constraints, and unresolved blockers in the record without
 manufacturing architecture alternatives when the current design is already
 constrained.

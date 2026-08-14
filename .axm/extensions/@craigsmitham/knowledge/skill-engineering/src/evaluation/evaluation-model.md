@@ -1,10 +1,10 @@
 ---
 type: Explanation
 title: Agent Skill evaluation model
-description: The dimensions, identities, and evidence required for a defensible skill evaluation.
+description: How skill evaluation specializes general evaluation through independent routing, activated execution, and coexistence evidence.
 tags: [agent-skills, evaluation, evidence, contracts]
 status: stable
-generated: { by: "codex/gpt-5.6", at: 2026-08-14T19:36:04Z }
+generated: { by: "codex/gpt-5.6", at: 2026-08-14T21:14:15Z }
 sources:
   - id: anthropic-best-practices
     resource: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
@@ -13,11 +13,11 @@ sources:
 
 # Agent Skill evaluation model
 
-A useful evaluation binds evidence to an exact skill revision, host, model,
-configuration, fixture set, and time. A result without those identities is an
-anecdote: skill behavior is produced by their interaction, not by `SKILL.md`
-alone. Anthropic likewise recommends evaluating skills on the models they are
-intended to support.[^anthropic-best-practices]
+Skill evaluation applies general evaluation practice to a discoverable,
+packaged workflow. Bind evidence to an exact skill revision, host, model,
+configuration, available catalog, fixture set, and time: behavior is produced
+by their interaction, not by `SKILL.md` alone. Anthropic likewise recommends
+evaluating skills on their intended models.[^anthropic-best-practices]
 
 Evaluate two independent stages:
 
@@ -26,15 +26,10 @@ Evaluate two independent stages:
 2. **Execution** — whether an already activated skill completes its promised
    job within its authority.
 
-Then grade the material dimensions of the contract: outcome, instruction
-adherence, efficiency, safety, recovery, and robustness. A single aggregate
-score must not hide a critical failure or untested claim.
-
-## Evidence hierarchy
-
-Prefer observable state and deterministic checks, then bounded rubric judgments,
-then self-report. Preserve prompts, fixtures, outputs, traces, grader version,
-and environmental limitations. Distinguish `failed` from `not testable`.
+Then grade the skill-specific contract: outcome, instruction adherence,
+packaged-resource use, presentation when contractual, efficiency, authority,
+recovery, and robustness. For library claims, evaluate isolation, semantic
+neighbors, the actual active cohort, and the previous accepted revision.
 
 ## Defensible conclusions
 

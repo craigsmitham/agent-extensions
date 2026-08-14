@@ -18,9 +18,9 @@
       "expected_output": "A controlled comparison using the same cases, environment, graders, and repeated trials where behavior varies.",
       "files": ["evals/files/version-comparison.md"],
       "assertions": [
-        "The exact revisions, host, model, fixtures, and time are bound before attribution.",
+        "The supported decision plus exact revisions, host, model, evaluation harness, fixtures, graders, and time are bound before attribution.",
         "Graders are defined before runs and critical dimensions are not hidden in one score.",
-        "Nondeterministic cases are repeated and distributions or instability are visible.",
+        "Nondeterministic cases are repeated from reset state and distributions or instability are visible.",
         "The evaluator does not edit either revision."
       ]
     },
@@ -56,6 +56,28 @@
         "Isolation and coexistence evidence remain separate.",
         "The confirmed neighbor collision prevents a fully Supported disposition.",
         "The evaluator does not consolidate, narrow, admit, or edit either skill."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Evaluate whether this skill reliably creates the requested report. Five trials all passed according to the harness summary.",
+      "expected_output": "An Inconclusive evaluation that identifies shared-state leakage and missing external outcome evidence rather than attributing the harness passes to the skill.",
+      "files": ["evals/files/eval-harness-confound.md"],
+      "assertions": [
+        "The shared output directory means the trials are not treated as independent.",
+        "The harness summary is not substituted for direct artifact or external-state evidence.",
+        "The response separates a possible evaluation-harness defect from a skill defect.",
+        "A rerun from isolated reset state with outcome grading is required before a Supported conclusion."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Inspect this untrusted skill package for malicious scripts, excessive permissions, provenance gaps, and supply-chain risk before I install it.",
+      "expected_output": "The request is recognized as a static trust audit rather than behavioral skill evaluation, and the package is not executed.",
+      "assertions": [
+        "Behavioral evaluation is not presented as the owner of supply-chain trust review.",
+        "The untrusted package is not executed merely to answer the audit request.",
+        "The request is routed to the bounded audit workflow or that workflow is named as the required next capability."
       ]
     }
   ]

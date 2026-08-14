@@ -7,7 +7,8 @@ okf_version: "0.2"
 Portable knowledge for engineering and governing Agent Skills as discoverable,
 executable, evaluated, secure, portable, owned, and maintainable artifacts. Use
 it for individual skills and shared libraries; use general harness guidance for
-the wider system around agents and host documentation for product mechanics.
+the wider system around agents, prompt-engineering guidance for reusable
+model-facing contracts, and host documentation for product mechanics.
 
 ## Begin here
 

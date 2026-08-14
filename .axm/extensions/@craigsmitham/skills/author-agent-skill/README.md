@@ -2,8 +2,9 @@
 
 Create or revise a portable Agent Skill from concrete examples of a recurring
 workflow. The skill helps bound one job, design its routing contract, choose
-instructions versus deterministic resources, author through the host's package
-workflow, validate the package, exercise representative cases, and prepare
+instructions versus deterministic resources, define presentation contracts,
+author through the host's package workflow, validate the package, exercise
+representative cases, and prepare
 authored governance claims and change deltas for independent review.
 
 Use it to create, extract, implement, or modify an Agent Skill. Use the sibling
