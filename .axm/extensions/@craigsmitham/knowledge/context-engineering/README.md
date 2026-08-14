@@ -23,4 +23,4 @@ stale, overbroad, or unowned context.
 
 ## License
 
-CC-BY-SA-4.0.
+CC-BY-4.0.

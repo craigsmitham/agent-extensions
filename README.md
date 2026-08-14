@@ -76,5 +76,6 @@ axm publish --authored --owner @craigsmitham --preview --json
 ## Licensing
 
 Package licenses are declared in each extension manifest and summarized in
-[LICENSE.md](./LICENSE.md). Third-party material and attribution are recorded
-in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
+[LICENSE.md](./LICENSE.md). The [licensing policy](./docs/licensing.md) defines
+the prospective defaults and package-boundary rules. Third-party material and
+attribution are recorded in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).

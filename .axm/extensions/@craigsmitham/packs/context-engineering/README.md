@@ -33,4 +33,4 @@ axm packs install @craigsmitham/packs/context-engineering
 ## License
 
 The skills and pack metadata are MIT licensed. The knowledge bundles are
-CC-BY-SA-4.0; see each member manifest for the applicable license.
+CC-BY-4.0; see each member manifest for the applicable license.

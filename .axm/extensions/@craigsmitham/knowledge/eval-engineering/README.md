@@ -18,3 +18,7 @@ axm install @craigsmitham/knowledge/eval-engineering
 
 Open the bundle index, then follow the route for evaluation design, validity,
 or operation that matches the decision you need to support.
+
+## License
+
+CC-BY-4.0.

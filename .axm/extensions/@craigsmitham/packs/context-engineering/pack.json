@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Context, prompt, and evaluation engineering knowledge with workflows for gardening project context and improving agent instructions",
   "keywords": [
     "context-engineering",

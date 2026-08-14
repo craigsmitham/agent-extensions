@@ -226,6 +226,21 @@ while IFS= read -r -d '' manifest; do
 done < <(find "$validation_root/.axm/extensions/@craigsmitham" -type f \
   \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) -print0)
 
+while IFS= read -r license_id; do
+  if [[ ! -f "$validation_root/LICENSES/${license_id}.txt" ]]; then
+    echo "Missing license text for declared SPDX identifier: ${license_id}" >&2
+    exit 1
+  fi
+done < <(
+  find "$validation_root/.axm/extensions/@craigsmitham" -type f \
+    \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
+    -print0 \
+    | xargs -0 jq -r '.license' \
+    | rg -o '[A-Za-z0-9][A-Za-z0-9.-]*' \
+    | rg -v '^(AND|OR|WITH)$' \
+    | sort -u
+)
+
 if jq -e --argjson expected_count "${#expected[@]}" '
   ([.skills | to_entries[] | select(.key != "axm") |
       (.value | if type == "object" then .source else . end)] +

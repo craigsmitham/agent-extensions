@@ -88,6 +88,9 @@ descriptions for humans browsing the registry. Give every public package useful
 keywords, a repository location, a homepage, an SPDX license expression, and
 accurate `recommendedPacks` metadata.
 
+Apply [Licensing public extensions](docs/licensing.md) when choosing or changing
+a package license; preserve published and third-party obligations explicitly.
+
 For Effect v4 work, inspect current public Effect v4 source, tests, and examples
 before documenting an API. Keep guidance specific to v4 and do not carry
 forward Effect v3 conventions.

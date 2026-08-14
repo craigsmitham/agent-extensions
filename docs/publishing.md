@@ -9,6 +9,8 @@ package.
 - Work only from this public repository.
 - Read the root [agent instructions](../AGENTS.md), especially the
   public-by-construction and package-isolation policies.
+- Apply the repository's [licensing policy](licensing.md) to every changed
+  package and preserve any existing published license obligations.
 - Read the `axm` skill and the relevant AXM help for the package type and
   command you will use.
 - Know which changed packages are intended for this release.
@@ -48,7 +50,8 @@ safety gate so the gate remains the final check of commit contents.
    reference uses AXM's canonical cross-extension path. Current installation
    state is not evidence of co-installation.
 4. Verify provenance, redistribution rights, attribution, license declarations,
-   and synthetic examples manually. Scanners cannot establish these facts.
+   file-level boundaries for mixed-license packages, and synthetic examples
+   manually. Scanners cannot establish these facts.
 5. Run the local safety gate:
 
    ```bash

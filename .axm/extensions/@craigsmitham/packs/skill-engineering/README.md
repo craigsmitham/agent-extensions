@@ -67,5 +67,5 @@ library periodically for ownership, evidence, collision, and lifecycle drift.
 
 ## License
 
-The skills and pack metadata are MIT licensed. The knowledge bundles are
-CC-BY-SA-4.0; see each member manifest for the applicable license.
+The skills and pack metadata are MIT licensed. The knowledge bundles use
+CC-BY-4.0 or CC-BY-SA-4.0; see each member manifest for the applicable license.

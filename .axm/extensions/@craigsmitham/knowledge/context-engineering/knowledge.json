@@ -2,7 +2,7 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "context-engineering",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "knowledge",
   "format": {
     "name": "okf",
@@ -27,7 +27,7 @@
     "directory": ".axm/extensions/@craigsmitham/knowledge/context-engineering"
   },
   "homepage": "https://github.com/craigsmitham/agent-extensions",
-  "license": "CC-BY-SA-4.0",
+  "license": "CC-BY-4.0",
   "recommendedPacks": [
     "@craigsmitham/packs/context-engineering",
     "@craigsmitham/packs/harness-engineering"
