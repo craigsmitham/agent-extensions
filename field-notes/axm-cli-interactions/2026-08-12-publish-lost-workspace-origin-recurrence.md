@@ -3,8 +3,10 @@ subject: axm-cli-interactions
 key: publish-lost-workspace-origin-recurrence
 date: 2026-08-12
 kind: workaround
-status: open
+status: dropped
 ---
+
+**Dropped:** Superseded by the v4 authority model and AXM-1441 implementation; publication no longer reconstructs or rewrites desired workspace authorship from receipt or trust state.
 
 **Expected:** Publishing workspace-authored skills would preserve their
 `workspace:` source, leaving the workspace safety gate no worse than before the

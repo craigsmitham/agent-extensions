@@ -3,8 +3,10 @@ subject: axm-cli-interactions
 key: multi-selector-publish-preview-symbol-error
 date: 2026-08-12
 kind: workaround
-status: open
+status: dropped
 ---
+
+**Dropped:** Resolved by the current publish selection implementation and its explicit-selector coverage; current previews no longer reproduce the Symbol conversion failure.
 
 **Expected:** An exact publish preview naming two skill selectors would preflight
 both packages as one selection before upload.

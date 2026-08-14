@@ -3,8 +3,10 @@ subject: axm-cli-interactions
 key: packs-add-stale-constraint-no-op
 date: 2026-08-12
 kind: gap
-status: open
+status: dropped
 ---
+
+**Dropped:** Resolved by current authored-manifest constraint replacement; regression coverage now verifies an incompatible authored Pack constraint advances to the requested installed version.
 
 **Expected:** `axm packs add <pack> <extension>@<newer-version> --replace-existing --preview --json` should preview a constraint update when an authored pack still references an older version and the workspace trust state already contains the newer version.
 **Actual:** The command reported a no-op for each stale dependency constraint.

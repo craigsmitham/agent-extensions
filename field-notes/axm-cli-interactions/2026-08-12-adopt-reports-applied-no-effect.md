@@ -3,8 +3,10 @@ subject: axm-cli-interactions
 key: adopt-reports-applied-no-effect
 date: 2026-08-12
 kind: blocked
-status: open
+status: dropped
 ---
+
+**Dropped:** Superseded by the AXM v4 authority model; the trust-derived wrong-origin state and its adopt recovery no longer govern workspace reconciliation.
 
 **Expected:** `axm status` reported `canonical-wrong-origin` on four skills and
 named `axm adopt <fqn> --preview` as the recovery, so running the adopt should

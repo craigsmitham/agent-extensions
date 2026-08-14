@@ -3,7 +3,7 @@ subject: axm-cli-interactions
 key: public-safety-cli-version-mismatch
 date: 2026-08-12
 kind: workaround
-status: open
+status: promoted
 ---
 
 **Expected:** The installed AXM CLI would match the version required by the

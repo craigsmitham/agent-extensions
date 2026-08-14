@@ -3,7 +3,7 @@ subject: axm-cli-interactions
 key: cli-skill-patch-lag-blocks-clean-index
 date: 2026-08-13
 kind: blocked
-status: open
+status: promoted
 ---
 
 **Expected:** The installed official AXM skill should remain compatible with the active CLI so a clean repository can be evaluated at the Git-index boundary without an unrelated tool-version blocker.

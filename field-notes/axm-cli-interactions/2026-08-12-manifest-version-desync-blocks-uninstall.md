@@ -3,8 +3,10 @@ subject: axm-cli-interactions
 key: manifest-version-desync-blocks-uninstall
 date: 2026-08-12
 kind: gap
-status: open
+status: dropped
 ---
+
+**Dropped:** Superseded by v4 authority: workspace-authored versions live in authored manifests and neither trust state nor external-resolution lock rows mirror that authority.
 
 **Expected:** After `axm version @craigsmitham/skills/craft-effect-v4 set 0.1.0`
 reported `Updated skill ... 0.0.1 -> 0.1.0`, the workspace version state would be

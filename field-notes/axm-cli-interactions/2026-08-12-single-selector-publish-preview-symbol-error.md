@@ -3,8 +3,10 @@ subject: axm-cli-interactions
 key: single-selector-publish-preview-symbol-error
 date: 2026-08-12
 kind: blocked
-status: open
+status: dropped
 ---
+
+**Dropped:** Resolved by the current publish selection implementation and its explicit-selector coverage; current previews no longer reproduce the Symbol conversion failure.
 
 **Expected:** Previewing one explicitly selected skill would report that
 package's publish plan without uploading it.

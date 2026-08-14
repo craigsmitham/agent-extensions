@@ -3,8 +3,10 @@ subject: axm-cli-interactions
 key: publish-gate-blocks-authored-release
 date: 2026-08-13
 kind: blocked
-status: open
+status: dropped
 ---
+
+**Dropped:** The repository intentionally applies a complete-workspace public-safety gate; the obsolete authored-content lint predicates described here were removed by the v4 workspace model.
 
 **Expected:** `scripts/check-public-safety.sh` would permit an exact new-package
 release after package lint passed, while leaving the documented

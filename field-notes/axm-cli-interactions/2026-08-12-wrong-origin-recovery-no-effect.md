@@ -3,8 +3,10 @@ subject: axm-cli-interactions
 key: wrong-origin-recovery-no-effect
 date: 2026-08-12
 kind: blocked
-status: open
+status: dropped
 ---
+
+**Dropped:** Superseded by the v4 authority model; the trust-derived wrong-origin predicate and adopt/status recovery loop were removed rather than retained as recovery authority.
 
 **Expected:** Applying the recovery reported by `axm status` would restore
 workspace origin and clear each `canonical-wrong-origin` blocker.

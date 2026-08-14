@@ -3,8 +3,10 @@ subject: axm-cli-interactions
 key: lint-details-no-detail
 date: 2026-08-12
 kind: gap
-status: open
+status: dropped
 ---
+
+**Dropped:** Superseded by the v4 lint and workspace-state surfaces; the reported `--details` to `status` recovery workflow no longer exists.
 
 **Expected:** `axm lint` ended with `Next: Show detailed lint output · axm lint
 --details`, so `--details` should have explained each `canonical state
