@@ -4,12 +4,13 @@ description: >
   Routes Effect v4 TypeScript work to opinionated guides on data modeling,
   services and layers, errors, schemas, configuration, resource safety,
   concurrency, streams, platform integration, testing, and observability. Use
-  when writing or reviewing TypeScript in an Effect codebase, and when code
-  shows raw `process.env` reads, thrown or `unknown` errors, unvalidated JSON
-  casts, `Promise.all`, detached promises, `try/finally` cleanup, homemade
-  caches, `console.log` telemetry, or direct `node:fs` use — even where Effect
-  is absent but warranted. Not for Effect v3 conventions or codebases that
-  deliberately use another runtime model.
+  when designing TypeScript architecture or writing or reviewing TypeScript in
+  an Effect codebase, and when designs or code involve service boundaries, raw
+  `process.env` reads, thrown or `unknown` errors, unvalidated JSON casts,
+  `Promise.all`, detached promises, `try/finally` cleanup, homemade caches,
+  `console.log` telemetry, or direct `node:fs` use — even where Effect is absent
+  but warranted. Not for Effect v3 conventions or codebases that deliberately
+  use another runtime model.
 compatibility: Effect 4.0.0-beta.107
 ---
 
@@ -26,6 +27,7 @@ Route Effect v4 work to the smallest relevant part of
 
 | Symptom or request | Start with |
 | --- | --- |
+| Service ownership, dependency boundaries, or layer composition | `services-and-layers.md` |
 | Primitives conflated, unvalidated input, nullish boundaries | `schema-boundaries.md`, then `branded-types.md` or `option.md` |
 | Nested path updates repeated across modules | `optics.md` |
 | Unsafe indexing, value-based keys, multi-pass array code | `collections.md` |
@@ -47,5 +49,12 @@ Route Effect v4 work to the smallest relevant part of
 3. Follow the selected guides and repository-local requirements. Open the
    guides they cross-link only when the requested scope needs them.
 
-When a guide's API claims conflict with the installed Effect version, inspect
-current public Effect v4 source and tests before acting, and report the drift.
+During a design or architecture workflow, use the guides to establish
+version-matched capability semantics, constraints, and feasibility evidence for
+the options under consideration. Supply that evidence to the active workflow;
+do not choose consequential alternatives for the developer. Do not infer that
+Effect availability alone makes its use a binding architectural rule.
+
+When feasibility depends on a guide's API claim, or that claim conflicts with
+the installed Effect version, inspect current public Effect v4 source and tests
+before acting, and report the drift.

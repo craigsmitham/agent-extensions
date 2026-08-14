@@ -29,12 +29,12 @@
   "type": "pack",
   "name": "codebase-change-workflow",
   "dependencies": {
-    "@craigsmitham/skills/frame-codebase-research": "^0.0.5",
-    "@craigsmitham/skills/conduct-codebase-research": "^0.0.4",
+    "@craigsmitham/skills/frame-codebase-research": "^0.0.6",
+    "@craigsmitham/skills/conduct-codebase-research": "^0.0.5",
     "@craigsmitham/skills/workshop-codebase-design": "^0.0.7",
-    "@craigsmitham/skills/specify-codebase-change": "^0.0.2",
+    "@craigsmitham/skills/specify-codebase-change": "^0.0.3",
     "@craigsmitham/skills/plan-codebase-change": "^0.0.2",
-    "@craigsmitham/skills/assess-codebase-change-readiness": "^0.0.1",
+    "@craigsmitham/skills/assess-codebase-change-readiness": "^0.0.2",
     "@craigsmitham/skills/verify-codebase-change": "^0.0.1"
   }
 }

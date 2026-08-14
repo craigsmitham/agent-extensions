@@ -5,6 +5,10 @@ workflows for gardening project context and improving agent instructions. The
 pack helps agents clarify authority, lifecycle, ownership, and discovery while
 keeping always-on instruction surfaces small and useful.
 
+This pack treats Agent Skills as one harness element. It does not own the
+detailed lifecycle for designing, evaluating, auditing, or maintaining skill
+packages.
+
 ## Included extensions
 
 | Extension | Role |

@@ -5,8 +5,9 @@ for each published package is the SPDX expression in its manifest.
 
 - The `docs` package family (`docs` knowledge and pack plus `author-docs`), the
   `field-notes` package family, and the `knowledge-management`,
-  `product-management`, `software-architecture`, `strategy`, and
-  `workflow-automation` knowledge bundles are licensed under `CC-BY-SA-4.0`.
+  `product-management`, `skill-engineering`, `software-architecture`,
+  `strategy`, and `workflow-automation` knowledge bundles are licensed under
+  `CC-BY-SA-4.0`.
 - `author-okf` is licensed under `MIT AND Apache-2.0`: Craig's original skill,
   templates, and validator use MIT, while the vendored Open Knowledge Format
   specification retains its upstream Apache-2.0 license.

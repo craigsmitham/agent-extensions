@@ -11,7 +11,9 @@ choosing a design or implementation plan.
 
 - A non-trivial code change depends on uncertain current behavior, ownership,
   control or data flow, contracts, dependencies, failure conditions, or test
-  coverage.
+coverage.
+- A future design depends on governing architectural, framework, or runtime
+  capabilities whose authority and constraints need to be established.
 - You want to isolate factual codebase research from the original request's
   presumed cause or preferred solution.
 
@@ -37,7 +39,7 @@ Ask your agent:
 When research is warranted, the skill returns a brief with independent readiness
 and review states, a provenance-only evidence timeline, verified anchors,
 reported evidence, human input gaps, neutral questions, drift coverage,
-boundaries, and completion criteria.
+architecture and capability evidence, boundaries, and completion criteria.
 
 ## Inspiration
 

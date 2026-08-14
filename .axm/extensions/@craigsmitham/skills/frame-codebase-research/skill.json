@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "frame-codebase-research",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Turns bug reports and feature ideas into neutral, time-aware codebase research briefs",
   "keywords": [
     "codebase",

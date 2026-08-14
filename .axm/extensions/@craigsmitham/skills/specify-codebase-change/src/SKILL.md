@@ -13,7 +13,8 @@ Elaborate what was accepted; do not make another consequential design decision.
 Require:
 
 - an explicitly accepted design or equivalent record of approved outcomes,
-  behavioral choices, technical decisions, constraints, and exclusions; and
+  behavioral choices, technical decisions, feasibility conditions,
+  architectural exceptions, constraints, and exclusions; and
 - snapshot-bound current-state evidence sufficient to verify the affected
   behavior, ownership, contracts, and implementation boundaries.
 
@@ -35,6 +36,8 @@ Set the specification to `Blocked` when:
 - the design is not explicitly accepted for the requested scope;
 - an unresolved choice would materially affect observable behavior, interfaces,
   state, failure handling, compatibility, operations, or verification;
+- an accepted technical path still has an unverified feasibility condition or
+  an architectural exception that lacks explicit acceptance;
 - relevant drift may invalidate supporting evidence or an accepted decision; or
 - the available evidence cannot anchor a material specification claim.
 
@@ -58,6 +61,9 @@ failure semantics, and operational constraints. For a behavior-preserving
 structural change, keep the preservation rule in a `C<n>` contract and mark
 functional coverage `N/A — no observable behavior change`; do not invent a
 `B<n>` that merely restates equivalence.
+Turn every accepted feasibility prerequisite and architectural exception into a
+traceable `C<n>` contract, dependency, or verification obligation. Route an
+unresolved or merely assumed condition back to design or research.
 
 ### 2. Specify functional behavior
 
@@ -87,6 +93,8 @@ the unresolved threshold visible.
 Describe only implementation-constraining structure:
 
 - responsibilities, ownership, and component boundaries;
+- the accepted capability path, material dependency or runtime semantics,
+  feasibility prerequisites, and architectural exceptions;
 - end-to-end control and data flow;
 - interfaces, signatures, types, schemas, events, and versioning rules;
 - state transitions, persistence, invariants, and consistency boundaries;
@@ -122,8 +130,9 @@ when a coverage category does not apply; never invent behavior or structure to
 fill the matrix. Require every source ID to have sufficient applicable downstream
 coverage and every slice to have a verification obligation. Look for
 contradictions, unhandled observers, partial failure, concurrency or lifecycle
-gaps, migration hazards, untestable requirements, and speculative structure.
-Block rather than paper over a gap.
+gaps, migration hazards, stale feasibility evidence, unresolved architecture
+exceptions, untestable requirements, and speculative structure. Block rather
+than paper over a gap.
 
 Present the complete specification for explicit acceptance. Use `Draft` until
 reviewed, `Accepted` only after approval, and `Blocked` when a material gap

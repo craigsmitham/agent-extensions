@@ -31,6 +31,10 @@ Blocker type: Needs design | Needs research <only when Blocked>
 - Verification obligation: ...
 
 ## Technical Contract
+### Architecture and Capability Basis
+<Accepted capability path, material versions, feasibility prerequisites,
+architectural exceptions, and their C/D sources.>
+
 ### C1 — <responsibility or flow contract>
 ...
 ### Interfaces and Data
@@ -59,7 +63,8 @@ Blocker type: Needs design | Needs research <only when Blocked>
 | ... | <IDs or N/A — reason> | <IDs or N/A — reason> | <IDs or N/A — reason> | ... |
 
 ## Risks, Assumptions, and Blockers
-...
+<Include unresolved or changed feasibility evidence; do not restate accepted
+conditions that already appear as contracts.>
 
 ## Specification Review and Acceptance
 <For Draft: review requested and unresolved review questions. For Accepted: approver, accepted scope, accepted-against identity and time, and exclusions. For Blocked: blocker type, exact missing decision or evidence, and responsible next workflow.>

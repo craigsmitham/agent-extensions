@@ -27,6 +27,11 @@ decide when it applies, and load only the detail needed to perform it. The open
 Agent Skills format uses a directory containing a required `SKILL.md` and
 optional scripts, references, and assets.[^agent-skills-spec]
 
+This concept owns the skill's role and boundaries inside a harness. Detailed
+candidate selection, authoring, evaluation, supply-chain review, host profiles,
+and lifecycle operations belong to a dedicated skill-engineering body of
+knowledge rather than this harness-element overview.
+
 The important idea is not the directory name. A skill joins two jobs that
 ordinary documentation leaves separate:
 
@@ -149,7 +154,6 @@ machine.
 
 ## Related
 
-- [How to design an agent skill](../guides/agent-skills.md)
 - [Progressive disclosure](../patterns/progressive-disclosure.md)
 - [Context gardening](../practices/context-gardening.md)
 - [Instruction files](instruction-files.md)

@@ -30,7 +30,8 @@ Ask your agent:
 > worker flow; and report which relevant intervening changes affect each answer.
 
 The skill returns a Codebase Research Report with explicit question status,
-nearby citations, evidence classification, scoped drift, contracts, tests,
+nearby citations, evidence classification, scoped drift, an architecture and
+capability baseline with authority and material versions, contracts, tests,
 observability, contradictions, and a reproducible evidence index.
 
 ## Inspiration

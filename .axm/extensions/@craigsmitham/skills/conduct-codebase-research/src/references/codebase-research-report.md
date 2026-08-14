@@ -26,10 +26,12 @@ leave empty boilerplate.
 ## Current-State Technical Map
 <Concise end-to-end explanation of relevant components and boundaries.>
 
-## Existing Capabilities
-<What already carries responsibility of this kind, without assessing fit. State explicitly when a search found none.>
+## Architecture and Capability Baseline
+<What already carries or governs responsibility of this kind, without assessing
+future fit. Distinguish binding rules, established patterns, and available
+dependencies. State explicitly when a search found none.>
 
-| Capability | Location | What it does today | Extension points | Constraints and coupling | Consumers |
+| Kind | Capability or constraint | Evidence and authority | Version or environment | Responsibilities and extension points | Constraints, coupling, and consumers |
 | --- | --- | --- | --- | --- | --- |
 
 ## Question Status

@@ -195,6 +195,7 @@ A focused workshop containing the one functional response-shape decision, with e
 
 - The agenda contains the functional response-shape decision and does not invent a new service, store, event, coordination mechanism, or migration decision.
 - Existing technical boundaries are recorded only as evidenced C contracts or invariants when material, without manufactured options or D decision entries.
+- The response states that the functional alternatives have no differentiating technical constraint under the supplied evidence instead of manufacturing a feasibility analysis.
 - The response may present options for the one functional decision but waits for explicit human choice.
 - The response remains at design level and contains no implementation plan or code changes.
 
@@ -290,6 +291,78 @@ An orientation that records the distributed lock as a stated preference rather t
 - The orientation distinguishes evidenced facts from the author's presumed solution and does not treat the absence of Redis as a required addition.
 - Any mechanism choice appears as an unresolved agenda decision awaiting explicit human choice, and no option is accepted by default.
 
+## 17. Technically possible but architecturally prohibited
+
+### Prompt
+
+> The frame is confirmed. Workshop how a TypeScript worker should coordinate three concurrent partner calls. Direct evidence at commit g170 establishes Effect 4.0.0-beta.107, existing scoped-fiber and Layer patterns, and a binding repository architecture rule requiring Effect structured concurrency for asynchronous production workflows. The caller proposes either raw Promise.all plus AbortController or scoped Effect fibers. Begin with this decision.
+
+### Expected output
+
+A capability-aware decision record that distinguishes technical possibility from architectural admissibility, excludes the raw-Promise candidate as violating a binding rule, and does not manufacture a choice when only the evidenced Effect path remains viable.
+
+### Assertions
+
+- The architecture and capability baseline records the binding rule, its repository authority, the installed Effect version, and the established scoped-fiber and Layer capabilities.
+- Raw Promise.all plus AbortController is not called viable or recommended merely because it is technically implementable; it is recorded as architecturally Violates with the evidence-based exclusion reason.
+- The scoped Effect path is classified Established and Conforms from the supplied version-matched evidence.
+- Because only one candidate is viable, the response records an evidenced constrained contract or conclusion instead of manufacturing two selectable alternatives.
+- No architecture exception is silently accepted.
+
+## 18. Framework-shaped option lacks version evidence
+
+### Prompt
+
+> The frame is confirmed. Workshop supervision for a long-running Effect v4 import. At commit h180 the project uses Effect 4.0.0-beta.107 and current code demonstrates scoped fibers and Queue, but neither repository evidence nor supplied version-matched documentation establishes a proposed Workflow.supervise API. Compare the demonstrated scoped-fiber design with the proposed Workflow.supervise design and begin with this decision. No live repository or external documentation is available.
+
+### Expected output
+
+A feasibility-gated decision that treats the demonstrated scoped-fiber path as established, marks the unevidenced framework-shaped candidate Unverified, and does not recommend or accept it without a precise version-matched inquiry.
+
+### Assertions
+
+- The demonstrated scoped-fiber option is classified from the supplied capability evidence rather than from generic Effect familiarity.
+- The proposed Workflow.supervise option is Unverified rather than assumed feasible because the material installed version and supplied sources do not establish it.
+- The response asks a precise version-matched capability question or marks only the dependent candidate Needs research.
+- The unverified candidate is not recommended, accepted, or relabeled Conditional.
+- Independent design work may continue without a broad research detour.
+
+## 19. Existing capability versus feasible bypass
+
+### Prompt
+
+> The frame is confirmed. Workshop retry scheduling at commit i190. Evidence establishes an existing RetryPolicy service with backoff, jitter, cancellation, metrics, tests, and an extension point for the new partner. A separate scheduler subsystem could also satisfy the behavior and no binding rule forbids it, but it would add deployment, ownership, and observability responsibilities. Present the first decision without accepting it.
+
+### Expected output
+
+Two feasible options whose different capability paths and architectural fit are explicit, with a recommendation to extend the established capability unless the added subsystem's consequences serve an accepted outcome.
+
+### Assertions
+
+- Both options receive technical feasibility and architectural dispositions with evidence; the new scheduler is not called infeasible solely because an existing capability exists.
+- The RetryPolicy option identifies the existing extension point and cross-cutting capabilities it preserves.
+- The scheduler option explicitly bypasses the existing capability and names the added deployment, ownership, and observability consequences.
+- The recommendation prefers extending RetryPolicy from the agreed evidence and outcomes, while leaving the human choice explicit.
+- The response does not equate common use or dependency availability with a binding rule.
+
+## 20. Unresolved prerequisite is not conditional feasibility
+
+### Prompt
+
+> The frame is confirmed. Workshop duplicate-job prevention at commit j200. Option A uses the existing transactional uniqueness boundary and is established by current evidence. Option B uses a lease table, but it requires a new uniqueness and expiry contract that has neither been designed nor accepted. The caller asks you to label B conditionally feasible and recommend it now.
+
+### Expected output
+
+A decision response that keeps the established option viable, refuses to treat an unresolved design prerequisite as Conditional, and promotes the lease contract to a dependent decision that blocks recommendation or acceptance of that candidate.
+
+### Assertions
+
+- Option A is classified Established from the current transactional boundary evidence.
+- Option B is not classified Conditional because its uniqueness and expiry prerequisite is neither accepted nor traceable.
+- The missing lease contract becomes a dependent D or C item with explicit specification impact rather than an implementation assumption.
+- Option B is not recommended or accepted while the prerequisite remains unresolved.
+- The response continues to ask for an explicit human choice only among currently viable options.
+
 ## Pass condition
 
-The prompt set passes when a participant who did not write the issue or do the research is oriented to the situation, aim, outcomes, and crux before any decision work, without adopting a reported cause or preferred mechanism as fact; design decisions never rely on materially stale evidence, direct evidence is usable without invented provenance, irrelevant drift does not cause unnecessary research, the workshop preserves explicit human choice and its design boundary, and acceptance is tied to a reproducible snapshot or evidence identity. The workshop must derive consequential technical and cross-cutting choices when the caller has not named them, avoid manufacturing alternatives when evidence constrains the design, represent constrained conclusions as evidenced contracts rather than human decisions, and prevent material technical rules from first appearing during synthesis. Accepted scope must be functionally and technically complete, traceable, operationally credible, and ready for specification.
+The prompt set passes when a participant who did not write the issue or do the research is oriented to the situation, aim, outcomes, and crux before any decision work, without adopting a reported cause or preferred mechanism as fact; design decisions never rely on materially stale evidence, direct evidence is usable without invented provenance, irrelevant drift does not cause unnecessary research, the workshop preserves explicit human choice and its design boundary, and acceptance is tied to a reproducible snapshot or evidence identity. The workshop must derive consequential technical and cross-cutting choices when the caller has not named them, avoid manufacturing alternatives when evidence constrains the design, represent constrained conclusions as evidenced contracts rather than human decisions, and prevent material technical rules from first appearing during synthesis. Every materially considered alternative must have an evidence-backed capability path, technical feasibility disposition, and separate architectural disposition; unverified or nonconforming candidates cannot be recommended, unresolved prerequisites cannot masquerade as conditional feasibility, and purely functional choices do not trigger manufactured technical analysis. Accepted scope must be functionally and technically complete, traceable, operationally credible, and ready for specification.

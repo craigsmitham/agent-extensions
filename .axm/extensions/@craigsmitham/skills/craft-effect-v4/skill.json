@@ -3,13 +3,15 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "craft-effect-v4",
-  "version": "0.0.1",
-  "description": "Route Effect v4 TypeScript work to opinionated guides on modeling, services, failure, lifetimes, concurrency, platforms, and verification",
+  "version": "0.0.2",
+  "description": "Routes Effect v4 TypeScript architecture, implementation, and review work to opinionated guides on modeling, services, failure, lifetimes, concurrency, platforms, and verification",
   "keywords": [
     "effect",
     "effect-v4",
     "typescript",
-    "functional-programming"
+    "functional-programming",
+    "software-architecture",
+    "technical-design"
   ],
   "recommendedPacks": [
     "@craigsmitham/packs/effect-v4"

@@ -34,6 +34,13 @@ outcomes below establish; name no preferred mechanism.>
 ## Current State
 <Relevant behavior, structure, flows, contracts, and uncertainty.>
 
+## Architecture and Capability Baseline
+<Include only decision-relevant entries. Distinguish binding constraints,
+established patterns, and available capabilities.>
+
+| Kind | Capability or constraint | Evidence and authority | Version or environment | Design implication |
+| --- | --- | --- | --- | --- |
+
 ## Desired Outcomes
 | ID | Outcome, constraint, or non-goal | Observer | Verification |
 | --- | --- | --- | --- |
@@ -85,7 +92,11 @@ unresolved agenda item.>
 - Context, evidence, and supporting identity: ...
 - Forces and constraints: ...
 - Affected boundaries or contracts: ...
-- Options considered: ...
+
+| Option or excluded candidate | Capability path | Feasibility | Architecture | Evidence | Conditions, consequences, or exclusion reason |
+| --- | --- | --- | --- | --- | --- |
+| ... | Uses, extends, bypasses, replaces, or adds ... | Established, Conditional, Unverified, or Infeasible | Conforms, Exception required, or Violates | ... | ... |
+
 - Decision: ...
 - Rationale and consequences: ...
 - Revisit when: ...
@@ -103,7 +114,9 @@ unresolved agenda item.>
 
 ## Design Acceptance
 <Approver, accepted scope, accepted-against snapshot or evidence identity,
-validation time, and unresolved exclusions.>
+validation time, confirmation that accepted technical paths remain viable,
+traceable feasibility conditions or architecture exceptions, and unresolved
+exclusions.>
 
 Specification readiness: Ready | Blocked — unresolved decisions or evidence
 ```

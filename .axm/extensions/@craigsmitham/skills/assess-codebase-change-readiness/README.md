@@ -2,7 +2,8 @@
 
 Determine whether an accepted codebase change is sufficiently evidenced,
 constrained, planned, and verifiable to begin implementation without hidden
-product or architecture decisions.
+product or architecture decisions, unverified technical paths, or unresolved
+feasibility prerequisites.
 
 The skill applies risk-proportional scrutiny, distinguishes a resolvable
 `Not Ready` finding from an evidence-blocked assessment, and routes each gap to

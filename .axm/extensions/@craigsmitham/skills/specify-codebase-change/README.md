@@ -34,7 +34,8 @@ Ask your agent:
 The skill returns a draft ready for review or a precise blocked result. After
 explicit approval, the accepted specification provides functional scenarios,
 technical contracts, vertical slices, evidence provenance, and end-to-end
-traceability for implementation planning.
+traceability for implementation planning, including accepted capability paths,
+feasibility prerequisites, and architectural exceptions.
 
 ## Inspiration
 

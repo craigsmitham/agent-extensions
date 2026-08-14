@@ -1,6 +1,6 @@
 ---
 name: workshop-codebase-design
-description: Workshops an evidence-grounded functional and technical codebase design from change intent and current-state evidence, revalidates material evidence as the codebase drifts, surfaces consequential decisions, and records explicit human choices in a Codebase Design Record. Use when asked to workshop, discuss, explore, align on, or decide the behavior, design, or architecture of a codebase change after relevant current behavior is understood through a research report or directly supplied evidence. Not for codebase research, unilateral design generation, specification drafting, implementation planning, coding, code review, or merely documenting a decision already made.
+description: Workshops an evidence-grounded functional and technical codebase design, evaluates alternatives for technical feasibility and architectural fit, revalidates material evidence as the codebase drifts, and records explicit human choices in a Codebase Design Record. Use when asked to workshop, discuss, explore, compare alternatives, align on, or decide the behavior, design, or architecture of a codebase change after relevant current behavior is understood through a research report or directly supplied evidence. Not for codebase research, unilateral design generation, specification drafting, implementation planning, coding, code review, or merely documenting a decision already made.
 ---
 
 # Workshop codebase design
@@ -14,7 +14,8 @@ Require:
 
 - the change intent, including the bug report or feature idea; and
 - current-state evidence sufficient to explain the relevant behavior, ownership,
-  flows, contracts, constraints, and uncertainty.
+  flows, contracts, constraints, architectural and technical capabilities, and
+  uncertainty.
 
 Also use any supplied outcomes, non-goals, constraints, candidate ideas, prior
 decisions, decision participants, or output path. Keep facts, intent,
@@ -43,9 +44,9 @@ choice, explain why a formal workshop is unnecessary.
 
 - Discuss one consequential decision at a time and wait for an explicit human
   choice before treating it as accepted.
-- Present two or three materially distinct, viable options when alternatives
-  exist. Include an explicit recommendation, its rationale, tradeoffs,
-  consequences, and reversibility.
+- Present two or three materially distinct options only when the feasibility
+  gate below establishes that they are viable. Include an explicit
+  recommendation, its rationale, tradeoffs, consequences, and reversibility.
 - Maintain a decision ledger. Use `Proposed`, `Accepted`, `Deferred`,
   `Needs research`, or `Superseded`; a recommendation is never `Accepted` by
   default.
@@ -73,13 +74,14 @@ Design generates new current-state questions; answering them is part of the
 workshop, not a detour. Three responses exist, and guessing is not one:
 
 - **Look now** when the question is answerable at a boundary the supplied
-  evidence already covers and its answer settles a pending item. Inspect only
-  that boundary, stop when the item resolves, and record the evidence on the
-  decision it constrains.
+  evidence already covers, including version-matched primary sources for an
+  in-scope dependency, and its answer settles a pending item. Inspect only that
+  boundary, stop when the item resolves, and record the evidence on the decision
+  it constrains.
 - **Mark `Needs research`** when the answer requires tracing a boundary the
-  evidence does not cover, or would reframe the agenda rather than resolve one
-  item. State the precise question, pause only dependent decisions, and continue
-  with independent items.
+  evidence does not cover, a prototype or spike, evaluation of a new dependency,
+  or would reframe the agenda rather than resolve one item. State the precise
+  question, pause only dependent decisions, and continue with independent items.
 - Never infer an unverified current-state fact to keep a decision moving.
 
 Design-time findings inherit the design snapshot identity. Do not open a
@@ -102,8 +104,8 @@ situation, the problem it causes, and the intended outcome, then expand it:
   constraints, non-goals, and already-binding decisions.
 - **Crux:** what makes this a design problem rather than a task — the competing
   forces, the boundaries under tension, and the shape of the choices ahead.
-- **Evidence and unknowns:** evidence identity, relevant drift, assumptions, and
-  material unknowns.
+- **Evidence and unknowns:** evidence identity, relevant drift, assumptions,
+  decision-relevant architecture and capability baseline, and material unknowns.
 
 Make the orientation self-contained, so it stands without the issue or the
 research report. Attribute each claim to evidence, stated intent, or a labeled
@@ -127,6 +129,14 @@ Derive the agenda from the confirmed outcomes and affected current-state flows:
   component's current participation or a candidate mechanism silently assign
   ownership.
 
+Before presenting the first option, establish the decision-relevant architecture
+and capability baseline: binding constraints and their authority; established
+capabilities, patterns, and extension points; relevant dependency, runtime,
+platform, and deployment versions; and material unknowns. Distinguish a binding
+rule from a preference or merely available dependency. Capability availability
+does not create an obligation, and an established pattern is not bypassed without
+an evidenced reason.
+
 Promote a candidate only when viable alternatives have materially different
 consequences, risks, reversibility, or cost of later change. If evidence or an
 accepted constraint permits only one choice, record the conclusion as an
@@ -143,6 +153,35 @@ that plausibly carries it, adding a new one is itself a `D<n>` requiring
 options, never a silent default. When no candidate exists, record that as a
 `Constrained` `C<n>` citing the evidence searched.
 
+### Option feasibility gate
+
+Evaluate every presented or materially considered candidate, not every
+imaginable alternative:
+
+- trace a design-level path from trigger through completion and name the
+  capabilities it uses, extends, bypasses, replaces, or adds;
+- test that path against accepted outcomes and contracts, binding architecture,
+  and relevant versioned dependency, runtime, platform, and deployment semantics;
+- examine only applicable cross-cutting concerns, such as validation and errors,
+  state and consistency, concurrency and cancellation, resource lifetime,
+  security, compatibility, observability, and operations; and
+- record the evidence, assumptions, prerequisites, and material failure modes.
+
+Classify technical feasibility as `Established`, `Conditional`, `Unverified`,
+or `Infeasible`. `Conditional` means named prerequisites are already accepted
+and traceable; missing evidence is `Unverified`, not a condition. Separately
+classify architectural disposition as `Conforms`, `Exception required`, or
+`Violates`. An option can be technically feasible yet architecturally
+inadmissible, and a framework-shaped option is not feasible merely because it
+sounds idiomatic.
+
+Only `Established` or properly `Conditional` candidates that `Conform`, or whose
+exception is explicitly accepted in a dependent decision, are viable. Apply
+`Design-time inquiry` to `Unverified` candidates. Record `Infeasible`,
+`Violates`, and unresolved `Exception required` candidates as excluded rather
+than padding the option set. If alternatives have no material technical
+difference, state that with evidence instead of manufacturing analysis.
+
 ### 3. Resolve one decision at a time
 
 For each `Decide now` item:
@@ -150,9 +189,10 @@ For each `Decide now` item:
 1. State the decision as a concrete question and cite the current-state evidence
    and source or snapshot identity that constrain it. When that evidence is
    missing, apply `Design-time inquiry` before presenting options.
-2. Present viable options with their fit, tradeoffs, consequences, and
-   reversibility, naming the existing capabilities each option uses, extends, or
-   bypasses. Exclude an option only for a stated constraint or invariant.
+2. Apply the option feasibility gate. Present only viable options with their
+   capability path, feasibility and architecture dispositions, supporting
+   evidence, tradeoffs, consequences, conditions, and reversibility. Summarize
+   materially considered excluded candidates and the evidence-based reason.
 3. For a technical or coupled decision, state the forces that make the choice
    consequential and the affected boundaries or contracts.
 4. Classify the affected elements using the change model below.
@@ -213,7 +253,8 @@ Pressure-test it against the original intent and revalidated current-state
 evidence. Look for contradictory decisions, externally visible structural
 changes, partial failure, concurrency and lifecycle gaps, migration hazards,
 snapshot drift, uncovered acceptance scenarios, re-implementation of capability
-the evidence already provides, and speculative structure with no present
+the evidence already provides, invalidated feasibility evidence or prerequisites,
+unaccepted architecture exceptions, and speculative structure with no present
 purpose. Trace every in-scope outcome, behavior, and material
 end-state rule to accepted decisions, contracts, preserved constraints, and
 design-level verification. Reopen any decision invalidated by the test.
@@ -226,9 +267,11 @@ completed record and ask the developer to accept it or name the remaining
 decisions. Keep the record `Discussing` until acceptance is explicit; use
 `Blocked` when unresolved evidence prevents progress and `Accepted` only after
 approval. Do not accept an in-scope design while a consequential behavior,
-contract, or technical choice remains unresolved; explicitly exclude genuinely
-deferred scope. Name each unresolved item and state its specification impact
-explicitly. Acceptance requires the material snapshot or source identity against
+contract, technical choice, feasibility condition, or architectural exception
+remains unresolved; explicitly exclude genuinely deferred scope. Every accepted
+technical path must remain viable against the acceptance snapshot. Name each
+unresolved item and state its specification impact explicitly. Acceptance
+requires the material snapshot or source identity against
 which the design was validated; if it is unavailable, keep the record `Blocked`
 rather than inferring provenance from reported prior acceptance. Record that
 exact identity and its validation time so later work can detect drift.
@@ -248,4 +291,6 @@ design-time findings are recorded on the decisions they constrain;
 deferred scope and specification impact are explicit;
 each `Constrained` agenda item traces to an evidenced `C<n>` contract or
 invariant; paused decisions are `Needs research`; and the acceptance snapshot or
-evidence identity is sufficient to detect later material change.
+evidence identity is sufficient to detect later material change; every materially
+considered option has a feasibility and architecture disposition; and every
+accepted path is viable with its conditions and exceptions traceable.

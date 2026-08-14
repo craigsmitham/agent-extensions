@@ -134,6 +134,7 @@ expected=(
   knowledge/harness-engineering
   knowledge/knowledge-management
   knowledge/product-management
+  knowledge/skill-engineering
   knowledge/software-architecture
   knowledge/strategy
   knowledge/workflow-automation
@@ -142,16 +143,22 @@ expected=(
   packs/effect-v4
   packs/field-notes
   packs/harness-engineering
+  packs/skill-engineering
   packs/work-management
   rules/field-notes
+  skills/admit-agent-skill
   skills/assess-codebase-change-readiness
+  skills/audit-agent-skill
+  skills/author-agent-skill
   skills/author-docs
   skills/author-okf
   skills/conduct-codebase-research
   skills/craft-effect-v4
+  skills/evaluate-agent-skill
   skills/field-notes
   skills/frame-codebase-research
   skills/garden-context
+  skills/govern-agent-skill-library
   skills/improve-instructions
   skills/improve-whatever
   skills/plan-codebase-change
@@ -173,7 +180,7 @@ actual_list="$(
 )"
 
 if [[ "$expected_list" != "$actual_list" ]]; then
-  echo "Public package inventory differs from the approved 34-package set." >&2
+  echo "Public package inventory differs from the approved ${#expected[@]}-package set." >&2
   diff <(printf '%s\n' "$expected_list") <(printf '%s\n' "$actual_list") || true
   exit 1
 fi
@@ -215,13 +222,13 @@ while IFS= read -r -d '' manifest; do
 done < <(find "$validation_root/.axm/extensions/@craigsmitham" -type f \
   \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) -print0)
 
-if jq -e '
+if jq -e --argjson expected_count "${#expected[@]}" '
   ([.skills | to_entries[] | select(.key != "axm") |
       (.value | if type == "object" then .source else . end)] +
    [.knowledge | to_entries[] | .value] +
    [.packs | to_entries[] | .value] +
    [.rules | to_entries[] | .value]) |
-  length == 34 and
+  length == $expected_count and
   all(type == "string" and startswith("workspace:@craigsmitham/"))
 ' "$validation_root/.axm/settings.json" >/dev/null; then
   :

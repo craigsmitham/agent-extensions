@@ -16,6 +16,14 @@ and are not published from this repository.
 | `docs` | Diátaxis-oriented documentation knowledge plus one consolidated authoring and review skill | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
 | `harness-engineering` | Garden project context, improve agent instructions, and apply harness- and context-engineering knowledge | `axm install @craigsmitham/packs/harness-engineering` |
+| `skill-engineering` | Author, evaluate, audit, admit, govern, and maintain Agent Skills and shared libraries using one lifecycle model | `axm install @craigsmitham/packs/skill-engineering` |
+
+## Pack boundaries
+
+| Pack | Owns | Does not own |
+| --- | --- | --- |
+| `harness-engineering` | The system around agents, skills as a harness element, and general progressive disclosure | The detailed design, evaluation, security, compatibility, or maintenance lifecycle of an Agent Skill |
+| `skill-engineering` | Candidate selection, authoring, evaluation, trust review, admission, ownership, capability governance, portfolio coherence, maintenance, and retirement for Agent Skills | General harness architecture, runtime policy-engine implementation, project-context gardening, or always-on instruction files |
 
 ## Standalone knowledge
 
@@ -24,6 +32,7 @@ and are not published from this repository.
 | `harness-engineering` | Harness and context engineering principles, domain profiles, elements, patterns, practices, and guides | `axm install @craigsmitham/knowledge/harness-engineering` |
 | `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
 | `product-management` | Product outcomes, risks, empowered teams, discovery, delivery, evidence, and product strategy | `axm install @craigsmitham/knowledge/product-management` |
+| `skill-engineering` | Agent Skill foundations, design, evaluation, trust, governance, portability, platform profiles, maintenance, and portfolio coherence | `axm install @craigsmitham/knowledge/skill-engineering` |
 | `software-architecture` | Responsibilities, boundaries, authority, invariants, dependencies, and change in software systems | `axm install @craigsmitham/knowledge/software-architecture` |
 | `strategy` | Coherent choices about participation, advantage, capabilities, evidence, and value creation | `axm install @craigsmitham/knowledge/strategy` |
 | `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |

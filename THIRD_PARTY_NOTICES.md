@@ -34,6 +34,14 @@ vendored copy of the Effect source.
 to authoritative public references. It does not vendor the TC39 specification
 or MDN documentation.
 
+## Agent Skills
+
+The `skill-engineering` knowledge bundle synthesizes public Agent Skills
+specifications, product documentation, and research identified in each
+concept's provenance metadata. The bundle contains original summaries and
+applications; it does not vendor those sources or reproduce proprietary
+templates.
+
 ## Management and architecture sources
 
 The `knowledge-management`, `product-management`, `software-architecture`, and

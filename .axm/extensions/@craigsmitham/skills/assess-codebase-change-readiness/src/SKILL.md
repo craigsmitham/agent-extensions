@@ -33,6 +33,8 @@ Establish:
 
 - the proposed scope, exclusions, stakeholders, and accepted authority;
 - the governing outcomes, behaviors, decisions, contracts, and constraints;
+- the accepted technical path, feasibility basis, prerequisites, and any
+  architectural exceptions;
 - current-state evidence and its repository or named snapshot identity;
 - the intended implementation path and objective completion evidence; and
 - applicable repository, security, privacy, migration, and operational duties.
@@ -83,8 +85,12 @@ Cover nominal, off-nominal, and adverse scenarios in proportion to risk.
 Check relevant ownership, interfaces, state and data transitions, failure and
 concurrency semantics, authorization and trust boundaries, compatibility,
 migration, observability, rollout, recovery, and rollback. Verify material
-implementation anchors against the current snapshot. Surface contradictions
-between accepted artifacts instead of choosing one silently.
+implementation anchors, dependency and runtime semantics, and the accepted
+option's feasibility evidence against the current snapshot. Confirm that each
+feasibility prerequisite is satisfied or covered by accepted, traceable work and
+that every architecture exception has explicit authority. Surface contradictions
+between accepted artifacts instead of choosing one silently. A familiar or
+idiomatic mechanism is not evidence that it exists in the material version.
 
 ### 4. Test whether implementation and verification are executable
 
@@ -124,5 +130,7 @@ reproduce each finding, and distinguish observed facts from declarations and
 inferences.
 
 Set `Ready` only when all material scope is accepted, current evidence supports
-the intended path, traceability is complete, required verification is
-executable, and no implementation step must decide consequential behavior.
+the intended and technically feasible path, feasibility prerequisites and
+architecture exceptions are traceable, required verification is executable,
+and no implementation step must discover whether the chosen mechanism exists or
+decide consequential behavior.

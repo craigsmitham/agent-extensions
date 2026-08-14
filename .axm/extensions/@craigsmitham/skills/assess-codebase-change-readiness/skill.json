@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "assess-codebase-change-readiness",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Determines whether an accepted codebase change is sufficiently evidenced and constrained to begin implementation",
   "keywords": [
     "implementation-readiness",

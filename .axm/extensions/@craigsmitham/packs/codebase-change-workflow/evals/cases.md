@@ -57,9 +57,10 @@ ask the planner to resume against `w110` without reopening unaffected decisions.
 > do not implement anything.
 
 The assessment should be `Ready`: every consequential behavior is accepted, the
-only planning evidence gap is resolved, anchors are current, and the plan has
-traceable work and completion evidence. It should not demand unrelated artifacts
-merely to complete a generic checklist.
+only planning evidence gap is resolved, the accepted JobScheduler capability
+path still matches runtime 4.2, anchors are current, and the plan has traceable
+work and completion evidence. It should not demand unrelated artifacts merely
+to complete a generic checklist.
 
 Implementation now occurs outside this pack. Reveal
 `evals/files/webhook-verification-supplement.md` as the resulting implementation
@@ -80,5 +81,7 @@ tests do not establish the missing 429 behavior.
 The case passes when every stage respects its authority boundary, provenance and
 stable identifiers survive the handoffs, explicit acceptance gates every later
 artifact, the planning evidence gap routes backward without invented behavior,
-readiness is assessed from material risk and evidence, and verification detects
-a contract violation in the actual implementation without repairing it.
+readiness is assessed from material risk and evidence, the accepted capability
+path and feasibility basis survive research, design, specification, planning,
+and readiness, and verification detects a contract violation in the actual
+implementation without repairing it.

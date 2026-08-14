@@ -55,10 +55,13 @@ locate ownership, then narrow to relevant symbols and flows:
    directly related tests.
 2. Trace control and data from entry through internal and external boundaries to
    state changes and outputs.
-3. Inventory the capabilities within and adjacent to the traced boundaries that
-   already carry responsibility of this kind, with their extension points,
-   constraints, coupling, and consumers. Document what exists without judging
-   whether it fits or is desirable.
+3. Inventory the capabilities within and adjacent to the traced boundaries, plus
+   governing architectural, framework, or runtime capabilities that could shape
+   the design space. Record what they do, their extension points, constraints,
+   coupling, consumers, material versions, and the source or authority that makes
+   each a binding rule, established pattern, or merely available dependency.
+   Document what exists without judging whether it fits or is desirable; do not
+   infer an obligation from dependency presence or common use alone.
 4. For bugs, safely reproduce at the research snapshot when practical, relate
    the result to the reported snapshot, narrow the affected region, compare
    expected and observed paths, and inspect state, timing, error handling, and
@@ -109,7 +112,8 @@ Before handing off, confirm that:
 
 - every supplied question has an explicit status and evidence trail;
 - the technical map crosses every material boundary found;
-- existing capabilities in scope are inventoried, or their absence is stated;
+- relevant existing and governing capabilities are inventoried with their
+  authority and material versions, or their absence is stated;
 - material claims are cited and inferences are labeled;
 - material claims identify the snapshot that supports them;
 - chronology, relevant drift, and unassessable provenance remain explicit;

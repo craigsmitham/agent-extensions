@@ -1,0 +1,36 @@
+# Skill engineering knowledge
+
+Portable understanding for treating Agent Skills as discoverable, executable,
+evaluated, secure, portable, governed, owned, and maintainable artifacts. It
+covers the open Agent Skills core, workflow and routing design, behavioral
+evaluation, trust, admission, capability governance, host compatibility,
+portfolio coherence, and lifecycle operations.
+
+Use it while designing, reviewing, evaluating, admitting, governing, or
+maintaining Agent Skills and shared libraries. It does not prescribe general
+harness architecture or replace host-specific package managers, validators,
+permission systems, policy engines, or plugin formats.
+
+## Install
+
+```sh
+axm install @craigsmitham/knowledge/skill-engineering
+```
+
+Install `@craigsmitham/packs/skill-engineering` instead when you also want the
+coupled authoring, evaluation, audit, admission, and library-governance
+workflows.
+
+## Open concepts
+
+```sh
+axm knowledge concepts search "skill routing"
+axm knowledge concepts get '@craigsmitham/knowledge/skill-engineering#evaluation/evaluation-model'
+axm knowledge concepts get '@craigsmitham/knowledge/skill-engineering#trust/skill-threat-model'
+axm knowledge concepts get '@craigsmitham/knowledge/skill-engineering#governance/governance-model'
+```
+
+## License
+
+CC-BY-SA-4.0. Source attribution and provenance are recorded on concepts and in
+the repository notices.

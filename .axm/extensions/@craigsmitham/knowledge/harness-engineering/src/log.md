@@ -1,5 +1,12 @@
 # Bundle update log
 
+## 2026-08-14
+
+- **Skill boundary**: Retained the [Agent skills](elements/agent-skills.md)
+  harness-element model and generic [progressive disclosure](patterns/progressive-disclosure.md),
+  while retiring the detailed skill-authoring guide to a compatibility route so
+  specialized lifecycle guidance has one owner.
+
 ## 2026-08-09
 
 - **Trust**: Machine-confirmed all 16 stable concepts against their cited

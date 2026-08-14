@@ -1,0 +1,20 @@
+{
+  "pack_name": "skill-engineering",
+  "evals": [
+    {
+      "id": 1,
+      "protocol": "Run the six prompts in evals/cases.md as consecutive turns in one isolated session, explicitly invoking the named workflow where specified and withholding assertions until grading.",
+      "files": ["evals/files/library-workflow.md", "evals/files/governance-supplement.md"],
+      "expected_output": "A bounded candidate, independent behavioral and trust evidence, an exact admission decision, a read-only library governance report, and a neighboring harness request that stays outside the pack.",
+      "assertions": [
+        "Authoring uses the shared knowledge, canonical host mechanism, validation, smoke checks, and authored governance claims without claiming independent support, trust, or approval.",
+        "Evaluation leaves the target unchanged, separates routing from execution and isolation from coexistence, and binds claims to the tested revision, environment, and cohort.",
+        "Audit begins statically, compares capability sets, treats the package as untrusted, and does not execute, fetch, install, activate, or publish it.",
+        "Admission binds the exact evidence and owner acceptance, considers portfolio alternatives, and makes an independent decision without repairing or publishing the candidate.",
+        "Library governance assesses inventory, ownership, capabilities, lifecycle, coherence, evidence, and utility without admitting, consolidating, revoking, retiring, or deleting skills.",
+        "Findings loop to the smallest responsible workflow without collapsing authoring, evaluation, audit, admission, and portfolio-governance boundaries.",
+        "The harness-configuration request is recognized as neighboring system work and does not activate a detailed Agent Skill lifecycle workflow."
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "conduct-codebase-research",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Answers codebase research questions with a cited, snapshot-bound current-state technical map",
   "keywords": [
     "codebase",

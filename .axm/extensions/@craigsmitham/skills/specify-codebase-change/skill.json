@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "specify-codebase-change",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Produces snapshot-bound functional and technical specifications from accepted codebase designs",
   "keywords": [
     "software-design",

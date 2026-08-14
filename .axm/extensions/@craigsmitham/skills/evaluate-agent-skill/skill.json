@@ -1,0 +1,26 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "evaluate-agent-skill",
+  "version": "0.0.1",
+  "description": "Evaluates Agent Skill routing, execution, coexistence, outcomes, efficiency, safety, and robustness against representative cases, cohorts, and baselines",
+  "keywords": [
+    "agent-skills",
+    "skill-evaluation",
+    "skill-testing",
+    "benchmarking",
+    "routing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/skills/evaluate-agent-skill"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "recommendedPacks": [
+    "@craigsmitham/packs/skill-engineering"
+  ],
+  "standalone": false
+}

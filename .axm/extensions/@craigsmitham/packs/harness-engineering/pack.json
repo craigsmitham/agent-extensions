@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Context-gardening knowledge and workflows for improving project context and agent instructions",
   "keywords": [
     "harness",

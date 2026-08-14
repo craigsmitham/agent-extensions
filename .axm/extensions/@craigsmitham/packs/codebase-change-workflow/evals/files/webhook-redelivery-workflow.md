@@ -24,6 +24,11 @@ unverified implementation preference.
 - Worker tests cover one successful attempt and one terminal failure. Integration
   tests verify that duplicate accepts return the existing delivery identifier.
 - Metrics count terminal outcomes but not attempts or retry exhaustion.
+- `docs/architecture/background-jobs.md` is the repository's binding architecture
+  authority for delayed background work. It requires extending
+  `src/jobs/job-scheduler.ts` rather than starting independent worker timers.
+  Scheduler runtime 4.2 supplies durable delayed enqueue, cancellation, retry
+  policy extension points, and scheduling metrics; email retries already use it.
 - Between `w090` and `w100`, the only relevant change renamed the queue; behavior
   and persistence contracts did not change. This is sufficient to relate the
   report to current behavior but not to reproduce the partner's environment.
@@ -34,6 +39,9 @@ The evaluator supplies these choices only after the workshop presents the
 corresponding decision:
 
 - The worker owns retry policy and scheduling.
+- The worker-owned retry path extends the established JobScheduler capability;
+  this is constrained by the binding background-jobs rule rather than selected
+  as another human decision.
 - A delivery permits three total attempts at 0, 30, and 120 seconds.
 - Attempt uniqueness is `(delivery_key, attempt_number)`; a delivered row never
   transitions again.
@@ -48,5 +56,6 @@ corresponding decision:
 
 Only `docs/webhooks.md` changed after `w100`; implementation anchors, tests,
 configuration, dependencies, deployment behavior, and runtime contracts are
-unchanged. Proposed attempt storage belongs beside `delivery-store.ts` by the
-repository's existing persistence convention.
+unchanged, including JobScheduler runtime 4.2 and the background-jobs rule.
+Proposed attempt storage belongs beside `delivery-store.ts` by the repository's
+existing persistence convention.

@@ -4,7 +4,7 @@
   "type": "skill",
   "name": "workshop-codebase-design",
   "version": "0.0.7",
-  "description": "Orients designers to a change and workshops snapshot-aware functional and technical codebase designs with explicit human decisions",
+  "description": "Workshops snapshot-aware codebase designs with evidence-backed technical feasibility, architectural fit, and explicit human decisions",
   "keywords": [
     "software-design",
     "architecture",
@@ -12,6 +12,8 @@
     "decision-record",
     "functional-design",
     "technical-design",
+    "technical-feasibility",
+    "architectural-fit",
     "traceability",
     "refactoring",
     "evidence-freshness",

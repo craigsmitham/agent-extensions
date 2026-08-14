@@ -12,7 +12,9 @@ remote, and distributed runtimes. It also captures reusable structures and
 operating disciplines such as progressive disclosure and context gardening.
 
 Harness elements include agent skills, `AGENTS.md`, `CLAUDE.md`, and related
-harness surfaces. The knowledge bundle is independently installable. The
+harness surfaces. For Agent Skills, this bundle owns their place in the harness,
+not their detailed authoring, evaluation, security, compatibility, or
+maintenance lifecycle. The knowledge bundle is independently installable. The
 harness-engineering pack pairs it with the coupled `garden-context` and
 `improve-instructions` workflows.
 

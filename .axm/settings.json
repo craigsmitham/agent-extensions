@@ -13,7 +13,7 @@
     }
   },
   "skills": {
-    "axm": "@agentxm/skills/axm@0.27.4",
+    "axm": "@agentxm/skills/axm",
     "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
     "improve-whatever": "workspace:@craigsmitham/skills/improve-whatever",
     "field-notes": "workspace:@craigsmitham/skills/field-notes",
@@ -31,7 +31,12 @@
     "assess-codebase-change-readiness": "workspace:@craigsmitham/skills/assess-codebase-change-readiness",
     "verify-codebase-change": "workspace:@craigsmitham/skills/verify-codebase-change",
     "triage-work": "workspace:@craigsmitham/skills/triage-work",
-    "craft-effect-v4": "workspace:@craigsmitham/skills/craft-effect-v4"
+    "craft-effect-v4": "workspace:@craigsmitham/skills/craft-effect-v4",
+    "author-agent-skill": "workspace:@craigsmitham/skills/author-agent-skill",
+    "evaluate-agent-skill": "workspace:@craigsmitham/skills/evaluate-agent-skill",
+    "audit-agent-skill": "workspace:@craigsmitham/skills/audit-agent-skill",
+    "admit-agent-skill": "workspace:@craigsmitham/skills/admit-agent-skill",
+    "govern-agent-skill-library": "workspace:@craigsmitham/skills/govern-agent-skill-library"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"
@@ -45,7 +50,8 @@
     "knowledge-management": "workspace:@craigsmitham/knowledge/knowledge-management",
     "software-architecture": "workspace:@craigsmitham/knowledge/software-architecture",
     "product-management": "workspace:@craigsmitham/knowledge/product-management",
-    "strategy": "workspace:@craigsmitham/knowledge/strategy"
+    "strategy": "workspace:@craigsmitham/knowledge/strategy",
+    "skill-engineering": "workspace:@craigsmitham/knowledge/skill-engineering"
   },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",
@@ -53,6 +59,7 @@
     "field-notes": "workspace:@craigsmitham/packs/field-notes",
     "harness-engineering": "workspace:@craigsmitham/packs/harness-engineering",
     "codebase-change-workflow": "workspace:@craigsmitham/packs/codebase-change-workflow",
-    "work-management": "workspace:@craigsmitham/packs/work-management"
+    "work-management": "workspace:@craigsmitham/packs/work-management",
+    "skill-engineering": "workspace:@craigsmitham/packs/skill-engineering"
   }
 }

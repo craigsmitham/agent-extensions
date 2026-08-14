@@ -35,7 +35,9 @@ Use `Covered`, `Gap`, `Accepted risk`, or `Not applicable` for status.
 
 ## Conditions Checked
 <Relevant behavioral, technical, security, migration, operational, and delivery
-conditions; explain material omissions rather than reproducing a checklist.>
+conditions, including the accepted capability path, material versions,
+feasibility prerequisites, and architectural exceptions; explain material
+omissions rather than reproducing a checklist.>
 
 ## Handoff
 <Unblocking evidence, preserved accepted scope, and the exact point at which a
