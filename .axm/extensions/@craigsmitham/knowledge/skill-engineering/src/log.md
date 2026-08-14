@@ -2,6 +2,9 @@
 
 ## 2026-08-14
 
+- **Agent boundary**: Distinguished a reusable skill job from an agent
+  definition that owns role, authority, tools, memory, coordination, and
+  stopping behavior.
 - **Evaluation boundary**: Assigned generic evaluation contracts, cases,
   trials, graders, uncertainty, validity, and suite governance to evaluation
   engineering while retaining skill routing, activated execution,

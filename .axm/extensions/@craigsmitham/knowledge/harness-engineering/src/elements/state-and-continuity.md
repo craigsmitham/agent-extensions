@@ -10,7 +10,7 @@ sources:
     title: AI Harness Engineering — A Runtime Substrate for Foundation-Model Software Agents
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-14T20:51:01Z
+  at: 2026-08-14T22:24:33Z
 stale_after: 2027-02-14
 ---
 
@@ -20,6 +20,12 @@ Agent work produces at least two kinds of state. **Task state** records the
 goal, decisions, progress, and remaining obligations. **Execution state**
 records actions and environmental effects. A harness should not hide either
 inside one transient conversation.
+
+The harness owns durable storage, identifiers, checkpoints, reconciliation,
+and resume mechanics. Agent engineering owns which remembered information may
+influence future behavior and how resumed state changes the next decision.
+Context engineering owns selection, provenance, freshness, representation,
+compaction, and retirement of information presented again.
 
 Persist only what later work needs, but make checkpoints attributable and
 resume-safe. A replacement worker should be able to distinguish confirmed

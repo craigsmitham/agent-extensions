@@ -16,7 +16,7 @@ sources:
     title: Amazon Bedrock AgentCore — Agent harnesses and agent runtimes
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-14T21:42:14Z
+  at: 2026-08-14T22:24:33Z
 verified:
   - by: codex/gpt-5.6
     at: 2026-08-09T22:13:44Z
@@ -31,10 +31,17 @@ important distinctions and tradeoffs.
 
 ## Core disciplines
 
+**Agent engineering**
+: The discipline of designing and stewarding an agent's goal-directed
+  behavioral contract: agency choice, goals, decision loops, planning,
+  capability and memory policy, coordination, human control, stopping,
+  reliability, and lifecycle.
+
 **Harness engineering**
 : The discipline of designing, evaluating, and maintaining the system around
-  an agent so model capability becomes useful, bounded, and verifiable
-  behavior. See [Harness engineering](foundations/harness-engineering.md).
+  an agent that implements model interaction, tools, runtime, persistence,
+  feedback, permissions, and enforcement. See
+  [Harness engineering](foundations/harness-engineering.md).
 
 **Context engineering**
 : The discipline of shaping the informational environment an agent receives,

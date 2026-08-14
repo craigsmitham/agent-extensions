@@ -5,7 +5,7 @@ for each package is the SPDX expression in its manifest. The prospective
 license-selection policy and package-boundary rules are documented in
 [`docs/licensing.md`](./docs/licensing.md).
 
-- The `context-engineering`, `eval-engineering`, and
+- The `agent-engineering`, `context-engineering`, `eval-engineering`, and
   `prompt-engineering` knowledge bundles are licensed under `CC-BY-4.0`.
 - The `docs` package family (`docs` knowledge and pack plus `author-docs`), the
   `field-notes` package family, and the `knowledge-management`,

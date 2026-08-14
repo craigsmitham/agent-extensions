@@ -2,6 +2,9 @@
 
 ## 2026-08-14
 
+- **Agent boundary**: Assigned agency choice, goals, planning, tool-selection
+  policy, delegation, recovery, and stopping to agent engineering while keeping
+  their model-facing expression in prompt engineering.
 - **Evaluation boundary**: Assigned generic case design, trials, graders,
   uncertainty, validity, and suite lifecycle to evaluation engineering while
   retaining rendered-prompt identity, controlled ablation, response contracts,

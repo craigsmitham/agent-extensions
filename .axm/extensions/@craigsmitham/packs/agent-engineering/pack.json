@@ -1,0 +1,31 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "owner": "@craigsmitham",
+  "version": "0.0.1",
+  "description": "Agent behavior foundations with companion harness, context, prompt, and evaluation engineering knowledge",
+  "keywords": [
+    "agent-engineering",
+    "ai-agents",
+    "agentic-systems",
+    "harness-engineering",
+    "context-engineering",
+    "prompt-engineering",
+    "eval-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/packs/agent-engineering"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "type": "pack",
+  "name": "agent-engineering",
+  "dependencies": {
+    "@craigsmitham/knowledge/agent-engineering": "^0.1.0",
+    "@craigsmitham/knowledge/harness-engineering": "^0.1.3",
+    "@craigsmitham/knowledge/context-engineering": "^0.1.1",
+    "@craigsmitham/knowledge/prompt-engineering": "^0.1.1",
+    "@craigsmitham/knowledge/eval-engineering": "^0.1.1"
+  }
+}

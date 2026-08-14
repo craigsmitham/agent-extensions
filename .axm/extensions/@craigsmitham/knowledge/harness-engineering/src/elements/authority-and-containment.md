@@ -10,7 +10,7 @@ sources:
     title: AI Harness Engineering — A Runtime Substrate for Foundation-Model Software Agents
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-14T20:51:01Z
+  at: 2026-08-14T22:24:33Z
 stale_after: 2027-02-14
 ---
 
@@ -19,6 +19,11 @@ stale_after: 2027-02-14
 Authority defines which resources and actions an agent may use. Containment
 limits the effects an agent can produce even when its reasoning or instructions
 fail. Reliable harnesses express consequential boundaries structurally.
+
+Agent engineering defines which authority the role needs and when the agent
+should request approval, decline, or escalate. Harness engineering owns the
+credentials, permission checks, sandboxes, budgets, approval gates, and other
+mechanisms that enforce those limits.
 
 Grant the least authority that still permits the task, scoped by resource,
 operation, environment, duration, and identity. Separate read, propose, stage,

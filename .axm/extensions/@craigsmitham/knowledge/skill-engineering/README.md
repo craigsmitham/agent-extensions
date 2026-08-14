@@ -8,23 +8,19 @@ compatibility, portfolio coherence, and lifecycle operations.
 
 This bundle owns how those concerns specialize to Agent Skills. General prompt
 contracts, examples, templates, response presentation, prompt evaluation, and
-prompt trust belong to the neighboring prompt-engineering discipline and are
-included as a direct sibling in the skill-engineering pack.
+prompt trust belong to the neighboring prompt-engineering discipline.
 
 Use it while designing, reviewing, evaluating, admitting, governing, or
 maintaining Agent Skills and shared libraries. It does not prescribe general
-harness architecture or replace host-specific package managers, validators,
-permission systems, policy engines, or plugin formats.
+harness architecture, define the role and control policy of a goal-directed
+agent, or replace host-specific package managers, validators, permission
+systems, policy engines, or plugin formats.
 
 ## Install
 
 ```sh
 axm install @craigsmitham/knowledge/skill-engineering
 ```
-
-Install `@craigsmitham/packs/skill-engineering` instead when you also want the
-coupled authoring, evaluation, audit, admission, and library-governance
-workflows.
 
 ## Open concepts
 

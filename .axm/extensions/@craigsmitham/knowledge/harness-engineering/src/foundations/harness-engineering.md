@@ -13,7 +13,7 @@ sources:
     title: AI Harness Engineering — A Runtime Substrate for Foundation-Model Software Agents
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-14T21:42:14Z
+  at: 2026-08-14T22:24:33Z
 verified:
   - by: codex/gpt-5.6
     at: 2026-08-09T22:13:44Z
@@ -27,8 +27,9 @@ maintaining the system around an agent so that a model's latent capability
 becomes useful, bounded, and verifiable behavior. The harness mediates between
 intent, the model, and the environment in which work happens.
 
-The central idea is that an agent's behavior is a property of a system, not of
-the model alone:
+The central idea is that deployed agent behavior is a property of a system, not
+of the model alone. Agent engineering defines the goal-directed behavioral
+contract; harness engineering implements and enforces the operating conditions:
 
 ```text
 intent → harness → model ↔ working environment → evidence and outcome
@@ -48,20 +49,22 @@ of these responsibilities:
 
 | Responsibility | Question |
 | --- | --- |
-| Intent and task specification | What outcome is sought, and what counts as done? |
-| Context | What should the agent know now, and where can it find more? |
+| Task-contract delivery | How is the agent-owned goal, responsibility, evidence, and stopping contract represented and enforced? |
+| Context delivery | How is selected information made available through the runtime? |
 | Action and observation interfaces | What can the agent do and inspect? |
 | Runtime and environment | Where does work execute, and how is it isolated and reproduced? |
-| State and continuity | What has happened, what remains current, and how can work resume? |
-| Feedback and verification | What evidence shows progress, failure, or completion? |
-| Authority and containment | What may the agent affect, and where must it stop or escalate? |
+| State and continuity | How are task and execution state persisted, reconciled, and resumed? |
+| Feedback and verification | What mechanical evidence and failure signals are produced and retained? |
+| Authority and containment | How are permissions, approvals, budgets, isolation, and hard limits enforced? |
 | Operation and improvement | How are runs observed, evaluated, diagnosed, and improved? |
 
 Recent research describes a similar runtime substrate spanning task
-specification, context selection, tool access, project memory, task state,
+specification delivery, context access, tools, project memory, task state,
 observability, failure attribution, verification, permissions, and maintenance
-state.[^ai-harness-runtime] The exact decomposition matters less than preserving
-the whole-system view.
+state.[^ai-harness-runtime] Capability-selection policy, reflection, replanning,
+recovery choice, delegation, and termination remain behavioral responsibilities
+rather than becoming harness responsibilities merely because the harness
+executes them.
 
 ## More than prompting
 
@@ -71,9 +74,9 @@ actions are permitted, state changes, and outcomes are judged.
 
 An instruction such as “run the tests” is prompt-level guidance. A harness can
 also provide the test command, provision its dependencies, execute it in an
-isolated workspace, summarize its output, block completion on failure, and
-retain the result as evidence. The instruction may still help, but reliability
-comes from the surrounding arrangement.
+isolated workspace, summarize its output, enforce a hard completion gate, and
+retain the result as evidence. The agent's behavioral contract decides when to
+run the check and how to respond; reliability comes from both responsibilities.
 
 Harness engineering is also broader than selecting an agent framework. A
 framework supplies implementation primitives; harness engineering decides how
@@ -124,9 +127,10 @@ by evaluation on representative work.
 
 Harness engineering is a general discipline. Its principles are specialized
 through a **domain profile**, such as software engineering, research, or
-operations. The domain is distinct from where adaptation lives, who owns it,
-how broadly it applies, how work is initiated, where it executes, how long it
-persists, how agents coordinate, and what authority they receive.
+operations. The domain is distinct from where harness adaptation lives, who
+owns it, where it executes, how state persists, and which controls it enforces.
+Autonomy, supervision, goal horizon, and coordination topology classify the
+agent design, not the harness alone.
 
 This distinction prevents category errors. A **coding harness** names the
 software-engineering domain; a **repository harness** names environment-side,

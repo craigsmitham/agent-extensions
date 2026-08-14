@@ -2,6 +2,10 @@
 
 ## 2026-08-14
 
+- **Agent boundary**: Assigned goals, planning, capability selection, memory
+  policy, recovery choice, delegation, coordination, and termination behavior
+  to agent engineering while retaining their implementation and structural
+  enforcement in the harness.
 - **Classification**: Added independent axes for application domain,
   adaptation locus, ownership scope, interaction, execution, continuity,
   coordination, authority, and evaluation role so category names do not mix

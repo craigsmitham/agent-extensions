@@ -2,6 +2,10 @@
 
 ## 2026-08-14
 
+- **Agent boundary**: Made context engineering cross-cutting within agent
+  systems: agent engineering owns observation and memory influence policy,
+  context engineering owns information selection and lifecycle, and harness
+  engineering owns retrieval and persistence mechanisms.
 - **Evaluation boundary**: Assigned generic evaluation design and governance to
   evaluation engineering while retaining selection, destination, authority,
   freshness, use, economy, and context-ablation evidence here.

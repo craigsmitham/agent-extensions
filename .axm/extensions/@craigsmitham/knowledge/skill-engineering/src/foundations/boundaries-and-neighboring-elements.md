@@ -1,10 +1,10 @@
 ---
 type: Reference
 title: Skill boundaries and neighboring elements
-description: How skills differ from instructions, knowledge, prompts, tools, scripts, subagents, hooks, and plugins.
-tags: [agent-skills, boundaries, instructions, tools, subagents, plugins]
+description: How skills differ from agent definitions, instructions, knowledge, prompts, tools, scripts, subagents, hooks, and plugins.
+tags: [agent-skills, boundaries, agent-definitions, instructions, tools, subagents, plugins]
 status: stable
-generated: { by: "codex/gpt-5.6", at: 2026-08-14T19:36:04Z }
+generated: { by: "codex/gpt-5.6", at: 2026-08-14T22:24:33Z }
 ---
 
 # Skill boundaries and neighboring elements
@@ -15,6 +15,7 @@ can be placed in the same directory or plugin.
 
 | Element | Primary job | Boundary from a skill |
 | --- | --- | --- |
+| Agent definition or configuration | Define a goal-directed actor's role, tools, memory, authority, coordination, and control policy | Owns the actor and its behavior rather than one reusable job |
 | Instruction file or rule | Establish always-on invariants and routes | Applies before a task-specific workflow is selected |
 | Knowledge document | Supply facts, explanation, or reference | Informs cognition without owning an end-to-end procedure |
 | Prompt or stored command | Start or shape one invocation | Need not be implicitly discoverable or reusable as a capability |
@@ -28,6 +29,8 @@ can be placed in the same directory or plugin.
 
 - Use a skill for one repeatable job with recognizable triggers and a coherent
   outcome.
+- Use an agent definition when the durable artifact is an actor with a role,
+  authority, tools, state, coordination, and stopping policy.
 - Use an instruction for an invariant that must apply before the job is known.
 - Use knowledge when the user needs understanding or lookup rather than a
   procedure.

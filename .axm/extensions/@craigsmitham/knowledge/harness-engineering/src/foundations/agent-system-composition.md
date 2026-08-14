@@ -19,7 +19,7 @@ sources:
     title: Anthropic — Building effective agents
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-14T21:42:14Z
+  at: 2026-08-14T22:24:33Z
 stale_after: 2027-02-14
 ---
 
@@ -36,8 +36,8 @@ split one layer across several services.
 
 | Layer | Primary responsibility |
 | --- | --- |
-| Agent | Interpret observations, decide, and propose or take actions toward a goal |
-| Harness core | Assemble model interactions, expose tools, advance the loop, and manage run state |
+| Agent | Own the goal contract, decision and planning policy, capability selection, recovery, delegation, and termination behavior |
+| Harness core | Assemble model interactions, implement tools, advance the loop, persist run state, and enforce controls |
 | Environment adaptation | Make a target environment legible, actionable, bounded, and verifiable for agents |
 | Runtime substrate | Supply compute, processes, isolation, dependencies, lifecycle, and durable execution facilities |
 | Orchestration plane | Admit and dispatch work, coordinate workers, manage dependencies, and reconcile results |

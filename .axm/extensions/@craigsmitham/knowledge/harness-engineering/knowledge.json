@@ -2,14 +2,14 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "harness-engineering",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "type": "knowledge",
   "format": {
     "name": "okf",
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "System design, composition, and classification of agent harnesses, runtimes, interfaces, environments, feedback, authority, and containment",
+  "description": "Runtime, interface, environment, persistence, feedback, authority, and containment engineering for agent systems",
   "keywords": [
     "harness",
     "harness-engineering",
@@ -37,7 +37,8 @@
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "license": "MIT",
   "recommendedPacks": [
-    "@craigsmitham/packs/harness-engineering"
+    "@craigsmitham/packs/harness-engineering",
+    "@craigsmitham/packs/agent-engineering"
   ],
   "standalone": true
 }

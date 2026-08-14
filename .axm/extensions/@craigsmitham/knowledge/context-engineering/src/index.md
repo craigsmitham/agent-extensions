@@ -8,7 +8,8 @@ Portable knowledge for shaping the informational environment an agent receives,
 discovers, produces, and carries through work. Use it for context authority,
 selection, routing, retrieval, instructions, memory, feedback, compaction, and
 maintenance; use prompt engineering for intentional instruction content and
-harness engineering for the larger runtime and control system.
+agent engineering for behavioral policy, and harness engineering for runtime,
+persistence, interfaces, and structural control.
 
 ## Begin with the context system
 

@@ -6,7 +6,8 @@ handoffs, skills, and multimodal interactions.
 
 Use it when prompt content or a response contract is the artifact under design.
 It does not own context retrieval and memory, runtime permissions and tool
-enforcement, or the lifecycle of a larger workflow package.
+enforcement, agency choice and control policy, or the lifecycle of a larger
+workflow package.
 
 ## Install
 

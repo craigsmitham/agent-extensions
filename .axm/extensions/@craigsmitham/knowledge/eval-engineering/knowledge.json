@@ -2,7 +2,7 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "eval-engineering",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "knowledge",
   "format": {
     "name": "okf",
@@ -27,7 +27,8 @@
   "recommendedPacks": [
     "@craigsmitham/packs/context-engineering",
     "@craigsmitham/packs/harness-engineering",
-    "@craigsmitham/packs/skill-engineering"
+    "@craigsmitham/packs/skill-engineering",
+    "@craigsmitham/packs/agent-engineering"
   ],
   "repository": {
     "type": "git",

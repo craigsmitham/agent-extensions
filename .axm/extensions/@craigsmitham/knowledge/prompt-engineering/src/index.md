@@ -8,12 +8,14 @@ Portable practices for engineering intentional model-facing instructions as
 testable, versioned artifacts. Use this bundle for prompt content and response
 contracts across task prompts, tools, graders, handoffs, and other invocation
 surfaces; use context engineering for the wider information lifecycle and
-harness engineering for runtime enforcement.
+agent engineering for goal-directed behavior, and harness engineering for
+runtime implementation and enforcement.
 
 ## Begin with ownership
 
 - [Foundations](foundations/) - The prompt artifact, its engineering lifecycle,
-  and its boundaries from context, harness, skill, and evaluation engineering.
+  and its boundaries from agent, context, harness, skill, and evaluation
+  engineering.
 
 ## Design model-facing contracts
 
@@ -32,5 +34,4 @@ harness engineering for runtime enforcement.
 
 ## Diagnose the responsible surface
 
-- [Failure routing](failure-routing.md) - How to distinguish prompt defects
-  from context, harness, skill, model, or deterministic-contract defects.
+- [Failure routing](failure-routing.md) - How to distinguish prompt defects from agent, context, harness, skill, model, workflow, or deterministic-contract defects.

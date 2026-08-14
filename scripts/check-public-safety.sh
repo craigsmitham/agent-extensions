@@ -128,6 +128,7 @@ else
 fi
 
 expected=(
+  knowledge/agent-engineering
   knowledge/context-engineering
   knowledge/docs
   knowledge/effect-v4
@@ -141,6 +142,7 @@ expected=(
   knowledge/software-architecture
   knowledge/strategy
   knowledge/workflow-automation
+  packs/agent-engineering
   packs/codebase-change-workflow
   packs/context-engineering
   packs/docs

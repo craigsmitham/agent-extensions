@@ -2,9 +2,11 @@
 
 Portable knowledge for designing, evaluating, and maintaining the system
 around an agent: runtime, interfaces, state, feedback, authority, containment,
-and operating environment. Context is one harness responsibility, but its
-detailed selection, routing, memory, and lifecycle practices belong to the
-separate context-engineering discipline.
+and operating environment. It implements and enforces an agent's behavioral
+contract; it does not own agency choice, goals, planning, capability policy,
+memory influence, delegation, recovery choice, or stopping behavior. Context
+is one harness input, but its detailed selection, routing, memory, and lifecycle
+practices belong to context engineering.
 
 Begin with harness engineering, agent-system composition, and classification,
 then inspect agent legibility and the concrete system responsibilities under
@@ -12,20 +14,16 @@ harness elements. Domain and environment profiles apply those foundations to
 recognizable work and ownership boundaries, including coding harnesses and
 repository harnesses.
 
-For context surfaces and Agent Skills, this bundle owns only their place in the
-whole system. Their detailed design and lifecycle belong to their respective
-engineering disciplines. The knowledge bundle is independently installable.
-The harness-engineering pack remains a compatibility umbrella for the broader
-harness and context toolset.
+For agent behavior, context surfaces, prompts, and Agent Skills, this bundle
+owns only the implementation boundary within the whole system. Their detailed
+design and lifecycle belong to their respective engineering disciplines. The
+knowledge bundle is independently installable.
 
 ## Install
 
 ```bash
 axm install @craigsmitham/knowledge/harness-engineering
 ```
-
-Install `@craigsmitham/packs/harness-engineering` instead when you also want
-the context-gardening and instruction-file workflows.
 
 ## Usage
 

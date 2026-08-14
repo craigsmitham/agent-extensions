@@ -7,7 +7,8 @@ progressive disclosure, compaction, and context gardening.
 
 Use it when the problem is what information reaches an agent, when, from which
 authority, and for how long. It does not own prompt wording, runtime permission
-enforcement, tool implementation, or the lifecycle of a packaged workflow.
+enforcement, tool implementation, behavioral choices about planning or memory
+influence, or the lifecycle of a packaged workflow.
 
 ## Install
 

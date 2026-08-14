@@ -10,7 +10,7 @@ sources:
     title: OpenAI — Harness engineering
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-14T20:51:01Z
+  at: 2026-08-14T22:24:33Z
 stale_after: 2027-02-14
 ---
 
@@ -19,6 +19,11 @@ stale_after: 2027-02-14
 Feedback tells an agent what happened after an action. Verification establishes
 whether a required property or outcome holds. A useful harness supplies both:
 fast signals for steering and objective evidence for completion.
+
+The harness owns producing, structuring, and retaining mechanical signals. The
+agent's behavioral design owns how evidence causes reflection, replanning,
+retry, fallback, escalation, or termination. Context engineering owns how the
+feedback is selected and represented when it re-enters model attention.
 
 Prefer executable feedback where a system can decide the result. Return the
 failed condition, affected artifact, relevant evidence, and recovery route.

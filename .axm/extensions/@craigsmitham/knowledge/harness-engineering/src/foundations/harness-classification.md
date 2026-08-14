@@ -1,8 +1,8 @@
 ---
 type: Reference
 title: Harness classification
-description: Independent axes and applied profiles for classifying agent harnesses without confusing domains, ownership, topology, scope, or product labels.
-tags: [harness, taxonomy, classification, coding-harness, repository-harness, archetypes]
+description: Independent implementation axes and applied profiles for classifying harnesses without absorbing agent behavior or product labels.
+tags: [harness, taxonomy, classification, adaptation-locus, ownership, execution, persistence, enforcement]
 status: stable
 sources:
   - id: harness-properties
@@ -16,36 +16,35 @@ sources:
     title: AI Harness Engineering — A Runtime Substrate for Foundation-Model Software Agents
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-14T21:42:14Z
+  at: 2026-08-14T22:24:33Z
 stale_after: 2027-02-14
 ---
 
 # Harness classification
 
-Harness categories become inconsistent when one label names the work, another
-names the deployment, and a third names the owner. Classify a concrete system
-along independent axes before assigning it a convenient profile name.
+Harness categories become inconsistent when one label names agent behavior,
+another names deployment, and a third names ownership. Classify the harness
+implementation along independent axes; classify autonomy, supervision, goal
+horizon, and coordination topology as properties of the agent design.
 
 ## Classification axes
 
 | Axis | Question | Representative values |
 | --- | --- | --- |
-| Application domain | What kind of work is supported? | software engineering, research, personal assistance, business operations, computer use |
-| Adaptation locus | Where is agent-specific adaptation primarily implemented? | agent host, working environment, shared platform, evaluation system |
-| Ownership and adaptation scope | Who owns the adaptation, and where does it apply? | user, repository, subtree/package, workspace/monorepo, team, organization |
-| Interaction mode | How is work initiated and supervised? | interactive copilot, delegated task, event-driven, scheduled, autonomous service |
-| Execution location | Where does work run? | local, remote, browser, container, VM, managed service |
-| Continuity | How long does identity and state persist? | single turn, session, resumable task, long-lived agent |
-| Coordination topology | How many actors coordinate, and how? | single agent, supervisor/worker, peer agents, workflow graph, shared queue |
-| Authority and environment reach | What may be observed or changed? | read-only, repository-scoped, workstation, SaaS accounts, production systems |
-| Evaluation role | Is this the operating target or the system measuring it? | production harness, evaluation target, evaluation harness |
+| Adaptation locus | Where is agent-specific support implemented? | agent host, working environment, shared platform, evaluation system |
+| Ownership and scope | Who owns the harness adaptation, and where does it apply? | user, repository, package, workspace, team, organization |
+| Execution location | Where do model calls, tools, and effects run? | local, remote, browser, container, VM, managed service |
+| Persistence mechanism | Which identities and state can survive an invocation? | ephemeral process, session store, checkpointed task, durable workflow, long-lived service |
+| Enforcement reach | Which controls can the harness enforce? | model invocation, tool allowlist, filesystem, network, credentials, approvals, budgets |
+| Evaluation role | Is this the operating target or the system administering measurement? | production harness, evaluation target, evaluation harness |
 
-“Runtime topology” is useful shorthand, but it often bundles execution
-location, continuity, interaction mode, and coordination. Keep those values
-separate when the distinction affects design or evaluation. Current scaffold
-research likewise finds meaningful variation in control flow, planning,
-memory, tool use, coordination, and verification rather than one size axis.
-[^harness-properties][^scaffold-taxonomy]
+Control flow, planning, memory policy, tool-selection policy, coordination, and
+verification behavior are important scaffold properties, but their behavioral
+meaning belongs to agent design. The harness classification records how those
+policies are implemented, persisted, exposed, and enforced. Runtime-substrate
+research likewise distinguishes the behavioral agent from the surrounding task,
+tool, state, observability, verification, and permission machinery.[^harness-properties]
+[^scaffold-taxonomy][^ai-harness-runtime]
 
 ## Applied profiles combine axes
 
@@ -54,43 +53,25 @@ answer different questions:
 
 | Profile | Primary classification |
 | --- | --- |
-| Coding harness | Software-engineering application domain |
-| Coding-agent harness | Agent-host adaptation for software-engineering work |
+| Coding-agent harness | Agent-host adaptation implemented for software-engineering work |
 | Repository harness | Environment-side adaptation owned and scoped by a repository |
-| Organization coding harness | Software-engineering domain with organization-wide ownership and policy |
+| Organization coding harness | Shared platform and controls owned across an organization |
 | Coding evaluation harness | Evaluation-side system administering software-engineering cases and trials |
-| Repository coding system | Composition of a coding-agent harness, repository harness, execution environment, and applicable user or organization policy |
+| Repository coding system | Composition of agent behavior, a coding harness, repository adaptation, execution environment, and policy |
 
-A profile is not a new foundational discipline or necessarily a separate
-package. It is a stable, recognizable combination of axis values. This keeps
-one harness-engineering body of knowledge while allowing domain and
-environment profiles to carry specialized guidance.
-
-## Product archetypes are another view
-
-Market categories usually combine several axes:
-
-| Archetype | Typical combination |
-| --- | --- |
-| Interactive copilot | User-scoped, interactive, short-lived, usually single-agent |
-| Background worker | Delegated, remote, task-persistent, isolated execution |
-| Persistent personal agent | User-owned, long-lived, multi-channel, broad personal environment reach |
-| Collaborative work agent | Team or organization scope, business-system integrations, shared state and governance |
-| Multi-agent service | Coordinated agents or workflows behind a service boundary |
-| Enterprise agent platform | Shared runtime, orchestration, governance, observability, and integration facilities for many agent systems |
-
-Named products are changing examples of these combinations, not definitions of
-the categories. Classify the deployed configuration: the same product can move
-between archetypes as channels, persistence, tools, or authority change.
+A profile is a recognizable combination of implementation axes plus an
+application context, not a new foundational discipline. State the associated
+agent design separately when autonomy or behavioral topology matters.
 
 ## Treat overloaded labels as claims to unpack
 
 Terms such as **AI OS**, **agent OS**, **framework**, **platform**,
 **assistant**, **copilot**, **digital worker**, and **scaffold** do not have
-stable architectural meanings. Translate them into explicit responsibilities
-and axis values. In particular, an “AI OS” may mean a personal-agent host, an
-enterprise control plane, a multi-agent platform, or simply an application
-suite; the name alone should not determine bundle boundaries.
+stable architectural meanings. Translate them into explicit implementation
+responsibilities and, separately, explicit agent-behavior properties. In
+particular, an “AI OS” may mean a personal-agent host, an enterprise control
+plane, a multi-agent platform, or simply an application suite; the name alone
+should not determine bundle boundaries.
 
 [^harness-properties]: What Makes a Harness a Harness? Evaluating Agentic Scaffold Properties
 [^scaffold-taxonomy]: Inside the Scaffold — A Taxonomy of Agentic Coding System Architectures

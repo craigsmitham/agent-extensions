@@ -4,7 +4,7 @@ title: Context engineering
 description: How the informational environment is selected, structured, routed, used, refreshed, and retired.
 tags: [context-engineering, retrieval, routing, memory, feedback, lifecycle]
 status: stable
-generated: { by: "codex/gpt-5.6", at: 2026-08-09T20:48:38Z }
+generated: { by: "codex/gpt-5.6", at: 2026-08-14T22:24:33Z }
 verified:
   - by: codex/gpt-5.6
     at: 2026-08-09T22:13:44Z
@@ -25,9 +25,12 @@ makes decisions. It determines what information is available, how it is
 represented, when it enters attention, how it changes during work, and when it
 should be refreshed or discarded.
 
-It is a responsibility within harness engineering, not a synonym for the whole
-harness. Context can help an agent decide, but it cannot provision an execution
-environment, enforce a permission boundary, or prove an external effect.
+It is a cross-cutting responsibility within agent systems, not a synonym for an
+agent or its harness. Agent engineering defines what evidence and remembered
+information behavior requires. Context engineering selects and represents that
+information. Harness engineering implements retrieval and persistence. Context
+cannot provision an execution environment, enforce a permission boundary, or
+prove an external effect.
 
 ## Context is a lifecycle
 
@@ -60,6 +63,10 @@ context remains stale, excessive, untrusted, or mistimed.
 Strong context engineering makes both directions compact and actionable. A
 specific failing check can carry more decision value than another paragraph of
 advance admonition.
+
+Feedback becomes context when it is represented for a subsequent decision.
+The agent's behavioral policy owns whether that evidence causes reflection,
+replanning, retry, fallback, escalation, or termination.
 
 ## Context is not improved by accumulation alone
 

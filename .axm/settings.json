@@ -54,7 +54,8 @@
     "skill-engineering": "workspace:@craigsmitham/knowledge/skill-engineering",
     "prompt-engineering": "workspace:@craigsmitham/knowledge/prompt-engineering",
     "context-engineering": "workspace:@craigsmitham/knowledge/context-engineering",
-    "eval-engineering": "workspace:@craigsmitham/knowledge/eval-engineering"
+    "eval-engineering": "workspace:@craigsmitham/knowledge/eval-engineering",
+    "agent-engineering": "workspace:@craigsmitham/knowledge/agent-engineering"
   },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",
@@ -64,6 +65,7 @@
     "codebase-change-workflow": "workspace:@craigsmitham/packs/codebase-change-workflow",
     "work-management": "workspace:@craigsmitham/packs/work-management",
     "skill-engineering": "workspace:@craigsmitham/packs/skill-engineering",
-    "context-engineering": "workspace:@craigsmitham/packs/context-engineering"
+    "context-engineering": "workspace:@craigsmitham/packs/context-engineering",
+    "agent-engineering": "workspace:@craigsmitham/packs/agent-engineering"
   }
 }

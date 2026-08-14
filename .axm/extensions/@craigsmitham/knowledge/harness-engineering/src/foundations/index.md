@@ -9,9 +9,7 @@ knowledge to a particular kind of work or choosing a concrete harness element.
 - [Agent-system composition](agent-system-composition.md) - How agents,
   harnesses, environments, runtime substrates, orchestration, governance, and
   evaluation compose without becoming synonyms.
-- [Harness classification](harness-classification.md) - Independent axes and
-  applied profiles for classifying agent harnesses without confusing domains,
-  ownership, topology, scope, or product labels.
+- [Harness classification](harness-classification.md) - Independent implementation axes and applied profiles for classifying harnesses without absorbing agent behavior or product labels.
 - [Context engineering boundary](context-engineering.md) - Where context
   engineering fits within the larger harness system.
 - [Agent legibility](agent-legibility.md) - How agent legibility makes
