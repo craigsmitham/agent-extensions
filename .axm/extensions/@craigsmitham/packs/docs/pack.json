@@ -20,7 +20,7 @@
   "type": "pack",
   "name": "docs",
   "dependencies": {
-    "@craigsmitham/knowledge/docs": "^0.4.0",
+    "@craigsmitham/knowledge/docs": "^0.6.0",
     "@craigsmitham/skills/author-docs": "^0.1.0"
   }
 }

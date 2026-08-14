@@ -58,7 +58,7 @@ if [[ "$before_status" != "$after_status" || "$before_index" != "$after_index" ]
   exit 1
 fi
 if find "$test_root" -maxdepth 1 \
-  \( -name 'public-safety-git-index.*' -o -name 'public-safety-status.*' -o -name 'public-safety-lint.*' -o -name 'public-safety-index.*' \) \
+  \( -name 'public-safety-git-index.*' -o -name 'public-safety-sync.*' -o -name 'public-safety-lint.*' -o -name 'public-safety-index.*' \) \
   -print -quit | grep -q .; then
   echo "The safety gate left temporary snapshot artifacts behind." >&2
   exit 1
@@ -86,8 +86,8 @@ chmod 755 "$mismatch_wrapper_dir/axm"
 expect_failure "staged AXM skill pin mismatch" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh --view git-index' \
   _ "$mismatch_fixture" "$mismatch_wrapper_dir"
-if [[ -e "$mismatch_lint_sentinel" ]]; then
-  echo "The safety gate ran lint after AXM status found a pin mismatch." >&2
+if [[ ! -e "$mismatch_lint_sentinel" ]]; then
+  echo "The safety gate did not let AXM lint report the staged skill pin mismatch." >&2
   exit 1
 fi
 

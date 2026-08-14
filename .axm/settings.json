@@ -54,10 +54,5 @@
     "harness-engineering": "workspace:@craigsmitham/packs/harness-engineering",
     "codebase-change-workflow": "workspace:@craigsmitham/packs/codebase-change-workflow",
     "work-management": "workspace:@craigsmitham/packs/work-management"
-  },
-  "lint": {
-    "rules": {
-      "workspace/authored-content-unpublished": "info"
-    }
   }
 }

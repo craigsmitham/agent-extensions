@@ -133,7 +133,7 @@ clones, caches, or prior access.
 | [workflow-automation](.axm/extensions/@craigsmitham/knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end region=knowledge-base -->
 <!-- axm:start region=rules -->
-<!-- axm:rule @craigsmitham/rules/field-notes@0.1.2 -->
+<!-- axm:rule @craigsmitham/rules/field-notes@0.1.4 -->
 ## Field notes
 
 Record how work actually goes, so recurring obstacles become durable

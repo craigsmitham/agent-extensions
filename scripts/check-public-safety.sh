@@ -57,14 +57,37 @@ cleanup() {
 }
 trap cleanup EXIT
 
+assert_sync_converged() {
+  local root="$1"
+  local output="$2"
+
+  if ! (cd "$root" && axm sync --preview --json) >"$output"; then
+    cat "$output"
+    return 1
+  fi
+
+  if ! jq -e '
+    select(
+      .ok == true and
+      (.result.outcome == "previewed" or .result.outcome == "no-op") and
+      .result.errorCount == 0 and
+      .result.blockedCount == 0
+    )
+  ' "$output" >/dev/null; then
+    cat "$output"
+    echo "AXM sync preview did not report a recoverable workspace." >&2
+    return 1
+  fi
+}
+
 validation_root="$repo_root"
 if [[ "$view" == "git-index" ]]; then
   expected_index_fingerprint="$(git_index_fingerprint)"
 
-  status_output="$(mktemp "${TMPDIR:-/tmp}/public-safety-status.XXXXXX")"
+  sync_output="$(mktemp "${TMPDIR:-/tmp}/public-safety-sync.XXXXXX")"
   lint_output="$(mktemp "${TMPDIR:-/tmp}/public-safety-lint.XXXXXX")"
-  snapshot_root="$(mktemp -d "${TMPDIR:-/tmp}/public-safety-git-index.XXXXXX")"
-  trap 'rm -f -- "$status_output" "$lint_output"; cleanup' EXIT
+  snapshot_root="$(realpath "$(mktemp -d "${TMPDIR:-/tmp}/public-safety-git-index.XXXXXX")")"
+  trap 'rm -f -- "$sync_output" "$lint_output"; cleanup' EXIT
 
   materialized_index_fingerprint="$(
     scripts/materialize-git-index.sh "$snapshot_root"
@@ -76,8 +99,7 @@ if [[ "$view" == "git-index" ]]; then
   assert_index_unchanged
   validation_root="$snapshot_root"
 
-  if ! (cd "$validation_root" && axm status --json) >"$status_output"; then
-    cat "$status_output"
+  if ! assert_sync_converged "$validation_root" "$sync_output"; then
     exit 1
   fi
   assert_index_unchanged
@@ -99,7 +121,9 @@ if [[ "$view" == "git-index" ]]; then
   fi
   assert_index_unchanged
 else
-  axm status
+  sync_output="$(mktemp "${TMPDIR:-/tmp}/public-safety-sync.XXXXXX")"
+  trap 'rm -f -- "$sync_output"; cleanup' EXIT
+  assert_sync_converged "$validation_root" "$sync_output"
   axm lint --view workspace --strict
 fi
 
