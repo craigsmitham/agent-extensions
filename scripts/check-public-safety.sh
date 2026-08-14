@@ -128,44 +128,27 @@ else
 fi
 
 expected=(
-  knowledge/agent-engineering
-  knowledge/context-engineering
   knowledge/docs
   knowledge/effect-v4
-  knowledge/eval-engineering
   knowledge/field-notes
-  knowledge/harness-engineering
   knowledge/knowledge-management
   knowledge/product-management
-  knowledge/prompt-engineering
-  knowledge/skill-engineering
   knowledge/software-architecture
   knowledge/strategy
   knowledge/workflow-automation
-  packs/agent-engineering
   packs/codebase-change-workflow
-  packs/context-engineering
   packs/docs
   packs/effect-v4
   packs/field-notes
-  packs/harness-engineering
-  packs/skill-engineering
   packs/work-management
   rules/field-notes
-  skills/admit-agent-skill
   skills/assess-codebase-change-readiness
-  skills/audit-agent-skill
-  skills/author-agent-skill
   skills/author-docs
   skills/author-okf
   skills/conduct-codebase-research
   skills/craft-effect-v4
-  skills/evaluate-agent-skill
   skills/field-notes
   skills/frame-codebase-research
-  skills/garden-context
-  skills/govern-agent-skill-library
-  skills/improve-instructions
   skills/improve-whatever
   skills/plan-codebase-change
   skills/prune-work
@@ -244,17 +227,30 @@ done < <(
 )
 
 if jq -e --argjson expected_count "${#expected[@]}" '
-  ([.skills | to_entries[] | select(.key != "axm") |
-      (.value | if type == "object" then .source else . end)] +
-   [.knowledge | to_entries[] | .value] +
-   [.packs | to_entries[] | .value] +
-   [.rules | to_entries[] | .value]) |
-  length == $expected_count and
-  all(type == "string" and startswith("workspace:@craigsmitham/"))
+  def source: if type == "object" then .source else . end;
+  ([
+    (.skills | to_entries[] | {type: "skills", key, source: (.value | source)}),
+    (.knowledge | to_entries[] | {type: "knowledge", key, source: (.value | source)}),
+    (.packs | to_entries[] | {type: "packs", key, source: (.value | source)}),
+    (.rules | to_entries[] | {type: "rules", key, source: (.value | source)})
+  ]) as $entries |
+  ([$entries[] | select(.source | startswith("workspace:@craigsmitham/"))] |
+    length == $expected_count) and
+  all($entries[];
+    (.source | startswith("workspace:@craigsmitham/")) or
+    (.type == "skills" and .key == "axm" and
+      (.source | startswith("@agentxm/skills/axm"))) or
+    (.type == "packs" and
+      (.key == "agent-engineering" or
+       .key == "context-engineering" or
+       .key == "harness-engineering" or
+       .key == "skill-engineering") and
+      .source == ("@agentxm/packs/" + .key))
+  )
 ' "$validation_root/.axm/settings.json" >/dev/null; then
   :
 else
-  echo "A public package is not owned by this workspace." >&2
+  echo "The workspace contains an unexpected package owner or source." >&2
   exit 1
 fi
 

@@ -19,8 +19,6 @@
     "field-notes": "workspace:@craigsmitham/skills/field-notes",
     "author-docs": "workspace:@craigsmitham/skills/author-docs",
     "author-okf": "workspace:@craigsmitham/skills/author-okf",
-    "improve-instructions": "workspace:@craigsmitham/skills/improve-instructions",
-    "garden-context": "workspace:@craigsmitham/skills/garden-context",
     "frame-codebase-research": "workspace:@craigsmitham/skills/frame-codebase-research",
     "conduct-codebase-research": "workspace:@craigsmitham/skills/conduct-codebase-research",
     "workshop-codebase-design": "workspace:@craigsmitham/skills/workshop-codebase-design",
@@ -31,12 +29,7 @@
     "assess-codebase-change-readiness": "workspace:@craigsmitham/skills/assess-codebase-change-readiness",
     "verify-codebase-change": "workspace:@craigsmitham/skills/verify-codebase-change",
     "triage-work": "workspace:@craigsmitham/skills/triage-work",
-    "craft-effect-v4": "workspace:@craigsmitham/skills/craft-effect-v4",
-    "author-agent-skill": "workspace:@craigsmitham/skills/author-agent-skill",
-    "evaluate-agent-skill": "workspace:@craigsmitham/skills/evaluate-agent-skill",
-    "audit-agent-skill": "workspace:@craigsmitham/skills/audit-agent-skill",
-    "admit-agent-skill": "workspace:@craigsmitham/skills/admit-agent-skill",
-    "govern-agent-skill-library": "workspace:@craigsmitham/skills/govern-agent-skill-library"
+    "craft-effect-v4": "workspace:@craigsmitham/skills/craft-effect-v4"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"
@@ -45,27 +38,21 @@
     "docs": "workspace:@craigsmitham/knowledge/docs",
     "field-notes": "workspace:@craigsmitham/knowledge/field-notes",
     "workflow-automation": "workspace:@craigsmitham/knowledge/workflow-automation",
-    "harness-engineering": "workspace:@craigsmitham/knowledge/harness-engineering",
     "effect-v4": "workspace:@craigsmitham/knowledge/effect-v4",
     "knowledge-management": "workspace:@craigsmitham/knowledge/knowledge-management",
     "software-architecture": "workspace:@craigsmitham/knowledge/software-architecture",
     "product-management": "workspace:@craigsmitham/knowledge/product-management",
-    "strategy": "workspace:@craigsmitham/knowledge/strategy",
-    "skill-engineering": "workspace:@craigsmitham/knowledge/skill-engineering",
-    "prompt-engineering": "workspace:@craigsmitham/knowledge/prompt-engineering",
-    "context-engineering": "workspace:@craigsmitham/knowledge/context-engineering",
-    "eval-engineering": "workspace:@craigsmitham/knowledge/eval-engineering",
-    "agent-engineering": "workspace:@craigsmitham/knowledge/agent-engineering"
+    "strategy": "workspace:@craigsmitham/knowledge/strategy"
   },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",
     "docs": "workspace:@craigsmitham/packs/docs",
     "field-notes": "workspace:@craigsmitham/packs/field-notes",
-    "harness-engineering": "workspace:@craigsmitham/packs/harness-engineering",
     "codebase-change-workflow": "workspace:@craigsmitham/packs/codebase-change-workflow",
     "work-management": "workspace:@craigsmitham/packs/work-management",
-    "skill-engineering": "workspace:@craigsmitham/packs/skill-engineering",
-    "context-engineering": "workspace:@craigsmitham/packs/context-engineering",
-    "agent-engineering": "workspace:@craigsmitham/packs/agent-engineering"
+    "agent-engineering": "@agentxm/packs/agent-engineering",
+    "context-engineering": "@agentxm/packs/context-engineering",
+    "harness-engineering": "@agentxm/packs/harness-engineering",
+    "skill-engineering": "@agentxm/packs/skill-engineering"
   }
 }
