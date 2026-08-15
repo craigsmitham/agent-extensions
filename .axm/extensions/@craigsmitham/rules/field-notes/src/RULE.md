@@ -15,15 +15,15 @@ While doing ordinary work within a declared subject, record one note when:
 - you retry, guess, search, or improvise an undocumented workaround; or
 - a `target`-mode subject is blocked from its target condition.
 
-Do not record your own typo, a note already captured this session, or speculation
-without an observed incident.
+Do not record your own typo, the same incident twice in one session, or
+speculation without an observed incident.
 
 ### How to record
 
-On the first qualifying incident, read the
-[capture instructions](.axm/extensions/@craigsmitham/rules/field-notes/src/capture.md)
-and append one note. Recording it is expected behavior, not an admission of
-failure.
+On the first qualifying incident in a session, read the
+[capture instructions](.axm/extensions/@craigsmitham/rules/field-notes/src/capture.md).
+Append one note for each qualifying incident. Recording it is expected behavior,
+not an admission of failure.
 
 ### Stay in the work
 

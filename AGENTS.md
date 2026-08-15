@@ -138,7 +138,7 @@ clones, caches, or prior access.
 | --- | --- |
 | [docs](.axm/extensions/@craigsmitham/knowledge/docs/src/index.md) | Portable documentation craft for authoring, naming, information architecture, auditing, and improving explainers, guides, principles, and evidence-backed patterns |
 | [effect-v4](.axm/extensions/@craigsmitham/knowledge/effect-v4/src/index.md) | Opinionated Effect v4 guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification |
-| [field-notes](.axm/extensions/@craigsmitham/knowledge/field-notes/src/index.md) | Observing work in progress and converting it into durable improvement: work-as-imagined vs work-as-done, survey and target subjects, recurrence thresholds, and verified closure |
+| [field-notes](.axm/extensions/@craigsmitham/knowledge/field-notes/src/index.md) | Operational field-note practice for factual capture, impact-aware triage, evidence-led findings, and verified corrective action |
 | [knowledge-management](.axm/extensions/@craigsmitham/knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-management](.axm/extensions/@craigsmitham/knowledge/product-management/src/index.md) | Product management principles for outcomes, product risks, empowered teams, discovery, delivery, evidence, and product strategy |
 | [software-engineering](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/index.md) | Software engineering principles and patterns for architecture, design boundaries, changeability, invariants, and evidence-timed complexity |
@@ -164,7 +164,7 @@ pattern](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/design
 Choose first, after, later, or never. If tidying first, make only the smallest
 behavior-preserving change that makes the authorized change easier.
 
-<!-- axm:rule @craigsmitham/rules/field-notes@0.1.4 -->
+<!-- axm:rule @craigsmitham/rules/field-notes@0.2.0 -->
 ## Field notes
 
 Record how work actually goes, so recurring obstacles become durable
@@ -182,15 +182,15 @@ While doing ordinary work within a declared subject, record one note when:
 - you retry, guess, search, or improvise an undocumented workaround; or
 - a `target`-mode subject is blocked from its target condition.
 
-Do not record your own typo, a note already captured this session, or speculation
-without an observed incident.
+Do not record your own typo, the same incident twice in one session, or
+speculation without an observed incident.
 
 ### How to record
 
-On the first qualifying incident, read the
-[capture instructions](.axm/extensions/@craigsmitham/rules/field-notes/src/capture.md)
-and append one note. Recording it is expected behavior, not an admission of
-failure.
+On the first qualifying incident in a session, read the
+[capture instructions](.axm/extensions/@craigsmitham/rules/field-notes/src/capture.md).
+Append one note for each qualifying incident. Recording it is expected behavior,
+not an admission of failure.
 
 ### Stay in the work
 
