@@ -5,12 +5,15 @@ description: >
   documentation using portable documentation craft. Use for writing or
   improving READMEs, tutorials, how-to guides, reference material,
   explanations, documentation principles and patterns, playbooks and
-  runbooks; reviewing one identified document; organizing or renaming a
-  documentation collection; fixing broken links or stale content; or
-  implementing accepted documentation-audit findings. Not for corpus-level
-  documentation audits or health assessments, always-on agent instruction
-  files, Word or Google Docs artifacts, or implementing the product or design
-  the documentation describes.
+  runbooks; reviewing one identified document; proposing a documentation
+  structure, path, filename, or title, including planning before a document
+  exists; organizing or renaming a documentation collection; fixing broken
+  links or stale content; or implementing accepted documentation-audit
+  findings. When documentation is the requested artifact, apply this skill
+  even if another skill covers the document's subject. Not for corpus-level
+  documentation audits or health assessments, editing always-on agent
+  instruction files themselves, Word or Google Docs artifacts, or implementing
+  the product or design the documentation describes.
 ---
 
 # Author docs
@@ -23,7 +26,9 @@ job and respects local authority.
 1. **Resolve the job and authority.** Distinguish creation or remediation from
    review-only work. Read repository-local instructions, inspect the target and
    its authoritative sources, and preserve unrelated user changes. If the
-   request is a corpus-level health assessment, route it to `audit-docs`.
+   request is a corpus-level health assessment, route it to `audit-docs`. Route
+   by requested artifact: a guide about an agent instruction file is
+   documentation work; modifying the instruction file itself is not.
 2. **Choose the smallest knowledge route.** Open only the needed concepts under
    `.axm/extensions/@craigsmitham/knowledge/docs/src/`:
 
@@ -33,7 +38,7 @@ job and respects local authority.
 | Create or substantially revise one document | `guides/documentation-craft.md` | Matching guide and explainer for the reader need |
 | Review one document's structure | Matching `guides/<subject>.md` | Matching explainer for form-fit questions |
 | Remediate or restructure a corpus | `guides/documentation-workflow.md` | `explainers/documentation-workflow.md` for rationale; concepts for the selected unit |
-| Organize, place, or rename documentation | `guides/organizing-and-naming-documentation.md` | `explainers/documentation-organization-and-discovery.md` for tradeoffs |
+| Propose, organize, place, or rename documentation paths, filenames, titles, or collections | `guides/organizing-and-naming-documentation.md` | `explainers/documentation-organization-and-discovery.md` for tradeoffs |
 | Implement accepted audit findings | The supplied finding set | `guides/documentation-workflow.md` and the concept for each affected unit |
 | Author or review a principle | `explainers/principle.md` | `guides/principle.md`; related patterns or domain cases when needed |
 | Author or review a pattern or pattern library | `explainers/pattern.md` | `guides/pattern.md` and matching `patterns/*.md` examples |

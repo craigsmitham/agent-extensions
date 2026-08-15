@@ -51,6 +51,10 @@ promise made above it.
 Browsing and search are parallel routes. Indexes support browsing; concept metadata must stand on
 its own when search bypasses every index.
 
+For repository-level collection paths, filenames, and titles that OKF does not prescribe, apply
+the repository's documentation naming and information-architecture guidance. This skill owns OKF
+conformance and bundle coherence, not the host repository's documentation taxonomy.
+
 - Let each description become more specific: bundle scope → section scope → concept distinction.
   Do not repeat one generic description at every level.
 - Treat `title` as a concept's canonical display name. Use it exactly as index link text and,
