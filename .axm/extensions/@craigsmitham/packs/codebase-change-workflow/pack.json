@@ -1,8 +1,8 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.1.3",
-  "description": "Moves codebase changes from current-state research through implementation readiness and post-change verification",
+  "version": "0.2.0",
+  "description": "Moves codebase changes from current-state research through implementation planning and post-change verification",
   "keywords": [
     "codebase",
     "research",
@@ -10,7 +10,6 @@
     "functional-specification",
     "technical-specification",
     "implementation-plan",
-    "implementation-readiness",
     "change-verification",
     "vertical-slices",
     "architecture",
@@ -34,7 +33,6 @@
     "@craigsmitham/skills/workshop-codebase-design": "^0.0.8",
     "@craigsmitham/skills/specify-codebase-change": "^0.0.3",
     "@craigsmitham/skills/plan-codebase-change": "^0.0.2",
-    "@craigsmitham/skills/assess-codebase-change-readiness": "^0.0.2",
     "@craigsmitham/skills/verify-codebase-change": "^0.0.1"
   }
 }

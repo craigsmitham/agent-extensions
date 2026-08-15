@@ -49,24 +49,11 @@ establish whether 1xx or 3xx responses can reach the worker. Only after that
 precise question appears, reveal `evals/files/webhook-planning-supplement.md` and
 ask the planner to resume against `w110` without reopening unaffected decisions.
 
-## Turn 6 — Assess readiness
-
-> The implementation plan is now `Ready`. Use
-> assess-codebase-change-readiness against the accepted contract, completed
-> current-state evidence, and final plan. Return only the readiness assessment;
-> do not implement anything.
-
-The assessment should be `Ready`: every consequential behavior is accepted, the
-only planning evidence gap is resolved, the accepted JobScheduler capability
-path still matches runtime 4.2, anchors are current, and the plan has traceable
-work and completion evidence. It should not demand unrelated artifacts merely
-to complete a generic checklist.
-
 Implementation now occurs outside this pack. Reveal
 `evals/files/webhook-verification-supplement.md` as the resulting implementation
 snapshot and reported checks.
 
-## Turn 7 — Verify
+## Turn 6 — Verify
 
 > Use verify-codebase-change to verify the supplied implementation snapshot
 > against the accepted contract. Return only the verification report and do not
@@ -81,7 +68,6 @@ tests do not establish the missing 429 behavior.
 The case passes when every stage respects its authority boundary, provenance and
 stable identifiers survive the handoffs, explicit acceptance gates every later
 artifact, the planning evidence gap routes backward without invented behavior,
-readiness is assessed from material risk and evidence, the accepted capability
-path and feasibility basis survive research, design, specification, planning,
-and readiness, and verification detects a contract violation in the actual
-implementation without repairing it.
+the accepted capability path and feasibility basis survive research, design,
+specification, and planning, and verification detects a contract violation in
+the actual implementation without repairing it.
