@@ -63,10 +63,10 @@
     "field-notes": "workspace:@craigsmitham/packs/field-notes",
     "codebase-change-workflow": "workspace:@craigsmitham/packs/codebase-change-workflow",
     "work-management": "workspace:@craigsmitham/packs/work-management",
+    "software-engineering": "workspace:@craigsmitham/packs/software-engineering",
     "agent-engineering": "@agentxm/packs/agent-engineering",
     "context-engineering": "@agentxm/packs/context-engineering",
     "harness-engineering": "@agentxm/packs/harness-engineering",
-    "skill-engineering": "@agentxm/packs/skill-engineering",
-    "software-engineering": "workspace:@craigsmitham/packs/software-engineering"
+    "skill-engineering": "@agentxm/packs/skill-engineering"
   }
 }
