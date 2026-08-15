@@ -2,19 +2,18 @@
   "$schema": "https://axm.sh/schemas/skill.schema.json",
   "owner": "@craigsmitham",
   "type": "skill",
-  "name": "author-docs",
-  "version": "0.3.0",
-  "description": "Create, organize, review, and remediate documentation using portable craft, principles, and reusable patterns",
+  "name": "audit-docs",
+  "version": "0.1.0",
+  "description": "Audit documentation collections for evidence-backed findings about quality, discovery, accuracy, coverage, and maintenance",
   "keywords": [
     "docs",
     "documentation",
-    "authoring",
-    "review",
-    "organization",
-    "remediation",
-    "diataxis",
-    "principles",
-    "patterns"
+    "audit",
+    "quality",
+    "discovery",
+    "staleness",
+    "coverage",
+    "remediation"
   ],
   "recommendedPacks": [
     "@craigsmitham/packs/docs"
@@ -23,8 +22,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/craigsmitham/agent-extensions",
-    "directory": ".axm/extensions/@craigsmitham/skills/author-docs"
+    "directory": ".axm/extensions/@craigsmitham/skills/audit-docs"
   },
   "homepage": "https://github.com/craigsmitham/agent-extensions",
-  "license": "CC-BY-SA-4.0"
+  "license": "MIT"
 }

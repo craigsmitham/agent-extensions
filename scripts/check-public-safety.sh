@@ -134,6 +134,7 @@ expected=(
   knowledge/knowledge-management
   knowledge/product-management
   knowledge/software-architecture
+  knowledge/software-engineering
   knowledge/strategy
   knowledge/workflow-automation
   packs/codebase-change-workflow
@@ -143,6 +144,7 @@ expected=(
   packs/work-management
   rules/field-notes
   skills/assess-codebase-change-readiness
+  skills/audit-docs
   skills/author-docs
   skills/author-okf
   skills/conduct-codebase-research

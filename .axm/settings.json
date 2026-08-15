@@ -1,4 +1,7 @@
 {
+  "minimumReleaseAgeExclude": [
+    "@agentxm/*"
+  ],
   "agents": [
     "claude-code",
     "codex",
@@ -29,7 +32,8 @@
     "assess-codebase-change-readiness": "workspace:@craigsmitham/skills/assess-codebase-change-readiness",
     "verify-codebase-change": "workspace:@craigsmitham/skills/verify-codebase-change",
     "triage-work": "workspace:@craigsmitham/skills/triage-work",
-    "craft-effect-v4": "workspace:@craigsmitham/skills/craft-effect-v4"
+    "craft-effect-v4": "workspace:@craigsmitham/skills/craft-effect-v4",
+    "audit-docs": "workspace:@craigsmitham/skills/audit-docs"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes"
@@ -40,9 +44,13 @@
     "workflow-automation": "workspace:@craigsmitham/knowledge/workflow-automation",
     "effect-v4": "workspace:@craigsmitham/knowledge/effect-v4",
     "knowledge-management": "workspace:@craigsmitham/knowledge/knowledge-management",
-    "software-architecture": "workspace:@craigsmitham/knowledge/software-architecture",
+    "software-architecture": {
+      "source": "workspace:@craigsmitham/knowledge/software-architecture",
+      "enabled": false
+    },
     "product-management": "workspace:@craigsmitham/knowledge/product-management",
-    "strategy": "workspace:@craigsmitham/knowledge/strategy"
+    "strategy": "workspace:@craigsmitham/knowledge/strategy",
+    "software-engineering": "workspace:@craigsmitham/knowledge/software-engineering"
   },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",

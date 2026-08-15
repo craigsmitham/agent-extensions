@@ -36,11 +36,14 @@ or MDN documentation.
 
 ## Management and architecture sources
 
-The `knowledge-management`, `product-management`, `software-architecture`, and
-`strategy` bundles synthesize ideas from public sources identified in each
-concept's provenance metadata. These include the FAIR Guiding Principles, W3C
-PROV, KCS, ISO/IEC/IEEE 42010, D. L. Parnas's work on modular decomposition,
-Silicon Valley Product Group's product-model writing, Roger L. Martin's Playing
-to Win writing, and Harvard Business School's value-stick materials. The
-bundles contain original summaries and applications; they do not vendor those
-sources or reproduce their proprietary templates.
+The `knowledge-management`, `product-management`, `software-architecture`,
+`software-engineering`, and `strategy` bundles synthesize ideas from public
+sources identified in each concept's provenance metadata. These include the
+FAIR Guiding Principles, W3C PROV, KCS, ISO/IEC/IEEE 42010, D. L. Parnas's work
+on modular decomposition, Martin Fowler's writing on YAGNI, the Agile Alliance's
+simple-design guidance, Sandi Metz's writing on premature abstraction, public
+agent-engineering guidance from Anthropic and OpenAI, Silicon Valley Product
+Group's product-model writing, Roger L. Martin's Playing to Win writing, and
+Harvard Business School's value-stick materials. The bundles contain original
+summaries and applications; they do not vendor those sources or reproduce their
+proprietary templates.

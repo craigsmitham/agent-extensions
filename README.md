@@ -27,7 +27,7 @@ Install the replacement `@agentxm` identities; the previously published
 | Pack | Purpose | Install |
 | --- | --- | --- |
 | `effect-v4` | Effect v4 patterns for types, services, failures, resources, schemas, concurrency, streams, testing, and observability | `axm install @craigsmitham/packs/effect-v4` |
-| `docs` | Diátaxis-oriented documentation knowledge plus one consolidated authoring and review skill | `axm install @craigsmitham/packs/docs` |
+| `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
 
 ## Standalone knowledge
