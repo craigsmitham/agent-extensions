@@ -29,6 +29,18 @@ when the decision needs the fuller model, constraints, or examples. No separate
 guide is included because no distinct procedural job has been identified; add
 one only when such a reader need emerges.
 
+## Evaluation cases
+
+Use these cases when validating the effective instruction surface:
+
+| Case | Expected decision |
+| --- | --- |
+| One provider is requested and no second variation is active | Do not build an unused provider framework |
+| Current structure materially obstructs an authorized behavior change | Consider the smallest behavior-preserving preparation, then make the behavior change separately |
+| Urgent restoration makes preparatory work too costly | Change behavior directly; tidy after, later, or never |
+| A public compatibility boundary will soon become costly to reverse | Treat compatibility as a current constraint while deferring unrelated extension points |
+| The task is read-only research, diagnosis, or review | Neither rule authorizes a structural or behavioral change |
+
 ## License
 
 The pack's own metadata and README are licensed under MIT. Each member retains

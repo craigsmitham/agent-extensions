@@ -2,11 +2,11 @@
   "$schema": "https://axm.sh/schemas/rule.schema.json",
   "owner": "@craigsmitham",
   "name": "yagni",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "rule",
   "title": "YAGNI",
   "priority": 100,
-  "description": "Require present need before adding capability, structure, process, or scope, while preserving current quality and costly-to-recover options",
+  "description": "Prompts agents to defer speculative capability, structure, process, and scope until a current need justifies commitment, while preserving cheap options that would be costly to recover",
   "keywords": [
     "yagni",
     "simple-design",

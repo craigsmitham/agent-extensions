@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Software engineering judgment for evidence-timed change, including concise YAGNI and Tidy First rules backed by deeper knowledge",
   "keywords": [
     "software-engineering",

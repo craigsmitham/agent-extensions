@@ -2,11 +2,11 @@
   "$schema": "https://axm.sh/schemas/rule.schema.json",
   "owner": "@craigsmitham",
   "name": "tidy-first",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "rule",
   "title": "Tidy First",
   "priority": 110,
-  "description": "Require consideration of a small behavior-preserving structural change before an authorized behavior change when it materially reduces difficulty or risk",
+  "description": "Prompts agents to consider the smallest behavior-preserving structural preparation when current structure materially complicates an authorized software behavior change",
   "keywords": [
     "tidy-first",
     "preparatory-refactoring",

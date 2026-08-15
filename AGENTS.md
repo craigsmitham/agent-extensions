@@ -146,21 +146,23 @@ clones, caches, or prior access.
 | [workflow-automation](.axm/extensions/@craigsmitham/knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end region=knowledge-base -->
 <!-- axm:start region=rules -->
-<!-- axm:rule @craigsmitham/rules/yagni@0.1.0 -->
+<!-- axm:rule @craigsmitham/rules/yagni@0.1.1 -->
 ## YAGNI
 
 Before adding capability, structure, process, or scope for future use, consult
 the [YAGNI principle](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/design-and-change/yagni-and-speculative-complexity.md).
-Defer commitment unless a present need—or preserving the cheapest
-costly-to-recover option—justifies acting now.
+Defer the commitment unless it serves a current feature, constraint, invariant,
+or concrete risk. If delay would close an option that is costly to recover,
+take only the cheapest safe action that preserves it.
 
-<!-- axm:rule @craigsmitham/rules/tidy-first@0.1.0 -->
+<!-- axm:rule @craigsmitham/rules/tidy-first@0.1.1 -->
 ## Tidy First
 
-When an authorized behavior change is harder than necessary, consult the
-[Tidy First pattern](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/design-and-change/tidy-first.md).
-First, after, later, or never may be correct; make only the smallest justified
-behavior-preserving preparation.
+When current structure materially increases the difficulty or risk of an
+authorized software behavior change, consult the [Tidy First
+pattern](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/design-and-change/tidy-first.md).
+Choose first, after, later, or never. If tidying first, make only the smallest
+behavior-preserving change that makes the authorized change easier.
 
 <!-- axm:rule @craigsmitham/rules/field-notes@0.1.4 -->
 ## Field notes
