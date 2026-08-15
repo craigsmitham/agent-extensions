@@ -2,6 +2,11 @@
 
 ## 2026-08-15
 
+- **Design and change**: Reframed
+  [YAGNI](design-and-change/yagni-and-speculative-complexity.md) as a principle
+  of timing, optionality, and deferred commitment, and added
+  [Tidy First](design-and-change/tidy-first.md) as its related just-in-time
+  structural-change pattern.
 - **Expansion**: Broadened [Invariants, preservation, and
   enforcement](architecture/invariants-and-enforcement.md) beyond architectural
   guardrails and added the paired [Expressing

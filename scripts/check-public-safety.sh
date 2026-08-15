@@ -141,8 +141,11 @@ expected=(
   packs/docs
   packs/effect-v4
   packs/field-notes
+  packs/software-engineering
   packs/work-management
   rules/field-notes
+  rules/tidy-first
+  rules/yagni
   skills/assess-codebase-change-readiness
   skills/audit-docs
   skills/author-docs

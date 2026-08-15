@@ -15,4 +15,4 @@ decisions, workflow procedures, product management, or operational runbooks.
 
 ## Design and change
 
-- [YAGNI and speculative complexity](design-and-change/yagni-and-speculative-complexity.md) - How to defer unsupported capability, compare the costs of premature flexibility, and preserve changeability without neglecting present quality.
+- [Design and change](design-and-change/) - YAGNI as a principle of deferred commitment and Tidy First as a pattern for just-in-time structural change.

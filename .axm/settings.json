@@ -1,4 +1,7 @@
 {
+  "publish": {
+    "defaultVisibility": "public"
+  },
   "minimumReleaseAgeExclude": [
     "@agentxm/*"
   ],
@@ -36,7 +39,9 @@
     "audit-docs": "workspace:@craigsmitham/skills/audit-docs"
   },
   "rules": {
-    "field-notes": "workspace:@craigsmitham/rules/field-notes"
+    "field-notes": "workspace:@craigsmitham/rules/field-notes",
+    "yagni": "workspace:@craigsmitham/rules/yagni",
+    "tidy-first": "workspace:@craigsmitham/rules/tidy-first"
   },
   "knowledge": {
     "docs": "workspace:@craigsmitham/knowledge/docs",
@@ -61,6 +66,7 @@
     "agent-engineering": "@agentxm/packs/agent-engineering",
     "context-engineering": "@agentxm/packs/context-engineering",
     "harness-engineering": "@agentxm/packs/harness-engineering",
-    "skill-engineering": "@agentxm/packs/skill-engineering"
+    "skill-engineering": "@agentxm/packs/skill-engineering",
+    "software-engineering": "workspace:@craigsmitham/packs/software-engineering"
   }
 }

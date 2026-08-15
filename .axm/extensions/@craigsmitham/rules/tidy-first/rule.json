@@ -1,0 +1,29 @@
+{
+  "$schema": "https://axm.sh/schemas/rule.schema.json",
+  "owner": "@craigsmitham",
+  "name": "tidy-first",
+  "version": "0.1.0",
+  "type": "rule",
+  "title": "Tidy First",
+  "priority": 110,
+  "description": "Require consideration of a small behavior-preserving structural change before an authorized behavior change when it materially reduces difficulty or risk",
+  "keywords": [
+    "tidy-first",
+    "preparatory-refactoring",
+    "refactoring",
+    "structural-change",
+    "behavioral-change",
+    "small-safe-steps"
+  ],
+  "standalone": false,
+  "recommendedPacks": [
+    "@craigsmitham/packs/software-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/rules/tidy-first"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT"
+}

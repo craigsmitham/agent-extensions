@@ -29,6 +29,7 @@ Install the replacement `@agentxm` identities; the previously published
 | `effect-v4` | Effect v4 patterns for types, services, failures, resources, schemas, concurrency, streams, testing, and observability | `axm install @craigsmitham/packs/effect-v4` |
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
+| `software-engineering` | Software engineering knowledge plus concise, distinct YAGNI and Tidy First rules | `axm install @craigsmitham/packs/software-engineering` |
 
 ## Standalone knowledge
 
@@ -37,6 +38,7 @@ Install the replacement `@agentxm` identities; the previously published
 | `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
 | `product-management` | Product outcomes, risks, empowered teams, discovery, delivery, evidence, and product strategy | `axm install @craigsmitham/knowledge/product-management` |
 | `software-architecture` | Responsibilities, boundaries, authority, invariants, dependencies, and change in software systems | `axm install @craigsmitham/knowledge/software-architecture` |
+| `software-engineering` | Architecture, design boundaries, invariants, YAGNI, Tidy First, and evidence-timed software change | `axm install @craigsmitham/knowledge/software-engineering` |
 | `strategy` | Coherent choices about participation, advantage, capabilities, evidence, and value creation | `axm install @craigsmitham/knowledge/strategy` |
 | `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |
 

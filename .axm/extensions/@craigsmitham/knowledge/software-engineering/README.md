@@ -1,13 +1,14 @@
 # Software engineering knowledge
 
-Portable principles for reasoning about software architecture, design, change,
-and the evidence needed to justify complexity. It is intended for engineers and
-agents making durable technical decisions across languages and platforms.
+Portable principles and patterns for reasoning about software architecture,
+design, change, and the timing of justified complexity. It is intended for
+engineers and agents making durable technical decisions across languages and
+platforms.
 
 Use it for conceptual guidance about responsibilities, boundaries,
-changeability, invariants, architectural communication, and YAGNI. It is not a
-language or framework reference, a repository-specific architecture, or a
-step-by-step delivery workflow.
+changeability, invariants, architectural communication, YAGNI, and Tidy First.
+It is not a language or framework reference, a repository-specific
+architecture, or a step-by-step delivery workflow.
 
 Install it with:
 
@@ -18,7 +19,7 @@ axm install @craigsmitham/knowledge/software-engineering
 Then browse its discovery index or search installed concepts, for example:
 
 ```bash
-axm knowledge concepts search "yagni speculative complexity"
+axm knowledge concepts search '"tidy first"'
 ```
 
 This knowledge package is licensed under the Creative Commons

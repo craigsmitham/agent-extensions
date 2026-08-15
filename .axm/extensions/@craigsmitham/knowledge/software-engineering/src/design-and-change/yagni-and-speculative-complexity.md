@@ -1,13 +1,19 @@
 ---
-type: Explanation
-title: YAGNI and speculative complexity
-description: How to defer unsupported capability, compare the costs of premature flexibility, and preserve changeability without neglecting present quality.
-tags: [yagni, simple-design, evolutionary-design, speculative-generality, premature-abstraction, reversibility]
+type: Principle
+title: "YAGNI: defer speculative capability and structure"
+description: Why capability and structure should be deferred until needed, preserving optionality and economic timing without neglecting present quality.
+tags: [yagni, simple-design, incremental-design, speculative-generality, premature-abstraction, optionality, reversibility]
 status: draft
 sources:
+  - id: beck-yagni-timing
+    resource: https://newsletter.kentbeck.com/p/the-cost-yagni-was-never-about
+    title: Kent Beck — The Cost YAGNI Was Never About
   - id: fowler-yagni
     resource: https://martinfowler.com/bliki/Yagni.html
     title: Martin Fowler — Yagni
+  - id: fowler-xp-principles
+    resource: https://martinfowler.com/bliki/PrinciplesOfXP.html
+    title: Martin Fowler — Principles of XP
   - id: agile-simple-design
     resource: https://agilealliance.org/glossary/simple-design/
     title: Agile Alliance — Simple Design
@@ -17,126 +23,155 @@ sources:
   - id: aws-review-process
     resource: https://docs.aws.amazon.com/wellarchitected/2024-06-27/framework/the-review-process.html
     title: AWS Well-Architected Framework — The review process
-  - id: anthropic-effective-agents
-    resource: https://www.anthropic.com/engineering/building-effective-agents
-    title: Anthropic — Building effective agents
-  - id: openai-gpt5-coding
-    resource: https://cdn.openai.com/API/docs/gpt-5-for-coding-cheatsheet.pdf
-    title: OpenAI — GPT-5 for Coding
-generated:
-  by: codex/gpt-5
-  at: 2026-08-15T15:20:54Z
+generated: { by: "codex/gpt-5.6", at: 2026-08-15T17:25:44Z }
 ---
 
-# YAGNI and speculative complexity
+# YAGNI: defer speculative capability and structure
 
-YAGNI—“you aren't gonna need it”—rejects capability whose value depends only
-on a possible future requirement. It is an evidence rule, not a preference for
-short code: choose the smallest complete solution justified by present needs.
+**Defer capability and structure until the feature, constraint, or decision
+that requires them is present. Preserve the option to design with better
+information, and incur cost no earlier than necessary.**
 
-## What counts as present evidence
+## Good sought or protected
 
-Added complexity should serve at least one of these:
+YAGNI protects two related goods:
 
-- an accepted, verifiable outcome;
-- an existing contract or invariant;
-- observed behavior or a reproduced failure;
-- an applicable repository or platform obligation; or
-- a concrete risk to correctness, security, data integrity, compatibility, or
-  operability.
+- **Optionality** — delaying commitment preserves the ability to choose the
+  structure that fits the need that actually arrives.
+- **Economic timing** — delaying cost while delivering valuable behavior
+  sooner improves the timing of expenditure and return.
 
-“Might,” “eventually,” “future-proof,” and “make it generic” identify a possible
-need, not evidence that the need exists. A vague request for extensibility should
-be translated into a concrete variation or quality requirement before it drives
-design.
+The principle is not chiefly about saving typing effort or predicting that a
+future requirement will disappear. Beck's later account emphasizes that even a
+correct forecast can be implemented too early: premature structure spends an
+option before the information and need that give the choice its value.[^beck]
 
-## The cost of building early
+## Warrant and provenance
 
-Speculative capability imposes more than its initial implementation cost.
-Fowler distinguishes the cost to build it, the value delayed while building it,
-the continuing cost of carrying its complexity, and the cost of repairing a
-guess that later proves wrong.[^fowler-yagni] These costs apply to features,
-abstractions, configuration, extension points, dependencies, architecture, and
-process.
+YAGNI—“you aren't gonna need it”—originated in an exchange between Kent Beck
+and Chet Hendrickson on the Chrysler C3 project. Fowler describes it as a
+mantra associated with XP's Simple Design practice and incremental design;
+Beck describes it more precisely as a question of timing.[^fowler][^beck]
 
-Premature abstraction is particularly expensive because it guesses which cases
-should vary together. When later requirements differ, callers accumulate
-parameters and conditional paths to preserve a shared shape that was never
-actually shared. Metz argues that visible duplication can be cheaper than this
-wrong abstraction while the real commonality is still emerging.[^metz-wrong-abstraction]
+Its underlying reasoning is broader than the slogan:
 
-## A practical decision test
+- requirements and constraints become more informative as work proceeds;
+- unused structure carries comprehension, maintenance, integration, and
+  modification costs;
+- an early abstraction can encode the wrong variation and become costlier than
+  visible duplication; and
+- paying for structure before it enables value worsens the timing of the
+  investment.[^metz]
 
-Before adding an option, layer, dependency, migration, abstraction, tool, or
-workflow step, ask:
+## Normative strength and scope
 
-1. What present evidence requires it?
-2. What smaller conventional solution satisfies the same evidence?
-3. What complexity will every intervening change have to carry?
-4. How costly would it actually be to add the capability when the need appears?
-5. Is the current decision reversible?
+YAGNI is a **defeasible software-engineering principle and decision default**,
+not a prohibition against design. It applies when deciding whether to add
+future-facing capability, abstraction, indirection, configuration, extension
+points, dependencies, infrastructure, tooling, process, or other supporting
+structure.
 
-If the only answer is a hypothetical future, defer the capability. Simple
-design treats design as continuous work and delays decisions until the last
-responsible moment, when more evidence is available.[^agile-simple-design]
+“Needed” is temporal rather than merely evidential. A future obligation can be
+certain without needing implementation today. Conversely, lead time, an
+irreversible deadline, or a decision that will soon foreclose safe options can
+make preparatory work a present need.
 
-## Preserve changeability, not imagined capability
+## Practical implications
 
-YAGNI depends on evolutionary design. Local refactoring, clear responsibilities,
-tests, continuous integration, and delivery automation can be justified by the
-present need to keep change safe and affordable. They do not implement a future
-feature merely because they make one easier to add.
+Before committing to additional capability or structure, ask:
 
-This distinction prevents two opposite mistakes:
+1. Which current feature, constraint, invariant, or concrete risk requires it?
+2. Why must the commitment be made now rather than when more information is
+   available?
+3. What option does committing now remove?
+4. What carrying cost will intervening work bear?
+5. What is the cheapest reversible action that safely preserves the decision?
 
-- building unused flexibility in the name of maintainability; and
-- accepting brittle, opaque, or unverified work in the name of minimalism.
+If no present need justifies commitment, defer it. Record an important
+constraint, run a focused experiment, or preserve a narrow reversible seam
+when that is sufficient; do not implement the imagined future in full.
 
-## Irreversible decisions and required qualities
+## Present quality is not speculative capability
 
-Reversibility changes the amount of evidence and review a decision deserves.
-AWS distinguishes lightweight, reversible “two-way door” decisions from
-difficult-to-reverse “one-way doors” that warrant earlier inspection.[^aws-review-process]
-When delay would create material lock-in, preserve the cheapest useful option:
-record the constraint, isolate volatile knowledge, run a focused experiment, or
-choose a reversible seam. Do not implement the full imagined future.
+YAGNI does not excuse brittle, opaque, unsafe, or unverified work. Existing
+requirements for correctness, security, data integrity, accessibility,
+compatibility, reliability, and operability are present constraints. Tests,
+clear responsibilities, continuous integration, and local improvements can be
+justified by the current need to understand and change software safely without
+implementing a future feature.
 
-YAGNI does not override present quality obligations. Required security,
-correctness, data integrity, accessibility, compatibility, reliability, and
-verification are current constraints even when the feature request does not
-repeat them.
+## Tensions and limits
 
-## Agentic work
+Waiting is not always the responsible choice. Give earlier attention to a
+decision when delay would:
 
-For an agent, speculative complexity includes activity as well as artifacts:
-broad research, adjacent cleanup, extra tooling, delegation, orchestration, and
-continued polishing after the accepted outcome is verified. Anthropic advises
-starting with the simplest agentic solution and increasing complexity only when
-needed because additional orchestration trades cost and latency for capability
-and creates opportunities for compounded error.[^anthropic-effective-agents]
-OpenAI likewise recommends controlling coding-agent eagerness and tool budgets
-because default thoroughness can exceed what a task needs.[^openai-gpt5-coding]
+- make a safety, security, legal, or data-integrity obligation impossible to
+  meet;
+- cross an expensive-to-reverse public API, data, protocol, or infrastructure
+  boundary;
+- ignore real procurement, migration, certification, or construction lead
+  time; or
+- close an option whose preservation costs less than losing it.
 
-An agent should therefore:
+Reversibility changes the burden of judgment. Reversible “two-way door”
+decisions ordinarily support waiting; difficult-to-reverse decisions warrant
+earlier investigation and proportionate preparation.[^aws]
 
-- gather only evidence that can affect the current decision;
-- keep unrelated improvements outside the change;
-- use tools and delegation only when they materially help the current outcome;
-- verify against observable acceptance evidence; and
-- stop when the required outcome is met.
+## Judgment cases
 
-[^fowler-yagni]: Fowler explains YAGNI's build, delay, carry, and repair costs
-    and distinguishes speculative capability from practices that keep code
-    malleable.
-[^agile-simple-design]: The Agile Alliance describes simple design as ongoing
-    design in which design elements justify their costs and decisions are
-    deferred to gather evidence.
-[^metz-wrong-abstraction]: Metz describes how an incorrect shared abstraction
-    accumulates parameters and conditionals as new cases diverge.
-[^aws-review-process]: AWS recommends proportionate review based on whether a
-    decision is easy or difficult to reverse.
-[^anthropic-effective-agents]: Anthropic recommends beginning with the simplest
-    solution and adding workflows or autonomous agents only when their tradeoffs
-    are justified.
-[^openai-gpt5-coding]: OpenAI recommends specifying coding-agent eagerness and
-    tool budgets because broad context gathering can be overdone.
+### A likely feature later
+
+A team expects a second pricing model next quarter but is delivering the first
+one now. Building a generic pricing framework today commits to guessed
+variation and delays the current model. Defer the framework; learn from the
+first implementation and introduce shared structure when the second model is
+active work.
+
+### A costly boundary now
+
+A public event schema will be consumed by parties that cannot be migrated
+atomically. Compatibility is already a current requirement even if some
+consumers arrive later. Design and test the compatibility boundary now, while
+deferring unrelated extension points.
+
+### Structure needed by today's change
+
+A requested behavior change is unnecessarily risky because two responsibilities
+are tangled. The structural need is no longer speculative. Apply the related
+[Tidy First](tidy-first.md) pattern to make only the preparatory change that
+enables today's behavior change.
+
+## Common misreadings
+
+- **“Do the least work possible.”** YAGNI governs premature commitment, not
+  diligence or completeness for present requirements.
+- **“We probably will not need it.”** Probability is not the core claim. Even
+  a likely future capability can be built too early.
+- **“Never design ahead.”** Investigation and preserving a cheap option differ
+  from implementing the full future capability.
+- **“Quality can wait.”** Current quality obligations and safe changeability
+  are not speculative features.
+- **“Simple means shortest.”** Simplicity concerns justified structure and
+  understandability, not merely line count.
+
+## Relationships
+
+- **Simple and incremental design** are practices within which YAGNI is
+  exercised and corrected through feedback.[^simple]
+- **Wrong abstraction** is a common consequence of violating the principle by
+  deciding too early which cases belong together.[^metz]
+- **Tidy First** is a related pattern for introducing structure at the moment a
+  current behavior change makes it useful, rather than in anticipation of an
+  imagined change.
+
+[^beck]: Beck calls YAGNI a meditation on timing and grounds the cost of
+    speculative structure in lost optionality and unfavorable economic timing.
+[^fowler]: Fowler traces the phrase to Beck and Hendrickson and relates it to
+    XP's Simple Design and incremental-design practice.
+[^metz]: Metz shows how premature shared abstractions accumulate parameters and
+    conditionals when later cases vary differently than expected.
+[^aws]: AWS uses reversible and irreversible decisions to distinguish the
+    amount and timing of analysis a choice warrants.
+[^simple]: The Agile Alliance describes simple design as continuous design in
+    which elements justify their cost and decisions can be deferred to gather
+    information.
