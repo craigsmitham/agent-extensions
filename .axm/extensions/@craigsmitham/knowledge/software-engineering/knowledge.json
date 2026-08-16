@@ -2,18 +2,21 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "software-engineering",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "knowledge",
   "format": {
     "name": "okf",
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "Software engineering guidance for architecture, design boundaries, changeability, invariants, evidence-timed complexity, and legible actionable work items",
+  "description": "Software engineering guidance for architecture documentation, functional and quality concerns, boundaries, changeability, invariants, and actionable work items",
   "keywords": [
     "software-engineering",
     "software-architecture",
     "system-design",
+    "architecture-documentation",
+    "quality-attributes",
+    "functional-semantics",
     "yagni",
     "tidy-first",
     "refactoring",

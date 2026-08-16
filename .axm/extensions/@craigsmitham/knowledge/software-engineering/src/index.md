@@ -12,8 +12,9 @@ runbooks.
 
 ## Architecture
 
-- [Software architecture](architecture/) - Durable structural decisions about
-  responsibilities, boundaries, authority, dependencies, invariants, and views.
+- [Software architecture](architecture/) - Durable structural decisions and
+  the functional and quality concerns that give them meaning, including a
+  portable pattern and guide for a small architecture corpus.
 
 ## Design and change
 

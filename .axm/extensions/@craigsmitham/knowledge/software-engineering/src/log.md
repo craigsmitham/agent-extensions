@@ -2,6 +2,16 @@
 
 ## 2026-08-15
 
+- **Architecture documentation**: Added the candidate [Just Enough Architecture
+  Docs](architecture/just-enough-architecture-docs.md) pattern and [Applying
+  Just Enough Architecture
+  Docs](architecture/applying-just-enough-architecture-docs.md) guide for
+  preserving durable functional, quality, and structural meaning without a
+  parallel specification corpus.
+- **Quality concerns**: Added [Quality characteristics and architectural
+  concerns](architecture/quality-characteristics-and-architectural-concerns.md)
+  to connect quality vocabulary to contextual requirements, scenarios,
+  architecture significance, and proportionate evidence.
 - **Work items**: Added the cross-cutting pair [Work item titles and
   summaries](work-items/work-item-titles-and-summaries.md) and [Titling and
   summarizing work items](work-items/titling-and-summarizing-work-items.md),

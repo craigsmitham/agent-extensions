@@ -1,8 +1,8 @@
 # Software architecture
 
-Durable structural decisions about responsibilities, boundaries, authority,
-dependencies, invariants, and views. Use this section when local implementation
-details are insufficient to explain what the system must continue to preserve.
+Durable structural decisions and the functional and quality concerns that give
+them meaning. Use this section when implementation details are insufficient to
+explain what the system must continue to preserve and why.
 
 ## Start here
 
@@ -19,3 +19,9 @@ details are insufficient to explain what the system must continue to preserve.
 - [Invariants, preservation, and enforcement](invariants-and-enforcement.md) - What makes a property invariant, how state and observation boundaries qualify its preservation, and how invariants relate to requirements, correctness, and enforcement.
 - [Expressing invariants](expressing-invariants.md) - How to distinguish an invariant from neighboring requirements, state its scope and observation boundary precisely, and connect it to preservation obligations and evidence.
 - [Views and concerns](views-and-concerns.md) - Why architecture uses concern-specific views and how to keep multiple views from becoming competing models of the system.
+
+## Documentation and quality
+
+- [Quality characteristics and architectural concerns](quality-characteristics-and-architectural-concerns.md) - How quality characteristics become contextual, assessable concerns that matter to architecture, and how scenarios and evidence make them useful without turning a taxonomy into a checklist.
+- [Just Enough Architecture Docs](just-enough-architecture-docs.md) - A candidate pattern for preserving accepted, durable functional, quality, and structural meaning that executable sources cannot reveal reliably, without maintaining a parallel specification corpus.
+- [Applying Just Enough Architecture Docs](applying-just-enough-architecture-docs.md) - How to adopt the pattern, select architecture-document subjects and views, write durable concerns, connect executable evidence, and migrate an existing corpus.

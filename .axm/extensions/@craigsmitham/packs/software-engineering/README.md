@@ -1,15 +1,15 @@
 # Software engineering
 
-Software engineering judgment for evidence-timed change. This pack keeps YAGNI
-and Tidy First as distinct, concise rules while placing their rationale,
-boundaries, and examples in a shared knowledge bundle for progressive
-disclosure.
+Software engineering judgment for architecture documentation and
+evidence-timed change. This pack keeps YAGNI and Tidy First as distinct,
+concise rules while placing their rationale, boundaries, and examples beside
+portable architecture guidance in a shared knowledge bundle.
 
 ## Included extensions
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/software-engineering` | Architecture, changeability, invariants, YAGNI, Tidy First, and paired explainers and guides for software work items |
+| `@craigsmitham/knowledge/software-engineering` | Architecture documentation, functional and quality concerns, changeability, invariants, YAGNI, Tidy First, and paired explainers and guides for software work items |
 | `@craigsmitham/rules/yagni` | Questions speculative capability, structure, process, and scope throughout the SDLC |
 | `@craigsmitham/rules/tidy-first` | Questions whether a small behavior-preserving preparation should precede an authorized behavior change |
 
@@ -27,7 +27,8 @@ axm install @craigsmitham/packs/software-engineering
 The rules remain available as lightweight decision prompts. Follow their links
 when the decision needs the fuller model, constraints, or examples. The
 knowledge bundle also provides tool-neutral explainers and authoring guides for
-operational incident records, software defect reports, and feature requests.
+an intentionally small architecture corpus, operational incident records,
+software defect reports, and feature requests.
 
 ## Evaluation cases
 
