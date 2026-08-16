@@ -1,14 +1,16 @@
 # Software engineering knowledge
 
 Portable principles and patterns for reasoning about software architecture,
-design, change, and the timing of justified complexity. It is intended for
-engineers and agents making durable technical decisions across languages and
-platforms.
+design, change, the timing of justified complexity, and the work items used to
+manage delivery and operational response. It is intended for engineers and
+agents making durable technical decisions across languages and platforms.
 
 Use it for conceptual guidance about responsibilities, boundaries,
-changeability, invariants, architectural communication, YAGNI, and Tidy First.
-It is not a language or framework reference, a repository-specific
-architecture, or a step-by-step delivery workflow.
+changeability, invariants, architectural communication, YAGNI, and Tidy First,
+and for tool-neutral guides to writing incident records, defect reports,
+feature requests, and the titles and summaries that make them legible at a
+glance. It is not a language or framework reference, a repository-specific
+architecture, a tracker administration manual, or an incident-response runbook.
 
 Install it with:
 

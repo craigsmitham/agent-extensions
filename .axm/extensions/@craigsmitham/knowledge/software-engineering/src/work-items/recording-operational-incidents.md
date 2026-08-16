@@ -50,6 +50,11 @@ Avoid titles that assert an unconfirmed cause, such as “Database connection
 pool bug.” Keep severity in a structured field when the tracker supports one;
 it changes more often than the incident identity.
 
+Pair the title with a one- or two-sentence summary of current impact and
+response state, and re-derive it at every material change — an incident brief
+describes a situation in motion, not a settled one. See
+[Titling and summarizing work items](titling-and-summarizing-work-items.md).
+
 ## 3. Put live state first
 
 At the top of the record, keep the information someone joining now needs:
@@ -110,6 +115,11 @@ items.
 - Last updated: <timestamp and timezone>
 - Response channel:
 
+## Summary
+
+One or two sentences: who is affected right now, and what the response is
+doing about it.
+
 ## Impact
 
 Who or what is affected, how, and to what known extent?
@@ -137,6 +147,7 @@ What is true now? What mitigation is active or being attempted?
 ## Final check
 
 - A newly joining responder can orient without a verbal briefing.
+- The title and summary describe the situation as it stands now.
 - Impact and severity are supported by evidence, not only labels.
 - Times include a timezone and uncertainty remains explicit.
 - Facts, hypotheses, actions, and outcomes are distinguishable.

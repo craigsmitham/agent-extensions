@@ -21,4 +21,4 @@ runbooks.
 
 ## Work items
 
-- [Software work items](work-items/) - Tool-neutral concepts and authoring guides for operational incident records, software defect reports, and feature requests.
+- [Software work items](work-items/) - Tool-neutral concepts and authoring guides for operational incident records, software defect reports, and feature requests, plus the titles and summaries that make any of them legible at a glance.

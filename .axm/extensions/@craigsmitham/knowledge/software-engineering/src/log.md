@@ -2,6 +2,11 @@
 
 ## 2026-08-15
 
+- **Work items**: Added the cross-cutting pair [Work item titles and
+  summaries](work-items/work-item-titles-and-summaries.md) and [Titling and
+  summarizing work items](work-items/titling-and-summarizing-work-items.md),
+  and gave each type-specific guide a `Summary` section, a pointer from its
+  titling step, and a final-check bullet.
 - **Work items**: Added paired explainers and guides for operational incident
   records, software defect reports, and feature requests under
   [Software work items](work-items/).

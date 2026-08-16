@@ -50,7 +50,9 @@ Use the affected behavior, observed result, and triggering condition:
 > Invoice export omits zero-value lines when tax details are included
 
 Avoid “Export is broken,” a presumed code location, or only the reporter’s
-preferred fix.
+preferred fix. Add a one- or two-sentence summary so the item is legible
+wherever it is scanned rather than opened; see
+[Titling and summarizing work items](titling-and-summarizing-work-items.md).
 
 ## 3. Contrast actual and expected behavior
 
@@ -98,6 +100,10 @@ mechanism is itself an authoritative constraint.
 ```markdown
 # <Affected behavior> <actual result> when <condition>
 
+## Summary
+
+One or two sentences: what is wrong now and why it matters.
+
 ## Expected behavior
 
 What should happen? Link the authoritative expectation when available.
@@ -134,6 +140,7 @@ What observable evidence will confirm the chosen resolution?
 
 ## Final check
 
+- The title and summary alone say what is wrong and why it matters.
 - The expected behavior has a stated basis.
 - Actual behavior is observable rather than inferred.
 - Reproduction or occurrence evidence preserves the relevant context.

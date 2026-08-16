@@ -46,7 +46,9 @@ Use language that survives alternative designs:
 > Let account owners export invoice history for external reconciliation
 
 Avoid only naming a widget or implementation, such as “Add CSV button,” unless
-the mechanism is itself the requirement.
+the mechanism is itself the requirement. Add a one- or two-sentence summary that
+states the current limitation before the desired outcome; see
+[Titling and summarizing work items](titling-and-summarizing-work-items.md).
 
 ## 3. Identify the affected context
 
@@ -108,6 +110,11 @@ provenance.
 ```markdown
 # <Affected party> can <desired ability or outcome>
 
+## Summary
+
+One or two sentences: what the affected party cannot do today and why that
+matters.
+
 ## Affected context
 
 Who or what has the need, and when does it arise?
@@ -148,6 +155,7 @@ Duplicates, related requests, research, or accepted delivery items.
 
 ## Final check
 
+- The title and summary alone say what is missing and why it matters.
 - The item describes new or changed expectation rather than a defect.
 - The affected context and underlying need are explicit.
 - Evidence is attributed and not overstated.
