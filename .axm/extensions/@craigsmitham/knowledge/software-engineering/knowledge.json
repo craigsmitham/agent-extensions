@@ -2,14 +2,14 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "software-engineering",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "knowledge",
   "format": {
     "name": "okf",
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "Software engineering principles and patterns for architecture, design boundaries, changeability, invariants, and evidence-timed complexity",
+  "description": "Software engineering guidance for architecture, design boundaries, changeability, invariants, evidence-timed complexity, and actionable work items",
   "keywords": [
     "software-engineering",
     "software-architecture",
@@ -18,7 +18,11 @@
     "tidy-first",
     "refactoring",
     "evolutionary-design",
-    "changeability"
+    "changeability",
+    "work-items",
+    "incident-management",
+    "defect-reporting",
+    "feature-requests"
   ],
   "license": "CC-BY-SA-4.0",
   "homepage": "https://github.com/craigsmitham/agent-extensions",

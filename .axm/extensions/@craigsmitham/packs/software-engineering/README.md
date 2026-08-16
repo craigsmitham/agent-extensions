@@ -9,7 +9,7 @@ disclosure.
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/software-engineering` | Principles and patterns for architecture, changeability, invariants, YAGNI, and Tidy First |
+| `@craigsmitham/knowledge/software-engineering` | Architecture, changeability, invariants, YAGNI, Tidy First, and paired explainers and guides for software work items |
 | `@craigsmitham/rules/yagni` | Questions speculative capability, structure, process, and scope throughout the SDLC |
 | `@craigsmitham/rules/tidy-first` | Questions whether a small behavior-preserving preparation should precede an authorized behavior change |
 
@@ -25,9 +25,9 @@ axm install @craigsmitham/packs/software-engineering
 ## Usage
 
 The rules remain available as lightweight decision prompts. Follow their links
-when the decision needs the fuller model, constraints, or examples. No separate
-guide is included because no distinct procedural job has been identified; add
-one only when such a reader need emerges.
+when the decision needs the fuller model, constraints, or examples. The
+knowledge bundle also provides tool-neutral explainers and authoring guides for
+operational incident records, software defect reports, and feature requests.
 
 ## Evaluation cases
 

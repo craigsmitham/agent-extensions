@@ -2,6 +2,9 @@
 
 ## 2026-08-15
 
+- **Work items**: Added paired explainers and guides for operational incident
+  records, software defect reports, and feature requests under
+  [Software work items](work-items/).
 - **Design and change**: Reframed
   [YAGNI](design-and-change/yagni-and-speculative-complexity.md) as a principle
   of timing, optionality, and deferred commitment, and added
