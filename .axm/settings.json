@@ -33,7 +33,8 @@
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes",
     "yagni": "workspace:@craigsmitham/rules/yagni",
-    "tidy-first": "workspace:@craigsmitham/rules/tidy-first"
+    "tidy-first": "workspace:@craigsmitham/rules/tidy-first",
+    "use-effect-v4": "workspace:@craigsmitham/rules/use-effect-v4"
   },
   "knowledge": {
     "docs": "workspace:@craigsmitham/knowledge/docs",

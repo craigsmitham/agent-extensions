@@ -143,6 +143,7 @@ expected=(
   packs/software-engineering
   rules/field-notes
   rules/tidy-first
+  rules/use-effect-v4
   rules/yagni
   skills/audit-docs
   skills/author-architecture-docs

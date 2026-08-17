@@ -146,6 +146,14 @@ clones, caches, or prior access.
 | [workflow-automation](.axm/extensions/@craigsmitham/knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end region=knowledge-base -->
 <!-- axm:start region=rules -->
+<!-- axm:rule @craigsmitham/rules/use-effect-v4@0.1.0 -->
+
+## Use Effect v4
+
+When working with Effect, use Effect v4 APIs and conventions. Do not use Effect
+v3 APIs or carry v3 patterns forward; verify ambiguous guidance against current
+v4 sources.
+
 <!-- axm:rule @craigsmitham/rules/yagni@0.1.1 -->
 
 ## YAGNI
