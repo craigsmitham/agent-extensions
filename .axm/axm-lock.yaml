@@ -1,13 +1,5 @@
 lockfileVersion: 4
 skills:
-  axm:
-    type: registry
-    owner: "@agentxm"
-    name: axm
-    resolvedVersion: 0.27.5
-    integrity: sha512-r49blXS0VpcRtNfPpP/0Iphrc7R7xTFSCF26LdRoccxhgq5bS5+yhQsdZ6K20eEyTWuCKsttUXM9YDpMZo//nQ==
-    sourceName: default
-    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
   garden-context:
     type: registry
     owner: "@agentxm"
@@ -46,6 +38,14 @@ skills:
     name: author-agent-skill
     resolvedVersion: 0.2.0
     integrity: sha512-cF9SM9Gx+BwDFpX8i6Tstxuqkvha5x4zsHDfGG4+dCtDHgYHrMA9xV8fDrCK7STq08Yttd7HN++xfi9o4+qk0Q==
+    sourceName: default
+    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
+  axm:
+    type: registry
+    owner: "@agentxm"
+    name: axm
+    resolvedVersion: 0.27.7
+    integrity: sha512-E6RiOAZf0yBSfQXZSPyprO1AhPb/WxQNsQq/fyzDTSJ9pHhEi/pDJWTHBTXG7MS4Tsv9Lo0jZM4x9W9gqTAdbw==
     sourceName: default
     publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
 knowledge:
