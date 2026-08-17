@@ -1,19 +1,22 @@
 # Software engineering
 
-Software engineering judgment for architecture documentation and
-evidence-timed change. This pack keeps YAGNI and Tidy First as distinct,
-concise rules while placing their rationale, boundaries, and examples beside
-portable architecture guidance in a shared knowledge bundle.
+Software engineering judgment and authoring workflows for durable architecture
+documentation, evidence-rich software work items, and evidence-timed change.
+The pack keeps YAGNI and Tidy First as distinct, concise rules while routing
+architecture documents and work items through focused skills backed by shared
+knowledge.
 
 ## Included extensions
 
 | Extension | Role |
 | --- | --- |
 | `@craigsmitham/knowledge/software-engineering` | Architecture documentation, functional and quality concerns, changeability, invariants, YAGNI, Tidy First, and paired explainers and guides for software work items |
+| `@craigsmitham/skills/author-architecture-docs` | Create and revise a small architecture corpus from accepted durable meaning and executable evidence |
+| `@craigsmitham/skills/author-software-work-items` | Create and revise feature requests, defect reports, incident records, and their tracker briefs |
 | `@craigsmitham/rules/yagni` | Questions speculative capability, structure, process, and scope throughout the SDLC |
 | `@craigsmitham/rules/tidy-first` | Questions whether a small behavior-preserving preparation should precede an authorized behavior change |
 
-The rules are not standalone: each links to a document in the bundled
+The skills and rules are not standalone: each loads or links to the bundled
 knowledge package. The knowledge package remains useful on its own.
 
 ## Install
@@ -24,11 +27,16 @@ axm install @craigsmitham/packs/software-engineering
 
 ## Usage
 
-The rules remain available as lightweight decision prompts. Follow their links
-when the decision needs the fuller model, constraints, or examples. The
-knowledge bundle also provides tool-neutral explainers and authoring guides for
-an intentionally small architecture corpus, operational incident records,
-software defect reports, and feature requests.
+- Ask to create, revise, migrate, or review repository architecture
+  documentation to route through accepted desired state, the admission test,
+  concern views, and executable evidence.
+- Ask to draft or update a feature request, defect report, operational incident
+  record, or work-item title and summary to preserve its evidence and lifecycle.
+- Use the YAGNI and Tidy First rules as lightweight decision prompts, following
+  their links when the decision needs the fuller model, constraints, or
+  examples.
+- Search or open the knowledge bundle directly for tool-neutral explanations
+  and guides without invoking an authoring workflow.
 
 ## Evaluation cases
 
@@ -41,6 +49,8 @@ Use these cases when validating the effective instruction surface:
 | Urgent restoration makes preparatory work too costly | Change behavior directly; tidy after, later, or never |
 | A public compatibility boundary will soon become costly to reverse | Treat compatibility as a current constraint while deferring unrelated extension points |
 | The task is read-only research, diagnosis, or review | Neither rule authorizes a structural or behavioral change |
+| Architecture prose is requested while a boundary remains undecided | Expose the missing decision instead of recording one option as accepted desired state |
+| An untriaged feature request is presented as an implementation task | Preserve intake evidence and do not invent acceptance, design, priority, or delivery authorization |
 
 ## License
 

@@ -25,14 +25,10 @@
     "field-notes": "workspace:@craigsmitham/skills/field-notes",
     "author-docs": "workspace:@craigsmitham/skills/author-docs",
     "author-okf": "workspace:@craigsmitham/skills/author-okf",
-    "frame-codebase-research": "workspace:@craigsmitham/skills/frame-codebase-research",
-    "conduct-codebase-research": "workspace:@craigsmitham/skills/conduct-codebase-research",
-    "workshop-codebase-design": "workspace:@craigsmitham/skills/workshop-codebase-design",
-    "specify-codebase-change": "workspace:@craigsmitham/skills/specify-codebase-change",
-    "plan-codebase-change": "workspace:@craigsmitham/skills/plan-codebase-change",
-    "verify-codebase-change": "workspace:@craigsmitham/skills/verify-codebase-change",
     "craft-effect-v4": "workspace:@craigsmitham/skills/craft-effect-v4",
-    "audit-docs": "workspace:@craigsmitham/skills/audit-docs"
+    "audit-docs": "workspace:@craigsmitham/skills/audit-docs",
+    "author-architecture-docs": "workspace:@craigsmitham/skills/author-architecture-docs",
+    "author-software-work-items": "workspace:@craigsmitham/skills/author-software-work-items"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes",
@@ -57,7 +53,6 @@
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",
     "docs": "workspace:@craigsmitham/packs/docs",
     "field-notes": "workspace:@craigsmitham/packs/field-notes",
-    "codebase-change-workflow": "workspace:@craigsmitham/packs/codebase-change-workflow",
     "software-engineering": "workspace:@craigsmitham/packs/software-engineering",
     "agent-engineering": "@agentxm/packs/agent-engineering",
     "context-engineering": "@agentxm/packs/context-engineering",

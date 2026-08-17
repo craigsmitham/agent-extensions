@@ -29,7 +29,7 @@ Install the replacement `@agentxm` identities; the previously published
 | `effect-v4` | Effect v4 guidance: a routing skill plus a knowledge bundle of twenty-two guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification | `axm install @craigsmitham/packs/effect-v4` |
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
-| `software-engineering` | Software engineering knowledge plus concise, distinct YAGNI and Tidy First rules | `axm install @craigsmitham/packs/software-engineering` |
+| `software-engineering` | Architecture-doc and software-work-item authoring skills, shared engineering knowledge, and concise YAGNI and Tidy First rules | `axm install @craigsmitham/packs/software-engineering` |
 
 ## Standalone knowledge
 

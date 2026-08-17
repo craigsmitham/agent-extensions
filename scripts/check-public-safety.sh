@@ -137,7 +137,6 @@ expected=(
   knowledge/software-engineering
   knowledge/strategy
   knowledge/workflow-automation
-  packs/codebase-change-workflow
   packs/docs
   packs/effect-v4
   packs/field-notes
@@ -146,18 +145,14 @@ expected=(
   rules/tidy-first
   rules/yagni
   skills/audit-docs
+  skills/author-architecture-docs
   skills/author-docs
   skills/author-okf
-  skills/conduct-codebase-research
+  skills/author-software-work-items
   skills/craft-effect-v4
   skills/field-notes
-  skills/frame-codebase-research
   skills/improve-whatever
-  skills/plan-codebase-change
-  skills/specify-codebase-change
   skills/temporal-dates
-  skills/verify-codebase-change
-  skills/workshop-codebase-design
 )
 
 expected_list="$(printf '%s\n' "${expected[@]}")"

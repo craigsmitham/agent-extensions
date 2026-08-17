@@ -147,6 +147,7 @@ clones, caches, or prior access.
 <!-- axm:end region=knowledge-base -->
 <!-- axm:start region=rules -->
 <!-- axm:rule @craigsmitham/rules/yagni@0.1.1 -->
+
 ## YAGNI
 
 Before adding capability, structure, process, or scope for future use, consult
@@ -156,6 +157,7 @@ or concrete risk. If delay would close an option that is costly to recover,
 take only the cheapest safe action that preserves it.
 
 <!-- axm:rule @craigsmitham/rules/tidy-first@0.1.1 -->
+
 ## Tidy First
 
 When current structure materially increases the difficulty or risk of an
@@ -165,6 +167,7 @@ Choose first, after, later, or never. If tidying first, make only the smallest
 behavior-preserving change that makes the authorized change easier.
 
 <!-- axm:rule @craigsmitham/rules/field-notes@0.2.0 -->
+
 ## Field notes
 
 Record how work actually goes, so recurring obstacles become durable
