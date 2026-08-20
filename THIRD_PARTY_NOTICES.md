@@ -36,9 +36,9 @@ or MDN documentation.
 
 ## Management and architecture sources
 
-The `knowledge-management`, `product-management`, `software-architecture`,
-`software-engineering`, and `strategy` bundles synthesize ideas from public
-sources identified in each concept's provenance metadata. These include the
+The `knowledge-management`, `product-management`, `software-engineering`, and
+`strategy` bundles synthesize ideas from public sources identified in each
+concept's provenance metadata. These include the
 FAIR Guiding Principles, W3C PROV, KCS, ISO/IEC/IEEE 42010, D. L. Parnas's work
 on modular decomposition, Kent Beck's writing and interviews on YAGNI and Tidy
 First, Martin Fowler's writing on YAGNI and preparatory refactoring, the Agile

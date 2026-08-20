@@ -12,14 +12,11 @@
     "github-copilot-cli",
     "zed"
   ],
-  "rulesConfig": {
-    "instructions": {
-      "fileName": "AGENTS.md",
-      "gitignoreAliases": true
-    }
+  "instructionFiles": {
+    "fileName": "AGENTS.md",
+    "gitignoreAliases": true
   },
   "skills": {
-    "axm": "@agentxm/skills/axm",
     "temporal-dates": "workspace:@craigsmitham/skills/temporal-dates",
     "improve-whatever": "workspace:@craigsmitham/skills/improve-whatever",
     "field-notes": "workspace:@craigsmitham/skills/field-notes",
@@ -28,7 +25,8 @@
     "craft-effect-v4": "workspace:@craigsmitham/skills/craft-effect-v4",
     "audit-docs": "workspace:@craigsmitham/skills/audit-docs",
     "author-architecture-docs": "workspace:@craigsmitham/skills/author-architecture-docs",
-    "author-software-work-items": "workspace:@craigsmitham/skills/author-software-work-items"
+    "author-software-work-items": "workspace:@craigsmitham/skills/author-software-work-items",
+    "axm": "@agentxm/skills/axm@0.27.13"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes",
@@ -42,10 +40,6 @@
     "workflow-automation": "workspace:@craigsmitham/knowledge/workflow-automation",
     "effect-v4": "workspace:@craigsmitham/knowledge/effect-v4",
     "knowledge-management": "workspace:@craigsmitham/knowledge/knowledge-management",
-    "software-architecture": {
-      "source": "workspace:@craigsmitham/knowledge/software-architecture",
-      "enabled": false
-    },
     "product-management": "workspace:@craigsmitham/knowledge/product-management",
     "strategy": "workspace:@craigsmitham/knowledge/strategy",
     "software-engineering": "workspace:@craigsmitham/knowledge/software-engineering"

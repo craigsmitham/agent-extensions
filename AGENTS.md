@@ -118,7 +118,7 @@ clones, caches, or prior access.
 | --- | --- | --- | --- | --- |
 | axm-cli-interactions | survey | Sessions that directly run `axm` to complete work in this workspace or manually validate AXM behavior; automated test invocations excluded | — | Recurring notes support a specific target condition, or two triage reviews find no pattern |
 
-<!-- axm:start region=knowledge-base -->
+<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery -->
 ## Knowledge Base
 
 ### @agentxm
@@ -144,9 +144,9 @@ clones, caches, or prior access.
 | [software-engineering](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/index.md) | Software engineering guidance for architecture documentation, functional and quality concerns, boundaries, changeability, invariants, and actionable work items |
 | [strategy](.axm/extensions/@craigsmitham/knowledge/strategy/src/index.md) | Strategy as coherent choices about where and how to create advantage, supported by capabilities, evidence, and value creation |
 | [workflow-automation](.axm/extensions/@craigsmitham/knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
-<!-- axm:end region=knowledge-base -->
-<!-- axm:start region=rules -->
-<!-- axm:rule @craigsmitham/rules/use-effect-v4@0.1.0 -->
+<!-- axm:end v=1 region=knowledge -->
+<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/use-effect-v4@0.1.0 kind=rule -->
 
 ## Use Effect v4
 
@@ -154,7 +154,7 @@ When working with Effect, use Effect v4 APIs and conventions. Do not use Effect
 v3 APIs or carry v3 patterns forward; verify ambiguous guidance against current
 v4 sources.
 
-<!-- axm:rule @craigsmitham/rules/yagni@0.1.1 -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/yagni@0.1.1 kind=rule -->
 
 ## YAGNI
 
@@ -164,7 +164,7 @@ Defer the commitment unless it serves a current feature, constraint, invariant,
 or concrete risk. If delay would close an option that is costly to recover,
 take only the cheapest safe action that preserves it.
 
-<!-- axm:rule @craigsmitham/rules/tidy-first@0.1.1 -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/tidy-first@0.1.1 kind=rule -->
 
 ## Tidy First
 
@@ -174,7 +174,7 @@ pattern](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/design
 Choose first, after, later, or never. If tidying first, make only the smallest
 behavior-preserving change that makes the authorized change easier.
 
-<!-- axm:rule @craigsmitham/rules/field-notes@0.2.0 -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.0 kind=rule -->
 
 ## Field notes
 
@@ -215,4 +215,4 @@ three options.
 
 To declare subjects, triage notes, or promote them into findings, use the
 `field-notes` skill. Never do that work inline.
-<!-- axm:end region=rules -->
+<!-- axm:end v=1 region=rules -->

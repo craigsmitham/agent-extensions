@@ -133,7 +133,6 @@ expected=(
   knowledge/field-notes
   knowledge/knowledge-management
   knowledge/product-management
-  knowledge/software-architecture
   knowledge/software-engineering
   knowledge/strategy
   knowledge/workflow-automation

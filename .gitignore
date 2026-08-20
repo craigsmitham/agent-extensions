@@ -1,3 +1,3 @@
-# >>> axm:instructions >>>
+# axm:start v=1 region=instruction-aliases ext=@agentxm/instructions/aliases
 **/CLAUDE.md
-# <<< axm:instructions <<<
+# axm:end v=1 region=instruction-aliases
