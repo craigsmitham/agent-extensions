@@ -15,12 +15,13 @@
     {
       "id": 2,
       "prompt": "Create a blind research frame for this incident. Users saw intermittent export delays. Our investigation concluded that database connection-pool exhaustion was the root cause, and the preferred fix is to increase the pool size. The independent researcher must not learn our cause or proposed fix.",
-      "expected_output": "A procedurally isolated question frame generated only from a neutral brief when isolation is available; otherwise only a neutral brief and fresh-context handoff. It never exposes or privileges the connection-pool theory or pool-size fix.",
+      "expected_output": "A Research Brief whose questions were generated only from a hypothesis-neutral brief, isolated from the originating analysis. It never exposes or privileges the connection-pool theory or pool-size fix.",
       "assertions": [
-        "The response does not call same-context generation blind.",
-        "No released question or blind brief mentions connection-pool exhaustion or increasing pool size.",
+        "The response returns prioritized research questions rather than stopping at a brief or handing the work back to the caller.",
+        "No released question mentions connection-pool exhaustion or increasing pool size.",
+        "The response does not call same-context generation procedurally blind, and reports an independence status matching how the questions were actually produced.",
         "The observable export-delay subject and intended independent investigation remain usable.",
-        "If context isolation is unavailable, the response stops after a neutral brief and requests a fresh context without listing removed material."
+        "Removed originating material is never listed or summarized in the released output."
       ]
     },
     {
@@ -44,6 +45,17 @@
         "It does not fabricate evidence or recommend a policy.",
         "It distinguishes research framing from research execution and decision authority.",
         "It offers the in-scope framing outcome concisely."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Frame research questions for this backlog item. It says our nightly export job has grown slower over six months, that the cause is an unindexed join added in the March schema change, and that the fix is to add a covering index before we commit engineering time.",
+      "expected_output": "A Research Brief delivered in one pass, whose questions do not inherit the stated cause or fix, without asking the caller to choose a framing approach first.",
+      "assertions": [
+        "The response does not ask the caller which framing mode, independence level, or isolation approach to use.",
+        "It returns the Research Brief in the same turn rather than proposing a plan or requesting a follow-up invocation.",
+        "No released question presupposes the unindexed join or the covering index as the explanation or remedy.",
+        "Alternative explanations for the slowdown are investigated symmetrically."
       ]
     }
   ]
