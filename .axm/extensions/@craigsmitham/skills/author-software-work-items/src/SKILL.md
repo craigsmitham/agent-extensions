@@ -41,10 +41,11 @@ type.
 
 If the artifact is an implementation task, accepted delivery item,
 investigation, post-incident review, architecture decision, or general project
-record, use its governing workflow rather than stretching these templates.
-Classification sets the item's primary meaning and minimum content, not a body
-ceiling: a defect or request may preserve supplied design and delivery context
-without becoming the artifact that approves or executes it.
+record, its governing workflow owns lifecycle, classification, placement, and
+host fields. Faithfully authoring or revising that artifact from supplied
+accepted context remains in scope; independently designing, approving, or
+decomposing the work does not. Classification sets the item's primary meaning
+and minimum content, not a body ceiling.
 
 ## Workflow
 
