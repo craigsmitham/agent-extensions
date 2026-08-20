@@ -1,6 +1,6 @@
 ---
 name: author-architecture-docs
-description: Creates, revises, organizes, and reviews repository software architecture documentation that preserves accepted durable functional, quality, and structural meaning. Use when asked to write, update, migrate, organize, or review architecture docs, an architecture overview, system or subsystem responsibility documentation, or an architecture corpus. Not for choosing an architecture, evaluating alternatives, recording an unaccepted proposal or decision, researching current behavior as the requested output, auditing a documentation corpus, or implementing the system.
+description: Creates, revises, organizes, and reviews repository software architecture documentation and corpora that preserve accepted durable meaning. Use for architecture overviews and corpus structure; capabilities, features, surfaces, DDD bounded contexts, C4 systems/containers/components, Wardley or strategic evolution views; and system or subsystem responsibility docs. Not for choosing an architecture, recording an unaccepted proposal, auditing a whole documentation corpus, or implementing the system.
 ---
 
 # Author architecture docs
@@ -24,6 +24,11 @@ Open only the additional concept needed for the current claim:
 | Define or express an invariant | `invariants-and-enforcement.md`, then `expressing-invariants.md` when authoring it |
 | Select stakeholder concerns or views | `views-and-concerns.md` |
 | Make a quality concern contextual and assessable | `quality-characteristics-and-architectural-concerns.md` |
+| Model capabilities, features, applications, or actor-facing surfaces | `capabilities-features-and-surfaces.md` |
+| Model DDD bounded contexts or a context map | `domain-context-views.md` |
+| Model C4 systems, containers, components, code, dynamics, deployment, or shared modules | `c4-structural-views.md` |
+| Connect strategy, evolution, sourcing, or inertia to architecture | `strategic-evolution-views.md`, then `.axm/extensions/@craigsmitham/knowledge/strategy/src/wardley-mapping.md` for Wardley mapping |
+| Organize or migrate a multi-view corpus | `organizing-an-architecture-corpus.md` |
 
 ## Workflow
 
@@ -37,10 +42,11 @@ Open only the additional concept needed for the current claim:
    delivery status in its own lifecycle. If a material responsibility,
    boundary, behavior, quality constraint, or tradeoff is undecided, name the
    gap and do not choose it merely to complete the document.
-3. **Choose one cohesive subject.** Define the outcome or policy it owns, its
-   exclusions, stakeholders, and system boundary. Follow useful local
-   information architecture; do not create a feature, capability, component,
-   or quality taxonomy for symmetry.
+3. **Choose the system, subject, and view.** Define the system of interest, then
+   the outcome or policy the subject owns, its exclusions, and stakeholders.
+   Distinguish capabilities, features, surfaces, domain contexts, and C4
+   elements; connect them with typed relationships instead of one false
+   hierarchy. Do not create a taxonomy for symmetry.
 4. **Apply the admission test.** Include a claim only when it is accepted,
    consequential, durable through ordinary implementation change, difficult to
    infer reliably from executable or live sources, and worth maintaining.
@@ -59,12 +65,18 @@ Open only the additional concept needed for the current claim:
    obsolete, the evidence is insufficient, or accepted intent changed. Do not
    let the newest artifact silently win. Stop when resolution requires a new
    product or architecture decision.
-8. **Make and verify the authorized change.** For authoring, edit the bounded
+8. **Organize for progressive disclosure.** Keep `index.md` navigational, give
+   substantive subjects recognizable filenames, use `overview.md` for meaning
+   only when needed, and expand a growing leaf into a directory without
+   changing its conceptual identity. Keep C4 components beneath their owning
+   container; model shared code as modules unless it has a runtime boundary.
+9. **Make and verify the authorized change.** For authoring, edit the bounded
    documentation and required navigation while preserving unrelated work. For
    review-only requests, return findings without edits. Reapply the admission
-   test, verify claims and links against their authorities, run available docs
-   checks, and inspect the diff for copied mechanics or collateral changes.
-9. **Handoff.** State the subject and accepted meaning preserved, evidence
+   test, verify claims and links against their authorities, give time-sensitive
+   strategic hypotheses a review boundary, run available docs checks, and
+   inspect the diff for copied mechanics or collateral changes.
+10. **Handoff.** State the subject and accepted meaning preserved, evidence
    checked, files changed or reviewed, and any unresolved decision, evidence
    gap, or reconciliation owner.
 

@@ -10,7 +10,7 @@ sources:
     title: Just Enough Architecture Docs
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-16T02:29:42Z
+  at: 2026-08-20T19:56:11Z
 ---
 
 # Applying Just Enough Architecture Docs
@@ -81,8 +81,19 @@ Choose the unit readers need to understand and change together. It might be:
 
 Test the choice by asking whether one responsibility and review conversation can
 reasonably own the document. Split unrelated concerns. Combine fragments that
-repeat the same accepted meaning. Do not build both a feature tree and a
-capability tree unless each resolves a distinct, consequential question.
+repeat the same accepted meaning. Begin from the system of interest rather than
+assuming the subject must be a commercial product. Do not build both a feature
+tree and a capability tree unless each resolves a distinct, consequential
+question. When both do, features describe recognizable behavior while
+capabilities describe stable outcomes; connect them explicitly instead of
+forcing one beneath the other.
+
+Use [Capabilities, features, and
+surfaces](capabilities-features-and-surfaces.md), [Domain context
+views](domain-context-views.md), and [C4 structural
+views](c4-structural-views.md) when the subject participates in those models.
+Choose one canonical document for each maintained element and express
+many-to-many relationships as links rather than duplicate files.
 
 ## 4. Apply the admission test claim by claim
 
@@ -200,6 +211,12 @@ Move incrementally by subject:
 
 Do not rewrite every document into one template. Preserve useful local shape
 while making authority and concern views clear.
+
+When the corpus needs several concern-oriented collections, apply [Organizing
+an architecture corpus](organizing-an-architecture-corpus.md). Use `index.md`
+for navigation, descriptive filenames for substantive subjects, and
+`overview.md` only when a collection or expanded subject needs a mental model.
+Do not create empty directories to advertise a future taxonomy.
 
 ## 12. Review and maintain
 

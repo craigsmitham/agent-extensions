@@ -13,7 +13,7 @@ sources:
     title: ISO/IEC/IEEE 42010:2022 — Architecture description
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-16T02:29:42Z
+  at: 2026-08-20T19:56:11Z
 ---
 
 # Just Enough Architecture Docs
@@ -122,6 +122,13 @@ Use whichever subject produces the most coherent ownership and change context.
 Do not create matching documents for every feature or capability when only some
 contain durable, non-inferable concerns.
 
+When several views are useful, retain their distinctions: capabilities express
+stable abilities or outcomes, features express recognizable behavior, surfaces
+express encounter points, domain contexts express semantic and authority
+boundaries, and C4 elements express structural realization. The relationships
+among them are normally many-to-many and should not be replaced by one folder
+hierarchy.
+
 ### Keep concern views distinct but connected
 
 Within a subject, include only the views that carry material information:
@@ -221,6 +228,11 @@ presented here as a candidate pending independent known uses.
 - [Views and concerns](views-and-concerns.md)
 - [Quality characteristics and architectural concerns](quality-characteristics-and-architectural-concerns.md)
 - [Applying Just Enough Architecture Docs](applying-just-enough-architecture-docs.md)
+- [Organizing an architecture corpus](organizing-an-architecture-corpus.md)
+- [Capabilities, features, and surfaces](capabilities-features-and-surfaces.md)
+- [Domain context views](domain-context-views.md)
+- [C4 structural views](c4-structural-views.md)
+- [Strategic evolution views](strategic-evolution-views.md)
 
 [^fairbanks-risk-driven]: Fairbanks advocates matching architecture effort to
     risk rather than applying the same documentation burden to every project.

@@ -10,7 +10,7 @@ sources:
     title: ISO/IEC/IEEE 42010 conceptual model
 generated:
   by: codex/gpt-5
-  at: 2026-08-15T15:20:54Z
+  at: 2026-08-20T19:56:11Z
 ---
 
 # Views and concerns
@@ -32,6 +32,12 @@ cross several product surfaces without owning their individual behavior.
 Multiple views must share stable element names and authority. If one view says
 an element owns a decision and another assigns it elsewhere, the corpus contains
 a contradiction rather than useful plurality.
+
+Some views have real containment while others are relationship networks. C4
+components belong to one owning container, but a feature can contribute to
+several capabilities, appear through several surfaces, and be realized across
+several containers. Preserve each viewpoint's semantics rather than forcing all
+elements into one tree.
 
 Views are communication devices, not inventories. Include enough detail to
 resolve the concern and link back to the concept that owns each substantive

@@ -20,8 +20,16 @@ explain what the system must continue to preserve and why.
 - [Expressing invariants](expressing-invariants.md) - How to distinguish an invariant from neighboring requirements, state its scope and observation boundary precisely, and connect it to preservation obligations and evidence.
 - [Views and concerns](views-and-concerns.md) - Why architecture uses concern-specific views and how to keep multiple views from becoming competing models of the system.
 
+## Architecture models
+
+- [Capabilities, features, and surfaces](capabilities-features-and-surfaces.md) - How capabilities, features, and surfaces provide complementary scale-neutral views of system outcomes, recognizable behavior, and actor interaction points.
+- [Domain context views](domain-context-views.md) - How bounded contexts model semantic, policy, authority, and state boundaries without becoming a synonym for services, modules, or teams.
+- [C4 structural views](c4-structural-views.md) - How to apply C4 system, container, component, and code scopes while preserving ownership, avoiding false nesting, and separating shared modules.
+- [Strategic evolution views](strategic-evolution-views.md) - How strategic architecture views connect user need, dependency, evolution, sourcing, inertia, and movement to accepted structural consequences.
+
 ## Documentation and quality
 
 - [Quality characteristics and architectural concerns](quality-characteristics-and-architectural-concerns.md) - How quality characteristics become contextual, assessable concerns that matter to architecture, and how scenarios and evidence make them useful without turning a taxonomy into a checklist.
 - [Just Enough Architecture Docs](just-enough-architecture-docs.md) - A candidate pattern for preserving accepted, durable functional, quality, and structural meaning that executable sources cannot reveal reliably, without maintaining a parallel specification corpus.
 - [Applying Just Enough Architecture Docs](applying-just-enough-architecture-docs.md) - How to adopt the pattern, select architecture-document subjects and views, write durable concerns, connect executable evidence, and migrate an existing corpus.
+- [Organizing an architecture corpus](organizing-an-architecture-corpus.md) - How to organize a view-oriented architecture corpus with progressive disclosure, descriptive subject files, navigational indexes, and explicit cross-view relationships.

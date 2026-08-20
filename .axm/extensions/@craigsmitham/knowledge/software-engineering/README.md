@@ -7,7 +7,9 @@ agents making durable technical decisions across languages and platforms.
 
 Use it for conceptual guidance about responsibilities, boundaries,
 changeability, invariants, architectural communication, functional and quality
-concerns, and a just-enough architecture corpus; for YAGNI and Tidy First; and
+concerns, a just-enough architecture corpus, scale-neutral capability and
+feature modeling, DDD context views, C4 structural views, and strategic
+evolution views; for YAGNI and Tidy First; and
 for tool-neutral guides to writing incident records, defect reports, feature
 requests, preserving their supplied design and delivery context, and deriving
 titles and summaries that make them legible at a glance. It is not a language
@@ -29,7 +31,9 @@ axm knowledge concepts search '"tidy first"'
 To adopt the architecture-documentation pattern, start with
 `architecture/just-enough-architecture-docs.md`, then follow
 `architecture/applying-just-enough-architecture-docs.md` for the repository
-profile and migration procedure.
+profile and migration procedure. Use
+`architecture/organizing-an-architecture-corpus.md` when the corpus needs
+several progressively disclosed views.
 
 This knowledge package is licensed under the Creative Commons
 Attribution-ShareAlike 4.0 International license (`CC-BY-SA-4.0`). The

@@ -10,7 +10,7 @@ sources:
     title: ISO/IEC/IEEE 42010:2022 — Architecture description
 generated:
   by: codex/gpt-5
-  at: 2026-08-15T15:20:54Z
+  at: 2026-08-20T19:56:11Z
 ---
 
 # Software architecture overview
@@ -29,6 +29,12 @@ Architecture should remain useful through a substantial rewrite. It may name
 stable elements and constrain their relationships, but it should not mirror a
 directory tree, endpoint inventory, dependency list, or delivery plan that an
 executable source can provide more accurately.
+
+Architecture may include strategic, capability, behavior, interaction,
+domain-authority, structural, dynamic, deployment, and quality views when they
+answer real stakeholder concerns. These views describe one system of interest;
+their directories and diagrams are discovery mechanisms rather than one
+universal containment model.
 
 ## Non-responsibilities
 

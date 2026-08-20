@@ -2,6 +2,9 @@
 
 ## 2026-08-20
 
+- **Architecture corpus**: Added scale-neutral capability, feature, surface,
+  domain-context, C4 structural, strategic-evolution, and corpus-organization
+  guidance for progressive, explicitly related architecture views.
 - **Work items**: Added [Preserving design and delivery context in software
   work items](work-items/preserving-design-and-delivery-context.md), connected
   it to defect and feature-request authoring, and clarified that brief limits

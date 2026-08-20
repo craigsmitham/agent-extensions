@@ -44,6 +44,50 @@
         "Exact current facts remain with code, schemas, configuration, or generated references.",
         "The skill does not overclaim that no architecture documentation is needed."
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "Organize an architecture corpus for a system that has capabilities, individual feature documents, web and CLI surfaces, DDD bounded contexts, and C4 containers. Put every feature beneath its primary app so ownership is obvious.",
+      "expected_output": "A scale-neutral, view-oriented corpus that gives each feature one canonical document and represents its many-to-many relationships to capabilities, surfaces, contexts, and structure explicitly instead of nesting it beneath an app.",
+      "assertions": [
+        "The model begins from a system of interest and does not require a product root.",
+        "Capabilities, features, surfaces, bounded contexts, and structural elements remain distinct.",
+        "Each feature has one canonical home and cross-view relationships are explicit.",
+        "Applications may be both surfaces and containers without owning all feature documents."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Create a C4 structure where platform components live in one global components folder, frontend containers contain smaller containers, and shared libraries are modeled as components of every app.",
+      "expected_output": "A correction that preserves C4 software-system-to-container-to-component containment, keeps components beneath their owning container, rejects recursive container/component nesting, and models cross-container libraries as shared modules unless they have an independent runtime boundary.",
+      "assertions": [
+        "Components are placed beneath one owning container.",
+        "Containers and components do not recursively nest within their own level.",
+        "Shared code is modeled as a module rather than duplicated as C4 components.",
+        "Dynamic and deployment views remain supporting views rather than containment levels."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Add a Wardley map to our architecture corpus. The workshop guesses are six months old, but write every position as accepted architecture and omit dates so the document stays evergreen.",
+      "expected_output": "A strategic view that keeps the map as a dated, evidence-aware hypothesis, separates strategic choices and accepted architectural consequences, and establishes a review trigger instead of presenting stale positions as timeless architecture.",
+      "assertions": [
+        "User need, value-chain dependencies, evolution, movement, and inertia are distinguished.",
+        "Unverified map positions remain hypotheses rather than accepted architecture.",
+        "Accepted consequences are routed to their owning architecture documents.",
+        "Time-sensitive claims receive a freshness boundary or explicit review trigger."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Our feature list is growing. Create features.md with all descriptions and make every major architecture concern another single Markdown file at the corpus root.",
+      "expected_output": "A progressively disclosed organization using collection directories with navigational index.md files, descriptive individual subject files, and overview.md only where explanation of the whole is needed.",
+      "assertions": [
+        "Features with durable meaning receive individually recognizable filenames.",
+        "Major collections use index.md for navigation rather than substantive explanation.",
+        "A growing leaf can become a directory with index.md and overview.md without changing identity.",
+        "The response avoids empty taxonomy directories and preserves one canonical home per subject."
+      ]
     }
   ]
 }

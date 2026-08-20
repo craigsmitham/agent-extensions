@@ -1,7 +1,7 @@
 # Software engineering
 
 Software engineering judgment and authoring workflows for durable architecture
-documentation, evidence-rich software work items, and evidence-timed change.
+documentation, strategic evolution, evidence-rich software work items, and evidence-timed change.
 The pack keeps YAGNI and Tidy First as distinct, concise rules while routing
 architecture documents and work items through focused skills backed by shared
 knowledge.
@@ -11,6 +11,7 @@ knowledge.
 | Extension | Role |
 | --- | --- |
 | `@craigsmitham/knowledge/software-engineering` | Architecture documentation, functional and quality concerns, changeability, invariants, YAGNI, Tidy First, and paired explainers and guides for software work items |
+| `@craigsmitham/knowledge/strategy` | Strategic choice, value, evidence, and Wardley mapping for evolution-aware architecture views |
 | `@craigsmitham/skills/author-architecture-docs` | Create and revise a small architecture corpus from accepted durable meaning and executable evidence |
 | `@craigsmitham/skills/author-software-work-items` | Create and revise feature requests, defect reports, incident records, and their tracker briefs |
 | `@craigsmitham/rules/yagni` | Questions speculative capability, structure, process, and scope throughout the SDLC |
@@ -29,7 +30,7 @@ axm install @craigsmitham/packs/software-engineering
 
 - Ask to create, revise, migrate, or review repository architecture
   documentation to route through accepted desired state, the admission test,
-  concern views, and executable evidence.
+  concern views, explicit cross-view relationships, and executable evidence.
 - Ask to draft or update a feature request, defect report, operational incident
   record, or work-item title and summary to preserve its evidence and lifecycle.
 - Use the YAGNI and Tidy First rules as lightweight decision prompts, following
