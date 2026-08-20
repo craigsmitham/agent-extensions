@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "identity": {
+    "refType": "registry",
+    "owner": "@agentxm",
+    "type": "skill",
+    "name": "axm",
+    "version": "0.27.13",
+    "publisherBindingId": "hbnd_01ks5vvdf0efz9m4w5qsv4q5qp",
+    "integrity": "sha512-KMV8XnOMuxEx4Td2qSYB2Fa6nSKPzwjxlWzxwYajbVPDO7F3bzRZM3aIolGnLrbGszIej3zp6xCCNgg89N7f0g=="
+  }
+}

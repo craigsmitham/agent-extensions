@@ -139,6 +139,7 @@ expected=(
   packs/docs
   packs/effect-v4
   packs/field-notes
+  packs/qrspi
   packs/software-engineering
   rules/field-notes
   rules/tidy-first
@@ -152,6 +153,8 @@ expected=(
   skills/craft-effect-v4
   skills/field-notes
   skills/improve-whatever
+  skills/question
+  skills/research
   skills/temporal-dates
 )
 

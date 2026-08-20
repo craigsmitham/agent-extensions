@@ -22,7 +22,7 @@ make_fixture() {
   git -C "$fixture" init -q
   git -C "$fixture" config user.name "Public Safety Test"
   git -C "$fixture" config user.email "public-safety@example.invalid"
-  git -C "$fixture" add -A
+  git -C "$fixture" add -f -A
   git -C "$fixture" commit -qm baseline
   printf '%s\n' "$fixture"
 }

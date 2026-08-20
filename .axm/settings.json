@@ -26,7 +26,9 @@
     "audit-docs": "workspace:@craigsmitham/skills/audit-docs",
     "author-architecture-docs": "workspace:@craigsmitham/skills/author-architecture-docs",
     "author-software-work-items": "workspace:@craigsmitham/skills/author-software-work-items",
-    "axm": "@agentxm/skills/axm@0.27.13"
+    "axm": "@agentxm/skills/axm@0.27.13",
+    "question": "workspace:@craigsmitham/skills/question",
+    "research": "workspace:@craigsmitham/skills/research"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes",
@@ -52,6 +54,7 @@
     "agent-engineering": "@agentxm/packs/agent-engineering",
     "context-engineering": "@agentxm/packs/context-engineering",
     "harness-engineering": "@agentxm/packs/harness-engineering",
-    "skill-engineering": "@agentxm/packs/skill-engineering"
+    "skill-engineering": "@agentxm/packs/skill-engineering",
+    "qrspi": "workspace:@craigsmitham/packs/qrspi"
   }
 }

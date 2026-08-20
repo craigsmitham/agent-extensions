@@ -1,0 +1,50 @@
+{
+  "skill_name": "question",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Frame research for a public library deciding whether to extend weekend hours. We need a fast set of no more than seven questions before choosing whether to run a pilot.",
+      "expected_output": "A concise Research Brief spanning value, affected groups, operational feasibility, alternatives, and evidence needed, without treating the proposal as a defect.",
+      "assertions": [
+        "The frame identifies the decision and labels consequential assumptions.",
+        "It selects only materially relevant concerns rather than reproducing a universal checklist.",
+        "It returns at most seven distinct, answerable questions with stable Q IDs in priority order and evidence needed.",
+        "The questions consider both potential value and material downside without presuming failure."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Create a blind research frame for this incident. Users saw intermittent export delays. Our investigation concluded that database connection-pool exhaustion was the root cause, and the preferred fix is to increase the pool size. The independent researcher must not learn our cause or proposed fix.",
+      "expected_output": "A procedurally isolated question frame generated only from a neutral brief when isolation is available; otherwise only a neutral brief and fresh-context handoff. It never exposes or privileges the connection-pool theory or pool-size fix.",
+      "assertions": [
+        "The response does not call same-context generation blind.",
+        "No released question or blind brief mentions connection-pool exhaustion or increasing pool size.",
+        "The observable export-delay subject and intended independent investigation remain usable.",
+        "If context isolation is unavailable, the response stops after a neutral brief and requests a fresh context without listing removed material."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "What research questions should test the claim that a four-day school week improves teacher retention without harming student outcomes? Prioritize the five questions most likely to change a policy decision.",
+      "expected_output": "A Research Brief with five neutral, evidence-seeking questions that test the stated benefits, possible tradeoffs, affected populations, alternative explanations, and decision threshold without assuming the policy succeeds or fails.",
+      "assertions": [
+        "Exactly five research questions are returned.",
+        "The questions have stable Q1 through Q5 identifiers.",
+        "The questions test both retention and student outcomes without embedding a conclusion.",
+        "Plausible confounding factors or alternatives are investigated symmetrically.",
+        "Each question names evidence capable of changing the policy decision."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Research current evidence on whether four-day school weeks improve teacher retention, answer the question, and recommend a statewide policy.",
+      "expected_output": "A boundary response explaining that the question skill frames investigations but does not conduct research or recommend the policy, while offering to produce a research-question frame if wanted.",
+      "assertions": [
+        "The response does not claim to conduct the requested research under this skill.",
+        "It does not fabricate evidence or recommend a policy.",
+        "It distinguishes research framing from research execution and decision authority.",
+        "It offers the in-scope framing outcome concisely."
+      ]
+    }
+  ]
+}

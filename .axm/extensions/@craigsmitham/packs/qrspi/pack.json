@@ -1,0 +1,31 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "owner": "@craigsmitham",
+  "version": "0.0.1",
+  "description": "Concern-aware framing and consistent evidence-backed execution of independent research",
+  "keywords": [
+    "research",
+    "questions",
+    "investigation",
+    "framing",
+    "evidence",
+    "citations",
+    "synthesis",
+    "risk",
+    "uncertainty",
+    "blind-review"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": ".axm/extensions/@craigsmitham/packs/qrspi"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "type": "pack",
+  "name": "qrspi",
+  "dependencies": {
+    "@craigsmitham/skills/question": ">=0.0.1",
+    "@craigsmitham/skills/research": ">=0.0.1"
+  }
+}

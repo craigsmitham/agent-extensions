@@ -1,0 +1,60 @@
+{
+  "skill_name": "research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Execute this Research Brief in standard mode using current public evidence. Intended decision: whether a public library should pilot extended weekend hours. Q1: What unmet community needs would extended hours address? Q2: What operating costs and staffing constraints would materially affect a pilot? Q3: What evidence would distinguish extended hours from lower-cost alternatives?",
+      "expected_output": "A current, citation-backed Research Report with the exact required sections, a dashboard and matching finding for Q1 through Q3, calibrated confidence, decision implications, limitations, and a compact source register.",
+      "assertions": [
+        "The report preserves Q1 through Q3 and gives each exactly one dashboard row and one detailed finding.",
+        "Material external claims have nearby descriptive citations and the cited sources appear in the source register.",
+        "The executive synthesis uses the four required labels and does not silently recommend a decision.",
+        "Every finding includes answer, evidence, counterevidence or its bounded absence, confidence and limitations, decision implication, and what could change the answer."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Research this question in rapid mode: Does a four-day school week improve teacher retention without materially harming student outcomes? Treat it as Q7 and use evidence current through today. The policy decision belongs to the legislature; do not make it.",
+      "expected_output": "A rapid Research Report preserving Q7, comparing credible evidence and applicability, distinguishing retention from student outcomes, and stating implications without recommending legislation.",
+      "assertions": [
+        "The supplied Q7 identifier and full question are preserved.",
+        "The report distinguishes populations, timeframes, methods, and plausible confounding when synthesizing empirical evidence.",
+        "Credible conflicting or limiting evidence receives comparable treatment rather than being hidden behind one conclusion.",
+        "The report states a policy implication but does not make the legislature's decision."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Research this blind research brief: Subject and boundary: a proposal to change a city's permit intake process. Observable context: applicants report delays. Intended use: decide what to investigate next. Authoritative constraints: none supplied.",
+      "expected_output": "A concise boundary response explaining that the input lacks explicit research questions and must be framed before research execution, without inventing questions or claiming to conduct blind research.",
+      "assertions": [
+        "The skill does not silently create a research frame from a subject-only brief.",
+        "It does not claim procedural blindness merely because the brief uses neutral language.",
+        "It identifies the missing explicit research questions or objective.",
+        "It requests the smallest useful handoff needed to begin research."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Execute this rapid Research Brief and stop after the first two questions. Q1: What need does the proposal address? Q2: What evidence supports its expected benefit? Q3: What operational dependencies constrain it? Q4: What lower-cost alternatives exist?",
+      "expected_output": "A stable Research Report that investigates Q1 and Q2, retains Q3 and Q4 in the dashboard as Not reached, and makes the remaining work visible without pretending the brief was completed.",
+      "assertions": [
+        "All four supplied IDs appear in the dashboard and findings.",
+        "Q3 and Q4 use Not reached rather than unsupported substantive answers.",
+        "The executive synthesis and gaps reflect the explicit research cap.",
+        "The report retains every required section despite rapid-mode compression."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Turn this topic into research questions: whether our onboarding process is effective. Do not conduct the research yet.",
+      "expected_output": "A boundary response that leaves initial research framing to a framing workflow and does not execute research or fabricate findings.",
+      "assertions": [
+        "The response does not conduct research or fabricate evidence.",
+        "It identifies initial question framing as outside this skill's job.",
+        "It does not emit a Research Report with invented questions.",
+        "It states what input would allow research execution."
+      ]
+    }
+  ]
+}
