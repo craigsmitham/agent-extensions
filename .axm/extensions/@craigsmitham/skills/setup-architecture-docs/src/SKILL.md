@@ -31,6 +31,16 @@ repository instructions. A request to assess, plan, preview, or recommend is
 read-only. Do not add a review gate when the request, evidence, and safe defaults
 already establish the result.
 
+In read-only mode, use only local, credential-free inspection mechanisms whose
+provenance and non-mutating behavior are established. Do not execute
+repository-controlled scripts, install dependencies, create caches or generated
+artifacts, access external systems, or invoke a check whose effects are unknown.
+Skip any otherwise applicable check that cannot be established as read-only and
+report the resulting verification limitation. A mutating setup request does not
+implicitly authorize network access, credentials, dependency installation, or
+effects outside the selected architecture roots and persistent instruction
+authority; obtain separate authority for those effects.
+
 If an established setup needs broken-link repair, freshness review,
 reconciliation, cleanup, or pruning, classify it as established maintenance and
 leave that work to `maintain-architecture-docs`. Separate any genuinely missing
@@ -113,7 +123,9 @@ form; material exclusions; one recommendation after the comparison when the
 evidence supports it; and a final request to choose, revise, defer, or seek more
 evidence. Use stable descriptive option names. The ordinary text presentation
 is authoritative; a host affordance may render the same choices only when its
-labels map unambiguously. After emitting a decision gate, wait for the answer.
+labels map unambiguously. Reuse the exact option names in **Choose** and any
+follow-up decision so every response has a stable referent. After emitting a
+decision gate, wait for the answer.
 
 Use these literal section labels and order for the decision presentation:
 
@@ -210,8 +222,21 @@ existence:
   and
 - a read-only run made no changes.
 
-Run applicable documentation, link, profile, and repository checks, then
-inspect the diff for unrelated edits and silent semantic decisions.
+Before running a documentation, link, profile, or repository check, establish
+its command provenance, required authority, and side effects. In read-only mode,
+record the observable repository state before inspection, run only established
+non-mutating checks, and compare the state afterward. Use host- or
+adapter-observed artifact, filesystem, tool-call, and external-state evidence
+when available; a narrative claim that nothing changed is not evidence. When an
+observation channel is unavailable, report the limitation and do not claim more
+than the retained evidence establishes.
+
+In mutating mode, run only checks whose effects fit the authorized paths and
+compare the resulting state with the intended adoption surface. Inspect the
+diff for unrelated edits and silent semantic decisions. If a check is unsafe
+for the requested mode, unavailable, or fails after a bounded attempt, preserve
+the current state, report the check and limitation or failure, and do not claim
+the affected outcome is verified.
 
 ## Handoff
 

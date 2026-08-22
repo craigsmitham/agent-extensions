@@ -10,10 +10,15 @@ adoption assessment, ambiguous system boundaries, resistance to empty
 taxonomies and invented architecture, optional OKF adoption, outcome-based
 verification, and the boundary between setup and maintenance. They also cover
 stable named identity from the first concept and lifecycle or stewardship gaps
-that setup must surface without inventing.
+that setup must surface without inventing. Read-only cases distinguish observed
+side-effect evidence from narrative claims, forbid an advertised check whose
+provenance and effects are unknown, and exercise both the supported-recommendation
+and no-recommendation forms of the exact decision-presentation contract.
 
 The suite passes when setup leaves an explicit, discoverable mapping from every
 documented system to one canonical architecture-doc root, records only accepted
 local choices, preserves existing material, makes consequential ambiguity a
 real decision gate, and defers substantive authoring or established-corpus
-maintenance to their owning workflows.
+maintenance to their owning workflows. A read-only pass additionally requires
+observable no-change evidence within the harness boundary; missing evidence is
+unknown, not success.
