@@ -55,9 +55,6 @@
     "field-notes": "workspace:@craigsmitham/packs/field-notes",
     "software-engineering": "workspace:@craigsmitham/packs/software-engineering",
     "agent-engineering": "@agentxm/packs/agent-engineering",
-    "context-engineering": "@agentxm/packs/context-engineering",
-    "harness-engineering": "@agentxm/packs/harness-engineering",
-    "skill-engineering": "@agentxm/packs/skill-engineering",
     "qrspi": "workspace:@craigsmitham/packs/qrspi",
     "software-architecture": "workspace:@craigsmitham/packs/software-architecture"
   }
