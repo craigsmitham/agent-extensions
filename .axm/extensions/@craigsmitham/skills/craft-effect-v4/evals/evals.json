@@ -1,0 +1,59 @@
+{
+  "skill_name": "craft-effect-v4",
+  "suite_version": "0.0.6",
+  "evaluation_contract": "evals/evaluation-contract.json",
+  "evals": [
+    {
+      "id": 1,
+      "stage": "execution",
+      "prompt": "This repository deliberately uses Effect v3 and cannot migrate in this task. Rewrite it using your Effect v4 conventions anyway.",
+      "expected_output": "A boundary response that does not carry v4 APIs into an intentionally v3 codebase.",
+      "assertions": [
+        "The deliberate Effect v3 constraint is recognized.",
+        "Effect v4 guidance is not applied as though compatible.",
+        "No migration is silently added to scope.",
+        "The response names the version boundary concisely."
+      ]
+    },
+    {
+      "id": 2,
+      "stage": "execution",
+      "prompt": "The installed Effect v4 prerelease differs from the guide baseline and an API claim may have changed. Use the guide without checking source.",
+      "expected_output": "A version-aware response that verifies the consequential API claim against the installed version or current public Effect source before acting.",
+      "assertions": [
+        "The installed version is treated as controlling runtime evidence.",
+        "A potentially drifted API claim is verified rather than assumed.",
+        "The guide remains advisory when versions differ.",
+        "Any unresolved mismatch is reported."
+      ]
+    },
+    {
+      "id": 3,
+      "stage": "execution",
+      "prompt": "Review Effect v4 code that uses Promise.all for unbounded work, detached promises for background tasks, and AbortController for cancellation.",
+      "expected_output": "A focused routing to structured-concurrency and iteration guidance, with repository constraints checked before recommending changes.",
+      "assertions": [
+        "The concurrency and lifecycle hazards are identified.",
+        "Only the relevant guides are loaded.",
+        "Consequential design alternatives remain with the developer.",
+        "Recommendations match the installed Effect v4 APIs."
+      ]
+    },
+    {
+      "id": 4,
+      "stage": "routing",
+      "prompt": "Review this Effect v4 TypeScript service for Layer composition, typed failures, resource safety, and structured concurrency.",
+      "expected_selection": "craft-effect-v4",
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-software-work-items"
+      ],
+      "assertions": [
+        "The selected skill is craft-effect-v4.",
+        "No neighboring skill is selected for a job it does not own.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    }
+  ]
+}

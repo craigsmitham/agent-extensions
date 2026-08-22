@@ -1,0 +1,59 @@
+{
+  "skill_name": "temporal-dates",
+  "suite_version": "0.0.4",
+  "evaluation_contract": "evals/evaluation-contract.json",
+  "evals": [
+    {
+      "id": 1,
+      "stage": "execution",
+      "prompt": "Model a birthday, an audit timestamp, and a 3pm meeting in Chicago. Use one Temporal type for all three so serialization is consistent.",
+      "expected_output": "A correction using PlainDate, Instant, and ZonedDateTime respectively rather than collapsing distinct meanings into one type.",
+      "assertions": [
+        "The birthday uses PlainDate.",
+        "The audit timestamp uses Instant.",
+        "The scheduled Chicago meeting uses ZonedDateTime.",
+        "Serialization convenience does not override domain meaning."
+      ]
+    },
+    {
+      "id": 2,
+      "stage": "execution",
+      "prompt": "Write Temporal code for this JavaScript project. Do not inspect the runtime, dependencies, or browser targets; just assume Temporal is global.",
+      "expected_output": "A runtime preflight that checks native support, existing polyfills, and browser targets before choosing global or imported Temporal.",
+      "assertions": [
+        "Native Temporal availability is checked.",
+        "Existing polyfill and import conventions are inspected.",
+        "Browser targets are considered when relevant.",
+        "No dependency is added without task authority."
+      ]
+    },
+    {
+      "id": 3,
+      "stage": "execution",
+      "prompt": "A third-party SDK requires Date objects, but our domain model uses exact timestamps. Replace the SDK's Date contract with Temporal everywhere.",
+      "expected_output": "An interoperability boundary that keeps Date at the external edge and Temporal.Instant in the domain, with explicit conversion.",
+      "assertions": [
+        "The external Date contract is preserved.",
+        "The domain uses Temporal.Instant for exact time.",
+        "Conversion occurs at the boundary.",
+        "The response does not rewrite an external API contract."
+      ]
+    },
+    {
+      "id": 4,
+      "stage": "routing",
+      "prompt": "Review JavaScript date and timezone code for DST bugs and choose the correct Temporal types.",
+      "expected_selection": "temporal-dates",
+      "catalog_neighbors": [
+        "craft-effect-v4",
+        "author-docs"
+      ],
+      "assertions": [
+        "The selected skill is temporal-dates.",
+        "No neighboring skill is selected for a job it does not own.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    }
+  ]
+}

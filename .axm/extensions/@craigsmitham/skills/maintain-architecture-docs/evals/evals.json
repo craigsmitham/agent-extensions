@@ -10,7 +10,8 @@
         "No repository file is edited.",
         "Findings distinguish mechanical issues, semantic maintenance, disagreements, decisions, and evidence gaps.",
         "The handoff identifies the reviewed system and evidence scope."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 2,
@@ -21,7 +22,8 @@
         "The broken link is repaired to the unambiguous target.",
         "No substantive architecture claim is changed without need.",
         "The final verification checks root reachability and the changed links."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 3,
@@ -32,7 +34,8 @@
         "The docs are not silently changed merely because the code is newer.",
         "Possible implementation defect, obsolete docs, changed intent, and insufficient evidence remain distinguishable.",
         "The handoff names the unresolved owner or acceptance needed."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 4,
@@ -43,7 +46,8 @@
         "The accepted trust boundary and recovery responsibility are preserved.",
         "Evidence links state what their targets establish.",
         "The skill does not conclude that all architecture documentation is redundant."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 5,
@@ -54,7 +58,8 @@
         "Neither conflicting meaning is silently selected as authoritative.",
         "Deletion or merger is deferred until supersession is established.",
         "The response names the architecture decision or authority needed."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 6,
@@ -65,7 +70,8 @@
         "Time-sensitive claims receive evidence dates or an explicit freshness boundary.",
         "Accepted architecture consequences remain separate from strategic hypotheses.",
         "The skill does not invent current map positions."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 7,
@@ -76,7 +82,8 @@
         "Scattered proposals are not treated as accepted architecture docs.",
         "The skill does not choose a root or system boundary under maintenance authority.",
         "Setup work is identified separately from any safely reviewable existing material."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 8,
@@ -87,7 +94,8 @@
         "The new fraud-scoring subject is identified as bounded authoring work.",
         "The maintenance skill does not absorb unrelated new-subject authoring.",
         "The handoff preserves the accepted source needed by the authoring workflow."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 9,
@@ -98,7 +106,8 @@
         "The document is not deleted under general maintenance authority.",
         "The recommendation weighs omission risk against duplication, drift, reading, and maintenance cost.",
         "The smallest safe reduction and required user authorization are explicit."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 10,
@@ -109,7 +118,8 @@
         "The durable boundary rationale is preserved without copying the dependency inventory.",
         "Navigation and evidence routes are repaired in the same change.",
         "No unrelated semantic documents are removed or reorganized."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 11,
@@ -120,7 +130,27 @@
         "use-cases/index.md is navigational and does not become the semantic owner.",
         "Inbound links and root navigation are updated as part of the migration.",
         "The plural catch-all is removed rather than kept as a parallel authority."
+      ],
+      "stage": "execution"
+    },
+    {
+      "id": 12,
+      "stage": "routing",
+      "prompt": "Review and maintain our established architecture docs, repairing broken navigation but not making unauthorized semantic lifecycle changes.",
+      "expected_selection": "maintain-architecture-docs",
+      "catalog_neighbors": [
+        "author-architecture-docs",
+        "setup-architecture-docs",
+        "audit-docs"
+      ],
+      "assertions": [
+        "The selected skill is maintain-architecture-docs.",
+        "No neighboring skill is selected for a job it does not own.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
       ]
     }
-  ]
+  ],
+  "suite_version": "0.2.1",
+  "evaluation_contract": "evals/evaluation-contract.json"
 }

@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "maintain-architecture-docs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Review and maintain architecture docs through evidence-aware repair and user-authorized semantic lifecycle decisions",
   "keywords": [
     "software-architecture",

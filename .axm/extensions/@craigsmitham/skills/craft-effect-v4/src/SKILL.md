@@ -12,7 +12,7 @@ description: >
   telemetry, or direct `node:fs` use — even where Effect is absent but
   warranted. Not for Effect v3 conventions or codebases that deliberately use
   another runtime model.
-compatibility: Effect 4.0.0-rc.110
+compatibility: Effect v4 prereleases; guides originated at 4.0.0-rc.110 and require installed-version verification
 ---
 
 # Craft Effect v4
@@ -20,8 +20,19 @@ compatibility: Effect 4.0.0-rc.110
 Route Effect v4 work to the smallest relevant part of
 `@craigsmitham/knowledge/effect-v4`.
 
-1. Confirm the codebase targets Effect v4. v3 conventions do not carry
-   forward, and these guides do not describe them.
+## Compatibility gate
+
+Apply this gate before inspecting files or opening the v4 knowledge bundle. If
+the request says the codebase deliberately uses Effect v3 and migration is not
+authorized, do not apply or offer v4 APIs. State that the v3/v4 boundary makes
+the requested rewrite incompatible with scope, keep migration out of scope,
+and stop.
+
+1. Confirm the codebase targets Effect v4 and inspect its exact installed
+   version. v3 conventions do not carry forward, and these guides do not
+   describe them. The bundle originated against `4.0.0-rc.110`; Effect v4 is
+   still prerelease software, so verify consequential API claims against the
+   installed version's public source and tests whenever the versions differ.
 2. Read
    `.axm/extensions/@craigsmitham/knowledge/effect-v4/src/index.md` and open
    only the guides the work needs.

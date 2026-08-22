@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "setup-architecture-docs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Set up minimal discoverable architecture docs with explicit scope, authority, lifecycle routes, and no inferred semantic expansion",
   "keywords": [
     "software-architecture",

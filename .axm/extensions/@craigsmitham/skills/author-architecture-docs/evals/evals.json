@@ -10,7 +10,8 @@
         "The recoverability requirement is connected to the serialization boundary and invariant.",
         "Exact transition cases remain owned by the recovery test rather than being transcribed into prose.",
         "No unrelated component inventory or empty template sections are added."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 2,
@@ -21,7 +22,8 @@
         "Neither alternative is presented as accepted desired state.",
         "Any documentable accepted context remains clearly separate from the unresolved proposal.",
         "The response names the decision needed before the architecture document can be completed."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 3,
@@ -32,7 +34,8 @@
         "The document is not silently changed solely because the code is newer.",
         "The response identifies the evidence or acceptance needed to resolve the disagreement.",
         "No source-code change is made or proposed as though already authorized."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 4,
@@ -43,7 +46,8 @@
         "The response proposes cohesive subjects or accepted requirements rather than forced catalog symmetry.",
         "Exact current facts remain with code, schemas, configuration, or generated references.",
         "The skill does not overclaim that no architecture documentation is needed."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 5,
@@ -54,7 +58,8 @@
         "Capabilities, features, surfaces, bounded contexts, and structural elements remain distinct.",
         "Each feature has one canonical home and cross-view relationships are explicit.",
         "Applications may be both surfaces and containers without owning all feature documents."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 6,
@@ -65,7 +70,8 @@
         "Containers and components do not recursively nest within their own level.",
         "Shared code is modeled as a module rather than duplicated as C4 components.",
         "Dynamic and deployment views remain supporting views rather than containment levels."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 7,
@@ -76,7 +82,8 @@
         "Unverified map positions remain hypotheses rather than accepted architecture.",
         "Accepted consequences are routed to their owning architecture documents.",
         "Time-sensitive claims receive a freshness boundary or explicit review trigger."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 8,
@@ -87,7 +94,8 @@
         "Major collections use index.md for navigation rather than substantive explanation.",
         "No plural features.md catch-all is created; each Feature has its canonical path from first admission.",
         "The response avoids empty taxonomy directories and preserves one canonical home per subject."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 9,
@@ -99,7 +107,8 @@
         "Demand, offered value, provider abilities, recognizable behavior, domain meaning, and structural realization remain distinct.",
         "Architecture, public, product-management, and sales content share accepted semantic meaning without requiring identical channel copy.",
         "Private people, customer records, tentative research, delivery state, pricing, and current availability remain outside the canonical architecture concepts."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 10,
@@ -110,7 +119,8 @@
         "Named customer material and current commercial facts are not moved into the public architecture corpus.",
         "Roadmap content remains proposed delivery state rather than accepted architecture.",
         "The architecture-doc workflow is not invoked merely because the request concerns an offering or value proposition."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 11,
@@ -121,7 +131,8 @@
         "The offered value and material exclusions are explicit.",
         "The platform is not treated as a commercial product or C4 hierarchy merely because it is an offering.",
         "No Audience, Need, Capability, Feature, or C4 concept is created for symmetry."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 12,
@@ -132,7 +143,8 @@
         "The circumstances and progress sought are central to the document.",
         "Accepted research is linked or described truthfully without publishing private participant records.",
         "No feature, use case, capability, or solution workflow is created or substituted."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 13,
@@ -143,7 +155,8 @@
         "Model, ubiquitous-language scope, authority, and exclusions are explicit.",
         "The context carries no core, supporting, or generic classification.",
         "The authorization service and schema are evidence of realization rather than the context definition."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 14,
@@ -154,7 +167,8 @@
         "The containing system, runtime boundary, data-store responsibility, and directional interactions are explicit.",
         "The artifact does not nest another container or confuse deployment infrastructure with C4 containment.",
         "No C4 Component, C4 View, or neighboring container is created for completeness."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 15,
@@ -165,7 +179,8 @@
         "No Feature or Capability concept is created without explicit authoring intent.",
         "Any adjacent recommendation states the evidence, risk addressed, maintenance cost, smallest safe change, and needed authority.",
         "Repository evidence is not promoted into accepted architecture solely because it suggests a concept."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 16,
@@ -176,7 +191,8 @@
         "The stable maintainer and decision-authority route is discoverable without named-person or roster duplication.",
         "Review triggers are event-based and proportionate to the system.",
         "No container or component ownership documents are added for anticipated scale."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 17,
@@ -188,7 +204,27 @@
         "The current numerical target and exact failure cases remain with the SLO and integration-test authorities rather than being copied or invented.",
         "Only the quality/, reliability/, and recoverability/ indexes earned by the named requirement are created; no empty ISO taxonomy is generated.",
         "No Quality Concern or Product Quality View concept is created."
+      ],
+      "stage": "execution"
+    },
+    {
+      "id": 18,
+      "stage": "routing",
+      "prompt": "Create one accepted C4 Container architecture document for the event archive and update its navigation.",
+      "expected_selection": "author-architecture-docs",
+      "catalog_neighbors": [
+        "setup-architecture-docs",
+        "maintain-architecture-docs",
+        "author-docs"
+      ],
+      "assertions": [
+        "The selected skill is author-architecture-docs.",
+        "No neighboring skill is selected for a job it does not own.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
       ]
     }
-  ]
+  ],
+  "suite_version": "1.1.1",
+  "evaluation_contract": "evals/evaluation-contract.json"
 }

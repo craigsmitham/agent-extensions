@@ -4,13 +4,14 @@
     {
       "id": 1,
       "prompt": "Set up Just Enough Architecture Docs in this repository. AGENTS.md already exists, the deployable application is the clear system boundary, and there are no architecture docs yet. Keep it minimal.",
-      "expected_output": "A minimal docs/architecture/index.md and concise AGENTS.md discovery route, without substantive architecture claims or empty collections.",
+      "expected_output": "A minimal docs/architecture/index.md and concise AGENTS.md discovery route, without substantive architecture claims, invented authority, or empty collections.",
       "assertions": [
         "The deployable application is recorded as the documented system boundary.",
-        "The root index records local adoption, authority routes, and maintenance triggers without inventing architecture.",
+        "The root index records local adoption, available authority routes or explicit evidence gaps, and maintenance triggers without inventing architecture or authority.",
         "AGENTS.md points to the architecture-doc root and shared pack without copying the portable method.",
         "No empty value, capability, feature, domain, structure, concern, or overview artifact is created."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 2,
@@ -21,7 +22,8 @@
         "Existing substantive documents are preserved and remain reachable.",
         "The local path deviation is recorded without copying the shared guide.",
         "No broad migration or rewrite is performed."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 3,
@@ -32,7 +34,8 @@
         "The skill requests that choice rather than inferring it from directory structure.",
         "No architecture-doc root or substantive architecture claim is created before the choice is resolved.",
         "The response does not choose an architecture for the monorepo."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 4,
@@ -43,7 +46,8 @@
         "No empty documentation collections are created.",
         "Microservices are not recorded as accepted architecture without authority.",
         "The smallest valid adoption surface is still offered."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 5,
@@ -54,7 +58,8 @@
         "The architecture root remains docs/architecture/.",
         "The applicable software architecture profile is discoverable from the root.",
         "Plain Markdown is not substituted for the accepted OKF convention."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 6,
@@ -65,7 +70,8 @@
         "Broken links and stale content are identified as maintenance work.",
         "The response does not rewrite substantive architecture docs under setup authority.",
         "Any genuinely missing setup choice is separated from the maintenance scope."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 7,
@@ -76,7 +82,8 @@
         "The use-cases collection appears because its first concept exists and includes index.md navigation.",
         "No empty capability, feature, domain, structure, or concern collection is created.",
         "Setup does not rewrite or add use-case semantics beyond the existing accepted document."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 8,
@@ -87,7 +94,27 @@
         "Missing lifecycle terminology and decision authority are reported as semantic gaps.",
         "No lifecycle or authority is inferred from usernames, commits, or directory structure.",
         "The setup remains usable for either a solo project or a later multi-team system."
+      ],
+      "stage": "execution"
+    },
+    {
+      "id": 9,
+      "stage": "routing",
+      "prompt": "Set up minimal Just Enough Architecture Docs for this repository and add the canonical instruction discovery route.",
+      "expected_selection": "setup-architecture-docs",
+      "catalog_neighbors": [
+        "maintain-architecture-docs",
+        "author-architecture-docs",
+        "author-agent-instructions"
+      ],
+      "assertions": [
+        "The selected skill is setup-architecture-docs.",
+        "No neighboring skill is selected for a job it does not own.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
       ]
     }
-  ]
+  ],
+  "suite_version": "0.2.1",
+  "evaluation_contract": "evals/evaluation-contract.json"
 }

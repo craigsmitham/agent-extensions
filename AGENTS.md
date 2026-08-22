@@ -10,6 +10,22 @@
   [Licensing public extensions](docs/licensing.md) and preserve published and
   third-party obligations explicitly.
 
+## Agent Skill evaluation artifacts
+
+For every workspace-authored Agent Skill, keep the versioned evaluation
+contract and cases under `.axm/extensions/@craigsmitham/skills/<name>/evals/`.
+Keep fixtures, graders, and harness inputs there only when they are stable
+source. Write routine generated runs under ignored `.work/evals/`; promote only
+the minimal decision evidence that must ship with the package.
+
+Validate all authored suites with
+`node scripts/evals/agent-skill-eval.mjs validate`. Treat routing and activated
+execution as separate stages, bind evidence to exact target, suite, harness,
+environment, and provenance identities, and preserve `unknown` and
+`harness-error` rather than converting missing evidence into a pass. Version a
+skill when its evaluation source changes; evaluation evidence is not audit or
+release approval.
+
 ## Field note subjects
 
 | Subject | Mode | Scope | Target condition | Retire when |

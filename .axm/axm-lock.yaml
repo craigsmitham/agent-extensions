@@ -28,16 +28,16 @@ skills:
     type: registry
     owner: "@agentxm"
     name: audit-agent-instructions
-    resolvedVersion: 0.1.1
-    integrity: sha512-Tvfm9a+nry9s6REM+cO/qyAtt1v6c3fpfs8ondJ90EkXLby0k6gngQIdeG6U4Nt4j1JfA/TJzD4Vpo7sAVZw/g==
+    resolvedVersion: 0.1.2
+    integrity: sha512-QNgUd5d83u32sk4aTGLpB76DgQgXlHsnP+Y39Z1hRnjv/ffMWy9SbXIrtokMg6wI9Pve7ngYg9Tk1+EbGFQAJw==
     sourceName: default
     publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
   author-agent-instructions:
     type: registry
     owner: "@agentxm"
     name: author-agent-instructions
-    resolvedVersion: 0.1.1
-    integrity: sha512-hZWzZHpiYy1VaUi16ruJJEg6UzjLCm/IR302gdYhNJdmczndlnFq9aE2ofcebC6VLv8bbVvL3/cs//ebkCPtdg==
+    resolvedVersion: 0.1.2
+    integrity: sha512-qRffm4bMntXDnrNrJRcJJyiGXPBKVF/tZK6xZkd4MmC6TjnWCiQkOmxgjKbh/LPFiLS2XXYqDvRVvzYfQUcRDw==
     sourceName: default
     publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
 knowledge:

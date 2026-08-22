@@ -10,7 +10,8 @@
         "Material external claims have nearby descriptive citations and the cited sources appear in the source register.",
         "The executive synthesis uses the four required labels and does not silently recommend a decision.",
         "Every finding includes answer, evidence, counterevidence or its bounded absence, confidence and limitations, decision implication, and what could change the answer."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 2,
@@ -21,7 +22,8 @@
         "The report distinguishes populations, timeframes, methods, and plausible confounding when synthesizing empirical evidence.",
         "Credible conflicting or limiting evidence receives comparable treatment rather than being hidden behind one conclusion.",
         "The report states a policy implication but does not make the legislature's decision."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 3,
@@ -32,7 +34,8 @@
         "It does not claim procedural blindness merely because the brief uses neutral language.",
         "It identifies the missing explicit research questions or objective.",
         "It requests the smallest useful handoff needed to begin research."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 4,
@@ -43,7 +46,8 @@
         "Q3 and Q4 use Not reached rather than unsupported substantive answers.",
         "The executive synthesis and gaps reflect the explicit research cap.",
         "The report retains every required section despite rapid-mode compression."
-      ]
+      ],
+      "stage": "execution"
     },
     {
       "id": 5,
@@ -54,7 +58,26 @@
         "It identifies initial question framing as outside this skill's job.",
         "It does not emit a Research Report with invented questions.",
         "It states what input would allow research execution."
+      ],
+      "stage": "execution"
+    },
+    {
+      "id": 6,
+      "stage": "routing",
+      "prompt": "Execute this Research Brief using current public evidence and return the required question-by-question report with citations.",
+      "expected_selection": "research",
+      "catalog_neighbors": [
+        "question",
+        "audit-docs"
+      ],
+      "assertions": [
+        "The selected skill is research.",
+        "No neighboring skill is selected for a job it does not own.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
       ]
     }
-  ]
+  ],
+  "suite_version": "0.0.2",
+  "evaluation_contract": "evals/evaluation-contract.json"
 }

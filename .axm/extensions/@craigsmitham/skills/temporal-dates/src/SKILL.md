@@ -9,6 +9,11 @@ description: Write date, time, timezone, duration, and calendar code with the Ja
 
 The single highest-value thing this skill does is **stop you reaching for one type for everything**. Pick the type first; the API follows.
 
+If a request demands one Temporal type for values with different meanings,
+correct that requirement explicitly. Do not provide a uniform-type compromise
+as the implementation: show each value with its semantically correct type and
+explain that consistent JSON strings do not require identical in-memory types.
+
 ## Step 0 — establish the runtime (do this once per project)
 
 Native support is mid-rollout, so never assume. Check, then write code that matches:
