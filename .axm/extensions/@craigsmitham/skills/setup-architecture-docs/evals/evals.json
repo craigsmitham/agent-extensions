@@ -9,7 +9,8 @@
         "The deployable application is recorded as the documented system boundary.",
         "The root index records local adoption, available authority routes or explicit evidence gaps, and maintenance triggers without inventing architecture or authority.",
         "AGENTS.md points to the architecture-doc root and shared pack without copying the portable method.",
-        "No empty value, capability, feature, domain, structure, concern, or overview artifact is created."
+        "No empty value, capability, feature, domain, structure, concern, or overview artifact is created.",
+        "The handoff states the resulting system-to-root mapping, verification performed, unresolved gaps, and appropriate next workflow in terms of what is now true."
       ],
       "stage": "execution"
     },
@@ -31,7 +32,8 @@
       "expected_output": "A bounded response that identifies the unresolved system-boundary choice and does not create competing or speculative documentation roots.",
       "assertions": [
         "The platform-versus-product system boundary is identified as material.",
-        "The skill requests that choice rather than inferring it from directory structure.",
+        "The skill presents the viable boundary choices and their consequences with comparable emphasis before any recommendation.",
+        "Any recommendation follows the comparison and the skill explicitly requests a choice, revision, deferral, or more evidence.",
         "No architecture-doc root or substantive architecture claim is created before the choice is resolved.",
         "The response does not choose an architecture for the monorepo."
       ],
@@ -93,6 +95,7 @@
         "The repository owner route is linked rather than copied as a roster.",
         "Missing lifecycle terminology and decision authority are reported as semantic gaps.",
         "No lifecycle or authority is inferred from usernames, commits, or directory structure.",
+        "The missing non-blocking governance information does not prevent the otherwise clear setup from completing.",
         "The setup remains usable for either a solo project or a later multi-team system."
       ],
       "stage": "execution"
@@ -113,8 +116,134 @@
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
       ]
+    },
+    {
+      "id": 10,
+      "prompt": "Assess how this repository should initially adopt Just Enough Architecture Docs, but do not change any files. It has one clear deployable system, no existing architecture root, and an established AGENTS.md.",
+      "expected_output": "A read-only adoption brief and smallest recommended setup that uses safe defaults, distinguishes evidence from gaps, and makes no filesystem changes.",
+      "assertions": [
+        "The request is treated as read-only even though the target setup is otherwise clear.",
+        "The adoption brief identifies the system, proposed canonical root, instruction route, format, authority routes or gaps, and repository state with evidence status.",
+        "The recommended setup is bounded to the minimal adoption surface and does not invent substantive architecture.",
+        "The handoff explicitly states that no files changed and names what would be created or connected if setup is later authorized."
+      ],
+      "stage": "execution"
+    },
+    {
+      "id": 11,
+      "prompt": "Connect the accepted architecture material supplied at inputs/case-11-system-boundary.md and inputs/case-11-decisions-index.md to Just Enough Architecture Docs. For this synthetic repository, those input paths are the established maintained locations and must remain in place. The service is the clear documented system, neither location is an established architecture root, and AGENTS.md is canonical.",
+      "expected_output": "A connection playbook that creates the minimal canonical architecture root, links the accepted material in place, records local authority routes, and does not migrate or rewrite substantive documents.",
+      "files": [
+        "evals/files/case-11-system-boundary.md",
+        "evals/files/case-11-decisions-index.md"
+      ],
+      "assertions": [
+        "The repository is classified as a connection case rather than a blank bootstrap or established-corpus maintenance case.",
+        "One canonical system-to-root mapping is established without moving or rewriting the accepted input material.",
+        "The root navigation states what the linked material establishes and does not silently admit proposals as accepted architecture.",
+        "AGENTS.md gains one concise discovery route and no empty taxonomy is created."
+      ],
+      "stage": "execution"
+    },
+    {
+      "id": 12,
+      "prompt": "Adopt Just Enough Architecture Docs for this monorepo. The repository authority explicitly defines catalog and fulfillment as separate systems and assigns their canonical roots to services/catalog/docs/architecture/ and services/fulfillment/docs/architecture/. AGENTS.md governs the whole repository.",
+      "expected_output": "A federated setup that preserves the accepted two-system mapping, creates or connects each minimal corpus root, and exposes both through the canonical repository instruction route without inventing a platform corpus.",
+      "assertions": [
+        "The explicit repository authority is sufficient to classify the setup as federation without asking a ritual confirmation.",
+        "Catalog and fulfillment each map to exactly one accepted canonical architecture root.",
+        "The repository instruction route exposes both system-to-root mappings and the shared method without creating an unaccepted platform architecture corpus.",
+        "Each system root contains only its own minimal adoption and admitted navigation; no empty taxonomy or cross-system substantive claim is generated."
+      ],
+      "stage": "execution"
+    },
+    {
+      "id": 13,
+      "prompt": "Set up architecture docs for the one clear application in this repository. The declared synthetic snapshots under inputs/ are the maintained instruction authorities supplied for this case. Both claim to be canonical repository-wide instructions, and they disagree about the docs root.",
+      "expected_output": "A bounded adoption brief that identifies the conflicting instruction and root authorities as a blocking setup decision, presents the viable resolutions fairly, and makes no dependent changes.",
+      "files": [
+        "evals/files/case-13-root-agents.md",
+        "evals/files/case-13-repository-guidance.md"
+      ],
+      "assertions": [
+        "The conflict is classified as materially ambiguous rather than resolved by file recency or agent preference.",
+        "The decision presentation states the question and evidence before presenting viable options in parallel form.",
+        "Any recommendation follows the comparison and the final request permits choice, revision, deferral, or more evidence.",
+        "No architecture root or instruction route is changed until the authority conflict is resolved."
+      ],
+      "stage": "execution"
+    },
+    {
+      "id": 14,
+      "stage": "routing",
+      "prompt": "Before changing files, plan how this repository should initially adopt architecture documentation and identify the smallest setup we would need.",
+      "expected_selection": "setup-architecture-docs",
+      "catalog_neighbors": [
+        "maintain-architecture-docs",
+        "author-architecture-docs",
+        "audit-docs"
+      ],
+      "assertions": [
+        "The selected skill is setup-architecture-docs because the request concerns planning initial adoption.",
+        "Read-only phrasing does not misroute initial-adoption planning to corpus maintenance or general documentation audit.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 15,
+      "stage": "routing",
+      "prompt": "Review our established architecture-doc corpus for stale claims, broken links, and contradictory boundaries.",
+      "expected_selection": "maintain-architecture-docs",
+      "catalog_neighbors": [
+        "setup-architecture-docs",
+        "maintain-architecture-docs",
+        "author-architecture-docs",
+        "audit-docs"
+      ],
+      "assertions": [
+        "The selected skill is maintain-architecture-docs rather than setup-architecture-docs.",
+        "The word architecture does not override the established-corpus review and maintenance intent.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 16,
+      "stage": "routing",
+      "prompt": "Add a C4 container view to our established architecture docs for the payments system.",
+      "expected_selection": "author-architecture-docs",
+      "catalog_neighbors": [
+        "setup-architecture-docs",
+        "maintain-architecture-docs",
+        "author-architecture-docs"
+      ],
+      "assertions": [
+        "The selected skill is author-architecture-docs rather than setup-architecture-docs.",
+        "Creating a known substantive architecture view is recognized as authoring, not initial adoption.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 17,
+      "stage": "routing",
+      "prompt": "Our architecture docs need work. Help us figure out what to do.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "setup-architecture-docs",
+        "maintain-architecture-docs",
+        "author-architecture-docs",
+        "audit-docs"
+      ],
+      "assertions": [
+        "The response clarifies or abstains because initial adoption, established-corpus maintenance, and substantive authoring remain plausible.",
+        "setup-architecture-docs is not selected solely from generic architecture-doc vocabulary.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
     }
   ],
-  "suite_version": "0.2.1",
+  "suite_version": "0.3.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

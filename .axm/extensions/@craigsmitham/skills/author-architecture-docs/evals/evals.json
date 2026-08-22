@@ -225,6 +225,6 @@
       ]
     }
   ],
-  "suite_version": "1.1.1",
+  "suite_version": "1.1.2",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

@@ -34,8 +34,8 @@ jobs:
       - name: Test the Git-index safety gate
         run: scripts/test-public-safety.sh
 
-      - name: Test the Agent Skill evaluation runner
-        run: scripts/test-agent-skill-eval.sh
+      - name: Test the installed Agent Skill evaluator
+        run: node .axm/extensions/@agentxm/skills/agent-skill-evaluator/src/scripts/test-runner.mjs
 
       - name: Validate the proposed commit
         run: scripts/check-public-safety.sh --view git-index

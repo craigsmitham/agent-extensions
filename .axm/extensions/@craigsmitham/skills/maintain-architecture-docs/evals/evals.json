@@ -151,6 +151,6 @@
       ]
     }
   ],
-  "suite_version": "0.2.1",
+  "suite_version": "0.2.2",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

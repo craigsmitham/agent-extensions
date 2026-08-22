@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "research",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Executes bounded research briefs and returns consistent question-by-question evidence reports",
   "keywords": [
     "research",

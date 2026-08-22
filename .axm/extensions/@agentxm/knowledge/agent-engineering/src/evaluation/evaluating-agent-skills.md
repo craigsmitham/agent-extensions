@@ -4,7 +4,7 @@ title: How to evaluate an Agent Skill
 description: How to evaluate routing and activated execution independently, compare a skill with meaningful baselines, run isolated trials, grade observable behavior, and retain attributable evidence.
 tags: [agent-skills, evaluation, routing, execution, baselines, trials, graders, evidence]
 status: stable
-generated: { by: "codex/gpt-5.6", at: 2026-08-22T02:28:45Z }
+generated: { by: "claude-code/claude-opus-5", at: 2026-08-22T14:21:16Z }
 stale_after: 2027-02-22
 sources:
   - id: anthropic-agent-evals
@@ -28,6 +28,8 @@ named host, model, configuration, catalog, and authority policy. It specializes
 the [Agent Skill evaluation model](skill-evaluation-model.md). Store source and
 generated evidence according to
 [How to manage evaluation assets and evidence](managing-evaluation-assets-and-evidence.md).
+Use [Evaluation runner engineering](evaluation-runner-engineering.md) when a
+shared runner or adapter executes the suite.
 
 Evaluation measures behavior. It does not author the target, independently
 audit its conformity or trust, approve it, or publish it. Keep those decisions
@@ -59,6 +61,14 @@ baseline, analysis, provenance, and decision. State unsupported hosts, models,
 catalogs, or cohorts as exclusions rather than generalizing from an available
 environment.
 
+Resolve one runner according to
+[Evaluation runner engineering](evaluation-runner-engineering.md): an explicit
+binding takes precedence, otherwise use an active configured default, otherwise
+reserve preflight and conclude `Inconclusive` without creating run evidence.
+Record the selection source and exact runner, protocol or evidence mapping,
+capability, trust, and authority identities. Do not infer activation or trust
+from retained files or auto-discover an executable.
+
 Choose the evidence tier before running:
 
 | Tier | Purpose | Claim ceiling |
@@ -85,6 +95,15 @@ For each important trigger family include:
 - an ambiguous request where clarification or abstention is correct;
 - a collision with plausible catalog neighbors; and
 - an explicit invocation as a control, not as implicit-routing evidence.
+
+Sample each case several times and record the trigger rate. Selection is a model
+judgment that varies between attempts, so one attempt cannot characterize it.
+Size cases so that consulting the skill is a plausible benefit; a request the
+assistant satisfies unaided measures task difficulty rather than routing. When a
+description is revised against these results, hold out decision cases first.
+Record whether the harness observes native host routing, uses a host simulation,
+or runs a catalog-classification proxy. Do not generalize proxy results into a
+claim about native host activation.
 
 Use [Routing evaluations](skill-routing-evaluations.md) for metrics and
 interpretation.
@@ -125,6 +144,11 @@ quality, with explicit rubrics, calibration, and an `unknown` escape. Grade
 outcomes and artifacts rather than requiring one imagined trajectory unless
 ordering or tool use is itself contractual.
 
+Give graders a channel for reporting defects in the suite itself: an assertion a
+clearly wrong output would also satisfy, an observed outcome no assertion
+covers, or an assertion the preserved evidence cannot verify. Treat those as
+findings against the suite and repair them between runs, never during one.
+
 OpenAI recommends task-specific evaluation, continuous execution, automated
 grading where possible, and human calibration.[^openai-evaluation-best-practices]
 Anthropic recommends deterministic graders where possible, model graders where
@@ -163,8 +187,15 @@ For each trial preserve:
 - transcript or trace and final user-visible response;
 - output artifacts and decisive external state;
 - side effects, permissions, costs, tokens, latency, and errors;
+- uncertainties, workarounds, and review requests the trial reported about its
+  own run;
 - per-assertion grades with evidence; and
 - outcome as pass, fail, unknown, or harness error.
+
+Self-reported notes are observations, never grades. A workaround recorded during
+a passing trial is direct evidence of a gap the assertions did not catch, and
+silence from an unreliable narrator is not evidence of a clean run. Route
+confirmed gaps to authoring instead of adjusting the outcome.
 
 ## 7. Inspect evidence before aggregating
 
@@ -172,6 +203,7 @@ Read a representative sample of passes, failures, unknowns, and disagreements.
 Check whether:
 
 - a pass used the skill rather than succeeding despite it;
+- a pass depended on an undocumented workaround;
 - a failure belongs to the skill, case, environment, harness, or grader;
 - the grader rejected a valid alternative or rewarded a shortcut;
 - shared state inflated performance or correlated failures;
@@ -188,6 +220,11 @@ Report routing misses, false positives, ambiguity handling, explicit controls,
 and catalog collisions separately from activated-execution results. Preserve
 case, trial, host, model, configuration, stage, and failure-class slices before
 reporting an aggregate.
+
+Classify each assertion by whether it separates the compared configurations
+before reporting a pass rate. An assertion that passes with and without the
+skill measures the task, not the skill; see
+[Baselines, thresholds, aggregation, and slices](baselines-thresholds-aggregation-and-slices.md).
 
 Apply critical gates before averages. A suite cannot compensate for executing
 untrusted code, mutating beyond authority, or falsely claiming success by

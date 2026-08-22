@@ -19,12 +19,12 @@ source. Write routine generated runs under ignored `.work/evals/`; promote only
 the minimal decision evidence that must ship with the package.
 
 Validate all authored suites with
-`node scripts/evals/agent-skill-eval.mjs validate`. Treat routing and activated
-execution as separate stages, bind evidence to exact target, suite, harness,
-environment, and provenance identities, and preserve `unknown` and
-`harness-error` rather than converting missing evidence into a pass. Version a
-skill when its evaluation source changes; evaluation evidence is not audit or
-release approval.
+`node .axm/extensions/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs validate`.
+Treat routing and activated execution as separate stages, bind evidence to
+exact target, suite, runner, adapter, environment, and provenance identities,
+and preserve `unknown` and `harness-error` rather than converting missing
+evidence into a pass. Version a skill when its evaluation source changes;
+evaluation evidence is not audit or release approval.
 
 ## Field note subjects
 

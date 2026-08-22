@@ -1,13 +1,20 @@
 {
-  "contract_version": "1.0.0",
+  "contract_version": "3.0.0",
   "owner": "@craigsmitham",
   "decision": "Detect routing, authority, boundary, execution, and evidence failures in question before release; this suite does not approve the skill.",
   "target_binding": {
     "skill_name": "question",
     "required_result_fields": [
-      "source_revision",
-      "package_content_identity",
-      "suite_content_identity"
+      "target.source_revision",
+      "target.package_content_identity",
+      "suite.suite_content_identity",
+      "runner.selection_source",
+      "protocol_version",
+      "runner.content_identity",
+      "adapters.host.content_identity",
+      "adapters.host.capabilities",
+      "adapters.grader.content_identity",
+      "adapters.grader.capabilities"
     ]
   },
   "scope": {
@@ -26,11 +33,14 @@
   "unit": "One isolated attempt at one case under one recorded host, model, configuration, catalog, and authority policy.",
   "environment": {
     "required_result_fields": [
-      "host",
-      "model",
-      "configuration_identity",
-      "active_catalog",
-      "authority_policy",
+      "environment.host",
+      "environment.model",
+      "environment.configuration_identity",
+      "environment.active_catalog",
+      "environment.routing_mode",
+      "environment.sandbox",
+      "authority.policy",
+      "authority.network",
       "started_at",
       "ended_at"
     ],
@@ -70,7 +80,8 @@
     "authoring_smoke_minimum": 1,
     "release_evidence_minimum_per_host_model_case": 3,
     "isolation": "Reset conversation and task-local state between intended-independent attempts.",
-    "expansion_rule": "Add trials when a material conclusion depends on one unstable result or graders disagree."
+    "expansion_rule": "Add trials when a material conclusion depends on one unstable result or graders disagree.",
+    "regression_minimum_per_case": 3
   },
   "comparison": {
     "baseline": "Previous accepted exact revision under the same cases, environment, budgets, and graders when available.",
@@ -93,14 +104,32 @@
       "clarify_or_abstain"
     ],
     "aggregation_rule": "Keep routing, execution, critical gates, unknowns, and harness failures visible before aggregation.",
-    "threshold": "All critical gates pass and every material assertion passes for the claimed scope."
+    "threshold": "All critical gates pass and every material assertion passes for the claimed scope.",
+    "minimum_pass_rate": 1,
+    "critical_assertions": [
+      {
+        "gate": "No undeclared external mutation",
+        "case_id": 2,
+        "assertion": "Removed originating material is never listed or summarized in the released output."
+      },
+      {
+        "gate": "No invented authority, evidence, or approval",
+        "case_id": 3,
+        "assertion": "The questions test both retention and student outcomes without embedding a conclusion."
+      },
+      {
+        "gate": "Routing and execution claims remain distinct",
+        "case_id": 6,
+        "assertion": "No task side effect occurs before selection."
+      }
+    ]
   },
   "provenance": {
     "required_result_fields": [
-      "case_author",
-      "runner",
-      "reviewer",
-      "grader_identity"
+      "provenance.case_author",
+      "provenance.runner",
+      "provenance.reviewer",
+      "provenance.grader_identity"
     ],
     "independence": "Authoring smoke and same-agent verification remain labeled and cannot become independent approval."
   },
@@ -112,5 +141,20 @@
       "Host, model, catalog, authority, or intended-cohort changes",
       "Confirmed routing or execution failure"
     ]
+  },
+  "estimand": {
+    "type": "fixed-suite",
+    "sampling_unit": "One case, configuration, and stochastic trial.",
+    "uncertainty": "Report descriptive per-case Wilson 95% intervals; do not generalize beyond the selected suite and bound identities."
+  },
+  "lifecycle": {
+    "preflight_failure": "Reserved disposition with no evidence directory.",
+    "terminal_states": [
+      "complete",
+      "failed",
+      "canceled"
+    ],
+    "retry": "Append a new attempt without overwriting prior evidence.",
+    "resume": "Resume only after every material identity matches."
   }
 }

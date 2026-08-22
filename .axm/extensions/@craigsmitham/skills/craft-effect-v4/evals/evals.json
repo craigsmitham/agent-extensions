@@ -1,6 +1,6 @@
 {
   "skill_name": "craft-effect-v4",
-  "suite_version": "0.0.6",
+  "suite_version": "0.0.7",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {

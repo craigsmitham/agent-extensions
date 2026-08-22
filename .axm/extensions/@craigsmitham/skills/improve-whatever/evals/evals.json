@@ -1,6 +1,6 @@
 {
   "skill_name": "improve-whatever",
-  "suite_version": "0.0.7",
+  "suite_version": "0.0.8",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {

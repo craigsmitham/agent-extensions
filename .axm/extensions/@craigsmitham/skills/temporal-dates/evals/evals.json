@@ -1,6 +1,6 @@
 {
   "skill_name": "temporal-dates",
-  "suite_version": "0.0.4",
+  "suite_version": "0.0.5",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {

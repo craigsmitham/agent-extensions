@@ -1,5 +1,49 @@
 # Agent engineering update log
 
+## 2026-08-22
+
+- **Replaceable evaluation runners**: Defined explicit-runner precedence over
+  an active configured default, selection-source attribution, disabled-source
+  handling, no auto-discovery or fallback, and adapter-based evidence mapping
+  for runners that do not reproduce a reference implementation's interface.
+- **Evaluation runner engineering**: Added a portable runner pattern with a
+  versioned protocol, capability-aware host and grader adapters, native-versus-
+  proxy routing identity, declared/observed/verified/enforced controls,
+  preflight without empty evidence, environment allowlists, atomic lifecycle,
+  separate trials and retry attempts, resumability, enforced budgets, and
+  deterministic summaries bounded to selected coverage.
+- **AXM-aware extension guidance**: Reframed AXM as an extension-management
+  layer independent of agent hosts, expanded its profile across extension
+  types, workspace state, pack and plugin relationships, and lifecycle
+  controls, and routed skill authoring, maintenance, and retirement through
+  that profile. Governance deprecation, registry yanking, installed-state
+  disabling, and workspace uninstall are now distinct operations.
+- **Routing measurement**: Routing evaluations now measure a trigger rate over
+  repeated attempts instead of a single verdict, require cases sized so that
+  selection can vary at all, and require decision cases held out before a
+  description is tuned against measured results. Case-realism guidance covers
+  concrete detail, register variation, and near-miss negatives. The Claude
+  profile records the observed under-selection behavior with the precision-first
+  boundary that limits how far a description should widen in response.
+- **Instrument observation**: Added measure discrimination across compared
+  configurations, a grader channel for reporting defects in the suite itself,
+  provenance-blinded judging with unblinded attribution as a separate second
+  phase, and verification of the claims an output makes about its own work.
+  Trial evidence now retains self-reported uncertainties and workarounds as
+  observations that never move an outcome. Evaluation validity gains threat rows
+  for uninformative task difficulty and non-discriminating measures.
+- **Authoring generalization**: Skill maintenance now warns against fitting a
+  revision to the small case set that motivated it, treats repeated improvisation
+  across independent trials as evidence that the skill should own the work, and
+  prefers stated reasons over escalating emphasis, with absolutes reserved for
+  genuine invariants.
+- **Agent-mediated UX**: Added round trips that leave the conversation — return
+  paths, response semantics, artifact identification, and a degradation ladder
+  ending in ordinary conversation — plus vocabulary calibration to an unknown
+  reader, teardown of agent-created resources, artifacts presented before the
+  agent's own assessment at a review gate, and honoring a promised check-in
+  cadence for background work.
+
 ## 2026-08-21
 
 - **Evaluation evidence lifecycle**: Added portable guides for managing
