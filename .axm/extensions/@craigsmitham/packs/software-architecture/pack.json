@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Human-first, risk-driven software architecture knowledge and workflows for product quality requirements and a concise semantic delta over repository evidence",
   "keywords": [
     "software-architecture",
@@ -37,7 +37,7 @@
   "name": "software-architecture",
   "dependencies": {
     "@craigsmitham/knowledge/software-architecture": ">=1.1.0",
-    "@craigsmitham/skills/author-architecture-docs": ">=1.1.0",
+    "@craigsmitham/skills/author-architecture-docs": ">=1.1.4",
     "@craigsmitham/skills/setup-architecture-docs": ">=0.2.0",
     "@craigsmitham/skills/reconcile-architecture-docs": ">=0.1.0"
   }

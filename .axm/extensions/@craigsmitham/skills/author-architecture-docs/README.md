@@ -13,15 +13,38 @@ implementation in prose. Product research, roadmaps, pricing, sales, and
 marketing content remain outside the skill unless architecture documentation
 is the requested artifact.
 
-For each concept type in the software architecture docs application profile,
-the skill routes to a concise one-artifact guide. It creates only the requested
-semantic artifact and required navigation. Adjacent additions, reductions, or
-reorganizations are grounded recommendations until the user authorizes them.
-Every admitted concept receives a stable named file from its first appearance;
-plural catch-all documents are not temporary concept homes.
+When a repository has explicitly adopted the software architecture docs
+application profile, the skill routes each named profile type to a concise
+one-artifact guide and creates only the requested semantic artifact and required
+navigation. Otherwise it applies the semantic guidance while preserving the
+repository's established architecture-document form and paths. Adjacent
+additions, reductions, or reorganizations remain grounded recommendations until
+the user authorizes them.
+
+The bundled knowledge currently declares Candidate maturity; its concept
+documents are draft and not human-verified. Repository-local accepted authority
+and formats take precedence, and the application profile remains opt-in.
+
+Within the pack, initial adoption and system-to-corpus mapping belong to
+`setup-architecture-docs`; a bounded new, revised, organized, or reviewed
+artifact belongs here; established-corpus health and repair belong to
+`reconcile-architecture-docs`.
 
 This skill is a non-standalone member of the software-architecture pack because
 it loads that pack's software-architecture knowledge.
+
+## Revision 1.1.4
+
+- Preserves established local formats and paths unless the application profile
+  is explicitly adopted.
+- Makes setup, bounded authoring, and established-corpus reconciliation
+  ownership explicit.
+- Adds same-pack routing regressions and a fixture-backed artifact-producing
+  execution case.
+
+This is a patch correction within the existing authority envelope. No migration
+is required; rollback is to `1.1.3`. Behavioral regression and closure audit
+evidence must remain bound to the exact `1.1.4` package and suite identities.
 
 ## Install
 

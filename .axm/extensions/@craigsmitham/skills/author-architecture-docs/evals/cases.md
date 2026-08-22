@@ -20,7 +20,14 @@ They also cover one named Product Quality Requirement, earned ISO/IEC 25010
 classification paths, external measure authority, and refusal to manufacture a
 quality catalog or target.
 
+The routing matrix distinguishes initial setup, bounded authoring, established
+corpus reconciliation, and an ambiguous request using only the three same-pack
+skill discovery surfaces. A fixture-backed execution case verifies that an
+unadopted application profile does not replace established local paths or form,
+and that the requested document change is present in adapter-observed artifacts.
+
 The suite passes when the skill produces the smallest useful architecture
 artifact, preserves authority boundaries, routes exact mechanics to their
-owners, and exposes rather than resolves missing architecture decisions or
-unauthorized corpus changes.
+owners, preserves local form unless a profile was explicitly adopted, and
+exposes rather than resolves missing architecture decisions or unauthorized
+corpus changes.

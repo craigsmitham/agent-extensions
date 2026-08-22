@@ -16,7 +16,10 @@ without copying facts that executable or live sources own better.
 
 The three skills are non-standalone: they load the bundled knowledge through
 its canonical AXM path and are distributed through this pack. The knowledge
-bundle remains useful on its own.
+bundle remains useful on its own. It currently declares Candidate maturity,
+with draft, not human-verified concept documents. Its application profile is
+opt-in; repository-local accepted authority and formats take precedence until a
+repository explicitly adopts it.
 
 ## Install
 
@@ -29,7 +32,7 @@ axm install @craigsmitham/packs/software-architecture
 - Ask to set up architecture docs when adopting the method or connecting an
   existing documentation root.
 - Ask to author architecture docs when accepted meaning needs a bounded new or
-  revised home.
+  revised, organized, or individually reviewed home.
 - Ask to reconcile architecture docs when established docs
   need review, repair, reconciliation, consolidation, pruning, or lifecycle
   attention.

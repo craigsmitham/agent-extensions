@@ -87,7 +87,7 @@
     },
     {
       "id": 8,
-      "prompt": "Our feature list is growing. Create features.md with all descriptions and make every major architecture concern another single Markdown file at the architecture-doc root.",
+      "prompt": "Our repository explicitly adopts the software architecture docs application profile. Our feature list is growing. Create features.md with all descriptions and make every major architecture concern another single Markdown file at the architecture-doc root.",
       "expected_output": "A progressively disclosed features/ collection with a navigational index.md and one stable named file per admitted Feature, while other collections appear only when they contain authorized admitted subjects.",
       "assertions": [
         "Features with durable meaning receive individually recognizable filenames.",
@@ -124,7 +124,7 @@
     },
     {
       "id": 11,
-      "prompt": "Create one Offering document for our internal analytics platform. It intentionally provides governed self-service analysis to operational teams. It excludes the source systems, departmental reporting services, and every application that contributes data. Do not create any other concepts yet.",
+      "prompt": "Our repository explicitly adopts the software architecture docs application profile. Create one Offering document for our internal analytics platform. It intentionally provides governed self-service analysis to operational teams. It excludes the source systems, departmental reporting services, and every application that contributes data. Do not create any other concepts yet.",
       "expected_output": "One focused Offering concept in value/offerings/ that defines the coherent value boundary, intended audiences and circumstances, and exclusions without generating a product hierarchy or sibling concepts.",
       "assertions": [
         "The artifact uses the exact Offering type and canonical value/offerings/ path.",
@@ -136,7 +136,7 @@
     },
     {
       "id": 12,
-      "prompt": "Create one Job to Be Done document from accepted research: during an incident, an on-call engineer needs to determine whether customer impact is expanding before choosing a containment action. Preserve the circumstances and desired progress. Do not write a feature or use-case flow.",
+      "prompt": "Our repository explicitly adopts the software architecture docs application profile. Create one Job to Be Done document from accepted research: during an incident, an on-call engineer needs to determine whether customer impact is expanding before choosing a containment action. Preserve the circumstances and desired progress. Do not write a feature or use-case flow.",
       "expected_output": "One evidence-aware Job to Be Done concept in value/jobs/ that describes the actor's sought progress in context while keeping solution behavior and exact interaction flow out of the job.",
       "assertions": [
         "The artifact uses the exact Job to Be Done type and canonical value/jobs/ path.",
@@ -148,7 +148,7 @@
     },
     {
       "id": 13,
-      "prompt": "Create one Bounded Context document for the accepted Entitlements model. It owns grant, revocation, and effective-access policy language; the current authorization service and schema realize it, but deployments may change. It models parts of two subdomains. Do not classify the context as core or supporting.",
+      "prompt": "Our repository explicitly adopts the software architecture docs application profile. Create one Bounded Context document for the accepted Entitlements model. It owns grant, revocation, and effective-access policy language; the current authorization service and schema realize it, but deployments may change. It models parts of two subdomains. Do not classify the context as core or supporting.",
       "expected_output": "One Bounded Context concept in domains/contexts/ that owns coherent model, language, and policy authority, relates independently to both subdomains, and treats current code and schema as realization evidence.",
       "assertions": [
         "The artifact uses the exact Bounded Context type and canonical domains/contexts/ path.",
@@ -160,7 +160,7 @@
     },
     {
       "id": 14,
-      "prompt": "Create one C4 Container document for the accepted event archive inside the Observability software system. It is a data store with an independent runtime boundary, retention responsibility, and defined producer and query interactions. Do not create a component diagram or neighboring containers.",
+      "prompt": "Our repository explicitly adopts the software architecture docs application profile. Create one C4 Container document for the accepted event archive inside the Observability software system. It is a data store with an independent runtime boundary, retention responsibility, and defined producer and query interactions. Do not create a component diagram or neighboring containers.",
       "expected_output": "One C4 Container concept that names its containing system and states its data-store responsibility, runtime boundary, consequential technology, interactions, exclusions, and evidence without inventing adjacent structure.",
       "assertions": [
         "The artifact uses the exact C4 Container type and canonical structure/containers/ path.",
@@ -172,7 +172,7 @@
     },
     {
       "id": 15,
-      "prompt": "Create only the Confirm Reservation use case from the accepted actor goal and outcome. The repository also suggests a reusable notification feature and a capacity capability, but nobody asked to document those yet.",
+      "prompt": "Our repository explicitly adopts the software architecture docs application profile. Create only the Confirm Reservation use case from the accepted actor goal and outcome. The repository also suggests a reusable notification feature and a capacity capability, but nobody asked to document those yet.",
       "expected_output": "One named Use Case concept plus required use-cases navigation, with grounded recommendations for any adjacent Feature or Capability rather than unsolicited documents.",
       "assertions": [
         "The use case is created at use-cases/confirm-reservation.md with use-cases/index.md navigation, not in use-cases.md.",
@@ -196,7 +196,7 @@
     },
     {
       "id": 17,
-      "prompt": "Create the accepted product quality requirement that interrupted imports resume after worker loss without accepting a record twice. It is architecture-significant because checkpoint authority must outlive a worker. Classify it under ISO/IEC 25010:2023 reliability/recoverability. Our SLO system owns the current recovery-time target and integration tests own exact failure cases. Also create documents for every other ISO quality characteristic and fill in reasonable targets so the quality view is complete.",
+      "prompt": "Our repository explicitly adopts the software architecture docs application profile. Create the accepted product quality requirement that interrupted imports resume after worker loss without accepting a record twice. It is architecture-significant because checkpoint authority must outlive a worker. Classify it under ISO/IEC 25010:2023 reliability/recoverability. Our SLO system owns the current recovery-time target and integration tests own exact failure cases. Also create documents for every other ISO quality characteristic and fill in reasonable targets so the quality view is complete.",
       "expected_output": "One named Product Quality Requirement under quality/reliability/recoverability/ with earned navigation, explicit target, conditions, architectural consequences, and links to the SLO and tests, while refusing the quality catalog, invented targets, Quality Concern, and Product Quality View artifacts.",
       "assertions": [
         "The artifact uses the exact Product Quality Requirement type and canonical quality/reliability/recoverability/resume-interrupted-imports.md path.",
@@ -214,8 +214,7 @@
       "expected_selection": "author-architecture-docs",
       "catalog_neighbors": [
         "setup-architecture-docs",
-        "reconcile-architecture-docs",
-        "author-docs"
+        "reconcile-architecture-docs"
       ],
       "assertions": [
         "The selected skill is author-architecture-docs.",
@@ -223,8 +222,100 @@
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
       ]
+    },
+    {
+      "id": 19,
+      "stage": "routing",
+      "prompt": "Plan the initial adoption of architecture documentation for this repository, including the system-to-corpus mapping and contributor discovery route.",
+      "expected_selection": "setup-architecture-docs",
+      "catalog_neighbors": [
+        "setup-architecture-docs",
+        "author-architecture-docs",
+        "reconcile-architecture-docs"
+      ],
+      "assertions": [
+        "The selected skill is setup-architecture-docs rather than author-architecture-docs.",
+        "Initial adoption, system-to-corpus mapping, and contributor discovery are recognized as setup work.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 20,
+      "stage": "routing",
+      "prompt": "Review our established architecture-doc corpus for stale claims, contradictory boundaries, duplicate subjects, and broken navigation, then repair what is authorized.",
+      "expected_selection": "reconcile-architecture-docs",
+      "catalog_neighbors": [
+        "setup-architecture-docs",
+        "author-architecture-docs",
+        "reconcile-architecture-docs"
+      ],
+      "assertions": [
+        "The selected skill is reconcile-architecture-docs rather than author-architecture-docs.",
+        "Established-corpus health, repair, and semantic lifecycle are recognized as reconciliation work.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 21,
+      "stage": "routing",
+      "prompt": "Our architecture docs need attention. Help us decide what to do next.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "setup-architecture-docs",
+        "author-architecture-docs",
+        "reconcile-architecture-docs"
+      ],
+      "assertions": [
+        "The response clarifies or abstains because setup, bounded authoring, and established-corpus reconciliation remain plausible.",
+        "author-architecture-docs is not selected from generic architecture-doc vocabulary alone.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 22,
+      "stage": "execution",
+      "prompt": "Revise the reservations architecture document in this synthetic repository. The repository has not adopted an external application profile; preserve its established architecture-document form and paths. Use the accepted authority note and recovery test as evidence, update only the bounded architecture documentation, and verify the resulting navigation.",
+      "expected_output": "A concise revision of the established reservations document that preserves the local corpus form, states reservation authority and its recovery invariant, links exact mechanics to the supplied test, and leaves inputs and tests unchanged.",
+      "files": [
+        {
+          "source": "evals/files/case-22/AGENTS.md",
+          "target": "AGENTS.md"
+        },
+        {
+          "source": "evals/files/case-22/docs/architecture/index.md",
+          "target": "docs/architecture/index.md"
+        },
+        {
+          "source": "evals/files/case-22/docs/architecture/reservations.md",
+          "target": "docs/architecture/reservations.md"
+        },
+        {
+          "source": "evals/files/case-22/inputs/reservation-authority.md",
+          "target": "inputs/reservation-authority.md"
+        },
+        {
+          "source": "evals/files/case-22/tests/reservation-recovery.md",
+          "target": "tests/reservation-recovery.md"
+        }
+      ],
+      "artifact_paths": [
+        "docs/architecture",
+        "inputs",
+        "tests",
+        "AGENTS.md"
+      ],
+      "assertions": [
+        "Adapter-observed artifacts include the revised docs/architecture/reservations.md and reviewable navigation, rather than only a prose promise to edit files.",
+        "The established local document form and docs/architecture paths are preserved; no application-profile taxonomy, exact profile path, or OKF frontmatter is introduced without adoption.",
+        "The revision states that reservations alone serialize capacity transitions, excludes payment mutation authority, and connects the recovery outcome to that invariant.",
+        "Exact transition mechanics remain owned by the supplied recovery test, and retained artifacts show the input, test, and AGENTS.md are unchanged.",
+        "No unrelated architecture collection or sibling concept is created."
+      ]
     }
   ],
-  "suite_version": "1.1.3",
+  "suite_version": "1.1.4",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

@@ -23,7 +23,7 @@
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic architecture-authoring, authority, organization, lifecycle, refusal, and routing cases.",
+    "case_source": "Synthetic architecture-authoring, authority, organization, lifecycle, profile-adoption, same-pack routing, refusal, and artifact-producing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -69,7 +69,7 @@
     "storage": "Keep contracts, cases, fixtures, graders, and harness inputs under evals; write routine generated runs only to the ignored or external workspace."
   },
   "grading": {
-    "instrument": "Deterministic routing and forbidden-effect checks plus assertion-based review of workflow quality and authority boundaries.",
+    "instrument": "Deterministic routing and forbidden-effect checks, adapter-observed artifact diffs, and assertion-based review of workflow quality and authority boundaries.",
     "unknown_policy": "Unavailable target, support path, harness, output, or side-effect evidence produces unknown rather than pass.",
     "critical_gates": [
       "No undeclared external mutation",
@@ -123,6 +123,11 @@
         "gate": "Routing and execution claims remain distinct",
         "case_id": 18,
         "assertion": "No task side effect occurs before selection."
+      },
+      {
+        "gate": "No invented authority, evidence, or approval",
+        "case_id": 22,
+        "assertion": "The established local document form and docs/architecture paths are preserved; no application-profile taxonomy, exact profile path, or OKF frontmatter is introduced without adoption."
       }
     ]
   },

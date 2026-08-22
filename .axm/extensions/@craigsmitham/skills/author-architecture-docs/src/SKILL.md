@@ -17,6 +17,28 @@ artifact is the multi-view corpus itself; setup and ongoing maintenance belong
 to their dedicated skills. The bundle root is
 `.axm/extensions/@craigsmitham/knowledge/software-architecture/src/`.
 
+The bundle currently labels itself Candidate, and its concept documents remain
+draft and not human-verified. Treat it as working guidance, disclose that
+limitation when it materially affects a claim, and let accepted repository-local
+architecture authority and formats prevail. Its application profile is opt-in:
+exact concept types, paths, navigation, and profile metadata apply only when the
+repository explicitly adopts the profile or the caller explicitly requests an
+artifact within an already adopted profile. Initial profile adoption belongs to
+setup, not to an ordinary authoring task. Without adoption, use the semantic
+guidance while preserving the repository's established document form and paths.
+
+## Same-pack workflow boundary
+
+| Request | Owning skill |
+| --- | --- |
+| Plan or establish initial adoption, map systems to corpora, or connect discovery and authority | `setup-architecture-docs` |
+| Create, revise, organize, or review one explicitly requested architecture artifact or bounded subject | `author-architecture-docs` |
+| Assess or repair an established corpus for staleness, contradiction, duplication, broken navigation, or semantic lifecycle | `reconcile-architecture-docs` |
+
+Choose the narrowest owner. A request that genuinely contains more than one of
+these jobs may be sequenced only after each job and its authority are explicit;
+shared pack membership alone does not authorize composition.
+
 | Need | Concept path from the bundle root |
 | --- | --- |
 | Establish what architecture owns | `overview.md` |
@@ -66,9 +88,12 @@ to their dedicated skills. The bundle root is
    the outcome or policy the subject owns, its exclusions, and stakeholders.
    Distinguish offerings and value, capabilities, features, surfaces, domain
    contexts, and C4 elements; connect them with explicit relationships instead
-   of one false hierarchy. When the request names a profile type, follow its
-   focused guide and create exactly the requested semantic artifact and
-   required navigation. If an adjacent concept independently passes the
+   of one false hierarchy. When an adopted application profile governs the
+   corpus and the request names one of its types, follow its focused guide and
+   create exactly the requested semantic artifact and required navigation.
+   Otherwise preserve the repository's established architecture-document form
+   and path while applying the relevant semantic guidance. If an adjacent
+   concept independently passes the
    admission test, recommend it with rationale; do not create it without the
    user's explicit authoring intent. Do not create a taxonomy for symmetry.
 4. **Apply the admission test.** Include a claim only when it is accepted,
@@ -107,14 +132,16 @@ to their dedicated skills. The bundle root is
    obsolete, the evidence is insufficient, or accepted intent changed. Do not
    let the newest artifact silently win. Stop when resolution requires a new
    product or architecture decision.
-10. **Organize for progressive disclosure.** Keep `index.md` navigational and
-   give every concept a stable named file from first admission. The first use
-   case, for example, creates `use-cases/index.md` and
-   `use-cases/<named-use-case>.md`, never `use-cases.md`. Omit empty
-   collections. A same-named directory may elaborate one cohesive concept but
-   must not conceal several peer entities. Keep C4 components beneath their
-   owning container; model shared code as modules unless it has a runtime
-   boundary.
+10. **Organize for progressive disclosure.** Preserve an established local
+   organization unless the caller authorizes a bounded reorganization. In a
+   corpus that explicitly adopts the application profile, keep `index.md`
+   navigational and give every concept a stable named file from first
+   admission. The first use case, for example, creates
+   `use-cases/index.md` and `use-cases/<named-use-case>.md`, never
+   `use-cases.md`. Omit empty collections. A same-named directory may
+   elaborate one cohesive concept but must not conceal several peer entities.
+   Keep C4 components beneath their owning container; model shared code as
+   modules unless it has a runtime boundary.
 11. **Make and verify the authorized change.** For authoring, edit the bounded
    documentation and required navigation while preserving unrelated work. For
    review-only requests, return findings without edits. Reapply the admission
