@@ -11,6 +11,6 @@ They also cover recommendation-only semantic deletion, explicitly authorized
 reduction, and migration from plural catch-all documents to stable named
 concepts.
 
-The suite passes when the skill maintains an established documentation set
+The suite passes when the skill reconciles an established documentation set
 without silently deciding architecture, treating recency as authority, or
 expanding into setup, new-subject authoring, implementation, or generic docs.

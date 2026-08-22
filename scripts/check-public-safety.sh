@@ -156,8 +156,8 @@ expected=(
   skills/craft-effect-v4
   skills/field-notes
   skills/improve-whatever
-  skills/maintain-architecture-docs
   skills/question
+  skills/reconcile-architecture-docs
   skills/research
   skills/setup-architecture-docs
   skills/temporal-dates

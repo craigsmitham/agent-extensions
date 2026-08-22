@@ -214,7 +214,7 @@
       "expected_selection": "author-architecture-docs",
       "catalog_neighbors": [
         "setup-architecture-docs",
-        "maintain-architecture-docs",
+        "reconcile-architecture-docs",
         "author-docs"
       ],
       "assertions": [
@@ -225,6 +225,6 @@
       ]
     }
   ],
-  "suite_version": "1.1.2",
+  "suite_version": "1.1.3",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

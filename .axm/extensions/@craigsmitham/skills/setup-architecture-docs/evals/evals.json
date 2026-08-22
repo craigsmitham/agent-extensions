@@ -66,7 +66,7 @@
     {
       "id": 6,
       "prompt": "Our Just Enough Architecture Docs setup already exists, but its links are broken and several documents look stale. Set it up again and clean everything up.",
-      "expected_output": "A routing boundary that recognizes established setup and leaves repair, freshness, and cleanup to maintain-architecture-docs.",
+      "expected_output": "A routing boundary that recognizes established setup and leaves repair, freshness, and cleanup to reconcile-architecture-docs.",
       "assertions": [
         "The existing setup is not recreated or duplicated.",
         "Broken links and stale content are identified as maintenance work.",
@@ -106,7 +106,7 @@
       "prompt": "Set up minimal Just Enough Architecture Docs for this repository and add the canonical instruction discovery route.",
       "expected_selection": "setup-architecture-docs",
       "catalog_neighbors": [
-        "maintain-architecture-docs",
+        "reconcile-architecture-docs",
         "author-architecture-docs",
         "author-agent-instructions"
       ],
@@ -180,7 +180,7 @@
       "prompt": "Before changing files, plan how this repository should initially adopt architecture documentation and identify the smallest setup we would need.",
       "expected_selection": "setup-architecture-docs",
       "catalog_neighbors": [
-        "maintain-architecture-docs",
+        "reconcile-architecture-docs",
         "author-architecture-docs",
         "audit-docs"
       ],
@@ -195,15 +195,15 @@
       "id": 15,
       "stage": "routing",
       "prompt": "Review our established architecture-doc corpus for stale claims, broken links, and contradictory boundaries.",
-      "expected_selection": "maintain-architecture-docs",
+      "expected_selection": "reconcile-architecture-docs",
       "catalog_neighbors": [
         "setup-architecture-docs",
-        "maintain-architecture-docs",
+        "reconcile-architecture-docs",
         "author-architecture-docs",
         "audit-docs"
       ],
       "assertions": [
-        "The selected skill is maintain-architecture-docs rather than setup-architecture-docs.",
+        "The selected skill is reconcile-architecture-docs rather than setup-architecture-docs.",
         "The word architecture does not override the established-corpus review and maintenance intent.",
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
@@ -216,7 +216,7 @@
       "expected_selection": "author-architecture-docs",
       "catalog_neighbors": [
         "setup-architecture-docs",
-        "maintain-architecture-docs",
+        "reconcile-architecture-docs",
         "author-architecture-docs"
       ],
       "assertions": [
@@ -233,7 +233,7 @@
       "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
         "setup-architecture-docs",
-        "maintain-architecture-docs",
+        "reconcile-architecture-docs",
         "author-architecture-docs",
         "audit-docs"
       ],
@@ -306,6 +306,6 @@
       ]
     }
   ],
-  "suite_version": "0.3.2",
+  "suite_version": "0.3.3",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

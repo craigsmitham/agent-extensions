@@ -1,12 +1,12 @@
 ---
-name: maintain-architecture-docs
-description: Reviews and maintains established repository software architecture docs through evidence-aware repair and explicitly authorized semantic lifecycle changes. Use when asked to maintain, review, refresh, reconcile, clean up, prune, or assess stale, broken, duplicated, or contradictory architecture documentation. Not for initial setup, authoring a known new architecture subject, choosing an architecture, generic documentation work, or implementing the system.
+name: reconcile-architecture-docs
+description: Assesses and reconciles established repository software architecture docs through evidence-aware repair and explicitly authorized semantic lifecycle changes. Use when asked to reconcile, maintain, review, refresh, repair, clean up, prune, or assess stale, broken, duplicated, or contradictory architecture documentation. Not for initial setup, authoring a known new architecture subject, choosing an architecture, generic documentation work, or implementing the system.
 ---
+# Reconcile architecture docs
 
-# Maintain architecture docs
-
-Keep established architecture docs coherent, discoverable, current enough to
-trust, and small enough to justify their continuing maintenance.
+Reconcile established architecture docs so they remain coherent, discoverable,
+current enough to trust, and small enough to justify their continuing
+maintenance.
 
 This skill is a non-standalone member of the software-architecture pack. From
 the active AXM scope root, begin with
@@ -17,7 +17,7 @@ concept needed to evaluate a material claim.
 For a Product Quality Requirement, open
 `guides/documenting-product-quality-requirements.md` and its linked foundation.
 
-## Maintenance triggers
+## Reconciliation triggers
 
 Use this workflow when requested, or when the requested review follows a change
 to accepted behavior, responsibility, boundary, Product Quality Requirement,
@@ -28,12 +28,13 @@ has not accepted one.
 ## Workflow
 
 1. **Resolve mode and authority.** Treat requests to review, assess, or report
-   as read-only. A general request to maintain, repair, refresh, reconcile,
-   clean up, or prune authorizes bounded mechanical integrity repair and
-   unambiguous restoration of already accepted meaning. It does not by itself
-   authorize semantic addition, deletion, merger, deprecation,
-   reclassification, changed authority, or changed lifecycle. Perform those
-   only when the user explicitly authorizes that class and scope; otherwise
+   as read-only review mode. A general request to reconcile, maintain,
+   repair, refresh, clean up, or prune authorizes reconcile mode: bounded
+   mechanical integrity repair and unambiguous restoration of already accepted
+   meaning. It does not by itself authorize semantic addition, deletion,
+   merger, deprecation, reclassification, changed authority, or changed
+   lifecycle. Perform those only when the user explicitly authorizes that class
+   and scope; otherwise
    recommend them. State the mode before acting. Do not broaden review into
    remediation.
 2. **Resolve the established scope.** Read repository instructions, the
@@ -81,7 +82,7 @@ has not accepted one.
    Do not collapse disagreement into staleness. When prose and current evidence
    differ, determine whether the implementation is wrong, the docs are
    obsolete, evidence is insufficient, or accepted intent changed.
-6. **Act only in maintain mode and within evidence.** Repair navigation, links,
+6. **Act only in reconcile mode and within evidence.** Repair navigation, links,
    metadata, and relationships when the correct state is unambiguous. Revise
    existing semantic content only when accepted authority establishes the
    intended meaning and the request authorizes semantic revision. Merge,
@@ -91,11 +92,11 @@ has not accepted one.
    copied mechanics with evidence routes only when reduction is explicitly in
    scope; otherwise recommend the smallest reduction. Never invent a missing
    decision merely to clear a finding.
-7. **Preserve the authoring boundary.** Maintenance may restore accepted
+7. **Preserve the authoring boundary.** Reconciliation may restore accepted
    meaning in an existing subject, but a known new architecture subject or a
    separately requested substantive design change belongs to
    `author-architecture-docs`. Record that follow-up without requiring
-   cross-skill invocation to finish the current maintenance scope.
+   cross-skill invocation to finish the current reconciliation scope.
 8. **Verify.** Reapply the admission test to changed claims, confirm every
    maintained subject remains reachable from the root, check canonical homes
    and evidence routes, run applicable docs or profile checks owned by this
@@ -109,6 +110,6 @@ has not accepted one.
    smallest safe change, and required authority.
 
 Do not change source code, configuration, runtime systems, proposals, or
-external records unless separately requested. Maintenance succeeds when every
-identified issue in scope is either responsibly repaired or explicitly
+external records unless separately requested. Reconciliation succeeds when
+every identified issue in scope is either responsibly repaired or explicitly
 classified without turning uncertainty into accepted architecture.

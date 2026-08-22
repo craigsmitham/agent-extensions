@@ -1,9 +1,9 @@
 {
   "contract_version": "3.0.0",
   "owner": "@craigsmitham",
-  "decision": "Detect routing, authority, boundary, execution, and evidence failures in maintain-architecture-docs before release; this suite does not approve the skill.",
+  "decision": "Detect routing, authority, boundary, execution, and evidence failures in reconcile-architecture-docs before release; this suite does not approve the skill.",
   "target_binding": {
-    "skill_name": "maintain-architecture-docs",
+    "skill_name": "reconcile-architecture-docs",
     "required_result_fields": [
       "target.source_revision",
       "target.package_content_identity",
@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Reviewing and maintaining established architecture documentation through evidence-aware repair and explicitly authorized lifecycle changes.",
+    "intended_use": "Assessing and reconciling established architecture documentation through evidence-aware repair and explicitly authorized lifecycle changes.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic maintenance, authority, reduction, migration, precondition, and routing cases.",
+    "case_source": "Synthetic reconciliation, authority, reduction, migration, precondition, and routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",

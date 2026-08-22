@@ -29,7 +29,7 @@
     "question": "workspace:@craigsmitham/skills/question",
     "research": "workspace:@craigsmitham/skills/research",
     "axm": "@agentxm/skills/axm@0.27.15",
-    "maintain-architecture-docs": "workspace:@craigsmitham/skills/maintain-architecture-docs",
+    "reconcile-architecture-docs": "workspace:@craigsmitham/skills/reconcile-architecture-docs",
     "setup-architecture-docs": "workspace:@craigsmitham/skills/setup-architecture-docs"
   },
   "rules": {

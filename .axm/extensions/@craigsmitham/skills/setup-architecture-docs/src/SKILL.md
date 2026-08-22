@@ -43,7 +43,7 @@ authority; obtain separate authority for those effects.
 
 If an established setup needs broken-link repair, freshness review,
 reconciliation, cleanup, or pruning, classify it as established maintenance and
-leave that work to `maintain-architecture-docs`. Separate any genuinely missing
+leave that work to `reconcile-architecture-docs`. Separate any genuinely missing
 adoption choice from the maintenance scope. Substantive accepted meaning belongs
 to `author-architecture-docs` even when setup exposes its absence.
 
@@ -258,7 +258,7 @@ that class and scope of change.
 
 End every completed, proposed, or blocked handoff with one explicit
 `Next workflow:` line. Name `author-architecture-docs`,
-`maintain-architecture-docs`, a required adoption decision, a separately
+`reconcile-architecture-docs`, a required adoption decision, a separately
 authorized migration, or `None` with the condition that would make another
 workflow necessary.
 

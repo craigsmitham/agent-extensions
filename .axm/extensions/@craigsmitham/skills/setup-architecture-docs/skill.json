@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "setup-architecture-docs",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Plan or establish discoverable architecture-doc adoption from repository state, authority, and explicit system-to-corpus mappings",
   "keywords": [
     "software-architecture",

@@ -1,5 +1,5 @@
 {
-  "skill_name": "maintain-architecture-docs",
+  "skill_name": "reconcile-architecture-docs",
   "evals": [
     {
       "id": 1,
@@ -137,20 +137,37 @@
       "id": 12,
       "stage": "routing",
       "prompt": "Review and maintain our established architecture docs, repairing broken navigation but not making unauthorized semantic lifecycle changes.",
-      "expected_selection": "maintain-architecture-docs",
+      "expected_selection": "reconcile-architecture-docs",
       "catalog_neighbors": [
         "author-architecture-docs",
         "setup-architecture-docs",
         "audit-docs"
       ],
       "assertions": [
-        "The selected skill is maintain-architecture-docs.",
+        "The selected skill is reconcile-architecture-docs.",
         "No neighboring skill is selected for a job it does not own.",
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
       ]
+    },
+    {
+      "id": 13,
+      "stage": "routing",
+      "prompt": "Reconcile our established architecture docs after the billing ownership change. Repair unambiguous links and classify any unresolved authority disagreement.",
+      "expected_selection": "reconcile-architecture-docs",
+      "catalog_neighbors": [
+        "author-architecture-docs",
+        "setup-architecture-docs",
+        "audit-docs"
+      ],
+      "assertions": [
+        "The selected skill is reconcile-architecture-docs.",
+        "The action-oriented reconcile trigger selects the established-corpus workflow.",
+        "No neighboring skill is selected for a job it does not own.",
+        "No task side effect occurs before selection."
+      ]
     }
   ],
-  "suite_version": "0.2.2",
+  "suite_version": "0.1.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

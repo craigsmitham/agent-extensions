@@ -1,7 +1,7 @@
 # Software architecture
 
 Software architecture knowledge and focused workflows for setting up,
-authoring, and maintaining architecture docs that preserve accepted, durable
+authoring, and reconciling architecture docs that preserve accepted, durable
 functional meaning, product quality requirements, and structural meaning
 without copying facts that executable or live sources own better.
 
@@ -12,7 +12,7 @@ without copying facts that executable or live sources own better.
 | `@craigsmitham/knowledge/software-architecture` | Human-first, risk-driven architecture meaning, product quality requirements, lifecycle, stewardship, stable concept identity, selected views, and the Just Enough Architecture Docs pattern |
 | `@craigsmitham/skills/setup-architecture-docs` | Establish the system boundary, root, local adoption, authority routes, maintenance triggers, and agent discovery without empty or inferred scaffolding |
 | `@craigsmitham/skills/author-architecture-docs` | Create or revise the explicitly requested semantic delta while routing exact current facts to their authorities |
-| `@craigsmitham/skills/maintain-architecture-docs` | Repair established docs and recommend semantic lifecycle changes until the user explicitly authorizes them |
+| `@craigsmitham/skills/reconcile-architecture-docs` | Reconcile established docs through bounded repair and classify semantic lifecycle issues, making changes only with explicit user authority |
 
 The three skills are non-standalone: they load the bundled knowledge through
 its canonical AXM path and are distributed through this pack. The knowledge
@@ -30,8 +30,8 @@ axm install @craigsmitham/packs/software-architecture
   existing documentation root.
 - Ask to author architecture docs when accepted meaning needs a bounded new or
   revised home.
-- Ask to maintain architecture docs when established docs
-  needs review, repair, reconciliation, consolidation, pruning, or lifecycle
+- Ask to reconcile architecture docs when established docs
+  need review, repair, reconciliation, consolidation, pruning, or lifecycle
   attention.
 - Use the knowledge bundle directly to reason about responsibilities,
   boundaries, dependency direction, invariants, offerings, audiences, needs,
