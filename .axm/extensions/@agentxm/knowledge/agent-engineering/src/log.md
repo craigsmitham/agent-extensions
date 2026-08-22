@@ -1,5 +1,12 @@
 # Agent engineering update log
 
+## 2026-08-21
+
+- **Boundary authority**: Made [Agent-system
+  boundaries](foundations/agent-system-boundaries.md) the canonical
+  cross-discipline comparison for agent, prompt, context, harness, workflow,
+  skill, and evaluation responsibilities.
+
 ## 2026-08-15
 
 - **Trust semantics**: Clarified that lifecycle status, machine provenance,

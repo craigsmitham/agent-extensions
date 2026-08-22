@@ -1,10 +1,10 @@
 ---
 type: Reference
-title: Prompt, agent, context, harness, skill, and evaluation boundaries
-description: Which behavioral, model-facing, informational, runtime, packaged-workflow, or assurance discipline owns each failure and evidence surface.
-tags: [prompt-engineering, agent-engineering, context-engineering, harness-engineering, skill-engineering, eval-engineering, ownership]
+title: Prompt boundary responsibilities
+description: How prompt engineering shares variables, tools, stopping, handoffs, output schemas, safety, evaluation, and versioning with neighboring owners without absorbing their authority.
+tags: [prompt-engineering, boundaries, variables, tools, stopping, handoffs, output-schema, safety, evaluation, versioning]
 status: stable
-generated: { by: "codex/gpt-5.6", at: 2026-08-14T22:24:33Z }
+generated: { by: "codex/gpt-5.6", at: 2026-08-21T22:05:43Z }
 stale_after: 2027-02-14
 sources:
   - id: anthropic-context
@@ -15,26 +15,22 @@ sources:
     title: Anthropic — Demystifying evals for AI agents
 ---
 
-# Prompt, agent, context, harness, skill, and evaluation boundaries
+# Prompt boundary responsibilities
 
-Prompt engineering is a technique within the informational part of an agent
-system, but it is used by more than one artifact type. Assign ownership by the
-smallest surface whose change can explain and repair the observed failure.
-
-| Discipline | Owns | Representative evidence |
-| --- | --- | --- |
-| Prompt engineering | Intentional instructions, examples, templates, and response contracts | Controlled prompt variants and response grading |
-| Agent engineering | Agency choice, goals, control loops, planning, capability and memory policy, delegation, recovery, stopping, and human control | Agent trajectories, external effects, interventions, and stopping behavior |
-| Context engineering | Selection, provenance, ordering, routing, loading, compaction, and retirement of all information in attention | Retrieval, ablation, freshness, and context-use evidence |
-| Harness engineering | Model invocation, tool implementation, runtime, persistence, mechanical feedback, validation, permissions, and enforcement | End-to-end traces, environment state, control decisions, and outcome checks |
-| Skill engineering | Discoverable workflow packaging, routing, resources, execution contract, trust, admission, and lifecycle | Routing and activated-workflow evaluations |
-| Evaluation engineering | Objectives, task distributions, trials, graders, baselines, uncertainty, aggregation, validity, and suite lifecycle | Attributable reports bound to target and evaluation identities |
+Prompt engineering owns intentional model-facing instructions, examples,
+templates, and response contracts. It is used by agents, tools, graders,
+handoffs, skills, and other invocation surfaces, but it does not acquire those
+artifacts' behavioral, informational, runtime, or assurance authority.
 
 Anthropic distinguishes prompt methods for writing and organizing instructions
 from context engineering, which curates all tokens available during inference,
 including tools, history, and external data.[^anthropic-context] It also
 distinguishes a response or transcript from the environment outcome an agent
 claims to have produced.[^anthropic-evals]
+
+Assign a prompt the smallest model-facing responsibility that can explain and
+repair the observed failure. Use the following boundaries when the same
+concern crosses several surfaces.
 
 ## Shared concerns, different owners
 

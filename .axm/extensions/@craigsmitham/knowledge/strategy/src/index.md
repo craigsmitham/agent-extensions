@@ -26,9 +26,3 @@ capabilities, and value.
   to pay, price, cost, and willingness to sell divide created value.
 - [Strategy as hypothesis](strategy-as-hypothesis.md) — How assumptions,
   evidence, and revision make strategy adaptable without reducing it to tactics.
-
-## Mapping strategic context
-
-- [Wardley mapping](wardley-mapping.md) — How Wardley maps combine user need,
-  value-chain visibility, evolution, movement, and inertia as a strategic
-  hypothesis rather than a static architecture diagram.

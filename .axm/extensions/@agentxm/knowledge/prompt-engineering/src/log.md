@@ -1,5 +1,12 @@
 # Prompt engineering update log
 
+## 2026-08-21
+
+- **Boundary consolidation**: Narrowed [Prompt boundary
+  responsibilities](foundations/boundaries.md) to prompt-specific shared
+  concerns after the whole-system discipline comparison moved to the
+  agent-engineering authority.
+
 ## 2026-08-15
 
 - **Trust semantics**: Clarified that lifecycle status, machine provenance,

@@ -26,9 +26,11 @@
     "audit-docs": "workspace:@craigsmitham/skills/audit-docs",
     "author-architecture-docs": "workspace:@craigsmitham/skills/author-architecture-docs",
     "author-software-work-items": "workspace:@craigsmitham/skills/author-software-work-items",
-    "axm": "@agentxm/skills/axm@0.27.13",
     "question": "workspace:@craigsmitham/skills/question",
-    "research": "workspace:@craigsmitham/skills/research"
+    "research": "workspace:@craigsmitham/skills/research",
+    "axm": "@agentxm/skills/axm@0.27.15",
+    "maintain-architecture-docs": "workspace:@craigsmitham/skills/maintain-architecture-docs",
+    "setup-architecture-docs": "workspace:@craigsmitham/skills/setup-architecture-docs"
   },
   "rules": {
     "field-notes": "workspace:@craigsmitham/rules/field-notes",
@@ -44,7 +46,8 @@
     "knowledge-management": "workspace:@craigsmitham/knowledge/knowledge-management",
     "product-management": "workspace:@craigsmitham/knowledge/product-management",
     "strategy": "workspace:@craigsmitham/knowledge/strategy",
-    "software-engineering": "workspace:@craigsmitham/knowledge/software-engineering"
+    "software-engineering": "workspace:@craigsmitham/knowledge/software-engineering",
+    "software-architecture": "workspace:@craigsmitham/knowledge/software-architecture"
   },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",
@@ -55,6 +58,7 @@
     "context-engineering": "@agentxm/packs/context-engineering",
     "harness-engineering": "@agentxm/packs/harness-engineering",
     "skill-engineering": "@agentxm/packs/skill-engineering",
-    "qrspi": "workspace:@craigsmitham/packs/qrspi"
+    "qrspi": "workspace:@craigsmitham/packs/qrspi",
+    "software-architecture": "workspace:@craigsmitham/packs/software-architecture"
   }
 }

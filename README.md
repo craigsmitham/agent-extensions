@@ -30,7 +30,8 @@ Install the replacement `@agentxm` identities; the previously published
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
 | `qrspi` | Frame concern-aware research questions and execute them as consistent, evidence-backed reports | `axm install @craigsmitham/packs/qrspi` |
-| `software-engineering` | Architecture-doc and software-work-item authoring skills, shared engineering knowledge, and concise YAGNI and Tidy First rules | `axm install @craigsmitham/packs/software-engineering` |
+| `software-architecture` | Durable architecture knowledge plus setup, authoring, and maintenance workflows for human-first architecture docs and product quality requirements | `axm install @craigsmitham/packs/software-architecture` |
+| `software-engineering` | Software-work-item authoring, shared engineering knowledge, and concise YAGNI and Tidy First rules | `axm install @craigsmitham/packs/software-engineering` |
 
 ## Standalone knowledge
 
@@ -38,7 +39,8 @@ Install the replacement `@agentxm` identities; the previously published
 | --- | --- | --- |
 | `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
 | `product-management` | Product outcomes, risks, empowered teams, discovery, delivery, evidence, and product strategy | `axm install @craigsmitham/knowledge/product-management` |
-| `software-engineering` | Architecture, design boundaries, invariants, evidence-timed change, and software work items for incidents, defects, and feature requests | `axm install @craigsmitham/knowledge/software-engineering` |
+| `software-architecture` | Durable system meaning, product quality requirements, boundaries, invariants, and evidence-aware architecture documentation | `axm install @craigsmitham/knowledge/software-architecture` |
+| `software-engineering` | Evidence-timed design change and software work items for incidents, defects, and feature requests | `axm install @craigsmitham/knowledge/software-engineering` |
 | `strategy` | Coherent choices about participation, advantage, capabilities, evidence, and value creation | `axm install @craigsmitham/knowledge/strategy` |
 | `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |
 

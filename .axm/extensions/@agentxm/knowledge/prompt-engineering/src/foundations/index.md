@@ -7,4 +7,4 @@ responsible intervention.
   instructions become evaluated and maintained engineering artifacts.
 - [Prompt as an engineered artifact](prompt-as-engineered-artifact.md) - The
   contracts and identity that make a reusable prompt more than prose.
-- [Prompt, agent, context, harness, skill, and evaluation boundaries](boundaries.md) - Which behavioral, model-facing, informational, runtime, packaged-workflow, or assurance discipline owns each failure and evidence surface.
+- [Prompt boundary responsibilities](boundaries.md) - How prompt engineering shares variables, tools, stopping, handoffs, output schemas, safety, evaluation, and versioning with neighboring owners without absorbing their authority.

@@ -1,9 +1,9 @@
 # Strategy knowledge
 
 Portable principles for coherent strategic choice, advantage, value creation,
-capabilities, evidence, and Wardley mapping. Use the bundle to distinguish
-strategy from goals and plans, reason about mutually reinforcing choices, and
-treat strategic maps as reviewable hypotheses rather than static architecture.
+capabilities, and evidence. Use the bundle to distinguish strategy from goals
+and plans, reason about mutually reinforcing choices, and treat strategy as a
+reviewable hypothesis rather than a static plan.
 
 Install it with:
 

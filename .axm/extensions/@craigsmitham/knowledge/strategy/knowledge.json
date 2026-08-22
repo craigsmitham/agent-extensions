@@ -2,31 +2,25 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "strategy",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "knowledge",
   "format": {
     "name": "okf",
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "Strategy as coherent choices about participation and advantage, supported by capabilities, value creation, evidence, and Wardley mapping",
+  "description": "Strategy as coherent choices about participation and advantage, supported by capabilities, value creation, and evidence",
   "keywords": [
     "strategy",
     "strategic-choice",
     "playing-to-win",
     "value-based-strategy",
     "competitive-advantage",
-    "value-creation",
-    "wardley-mapping",
-    "value-chain",
-    "evolution"
+    "value-creation"
   ],
   "license": "CC-BY-SA-4.0",
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "standalone": true,
-  "recommendedPacks": [
-    "@craigsmitham/packs/software-engineering"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/craigsmitham/agent-extensions",

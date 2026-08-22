@@ -133,6 +133,7 @@ expected=(
   knowledge/field-notes
   knowledge/knowledge-management
   knowledge/product-management
+  knowledge/software-architecture
   knowledge/software-engineering
   knowledge/strategy
   knowledge/workflow-automation
@@ -140,6 +141,7 @@ expected=(
   packs/effect-v4
   packs/field-notes
   packs/qrspi
+  packs/software-architecture
   packs/software-engineering
   rules/field-notes
   rules/tidy-first
@@ -153,8 +155,10 @@ expected=(
   skills/craft-effect-v4
   skills/field-notes
   skills/improve-whatever
+  skills/maintain-architecture-docs
   skills/question
   skills/research
+  skills/setup-architecture-docs
   skills/temporal-dates
 )
 
