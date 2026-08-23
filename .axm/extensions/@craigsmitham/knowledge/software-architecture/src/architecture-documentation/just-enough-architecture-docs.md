@@ -16,7 +16,7 @@ sources:
     title: Product quality in software architecture
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-22T00:14:30Z
+  at: 2026-08-23T00:23:36Z
 ---
 
 # Just Enough Architecture Docs
@@ -96,6 +96,15 @@ the consequential reader questions in scope. Do not force architecture
 concepts themselves into a mutually exclusive hierarchy: use cases,
 capabilities, domain contexts, and structural elements legitimately overlap
 through explicit relationships.
+
+Represent every corpus that adopts this pattern as an OKF v0.2 bundle that
+explicitly adopts and conforms to the [Software architecture docs application
+profile](software-architecture-application-profile.md). This pattern supplies
+the philosophy, admission test, authority model, and maintenance discipline;
+the profile supplies the normative types, metadata, paths, containment,
+validation, and permitted representation variance. Unprofiled architecture
+material may inform migration, but it is not an alternative conforming form of
+Just Enough Architecture Docs.
 
 ### Apply the admission test
 
@@ -244,12 +253,12 @@ to code, schemas, configuration, and tests as current realization or
 conformance evidence rather than relying on implementation structure as the
 only declaration of the context.
 
-When these concepts are represented in an OKF bundle, the [Software
-architecture docs application
-profile](software-architecture-application-profile.md) owns their exact OKF
+The [Software architecture docs application
+profile](software-architecture-application-profile.md) owns the exact OKF
 types, metadata, paths, author-facing relationship meanings, and
-profile-conformance rules. Without profile adoption, this pattern remains the
-prescriptive documentation default rather than an OKF conformance requirement.
+profile-conformance rules for these concepts. Any permitted representation
+choice or extension must be stated by the profile rather than introduced as a
+repository-local waiver.
 
 Give each maintained element one canonical home. A primary grouping may locate
 it, but relationships to other views remain explicit, typed links rather than
@@ -258,9 +267,7 @@ the model defines it—for example, C4 components belong beneath their owning
 container—without turning every other relationship into structural nesting.
 
 The same profile owns the exact types, metadata, paths, containment, view
-distinctions, and profile-conformance rules for C4 structural concepts. Without
-that adoption, the `structure/` collection remains this pattern's prescriptive
-documentation default rather than an OKF conformance requirement.
+distinctions, and profile-conformance rules for C4 structural concepts.
 
 ### Keep functional, product quality, architecture, and evidence distinct
 

@@ -17,9 +17,19 @@ without copying facts that executable or live sources own better.
 The three skills are non-standalone: they load the bundled knowledge through
 its canonical AXM path and are distributed through this pack. The knowledge
 bundle remains useful on its own. It currently declares Candidate maturity,
-with draft, not human-verified concept documents. Its application profile is
-opt-in; repository-local accepted authority and formats take precedence until a
-repository explicitly adopts it.
+with draft, not human-verified concept documents. Just Enough Architecture Docs
+defines the philosophy; every corpus managed by the pack must represent it as
+OKF v0.2 and conform to the bundled software-architecture-docs profile.
+Repository-local accepted authority governs meaning, while the profile governs
+representation and permitted variance.
+
+## Revision 0.4.0
+
+This release updates the pack floors to knowledge `2.0.0`, authoring `2.0.0`,
+setup `0.4.0`, and reconciliation `0.2.0`. It replaces optional profile adoption
+with required OKF v0.2 and software-architecture-docs profile conformance.
+Existing unprofiled corpora require setup and migration; rollback is to pack
+`0.3.1` and its prior member versions.
 
 ## Install
 

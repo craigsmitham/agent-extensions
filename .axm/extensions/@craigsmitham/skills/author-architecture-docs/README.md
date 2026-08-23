@@ -13,17 +13,18 @@ implementation in prose. Product research, roadmaps, pricing, sales, and
 marketing content remain outside the skill unless architecture documentation
 is the requested artifact.
 
-When a repository has explicitly adopted the software architecture docs
-application profile, the skill routes each named profile type to a concise
-one-artifact guide and creates only the requested semantic artifact and required
-navigation. Otherwise it applies the semantic guidance while preserving the
-repository's established architecture-document form and paths. Adjacent
-additions, reductions, or reorganizations remain grounded recommendations until
-the user authorizes them.
+Every Just Enough Architecture Docs corpus must conform to OKF v0.2 and the
+software-architecture-docs application profile. The skill routes each named
+profile type to a concise one-artifact guide and creates only the requested
+semantic artifact and required navigation. Unprofiled architecture material is
+routed to setup for adoption or migration rather than treated as an alternative
+authoring form. Adjacent additions, reductions, or reorganizations remain
+grounded recommendations until the user authorizes them.
 
 The bundled knowledge currently declares Candidate maturity; its concept
 documents are draft and not human-verified. Repository-local accepted authority
-and formats take precedence, and the application profile remains opt-in.
+continues to govern meaning; the application profile governs its required
+representation and permitted variance.
 
 Within the pack, initial adoption and system-to-corpus mapping belong to
 `setup-architecture-docs`; a bounded new, revised, organized, or reviewed
@@ -33,18 +34,19 @@ artifact belongs here; established-corpus health and repair belong to
 This skill is a non-standalone member of the software-architecture pack because
 it loads that pack's software-architecture knowledge.
 
-## Revision 1.1.4
+## Revision 2.0.0
 
-- Preserves established local formats and paths unless the application profile
-  is explicitly adopted.
+- Requires OKF v0.2 and current software-architecture-docs profile conformance
+  before bounded authoring.
+- Routes unprofiled legacy material to setup for adoption or migration.
 - Makes setup, bounded authoring, and established-corpus reconciliation
   ownership explicit.
-- Adds same-pack routing regressions and a fixture-backed artifact-producing
-  execution case.
+- Preserves separate base and profile results, including `unknown`.
 
-This is a patch correction within the existing authority envelope. No migration
-is required; rollback is to `1.1.3`. Behavioral regression and closure audit
-evidence must remain bound to the exact `1.1.4` package and suite identities.
+This is a breaking public-contract change from `1.1.4`. Existing unprofiled
+corpora require setup and migration before authoring; rollback is to `1.1.4`.
+Behavioral regression and closure audit evidence must remain bound to the exact
+`2.0.0` package and suite identities.
 
 ## Install
 

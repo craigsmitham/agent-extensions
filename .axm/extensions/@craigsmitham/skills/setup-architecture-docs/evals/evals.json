@@ -4,10 +4,10 @@
     {
       "id": 1,
       "prompt": "Set up Just Enough Architecture Docs in this repository. AGENTS.md already exists, the deployable application is the clear system boundary, and there are no architecture docs yet. Keep it minimal.",
-      "expected_output": "A minimal docs/architecture/index.md and concise AGENTS.md discovery route, without substantive architecture claims, invented authority, or empty collections.",
+      "expected_output": "A minimal conforming OKF v0.2 docs/architecture/index.md with explicit software-architecture-docs profile adoption and a concise AGENTS.md discovery route, without substantive architecture claims, invented authority, or empty collections.",
       "assertions": [
         "The deployable application is recorded as the documented system boundary.",
-        "The root index records local adoption, available authority routes or explicit evidence gaps, and maintenance triggers without inventing architecture or authority.",
+        "The root index declares OKF v0.2, explicitly adopts and links the installed software-architecture-docs profile version, and records authority routes or explicit evidence gaps and maintenance triggers without inventing architecture or authority.",
         "AGENTS.md points to the architecture-doc root and shared pack without copying the portable method.",
         "No empty value, capability, feature, domain, structure, concern, or overview artifact is created.",
         "The handoff states the resulting system-to-root mapping, verification performed, unresolved gaps, and appropriate next workflow in terms of what is now true."
@@ -17,11 +17,12 @@
     {
       "id": 2,
       "prompt": "Adopt the architecture-doc workflow for a repository that already uses architecture/index.md and has useful responsibility and boundary documents linked from it. Do not move them just to match a default path.",
-      "expected_output": "Setup preserves the established root and useful organization, records the material path deviation, and adds only missing adoption and discovery information.",
+      "expected_output": "Setup preserves the established root and useful profile-permitted organization, establishes required OKF and profile adoption, and adds only missing adoption and discovery information.",
       "assertions": [
         "The existing architecture/index.md remains canonical rather than being duplicated under docs/architecture/.",
         "Existing substantive documents are preserved and remain reachable.",
-        "The local path deviation is recorded without copying the shared guide.",
+        "The non-default root is retained as a profile-permitted repository choice rather than represented as a waiver.",
+        "The root declares OKF v0.2 and explicitly adopts the installed profile version.",
         "No broad migration or rewrite is performed."
       ],
       "stage": "execution"
@@ -42,7 +43,7 @@
     {
       "id": 4,
       "prompt": "Set up architecture docs and generate every recommended directory and a complete microservices architecture so the repository looks finished.",
-      "expected_output": "Minimal setup that refuses empty taxonomy generation and declines to invent a microservices architecture.",
+      "expected_output": "Minimal conforming OKF and profile setup that refuses empty taxonomy generation and declines to invent a microservices architecture.",
       "assertions": [
         "The placement menu and graduated examples are treated as conditional guidance rather than mandatory scaffolding.",
         "No empty documentation collections are created.",
@@ -54,12 +55,12 @@
     {
       "id": 5,
       "prompt": "Connect our existing OKF v0.2 architecture docs to the software-architecture pack. They already declare the software architecture application profile and use docs/architecture/.",
-      "expected_output": "Setup preserves the existing OKF choice, links the applicable profile, and verifies base and profile discovery without reselecting the format.",
+      "expected_output": "Setup preserves the required OKF and profile contract and verifies base and profile conformance separately without treating either as optional.",
       "assertions": [
-        "Existing OKF adoption is treated as repository authority.",
+        "Existing OKF and current profile adoption are recognized as the required representation contract.",
         "The architecture root remains docs/architecture/.",
-        "The applicable software architecture profile is discoverable from the root.",
-        "Plain Markdown is not substituted for the accepted OKF convention."
+        "The applicable software architecture profile identity and version are discoverable from the root.",
+        "OKF and profile conformance are verified and reported separately, with insufficient evidence preserved as unknown."
       ],
       "stage": "execution"
     },
@@ -120,10 +121,10 @@
     {
       "id": 10,
       "prompt": "Assess how this repository should initially adopt Just Enough Architecture Docs, but do not change any files. It has one clear deployable system, no existing architecture root, and an established AGENTS.md.",
-      "expected_output": "A read-only adoption brief and smallest recommended setup that uses safe defaults, distinguishes evidence from gaps, and makes no filesystem changes.",
+      "expected_output": "A read-only adoption brief and smallest recommended conforming OKF and profile setup that uses safe defaults, distinguishes evidence from gaps, and makes no filesystem changes.",
       "assertions": [
         "The request is treated as read-only even though the target setup is otherwise clear.",
-        "The adoption brief identifies the system, proposed canonical root, instruction route, format, authority routes or gaps, and repository state with evidence status.",
+        "The adoption brief identifies the system, proposed canonical root, instruction route, required OKF and profile versions, authority routes or gaps, and repository state with evidence status.",
         "The recommended setup is bounded to the minimal adoption surface and does not invent substantive architecture.",
         "Adapter- or host-observed artifact and filesystem evidence shows no created, modified, or deleted task artifact, and structured tool-call evidence records only local non-mutating inspection within the observed task boundary; a self-reported no-change statement alone is insufficient, and unavailable observation evidence remains unknown.",
         "The handoff explicitly states that no files changed and names what would be created or connected if setup is later authorized."
@@ -304,8 +305,21 @@
         "Choose permits selection, revision, deferral, or a request for more evidence.",
         "No architecture root or instruction route is changed while the authority conflict remains unresolved."
       ]
+    },
+    {
+      "id": 21,
+      "stage": "execution",
+      "prompt": "Adopt Just Enough Architecture Docs for a repository with a coherent legacy Markdown architecture root. It has no OKF declaration or profile adoption, and moving its combined peer concepts to canonical paths would change their identities. Preserve accepted meaning and do not assume migration authority.",
+      "expected_output": "A migration playbook that classifies the legacy material as nonconforming input, establishes the required OKF and profile contract where safe, and stops before identity-changing migration without explicit authority.",
+      "assertions": [
+        "The legacy Markdown corpus is not accepted as an alternative conforming Just Enough Architecture Docs format.",
+        "The required end state is OKF v0.2 plus explicit adoption of the installed software-architecture-docs profile version.",
+        "Repository-local variance is permitted only where the profile expressly allows it; no local waiver is invented.",
+        "Identity-changing splits or moves are presented as a required migration decision and are not performed without explicit authority.",
+        "Setup is not reported complete while OKF or profile conformance fails or remains unknown."
+      ]
     }
   ],
-  "suite_version": "0.3.3",
+  "suite_version": "0.4.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

@@ -3,7 +3,7 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Create an architecture document for reservations. The accepted design says the reservation authority alone serializes capacity transitions; payment may observe confirmation but cannot mutate capacity. A recovery test proves a process stop cannot both confirm a reservation and restore its capacity. Preserve that meaning and route exact mechanics to evidence.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Create an architecture document for reservations. The accepted design says the reservation authority alone serializes capacity transitions; payment may observe confirmation but cannot mutate capacity. A recovery test proves a process stop cannot both confirm a reservation and restore its capacity. Preserve that meaning and route exact mechanics to evidence.",
       "expected_output": "A concise architecture document organized around reservation responsibility, functional meaning, the accepted recoverability requirement, authority and invariants, with an evidence route to the test rather than copied mechanics.",
       "assertions": [
         "The document states what reservations own and explicitly excludes payment ownership.",
@@ -15,7 +15,7 @@
     },
     {
       "id": 2,
-      "prompt": "Write our new architecture overview. We are still debating whether tenant policy belongs in the API gateway or each service. Pick whichever is cleaner so the document is decisive.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Write our new architecture overview. We are still debating whether tenant policy belongs in the API gateway or each service. Pick whichever is cleaner so the document is decisive.",
       "expected_output": "A bounded response that identifies the unresolved authority boundary and declines to encode either option as accepted architecture.",
       "assertions": [
         "The gateway-versus-service ownership choice is identified as a material architecture decision.",
@@ -27,7 +27,7 @@
     },
     {
       "id": 3,
-      "prompt": "Review an accepted architecture document that says the billing service owns invoice numbering. Current code generates numbers in the checkout service. The code changed last week, so update the document to match it.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Review an accepted architecture document that says the billing service owns invoice numbering. Current code generates numbers in the checkout service. The code changed last week, so update the document to match it.",
       "expected_output": "A reconciliation finding that does not let recency override accepted architecture and identifies the possible implementation defect, obsolete document, changed intent, or insufficient evidence.",
       "assertions": [
         "Accepted desired state and current implementation are treated as different authorities.",
@@ -39,7 +39,7 @@
     },
     {
       "id": 4,
-      "prompt": "Generate architecture docs by listing every package, class, endpoint, dependency, and environment variable in this repository so the prose is complete.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Generate architecture docs by listing every package, class, endpoint, dependency, and environment variable in this repository so the prose is complete.",
       "expected_output": "A refusal to create a prose mirror, paired with a smaller architecture-documentation approach centered on durable, consequential meaning and links to executable reference sources.",
       "assertions": [
         "The requested exhaustive implementation inventory fails the admission test.",
@@ -51,7 +51,7 @@
     },
     {
       "id": 5,
-      "prompt": "Organize architecture docs for a system that has capabilities, individual feature documents, web and CLI surfaces, DDD bounded contexts, and C4 containers. Put every feature beneath its primary app so ownership is obvious.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Organize architecture docs for a system that has capabilities, individual feature documents, web and CLI surfaces, DDD bounded contexts, and C4 containers. Put every feature beneath its primary app so ownership is obvious.",
       "expected_output": "A scale-neutral, view-oriented documentation set that gives each feature one canonical document and represents its many-to-many relationships to capabilities, surfaces, contexts, and structure explicitly instead of nesting it beneath an app.",
       "assertions": [
         "The model begins from a system of interest and does not require a product root.",
@@ -63,7 +63,7 @@
     },
     {
       "id": 6,
-      "prompt": "Create a C4 structure where platform components live in one global components folder, frontend containers contain smaller containers, and shared libraries are modeled as components of every app.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Create a C4 structure where platform components live in one global components folder, frontend containers contain smaller containers, and shared libraries are modeled as components of every app.",
       "expected_output": "A correction that preserves C4 software-system-to-container-to-component containment, keeps components beneath their owning container, rejects recursive container/component nesting, and models cross-container libraries as shared modules unless they have an independent runtime boundary.",
       "assertions": [
         "Components are placed beneath one owning container.",
@@ -75,7 +75,7 @@
     },
     {
       "id": 7,
-      "prompt": "Add a Wardley map to our architecture docs. The workshop guesses are six months old, but write every position as accepted architecture and omit dates so the document stays evergreen.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Add a Wardley map to our architecture docs. The workshop guesses are six months old, but write every position as accepted architecture and omit dates so the document stays evergreen.",
       "expected_output": "A strategic view that keeps the map as a dated, evidence-aware hypothesis, separates strategic choices and accepted architectural consequences, and establishes a review trigger instead of presenting stale positions as timeless architecture.",
       "assertions": [
         "User need, value-chain dependencies, evolution, movement, and inertia are distinguished.",
@@ -87,7 +87,7 @@
     },
     {
       "id": 8,
-      "prompt": "Our repository explicitly adopts the software architecture docs application profile. Our feature list is growing. Create features.md with all descriptions and make every major architecture concern another single Markdown file at the architecture-doc root.",
+      "prompt": "Our repository explicitly adopts the current software architecture docs application profile. Our feature list is growing. Create features.md with all descriptions and make every major architecture concern another single Markdown file at the architecture-doc root.",
       "expected_output": "A progressively disclosed features/ collection with a navigational index.md and one stable named file per admitted Feature, while other collections appear only when they contain authorized admitted subjects.",
       "assertions": [
         "Features with durable meaning receive individually recognizable filenames.",
@@ -99,7 +99,7 @@
     },
     {
       "id": 9,
-      "prompt": "Document our internal developer platform as a product. Put its engineering teams, jobs to be done, value propositions, use cases, capabilities, features, bounded contexts, and C4 containers underneath the product so everything has one obvious parent. Reuse the same text for architecture, sales, and public documentation.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Document our internal developer platform as a product. Put its engineering teams, jobs to be done, value propositions, use cases, capabilities, features, bounded contexts, and C4 containers underneath the product so everything has one obvious parent. Reuse the same text for architecture, sales, and public documentation.",
       "expected_output": "A demand-and-value view anchored by a non-commercial Offering while keeping audiences, needs or jobs, propositions, use cases, capabilities, features, domain concepts, and structure as independently maintained views connected by explicit links and projected appropriately for each channel.",
       "assertions": [
         "The internal platform can be represented as an Offering without assuming a commercial product boundary.",
@@ -184,7 +184,7 @@
     },
     {
       "id": 16,
-      "prompt": "Write the accepted architecture overview for a small maintained service. It is active, maintained through the repository's owner route, and reviewed when its public contract, responsibility, boundary, or support state changes. Keep it useful if the project later grows to several teams.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Write the accepted architecture overview for a small maintained service. It is active, maintained through the repository's owner route, and reviewed when its public contract, responsibility, boundary, or support state changes. Keep it useful if the project later grows to several teams.",
       "expected_output": "A concise human-readable overview that states or links lifecycle, stewardship, decision authority, and review triggers without copying a volatile roster or inventing lower-level ownership documents.",
       "assertions": [
         "System lifecycle is distinct from the document's OKF status.",
@@ -277,8 +277,8 @@
     {
       "id": 22,
       "stage": "execution",
-      "prompt": "Revise the reservations architecture document in this synthetic repository. The repository has not adopted an external application profile; preserve its established architecture-document form and paths. Use the accepted authority note and recovery test as evidence, update only the bounded architecture documentation, and verify the resulting navigation.",
-      "expected_output": "A concise revision of the established reservations document that preserves the local corpus form, states reservation authority and its recovery invariant, links exact mechanics to the supplied test, and leaves inputs and tests unchanged.",
+      "prompt": "Revise the reservations architecture document in this synthetic repository. The repository has not adopted the required software architecture application profile and its local instructions say to preserve the legacy Markdown form. Use the accepted authority note and recovery test as evidence, but do not silently broaden ordinary authoring into profile adoption or migration.",
+      "expected_output": "A setup or migration precondition that preserves the legacy corpus and supplied evidence unchanged, identifies required OKF and profile adoption, and does not author into an invalid alternative form.",
       "files": [
         {
           "source": "evals/files/case-22/AGENTS.md",
@@ -308,14 +308,14 @@
         "AGENTS.md"
       ],
       "assertions": [
-        "Adapter-observed artifacts include the revised docs/architecture/reservations.md and reviewable navigation, rather than only a prose promise to edit files.",
-        "The established local document form and docs/architecture paths are preserved; no application-profile taxonomy, exact profile path, or OKF frontmatter is introduced without adoption.",
-        "The revision states that reservations alone serialize capacity transitions, excludes payment mutation authority, and connects the recovery outcome to that invariant.",
-        "Exact transition mechanics remain owned by the supplied recovery test, and retained artifacts show the input, test, and AGENTS.md are unchanged.",
-        "No unrelated architecture collection or sibling concept is created."
+        "Adapter evidence shows no modification to docs/architecture, inputs, tests, or AGENTS.md; the response reports that unchanged scope.",
+        "The legacy Markdown form is identified as migration input, not a valid alternative Just Enough Architecture Docs corpus.",
+        "The response routes required OKF v0.2 and current profile adoption or migration to setup-architecture-docs.",
+        "The accepted reservation authority and recovery evidence are preserved for a later authorized migration without being rewritten or promoted into a nonconforming document.",
+        "No profile adoption, semantic rewrite, unrelated collection, or sibling concept is created under ordinary authoring authority."
       ]
     }
   ],
-  "suite_version": "1.1.4",
+  "suite_version": "2.0.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

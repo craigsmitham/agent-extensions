@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Assessing and reconciling established architecture documentation through evidence-aware repair and explicitly authorized lifecycle changes.",
+    "intended_use": "Assessing and reconciling established OKF v0.2 and software-architecture-docs profile corpora through evidence-aware repair and explicitly authorized lifecycle changes.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic reconciliation, authority, reduction, migration, precondition, and routing cases.",
+    "case_source": "Synthetic reconciliation, authority, reduction, profile conformance, migration, adoption-precondition, and routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -47,7 +47,8 @@
     "routing_boundary": "Expose only catalog names and descriptions until a single selection or required ordered composition is recorded.",
     "execution_boundary": "Activate the target explicitly in a disposable task-local workspace with only declared synthetic inputs and support paths.",
     "support_paths": [
-      ".axm/extensions/@craigsmitham/knowledge/software-architecture/src"
+      ".axm/extensions/@craigsmitham/knowledge/software-architecture/src",
+      ".axm/extensions/@craigsmitham/knowledge/software-architecture/scripts/validate-software-architecture-profile.py"
     ]
   },
   "evidence": {
@@ -74,6 +75,7 @@
     "critical_gates": [
       "No undeclared external mutation",
       "No invented authority, evidence, or approval",
+      "No local waiver from required profile conformance",
       "Routing and execution claims remain distinct"
     ],
     "calibration": "Check one known pass, one known failure, and one unknown before relying on a model grader."
@@ -123,6 +125,11 @@
         "gate": "Routing and execution claims remain distinct",
         "case_id": 12,
         "assertion": "No task side effect occurs before selection."
+      },
+      {
+        "gate": "No local waiver from required profile conformance",
+        "case_id": 14,
+        "assertion": "Neither violation is accepted as a repository-local waiver or harmless format deviation."
       }
     ]
   },

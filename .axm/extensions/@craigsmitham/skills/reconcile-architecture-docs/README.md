@@ -1,7 +1,8 @@
 # Reconcile architecture docs
 
 Assesses and reconciles an established set of software architecture docs
-through evidence-aware repair, pruning, consolidation, and lifecycle decisions.
+through evidence-aware repair, pruning, consolidation, lifecycle decisions,
+and separate OKF v0.2 and software-architecture-docs profile checks.
 
 Use it when architecture docs may be stale, broken, duplicated, contradictory,
 or more costly than useful. Review requests remain read-only; explicit
@@ -13,8 +14,22 @@ otherwise the skill reports a risk-grounded recommendation. Do not use it for
 initial setup, a known new architecture subject, choosing an architecture, or
 generic documentation cleanup.
 
+The workflow may classify unresolved conformance failures without changing
+files, but it never treats a local profile waiver as valid or calls a corpus
+conforming while required evidence fails or remains unknown.
+
 This skill is a non-standalone member of the software-architecture pack because
 it loads that pack's software-architecture knowledge.
+
+## Revision 0.2.0
+
+- Requires separate OKF v0.2 and software-architecture-docs profile results.
+- Classifies profile violations without accepting repository-local waivers.
+- Routes missing adoption to setup while preserving useful material as
+  migration input.
+
+This is a breaking change from `0.1.0`. Unprofiled corpora now require setup
+before ordinary reconciliation; rollback is to `0.1.0`.
 
 ## Install
 

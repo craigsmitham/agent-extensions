@@ -49,7 +49,7 @@ sources:
     title: C4 model
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-22T00:17:07Z
+  at: 2026-08-23T00:23:36Z
 ---
 
 # Software architecture docs application profile for OKF v0.2
@@ -59,7 +59,7 @@ generated:
 | Property | Value |
 | --- | --- |
 | Profile identity | `software-architecture-docs` |
-| Profile version | `0.7.0` |
+| Profile version | `0.8.0` |
 | Base specification | OKF v0.2 |
 | Status | Draft |
 | Applies to | Primary concepts under `value/`, `use-cases/`, `quality/`, `capabilities/`, `features/`, `surfaces/`, `domains/`, and `structure/` |
@@ -91,13 +91,24 @@ complementary; this profile gives them one metadata and documentation contract
 rather than treating them as one hierarchy.[^architecture-docs-organization]
 
 The upstream OKF profile proposal remains open. This document therefore does
-not claim a standardized OKF declaration field, registry, or executable
-descriptor.[^okf-profile-proposal] An architecture documentation set adopts
-this profile only when its root `index.md` contains an explicit sentence such
-as: “This documentation set adopts the `software-architecture-docs` profile at
-the linked profile location, version 0.7.0.” The sentence MUST link the profile
-location. A link without explicit adoption language is informative and MUST
-NOT establish adoption.
+not claim a standardized OKF declaration field or registry.[^okf-profile-proposal]
+A documentation set managed as Just Enough Architecture Docs by the
+software-architecture pack MUST be an OKF v0.2 bundle and MUST adopt this
+profile. Its root `index.md` MUST contain an explicit sentence such as: “This
+documentation set adopts the `software-architecture-docs` profile at the linked
+profile location, version 0.8.0.” The sentence MUST link the profile location.
+A link without explicit adoption language is informative and MUST NOT establish
+adoption. Unprofiled architecture material may be used as migration input, but
+MUST NOT be presented as a conforming Just Enough Architecture Docs corpus.
+
+Just Enough Architecture Docs defines the philosophy, admission test,
+authority model, and maintenance discipline that this profile operationalizes.
+It is not an alternative documentation format. This profile is the normative
+authority for exact OKF types, metadata, paths, containment, corpus-wide rules,
+and permitted representation variance. Supporting foundations and guides
+explain the meaning and application of those requirements; when their
+representation guidance conflicts with this profile, this profile controls and
+the conflicting guidance requires repair.
 
 This version covers:
 
@@ -115,6 +126,13 @@ architecture concepts MAY coexist in the same OKF bundle
 under base OKF rules until a present authoring or consumer need justifies
 additional profile requirements. The profile does not require a document for
 every possible element or prescribe source-code structure.
+
+Open-world does not permit a local waiver from this profile. A local convention
+conforms only when a `MAY` or `SHOULD` rule permits the choice, the concept is an
+open-world addition governed by base OKF without being represented as a
+profile-defined type, or this profile defines an applicable extension point.
+Every other variance from a `MUST` or `MUST NOT` requirement is profile
+nonconformance until a later profile version permits it.
 
 Actor, Goal, Scenario, Extension, Responsibility, Collaborator, User Story,
 Epic, Story Map, CRC Card, Walking Skeleton, Spike, Port, and Adapter are not
@@ -142,6 +160,12 @@ Assess and report two independent results:
 
 A bundle may conform to OKF while failing this profile. A profile-only failure
 MUST NOT be reported as an OKF specification violation.
+
+A conforming Just Enough Architecture Docs corpus MUST pass both results.
+Missing, incomplete, or unavailable evidence produces an `unknown` result for
+the affected layer and MUST NOT be reported as conformance. A review or repair
+workflow may finish after truthfully classifying an unresolved failure or
+unknown, but it MUST NOT describe the corpus itself as conforming.
 
 For profile conformance, the documentation set MUST:
 
@@ -955,7 +979,7 @@ meaning in prose around an ordinary Markdown link:
 | test, measure, objective, evaluation, telemetry, contract, or executable example **provides evidence for** concept | The linked authority owns exact criteria, cases, observations, or current facts that the architecture concept should not copy. |
 
 The phrases above define author-facing meaning, not relationship identifiers.
-Profile version 0.7.0 does not define relationship frontmatter, permitted
+Profile version 0.8.0 does not define relationship frontmatter, permitted
 source and target fields, reciprocity rules, or canonical machine-readable
 direction. No custom relationship field is required for conformance, and a
 producer-defined field MUST NOT be presented as standardized by OKF or by this
@@ -1001,6 +1025,21 @@ independently maintained copies.
 This software architecture knowledge bundle owns the profile. Increment the
 profile version whenever a normative requirement changes and document any
 migration required of conforming documentation sets.
+
+Version 0.8.0 makes this profile the required representation and conformance
+contract for every Just Enough Architecture Docs corpus managed by the
+software-architecture pack. A set migrating from version 0.7.0 MUST:
+
+1. update its explicit root-index adoption sentence to profile version `0.8.0`;
+2. remove or resolve any repository-local waiver from a profile `MUST` or
+   `MUST NOT`, retaining only choices the profile expressly permits; and
+3. report OKF and profile conformance separately, preserving `unknown` when
+   either result lacks sufficient evidence.
+
+No complete taxonomy or new substantive architecture concept is required by
+this migration. An unprofiled architecture collection is migration input, not
+a version 0.7.0 corpus, and requires initial profile adoption through the setup
+workflow before ordinary profile-version migration applies.
 
 Version 0.7.0 makes profile adoption explicit, requires each C4 Container to
 identify exactly one containing C4 Software System, and states the source
@@ -1069,9 +1108,23 @@ rather than maintaining compatibility copies.
 
 ## Validation
 
-No executable profile validator is currently defined. Until one exists,
-profile validation is manual and MUST name the rules examined. An applicable
-OKF v0.2 validator SHOULD establish the separate base-conformance result.
+The extension-relative
+`scripts/validate-software-architecture-profile.py` checker validates the
+mechanically decidable profile rules for adoption, common metadata, canonical
+paths, collection indexes, and reachability. Run it from the installed
+software-architecture knowledge package:
+
+```bash
+python3 scripts/validate-software-architecture-profile.py <architecture-root>
+```
+
+The human-readable profile remains normative. Executable validation is a
+partial representation of it and MUST NOT be treated as complete profile
+conformance. Profile validation MUST combine the structural result with a
+manual semantic review that names the rules examined. An applicable OKF v0.2
+validator MUST establish the separate base-conformance result. If either check
+cannot run or cannot decide an applicable rule, report that result as
+`unknown`, not pass.
 
 Profile validation MUST check:
 
@@ -1124,7 +1177,7 @@ Profile validation MUST check:
 Profile validation SHOULD also check that consequential cross-view links state
 an author-facing relationship meaning defined above. Relationship frontmatter,
 identifiers, machine-readable source and target constraints, direction, and
-reciprocity remain outside profile validation in version 0.7.0.
+reciprocity remain outside profile validation in version 0.8.0.
 
 The [minimal conforming architecture corpus](minimal-conforming-architecture-corpus.md)
 provides a complete synthetic example and a dated manual conformance report

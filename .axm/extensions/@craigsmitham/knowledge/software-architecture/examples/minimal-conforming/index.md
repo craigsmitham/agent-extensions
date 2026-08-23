@@ -5,7 +5,7 @@ okf_version: "0.2"
 
 This documentation set adopts the
 [software-architecture-docs profile](../../src/architecture-documentation/software-architecture-application-profile.md)
-version 0.7.0.
+version 0.8.0.
 
 - [Confirm a reservation](use-cases/confirm-reservation.md) - How a requester
   turns an eligible capacity hold into a confirmed reservation.

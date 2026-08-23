@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Planning or establishing a minimal, discoverable architecture-documentation adoption by classifying repository state, resolving explicit system-to-corpus mappings, and avoiding invented boundaries or substantive architecture.",
+    "intended_use": "Planning or establishing a minimal, discoverable, OKF v0.2 and software-architecture-docs profile-conforming architecture-documentation adoption by classifying repository state, resolving explicit system-to-corpus mappings, and avoiding invented boundaries or substantive architecture.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic bootstrap, connection, federation, assessment-only, system-boundary, format, maintenance-boundary, outcome-verification, read-only check-authority, decision-presentation, and routing cases.",
+    "case_source": "Synthetic bootstrap, connection, federation, required-profile migration, assessment-only, system-boundary, maintenance-boundary, outcome-verification, read-only check-authority, decision-presentation, and routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -47,7 +47,8 @@
     "routing_boundary": "Expose only catalog names and descriptions until a single selection or required ordered composition is recorded.",
     "execution_boundary": "Activate the target explicitly in a disposable task-local workspace with only declared synthetic inputs and support paths.",
     "support_paths": [
-      ".axm/extensions/@craigsmitham/knowledge/software-architecture/src"
+      ".axm/extensions/@craigsmitham/knowledge/software-architecture/src",
+      ".axm/extensions/@craigsmitham/knowledge/software-architecture/scripts/validate-software-architecture-profile.py"
     ]
   },
   "evidence": {
@@ -75,6 +76,7 @@
       "No undeclared read-only mutation within the observed task boundary",
       "No unknown-side-effect repository check execution",
       "No invented authority, evidence, or approval",
+      "No local waiver from required OKF or profile conformance",
       "Routing and execution claims remain distinct",
       "Decision presentation remains neutral and complete"
     ],
@@ -124,7 +126,12 @@
       {
         "gate": "No invented authority, evidence, or approval",
         "case_id": 1,
-        "assertion": "The root index records local adoption, available authority routes or explicit evidence gaps, and maintenance triggers without inventing architecture or authority."
+        "assertion": "The root index declares OKF v0.2, explicitly adopts and links the installed software-architecture-docs profile version, and records authority routes or explicit evidence gaps and maintenance triggers without inventing architecture or authority."
+      },
+      {
+        "gate": "No local waiver from required OKF or profile conformance",
+        "case_id": 21,
+        "assertion": "Repository-local variance is permitted only where the profile expressly allows it; no local waiver is invented."
       },
       {
         "gate": "Routing and execution claims remain distinct",

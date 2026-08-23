@@ -23,7 +23,7 @@
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic architecture-authoring, authority, organization, lifecycle, profile-adoption, same-pack routing, refusal, and artifact-producing cases.",
+    "case_source": "Synthetic profile-conforming architecture-authoring, authority, organization, lifecycle, required-adoption, same-pack routing, refusal, and migration-precondition cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -47,7 +47,8 @@
     "routing_boundary": "Expose only catalog names and descriptions until a single selection or required ordered composition is recorded.",
     "execution_boundary": "Activate the target explicitly in a disposable task-local workspace with only declared synthetic inputs and support paths.",
     "support_paths": [
-      ".axm/extensions/@craigsmitham/knowledge/software-architecture/src"
+      ".axm/extensions/@craigsmitham/knowledge/software-architecture/src",
+      ".axm/extensions/@craigsmitham/knowledge/software-architecture/scripts/validate-software-architecture-profile.py"
     ]
   },
   "evidence": {
@@ -127,7 +128,7 @@
       {
         "gate": "No invented authority, evidence, or approval",
         "case_id": 22,
-        "assertion": "The established local document form and docs/architecture paths are preserved; no application-profile taxonomy, exact profile path, or OKF frontmatter is introduced without adoption."
+        "assertion": "The legacy Markdown form is identified as migration input, not a valid alternative Just Enough Architecture Docs corpus."
       }
     ]
   },

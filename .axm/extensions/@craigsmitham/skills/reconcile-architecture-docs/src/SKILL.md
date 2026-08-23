@@ -1,16 +1,20 @@
 ---
 name: reconcile-architecture-docs
-description: Assesses and reconciles established repository software architecture docs through evidence-aware repair and explicitly authorized semantic lifecycle changes. Use when asked to reconcile, maintain, review, refresh, repair, clean up, prune, or assess stale, broken, duplicated, or contradictory architecture documentation. Not for initial setup, authoring a known new architecture subject, choosing an architecture, generic documentation work, or implementing the system.
+description: Assesses and reconciles established OKF v0.2 software architecture docs against the required software-architecture-docs profile through evidence-aware repair and explicitly authorized semantic lifecycle changes. Use when asked to reconcile, maintain, review, refresh, repair, clean up, prune, or assess stale, broken, duplicated, contradictory, or nonconforming architecture documentation. Not for initial setup or profile adoption, authoring a known new architecture subject, choosing an architecture, generic documentation work, or implementing the system.
 ---
 # Reconcile architecture docs
 
 Reconcile established architecture docs so they remain coherent, discoverable,
 current enough to trust, and small enough to justify their continuing
-maintenance.
+maintenance while conforming to OKF v0.2 and the required
+`software-architecture-docs` profile.
 
 This skill is a non-standalone member of the software-architecture pack. From
 the active AXM scope root, begin with
 `.axm/extensions/@craigsmitham/knowledge/software-architecture/src/architecture-documentation/just-enough-architecture-docs.md`.
+Always open
+`architecture-documentation/software-architecture-application-profile.md` for
+the current required identity, conformance, and validation contract.
 Open `guides/organizing-an-architecture-docs-corpus.md` when maintaining
 navigation or collection structure, and open only the additional architecture
 concept needed to evaluate a material claim.
@@ -38,16 +42,21 @@ has not accepted one.
    recommend them. State the mode before acting. Do not broaden review into
    remediation.
 2. **Resolve the established scope.** Read repository instructions, the
-   architecture root and its navigation, local adoption choices, applicable
-   formats or profiles, and the accepted sources that govern the selected
-   system. If no architecture-doc setup exists, report that precondition rather
-   than silently initializing one.
+   architecture root and its navigation, the required profile identity and
+   version, profile-permitted local choices, and the accepted sources that
+   govern the selected system. If no architecture-doc setup or explicit current
+   profile adoption exists, report the setup or migration precondition rather
+   than silently initializing one or accepting an alternate format.
 3. **Inventory proportionately.** Within the requested system or documentation
    boundary, trace maintained subjects from the root; inspect inbound and
    outbound relationships, lifecycle or freshness metadata, and the executable
-   or live evidence needed to check material claims. Use recent changes only to
-   focus investigation; recency does not decide authority.
+   or live evidence needed to check material claims. Establish separate OKF
+   v0.2 and profile results, preserving `unknown` where evidence cannot decide.
+   Use recent changes only to focus investigation; recency does not decide
+   authority.
 4. **Assess each maintained subject.** Check whether:
+   - its type, metadata, path, containment, and navigation satisfy the required
+     profile without a repository-local waiver;
    - its substantive claims still pass the admission test;
    - accepted desired state remains distinct from proposals, delivery state,
      current implementation, and observed operation;
@@ -71,6 +80,7 @@ has not accepted one.
    - the document still repays its comprehension, discovery, and maintenance
      cost.
 5. **Classify before changing.** Classify each issue as one of:
+   - base OKF or profile nonconformance;
    - mechanical integrity repair;
    - accepted semantic maintenance;
    - consolidation, deprecation, or removal;
@@ -99,8 +109,10 @@ has not accepted one.
    cross-skill invocation to finish the current reconciliation scope.
 8. **Verify.** Reapply the admission test to changed claims, confirm every
    maintained subject remains reachable from the root, check canonical homes
-   and evidence routes, run applicable docs or profile checks owned by this
-   pack, and inspect the diff for silent decisions, copied mechanics, and
+   and evidence routes, and run the base OKF and installed profile checks owned
+   by their established authorities. Report their results independently and
+   retain `unknown` when a check is unavailable or evidence is insufficient.
+   Inspect the diff for silent decisions, copied mechanics, local waivers, and
    collateral changes.
 9. **Handoff.** State the system, scope, and mode; subjects reviewed; evidence
    checked; repairs and lifecycle changes made; retained positive practices;
@@ -110,6 +122,9 @@ has not accepted one.
    smallest safe change, and required authority.
 
 Do not change source code, configuration, runtime systems, proposals, or
-external records unless separately requested. Reconciliation succeeds when
-every identified issue in scope is either responsibly repaired or explicitly
-classified without turning uncertainty into accepted architecture.
+external records unless separately requested. The reconciliation workflow may
+complete when every identified issue in scope is responsibly repaired or
+explicitly classified without turning uncertainty into accepted architecture.
+The corpus itself is conforming only when both OKF v0.2 and profile results
+pass; a classified failure or `unknown` must remain visible and must not be
+described as successful corpus reconciliation.

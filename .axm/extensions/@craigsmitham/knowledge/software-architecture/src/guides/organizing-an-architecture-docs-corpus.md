@@ -11,7 +11,7 @@ sources:
   - id: software-architecture-docs-profile
     resource: ../architecture-documentation/software-architecture-application-profile.md
     title: Software architecture docs application profile for OKF v0.2
-generated: { by: codex/gpt-5.6, at: 2026-08-21T23:53:22Z }
+generated: { by: codex/gpt-5.6, at: 2026-08-23T00:23:36Z }
 ---
 
 # Organizing an architecture docs corpus
@@ -47,10 +47,11 @@ not create empty collections to anticipate future content.
    relationship one boundary document while each concept retains its positive
    definition. Express many-to-many relationships with meaningful prose links
    instead of duplicate files or invented folder containment.
-6. Apply the [software architecture docs application
-   profile](../architecture-documentation/software-architecture-application-profile.md)
-   when the corpus adopts OKF. Its paths and containment rules are normative
-   for governed concepts.[^software-architecture-docs-profile]
+6. Represent the corpus as OKF v0.2 and explicitly adopt the [software
+   architecture docs application
+   profile](../architecture-documentation/software-architecture-application-profile.md).
+   Its types, metadata, paths, containment, validation rules, and permitted
+   representation variance are normative.[^software-architecture-docs-profile]
 7. Add, move, or merge one subject at a time. Update the relevant indexes and
    inbound links in the same change.
 
@@ -256,7 +257,8 @@ overview, then choose the architecture question relevant to your change.
   triggers are discoverable without duplicating volatile rosters.
 - Recurring comparisons have one boundary authority while each concept retains
   its positive definition.
-- Repository-specific deviations are explicit and preserve reader discovery.
+- Repository-specific choices stay within profile-permitted variance and
+  preserve reader discovery.
 
 ## Related
 
@@ -268,4 +270,4 @@ overview, then choose the architecture question relevant to your change.
     durable claims warrant a maintained place in the corpus.
 [^software-architecture-docs-profile]: The application profile makes the
     governed concept types, paths, metadata, and containment rules normative
-    for adopting OKF corpora.
+    for every Just Enough Architecture Docs corpus.

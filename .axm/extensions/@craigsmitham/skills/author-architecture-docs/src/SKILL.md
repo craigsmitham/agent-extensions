@@ -1,6 +1,6 @@
 ---
 name: author-architecture-docs
-description: Creates, revises, organizes, and reviews explicitly requested repository software architecture docs as a concise semantic delta over repository evidence. Use for architecture overviews and documentation structure; offerings, audiences, needs, jobs to be done, value propositions, use cases, product quality requirements, capabilities, features, surfaces, DDD bounded contexts, C4 systems/containers/components, Wardley or strategic evolution views; and system or subsystem responsibility docs. Not for initial architecture-doc setup, maintaining or assessing all established architecture docs, choosing an architecture, recording an unaccepted proposal, implementing the system, or writing product research, roadmaps, pricing, sales, or marketing content when architecture documentation is not the requested artifact.
+description: Creates, revises, organizes, and reviews explicitly requested repository software architecture docs as a concise semantic delta within a required OKF v0.2 and software-architecture-docs profile corpus. Use for architecture overviews and documentation structure; offerings, audiences, needs, jobs to be done, value propositions, use cases, product quality requirements, capabilities, features, surfaces, DDD bounded contexts, C4 systems/containers/components, Wardley or strategic evolution views; and system or subsystem responsibility docs. Not for initial architecture-doc setup or profile adoption, maintaining or assessing all established architecture docs, choosing an architecture, recording an unaccepted proposal, implementing the system, or writing product research, roadmaps, pricing, sales, or marketing content when architecture documentation is not the requested artifact.
 ---
 
 # Author architecture docs
@@ -16,16 +16,25 @@ relevant foundation. Use the corpus-organization guide only when the requested
 artifact is the multi-view corpus itself; setup and ongoing maintenance belong
 to their dedicated skills. The bundle root is
 `.axm/extensions/@craigsmitham/knowledge/software-architecture/src/`.
+Always read
+`architecture-documentation/software-architecture-application-profile.md`
+for its current identity, conformance, corpus-wide, path, and validation rules;
+focused guides supply the narrower semantic procedure.
 
 The bundle currently labels itself Candidate, and its concept documents remain
-draft and not human-verified. Treat it as working guidance, disclose that
-limitation when it materially affects a claim, and let accepted repository-local
-architecture authority and formats prevail. Its application profile is opt-in:
-exact concept types, paths, navigation, and profile metadata apply only when the
-repository explicitly adopts the profile or the caller explicitly requests an
-artifact within an already adopted profile. Initial profile adoption belongs to
-setup, not to an ordinary authoring task. Without adoption, use the semantic
-guidance while preserving the repository's established document form and paths.
+draft and not human-verified. That maturity label limits confidence in its
+semantic guidance; it does not make the installed profile's normative
+representation rules optional. Let accepted repository-local architecture
+authority govern meaning, and let the installed profile govern representation.
+Every Just Enough Architecture Docs corpus must conform to OKF v0.2 and the
+installed application profile; exact concept types, paths, navigation,
+metadata, containment, and permitted variance are therefore mandatory. A local
+instruction to retain another form cannot waive that requirement. Initial
+adoption or migration from unprofiled architecture material belongs to setup,
+not to an ordinary authoring task; preserve such material unchanged and return
+that setup precondition instead of drafting a nonconforming replacement. Name
+and route both required steps: adoption or migration to OKF v0.2, and adoption
+or migration to the current `software-architecture-docs` profile.
 
 ## Same-pack workflow boundary
 
@@ -78,7 +87,15 @@ shared pack membership alone does not authorize composition.
    review-only work. Read repository instructions, the existing architecture
    docs and their navigation, accepted decisions or requirements, and the
    executable or live sources needed to check material claims. Repository-local
-   authority and required architecture formats take precedence.
+   authority governs accepted meaning, while the installed profile governs its
+   representation. If the corpus is not OKF v0.2 or does not explicitly adopt
+   the current profile, preserve the material and route both required adoption
+   or migration steps to `setup-architecture-docs`; do not author into an
+   invalid alternative form.
+   Route established corpus-wide profile violations to
+   `reconcile-architecture-docs`. A validation result that is unavailable or
+   cannot decide remains `unknown` in the handoff rather than becoming a
+   different workflow or an inferred pass.
 2. **Confirm accepted meaning.** Architecture prose describes accepted desired
    state. Keep an unaccepted option, proposed decision, investigation, or
    delivery status in its own lifecycle. If a material responsibility,
@@ -88,12 +105,11 @@ shared pack membership alone does not authorize composition.
    the outcome or policy the subject owns, its exclusions, and stakeholders.
    Distinguish offerings and value, capabilities, features, surfaces, domain
    contexts, and C4 elements; connect them with explicit relationships instead
-   of one false hierarchy. When an adopted application profile governs the
-   corpus and the request names one of its types, follow its focused guide and
-   create exactly the requested semantic artifact and required navigation.
-   Otherwise preserve the repository's established architecture-document form
-   and path while applying the relevant semantic guidance. If an adjacent
-   concept independently passes the
+   of one false hierarchy. Follow the focused guide and normative profile for a
+   governed type, and create exactly the requested semantic artifact and
+   required navigation. For an open-world addition, follow base OKF and do not
+   present a local type as profile-defined. If an adjacent concept independently
+   passes the
    admission test, recommend it with rationale; do not create it without the
    user's explicit authoring intent. Do not create a taxonomy for symmetry.
 4. **Apply the admission test.** Include a claim only when it is accepted,
@@ -132,10 +148,9 @@ shared pack membership alone does not authorize composition.
    obsolete, the evidence is insufficient, or accepted intent changed. Do not
    let the newest artifact silently win. Stop when resolution requires a new
    product or architecture decision.
-10. **Organize for progressive disclosure.** Preserve an established local
-   organization unless the caller authorizes a bounded reorganization. In a
-   corpus that explicitly adopts the application profile, keep `index.md`
-   navigational and give every concept a stable named file from first
+10. **Organize for progressive disclosure.** Preserve profile-permitted local
+   choices unless the caller authorizes a bounded reorganization. Keep
+   `index.md` navigational and give every concept a stable named file from first
    admission. The first use case, for example, creates
    `use-cases/index.md` and `use-cases/<named-use-case>.md`, never
    `use-cases.md`. Omit empty collections. A same-named directory may
@@ -146,8 +161,13 @@ shared pack membership alone does not authorize composition.
    documentation and required navigation while preserving unrelated work. For
    review-only requests, return findings without edits. Reapply the admission
    test, verify claims and links against their authorities, give time-sensitive
-   strategic hypotheses a review boundary, run available docs checks, and
-   inspect the diff for copied mechanics or collateral changes.
+   strategic hypotheses a review boundary, establish separate OKF v0.2 and
+   profile results, and inspect the diff for copied mechanics or collateral
+   changes. When authoring is stopped on a setup or migration precondition,
+   verify that the legacy material and its evidence were not modified and
+   report the unchanged scope. Treat unavailable or insufficient validation
+   evidence as `unknown`; never claim the resulting document or corpus conforms
+   on that basis.
 12. **Handoff.** State the subject and accepted meaning preserved, evidence
    checked, files changed or reviewed, and any unresolved decision, evidence
    gap, or reconciliation owner. For each recommended addition, reduction, or

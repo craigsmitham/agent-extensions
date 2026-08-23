@@ -22,12 +22,12 @@ quality catalog or target.
 
 The routing matrix distinguishes initial setup, bounded authoring, established
 corpus reconciliation, and an ambiguous request using only the three same-pack
-skill discovery surfaces. A fixture-backed execution case verifies that an
-unadopted application profile does not replace established local paths or form,
-and that the requested document change is present in adapter-observed artifacts.
+skill discovery surfaces. A fixture-backed execution case verifies that legacy
+unprofiled Markdown is preserved as migration input, routes required adoption
+to setup, and has no adapter-observed modification.
 
 The suite passes when the skill produces the smallest useful architecture
 artifact, preserves authority boundaries, routes exact mechanics to their
-owners, preserves local form unless a profile was explicitly adopted, and
+owners, requires OKF and profile conformance before authoring, and
 exposes rather than resolves missing architecture decisions or unauthorized
 corpus changes.

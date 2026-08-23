@@ -1,6 +1,6 @@
 ---
 name: setup-architecture-docs
-description: Plans or establishes the smallest discoverable architecture-documentation adoption for one or more repository systems by classifying repository state, resolving system-to-corpus mappings, connecting local authority, and verifying contributor discovery. Use when asked to set up, adopt, initialize, plan, or connect architecture docs or Just Enough Architecture Docs. Not for choosing an architecture, authoring substantive architecture meaning, assessing or repairing an established corpus, or maintaining existing architecture docs.
+description: Plans or establishes the smallest discoverable, OKF v0.2 and software-architecture-docs profile-conforming architecture-documentation adoption for one or more repository systems by classifying repository state, resolving system-to-corpus mappings, connecting local authority, and verifying contributor discovery. Use when asked to set up, adopt, initialize, migrate, plan, or connect architecture docs or Just Enough Architecture Docs. Not for choosing an architecture, authoring substantive architecture meaning, assessing or repairing an established conforming corpus, or maintaining existing architecture docs.
 ---
 
 # Set up architecture docs
@@ -13,12 +13,16 @@ Setup succeeds when a future contributor or agent can discover which system or
 bounded authority each corpus describes, reach its one canonical root, find the
 accepted architecture subjects and local authority routes, distinguish gaps and
 proposals from accepted meaning, and select the appropriate authoring or
-maintenance workflow. Files are evidence of that outcome, not the outcome by
-themselves.
+maintenance workflow. Every established corpus must also conform to OKF v0.2
+and the `software-architecture-docs` application profile. Files are evidence of
+that outcome, not the outcome by themselves.
 
 This skill is a non-standalone member of the software-architecture pack. From
 the active AXM scope root, begin with
 `.axm/extensions/@craigsmitham/knowledge/software-architecture/src/guides/organizing-an-architecture-docs-corpus.md`.
+Always open
+`architecture-documentation/software-architecture-application-profile.md`
+because it defines the required adoption and conformance contract.
 Open `architecture-documentation/just-enough-architecture-docs.md` when the
 adoption boundary, authority model, or admission test needs explanation.
 
@@ -62,10 +66,11 @@ Build one working adoption brief with these fields:
 - each documented system or bounded authority and its canonical corpus root;
 - existing accepted architecture subjects, proposals, and evidence routes;
 - the canonical persistent repository instruction authority;
-- the documentation format or required profile;
+- required OKF v0.2 and `software-architecture-docs` profile version and
+  current conformance state;
 - system lifecycle or support-state authority;
 - maintenance responsibility and architecture decision-authority routes;
-- local deviations and documentation review triggers; and
+- profile-permitted local choices and documentation review triggers; and
 - requested mode, expected effects, and repository-state playbook.
 
 Classify each field as **established**, **safely defaultable**, **materially
@@ -88,6 +93,7 @@ repository through one creation sequence.
 | **Bootstrap** | One system boundary is clear and no architecture corpus exists | Create the smallest useful root and instruction route |
 | **Connect** | Useful accepted material exists but no coherent setup or canonical root connects it | Establish one canonical root and link the material in place |
 | **Federate** | Repository authority already defines more than one system-to-root mapping | Connect each system to exactly one corpus and expose the mappings without inventing a platform corpus |
+| **Migrate** | A coherent architecture corpus exists but lacks required OKF or profile adoption or violates the adopted profile | Preserve its authority, establish the required contract, and perform only authorized mechanical migration |
 | **Recommend** | The request is read-only or a material adoption choice remains unresolved | Return the adoption brief, smallest viable setup, effects, and unresolved decisions without mutation |
 | **Defer to maintenance** | A coherent setup already exists but is damaged, stale, duplicated, or contradictory | Preserve it and route the bounded maintenance work |
 
@@ -97,12 +103,14 @@ accepted authority maps each root to a distinct documented system.
 
 ## Resolve choices proportionately
 
-Preserve an established coherent root, organization, format, and instruction
-route. For one system with no stronger convention, `docs/architecture/` and
-plain Markdown are safe defaults. The standard event-driven review triggers in
-this workflow are also safe defaults. Do not create a repository-specific
-format, profile, instruction authority, or multi-system layout merely for
-symmetry or automation.
+Preserve an established coherent root, profile-permitted organization, and
+instruction route. For one system with no stronger root convention,
+`docs/architecture/` is the safe default. OKF v0.2 and the installed
+`software-architecture-docs` profile are required rather than repository
+choices. The standard event-driven review triggers in this workflow are also
+safe defaults. Do not create a competing repository-specific format, profile,
+instruction authority, or multi-system layout merely for symmetry or
+automation.
 
 Missing accepted lifecycle terminology, stewardship, or decision authority is
 normally non-blocking: record the available stable route or state the semantic
@@ -115,7 +123,8 @@ plausible, including:
 - platform-wide versus per-product or per-system corpora;
 - competing canonical roots;
 - conflicting persistent instruction authorities; or
-- an unresolved required format or application profile.
+- a profile migration that would change concept identity, classification, or
+  accepted semantic ownership without explicit authority.
 
 Present a material decision in this order: the decision and proposed status;
 governing evidence, criteria, and constraints; every viable option in parallel
@@ -150,17 +159,28 @@ accepted content passes the admission test.
 
 For **Connect**, preserve useful existing files and local organization. Link
 accepted material from the canonical root without moving, renaming, or
-rewriting it merely to match the portable guide. Treat material as accepted
-architecture only when repository authority establishes that status; preserve
-proposals, delivery records, and observed evidence in their own lifecycles.
-Record a deliberate material path, authority, or format deviation instead of
-silently normalizing it.
+rewriting it merely for cosmetic consistency. Treat material as an admitted
+profile concept only when repository authority establishes that status and its
+representation conforms; otherwise preserve it as linked migration input or an
+external authority. Preserve proposals, delivery records, and observed
+evidence in their own lifecycles. A profile violation is nonconformance, not a
+local format deviation.
 
 For **Federate**, use only an accepted system-to-root mapping. Give each system
 one canonical corpus root and its own minimal adoption surface. Add one concise
 repository instruction route that exposes every mapping and the shared method.
 Do not create a platform corpus, cross-system desired-state claim, or common
 taxonomy unless separately accepted and authorized.
+
+For **Migrate**, preserve the established system boundary, corpus root,
+accepted meaning, and external authority routes. Add the required OKF and
+profile declaration, then repair only unambiguous metadata, navigation, and
+profile placement within the authorized setup surface. Stop before any path,
+classification, split, merger, or ownership change that would alter concept
+identity or accepted meaning unless the user explicitly authorized that
+migration class and scope. Until both conformance results pass, describe the
+material as a corpus requiring migration rather than a valid alternative
+adoption.
 
 For **Recommend**, make no changes. Return the evidence-status adoption brief,
 the smallest viable file effects, safe defaults, non-blocking gaps, and every
@@ -176,10 +196,13 @@ maintenance workflow.
 
 Create or revise each selected root `index.md` so it:
 
+- declares `okf_version: "0.2"` in root frontmatter;
 - names the documented system or bounded authority;
-- records adoption of Just Enough Architecture Docs and the canonical local
-  root;
-- records the accepted format or profile and material local deviations;
+- explicitly adopts and links the installed `software-architecture-docs`
+  profile identity and version as the representation of Just Enough
+  Architecture Docs, and records the canonical local root;
+- records any profile-permitted local choices without presenting a profile
+  violation as a deviation or waiver;
 - links every existing admitted architecture subject and states what each
   external authority route establishes;
 - links accepted lifecycle, stewardship, and decision routes or names their
@@ -218,8 +241,11 @@ existence:
   discoverable or truthfully identified as semantic gaps;
 - no empty taxonomy, speculative overview, copied volatile inventory, inferred
   desired state, or competing setup was created;
-- any declared OKF use is consistent with the installed application profile;
-  and
+- the root explicitly adopts the installed profile version and every admitted
+  concept conforms to its applicable structural and semantic rules;
+- OKF v0.2 and profile conformance are checked and reported separately, with
+  unavailable or insufficient evidence preserved as `unknown` rather than
+  pass; and
 - a read-only run made no changes.
 
 Before running a documentation, link, profile, or repository check, establish
@@ -230,6 +256,12 @@ adapter-observed artifact, filesystem, tool-call, and external-state evidence
 when available; a narrative claim that nothing changed is not evidence. When an
 observation channel is unavailable, report the limitation and do not claim more
 than the retained evidence establishes.
+
+The pack-owned structural profile checker is
+`.axm/extensions/@craigsmitham/knowledge/software-architecture/scripts/validate-software-architecture-profile.py`.
+Run it only after establishing its installed identity, dependency availability,
+and non-mutating behavior. It does not replace the separate base OKF result or
+the named manual semantic review required by the profile.
 
 In mutating mode, run only checks whose effects fit the authorized paths and
 compare the resulting state with the intended adoption surface. Inspect the
@@ -243,9 +275,11 @@ the affected outcome is verified.
 Lead with the achieved or proposed repository state. Then report, in this
 order:
 
-1. each documented system, canonical root, format, and instruction route;
+1. each documented system, canonical root, required OKF and profile versions,
+   and instruction route;
 2. existing material preserved or connected and the authority it retains;
-3. accepted local choices, safe defaults, and unresolved semantic gaps;
+3. profile-permitted local choices, safe defaults, and unresolved semantic or
+   migration gaps;
 4. files or effects changed, including an explicit no-change statement for a
    read-only or blocked run;
 5. verification performed and any limitation; and
@@ -266,4 +300,6 @@ Do not choose an architecture, create substantive desired-state claims from
 implementation inference, configure unrelated tools, or modify source code,
 runtime systems, proposals, and external records. Setup is complete only when
 the requested adoption state is discoverable, authority-aware, proportionate,
-and verified.
+and verified as conforming to both OKF v0.2 and the installed
+`software-architecture-docs` profile. A completed read-only assessment may
+instead establish that setup or migration remains required.

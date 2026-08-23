@@ -3,7 +3,7 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Review the architecture docs for the checkout system and report maintenance problems. Do not change any files.",
+      "prompt": "The checkout architecture corpus adopts the current software-architecture-docs profile. Review it and report maintenance problems. Do not change any files.",
       "expected_output": "A read-only, scoped maintenance assessment with findings, positive practices, evidence checked, and unresolved decisions clearly separated.",
       "assertions": [
         "The skill states and preserves review-only mode.",
@@ -15,7 +15,7 @@
     },
     {
       "id": 2,
-      "prompt": "Maintain our architecture docs. The root index omits two existing accepted subjects, one relative link is broken after a file move, and the replacement paths are unambiguous.",
+      "prompt": "Our architecture corpus adopts the current software-architecture-docs profile. Maintain it: the root index omits two existing accepted subjects, one relative link is broken after a file move, and the replacement paths are unambiguous.",
       "expected_output": "Bounded mechanical maintenance that repairs navigation and the broken link, then verifies reachability without rewriting substantive meaning.",
       "assertions": [
         "The two existing subjects become reachable from the root.",
@@ -27,7 +27,7 @@
     },
     {
       "id": 3,
-      "prompt": "Refresh the architecture docs. They say billing owns invoice numbering, but checkout has generated numbers since last week's refactor, so update the docs to match the newer code.",
+      "prompt": "Our architecture corpus adopts the current software-architecture-docs profile. Refresh it: the docs say billing owns invoice numbering, but checkout has generated numbers since last week's refactor, so update the docs to match the newer code.",
       "expected_output": "An authority-disagreement finding that does not let code recency override accepted desired state and names the evidence or acceptance needed to resolve it.",
       "assertions": [
         "Accepted desired state and current implementation are treated as different authorities.",
@@ -39,7 +39,7 @@
     },
     {
       "id": 4,
-      "prompt": "Clean up architecture docs that copy every endpoint, environment variable, and package dependency from the codebase. Preserve the accepted trust boundary and recovery responsibility they were trying to explain.",
+      "prompt": "Our architecture corpus adopts the current software-architecture-docs profile. Clean up documents that copy every endpoint, environment variable, and package dependency from the codebase. Preserve the accepted trust boundary and recovery responsibility they were trying to explain.",
       "expected_output": "Maintenance removes or replaces copied mechanics with evidence routes while retaining the admitted trust and recovery meaning.",
       "assertions": [
         "Exact endpoints, environment variables, and dependency inventories remain with executable authorities.",
@@ -51,7 +51,7 @@
     },
     {
       "id": 5,
-      "prompt": "Prune two architecture documents that both claim to own customer identity. Their wording conflicts and no accepted decision establishes which one is canonical.",
+      "prompt": "Our architecture corpus adopts the current software-architecture-docs profile. Prune two documents that both claim to own customer identity. Their wording conflicts and no accepted decision establishes which one is canonical.",
       "expected_output": "A maintenance finding that exposes competing ownership and requests the missing authority instead of arbitrarily merging or deleting either document.",
       "assertions": [
         "The duplicate canonical ownership is identified.",
@@ -63,7 +63,7 @@
     },
     {
       "id": 6,
-      "prompt": "Maintain our strategic architecture docs. A Wardley map presents workshop guesses from nine months ago as timeless facts and has no evidence dates or review trigger.",
+      "prompt": "Our architecture corpus adopts the current software-architecture-docs profile. Maintain its strategic docs. A Wardley map presents workshop guesses from nine months ago as timeless facts and has no evidence dates or review trigger.",
       "expected_output": "Maintenance restores hypothesis and freshness boundaries, separates accepted consequences from map positions, and records an evidence-aware review trigger.",
       "assertions": [
         "Unverified map positions are not retained as timeless accepted architecture.",
@@ -87,7 +87,7 @@
     },
     {
       "id": 8,
-      "prompt": "While maintaining the existing payment architecture docs, create a new accepted architecture subject for fraud scoring that the team approved yesterday.",
+      "prompt": "The existing payment architecture corpus adopts the current software-architecture-docs profile. While maintaining it, create a new accepted architecture subject for fraud scoring that the team approved yesterday.",
       "expected_output": "The current maintenance scope is completed where possible, while the known new fraud-scoring subject is separated as author-architecture-docs work.",
       "assertions": [
         "Existing payment-doc maintenance is not abandoned.",
@@ -99,7 +99,7 @@
     },
     {
       "id": 9,
-      "prompt": "Maintain the architecture docs. One document appears redundant because the repository now generates the same current dependency inventory, and deleting it would simplify navigation.",
+      "prompt": "Our architecture corpus adopts the current software-architecture-docs profile. Maintain it. One document appears redundant because the repository now generates the same current dependency inventory, and deleting it would simplify navigation.",
       "expected_output": "Mechanical repairs may proceed, but deletion remains a grounded recommendation because the broad maintenance request did not explicitly authorize semantic removal.",
       "assertions": [
         "The generated repository view is assessed as the likely authority for the current inventory.",
@@ -111,7 +111,7 @@
     },
     {
       "id": 10,
-      "prompt": "Remove docs/architecture/current-dependencies.md. It only copies the generated dependency report; preserve its one durable boundary rationale in the owning system overview and repair navigation.",
+      "prompt": "Our architecture corpus adopts the current software-architecture-docs profile. Remove docs/architecture/current-dependencies.md. It only copies the generated dependency report; preserve its one durable boundary rationale in the owning system overview and repair navigation.",
       "expected_output": "The explicitly authorized reduction removes the copied inventory, preserves the accepted rationale at its canonical owner, repairs links, and verifies that generated evidence remains reachable.",
       "assertions": [
         "The named document is removed because target and semantic reduction are explicit.",
@@ -123,7 +123,7 @@
     },
     {
       "id": 11,
-      "prompt": "Reorganize the accepted use cases currently combined in docs/architecture/use-cases.md. Move each named use case to the profile's canonical structure, preserve meaning, update all links, and remove the catch-all file.",
+      "prompt": "Our corpus explicitly adopts the current software architecture docs application profile. Reorganize the accepted use cases currently combined in docs/architecture/use-cases.md. Move each named use case to the profile's canonical structure, preserve meaning, update all links, and remove the catch-all file.",
       "expected_output": "An explicitly authorized stable-identity migration to use-cases/index.md and one canonical named file per use case, with the old catch-all removed and no duplicate copies.",
       "assertions": [
         "Each independently addressable use case receives its own named canonical file.",
@@ -166,8 +166,33 @@
         "No neighboring skill is selected for a job it does not own.",
         "No task side effect occurs before selection."
       ]
+    },
+    {
+      "id": 14,
+      "stage": "execution",
+      "prompt": "Review our established architecture corpus without changing files. Its root declares OKF v0.2 and adopts software-architecture-docs version 0.8.0, but one Feature lacks required profile metadata and another governed concept is outside its canonical path. Report conformance precisely.",
+      "expected_output": "A read-only reconciliation report with separate OKF and profile results that identifies the metadata and path violations, preserves unknown evidence, and does not accept either violation as a local convention.",
+      "assertions": [
+        "OKF v0.2 and software-architecture-docs profile results are reported separately.",
+        "The missing required metadata and noncanonical governed path are classified as profile nonconformance.",
+        "Neither violation is accepted as a repository-local waiver or harmless format deviation.",
+        "Unavailable structural or semantic evidence remains unknown rather than pass.",
+        "No repository file is changed in review-only mode."
+      ]
+    },
+    {
+      "id": 15,
+      "stage": "execution",
+      "prompt": "Maintain our established Markdown architecture folder. It has a clear root and useful accepted documents but no OKF declaration or software-architecture-docs profile adoption. Keep its local format as a permanent exception.",
+      "expected_output": "A migration precondition that preserves the useful material, refuses a permanent local exception, and routes required OKF and profile adoption to setup-architecture-docs.",
+      "assertions": [
+        "The established material is preserved as migration input rather than accepted as a conforming alternative format.",
+        "Missing OKF and profile adoption is identified as a setup or migration precondition.",
+        "The response does not create a local waiver from the profile.",
+        "Ordinary reconciliation does not silently perform initial adoption or identity-changing migration."
+      ]
     }
   ],
-  "suite_version": "0.1.0",
+  "suite_version": "0.2.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

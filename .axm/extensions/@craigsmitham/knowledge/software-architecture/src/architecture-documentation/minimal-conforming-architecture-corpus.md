@@ -13,13 +13,13 @@ sources:
     title: Just Enough Architecture Docs
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-22T00:17:07Z
+  at: 2026-08-23T00:23:36Z
 ---
 
 # Minimal conforming architecture corpus
 
 This reference gives profile authors and validators one complete, inspectable
-example rather than isolated fragments. It applies version 0.7.0 of the
+example rather than isolated fragments. It applies version 0.8.0 of the
 software architecture docs profile[^software-architecture-docs-profile] and
 keeps only meaning that passes the Just Enough Architecture Docs admission
 test.[^just-enough-architecture-docs]
@@ -63,11 +63,12 @@ examples from this document.
 
 | Property | Result |
 | --- | --- |
-| Assessment date | 2026-08-21 (America/Chicago) |
+| Assessment date | 2026-08-22 (America/Chicago) |
 | Assessor | `codex/gpt-5.6` |
 | Assessment kind | Author self-assessment; not independent verification |
 | OKF v0.2 result | Conforms for the linked fixture files |
-| Profile result | Conforms to applicable `software-architecture-docs` version 0.7.0 rules |
+| Structural checker result | Passes `validate-software-architecture-profile.py` for version 0.8.0 |
+| Profile result | Conforms to applicable `software-architecture-docs` version 0.8.0 rules |
 
 The assessment examined these rules manually:
 
@@ -94,8 +95,10 @@ The assessment examined these rules manually:
   ISO/IEC 25010 classification and source-access rules are not applicable.
 
 This report is evidence that the written example was checked against the named
-rules on the stated date. It is not a human verification event, reader test,
-or executable validator result, and the concept remains `draft`.
+rules on the stated date. The structural result is executable authoring
+evidence; the complete profile result remains a manual author self-assessment.
+Neither is a human verification event, independent review, or reader test, and
+the concept remains `draft`.
 
 [^software-architecture-docs-profile]: The profile defines the concept types,
     paths, containment constraints, lifecycle context, and manual validation

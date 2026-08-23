@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "reconcile-architecture-docs",
-  "version": "0.1.0",
-  "description": "Assess and reconcile established architecture docs through evidence-aware repair and user-authorized semantic lifecycle decisions",
+  "version": "0.2.0",
+  "description": "Assess and reconcile profile-conforming architecture docs through evidence-aware repair and user-authorized semantic lifecycle decisions",
   "keywords": [
     "software-architecture",
     "architecture-docs",

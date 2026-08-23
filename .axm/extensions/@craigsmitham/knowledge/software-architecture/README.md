@@ -12,10 +12,27 @@ architecture docs. It is not a
 repository-specific architecture, a record of unaccepted proposals, or a prose
 mirror of current implementation details.
 
+Just Enough Architecture Docs defines the philosophy, admission test,
+authority model, and maintenance discipline. The bundled
+`software-architecture-docs` application profile is the required OKF v0.2
+representation and conformance contract for every corpus managed through the
+software-architecture pack.
+
 **Maturity:** Candidate. Every concept in this release is agent-generated,
 marked `draft`, and not recorded as human-verified. Evaluate the guidance before
 adopting it as an authority. Promote concepts individually only after actual
 review or evidence from independent use supports the change.
+
+## Revision 2.0.0
+
+- Makes the software-architecture-docs profile the required representation of
+  Just Enough Architecture Docs rather than an opt-in alternative.
+- Restricts variation to choices and extension points stated by the profile.
+- Adds structural profile validation while retaining named manual semantic
+  review.
+
+This is a breaking change from `1.1.1`. Existing unprofiled architecture
+collections require setup and migration before they conform to the pack.
 
 Install it with:
 
