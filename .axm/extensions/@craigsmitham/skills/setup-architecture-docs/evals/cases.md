@@ -10,8 +10,12 @@ adoption assessment, ambiguous system boundaries, resistance to empty
 taxonomies and invented architecture, required OKF and profile conformance,
 legacy migration, outcome-based verification, and the boundary between setup
 and maintenance. They also cover
-stable named identity from the first concept and lifecycle or stewardship gaps
-that setup must surface without inventing. Read-only cases distinguish observed
+stable named identity from the first concept and the mandatory lifecycle,
+ownership, decision-policy, and assurance kernel that setup must establish
+without inventing. They distinguish a justified absence from an unknown state,
+require conditional decision and constraint collections to remain absent until
+earned, and prevent a semantically incomplete root from being called
+conforming. Read-only cases distinguish observed
 side-effect evidence from narrative claims, forbid an advertised check whose
 provenance and effects are unknown, and exercise both the supported-recommendation
 and no-recommendation forms of the exact decision-presentation contract.

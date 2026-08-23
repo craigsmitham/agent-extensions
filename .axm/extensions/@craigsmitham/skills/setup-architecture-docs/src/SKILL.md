@@ -1,6 +1,6 @@
 ---
 name: setup-architecture-docs
-description: Plans or establishes the smallest discoverable, OKF v0.2 and software-architecture-docs profile-conforming architecture-documentation adoption for one or more repository systems by classifying repository state, resolving system-to-corpus mappings, connecting local authority, and verifying contributor discovery. Use when asked to set up, adopt, initialize, migrate, plan, or connect architecture docs or Just Enough Architecture Docs. Not for choosing an architecture, authoring substantive architecture meaning, assessing or repairing an established conforming corpus, or maintaining existing architecture docs.
+description: Plans or establishes the smallest discoverable, OKF v0.2 and software-architecture-docs profile-conforming architecture-documentation adoption with the required lifecycle, ownership, decision-policy, and assurance kernel for one or more repository systems. Use when asked to set up, adopt, initialize, migrate, plan, or connect architecture docs or Just Enough Architecture Docs. Not for choosing an architecture, inventing missing system context, assessing or repairing an established conforming corpus, or maintaining existing architecture docs.
 ---
 
 # Set up architecture docs
@@ -11,9 +11,10 @@ meaning or generating a documentation taxonomy.
 
 Setup succeeds when a future contributor or agent can discover which system or
 bounded authority each corpus describes, reach its one canonical root, find the
-accepted architecture subjects and local authority routes, distinguish gaps and
-proposals from accepted meaning, and select the appropriate authoring or
-maintenance workflow. Every established corpus must also conform to OKF v0.2
+required lifecycle, ownership, decision-policy, and assurance concepts plus any
+admitted optional subjects, distinguish gaps and proposals from accepted
+meaning, and select the appropriate authoring or maintenance workflow. Every
+established corpus must also conform to OKF v0.2
 and the `software-architecture-docs` application profile. Files are evidence of
 that outcome, not the outcome by themselves.
 
@@ -68,8 +69,13 @@ Build one working adoption brief with these fields:
 - the canonical persistent repository instruction authority;
 - required OKF v0.2 and `software-architecture-docs` profile version and
   current conformance state;
-- system lifecycle or support-state authority;
-- maintenance responsibility and architecture decision-authority routes;
+- system lifecycle, support-state, and change-horizon authority;
+- maintenance responsibility, stewardship boundary, and continuity or
+  escalation routes;
+- architecture decision policy, including its record threshold, acceptance
+  authority, location, minimum content, and reconsideration triggers;
+- assurance obligations, evidence authorities, required review or approval,
+  and reassessment triggers;
 - profile-permitted local choices and documentation review triggers; and
 - requested mode, expected effects, and repository-state playbook.
 
@@ -112,10 +118,13 @@ safe defaults. Do not create a competing repository-specific format, profile,
 instruction authority, or multi-system layout merely for symmetry or
 automation.
 
-Missing accepted lifecycle terminology, stewardship, or decision authority is
-normally non-blocking: record the available stable route or state the semantic
-gap for bounded authoring. Do not infer it from usernames, commit history,
-directory ownership, a volatile roster, or the newest artifact.
+Missing accepted lifecycle, ownership, decision-policy, or assurance meaning
+does not authorize invention. It is non-blocking for a read-only recommendation
+or truthful migration assessment, but it blocks a claim that setup produced a
+profile-conforming corpus. Use accepted stable authorities when available;
+otherwise present the missing semantic decision or route it for bounded
+authoring. Do not infer it from usernames, commit history, directory ownership,
+a volatile roster, current implementation, or the newest artifact.
 
 Stop before dependent writes when materially different results remain
 plausible, including:
@@ -153,18 +162,24 @@ before emitting the single **Recommendation** section.
 
 ## Apply the selected playbook
 
-For **Bootstrap**, create only the canonical root `index.md` and the concise
-instruction discovery route. Do not create an overview or collection until
-accepted content passes the admission test.
+For **Bootstrap**, create the canonical root `index.md`, the required
+`lifecycle.md`, `ownership.md`, `decisions.md`, and `assurance.md` concepts, and
+the concise instruction discovery route. Populate every required concept only
+from accepted meaning or a bounded, justified absence. If any required meaning
+is unavailable, use **Recommend** or stop at the applicable decision gate; do
+not create placeholders or claim conforming adoption. Do not create an
+overview or conditional collection until accepted content passes the admission
+test.
 
-For **Connect**, preserve useful existing files and local organization. Link
-accepted material from the canonical root without moving, renaming, or
-rewriting it merely for cosmetic consistency. Treat material as an admitted
-profile concept only when repository authority establishes that status and its
-representation conforms; otherwise preserve it as linked migration input or an
-external authority. Preserve proposals, delivery records, and observed
-evidence in their own lifecycles. A profile violation is nonconformance, not a
-local format deviation.
+For **Connect**, preserve useful existing files and local organization. Create
+or populate the four required root concepts only by transferring accepted
+meaning from its current authority, then link other accepted material from the
+canonical root without moving, renaming, or rewriting it merely for cosmetic
+consistency. Treat material as an admitted profile concept only when repository
+authority establishes that status and its representation conforms; otherwise
+preserve it as linked migration input or an external authority. Preserve
+proposals, delivery records, and observed evidence in their own lifecycles. A
+profile violation is nonconformance, not a local format deviation.
 
 For **Federate**, use only an accepted system-to-root mapping. Give each system
 one canonical corpus root and its own minimal adoption surface. Add one concise
@@ -175,12 +190,12 @@ taxonomy unless separately accepted and authorized.
 For **Migrate**, preserve the established system boundary, corpus root,
 accepted meaning, and external authority routes. Add the required OKF and
 profile declaration, then repair only unambiguous metadata, navigation, and
-profile placement within the authorized setup surface. Stop before any path,
-classification, split, merger, or ownership change that would alter concept
-identity or accepted meaning unless the user explicitly authorized that
-migration class and scope. Until both conformance results pass, describe the
-material as a corpus requiring migration rather than a valid alternative
-adoption.
+profile placement within the authorized setup surface. Establish the four
+required root concepts only from accepted authority. Stop before any path,
+classification, split, merger, semantic-ownership transfer, ADR conversion, or
+constraint conversion unless the user explicitly authorized that migration
+class and scope. Until both conformance results pass, describe the material as
+a corpus requiring migration rather than a valid alternative adoption.
 
 For **Recommend**, make no changes. Return the evidence-status adoption brief,
 the smallest viable file effects, safe defaults, non-blocking gaps, and every
@@ -205,14 +220,15 @@ Create or revise each selected root `index.md` so it:
   violation as a deviation or waiver;
 - links every existing admitted architecture subject and states what each
   external authority route establishes;
-- links accepted lifecycle, stewardship, and decision routes or names their
-  non-blocking semantic gaps; and
+- links the required `lifecycle.md`, `ownership.md`, `decisions.md`, and
+  `assurance.md` concepts; and
 - requires review when accepted behavior, responsibility, boundary, Product
   Quality Requirement, architecture consequence, or an evidence route changes.
 
-Keep the root navigational; do not place several substantive architecture
-entities in it. Do not create `overview.md` or collection directories without
-accepted content that passes the admission test. When a first accepted concept
+Keep the root navigational; do not place substantive architecture entities in
+it or use `overview.md` as a catch-all. Create each required root singleton;
+do not create conditional collection directories without accepted content
+that passes the admission test. When a first accepted optional concept
 already exists, preserve or recommend its stable canonical named file and add
 only the collection navigation it needs. Never create a plural catch-all such
 as `use-cases.md` for later splitting. Setup must not generate ISO/IEC 25010
@@ -237,8 +253,11 @@ existence:
   and the shared method;
 - every existing admitted subject is reachable and proposals remain outside
   accepted architecture;
-- lifecycle, stewardship, decision authority, and review triggers are either
-  discoverable or truthfully identified as semantic gaps;
+- the four required root concepts exist at their exact paths, are linked from
+  the root, and satisfy their semantic contracts from accepted authority;
+- a justified no-ADR policy has no empty `decisions/` collection, every local
+  ADR is a named accepted record under `decisions/`, every admitted constraint
+  is a named concept under `constraints/`, and `constraints.md` is absent;
 - no empty taxonomy, speculative overview, copied volatile inventory, inferred
   desired state, or competing setup was created;
 - the root explicitly adopts the installed profile version and every admitted

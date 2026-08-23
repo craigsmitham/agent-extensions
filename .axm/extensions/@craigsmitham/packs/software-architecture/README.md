@@ -9,10 +9,10 @@ without copying facts that executable or live sources own better.
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/software-architecture` | Human-first, risk-driven architecture meaning, product quality requirements, lifecycle, stewardship, stable concept identity, selected views, and the Just Enough Architecture Docs pattern |
-| `@craigsmitham/skills/setup-architecture-docs` | Establish the system boundary, root, local adoption, authority routes, maintenance triggers, and agent discovery without empty or inferred scaffolding |
-| `@craigsmitham/skills/author-architecture-docs` | Create or revise the explicitly requested semantic delta while routing exact current facts to their authorities |
-| `@craigsmitham/skills/reconcile-architecture-docs` | Reconcile established docs through bounded repair and classify semantic lifecycle issues, making changes only with explicit user authority |
+| `@craigsmitham/knowledge/software-architecture` | Human-first, risk-driven architecture meaning; the mandatory lifecycle, ownership, decision-policy, and assurance kernel; named decisions and constraints; product quality requirements; selected views; and the Just Enough Architecture Docs pattern |
+| `@craigsmitham/skills/setup-architecture-docs` | Establish the system boundary, root, required context kernel, local adoption, authority routes, maintenance triggers, and agent discovery without inferred architecture |
+| `@craigsmitham/skills/author-architecture-docs` | Create or revise an explicitly requested profile concept, including context, ADR, and constraint concepts, while routing exact current facts to their authorities |
+| `@craigsmitham/skills/reconcile-architecture-docs` | Reconcile established docs and profile migrations through bounded repair, making semantic changes only with explicit user authority |
 
 The three skills are non-standalone: they load the bundled knowledge through
 its canonical AXM path and are distributed through this pack. The knowledge
@@ -23,13 +23,14 @@ OKF v0.2 and conform to the bundled software-architecture-docs profile.
 Repository-local accepted authority governs meaning, while the profile governs
 representation and permitted variance.
 
-## Revision 0.4.0
+## Revision 0.5.0
 
-This release updates the pack floors to knowledge `2.0.0`, authoring `2.0.0`,
-setup `0.4.0`, and reconciliation `0.2.0`. It replaces optional profile adoption
-with required OKF v0.2 and software-architecture-docs profile conformance.
-Existing unprofiled corpora require setup and migration; rollback is to pack
-`0.3.1` and its prior member versions.
+This release updates the pack floors to knowledge `3.0.0`, authoring `3.0.0`,
+setup `0.5.0`, and reconciliation `0.3.0`. Profile `0.9.0` requires the four
+root system-context concepts, separates the decision policy from accepted ADRs,
+and admits a constraints collection only when a binding constraint exists.
+Existing profile `0.8.0` corpora require authorized semantic migration;
+rollback is to pack `0.4.0` and its prior member versions.
 
 ## Install
 

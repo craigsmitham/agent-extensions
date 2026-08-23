@@ -18,17 +18,18 @@ accepted as an alternative Just Enough Architecture Docs format.
 This skill is a non-standalone member of the software-architecture pack because
 it loads that pack's software-architecture knowledge.
 
-## Revision 0.4.0
+## Revision 0.5.0
 
-- Requires every completed setup to pass separate OKF v0.2 and current
-  software-architecture-docs profile checks.
-- Adds a migration playbook for useful legacy architecture material.
-- Removes plain Markdown and repository-local profile waivers as valid adoption
-  outcomes.
+- Establishes the required lifecycle, ownership, decision-policy, and assurance
+  concepts at every system corpus root.
+- Blocks a conforming setup claim when accepted kernel meaning is unavailable
+  rather than inventing placeholders or inferring it from implementation.
+- Creates `decisions/` and `constraints/` only when accepted named concepts
+  require those collections.
 
-This is a breaking change from `0.3.3`. Existing unprofiled corpora require
-setup and any separately authorized identity-changing migration; rollback is to
-`0.3.3`.
+This is a breaking change from `0.4.0`. Existing profile `0.8.0` corpora require
+an evidence-backed migration to the required context kernel; rollback is to
+`0.4.0`.
 
 ## Install
 

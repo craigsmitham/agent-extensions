@@ -19,10 +19,19 @@ except ImportError:  # pragma: no cover - environment failure path
 
 
 PROFILE_ID = "software-architecture-docs"
-PROFILE_VERSION = "0.8.0"
+PROFILE_VERSION = "0.9.0"
 COMMON_FIELDS = ("type", "title", "description", "status")
 VALID_STATUSES = {"draft", "stable", "deprecated"}
+REQUIRED_ROOT_CONCEPTS = {
+    "lifecycle.md": "System Lifecycle",
+    "ownership.md": "System Ownership",
+    "decisions.md": "Architecture Decision Policy",
+    "assurance.md": "System Assurance",
+}
 GOVERNED_TYPES = {
+    *REQUIRED_ROOT_CONCEPTS.values(),
+    "Architecture Decision Record",
+    "Architecture Constraint",
     "Offering",
     "Audience",
     "Need",
@@ -40,6 +49,12 @@ GOVERNED_TYPES = {
     "C4 Container",
     "C4 Component",
     "C4 View",
+}
+PROHIBITED_PROFILE_LIKE_TYPES = {
+    "Architecture Overview",
+    "Constraint Set",
+    "Risk Driver",
+    "Risk Driver Set",
 }
 QUALITY_CHARACTERISTICS = {
     "functional-suitability",
@@ -87,6 +102,16 @@ def parse_frontmatter(path: Path) -> tuple[dict[str, object], str]:
 
 def path_matches(concept_type: str, relative: PurePosixPath) -> bool:
     parts = relative.parts
+    required_path = next(
+        (path for path, expected_type in REQUIRED_ROOT_CONCEPTS.items() if expected_type == concept_type),
+        None,
+    )
+    if required_path is not None:
+        return relative == PurePosixPath(required_path)
+    if concept_type == "Architecture Decision Record":
+        return len(parts) == 2 and parts[0] == "decisions"
+    if concept_type == "Architecture Constraint":
+        return len(parts) == 2 and parts[0] == "constraints"
     exact_collections = {
         "Offering": ("value", "offerings"),
         "Audience": ("value", "audiences"),
@@ -200,6 +225,62 @@ def validate(root: Path) -> dict[str, object]:
             f"Root index must explicitly adopt and link {PROFILE_ID} version {PROFILE_VERSION}.",
         )
 
+    for filename, concept_type in REQUIRED_ROOT_CONCEPTS.items():
+        path = root / filename
+        if not path.is_file():
+            error(
+                "required-root-concept",
+                path,
+                f"The architecture root must contain {filename} with type {concept_type}.",
+            )
+            continue
+        try:
+            meta, _ = parse_frontmatter(path)
+        except (OSError, ValueError, yaml.YAMLError):
+            continue
+        if meta.get("type") != concept_type:
+            error(
+                "required-root-type",
+                path,
+                f"{filename} must have the exact profile type {concept_type}.",
+            )
+
+    forbidden_constraints_file = root / "constraints.md"
+    if forbidden_constraints_file.exists():
+        error(
+            "constraint-collection",
+            forbidden_constraints_file,
+            "Architecture constraints must be named concepts under constraints/; constraints.md is prohibited.",
+        )
+
+    for collection, concept_type in (
+        ("decisions", "Architecture Decision Record"),
+        ("constraints", "Architecture Constraint"),
+    ):
+        collection_path = root / collection
+        if not collection_path.exists():
+            continue
+        named_files = sorted(
+            path for path in collection_path.glob("*.md") if path.name != "index.md"
+        )
+        if not named_files:
+            error(
+                "empty-collection",
+                collection_path,
+                f"{collection}/ must be omitted until its first {concept_type} is admitted.",
+            )
+        for path in named_files:
+            try:
+                meta, _ = parse_frontmatter(path)
+            except (OSError, ValueError, yaml.YAMLError):
+                continue
+            if meta.get("type") != concept_type:
+                error(
+                    "collection-type",
+                    path,
+                    f"Every named concept directly under {collection}/ must have type {concept_type}.",
+                )
+
     concept_files = sorted(
         path
         for path in root.rglob("*.md")
@@ -209,7 +290,7 @@ def validate(root: Path) -> dict[str, object]:
     for path in concept_files:
         relative = PurePosixPath(path.relative_to(root).as_posix())
         try:
-            meta, _ = parse_frontmatter(path)
+            meta, body = parse_frontmatter(path)
         except (OSError, ValueError, yaml.YAMLError) as exc:
             error("concept-frontmatter", path, str(exc))
             continue
@@ -217,6 +298,12 @@ def validate(root: Path) -> dict[str, object]:
         if not isinstance(concept_type, str) or not concept_type.strip():
             error("common-frontmatter", path, "type must be a non-empty string.")
             continue
+        if concept_type in PROHIBITED_PROFILE_LIKE_TYPES:
+            error(
+                "profile-type-prohibited",
+                path,
+                f"{concept_type} is not a profile concept type; use the concept that owns the meaning.",
+            )
         if concept_type in GOVERNED_TYPES:
             governed_count += 1
             for field in COMMON_FIELDS[1:]:
@@ -233,6 +320,12 @@ def validate(root: Path) -> dict[str, object]:
                 )
             if path.name in PLURAL_CATCH_ALLS:
                 error("stable-identity", path, "Plural catch-all concept files are prohibited.")
+            if relative.as_posix() in REQUIRED_ROOT_CONCEPTS and not body.strip():
+                error(
+                    "required-root-body",
+                    path,
+                    "A required root concept must contain a substantive body.",
+                )
             if concept_type == "Subdomain":
                 expected = relative.parts[1] if len(relative.parts) > 1 else None
                 if meta.get("classification") != expected:

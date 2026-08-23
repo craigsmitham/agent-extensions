@@ -1,6 +1,6 @@
 ---
 name: reconcile-architecture-docs
-description: Assesses and reconciles established OKF v0.2 software architecture docs against the required software-architecture-docs profile through evidence-aware repair and explicitly authorized semantic lifecycle changes. Use when asked to reconcile, maintain, review, refresh, repair, clean up, prune, or assess stale, broken, duplicated, contradictory, or nonconforming architecture documentation. Not for initial setup or profile adoption, authoring a known new architecture subject, choosing an architecture, generic documentation work, or implementing the system.
+description: Assesses and reconciles established OKF v0.2 software architecture docs against the required software-architecture-docs profile, including the mandatory lifecycle, ownership, decision-policy, and assurance kernel plus atomic ADR and constraint collections. Use when asked to reconcile, maintain, review, refresh, repair, migrate, clean up, prune, or assess stale, broken, duplicated, contradictory, or nonconforming architecture documentation. Not for initial setup or profile adoption, authoring a known new architecture subject, choosing an architecture, generic documentation work, or implementing the system.
 ---
 # Reconcile architecture docs
 
@@ -74,8 +74,19 @@ has not accepted one.
    - evidence routes still resolve and support no stronger claim than they
      establish;
    - time-sensitive claims have a usable review boundary;
-   - system lifecycle, maintenance and decision authority, and review triggers
-     are discoverable while lower-level docs repeat only consequential
+   - `lifecycle.md`, `ownership.md`, `decisions.md`, and `assurance.md` exist at
+     the root, satisfy their distinct semantic contracts, and remain reachable;
+   - justified absence is bounded and authoritative rather than an empty,
+     placeholder, TODO, or unexplained `none` statement;
+   - every local Architecture Decision Record is an accepted named concept
+     under `decisions/`, proposals remain outside that collection, and
+     `decisions.md` owns only the policy;
+   - every admitted Architecture Constraint is a binding named concept under
+     `constraints/`, no `constraints.md` or constraint-set catch-all exists,
+     and internal choices are not mislabeled as constraints;
+   - lifecycle, ownership, decision-policy, and assurance meaning is not
+     duplicated in an overview, C4 system, lower-level element, or generic
+     risk-driver summary except for meaningful links and consequential
      exceptions; and
    - the document still repays its comprehension, discovery, and maintenance
      cost.
@@ -101,17 +112,22 @@ has not accepted one.
    relevant lifecycle change; otherwise present the proposed action. Replace
    copied mechanics with evidence routes only when reduction is explicitly in
    scope; otherwise recommend the smallest reduction. Never invent a missing
-   decision merely to clear a finding.
+   lifecycle, owner, policy, assurance obligation, decision, or constraint
+   merely to clear a finding. Treat extraction from an overview, conversion to
+   an ADR or constraint, and acceptance of a “none required” conclusion as
+   semantic changes rather than mechanical profile repair.
 7. **Preserve the authoring boundary.** Reconciliation may restore accepted
    meaning in an existing subject, but a known new architecture subject or a
    separately requested substantive design change belongs to
    `author-architecture-docs`. Record that follow-up without requiring
    cross-skill invocation to finish the current reconciliation scope.
-8. **Verify.** Reapply the admission test to changed claims, confirm every
-   maintained subject remains reachable from the root, check canonical homes
-   and evidence routes, and run the base OKF and installed profile checks owned
-   by their established authorities. Report their results independently and
-   retain `unknown` when a check is unavailable or evidence is insufficient.
+8. **Verify.** Reapply the admission test to changed claims, confirm the four
+   required root concepts and every maintained optional subject remain
+   reachable from the root, check canonical homes, conditional collection
+   rules, and evidence routes, and run the base OKF and installed profile checks
+   owned by their established authorities. Report their results independently
+   and retain `unknown` when a check is unavailable or evidence is
+   insufficient.
    Inspect the diff for silent decisions, copied mechanics, local waivers, and
    collateral changes.
 9. **Handoff.** State the system, scope, and mode; subjects reviewed; evidence

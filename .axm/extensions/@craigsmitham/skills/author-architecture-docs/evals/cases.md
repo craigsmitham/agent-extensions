@@ -14,8 +14,11 @@ progressively disclosed architecture-doc organization. Focused cases also
 cover one-artifact authoring for offerings, Jobs to Be Done, bounded contexts,
 and C4 containers without generating sibling concepts for symmetry.
 They also cover one named concept from first admission, recommendation-only
-adjacent concepts, system lifecycle and stewardship, and scale without
-speculative lower-level ownership docs.
+adjacent concepts, the required system-context kernel, bounded no-additional-
+assurance conclusions, accepted ADRs under a distinct decision policy, refusal
+to record unresolved proposals as ADRs, atomic binding constraints without a
+constraint-set catch-all, and scale without speculative lower-level ownership
+docs.
 They also cover one named Product Quality Requirement, earned ISO/IEC 25010
 classification paths, external measure authority, and refusal to manufacture a
 quality catalog or target.

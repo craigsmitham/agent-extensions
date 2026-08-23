@@ -23,16 +23,22 @@ marked `draft`, and not recorded as human-verified. Evaluate the guidance before
 adopting it as an authority. Promote concepts individually only after actual
 review or evidence from independent use supports the change.
 
-## Revision 2.0.0
+## Revision 3.0.0
 
-- Makes the software-architecture-docs profile the required representation of
-  Just Enough Architecture Docs rather than an opt-in alternative.
-- Restricts variation to choices and extension points stated by the profile.
-- Adds structural profile validation while retaining named manual semantic
-  review.
+- Adds the mandatory `lifecycle.md`, `ownership.md`, `decisions.md`, and
+  `assurance.md` system-context kernel to profile `0.9.0`.
+- Separates the required decision policy from optional accepted ADRs under
+  `decisions/`, and represents binding constraints only as named concepts under
+  `constraints/`.
+- Treats risk as a selection lens rather than a catch-all concept, and keeps
+  system context out of overview, quality, and C4 documents.
+- Extends structural validation and the minimal conforming corpus to enforce
+  the new paths and conditional collections while retaining named manual
+  semantic review.
 
-This is a breaking change from `1.1.1`. Existing unprofiled architecture
-collections require setup and migration before they conform to the pack.
+This is a breaking change from `2.0.0`. Existing profile `0.8.0` corpora require
+an evidence-backed migration before they conform to profile `0.9.0`; rollback
+is to knowledge package `2.0.0` and profile `0.8.0`.
 
 Install it with:
 

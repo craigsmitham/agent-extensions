@@ -20,6 +20,7 @@
       "assertions": [
         "The gateway-versus-service ownership choice is identified as a material architecture decision.",
         "Neither alternative is presented as accepted desired state.",
+        "No root overview catch-all is created as a substitute for the profile's atomic concepts.",
         "Any documentable accepted context remains clearly separate from the unresolved proposal.",
         "The response names the decision needed before the architecture document can be completed."
       ],
@@ -91,7 +92,7 @@
       "expected_output": "A progressively disclosed features/ collection with a navigational index.md and one stable named file per admitted Feature, while other collections appear only when they contain authorized admitted subjects.",
       "assertions": [
         "Features with durable meaning receive individually recognizable filenames.",
-        "Major collections use index.md for navigation rather than substantive explanation.",
+        "Present collections use index.md for navigation rather than substantive explanation.",
         "No plural features.md catch-all is created; each Feature has its canonical path from first admission.",
         "The response avoids empty taxonomy directories and preserves one canonical home per subject."
       ],
@@ -184,13 +185,13 @@
     },
     {
       "id": 16,
-      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Write the accepted architecture overview for a small maintained service. It is active, maintained through the repository's owner route, and reviewed when its public contract, responsibility, boundary, or support state changes. Keep it useful if the project later grows to several teams.",
-      "expected_output": "A concise human-readable overview that states or links lifecycle, stewardship, decision authority, and review triggers without copying a volatile roster or inventing lower-level ownership documents.",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Revise lifecycle.md for a small maintained service. It is active, has an ongoing change horizon, and must be reviewed when its public contract, responsibility, boundary, or support state changes. Keep the concept extremely concise.",
+      "expected_output": "A concise System Lifecycle concept at lifecycle.md that states the accepted support state, change horizon, expected evolution, and event-driven review triggers without absorbing ownership, decisions, assurance, or downstream concept summaries.",
       "assertions": [
-        "System lifecycle is distinct from the document's OKF status.",
-        "The stable maintainer and decision-authority route is discoverable without named-person or roster duplication.",
+        "The exact System Lifecycle type and lifecycle.md path are used.",
+        "System lifecycle is distinct from the document's OKF status and includes the ongoing change horizon.",
         "Review triggers are event-based and proportionate to the system.",
-        "No container or component ownership documents are added for anticipated scale."
+        "Ownership, decision policy, assurance, and optional architecture concepts are not summarized or duplicated."
       ],
       "stage": "execution"
     },
@@ -314,8 +315,56 @@
         "The accepted reservation authority and recovery evidence are preserved for a later authorized migration without being rewritten or promoted into a nonconforming document.",
         "No profile adoption, semantic rewrite, unrelated collection, or sibling concept is created under ordinary authoring authority."
       ]
+    },
+    {
+      "id": 23,
+      "stage": "execution",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Revise assurance.md. This synthetic internal tool has no assurance obligation beyond ordinary repository review and automated tests. That conclusion must be reconsidered if regulated data, safety-relevant behavior, or an external audit enters scope.",
+      "expected_output": "One concise System Assurance concept at assurance.md that records the bounded no-additional-assurance conclusion, its evidence authorities, consequence, and reassessment triggers without duplicating tests or quality requirements.",
+      "assertions": [
+        "The exact System Assurance type and assurance.md path are used.",
+        "The absence conclusion is bounded and justified rather than expressed as a bare none or N/A.",
+        "Repository review and automated tests remain linked or named evidence authorities rather than copied inventories.",
+        "The supplied regulated-data, safety, and audit changes are explicit reassessment triggers."
+      ]
+    },
+    {
+      "id": 24,
+      "stage": "execution",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Record the accepted decision to keep reservation state in PostgreSQL because transactional serialization must survive process loss. Repository review accepted it. Include the rejected in-memory option and the consequences, and create only the navigation this first ADR earns.",
+      "expected_output": "One Architecture Decision Record at decisions/keep-reservation-state-in-postgresql.md plus decisions/index.md navigation, while preserving the existing decisions.md policy and recording context, accepted choice, rationale, alternative, consequences, and reconsideration conditions.",
+      "assertions": [
+        "The required decisions.md policy remains distinct and is not replaced or used as a record catch-all.",
+        "The first accepted record uses the exact Architecture Decision Record type and a stable named path beneath decisions/.",
+        "The accepted choice, rejected option, rationale, consequences, and reconsideration or supersession conditions are present.",
+        "OKF status is not presented as the semantic decision status."
+      ]
+    },
+    {
+      "id": 25,
+      "stage": "execution",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Write an ADR choosing whether the gateway or each service owns tenant policy. The team has not accepted either option yet, but pick the one you prefer so decisions/ is complete.",
+      "expected_output": "A refusal to represent the unresolved option as an Architecture Decision Record, with the decision gap and required acceptance authority named and no decisions collection created merely for completeness.",
+      "assertions": [
+        "Neither option is promoted to an accepted Architecture Decision Record.",
+        "The unresolved choice remains in its proposal or decision lifecycle.",
+        "No empty decisions/ collection or fabricated ADR is created.",
+        "The response identifies the authority or evidence needed before authoring the record."
+      ]
+    },
+    {
+      "id": 26,
+      "stage": "execution",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Document the binding contractual requirement that reservation data remain in its processing region. The signed data-processing agreement is authoritative, the constraint applies to persistence and backups, and legal review releases or changes it. Create only this constraint and earned navigation.",
+      "expected_output": "One Architecture Constraint at constraints/regional-reservation-data-residency.md plus constraints/index.md navigation, with its authority, scope, architectural consequences, and release or review conditions and no constraints.md file.",
+      "assertions": [
+        "The exact Architecture Constraint type and a stable named path under constraints/ are used.",
+        "The signed agreement, affected persistence and backup scope, consequences, and legal release route are explicit.",
+        "No constraints.md or Constraint Set concept is created.",
+        "The constraint is not confused with an internal decision, preference, assumption, or current implementation property."
+      ]
     }
   ],
-  "suite_version": "2.0.0",
+  "suite_version": "3.0.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

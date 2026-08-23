@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Planning or establishing a minimal, discoverable, OKF v0.2 and software-architecture-docs profile-conforming architecture-documentation adoption by classifying repository state, resolving explicit system-to-corpus mappings, and avoiding invented boundaries or substantive architecture.",
+    "intended_use": "Planning or establishing a minimal, discoverable, OKF v0.2 and software-architecture-docs profile-conforming architecture-documentation adoption with the required lifecycle, ownership, decision-policy, and assurance kernel, explicit system-to-corpus mappings, conditional collections, and no invented semantic state.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic bootstrap, connection, federation, required-profile migration, assessment-only, system-boundary, maintenance-boundary, outcome-verification, read-only check-authority, decision-presentation, and routing cases.",
+    "case_source": "Synthetic strict-kernel bootstrap, connection, federation, required-profile migration, conditional-collection, assessment-only, system-boundary, maintenance-boundary, outcome-verification, read-only check-authority, decision-presentation, and routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -126,7 +126,7 @@
       {
         "gate": "No invented authority, evidence, or approval",
         "case_id": 1,
-        "assertion": "The root index declares OKF v0.2, explicitly adopts and links the installed software-architecture-docs profile version, and records authority routes or explicit evidence gaps and maintenance triggers without inventing architecture or authority."
+        "assertion": "The four required concepts faithfully express the supplied accepted context, including the bounded ordinary-review assurance conclusion and its reassessment trigger."
       },
       {
         "gate": "No local waiver from required OKF or profile conformance",

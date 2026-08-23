@@ -21,15 +21,17 @@ conforming while required evidence fails or remains unknown.
 This skill is a non-standalone member of the software-architecture pack because
 it loads that pack's software-architecture knowledge.
 
-## Revision 0.2.0
+## Revision 0.3.0
 
-- Requires separate OKF v0.2 and software-architecture-docs profile results.
-- Classifies profile violations without accepting repository-local waivers.
-- Routes missing adoption to setup while preserving useful material as
-  migration input.
+- Assesses the required lifecycle, ownership, decision-policy, and assurance
+  concepts as distinct root authorities.
+- Reconciles decision policy, accepted ADRs, and binding constraints without
+  treating proposals or internal choices as accepted architecture.
+- Classifies extraction from catch-alls and profile `0.8.0` migration as
+  semantic work that requires explicit authority.
 
-This is a breaking change from `0.1.0`. Unprofiled corpora now require setup
-before ordinary reconciliation; rollback is to `0.1.0`.
+This is a breaking change from `0.2.0`. Existing profile `0.8.0` corpora require
+an authorized semantic migration to profile `0.9.0`; rollback is to `0.2.0`.
 
 ## Install
 

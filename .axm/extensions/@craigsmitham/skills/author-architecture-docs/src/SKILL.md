@@ -1,6 +1,6 @@
 ---
 name: author-architecture-docs
-description: Creates, revises, organizes, and reviews explicitly requested repository software architecture docs as a concise semantic delta within a required OKF v0.2 and software-architecture-docs profile corpus. Use for architecture overviews and documentation structure; offerings, audiences, needs, jobs to be done, value propositions, use cases, product quality requirements, capabilities, features, surfaces, DDD bounded contexts, C4 systems/containers/components, Wardley or strategic evolution views; and system or subsystem responsibility docs. Not for initial architecture-doc setup or profile adoption, maintaining or assessing all established architecture docs, choosing an architecture, recording an unaccepted proposal, implementing the system, or writing product research, roadmaps, pricing, sales, or marketing content when architecture documentation is not the requested artifact.
+description: Creates, revises, organizes, and reviews explicitly requested repository software architecture concepts as a concise semantic delta within a required OKF v0.2 and software-architecture-docs profile corpus. Use for system lifecycle, ownership, decision policy, assurance, accepted ADRs, binding constraints, offerings, audiences, needs, jobs to be done, value propositions, use cases, product quality requirements, capabilities, features, surfaces, DDD bounded contexts, C4 systems/containers/components, Wardley views, and documentation structure. Not for initial architecture-doc setup or profile adoption, maintaining an established corpus, choosing an architecture, recording an unaccepted proposal as architecture, or implementing the system.
 ---
 
 # Author architecture docs
@@ -50,7 +50,13 @@ shared pack membership alone does not authorize composition.
 
 | Need | Concept path from the bundle root |
 | --- | --- |
-| Establish what architecture owns | `overview.md` |
+| Author or revise system lifecycle | Profile section `#system-lifecycle`; canonical corpus path `lifecycle.md` |
+| Author or revise system ownership | Profile section `#system-ownership`; canonical corpus path `ownership.md` |
+| Author or revise architecture decision policy | Profile section `#architecture-decision-policy`; canonical corpus path `decisions.md` |
+| Author or revise system assurance | Profile section `#system-assurance`; canonical corpus path `assurance.md` |
+| Record one accepted architecture decision | Profile section `#architecture-decision-record`; canonical corpus path `decisions/<decision>.md` |
+| Document one binding architecture constraint | Profile section `#architecture-constraint`; canonical corpus path `constraints/<constraint>.md` |
+| Understand what this knowledge bundle owns | `overview.md` |
 | Apply or explain the architecture-doc pattern | `architecture-documentation/just-enough-architecture-docs.md` |
 | State or review responsibilities, exclusions, authority, boundaries, state ownership, or dependency direction | `guides/reviewing-responsibilities-with-scenarios.md` |
 | Define or express an invariant | `foundations/invariants-and-enforcement.md`, then `guides/expressing-invariants.md` when authoring it |
@@ -137,12 +143,14 @@ shared pack membership alone does not authorize composition.
    current implementation, and telemetry for observed operation. Generate
    current realization views when practical. State what each link establishes;
    do not claim more evidence than it provides.
-8. **Make lifecycle and stewardship discoverable.** For a system overview or
-   canonical system-of-interest concept, state or link the accepted lifecycle
-   or support state, maintenance and architecture decision-authority route, and
-   documentation review triggers. Containers and components inherit this
-   context; document only consequential exceptions. Do not use OKF `status` as
-   system lifecycle or copy a volatile roster.
+8. **Preserve the required system-context kernel.** Keep lifecycle,
+   ownership, architecture decision policy, and assurance in their exact root
+   concepts. A bounded authoring request may revise one of them but MUST NOT
+   move its meaning into an overview or C4 system. Containers and components
+   inherit this context; document only consequential exceptions. Do not use
+   OKF `status` as system lifecycle or decision status, copy a volatile roster,
+   represent a proposal as an ADR, or turn an internal choice into a binding
+   constraint.
 9. **Reconcile disagreement explicitly.** When prose and observed evidence
    differ, determine whether the implementation is wrong, the document is
    obsolete, the evidence is insufficient, or accepted intent changed. Do not
@@ -153,8 +161,12 @@ shared pack membership alone does not authorize composition.
    `index.md` navigational and give every concept a stable named file from first
    admission. The first use case, for example, creates
    `use-cases/index.md` and `use-cases/<named-use-case>.md`, never
-   `use-cases.md`. Omit empty collections. A same-named directory may
-   elaborate one cohesive concept but must not conceal several peer entities.
+   `use-cases.md`. Keep the required `decisions.md` policy while adding the
+   adjacent `decisions/` collection only with the first accepted ADR. Add
+   `constraints/` only with the first admitted constraint and never create
+   `constraints.md`. Omit all empty conditional collections. A same-named
+   directory may elaborate one cohesive concept but must not conceal several
+   peer entities.
    Keep C4 components beneath their owning container; model shared code as
    modules unless it has a runtime boundary.
 11. **Make and verify the authorized change.** For authoring, edit the bounded

@@ -2,6 +2,15 @@
 
 ## 2026-08-22
 
+- **Profile 0.9.0**: Required root System Lifecycle, System Ownership,
+  Architecture Decision Policy, and System Assurance concepts; added
+  conditional atomic Architecture Decision Record and Architecture Constraint
+  collections; and prohibited overview, risk-driver, and constraint-set
+  catch-alls from substituting for their owning concepts.
+- **Reference and validation**: Migrated the synthetic conforming corpus to the
+  required kernel and extended the structural checker for exact root paths,
+  conditional decision and constraint collections, and the absence of
+  `constraints.md`.
 - **Profile 0.8.0**: Made OKF v0.2 and the software-architecture-docs profile
   the required representation contract for every Just Enough Architecture Docs
   corpus, limited local variation to profile-permitted choices, and preserved

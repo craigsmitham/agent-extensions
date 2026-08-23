@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Assessing and reconciling established OKF v0.2 and software-architecture-docs profile corpora through evidence-aware repair and explicitly authorized lifecycle changes.",
+    "intended_use": "Assessing and reconciling established OKF v0.2 and software-architecture-docs profile corpora, including the required system-context kernel and conditional atomic ADR and constraint collections, through evidence-aware repair and explicitly authorized semantic changes.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic reconciliation, authority, reduction, profile conformance, migration, adoption-precondition, and routing cases.",
+    "case_source": "Synthetic reconciliation, authority, reduction, required-kernel substitution, atomic ADR and constraint migration, profile conformance, adoption-precondition, and routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -129,7 +129,7 @@
       {
         "gate": "No local waiver from required profile conformance",
         "case_id": 14,
-        "assertion": "Neither violation is accepted as a repository-local waiver or harmless format deviation."
+        "assertion": "None of the violations is accepted as a repository-local waiver or harmless format deviation."
       }
     ]
   },

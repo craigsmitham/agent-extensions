@@ -3,13 +3,14 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Set up Just Enough Architecture Docs in this repository. AGENTS.md already exists, the deployable application is the clear system boundary, and there are no architecture docs yet. Keep it minimal.",
-      "expected_output": "A minimal conforming OKF v0.2 docs/architecture/index.md with explicit software-architecture-docs profile adoption and a concise AGENTS.md discovery route, without substantive architecture claims, invented authority, or empty collections.",
+      "prompt": "Set up Just Enough Architecture Docs in this repository. AGENTS.md already exists, the deployable application is the clear system boundary, and there are no architecture docs yet. The application is active with an ongoing change horizon, repository owners are the accepted maintenance and escalation route, repository review accepts architecture changes and requires an ADR only for durable consequential choices, and ordinary repository review is the accepted assurance obligation unless regulated or safety-relevant behavior enters scope. Keep it minimal.",
+      "expected_output": "A minimal conforming OKF v0.2 docs/architecture corpus with explicit software-architecture-docs profile adoption, the four required root context concepts, and a concise AGENTS.md discovery route, without invented meaning or empty conditional collections.",
       "assertions": [
         "The deployable application is recorded as the documented system boundary.",
-        "The root index declares OKF v0.2, explicitly adopts and links the installed software-architecture-docs profile version, and records authority routes or explicit evidence gaps and maintenance triggers without inventing architecture or authority.",
+        "The root index declares OKF v0.2, explicitly adopts and links the installed software-architecture-docs profile version, and links lifecycle.md, ownership.md, decisions.md, and assurance.md.",
+        "The four required concepts faithfully express the supplied accepted context, including the bounded ordinary-review assurance conclusion and its reassessment trigger.",
         "AGENTS.md points to the architecture-doc root and shared pack without copying the portable method.",
-        "No empty value, capability, feature, domain, structure, concern, or overview artifact is created.",
+        "No empty decisions, constraints, value, capability, feature, domain, structure, concern, or overview collection is created.",
         "The handoff states the resulting system-to-root mapping, verification performed, unresolved gaps, and appropriate next workflow in terms of what is now true."
       ],
       "stage": "execution"
@@ -48,7 +49,7 @@
         "The placement menu and graduated examples are treated as conditional guidance rather than mandatory scaffolding.",
         "No empty documentation collections are created.",
         "Microservices are not recorded as accepted architecture without authority.",
-        "The smallest valid adoption surface is still offered."
+        "The smallest valid adoption surface includes the four required root concepts but no unearned optional collection."
       ],
       "stage": "execution"
     },
@@ -79,10 +80,11 @@
     {
       "id": 7,
       "prompt": "Set up architecture docs around the one existing accepted concept at docs/architecture/use-cases/confirm-reservation.md. There are no other architecture concepts yet. Keep the corpus ready to grow consistently.",
-      "expected_output": "Minimal setup that preserves the existing concept at its stable canonical named path and adds only required navigation and discovery, without scaffolding other collections or inferring new meaning.",
+      "expected_output": "A bounded setup result that preserves the existing concept and identifies the required lifecycle, ownership, decision-policy, and assurance meaning that must be accepted before setup can claim a conforming corpus.",
       "assertions": [
         "The accepted concept is routed to use-cases/confirm-reservation.md rather than a plural use-cases.md catch-all.",
-        "The use-cases collection appears because its first concept exists and includes index.md navigation.",
+        "The use-cases collection appears because its first concept exists and includes index.md navigation only when the required root kernel can also be established from accepted meaning.",
+        "Missing required system context is not replaced by placeholders or hidden in the root index.",
         "No empty capability, feature, domain, structure, or concern collection is created.",
         "Setup does not rewrite or add use-case semantics beyond the existing accepted document."
       ],
@@ -91,12 +93,12 @@
     {
       "id": 8,
       "prompt": "Set up architecture docs for an active project whose repository owner route is authoritative, but no accepted system lifecycle terminology or architecture decision route exists yet.",
-      "expected_output": "Minimal setup that links the accepted maintainer route and surfaces lifecycle and decision-authority gaps for bounded authoring without guessing from commit history or creating team documents.",
+      "expected_output": "A truthful setup boundary that links the accepted owner route, surfaces the missing lifecycle, decision-policy, and assurance meaning, and does not claim profile-conforming adoption until those required concepts can be established.",
       "assertions": [
         "The repository owner route is linked rather than copied as a roster.",
-        "Missing lifecycle terminology and decision authority are reported as semantic gaps.",
+        "Missing lifecycle terminology, decision policy, and assurance obligations are reported as required semantic gaps.",
         "No lifecycle or authority is inferred from usernames, commits, or directory structure.",
-        "The missing non-blocking governance information does not prevent the otherwise clear setup from completing.",
+        "The missing required context prevents a claim of profile-conforming setup even though the system boundary and owner route are clear.",
         "The setup remains usable for either a solo project or a later multi-team system."
       ],
       "stage": "execution"
@@ -125,7 +127,7 @@
       "assertions": [
         "The request is treated as read-only even though the target setup is otherwise clear.",
         "The adoption brief identifies the system, proposed canonical root, instruction route, required OKF and profile versions, authority routes or gaps, and repository state with evidence status.",
-        "The recommended setup is bounded to the minimal adoption surface and does not invent substantive architecture.",
+        "The recommended setup is bounded to the root index plus lifecycle.md, ownership.md, decisions.md, and assurance.md, and it does not invent their substantive meaning.",
         "Adapter- or host-observed artifact and filesystem evidence shows no created, modified, or deleted task artifact, and structured tool-call evidence records only local non-mutating inspection within the observed task boundary; a self-reported no-change statement alone is insufficient, and unavailable observation evidence remains unknown.",
         "The handoff explicitly states that no files changed and names what would be created or connected if setup is later authorized."
       ],
@@ -134,7 +136,7 @@
     {
       "id": 11,
       "prompt": "Connect the accepted architecture material supplied at inputs/case-11-system-boundary.md and inputs/case-11-decisions-index.md to Just Enough Architecture Docs. For this synthetic repository, those input paths are the established maintained locations and must remain in place. The service is the clear documented system, neither location is an established architecture root, and AGENTS.md is canonical.",
-      "expected_output": "A connection playbook that creates the minimal canonical architecture root, links the accepted material in place, records local authority routes, and does not migrate or rewrite substantive documents.",
+      "expected_output": "A connection playbook that preserves and links the accepted material in place but identifies the missing required lifecycle, ownership, and assurance meaning before claiming a conforming canonical corpus.",
       "files": [
         "evals/files/case-11-system-boundary.md",
         "evals/files/case-11-decisions-index.md"
@@ -142,7 +144,8 @@
       "assertions": [
         "The repository is classified as a connection case rather than a blank bootstrap or established-corpus maintenance case.",
         "One canonical system-to-root mapping is established without moving or rewriting the accepted input material.",
-        "The root navigation states what the linked material establishes and does not silently admit proposals as accepted architecture.",
+        "The accepted boundary and decision route remain sources rather than substitutes for all four required root concepts.",
+        "The missing lifecycle, ownership, and assurance conclusions remain visible and setup is not reported conforming.",
         "AGENTS.md gains one concise discovery route and no empty taxonomy is created."
       ],
       "stage": "execution"
@@ -150,12 +153,13 @@
     {
       "id": 12,
       "prompt": "Adopt Just Enough Architecture Docs for this monorepo. The repository authority explicitly defines catalog and fulfillment as separate systems and assigns their canonical roots to services/catalog/docs/architecture/ and services/fulfillment/docs/architecture/. AGENTS.md governs the whole repository.",
-      "expected_output": "A federated setup that preserves the accepted two-system mapping, creates or connects each minimal corpus root, and exposes both through the canonical repository instruction route without inventing a platform corpus.",
+      "expected_output": "A federated adoption plan that preserves the accepted two-system mapping and shared instruction route while identifying the required per-system context that must be accepted before either corpus can be called conforming.",
       "assertions": [
         "The explicit repository authority is sufficient to classify the setup as federation without asking a ritual confirmation.",
         "Catalog and fulfillment each map to exactly one accepted canonical architecture root.",
         "The repository instruction route exposes both system-to-root mappings and the shared method without creating an unaccepted platform architecture corpus.",
-        "Each system root contains only its own minimal adoption and admitted navigation; no empty taxonomy or cross-system substantive claim is generated."
+        "Each system requires its own lifecycle, ownership, decision-policy, and assurance concepts; missing meaning is not inferred from the mapping or replaced by empty files.",
+        "No empty taxonomy, unaccepted platform corpus, or cross-system substantive claim is generated."
       ],
       "stage": "execution"
     },
@@ -320,6 +324,6 @@
       ]
     }
   ],
-  "suite_version": "0.4.0",
+  "suite_version": "0.5.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

@@ -3,15 +3,16 @@
 Creates and revises human-readable software architecture docs that preserve
 the smallest accepted semantic delta over repository and runtime authorities.
 
-Use it for architecture overviews, responsibility and boundary documents,
-product quality requirements, corpus organization, offering and
-value models, capability/feature/surface models, DDD context views, C4 model
-views, Wardley-informed strategic views, and focused document reviews. Do not
-use it for initial setup or whole-set maintenance, to choose among architecture
-alternatives, to turn a proposal into accepted design, or to mirror the
-implementation in prose. Product research, roadmaps, pricing, sales, and
-marketing content remain outside the skill unless architecture documentation
-is the requested artifact.
+Use it for required system lifecycle, ownership, decision-policy, and assurance
+concepts; accepted ADRs and binding constraints; responsibility and boundary
+documents; product quality requirements; corpus organization; offering and
+value models; capability, feature, and surface models; DDD context views; C4
+model views; Wardley-informed strategic views; and focused document reviews.
+Do not use it for initial setup or whole-set maintenance, to choose among
+architecture alternatives, to turn a proposal into accepted design, or to
+mirror the implementation in prose. Product research, roadmaps, pricing,
+sales, and marketing content remain outside the skill unless architecture
+documentation is the requested artifact.
 
 Every Just Enough Architecture Docs corpus must conform to OKF v0.2 and the
 software-architecture-docs application profile. The skill routes each named
@@ -34,19 +35,20 @@ artifact belongs here; established-corpus health and repair belong to
 This skill is a non-standalone member of the software-architecture pack because
 it loads that pack's software-architecture knowledge.
 
-## Revision 2.0.0
+## Revision 3.0.0
 
-- Requires OKF v0.2 and current software-architecture-docs profile conformance
-  before bounded authoring.
-- Routes unprofiled legacy material to setup for adoption or migration.
-- Makes setup, bounded authoring, and established-corpus reconciliation
-  ownership explicit.
-- Preserves separate base and profile results, including `unknown`.
+- Adds bounded authoring routes for the four required system-context concepts,
+  accepted ADRs, and binding architecture constraints.
+- Preserves each kernel concept as a distinct authority rather than moving its
+  meaning into an overview, quality view, C4 system, or generic risk summary.
+- Keeps the required `decisions.md` policy separate from the conditional
+  `decisions/` ADR collection and never creates `constraints.md`.
 
-This is a breaking public-contract change from `1.1.4`. Existing unprofiled
-corpora require setup and migration before authoring; rollback is to `1.1.4`.
+This is a breaking public-contract change from `2.0.0`. Existing profile
+`0.8.0` corpora require setup and authorized migration before ordinary
+authoring; rollback is to `2.0.0`.
 Behavioral regression and closure audit evidence must remain bound to the exact
-`2.0.0` package and suite identities.
+`3.0.0` package and suite identities.
 
 ## Install
 

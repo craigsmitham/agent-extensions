@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Authoring explicitly requested architecture documents as concise semantic deltas over accepted repository and runtime evidence.",
+    "intended_use": "Authoring explicitly requested profile-conforming architecture concepts, including required system context, accepted ADRs, and binding constraints, as concise semantic deltas over accepted repository and runtime evidence.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic profile-conforming architecture-authoring, authority, organization, lifecycle, required-adoption, same-pack routing, refusal, and migration-precondition cases.",
+    "case_source": "Synthetic strict-profile architecture-authoring, authority, organization, required system context, explicit absence, ADR, constraint, lifecycle, required-adoption, same-pack routing, refusal, and migration-precondition cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",

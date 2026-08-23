@@ -111,8 +111,8 @@
     },
     {
       "id": 10,
-      "prompt": "Our architecture corpus adopts the current software-architecture-docs profile. Remove docs/architecture/current-dependencies.md. It only copies the generated dependency report; preserve its one durable boundary rationale in the owning system overview and repair navigation.",
-      "expected_output": "The explicitly authorized reduction removes the copied inventory, preserves the accepted rationale at its canonical owner, repairs links, and verifies that generated evidence remains reachable.",
+      "prompt": "Our architecture corpus adopts the current software-architecture-docs profile. Remove docs/architecture/current-dependencies.md. It only copies the generated dependency report; preserve its one durable boundary rationale in the owning C4 Software System concept and repair navigation.",
+      "expected_output": "The explicitly authorized reduction removes the copied inventory, preserves the accepted rationale at its canonical C4 owner, repairs links, verifies that generated evidence remains reachable, and does not introduce an overview catch-all.",
       "assertions": [
         "The named document is removed because target and semantic reduction are explicit.",
         "The durable boundary rationale is preserved without copying the dependency inventory.",
@@ -170,12 +170,12 @@
     {
       "id": 14,
       "stage": "execution",
-      "prompt": "Review our established architecture corpus without changing files. Its root declares OKF v0.2 and adopts software-architecture-docs version 0.8.0, but one Feature lacks required profile metadata and another governed concept is outside its canonical path. Report conformance precisely.",
-      "expected_output": "A read-only reconciliation report with separate OKF and profile results that identifies the metadata and path violations, preserves unknown evidence, and does not accept either violation as a local convention.",
+      "prompt": "Review our established architecture corpus without changing files. Its root declares OKF v0.2 and adopts software-architecture-docs version 0.8.0, has no lifecycle.md, ownership.md, decisions.md, or assurance.md, and one Feature lacks required profile metadata. Report conformance against the current installed profile precisely.",
+      "expected_output": "A read-only conformance review that recognizes version 0.8.0 as requiring migration to the current profile, reports the missing required kernel and metadata violation as current-profile failures, reports OKF separately, and preserves unknown where semantic evidence cannot decide.",
       "assertions": [
         "OKF v0.2 and software-architecture-docs profile results are reported separately.",
-        "The missing required metadata and noncanonical governed path are classified as profile nonconformance.",
-        "Neither violation is accepted as a repository-local waiver or harmless format deviation.",
+        "The obsolete adoption version, missing four required root concepts, and Feature metadata problem are classified as current-profile nonconformance.",
+        "None of the violations is accepted as a repository-local waiver or harmless format deviation.",
         "Unavailable structural or semantic evidence remains unknown rather than pass.",
         "No repository file is changed in review-only mode."
       ]
@@ -191,8 +191,33 @@
         "The response does not create a local waiver from the profile.",
         "Ordinary reconciliation does not silently perform initial adoption or identity-changing migration."
       ]
+    },
+    {
+      "id": 16,
+      "stage": "execution",
+      "prompt": "Review our established corpus without changing files. It adopts the current software-architecture-docs profile and has lifecycle.md, ownership.md, and decisions.md, but assurance is mentioned only in a C4 Software System document and assurance.md is absent.",
+      "expected_output": "A read-only profile finding that assurance.md is a missing required root concept, the C4 mention cannot substitute for it, and profile conformance fails while OKF conformance remains separately assessed.",
+      "assertions": [
+        "The missing assurance.md is identified as profile nonconformance even though related prose exists elsewhere.",
+        "The C4 Software System is not accepted as a substitute for the exact required concept path and type.",
+        "Migration of the assurance meaning is recommended as a semantic ownership change rather than silently performed in review mode.",
+        "OKF and profile results remain separate and insufficient semantic evidence remains unknown."
+      ]
+    },
+    {
+      "id": 17,
+      "stage": "execution",
+      "prompt": "Migrate our established architecture corpus from software-architecture-docs 0.8.0 to the current profile. You are authorized to split the accepted lifecycle, maintenance, decision-policy, and ordinary-review assurance meaning out of overview.md into the required root concepts, replace duplicated C4 prose with links, migrate two accepted ADRs from decisions.md into named records under decisions/, and split three binding external constraints from constraints.md into named constraints under constraints/. Preserve proposals outside the ADR collection and remove the old catch-alls.",
+      "expected_output": "An authorized semantic migration to the current profile with four required root concepts, atomic accepted ADR and external-constraint collections, updated navigation and adoption, proposals preserved outside ADRs, duplicates removed, and separate OKF and profile verification.",
+      "assertions": [
+        "The accepted system context moves to lifecycle.md, ownership.md, decisions.md as policy, and assurance.md without leaving duplicated overview or C4 ownership.",
+        "Only accepted decisions become named Architecture Decision Records under decisions/; proposals retain their original lifecycle.",
+        "Each binding external constraint becomes one named Architecture Constraint under constraints/, and constraints.md is removed.",
+        "Indexes, inbound links, log, and root adoption are updated to the current profile version.",
+        "The handoff reports base OKF and structural plus manual semantic profile results separately."
+      ]
     }
   ],
-  "suite_version": "0.2.0",
+  "suite_version": "0.3.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

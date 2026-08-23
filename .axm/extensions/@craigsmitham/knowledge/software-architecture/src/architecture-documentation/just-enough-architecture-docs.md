@@ -16,7 +16,7 @@ sources:
     title: Product quality in software architecture
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-23T00:23:36Z
+  at: 2026-08-23T01:30:58Z
 ---
 
 # Just Enough Architecture Docs
@@ -28,6 +28,13 @@ current facts to the repository and runtime sources that already own them.
 **Maturity:** Candidate. Established architecture practices support its parts,
 but this exact synthesis needs evidence from independent use before it should
 be treated as a proven pattern.
+
+This pattern explains the philosophy, admission test, authority model, and
+maintenance discipline behind the
+[software-architecture-docs application
+profile](software-architecture-application-profile.md). It is not an
+alternative representation. The profile alone defines exact types, paths,
+required concepts, containment, and permitted variance.
 
 ## Context
 
@@ -142,10 +149,11 @@ smallest safe response may be one sentence, a named concept, a relationship, a
 diagram, or an evidence link rather than another document.
 
 This scales by risk rather than organization size. A solo hobby project may
-need only a navigational root and a concise overview naming its lifecycle and
-maintainer. A large system may warrant more independently owned concepts and
-views because its change surface, coordination cost, or assurance obligations
-are greater. Neither scale earns a complete taxonomy by default.
+express the required lifecycle, ownership, decision-policy, and assurance
+context in only a few sentences each. A large system may warrant more
+independently owned concepts and views because its change surface, coordination
+cost, constraints, or assurance obligations are greater. Neither scale earns a
+complete optional taxonomy by default.
 
 ### Assign authority by information kind
 
@@ -209,13 +217,13 @@ not be replaced by one folder hierarchy.
 ### Organize for discovery, not ontology
 
 Treat the directory tree as a route into the architecture, not as the
-architecture model itself. Use `strategy/`, `value/`, `use-cases/`,
-`capabilities/`, `features/`, `surfaces/`, `domains/`, `structure/`, and
-`quality/` as consistent reader-facing collection names when they contain an
-admitted concept or view. Omit a collection when no current claim passes the
-admission test; add another top-level collection only when it serves a
-consequential reader question that none of the defaults can represent
-coherently.
+architecture model itself. The application profile requires a small root
+system-context kernel. Conditional collections for ADRs, constraints, value,
+use cases, capabilities, features, surfaces, domains, structure, and quality
+appear only when an admitted concept earns them. Omit a conditional collection
+when no current claim passes the admission test; add another top-level
+collection only when it serves a consequential reader question that none of
+the profile routes can represent coherently.
 
 Within `value/`, keep offerings, audiences, needs, jobs, and value propositions
 in sibling collections. Keep goal-oriented behavior in the top-level
@@ -231,8 +239,8 @@ Quality Requirements. Classify each beneath one primary ISO/IEC 25010:2023
 characteristic and subcharacteristic, create only the paths earned by admitted
 requirements, and link secondary classifications rather than duplicate the
 concept. Keep `quality/index.md` navigational. Put cross-requirement priorities
-and tradeoffs in the existing system overview; do not invent a mandatory
-Product Quality View. The [Product quality in software
+and tradeoffs in the accepted decisions and affected concepts that own them;
+do not invent a mandatory Product Quality View. The [Product quality in software
 architecture](../foundations/product-quality.md) foundation owns the model and
 its distinction from quality needs, risks, architecture responses, and
 assessment evidence.[^product-quality]
@@ -248,10 +256,10 @@ subdomain to be modeled by several contexts.
 
 Let domain indexes provide domain-first routes to related contexts without
 physically nesting them. Let each context document own its durable purpose,
-model and language scope, authority, exclusions, and major relationships. Link
-to code, schemas, configuration, and tests as current realization or
-conformance evidence rather than relying on implementation structure as the
-only declaration of the context.
+model and language scope, authority, exclusions, and consequential
+relationships. Link to code, schemas, configuration, and tests as current
+realization or conformance evidence rather than relying on implementation
+structure as the only declaration of the context.
 
 The [Software architecture docs application
 profile](software-architecture-application-profile.md) owns the exact OKF
@@ -299,23 +307,23 @@ Keep it scoped to one question, label relationships meaningfully, and avoid
 manually redrawing current code or deployment inventories that can be
 generated. A diagram is part of the explanation, not decoration.
 
-### Make stewardship and system lifecycle visible
+### Let system context drive selection
 
 At the system level, make it easy for a reader to learn:
 
 - the system's lifecycle or support state, such as experimental, active,
   maintained, deprecated, or retired, using the repository's accepted terms;
-- how to reach the person, role, team, or mechanism responsible for maintenance
-  and architecture decisions; and
-- which changes or events trigger review of the architecture docs.
+- the stable ownership and maintenance route without a volatile roster;
+- how consequential decisions are accepted, recorded, and reconsidered; and
+- what confidence, evidence, review, or approval obligations apply.
 
-Place this in the overview or canonical software-system concept, or link to the
-stable authority that owns it. Do not copy a volatile team roster, on-call
-schedule, or service-catalog record. Containers and components inherit this
-context from their containing system unless a distinct owner, lifecycle,
-support policy, criticality, or retirement path is consequential. Record only
-the exception, not repeated parent context. OKF `status` continues to describe
-the document lifecycle and must not be overloaded for system lifecycle.
+These are all risk drivers, but Risk Driver is not a separate semantic bucket.
+The [application profile](software-architecture-application-profile.md) gives
+each concern its required root identity and exact contract. Each may be brief
+or may establish a justified absence; none may disappear silently. Containers
+and components inherit this context unless a distinct exception is
+consequential. OKF `status` continues to describe the document lifecycle and
+must not be overloaded for system lifecycle.
 
 ### Keep semantic changes under human authority
 
@@ -399,8 +407,9 @@ specification set; use those required artifacts when the context demands them.
   the same claim independently instead of linking to one owner.
 - **Prose as executable truth:** examples or copied contracts become a second
   implementation specification.
-- **Invisible stewardship:** readers cannot tell the system's lifecycle, who
-  maintains it, or who can resolve an architecture disagreement.
+- **Invisible system context:** readers cannot tell the lifecycle, ownership,
+  decision policy, or assurance posture that should govern documentation depth
+  and architecture change.
 - **Agent-authored expansion:** a useful suggestion becomes accepted durable
   meaning without explicit authority to add or remove semantic content.
 - **Silent reconciliation:** current code or newer prose is assumed to win
