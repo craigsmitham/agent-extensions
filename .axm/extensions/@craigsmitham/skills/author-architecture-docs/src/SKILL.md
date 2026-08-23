@@ -50,12 +50,12 @@ shared pack membership alone does not authorize composition.
 
 | Need | Concept path from the bundle root |
 | --- | --- |
-| Author or revise system lifecycle | Profile section `#system-lifecycle`; canonical corpus path `lifecycle.md` |
-| Author or revise system ownership | Profile section `#system-ownership`; canonical corpus path `ownership.md` |
-| Author or revise architecture decision policy | Profile section `#architecture-decision-policy`; canonical corpus path `decisions.md` |
-| Author or revise system assurance | Profile section `#system-assurance`; canonical corpus path `assurance.md` |
-| Record one accepted architecture decision | Profile section `#architecture-decision-record`; canonical corpus path `decisions/<decision>.md` |
-| Document one binding architecture constraint | Profile section `#architecture-constraint`; canonical corpus path `constraints/<constraint>.md` |
+| Author or revise system lifecycle | `guides/documenting-system-lifecycle.md` |
+| Author or revise system ownership | `guides/documenting-system-ownership.md` |
+| Author or revise architecture decision policy | `guides/documenting-architecture-decision-policies.md` |
+| Author or revise system assurance | `guides/documenting-system-assurance.md` |
+| Record one accepted architecture decision | `guides/documenting-architecture-decision-records.md` |
+| Document one binding architecture constraint | `guides/documenting-architecture-constraints.md` |
 | Understand what this knowledge bundle owns | `overview.md` |
 | Apply or explain the architecture-doc pattern | `architecture-documentation/just-enough-architecture-docs.md` |
 | State or review responsibilities, exclusions, authority, boundaries, state ownership, or dependency direction | `guides/reviewing-responsibilities-with-scenarios.md` |

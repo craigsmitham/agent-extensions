@@ -2,6 +2,9 @@
 
 ## 2026-08-22
 
+- **Focused authoring coverage**: Added dedicated guides for every profile
+  `0.9.0` system-context, decision, and constraint type and linked each guide
+  from the normative type definition and guide index.
 - **Profile 0.9.0**: Required root System Lifecycle, System Ownership,
   Architecture Decision Policy, and System Assurance concepts; added
   conditional atomic Architecture Decision Record and Architecture Constraint

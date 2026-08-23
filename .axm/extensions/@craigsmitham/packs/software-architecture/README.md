@@ -23,14 +23,14 @@ OKF v0.2 and conform to the bundled software-architecture-docs profile.
 Repository-local accepted authority governs meaning, while the profile governs
 representation and permitted variance.
 
-## Revision 0.5.0
+## Revision 0.6.0
 
-This release updates the pack floors to knowledge `3.0.0`, authoring `3.0.0`,
-setup `0.5.0`, and reconciliation `0.3.0`. Profile `0.9.0` requires the four
-root system-context concepts, separates the decision policy from accepted ADRs,
-and admits a constraints collection only when a binding constraint exists.
-Existing profile `0.8.0` corpora require authorized semantic migration;
-rollback is to pack `0.4.0` and its prior member versions.
+This release updates the pack floors to knowledge `3.1.0`, authoring `3.1.0`,
+setup `0.5.0`, and reconciliation `0.3.0`. Every one of profile `0.9.0`'s 23
+concept types now has a focused one-artifact guide, including the four required
+root system-context concepts, accepted ADRs, and binding constraints. The
+profile contract is unchanged; rollback is to pack `0.5.0` and its prior member
+versions.
 
 ## Install
 
@@ -61,7 +61,8 @@ Each skill includes a behavioral suite. Together they check minimal adoption,
 workflow routing boundaries, accepted desired-state handling, authority
 reconciliation, demand-and-value separation, product-quality authority, C4
 containment, strategic freshness, maintenance lifecycle decisions, and
-resistance to empty scaffolding or exhaustive prose mirrors.
+resistance to empty scaffolding or exhaustive prose mirrors. Focused execution
+cases cover all six system-context, decision, and constraint types.
 
 ## License
 

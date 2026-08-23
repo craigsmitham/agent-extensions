@@ -49,7 +49,7 @@ sources:
     title: C4 model
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-23T01:30:58Z
+  at: 2026-08-23T02:10:17Z
 ---
 
 # Software architecture docs application profile for OKF v0.2
@@ -279,6 +279,9 @@ state, its material change horizon or expected evolution, and the events that
 trigger review of this context and the architecture corpus. It MUST NOT use
 OKF `status` as the system lifecycle.
 
+For a focused procedure, see [Documenting system
+lifecycle](../guides/documenting-system-lifecycle.md).
+
 ### System Ownership
 
 ```yaml
@@ -296,6 +299,9 @@ for maintenance; the material stewardship boundary; the continuity, transfer,
 or escalation route; and consequential ownership conditions that affect safe
 change. It MUST NOT copy a volatile team roster, on-call schedule, or named
 individual when a stable authority route owns that detail.
+
+For a focused procedure, see [Documenting system
+ownership](../guides/documenting-system-ownership.md).
 
 ### Architecture Decision Policy
 
@@ -318,6 +324,9 @@ the rationale, the alternative decision authority, and the condition that
 would require local records. A system may have no local records; it MUST NOT
 omit its decision policy.
 
+For a focused procedure, see [Documenting architecture decision
+policies](../guides/documenting-architecture-decision-policies.md).
+
 ### System Assurance
 
 ```yaml
@@ -337,6 +346,9 @@ MAY establish that ordinary repository review is sufficient when the bounded
 rationale and triggers are explicit. It MUST link rather than duplicate
 Product Quality Requirements, tests, evaluations, compliance records, or live
 evidence owned elsewhere.
+
+For a focused procedure, see [Documenting system
+assurance](../guides/documenting-system-assurance.md).
 
 ## Decision and constraint types
 
@@ -364,6 +376,9 @@ Architecture Decision Records. A superseded record MUST remain reachable and
 link its replacement. OKF `status` describes the knowledge document lifecycle
 and MUST NOT be presented as the decision's semantic status.
 
+For a focused procedure, see [Documenting architecture decision
+records](../guides/documenting-architecture-decision-records.md).
+
 ### Architecture Constraint
 
 ```yaml
@@ -381,6 +396,9 @@ architecture-significant limitation and identify its authority, affected
 scope, architectural consequences, and release or review conditions. A current
 implementation property, preferred option, internal architecture decision, or
 unaccepted assumption MUST NOT be represented as an Architecture Constraint.
+
+For a focused procedure, see [Documenting architecture
+constraints](../guides/documenting-architecture-constraints.md).
 
 ## Demand and value types
 

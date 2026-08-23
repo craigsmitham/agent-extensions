@@ -35,20 +35,19 @@ artifact belongs here; established-corpus health and repair belong to
 This skill is a non-standalone member of the software-architecture pack because
 it loads that pack's software-architecture knowledge.
 
-## Revision 3.0.0
+## Revision 3.1.0
 
-- Adds bounded authoring routes for the four required system-context concepts,
-  accepted ADRs, and binding architecture constraints.
-- Preserves each kernel concept as a distinct authority rather than moving its
-  meaning into an overview, quality view, C4 system, or generic risk summary.
-- Keeps the required `decisions.md` policy separate from the conditional
-  `decisions/` ADR collection and never creates `constraints.md`.
+- Routes all six system-context, decision, and constraint types through focused
+  one-artifact guides rather than profile sections alone.
+- Adds behavioral coverage for concise System Ownership and Architecture
+  Decision Policy authoring, completing focused coverage for those six types.
+- Retains strict OKF v0.2 and profile `0.9.0` conformance without changing the
+  profile contract.
 
-This is a breaking public-contract change from `2.0.0`. Existing profile
-`0.8.0` corpora require setup and authorized migration before ordinary
-authoring; rollback is to `2.0.0`.
+This is a nonbreaking authoring-guidance addition to `3.0.0`; rollback is to
+`3.0.0`.
 Behavioral regression and closure audit evidence must remain bound to the exact
-`3.0.0` package and suite identities.
+`3.1.0` package and suite identities.
 
 ## Install
 

@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "author-architecture-docs",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Create concise profile-conforming system-context, decision, constraint, and architecture docs as an authorized semantic delta over repository and runtime evidence",
   "keywords": [
     "software-architecture",

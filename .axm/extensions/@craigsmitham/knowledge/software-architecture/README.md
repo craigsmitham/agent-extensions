@@ -23,22 +23,18 @@ marked `draft`, and not recorded as human-verified. Evaluate the guidance before
 adopting it as an authority. Promote concepts individually only after actual
 review or evidence from independent use supports the change.
 
-## Revision 3.0.0
+## Revision 3.1.0
 
-- Adds the mandatory `lifecycle.md`, `ownership.md`, `decisions.md`, and
-  `assurance.md` system-context kernel to profile `0.9.0`.
-- Separates the required decision policy from optional accepted ADRs under
-  `decisions/`, and represents binding constraints only as named concepts under
-  `constraints/`.
-- Treats risk as a selection lens rather than a catch-all concept, and keeps
-  system context out of overview, quality, and C4 documents.
-- Extends structural validation and the minimal conforming corpus to enforce
-  the new paths and conditional collections while retaining named manual
-  semantic review.
+- Adds focused one-artifact guides for System Lifecycle, System Ownership,
+  Architecture Decision Policy, System Assurance, Architecture Decision
+  Record, and Architecture Constraint.
+- Links each normative profile type directly to its focused procedure and
+  indexes all six alongside the existing concept guides.
+- Keeps profile `0.9.0` unchanged because the required representation and
+  semantics have not changed; this release fills procedural guidance coverage.
 
-This is a breaking change from `2.0.0`. Existing profile `0.8.0` corpora require
-an evidence-backed migration before they conform to profile `0.9.0`; rollback
-is to knowledge package `2.0.0` and profile `0.8.0`.
+This is a nonbreaking guidance addition to `3.0.0`; rollback is to knowledge
+package `3.0.0` with the same profile `0.9.0` conformance contract.
 
 Install it with:
 

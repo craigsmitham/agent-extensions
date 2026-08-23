@@ -363,8 +363,32 @@
         "No constraints.md or Constraint Set concept is created.",
         "The constraint is not confused with an internal decision, preference, assumption, or current implementation property."
       ]
+    },
+    {
+      "id": 27,
+      "stage": "execution",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Revise ownership.md for a small maintained service. The Platform Operations role owns repository stewardship and service continuity, changes are reviewed through the repository, and unresolved continuity concerns escalate to the engineering director. Keep individual names and the separate architecture decision authority out of this document.",
+      "expected_output": "One concise System Ownership concept at ownership.md that identifies stable stewardship and continuity responsibilities, the repository review mechanism, and the escalation route without publishing a volatile roster or absorbing decision policy.",
+      "assertions": [
+        "The exact System Ownership type and ownership.md path are used.",
+        "The stable owner role, stewardship and continuity responsibilities, review mechanism, and escalation route are explicit.",
+        "No individual roster or other volatile contact inventory is copied into the concept.",
+        "Architecture decision authority remains owned by decisions.md rather than being duplicated here."
+      ]
+    },
+    {
+      "id": 28,
+      "stage": "execution",
+      "prompt": "Our corpus explicitly adopts the current software-architecture-docs profile. Revise decisions.md for a small maintained service. An ADR is required when an accepted choice changes a responsibility, boundary, public contract, binding quality consequence, or difficult-to-reverse technology commitment. Repository maintainers accept and supersede records. Records belong under decisions/ and must state context, choice, rationale, consequences, and reconsideration conditions. No decision currently crosses the threshold; record that bounded conclusion without creating decisions/ and require review when one does.",
+      "expected_output": "One concise Architecture Decision Policy concept at decisions.md that defines the ADR threshold, acceptance and supersession authority, record location and minimum content, and reconsideration trigger while justifying why no decisions collection is currently earned.",
+      "assertions": [
+        "The exact Architecture Decision Policy type and decisions.md path are used.",
+        "The ADR threshold, acceptance and supersession authority, record location, minimum content, and review trigger are explicit.",
+        "The current absence of ADRs is bounded and justified rather than stated as a bare none or N/A.",
+        "No decisions/ directory or Architecture Decision Record is created before an accepted decision crosses the policy threshold."
+      ]
     }
   ],
-  "suite_version": "3.0.0",
+  "suite_version": "3.1.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }
