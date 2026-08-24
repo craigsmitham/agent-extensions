@@ -49,7 +49,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | --- | --- |
 | [docs](.axm/extensions/@craigsmitham/knowledge/docs/src/index.md) | Portable documentation craft for authoring, naming, information architecture, auditing, and improving explainers, guides, principles, and evidence-backed patterns |
 | [effect-v4](.axm/extensions/@craigsmitham/knowledge/effect-v4/src/index.md) | Opinionated Effect v4 guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification |
-| [field-notes](.axm/extensions/@craigsmitham/knowledge/field-notes/src/index.md) | Operational field-note practice for factual capture, impact-aware triage, evidence-led findings, and verified corrective action |
+| [field-notes](.axm/extensions/@craigsmitham/knowledge/field-notes/src/index.md) | Operational field-note practice for factual and diagnostic evidence capture, impact-aware triage, evidence-led findings, and verified corrective action |
 | [knowledge-management](.axm/extensions/@craigsmitham/knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-management](.axm/extensions/@craigsmitham/knowledge/product-management/src/index.md) | Product management principles for outcomes, product risks, empowered teams, discovery, delivery, evidence, and product strategy |
 | [software-architecture](.axm/extensions/@craigsmitham/knowledge/software-architecture/src/index.md) | Human-first software architecture guidance and the required OKF profile for system context, decisions, constraints, product quality requirements, boundaries, and selected views |
@@ -86,7 +86,7 @@ pattern](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/design
 Choose first, after, later, or never. If tidying first, make only the smallest
 behavior-preserving change that makes the authorized change easier.
 
-<!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.0 kind=rule -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.1 kind=rule -->
 
 ## Field notes
 
@@ -107,6 +107,16 @@ While doing ordinary work within a declared subject, record one note when:
 
 Do not record your own typo, the same incident twice in one session, or
 speculation without an observed incident.
+
+### Preserve diagnostic evidence
+
+While working within a declared subject, do not discard safe structured failure
+details before deciding whether an interaction qualifies for capture. Inspect
+the complete result, preserve the process exit status, and keep result output
+separate from diagnostic output. If output must be reduced, retain materially
+useful error, request, response, retry, recovery, and affected-artifact fields.
+Never retain credentials, authorization material, opaque response bodies, or
+other sensitive values. Do not rerun a mutation merely to recover evidence.
 
 ### How to record
 
