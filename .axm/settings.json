@@ -49,6 +49,9 @@
     "software-engineering": "workspace:@craigsmitham/knowledge/software-engineering",
     "software-architecture": "workspace:@craigsmitham/knowledge/software-architecture"
   },
+  "subagents": {
+    "researcher": "workspace:@craigsmitham/subagents/researcher"
+  },
   "packs": {
     "effect-v4": "workspace:@craigsmitham/packs/effect-v4",
     "docs": "workspace:@craigsmitham/packs/docs",

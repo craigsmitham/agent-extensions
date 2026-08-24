@@ -29,7 +29,7 @@ Install the replacement `@agentxm` identities; the previously published
 | `effect-v4` | Effect v4 guidance: a routing skill plus a knowledge bundle of twenty-two guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification | `axm install @craigsmitham/packs/effect-v4` |
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
-| `qrspi` | Frame concern-aware research questions and execute them as consistent, evidence-backed reports | `axm install @craigsmitham/packs/qrspi` |
+| `qrspi` | Frame concern-aware Research Briefs when needed and execute them through a read-only researcher subagent | `axm install @craigsmitham/packs/qrspi` |
 | `software-architecture` | Durable architecture knowledge plus setup, authoring, and maintenance workflows for human-first architecture docs and product quality requirements | `axm install @craigsmitham/packs/software-architecture` |
 | `software-engineering` | Software-work-item authoring, shared engineering knowledge, and concise YAGNI and Tidy First rules | `axm install @craigsmitham/packs/software-engineering` |
 
@@ -52,7 +52,6 @@ Install the replacement `@agentxm` identities; the previously published
 | `author-okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/author-okf` |
 | `improve-whatever` | Evidence-based evaluation through the lens of Philippians 4:8–9 | `axm install @craigsmitham/skills/improve-whatever` |
 | `question` | Frame fast, concern-aware investigations as compact, prioritized Research Briefs | `axm install @craigsmitham/skills/question` |
-| `research` | Execute bounded Research Briefs as consistent, evidence-backed reports | `axm install @craigsmitham/skills/research` |
 
 ## Layout
 
@@ -63,6 +62,7 @@ Canonical packages live under:
 ├── knowledge/
 ├── packs/
 ├── rules/
+├── subagents/
 └── skills/
 ```
 

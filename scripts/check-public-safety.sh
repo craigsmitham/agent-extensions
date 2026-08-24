@@ -161,12 +161,13 @@ expected=(
   skills/research
   skills/setup-architecture-docs
   skills/temporal-dates
+  subagents/researcher
 )
 
 expected_list="$(printf '%s\n' "${expected[@]}")"
 actual_list="$(
   find "$validation_root/.axm/extensions/@craigsmitham" -type f \
-    \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
+    \( -name skill.json -o -name subagent.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
     | sed -E "s#^${validation_root}/.axm/extensions/@craigsmitham/([^/]+/[^/]+)/.*#\\1#" \
     | sort
 )"
@@ -217,7 +218,7 @@ while IFS= read -r -d '' manifest; do
     (.repository.directory | startswith(".axm/extensions/@craigsmitham/"))
   ' "$manifest" >/dev/null
 done < <(find "$validation_root/.axm/extensions/@craigsmitham" -type f \
-  \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) -print0)
+  \( -name skill.json -o -name subagent.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) -print0)
 
 while IFS= read -r license_id; do
   if [[ ! -f "$validation_root/LICENSES/${license_id}.txt" ]]; then
@@ -226,7 +227,7 @@ while IFS= read -r license_id; do
   fi
 done < <(
   find "$validation_root/.axm/extensions/@craigsmitham" -type f \
-    \( -name skill.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
+    \( -name skill.json -o -name subagent.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
     -print0 \
     | xargs -0 jq -r '.license' \
     | rg -o '[A-Za-z0-9][A-Za-z0-9.-]*' \
@@ -240,7 +241,8 @@ if jq -e --argjson expected_count "${#expected[@]}" '
     (.skills | to_entries[] | {type: "skills", key, source: (.value | source)}),
     (.knowledge | to_entries[] | {type: "knowledge", key, source: (.value | source)}),
     (.packs | to_entries[] | {type: "packs", key, source: (.value | source)}),
-    (.rules | to_entries[] | {type: "rules", key, source: (.value | source)})
+    (.rules | to_entries[] | {type: "rules", key, source: (.value | source)}),
+    (.subagents | to_entries[] | {type: "subagents", key, source: (.value | source)})
   ]) as $entries |
   ([$entries[] | select(.source | startswith("workspace:@craigsmitham/"))] |
     length == $expected_count) and

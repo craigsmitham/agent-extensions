@@ -1,8 +1,8 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.0.1",
-  "description": "Concern-aware framing and consistent evidence-backed execution of independent research",
+  "version": "0.1.0",
+  "description": "One-shot concern-aware framing and delegated evidence-backed research with inspectable Research Briefs",
   "keywords": [
     "research",
     "questions",
@@ -13,7 +13,9 @@
     "synthesis",
     "risk",
     "uncertainty",
-    "blind-review"
+    "blind-review",
+    "delegation",
+    "subagent"
   ],
   "repository": {
     "type": "git",
@@ -25,7 +27,8 @@
   "type": "pack",
   "name": "qrspi",
   "dependencies": {
-    "@craigsmitham/skills/question": ">=0.0.1",
-    "@craigsmitham/skills/research": ">=0.0.1"
+    "@craigsmitham/skills/question": ">=0.1.2",
+    "@craigsmitham/skills/research": ">=1.0.0",
+    "@craigsmitham/subagents/researcher": ">=0.0.1"
   }
 }

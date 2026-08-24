@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "research",
-  "version": "0.0.3",
-  "description": "Executes bounded research briefs and returns consistent question-by-question evidence reports",
+  "version": "1.0.0",
+  "description": "Orchestrates QRSPI framing and delegated evidence-backed research into consistent question-by-question reports",
   "keywords": [
     "research",
     "investigation",
@@ -14,6 +14,7 @@
     "uncertainty",
     "decision-support"
   ],
+  "standalone": false,
   "recommendedPacks": [
     "@craigsmitham/packs/qrspi"
   ],

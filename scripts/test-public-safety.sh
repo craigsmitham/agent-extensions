@@ -139,6 +139,25 @@ expect_failure "malformed Agent Skill evaluation source" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
   _ "$malformed_suite_fixture" "$(dirname "$real_axm")"
 
+subagent_metadata_fixture="$(make_fixture)"
+subagent_manifest=".axm/extensions/@craigsmitham/subagents/researcher/subagent.json"
+jq 'del(.license)' "$subagent_metadata_fixture/$subagent_manifest" \
+  >"$subagent_metadata_fixture/$subagent_manifest.next"
+mv "$subagent_metadata_fixture/$subagent_manifest.next" \
+  "$subagent_metadata_fixture/$subagent_manifest"
+expect_failure "public subagent without required license metadata" \
+  env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
+  _ "$subagent_metadata_fixture" "$(dirname "$real_axm")"
+
+subagent_source_fixture="$(make_fixture)"
+jq 'del(.subagents.researcher)' "$subagent_source_fixture/.axm/settings.json" \
+  >"$subagent_source_fixture/.axm/settings.json.next"
+mv "$subagent_source_fixture/.axm/settings.json.next" \
+  "$subagent_source_fixture/.axm/settings.json"
+expect_failure "public subagent missing from workspace source authority" \
+  env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
+  _ "$subagent_source_fixture" "$(dirname "$real_axm")"
+
 eval_symlink_fixture="$(make_fixture)"
 mkdir -p "$eval_symlink_fixture/.axm/extensions/@craigsmitham/skills/author-docs/evals/files"
 ln -s ../../src/SKILL.md \

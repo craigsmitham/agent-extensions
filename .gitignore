@@ -4,3 +4,6 @@
 
 # Generated evaluation runs
 /.work/evals/
+
+# Generated AXM build intermediates
+/.axm/build/
