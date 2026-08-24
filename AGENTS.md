@@ -35,6 +35,8 @@ evaluation evidence is not audit or release approval.
 <!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery -->
 ## Knowledge Bundles
 
+Use `axm knowledge concepts --help` to search, read, and explore these bundles.
+
 ### @agentxm
 
 | Bundle | Description |
