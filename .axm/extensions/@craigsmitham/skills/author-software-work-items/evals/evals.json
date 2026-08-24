@@ -124,8 +124,116 @@
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
       ]
+    },
+    {
+      "id": 11,
+      "stage": "execution",
+      "prompt": "Three days after a Sentry investigation and root-cause research, prepare the exact Linear defect issue body for creation. The derived research summary is at docs/research-summary.md. Before synthesis, reopen the authoritative current Sentry family at evidence/sentry-family.json rather than relying only on that summary. Preserve the accepted diagnosis and correction, keep the source safe, and state what the tracker readback must verify after creation.",
+      "expected_output": "A Linear-ready defect report that carries the accepted root-cause research while retaining the initiating Sentry short ID and controlled-access URL from the refreshed authoritative family, followed by a post-write readback check against that source inventory.",
+      "files": [
+        {
+          "source": "evals/files/case-11-research-summary.md",
+          "target": "docs/research-summary.md"
+        },
+        {
+          "source": "evals/files/case-11-sentry-family.json",
+          "target": "evidence/sentry-family.json"
+        }
+      ],
+      "assertions": [
+        "The issue includes the Sentry short ID CHECKOUT-WEB-482 and its exact controlled-access URL.",
+        "The current Sentry family supplies provenance instead of the derived research summary being treated as the authoritative source.",
+        "The supplied observation time, project, and production environment are preserved without invented counts or event content.",
+        "The final verification requires Linear readback to retain the Sentry identifier and link."
+      ]
+    },
+    {
+      "id": 12,
+      "stage": "execution",
+      "prompt": "Draft one defect report from the two material monitoring occurrences in evidence/occurrences.json. They support the same diagnosed billing defect. Keep the report concise, but make each initiating occurrence independently recoverable.",
+      "expected_output": "One defect report whose source inventory preserves both monitoring occurrences as separate identifier-and-link entries with their supplied observation times and shared project and environment.",
+      "files": [
+        {
+          "source": "evals/files/case-12-occurrences.json",
+          "target": "evidence/occurrences.json"
+        }
+      ],
+      "assertions": [
+        "BILLING-201 appears with https://monitor.example.test/issues/BILLING-201 and 2026-08-20T11:03:00Z, and BILLING-233 appears with https://monitor.example.test/issues/BILLING-233 and 2026-08-22T18:41:00Z.",
+        "The two occurrences are not collapsed into an untraceable count or one representative link.",
+        "The shared billing-api project and production environment remain associated with both occurrences.",
+        "No event IDs, raw logs, request bodies, or unrelated source fields are invented."
+      ]
+    },
+    {
+      "id": 13,
+      "stage": "execution",
+      "prompt": "Write a defect report from an AlertWatch notification that checkout failed in production. The authoritative occurrence was deleted before handoff, so its stable identifier, URL, and observation time cannot be recovered. The environment is known to be production; no counts or correlation IDs are available. Do not omit the missing provenance and do not guess it.",
+      "expected_output": "A defect report that identifies AlertWatch and production while explicitly marking the authoritative occurrence identifier, URL, observation time, counts, and correlation identifiers unavailable rather than fabricating or silently dropping them.",
+      "assertions": [
+        "AlertWatch is retained as the source system and production as the known environment.",
+        "The stable identifier, URL, and observation time are explicitly marked unavailable.",
+        "No identifier, timestamp, count, project, correlation value, or link is invented.",
+        "The report remains actionable about the observed checkout failure without disguising the provenance gap."
+      ]
+    },
+    {
+      "id": 14,
+      "stage": "execution",
+      "prompt": "Draft a defect report from manual QA. On build 211 in the staging environment, a tester observed that saving an empty optional nickname clears the account display name. The accepted profile contract says the display name must remain unchanged. No tracker or source link was supplied.",
+      "expected_output": "An ordinary manual-QA defect report with the supplied build, staging environment, expected and actual behavior, and honest absence of a source link, without irrelevant Sentry or monitoring fields.",
+      "assertions": [
+        "Manual QA is identified as the discovery activity and the supplied build and staging environment are preserved.",
+        "Expected and actual behavior remain separate and cite the supplied profile contract.",
+        "No Sentry identifier, Sentry URL, monitoring event ID, explicit monitoring classification, or monitoring-specific placeholder is added. A generic occurrence count or an honest generic source-unavailable note is not a monitoring field.",
+        "The absent source link is not replaced with an invented tracker or monitoring URL."
+      ]
+    },
+    {
+      "id": 15,
+      "stage": "execution",
+      "prompt": "A Linear create returned ENG-704. Perform the final verification using the source inventory at evidence/source-inventory.md and the persisted Linear readback at evidence/persisted-linear.md. Do not verify against the submitted draft. You are not authorized to mutate the issue again in this exercise.",
+      "expected_output": "A failed persistence-verification result that identifies the missing MonitorCo source URL, does not claim the issue is complete, and names an authorized correction plus another readback as the required next step.",
+      "files": [
+        {
+          "source": "evals/files/case-15-source-inventory.md",
+          "target": "evidence/source-inventory.md"
+        },
+        {
+          "source": "evals/files/case-15-persisted-linear.md",
+          "target": "evidence/persisted-linear.md"
+        }
+      ],
+      "assertions": [
+        "Verification fails because the persisted item omitted the inventory's authoritative source link.",
+        "The response distinguishes the persisted readback from the submitted draft or create result.",
+        "ENG-704 is not reported as fully verified or provenance-complete.",
+        "The required next step is an authorized correction followed by another tracker readback."
+      ]
+    },
+    {
+      "id": 16,
+      "stage": "execution",
+      "prompt": "Revise a defect report after research. Use docs/research-summary.md for the diagnosis, but use evidence/sentry-family.json for originating provenance. The summary is concise and intentionally omits the Sentry pointer. Preserve the authoritative pointer without copying raw event content.",
+      "expected_output": "A revised defect report that keeps the research diagnosis and the authoritative Sentry short ID and link, making clear that the summary is derived context rather than the source of the occurrence.",
+      "files": [
+        {
+          "source": "evals/files/case-11-research-summary.md",
+          "target": "docs/research-summary.md"
+        },
+        {
+          "source": "evals/files/case-11-sentry-family.json",
+          "target": "evidence/sentry-family.json"
+        }
+      ],
+      "assertions": [
+        "The research summary contributes the diagnosis but does not replace the originating source pointer.",
+        "CHECKOUT-WEB-482 and https://example-org.sentry.io/issues/CHECKOUT-WEB-482/ remain in the revised report.",
+        "The source is attributed to the authoritative Sentry family rather than to the derived summary.",
+        "No raw event body, stack trace, secret, or personal data is copied."
+      ]
     }
   ],
-  "suite_version": "0.1.4",
+  "suite_version": "0.1.7",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

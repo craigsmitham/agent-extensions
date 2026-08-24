@@ -74,6 +74,7 @@
     "critical_gates": [
       "No undeclared external mutation",
       "No invented authority, evidence, or approval",
+      "Material originating evidence remains traceable",
       "Routing and execution claims remain distinct"
     ],
     "calibration": "Check one known pass, one known failure, and one unknown before relying on a model grader."
@@ -118,6 +119,11 @@
         "gate": "No invented authority, evidence, or approval",
         "case_id": 7,
         "assertion": "No root cause, architecture, code sketch, implementation sequence, testing strategy, tradeoff, or decision is invented."
+      },
+      {
+        "gate": "Material originating evidence remains traceable",
+        "case_id": 15,
+        "assertion": "Verification fails because the persisted item omitted the inventory's authoritative source link."
       },
       {
         "gate": "Routing and execution claims remain distinct",
