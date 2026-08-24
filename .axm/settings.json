@@ -3,7 +3,8 @@
     "defaultVisibility": "public"
   },
   "minimumReleaseAgeExclude": [
-    "@agentxm/*"
+    "@agentxm/*",
+    "@craigsmitham/*"
   ],
   "agents": [
     "claude-code",
