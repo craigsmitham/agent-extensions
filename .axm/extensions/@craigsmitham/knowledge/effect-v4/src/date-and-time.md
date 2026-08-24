@@ -6,47 +6,47 @@ tags: [effect, effect-v4, datetime, duration, clock, testclock, timestamps, seri
 status: stable
 sources:
   - id: docs-datetime
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/ai-docs/src/07_datetime/index.md
-    title: Official Effect docs — use the DateTime module instead of Date and Date.now (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/ai-docs/src/07_datetime/index.md
+    title: Official Effect docs — use the DateTime module instead of Date and Date.now (effect 4.0.0-rc.111)
   - id: docs-datetime-creating
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/ai-docs/src/07_datetime/10_creating-and-formatting.ts
-    title: Official Effect docs — DateTime.now for Clock-powered time, DateTime.make for parsing, DateTime.add for calendar math (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/ai-docs/src/07_datetime/10_creating-and-formatting.ts
+    title: Official Effect docs — DateTime.now for Clock-powered time, DateTime.make for parsing, DateTime.add for calendar math (effect 4.0.0-rc.111)
   - id: src-datetime
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/DateTime.ts
-    title: DateTime module source — Utc, make/makeUnsafe, now/nowUnsafe, isLessThan, distance, add, addDuration, toDateUtc (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/DateTime.ts
+    title: DateTime module source — Utc, make/makeUnsafe, now/nowUnsafe, isLessThan, distance, add, addDuration, toDateUtc (effect 4.0.0-rc.111)
   - id: src-internal-datetime
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/internal/dateTime.ts
-    title: DateTime internals — now is Clock.currentTimeMillis mapped to a Utc value (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/internal/dateTime.ts
+    title: DateTime internals — now is Clock.currentTimeMillis mapped to a Utc value (effect 4.0.0-rc.111)
   - id: src-clock
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/Clock.ts
-    title: Clock module source — Clock is a Context.Reference, so it is replaceable by a Layer (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/Clock.ts
+    title: Clock module source — Clock is a Context.Reference, so it is replaceable by a Layer (effect 4.0.0-rc.111)
   - id: src-schema-datetime
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/Schema.ts
-    title: Schema module source — DateTimeUtc, DateTimeUtcFromDate/FromString/FromMillis, and the Schema.Duration JSON codec (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/Schema.ts
+    title: Schema module source — DateTimeUtc, DateTimeUtcFromDate/FromString/FromMillis, and the Schema.Duration JSON codec (effect 4.0.0-rc.111)
   - id: src-schema-getter
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/SchemaGetter.ts
-    title: SchemaGetter source — dateTimeUtcFromInput decodes through the safe DateTime.make and fails with InvalidValue (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/SchemaGetter.ts
+    title: SchemaGetter source — dateTimeUtcFromInput decodes through the safe DateTime.make and fails with InvalidValue (effect 4.0.0-rc.111)
   - id: src-model
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/unstable/schema/Model.ts
-    title: Model module source — three parallel DateTime variant families for string, Date, and millis storage (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/unstable/schema/Model.ts
+    title: Model module source — three parallel DateTime variant families for string, Date, and millis storage (effect 4.0.0-rc.111)
   - id: src-duration
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/Duration.ts
-    title: Duration module source — Duration.Input admits a bare millis number by design; toMillis and fromInputUnsafe (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/Duration.ts
+    title: Duration module source — Duration.Input admits a bare millis number by design; toMillis and fromInputUnsafe (effect 4.0.0-rc.111)
   - id: src-cache
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/Cache.ts
-    title: Cache module source — entry expiry is computed from the Clock reference, not wall time (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/Cache.ts
+    title: Cache module source — entry expiry is computed from the Clock reference, not wall time (effect 4.0.0-rc.111)
   - id: src-cluster-cron
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/unstable/cluster/ClusterCron.ts
-    title: ClusterCron source — one DateTime.now read compared with isLessThan against subtractDuration (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/unstable/cluster/ClusterCron.ts
+    title: ClusterCron source — one DateTime.now read compared with isLessThan against subtractDuration (effect 4.0.0-rc.111)
   - id: src-testclock
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/testing/TestClock.ts
-    title: TestClock source — TestClock.layer is Layer.effect over the Clock reference (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/testing/TestClock.ts
+    title: TestClock source — TestClock.layer is Layer.effect over the Clock reference (effect 4.0.0-rc.111)
   - id: src-vitest-internal
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/vitest/src/internal/internal.ts
-    title: "@effect/vitest internals — every it.effect receives TestConsole and TestClock by default (4.0.0-rc.110)"
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/vitest/src/internal/internal.ts
+    title: "@effect/vitest internals — every it.effect receives TestConsole and TestClock by default (4.0.0-rc.111)"
   - id: test-datetime
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/test/DateTime.test.ts
-    title: DateTime tests — TestClock.setTime pins the instant; distance asserted as a Duration (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/test/DateTime.test.ts
+    title: DateTime tests — TestClock.setTime pins the instant; distance asserted as a Duration (effect 4.0.0-rc.111)
   - id: applied-opencode-schema
     resource: https://github.com/anomalyco/opencode/blob/65c35977bd564e23c0e9cf124b3e3e3b9308e9e8/packages/schema/src/schema.ts
     title: opencode@65c3597 — one epoch-millis transform reused across every wire and storage schema
@@ -83,11 +83,13 @@ sources:
     author: team:effect
     last_modified: 2026-08-17
 generated:
-  by: claude/opus-5
-  at: 2026-08-17T21:36:42Z
+  by: codex/gpt-5.6
+  at: 2026-08-24T16:00:57Z
 verified:
   - by: claude/opus-5
     at: 2026-08-17T21:36:42Z
+  - by: codex/gpt-5.6
+    at: 2026-08-24T16:00:57Z
 ---
 
 # Date and time
@@ -156,7 +158,7 @@ const admit = Effect.gen(function*() {
 
 - The four names are `DateTimeUtc`, `DateTimeUtcFromDate`,
   `DateTimeUtcFromString`, and `DateTimeUtcFromMillis`. There is no `FromSelf` and
-  no `FromNumber` at rc.110.[^src-schema-datetime]
+  no `FromNumber` at rc.111.[^src-schema-datetime]
 - `Model` ships three parallel variant families — `DateTimeInsert` (string),
   `DateTimeInsertFromDate`, `DateTimeInsertFromNumber` — which is upstream saying
   the storage encoding is a per-column decision, not a global
@@ -184,7 +186,7 @@ const admit = Effect.gen(function*() {
   construction and closing over the result is normal, widely applied
   practice.[^src-duration] [^applied-effect-local-rules]
 - For serialization, decide by who reads it. `Schema.Duration` has a defined JSON
-  codec at rc.110 — a tagged union over `Millis`, `Nanos`, and the infinities —
+  codec at rc.111 — a tagged union over `Millis`, `Nanos`, and the infinities —
   which is a good fit when both ends are Effect.[^src-schema-datetime]
   [^applied-opencode-duration] On a public wire prefer a plain number with the
   unit in the field name, which is exactly what effect-local mandates and
@@ -208,7 +210,7 @@ const admit = Effect.gen(function*() {
 - Treat this as the clearer spelling, not a review gate. `addDuration` and
   `subtractDuration` have zero applied uses across the surveyed repositories, and
   raw millisecond arithmetic remains the dominant applied pattern including at
-  rc.110.[^applied-effect-local-rules]
+  rc.111.[^applied-effect-local-rules]
 
 ## Read now once per decision
 
@@ -260,20 +262,20 @@ const admit = Effect.gen(function*() {
 - Current time is read once per decision through `DateTime.now`; no injectable
   `now` parameter shadows the `Clock` inside an Effect program.
 
-[^docs-datetime]: `ai-docs/src/07_datetime/index.md` at `effect@4.0.0-rc.110` — "When working with dates and time, use the `DateTime` module instead of `Date` and `Date.now`", motivated by testable current time, safe parsing, and stable ISO formatting.
-[^docs-datetime-creating]: `ai-docs/src/07_datetime/10_creating-and-formatting.ts` at `effect@4.0.0-rc.110` — `DateTime.now` for Clock-powered time ("ensures tests can use the `TestClock` module"), `DateTime.make` returning an `Option`, and `DateTime.add({ hours: 2 })` for calendar math.
-[^src-datetime]: `packages/effect/src/DateTime.ts` at `effect@4.0.0-rc.110` — `Utc` (:50) over `epochMilliseconds`; `make` returns `Option` (:793) while `makeUnsafe` (:653) and `fromDateUnsafe` (:617) throw; `now` (:838), `nowAsDate` (:856), `nowUnsafe` (:882, "synchronous version of `now` that directly uses `Date.now()`"); `distance` (:1230), `isLessThan` (:1345), `toDateUtc` (:1520), `toEpochMillis` (:1617), `addDuration` (:2259), `subtractDuration` (:2281), `add` (:2308, "the time zone is taken into account when adding days, weeks, months, and years").
-[^src-internal-datetime]: `packages/effect/src/internal/dateTime.ts` at `effect@4.0.0-rc.110` — `now = effect.map(Clock.currentTimeMillis, makeUtc)` (:313); `nowUnsafe = () => makeUtc(Date.now())`.
-[^src-clock]: `packages/effect/src/Clock.ts` at `effect@4.0.0-rc.110` — `export const Clock: Context.Reference<Clock>` (:189).
-[^src-schema-datetime]: `packages/effect/src/Schema.ts` at `effect@4.0.0-rc.110` — `DateTimeUtc` (:13695), `DateTimeUtcFromDate` (:13776), `DateTimeUtcFromString` (:13814), `DateTimeUtcFromMillis` (:13851); no `FromSelf` or `FromNumber` member exists. `Schema.Duration` (:12296) declares a `toCodecJson` link to a tagged union of `Infinity`, `NegativeInfinity`, `Nanos`, and `Millis`.
-[^src-schema-getter]: `packages/effect/src/SchemaGetter.ts` at `effect@4.0.0-rc.110` — `dateTimeUtcFromInput` (:1631) matches on `DateTime.make` and fails with `SchemaIssue.InvalidValue`, then `DateTime.toUtc`.
-[^src-model]: `packages/effect/src/unstable/schema/Model.ts` at `effect@4.0.0-rc.110` — `DateTimeInsert` (select `DateTimeUtcFromString`), `DateTimeInsertFromDate` (select `DateTimeUtcFromDate`), `DateTimeInsertFromNumber` (select `DateTimeUtcFromMillis`), each with a `json` variant.
-[^src-duration]: `packages/effect/src/Duration.ts` at `effect@4.0.0-rc.110` — `Input` (:172) includes `number // millis`, `bigint // nanos`, `` `${number} ${Unit}` ``, and `DurationObject`; `fromInputUnsafe` (:242) and `toMillis` (:788) are first-class exports.
-[^src-cache]: `packages/effect/src/Cache.ts` at `effect@4.0.0-rc.110` — `Cache.make` takes `timeToLive?: Duration.Input` (:298) and expiry is computed and tested against `ClockRef.currentTimeMillisUnsafe()` (:445, :488); the module's own examples advance `TestClock`.
-[^src-cluster-cron]: `packages/effect/src/unstable/cluster/ClusterCron.ts` at `effect@4.0.0-rc.110` — one `const now = yield* DateTime.now` followed by `DateTime.isLessThan(dateTime, DateTime.subtractDuration(now, skipIfOlderThan))` (:105-107).
-[^src-testclock]: `packages/effect/src/testing/TestClock.ts` at `effect@4.0.0-rc.110` — `layer = flow(make, Layer.effect(Clock.Clock))` (:436); `adjust` takes `Duration.Input` and `setTime` takes epoch millis.
-[^src-vitest-internal]: `packages/vitest/src/internal/internal.ts` at `effect@4.0.0-rc.110` — `const TestEnv = Layer.mergeAll(TestConsole.layer, TestClock.layer())` (:44), provided to every `it.effect`.
-[^test-datetime]: `packages/effect/test/DateTime.test.ts` at `effect@4.0.0-rc.110` — `TestClock.setTime(new Date("2023-12-31T11:00:00.000Z").getTime())` pins the instant; `DateTime.distance(now, tomorrow)` is asserted equal to `Duration.fromInputUnsafe("1 day")`.
+[^docs-datetime]: `ai-docs/src/07_datetime/index.md` at `effect@4.0.0-rc.111` — "When working with dates and time, use the `DateTime` module instead of `Date` and `Date.now`", motivated by testable current time, safe parsing, and stable ISO formatting.
+[^docs-datetime-creating]: `ai-docs/src/07_datetime/10_creating-and-formatting.ts` at `effect@4.0.0-rc.111` — `DateTime.now` for Clock-powered time ("ensures tests can use the `TestClock` module"), `DateTime.make` returning an `Option`, and `DateTime.add({ hours: 2 })` for calendar math.
+[^src-datetime]: `packages/effect/src/DateTime.ts` at `effect@4.0.0-rc.111` — `Utc` (:50) over `epochMilliseconds`; `make` returns `Option` (:793) while `makeUnsafe` (:653) and `fromDateUnsafe` (:617) throw; `now` (:838), `nowAsDate` (:856), `nowUnsafe` (:882, "synchronous version of `now` that directly uses `Date.now()`"); `distance` (:1230), `isLessThan` (:1345), `toDateUtc` (:1520), `toEpochMillis` (:1617), `addDuration` (:2259), `subtractDuration` (:2281), `add` (:2308, "the time zone is taken into account when adding days, weeks, months, and years").
+[^src-internal-datetime]: `packages/effect/src/internal/dateTime.ts` at `effect@4.0.0-rc.111` — `now = effect.map(Clock.currentTimeMillis, makeUtc)` (:313); `nowUnsafe = () => makeUtc(Date.now())`.
+[^src-clock]: `packages/effect/src/Clock.ts` at `effect@4.0.0-rc.111` — `export const Clock: Context.Reference<Clock>` (:189).
+[^src-schema-datetime]: `packages/effect/src/Schema.ts` at `effect@4.0.0-rc.111` — `DateTimeUtc` (:13695), `DateTimeUtcFromDate` (:13776), `DateTimeUtcFromString` (:13814), `DateTimeUtcFromMillis` (:13851); no `FromSelf` or `FromNumber` member exists. `Schema.Duration` (:12296) declares a `toCodecJson` link to a tagged union of `Infinity`, `NegativeInfinity`, `Nanos`, and `Millis`.
+[^src-schema-getter]: `packages/effect/src/SchemaGetter.ts` at `effect@4.0.0-rc.111` — `dateTimeUtcFromInput` (:1631) matches on `DateTime.make` and fails with `SchemaIssue.InvalidValue`, then `DateTime.toUtc`.
+[^src-model]: `packages/effect/src/unstable/schema/Model.ts` at `effect@4.0.0-rc.111` — `DateTimeInsert` (select `DateTimeUtcFromString`), `DateTimeInsertFromDate` (select `DateTimeUtcFromDate`), `DateTimeInsertFromNumber` (select `DateTimeUtcFromMillis`), each with a `json` variant.
+[^src-duration]: `packages/effect/src/Duration.ts` at `effect@4.0.0-rc.111` — `Input` (:172) includes `number // millis`, `bigint // nanos`, `` `${number} ${Unit}` ``, and `DurationObject`; `fromInputUnsafe` (:242) and `toMillis` (:788) are first-class exports.
+[^src-cache]: `packages/effect/src/Cache.ts` at `effect@4.0.0-rc.111` — `Cache.make` takes `timeToLive?: Duration.Input` (:298) and expiry is computed and tested against `ClockRef.currentTimeMillisUnsafe()` (:445, :488); the module's own examples advance `TestClock`.
+[^src-cluster-cron]: `packages/effect/src/unstable/cluster/ClusterCron.ts` at `effect@4.0.0-rc.111` — one `const now = yield* DateTime.now` followed by `DateTime.isLessThan(dateTime, DateTime.subtractDuration(now, skipIfOlderThan))` (:105-107).
+[^src-testclock]: `packages/effect/src/testing/TestClock.ts` at `effect@4.0.0-rc.111` — `layer = flow(make, Layer.effect(Clock.Clock))` (:436); `adjust` takes `Duration.Input` and `setTime` takes epoch millis.
+[^src-vitest-internal]: `packages/vitest/src/internal/internal.ts` at `effect@4.0.0-rc.111` — `const TestEnv = Layer.mergeAll(TestConsole.layer, TestClock.layer())` (:44), provided to every `it.effect`.
+[^test-datetime]: `packages/effect/test/DateTime.test.ts` at `effect@4.0.0-rc.111` — `TestClock.setTime(new Date("2023-12-31T11:00:00.000Z").getTime())` pins the instant; `DateTime.distance(now, tomorrow)` is asserted equal to `Duration.fromInputUnsafe("1 day")`.
 [^applied-opencode-schema]: Observed in opencode@65c3597 `packages/schema/src/schema.ts` (effect 4.0.0-beta.83) — one shared `Finite → Schema.DateTimeUtc` transform reused by `session.ts`, `session-input.ts`, `session-event.ts`, and `session-message.ts` so wire and storage cannot disagree.
 [^applied-opencode-input]: Observed in opencode@65c3597 `packages/core/src/session/input.ts` (effect 4.0.0-beta.83) — one `yield* DateTime.now` supplies both the published `PromptAdmitted` payload and the returned aggregate's `timeCreated`; the write path uses `DateTime.toEpochMillis` and the read path `DateTime.makeUnsafe` on the column its own writer produced.
 [^applied-opencode-builtins]: Observed in opencode@65c3597 `packages/core/src/system-context/builtins.ts` (effect 4.0.0-beta.83) — `DateTime.nowAsDate` formatted straight into prompt text, pinned in `packages/core/test/system-context/builtins.test.ts` by `TestClock.setTime` plus a 24-hour advance.

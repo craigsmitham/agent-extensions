@@ -1,5 +1,23 @@
 # Directory Update Log
 
+## 2026-08-24
+
+* **Retarget**: Re-pinned official Effect sources and the bundle baseline from
+  `4.0.0-rc.110` to `4.0.0-rc.111` after comparing the releases. Re-reviewed
+  guides that cite changed upstream files and spot-checked unchanged pins.
+* **Correction**: Recast `Result` as intentional success-or-expected-failure
+  data rather than universally forbidding it at Effect and outbound boundaries.
+  Effect-owned operations still default to the typed error channel; per-item,
+  aggregate, pure, and explicit boundary outcomes may use `Result`, while
+  defects and interruption remain outside it.
+* **Correction**: Made the Cloudflare pre-close macrotask yield conditional on
+  verified dispatcher scheduling. The supporting evidence comes from one
+  shared implementation lineage and no longer reads as a universal platform
+  invariant.
+* **Addition**: Recorded rc.111's merged source-and-finalizer causes and its
+  dual standalone Optic operations. Added an explicit evidence ceiling and a
+  release refresh policy to the root index.
+
 ## 2026-08-18
 
 * **Correction**: Revised [SQL](sql.md) to distinguish statement-local domain

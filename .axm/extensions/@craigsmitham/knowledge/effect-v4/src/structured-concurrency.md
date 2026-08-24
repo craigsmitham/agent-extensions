@@ -6,20 +6,20 @@ tags: [effect, effect-v4, concurrency, fibers, forking, supervision, cancellatio
 status: stable
 sources:
   - id: src-effect
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/Effect.ts
-    title: Effect module source — fork variants, race and timeout interruption, `all` result mode (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/Effect.ts
+    title: Effect module source — fork variants, race and timeout interruption, `all` result mode (effect 4.0.0-rc.111)
   - id: docs-run-main
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/ai-docs/src/01_effect/06_running/10_run-main.ts
-    title: Official Effect docs — forkScoped background work owned by the program scope (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/ai-docs/src/01_effect/06_running/10_run-main.ts
+    title: Official Effect docs — forkScoped background work owned by the program scope (effect 4.0.0-rc.111)
   - id: src-fiberset
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/FiberSet.ts
-    title: FiberSet module source — scoped worker collections, makeRuntime (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/FiberSet.ts
+    title: FiberSet module source — scoped worker collections, makeRuntime (effect 4.0.0-rc.111)
   - id: src-fibermap
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/FiberMap.ts
-    title: FiberMap module source — keyed per-entity fibers in one scope (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/FiberMap.ts
+    title: FiberMap module source — keyed per-entity fibers in one scope (effect 4.0.0-rc.111)
   - id: src-fiberhandle
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.110/packages/effect/src/FiberHandle.ts
-    title: FiberHandle module source — single replaceable fiber, onlyIfMissing (effect 4.0.0-rc.110)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0-rc.111/packages/effect/src/FiberHandle.ts
+    title: FiberHandle module source — single replaceable fiber, onlyIfMissing (effect 4.0.0-rc.111)
   - id: applied-dfx
     resource: https://github.com/tim-smart/dfx/blob/23988a4f182eb5cebc6c3bbac3f3c35fd303168f/src/DiscordGateway/Shard.ts
     title: dfx@23988a4 — forkScoped gateway loops and a FiberHandle-owned reconnect fiber
@@ -33,11 +33,13 @@ sources:
     resource: https://github.com/craigsmitham/agent-extensions/blob/48dc2f0293bfec9f4ad27144e9cd8e9bcbbe203e/.axm/extensions/%40craigsmitham/skills/effect-v4-structured-concurrency/src/SKILL.md
     title: effect-v4-structured-concurrency skill 0.1.0 (retired into this bundle; lineage only)
 generated:
-  by: claude/fable-5
-  at: 2026-08-17T14:20:34Z
+  by: codex/gpt-5.6
+  at: 2026-08-24T16:00:57Z
 verified:
   - by: claude/fable-5
     at: 2026-08-17T14:20:34Z
+  - by: codex/gpt-5.6
+    at: 2026-08-24T16:00:57Z
 ---
 
 # Structured concurrency
@@ -133,11 +135,11 @@ time, keep them in a scoped container instead of loose forks:
 - Shutdown has a defined admission, drain, interrupt, and observation
   sequence.
 
-[^src-effect]: `packages/effect/src/Effect.ts` at `effect@4.0.0-rc.110` — `forkChild`, `forkIn`, `forkScoped`, `forkDetach`; `raceFirst` "The losing effect is interrupted"; `timeout` "If the timeout wins, the source effect is interrupted"; `Effect.all` `mode: "result"` and `Effect.partition`.
-[^docs-run-main]: `ai-docs/src/01_effect/06_running/10_run-main.ts` at `effect@4.0.0-rc.110`.
-[^src-fiberset]: `packages/effect/src/FiberSet.ts` at `effect@4.0.0-rc.110`.
-[^src-fibermap]: `packages/effect/src/FiberMap.ts` at `effect@4.0.0-rc.110`.
-[^src-fiberhandle]: `packages/effect/src/FiberHandle.ts` at `effect@4.0.0-rc.110`.
+[^src-effect]: `packages/effect/src/Effect.ts` at `effect@4.0.0-rc.111` — `forkChild`, `forkIn`, `forkScoped`, `forkDetach`; `raceFirst` "The losing effect is interrupted"; `timeout` "If the timeout wins, the source effect is interrupted"; `Effect.all` `mode: "result"` and `Effect.partition`.
+[^docs-run-main]: `ai-docs/src/01_effect/06_running/10_run-main.ts` at `effect@4.0.0-rc.111`.
+[^src-fiberset]: `packages/effect/src/FiberSet.ts` at `effect@4.0.0-rc.111`.
+[^src-fibermap]: `packages/effect/src/FiberMap.ts` at `effect@4.0.0-rc.111`.
+[^src-fiberhandle]: `packages/effect/src/FiberHandle.ts` at `effect@4.0.0-rc.111`.
 [^applied-dfx]: Observed in dfx@23988a4 `src/DiscordGateway/Shard.ts` (effect 4.0.0-beta.105) — heartbeat loop under `forkScoped`, reconnect fiber in a `FiberHandle` cleared on resume and re-run on Hello.
 [^applied-opencode]: Observed in opencode@2cba7e2 `packages/core/src/session/run-coordinator.ts` (effect 4.0.0-beta.83) — `FiberSet.makeRuntime` forking drain fibers whose exits are settled explicitly.
 [^applied-effect-local]: Observed in effect-local@faa52d9 `packages/local-browser/src/internal/leadership.ts` (effect 4.0.0-beta.103) — lock acquisition raced against a steal signal with `raceFirst`, retry loop under `forkScoped`.

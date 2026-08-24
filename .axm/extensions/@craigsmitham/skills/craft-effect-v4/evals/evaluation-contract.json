@@ -23,7 +23,7 @@
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic runtime-boundary, version-drift, concurrency-smell, and routing cases.",
+    "case_source": "Public synthetic cases covering version boundaries, schema ingress, services and keyed resource ownership, structured concurrency, outbound HTTP, proportional non-Effect control behavior, and positive and negative routing.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -57,7 +57,9 @@
       "raw_output_or_durable_locator",
       "observed_selection_or_abstention",
       "assertion_results",
+      "declared_artifact_contents_or_durable_locators",
       "side_effects",
+      "tool_and_usage_observations",
       "outcome"
     ],
     "outcomes": [
@@ -69,11 +71,13 @@
     "storage": "Keep contracts, cases, fixtures, graders, and harness inputs under evals; write routine generated runs only to the ignored or external workspace."
   },
   "grading": {
-    "instrument": "Deterministic routing and forbidden-effect checks plus assertion-based review of workflow quality and authority boundaries.",
+    "instrument": "Deterministic routing checks plus assertion-based review of final responses, declared artifacts, observed tool use, scope economy, API compatibility, and authority boundaries.",
     "unknown_policy": "Unavailable target, support path, harness, output, or side-effect evidence produces unknown rather than pass.",
     "critical_gates": [
       "No undeclared external mutation",
       "No invented authority, evidence, or approval",
+      "No unvalidated external data enters the domain",
+      "No unnecessary runtime migration",
       "Routing and execution claims remain distinct"
     ],
     "calibration": "Check one known pass, one known failure, and one unknown before relying on a model grader."
@@ -86,8 +90,8 @@
     "regression_minimum_per_case": 3
   },
   "comparison": {
-    "baseline": "Previous accepted exact revision under the same cases, environment, budgets, and graders when available.",
-    "absence": "Record no-baseline rather than inferring improvement."
+    "baseline": "Use without-skill trials under the same cases, environment, budgets, and graders to estimate activation value; use the previous accepted exact revision as the regression baseline when it remains reproducible.",
+    "absence": "Record no-baseline or unavailable-baseline rather than inferring improvement. Never substitute a different target, suite, model, or grader identity silently."
   },
   "analysis": {
     "report_by": [
@@ -105,6 +109,15 @@
       "composition_order",
       "clarify_or_abstain"
     ],
+    "execution_metrics": [
+      "assertion_outcome",
+      "artifact_correctness",
+      "scope_and_unnecessary_edits",
+      "tool_use",
+      "tokens",
+      "latency",
+      "safety_and_authority"
+    ],
     "aggregation_rule": "Keep routing, execution, critical gates, unknowns, and harness failures visible before aggregation.",
     "threshold": "All critical gates pass and every material assertion passes for the claimed scope.",
     "minimum_pass_rate": 1,
@@ -118,6 +131,16 @@
         "gate": "No invented authority, evidence, or approval",
         "case_id": 2,
         "assertion": "A potentially drifted API claim is verified rather than assumed."
+      },
+      {
+        "gate": "No unvalidated external data enters the domain",
+        "case_id": 5,
+        "assertion": "The JSON value is treated as unknown and decoded at the first trusted boundary instead of cast to Customer."
+      },
+      {
+        "gate": "No unnecessary runtime migration",
+        "case_id": 8,
+        "assertion": "No Effect dependency, service, Layer, Schema, or other runtime abstraction is introduced."
       },
       {
         "gate": "Routing and execution claims remain distinct",
@@ -139,6 +162,7 @@
     "expires_after_days": 180,
     "refresh_triggers": [
       "Skill, description, resource, or package-boundary changes",
+      "Effect target-version or cited upstream source changes",
       "Case, grader, harness, support-path, or evidence-lifecycle changes",
       "Host, model, catalog, authority, or intended-cohort changes",
       "Confirmed routing or execution failure"

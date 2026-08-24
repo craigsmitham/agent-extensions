@@ -1,6 +1,6 @@
 {
   "skill_name": "craft-effect-v4",
-  "suite_version": "0.0.7",
+  "suite_version": "0.1.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -30,13 +30,26 @@
     {
       "id": 3,
       "stage": "execution",
-      "prompt": "Review Effect v4 code that uses Promise.all for unbounded work, detached promises for background tasks, and AbortController for cancellation.",
-      "expected_output": "A focused routing to structured-concurrency and iteration guidance, with repository constraints checked before recommending changes.",
+      "prompt": "Review src/job-runner.ts for concurrency and lifecycle correctness. Give a concrete, minimal Effect v4 revision, but do not invent the desired concurrency bound; explain the decision the owner must make.",
+      "expected_output": "A focused review and minimal Effect v4 revision using structured ownership and explicit traversal concurrency, with the unresolved bound left to the owner.",
+      "files": [
+        {
+          "source": "evals/files/effect-v4-package.json",
+          "target": "package.json"
+        },
+        {
+          "source": "evals/files/case-3-job-runner.ts",
+          "target": "src/job-runner.ts"
+        }
+      ],
+      "artifact_paths": [
+        "src/job-runner.ts"
+      ],
       "assertions": [
-        "The concurrency and lifecycle hazards are identified.",
-        "Only the relevant guides are loaded.",
-        "Consequential design alternatives remain with the developer.",
-        "Recommendations match the installed Effect v4 APIs."
+        "The unbounded Promise.all, detached lease refresh, and disconnected AbortController hazards are identified from the supplied code.",
+        "The revision uses Effect-owned structured concurrency and an explicit traversal concurrency policy without leaving a detached promise.",
+        "The response leaves the actual concurrency bound and lease-failure policy to the owner instead of inventing them.",
+        "Recommendations match Effect 4.0.0-rc.111 and remain focused on the supplied file."
       ]
     },
     {
@@ -51,6 +64,128 @@
       "assertions": [
         "The selected skill is craft-effect-v4.",
         "No neighboring skill is selected for a job it does not own.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 5,
+      "stage": "execution",
+      "prompt": "Revise src/customer-import.ts so external JSON crosses one explicit, typed Effect v4 boundary. Keep the change local; do not add services or Layers unless the fixture requires them.",
+      "expected_output": "A minimal Schema-based boundary that treats parsed JSON as unknown, derives the domain type from one schema, and returns structured typed failure.",
+      "files": [
+        {
+          "source": "evals/files/effect-v4-package.json",
+          "target": "package.json"
+        },
+        {
+          "source": "evals/files/case-5-customer-import.ts",
+          "target": "src/customer-import.ts"
+        }
+      ],
+      "artifact_paths": [
+        "src/customer-import.ts"
+      ],
+      "assertions": [
+        "The JSON value is treated as unknown and decoded at the first trusted boundary instead of cast to Customer.",
+        "One Effect Schema is the runtime contract and source of the Customer type or carrier.",
+        "Parse and schema failures remain structured or are translated once at the owning boundary rather than thrown as generic Error.",
+        "The revision is local and does not introduce unnecessary services, Layers, or unrelated abstractions."
+      ]
+    },
+    {
+      "id": 6,
+      "stage": "execution",
+      "prompt": "Review src/tenant-client.ts for resource ownership under concurrent callers. Recommend the smallest sound Effect v4 design and show its essential shape, but do not invent eviction, TTL, or capacity policy.",
+      "expected_output": "A resource-ownership review that identifies the shared-client close race and routes keyed lifetime management to a scoped Effect primitive with policy choices left explicit.",
+      "files": [
+        {
+          "source": "evals/files/effect-v4-package.json",
+          "target": "package.json"
+        },
+        {
+          "source": "evals/files/case-6-tenant-client.ts",
+          "target": "src/tenant-client.ts"
+        }
+      ],
+      "assertions": [
+        "The review identifies that one caller can close and delete a client still borrowed by another caller.",
+        "The proposed design gives each keyed resource an explicit scoped owner and releases it only after the last borrower leaves.",
+        "The recommendation distinguishes keyed resource sharing from caching plain values and uses current Effect v4 concepts such as RcMap, LayerMap, or Pool only where their semantics fit.",
+        "Eviction, TTL, capacity, and failure-reuse policy remain explicit owner decisions rather than invented defaults."
+      ]
+    },
+    {
+      "id": 7,
+      "stage": "execution",
+      "prompt": "Review src/catalog-api.ts as an outbound third-party HTTP boundary. Propose a focused Effect v4 design that is injectable and typed; do not add retries unless you can state the safe retry policy from the evidence.",
+      "expected_output": "A focused outbound HTTP design using the Effect HttpClient service, structured HTTP failures, and Schema decoding without speculative retry policy.",
+      "files": [
+        {
+          "source": "evals/files/effect-v4-package.json",
+          "target": "package.json"
+        },
+        {
+          "source": "evals/files/case-7-catalog-api.ts",
+          "target": "src/catalog-api.ts"
+        }
+      ],
+      "assertions": [
+        "The design uses the current Effect v4 outbound HttpClient boundary rather than scattered global fetch.",
+        "Status, transport, decode, and domain failures stay distinguishable instead of becoming one generic Error.",
+        "The response replaces the response.json cast with Schema decoding and makes the client substitutable in tests.",
+        "No retry is added without an explicit transient-failure, idempotency, schedule, and termination policy."
+      ]
+    },
+    {
+      "id": 8,
+      "stage": "execution",
+      "prompt": "This repository deliberately uses plain TypeScript and does not want a runtime model. Review src/normalize-labels.ts for a small readability improvement. Keep that constraint and do not migrate or add dependencies.",
+      "expected_output": "A concise plain-TypeScript review that leaves the simple pure helper alone or makes only a justified local readability change without introducing Effect.",
+      "files": [
+        {
+          "source": "evals/files/case-8-normalize-labels.ts",
+          "target": "src/normalize-labels.ts"
+        }
+      ],
+      "artifact_paths": [
+        "src/normalize-labels.ts"
+      ],
+      "assertions": [
+        "The deliberate non-Effect runtime constraint is honored.",
+        "No Effect dependency, service, Layer, Schema, or other runtime abstraction is introduced.",
+        "The response recognizes that the pure helper does not exhibit a problem owned by this skill.",
+        "Any suggested change is local, behavior-preserving, and proportionate to the request."
+      ]
+    },
+    {
+      "id": 9,
+      "stage": "routing",
+      "prompt": "Review a TypeScript integration that calls a third-party API with global fetch, casts response.json to a domain interface, and retries every failure with Promise.all. The repository is open to Effect v4 where warranted.",
+      "expected_selection": "craft-effect-v4",
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-software-work-items"
+      ],
+      "assertions": [
+        "The selected skill is craft-effect-v4.",
+        "The combined schema, HTTP, failure, and concurrency signals are sufficient without requiring Effect to be present already.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 10,
+      "stage": "routing",
+      "prompt": "Rewrite the repository README introduction so new contributors understand the project in one paragraph.",
+      "expected_selection": "author-docs",
+      "catalog_neighbors": [
+        "author-docs",
+        "temporal-dates"
+      ],
+      "assertions": [
+        "The selected skill is author-docs, not craft-effect-v4.",
+        "Generic repository and TypeScript context does not create an Effect routing signal.",
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
       ]
