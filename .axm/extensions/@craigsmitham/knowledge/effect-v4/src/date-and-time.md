@@ -1,8 +1,8 @@
 ---
 type: Guide
 title: Date and time
-description: Choosing the instant carrier, the boundary transform, and where "now" comes from; use when Date leaks through the domain, timestamps decode inconsistently per driver, or tests cannot control time.
-tags: [effect, effect-v4, datetime, duration, clock, testclock, timestamps, serialization, determinism]
+description: Choosing scoped date/time representations, boundary transforms, and where "now" comes from; use when Date leaks through an Effect domain, timestamps decode inconsistently, or tests cannot control time.
+tags: [effect, effect-v4, datetime, temporal, duration, clock, testclock, timestamps, serialization, determinism]
 status: stable
 sources:
   - id: docs-datetime
@@ -77,6 +77,9 @@ sources:
   - id: applied-effect-local-rules
     resource: https://github.com/lucas-barake/effect-local/blob/faa52d91faad10817906750c8cf02c71852a5521/RULES.md
     title: effect-local@faa52d9 — repository rules mandating Duration.Input in APIs and plain unit-named numbers on the wire
+  - id: spec-temporal-instant
+    resource: https://tc39.es/proposal-temporal/#sec-temporal.instant.fromepochmilliseconds
+    title: TC39 Temporal proposal — Temporal.Instant.fromEpochMilliseconds
   - id: api-effect-v4
     resource: https://www.effect.website/docs/v4/api
     title: Effect v4 API reference — browsable DateTime, Duration, and Clock module surfaces
@@ -84,7 +87,7 @@ sources:
     last_modified: 2026-08-17
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-24T16:00:57Z
+  at: 2026-08-24T18:10:47Z
 verified:
   - by: claude/opus-5
     at: 2026-08-17T21:36:42Z
@@ -94,20 +97,29 @@ verified:
 
 # Date and time
 
-Carry one instant type, transform it at each edge, and read "now" through the Clock.
+Choose one date/time representation per bounded concern, transform it at each
+edge, and read "now" through the Clock inside Effect computations.
 
 **Applies when** `Date` values flow through domain code, timestamp columns decode
 differently per table or driver, durations are bare numbers with the unit in the
 identifier, or a test cannot control time without waiting — even without current
 `DateTime` usage.
 
+**Representation authority:** This guide recommends Effect `DateTime.Utc` when
+Effect owns the instant representation. An effective repository, module, or
+task instruction may instead select JavaScript Temporal or native `Date` for a
+bounded concern. Preserve that scoped choice. It changes the value carrier and
+its boundary transforms; it does not automatically replace Effect `Clock`,
+`TestClock`, `Duration`, `Schedule`, timeouts, or caches. Importing Effect does
+not decide every date representation in a file.
+
 **Leave alone** a single `Date` handed to and consumed by one vendor call, and
 formatting-only code that never reasons about the instant.
 
-This is three decisions at three edges with the same answer and different
-mechanics: the **driver edge** (what a timestamp column becomes), the **wire
-edge** (what a payload carries), and the **now edge** (where the current instant
-comes from — a testability decision, not a serialization one).
+This is four related decisions: **representation authority** (which carrier a
+bounded concern uses), the **driver edge** (what a timestamp column becomes),
+the **wire edge** (what a payload carries), and the **now edge** (where the
+current instant comes from — a testability decision, not a serialization one).
 
 Related: [Schema boundaries](schema-boundaries.md) for designing the schemas
 these transforms live in, [Testing](testing.md) for `TestClock` mechanics and
@@ -116,11 +128,12 @@ virtual-time scheduling, [Iteration](iteration.md) for `Schedule` timing, and th
 `DateTime`, `Duration`, and `Clock` surfaces. This guide does not cover schema
 design, test harness setup, or retry policy.
 
-## Carry `DateTime.Utc`, not `Date`
+## When Effect owns the carrier, use `DateTime.Utc`
 
 - Use `DateTime.Utc` as the in-memory instant: an immutable value over
   `epochMilliseconds` with no zone attached. Upstream states the rule plainly —
-  use `DateTime` instead of `Date` and `Date.now`.[^docs-datetime] [^src-datetime]
+  within Effect's date/time model, use `DateTime` instead of `Date` and
+  `Date.now`.[^docs-datetime] [^src-datetime]
 - The payoff is failure visibility, not style. `new Date(x)` never fails; it
   yields `Invalid Date` and propagates it silently. `DateTime.make` returns an
   `Option`, so a bad input stops at the parse.[^src-datetime]
@@ -212,12 +225,14 @@ const admit = Effect.gen(function*() {
   raw millisecond arithmetic remains the dominant applied pattern including at
   rc.111.[^applied-effect-local-rules]
 
-## Read now once per decision
+## Read now once per decision through Effect Clock
 
-- `DateTime.now` is the read. Take it once and thread the value through
-  everything the decision produces, so a persisted event and the aggregate it
-  returns cannot disagree about when it happened.[^applied-opencode-input]
-  [^src-cluster-cron]
+- When Effect owns the carrier, `DateTime.now` is the read. When a scoped
+  concern carries `Temporal.Instant`, use `Clock.currentTimeMillis` and map it
+  at that carrier boundary. In either case, take the clock read once and thread
+  the value through everything the decision produces, so a persisted event and
+  the aggregate it returns cannot disagree about when it happened.
+  [^applied-opencode-input] [^src-cluster-cron]
 - The unit is the *decision*, not the program. A poll loop correctly hoists
   `startedAt` once and re-reads `now` on every iteration — those are two
   decisions.[^applied-alchemy-poll]
@@ -236,6 +251,11 @@ const admit = Effect.gen(function*() {
   `Layer.effect(Clock.Clock)`;[^src-testclock] and `@effect/vitest` merges
   `TestClock.layer()` into every `it.effect` with no opt-in.[^src-vitest-internal]
   Reading time through `DateTime.now` is therefore already injectable.
+- When scoped instructions select `Temporal.Instant` as the domain carrier,
+  map `Clock.currentTimeMillis` through
+  `Temporal.Instant.fromEpochMilliseconds` at the carrier boundary. The same
+  `TestClock` remains in control; only the value representation changes.
+  [^src-clock] [^src-testclock] [^spec-temporal-instant]
 - Do not add an injectable `now` parameter to Effect code. It is a second seam the
   harness does not know about, so the default virtual clock stops applying and
   every caller has to remember to pass it.[^applied-alchemy-credentials]
@@ -249,8 +269,11 @@ const admit = Effect.gen(function*() {
 
 ## Review checklist
 
-- Domain and service signatures carry `DateTime.Utc`; `Date` appears only at the
-  call that requires it and does not survive past it.
+- The effective scoped instruction selects the representation; Effect
+  `DateTime.Utc` is the default only where Effect owns that concern.
+- When Effect owns the representation, domain and service signatures carry
+  `DateTime.Utc`; `Date` appears only at the call that requires it and does not
+  survive past it.
 - Each boundary schema uses the transform matching what that driver or wire
   actually produces, and the transform is defined once.
 - `makeUnsafe`/`fromDateUnsafe` appear only where the input's validity is already
@@ -259,14 +282,17 @@ const admit = Effect.gen(function*() {
   `Schema.Duration` between Effect peers or name their unit in the field.
 - Instant comparison uses `isLessThan`/`distance`; expiry is delegated to `Cache`
   or `Schedule` where a structure can own it.
-- Current time is read once per decision through `DateTime.now`; no injectable
-  `now` parameter shadows the `Clock` inside an Effect program.
+- Current time is read once per decision through Effect `Clock`—with
+  `DateTime.now` for an Effect-owned carrier, or with
+  `Clock.currentTimeMillis` mapped at a Temporal-selected carrier boundary. No
+  injectable `now` parameter shadows the `Clock` inside an Effect program.
 
 [^docs-datetime]: `ai-docs/src/07_datetime/index.md` at `effect@4.0.0-rc.111` — "When working with dates and time, use the `DateTime` module instead of `Date` and `Date.now`", motivated by testable current time, safe parsing, and stable ISO formatting.
 [^docs-datetime-creating]: `ai-docs/src/07_datetime/10_creating-and-formatting.ts` at `effect@4.0.0-rc.111` — `DateTime.now` for Clock-powered time ("ensures tests can use the `TestClock` module"), `DateTime.make` returning an `Option`, and `DateTime.add({ hours: 2 })` for calendar math.
 [^src-datetime]: `packages/effect/src/DateTime.ts` at `effect@4.0.0-rc.111` — `Utc` (:50) over `epochMilliseconds`; `make` returns `Option` (:793) while `makeUnsafe` (:653) and `fromDateUnsafe` (:617) throw; `now` (:838), `nowAsDate` (:856), `nowUnsafe` (:882, "synchronous version of `now` that directly uses `Date.now()`"); `distance` (:1230), `isLessThan` (:1345), `toDateUtc` (:1520), `toEpochMillis` (:1617), `addDuration` (:2259), `subtractDuration` (:2281), `add` (:2308, "the time zone is taken into account when adding days, weeks, months, and years").
 [^src-internal-datetime]: `packages/effect/src/internal/dateTime.ts` at `effect@4.0.0-rc.111` — `now = effect.map(Clock.currentTimeMillis, makeUtc)` (:313); `nowUnsafe = () => makeUtc(Date.now())`.
 [^src-clock]: `packages/effect/src/Clock.ts` at `effect@4.0.0-rc.111` — `export const Clock: Context.Reference<Clock>` (:189).
+[^spec-temporal-instant]: TC39 Temporal proposal §8.2.3 — `Temporal.Instant.fromEpochMilliseconds` converts a numeric Unix-epoch millisecond value into a `Temporal.Instant`.
 [^src-schema-datetime]: `packages/effect/src/Schema.ts` at `effect@4.0.0-rc.111` — `DateTimeUtc` (:13695), `DateTimeUtcFromDate` (:13776), `DateTimeUtcFromString` (:13814), `DateTimeUtcFromMillis` (:13851); no `FromSelf` or `FromNumber` member exists. `Schema.Duration` (:12296) declares a `toCodecJson` link to a tagged union of `Infinity`, `NegativeInfinity`, `Nanos`, and `Millis`.
 [^src-schema-getter]: `packages/effect/src/SchemaGetter.ts` at `effect@4.0.0-rc.111` — `dateTimeUtcFromInput` (:1631) matches on `DateTime.make` and fails with `SchemaIssue.InvalidValue`, then `DateTime.toUtc`.
 [^src-model]: `packages/effect/src/unstable/schema/Model.ts` at `effect@4.0.0-rc.111` — `DateTimeInsert` (select `DateTimeUtcFromString`), `DateTimeInsertFromDate` (select `DateTimeUtcFromDate`), `DateTimeInsertFromNumber` (select `DateTimeUtcFromMillis`), each with a `json` variant.

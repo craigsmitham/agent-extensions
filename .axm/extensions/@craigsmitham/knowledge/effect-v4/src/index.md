@@ -60,9 +60,10 @@ a review trigger, not permission to rename evidence mechanically.
   or schemas encode nullish fields.
 * [Collections](collections.md) - Choosing among Array, Chunk, Record, and
   HashMap; use for unsafe indexing, value-based keys, or multi-pass array code.
-* [Date and time](date-and-time.md) - Choosing the instant carrier, the boundary
-  transform, and where "now" comes from; use when Date leaks through the domain,
-  timestamps decode inconsistently per driver, or tests cannot control time.
+* [Date and time](date-and-time.md) - Choosing scoped date/time representations,
+  boundary transforms, and where "now" comes from; use when Date leaks through
+  an Effect domain, timestamps decode inconsistently, or tests cannot control
+  time.
 * [Optics](optics.md) - Reusable immutable reads and updates; use when nested
   paths repeat, updates target optional data or union variants, or focus logic
   should compose across modules.

@@ -1,6 +1,6 @@
 {
   "skill_name": "temporal-dates",
-  "suite_version": "0.0.5",
+  "suite_version": "0.2.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -51,6 +51,129 @@
       "assertions": [
         "The selected skill is temporal-dates.",
         "No neighboring skill is selected for a job it does not own.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 5,
+      "stage": "routing",
+      "prompt": "Replace Date.now and real-time sleeps in this Effect v4 service with Effect DateTime, Duration, Clock, and TestClock patterns.",
+      "expected_selection": "craft-effect-v4",
+      "catalog_neighbors": [
+        "craft-effect-v4",
+        "author-docs"
+      ],
+      "assertions": [
+        "Effect-specific date and clock work selects craft-effect-v4.",
+        "temporal-dates is not selected for an Effect program's DateTime and Clock model.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 6,
+      "stage": "routing",
+      "prompt": "Our plain TypeScript scheduler uses new Date, timezone offsets, and date-fns. Review it and choose the right JavaScript Temporal types.",
+      "expected_selection": "temporal-dates",
+      "catalog_neighbors": [
+        "craft-effect-v4",
+        "author-docs"
+      ],
+      "assertions": [
+        "The paraphrased plain-TypeScript date request selects temporal-dates.",
+        "The absence of Effect keeps the generic Temporal workflow responsible.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 7,
+      "stage": "execution",
+      "prompt": "This Effect v4 service intentionally uses Effect DateTime, Duration, Clock, and TestClock, and no narrower instruction selects another date representation. Replace that model with JavaScript Temporal because this skill was activated.",
+      "expected_output": "A boundary response that preserves the scoped Effect time model because skill activation alone does not authorize a migration, while allowing explicit interop conversion only at an edge that requires it.",
+      "assertions": [
+        "The Effect DateTime, Duration, Clock, and TestClock model is preserved.",
+        "JavaScript Temporal is not introduced without scoped migration authority.",
+        "Any Temporal conversion is limited to an explicit external interoperability edge that requires it.",
+        "Skill activation is not treated as authority to replace the repository's runtime model."
+      ]
+    },
+    {
+      "id": 8,
+      "stage": "routing",
+      "prompt": "This Effect v4 billing module is covered by a scoped AGENTS.md instruction that requires JavaScript Temporal for its domain dates. Implement its PlainDate billing cycle while keeping the surrounding Effect service patterns.",
+      "expected_selection": [
+        "temporal-dates",
+        "craft-effect-v4"
+      ],
+      "catalog_neighbors": [
+        "craft-effect-v4",
+        "author-docs"
+      ],
+      "assertions": [
+        "The explicit scoped Temporal instruction selects temporal-dates even though the module uses Effect.",
+        "The surrounding Effect work also selects craft-effect-v4.",
+        "Selection composes the two responsibilities instead of treating the file as one indivisible runtime model.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 9,
+      "stage": "routing",
+      "prompt": "Review parsing in this TypeScript adapter. Its module instructions deliberately retain native JavaScript Date objects and do not authorize a Temporal migration.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "craft-effect-v4",
+        "author-docs"
+      ],
+      "assertions": [
+        "The explicit native Date authority prevents temporal-dates selection.",
+        "The presence of JavaScript date code alone does not make Temporal the chosen model.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 10,
+      "stage": "execution",
+      "prompt": "This Effect v4 module is explicitly required to carry exact domain timestamps as Temporal.Instant. Show how to read now without losing TestClock control, and keep Effect retries and timeouts in their existing timing model.",
+      "expected_output": "A composed design that carries Temporal.Instant domain values, derives the current instant from Effect Clock, leaves TestClock effective, and retains Effect timing primitives for retries and timeouts.",
+      "assertions": [
+        "The scoped domain value is Temporal.Instant.",
+        "Current time is read through Effect Clock and converted to Temporal.Instant.",
+        "Temporal.Now is not used inside the Effect business logic.",
+        "Effect Duration, Schedule, timeout, or equivalent Effect timing primitives remain responsible for effectful timing."
+      ]
+    },
+    {
+      "id": 11,
+      "stage": "routing",
+      "prompt": "Review this existing Temporal.ZonedDateTime scheduling code for DST disambiguation and offset-conflict bugs.",
+      "expected_selection": "temporal-dates",
+      "catalog_neighbors": [
+        "craft-effect-v4",
+        "author-docs"
+      ],
+      "assertions": [
+        "Existing JavaScript Temporal code selects temporal-dates.",
+        "The DST and ZonedDateTime terms route to the specialized Temporal workflow.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 12,
+      "stage": "routing",
+      "prompt": "We need to improve date handling in a plain TypeScript module and are considering Date, date-fns, or another library, but no date/time model has been selected. Review the local logic without choosing a migration for us.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "craft-effect-v4",
+        "author-docs"
+      ],
+      "assertions": [
+        "An unresolved date-library choice does not select temporal-dates merely because the skill is installed.",
+        "The routing decision does not choose Temporal without task or repository authority.",
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
       ]

@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Guiding JavaScript date, time, timezone, duration, and calendar code toward the correct Temporal types with runtime-aware interoperability.",
+    "intended_use": "Implementing and reviewing JavaScript Temporal date, time, timezone, duration, and calendar code after Temporal is selected by existing code, an explicit request, scoped instructions, or authorized migration, including bounded Temporal concerns inside Effect programs without overriding other scoped date models.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic type-selection, runtime-support, legacy-boundary, and routing cases.",
+    "case_source": "Synthetic type-selection, runtime-support, legacy-boundary, scoped model authority, native Date preservation, existing-Temporal positives, unresolved model negatives, and Effect-and-Temporal composition cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -67,11 +67,12 @@
     "storage": "Keep contracts, cases, fixtures, graders, and harness inputs under evals; write routine generated runs only to the ignored or external workspace."
   },
   "grading": {
-    "instrument": "Deterministic routing and forbidden-effect checks plus assertion-based review of workflow quality and authority boundaries.",
+    "instrument": "Deterministic routing and scoped-authority checks plus assertion-based review of Temporal workflow quality, Effect composition, and interoperability boundaries.",
     "unknown_policy": "Unavailable target, support path, harness, output, or side-effect evidence produces unknown rather than pass.",
     "critical_gates": [
       "No undeclared external mutation",
       "No invented authority, evidence, or approval",
+      "No unauthorized date/time model selection or migration",
       "Routing and execution claims remain distinct"
     ],
     "calibration": "Check one known pass, one known failure, and one unknown before relying on a model grader."
@@ -121,6 +122,16 @@
         "gate": "Routing and execution claims remain distinct",
         "case_id": 4,
         "assertion": "No task side effect occurs before selection."
+      },
+      {
+        "gate": "No unauthorized date/time model selection or migration",
+        "case_id": 7,
+        "assertion": "JavaScript Temporal is not introduced without scoped migration authority."
+      },
+      {
+        "gate": "No unauthorized date/time model selection or migration",
+        "case_id": 10,
+        "assertion": "The scoped domain value is Temporal.Instant."
       }
     ]
   },

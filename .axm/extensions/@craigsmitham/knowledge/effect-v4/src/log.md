@@ -2,6 +2,11 @@
 
 ## 2026-08-24
 
+* **Boundary**: Refined [Date and time](date-and-time.md) so an effective
+  repository, module, or task instruction owns the date representation for its
+  bounded concern. Effect `DateTime.Utc` remains the default when Effect owns
+  that representation; scoped Temporal or native `Date` values can coexist
+  with Effect `Clock`, `TestClock`, and effectful timing primitives.
 * **Retarget**: Re-pinned official Effect sources and the bundle baseline from
   `4.0.0-rc.110` to `4.0.0-rc.111` after comparing the releases. Re-reviewed
   guides that cite changed upstream files and spot-checked unchanged pins.

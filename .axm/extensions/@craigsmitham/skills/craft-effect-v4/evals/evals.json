@@ -1,6 +1,6 @@
 {
   "skill_name": "craft-effect-v4",
-  "suite_version": "0.1.0",
+  "suite_version": "0.3.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -18,13 +18,31 @@
     {
       "id": 2,
       "stage": "execution",
-      "prompt": "The installed Effect v4 prerelease differs from the guide baseline and an API claim may have changed. Use the guide without checking source.",
-      "expected_output": "A version-aware response that verifies the consequential API claim against the installed version or current public Effect source before acting.",
+      "prompt": "This repository uses a newer Effect v4 release candidate than the guide baseline. The installed types accept the APIs the selected guide uses, and there is no observed semantic conflict. Complete the focused review without treating the RC-number difference alone as a reason for upstream research.",
+      "expected_output": "A focused Effect v4 response that treats the major-version boundary as compatible and does not launch unnecessary source verification when the installed API surface presents no conflict.",
+      "files": [
+        {
+          "source": "evals/files/case-2-package.json",
+          "target": "package.json"
+        },
+        {
+          "source": "evals/files/case-2-guide.md",
+          "target": "docs/selected-guide.md"
+        },
+        {
+          "source": "evals/files/case-2-effect-types.d.ts",
+          "target": "node_modules/effect/dist/dts/Effect.d.ts"
+        },
+        {
+          "source": "evals/files/case-2-batch.ts",
+          "target": "src/batch.ts"
+        }
+      ],
       "assertions": [
-        "The installed version is treated as controlling runtime evidence.",
-        "A potentially drifted API claim is verified rather than assumed.",
-        "The guide remains advisory when versions differ.",
-        "Any unresolved mismatch is reported."
+        "The Effect v4 major-version boundary is treated as compatible.",
+        "An RC-number difference by itself does not trigger upstream source research.",
+        "The installed API surface remains the controlling implementation evidence.",
+        "Source verification is reserved for an observed conflict or consequential uncertainty."
       ]
     },
     {
@@ -187,6 +205,187 @@
         "The selected skill is author-docs, not craft-effect-v4.",
         "Generic repository and TypeScript context does not create an Effect routing signal.",
         "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 11,
+      "stage": "routing",
+      "prompt": "quick pass on this effect 4 worker: dependencies are global, failures get stringified, and a detached fiber outlives the request. show me the smallest sound shape",
+      "expected_selection": "craft-effect-v4",
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-software-work-items"
+      ],
+      "assertions": [
+        "The paraphrased Effect v4 request selects craft-effect-v4.",
+        "The informal register does not hide the service, failure, and lifetime signals.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 12,
+      "stage": "routing",
+      "prompt": "Review this TypeScript service that uses global fetch, JSON casts, Promise.all, and try/finally cleanup. The repository deliberately uses another runtime model and this task must not introduce Effect or migrate runtimes.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-software-work-items"
+      ],
+      "assertions": [
+        "The deliberate alternative-runtime boundary prevents craft-effect-v4 selection.",
+        "Shared TypeScript smell vocabulary does not override the explicit runtime constraint.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 13,
+      "stage": "routing",
+      "prompt": "This small plain TypeScript build script has one Promise.all over four fixed files. Check whether renaming one local would make it easier to read; do not change dependencies or architecture.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-docs"
+      ],
+      "assertions": [
+        "One isolated Promise.all in a bounded local script does not select craft-effect-v4.",
+        "The routing decision remains proportionate to the requested local readability change.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 14,
+      "stage": "routing",
+      "prompt": "We have a TypeScript service with detached background work and unbounded fan-out, but the team has not decided whether runtime-model changes are allowed. Do not assume that decision for us.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-software-work-items"
+      ],
+      "assertions": [
+        "An unresolved runtime-adoption decision produces clarification or abstention.",
+        "The routing decision does not treat technical fit as migration authority.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 15,
+      "stage": "routing",
+      "prompt": "Replace Date.now and flaky real-time sleeps in this Effect v4 service with Effect DateTime, Duration, Clock, and TestClock patterns.",
+      "expected_selection": "craft-effect-v4",
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-software-work-items"
+      ],
+      "assertions": [
+        "Effect-specific date and clock work selects craft-effect-v4.",
+        "The generic temporal-dates neighbor is not selected for Effect DateTime and Clock ownership.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 16,
+      "stage": "routing",
+      "prompt": "Replace new Date and manual timezone arithmetic in this plain TypeScript calendar module with the correct JavaScript Temporal types.",
+      "expected_selection": "temporal-dates",
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-software-work-items"
+      ],
+      "assertions": [
+        "Plain TypeScript date and timezone work selects temporal-dates.",
+        "craft-effect-v4 is not selected without an Effect or runtime-adoption signal.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 17,
+      "stage": "execution",
+      "prompt": "This repository uses Effect v4, but the installed types reject a guide's named API and local source shows a changed signature. Apply the guide anyway without checking the conflict.",
+      "expected_output": "A conflict-aware response that treats the installed v4 source and tests as controlling evidence, verifies the consequential claim, and reports unresolved drift before acting.",
+      "files": [
+        {
+          "source": "evals/files/case-17-package.json",
+          "target": "package.json"
+        },
+        {
+          "source": "evals/files/case-17-guide.md",
+          "target": "docs/selected-guide.md"
+        },
+        {
+          "source": "evals/files/case-17-effect-types.d.ts",
+          "target": "node_modules/effect/dist/dts/Effect.d.ts"
+        },
+        {
+          "source": "evals/files/case-17-effect-source.ts",
+          "target": "node_modules/effect/src/Effect.ts"
+        },
+        {
+          "source": "evals/files/case-17-effect-test.ts",
+          "target": "node_modules/effect/test/Effect.test.ts"
+        },
+        {
+          "source": "evals/files/case-17-batch.ts",
+          "target": "src/batch.ts"
+        }
+      ],
+      "assertions": [
+        "The observed installed-API conflict triggers verification rather than blind application.",
+        "Installed Effect v4 source and tests are treated as controlling implementation evidence.",
+        "The guide remains advisory when it conflicts with the installed API surface.",
+        "The final response reports the verified guide/API drift and any remaining uncertainty without presenting resolved drift as unresolved."
+      ]
+    },
+    {
+      "id": 18,
+      "stage": "routing",
+      "prompt": "This Effect v4 billing module is covered by a scoped AGENTS.md instruction that requires JavaScript Temporal for its domain dates. Implement its PlainDate billing cycle while keeping the surrounding Effect service patterns.",
+      "expected_selection": [
+        "craft-effect-v4",
+        "temporal-dates"
+      ],
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-software-work-items"
+      ],
+      "assertions": [
+        "The Effect service concerns select craft-effect-v4.",
+        "The explicit scoped Temporal concern also selects temporal-dates.",
+        "A bounded alternative date representation does not cause craft-effect-v4 to abstain from the module's remaining Effect concerns.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 19,
+      "stage": "execution",
+      "prompt": "This Effect v4 module is explicitly required to carry exact domain timestamps as Temporal.Instant. Show how to read now without losing TestClock control, and keep Effect retries and timeouts in their existing timing model.",
+      "expected_output": "A composed design that respects the Temporal value representation while retaining Effect Clock, TestClock, and Effect timing primitives for execution semantics.",
+      "assertions": [
+        "The scoped Temporal.Instant representation is preserved instead of replaced with Effect DateTime.",
+        "Current time is read through Effect Clock so TestClock remains effective.",
+        "The clock result is converted at a narrow boundary to Temporal.Instant.",
+        "Effect retries, timeouts, Schedule, Duration, or equivalent Effect timing primitives remain in the Effect model."
+      ]
+    },
+    {
+      "id": 20,
+      "stage": "routing",
+      "prompt": "Review error handling and retry policy in this Effect v4 SDK adapter. Its scoped module instructions deliberately retain native JavaScript Date values for the SDK contract and do not authorize a date-model migration.",
+      "expected_selection": "craft-effect-v4",
+      "catalog_neighbors": [
+        "temporal-dates",
+        "author-software-work-items"
+      ],
+      "assertions": [
+        "The Effect error and retry work selects craft-effect-v4.",
+        "The bounded native Date instruction does not suppress Effect guidance for unrelated concerns.",
+        "temporal-dates is not selected because no Temporal implementation or migration is requested.",
         "No task side effect occurs before selection."
       ]
     }

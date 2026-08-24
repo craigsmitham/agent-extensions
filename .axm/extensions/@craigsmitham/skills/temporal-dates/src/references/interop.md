@@ -1,6 +1,37 @@
 # Temporal at the boundaries
 
-Temporal is not yet what drivers, ORMs, and third-party SDKs speak. The working pattern is a **thin shell**: convert on the way in, convert on the way out, keep `Temporal` everywhere in between. Don't scatter conversions through business logic.
+Temporal is not yet what Effect clocks, drivers, ORMs, and third-party SDKs
+necessarily speak. Within a Temporal-selected scope, use a **thin shell**:
+convert on the way in, convert on the way out, and keep Temporal values in
+between. Do not use this boundary pattern to override another module's
+intentional Effect `DateTime` or native `Date` representation.
+
+## Effect programs with Temporal value models
+
+A scoped Temporal representation and Effect execution semantics can coexist.
+Keep the decisions separate:
+
+- Carry the selected Temporal types in domain and service values.
+- Read current time through Effect `Clock`, then convert the epoch milliseconds
+  to `Temporal.Instant`. `TestClock` continues to control the read.
+- Keep Effect `Duration`, `Schedule`, timeouts, retries, and caches responsible
+  for effectful timing. Use `Temporal.Duration` only where the selected domain
+  model needs its semantics.
+- Convert at the narrow boundary between Effect timing and Temporal values; do
+  not introduce a second injectable clock seam.
+
+```ts
+import { Clock, Effect } from "effect"
+
+const nowInstant = Effect.map(
+  Clock.currentTimeMillis,
+  (millis) => Temporal.Instant.fromEpochMilliseconds(millis),
+)
+```
+
+Do not replace that read with `Temporal.Now.instant()` inside Effect business
+logic. An Effect import alone does not require Effect `DateTime`, but selecting
+Temporal values does not displace Effect's clock and scheduling model either.
 
 ## Date ↔ Temporal
 
@@ -143,7 +174,7 @@ Same for `key` props, `useEffect` deps, and memo comparators — key on `.toStri
 
 ## Testing and fake clocks
 
-`vi.useFakeTimers()` / `jest.useFakeTimers()` patch `Date` and `Date.now`. Whether they reach `Temporal.Now` depends on the version and on whether you're on native or polyfill — **don't assume they do**. The durable fix is to not call `Temporal.Now` in business logic at all:
+`vi.useFakeTimers()` / `jest.useFakeTimers()` patch `Date` and `Date.now`. Whether they reach `Temporal.Now` depends on the version and on whether you're on native or polyfill — **don't assume they do**. In plain Promise code without a managed clock, pass the current instant explicitly:
 
 ```js
 // inject a clock
@@ -153,6 +184,10 @@ function isExpired(token, now = Temporal.Now.instant()) {
 ```
 
 Tests pass an explicit instant; production uses the default. This is worth doing regardless of the fake-timer question — it makes DST edge cases directly testable instead of requiring you to mock the system zone.
+
+Inside Effect code, do not add this defaulted parameter. Read Effect `Clock`
+and let `TestClock` provide the existing test seam, converting the clock result
+to Temporal only after the read.
 
 ## Third-party SDKs
 

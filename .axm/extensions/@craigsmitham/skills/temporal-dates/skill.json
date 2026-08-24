@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "temporal-dates",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/craigsmitham/agent-extensions",
@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "license": "MIT",
-  "description": "Guides JavaScript date, time, timezone, duration, and calendar code toward the Temporal API",
+  "description": "Implements and reviews JavaScript Temporal date, time, timezone, duration, calendar, and interoperability code after Temporal is selected, including scoped Temporal value models inside Effect programs",
   "keywords": [
     "javascript",
     "temporal",

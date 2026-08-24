@@ -1,11 +1,33 @@
 ---
 name: temporal-dates
-description: Write date, time, timezone, duration, and calendar code with the JavaScript Temporal API instead of the legacy Date object. Use when authoring or reviewing any code that creates, parses, formats, compares, stores, or does arithmetic on dates and times, when choosing a date library (moment, dayjs, date-fns, luxon), or when deciding which Temporal type a value should be. Triggers on Temporal, PlainDate, ZonedDateTime, Instant, Duration, new Date(), timezone, DST, epoch, timestamp.
+description: Implements and reviews JavaScript Temporal date, time, timezone, duration, and calendar code when Temporal is already used, explicitly requested, selected by repository or module instructions, or the target of an authorized migration. Use for Temporal, PlainDate, ZonedDateTime, Instant, Temporal.Duration, timezone, DST, calendar arithmetic, or Temporal interoperability, including bounded Temporal concerns inside Effect code. Does not choose Temporal merely because date/time code, new Date(), or a date library appears, and does not override a scoped Effect DateTime or native Date model.
 ---
 
-# Temporal instead of Date
+# JavaScript Temporal
 
-`Temporal` replaces `Date`. Write new date/time code with it. `Date` is mutable, month-indexes from 0, parses inconsistently, and collapses every distinct concept — a birthday, a meeting, a log entry, a duration — into one timestamp that silently shifts when the timezone changes.
+Use this skill after JavaScript Temporal is selected for the current concern.
+It teaches how to implement that choice; it does not decide that a repository,
+module, or existing model must migrate to Temporal.
+
+## Resolve date/time authority first
+
+Resolve the effective instructions for the current concern using the host and
+repository's normal precedence and scope rules. Then preserve that choice:
+
+- When existing code, an explicit request, scoped instructions, or an authorized
+  migration selects Temporal, apply this skill inside that scope.
+- When Effect `DateTime` or `Duration` intentionally owns the concern and no
+  narrower instruction changes it, preserve the Effect representation.
+- When native `Date` intentionally owns a module or an external contract,
+  preserve it there. Convert only when a neighboring Temporal-selected scope
+  needs a Temporal value.
+- When choosing a model is consequential and authority remains unresolved, do
+  not infer a migration from skill installation or activation.
+
+An Effect import does not decide the date representation for every concern in
+the file. A module can carry Temporal domain values while Effect continues to
+own services, errors, concurrency, resources, current-time access, and
+effectful scheduling.
 
 The single highest-value thing this skill does is **stop you reaching for one type for everything**. Pick the type first; the API follows.
 
@@ -14,9 +36,10 @@ correct that requirement explicitly. Do not provide a uniform-type compromise
 as the implementation: show each value with its semantically correct type and
 explain that consistent JSON strings do not require identical in-memory types.
 
-## Step 0 — establish the runtime (do this once per project)
+## Establish the Temporal runtime
 
-Native support is mid-rollout, so never assume. Check, then write code that matches:
+After Temporal is selected, check support once per project and write code that
+matches the actual runtime:
 
 ```bash
 # Node / Bun / Deno — is it a global here?
@@ -59,6 +82,9 @@ Ask: **what would be wrong if this value moved when the timezone changed?**
 
 ## Now
 
+In plain JavaScript or TypeScript without a managed clock, use `Temporal.Now`
+deliberately:
+
 ```js
 Temporal.Now.instant()                            // exact moment — for timestamps
 Temporal.Now.zonedDateTimeISO()                   // system zone
@@ -68,6 +94,29 @@ Temporal.Now.timeZoneId()                         // 'America/Chicago'
 ```
 
 Pass the zone explicitly wherever the answer depends on it. `Temporal.Now.plainDateISO()` means "today *where this process happens to run*", which is a server-config dependency hiding in your business logic.
+
+### Effect code with Temporal values
+
+Inside an Effect computation, keep current-time and virtual-time control in the
+Effect clock even when the selected domain representation is Temporal:
+
+```ts
+import { Clock, Effect } from "effect"
+
+const nowInstant = Effect.map(
+  Clock.currentTimeMillis,
+  (millis) => Temporal.Instant.fromEpochMilliseconds(millis),
+)
+```
+
+This lets `TestClock` continue to control time. Do not replace it with
+`Temporal.Now` or add a second injectable `now` seam inside Effect business
+logic. Keep Effect `Duration`, `Schedule`, timeouts, and caches responsible for
+effectful timing; use `Temporal.Duration` where the selected domain model needs
+Temporal calendar or elapsed-time semantics. Convert at the boundary between
+those concerns rather than forcing one duration type everywhere. See
+`references/interop.md` when Effect, native `Date`, drivers, or SDKs meet a
+Temporal-selected domain.
 
 ## The five rules
 
@@ -145,15 +194,19 @@ Load these only when the task calls for them:
 
 - **`references/api.md`** — per-type sharp edges where the API differs from a reasonable guess: missing methods, argument-shape inconsistencies, BigInt fields, option defaults.
 - **`references/pitfalls.md`** — DST disambiguation, nonexistent midnights, `hoursInDay`, offset conflicts, non-ISO calendars, range limits.
-- **`references/interop.md`** — crossing boundaries: `Date`, Postgres/MySQL/SQLite drivers, ORMs (Prisma, Drizzle, TypeORM), Zod/schema validation, `Intl`, and third-party APIs that still hand you a `Date`.
+- **`references/interop.md`** — crossing boundaries: Effect clocks and timing,
+  `Date`, Postgres/MySQL/SQLite drivers, ORMs (Prisma, Drizzle, TypeORM),
+  Zod/schema validation, `Intl`, and third-party APIs.
 
 ## When `Date` is still correct
 
-Don't convert reflexively at the boundary. Keep `Date` where an external API demands it — pass it in, convert on receipt:
+Keep `Date` where scoped instructions or an external API require it. When a
+neighboring scope uses Temporal, convert at that boundary:
 
 ```js
 const instant = legacyDate.toTemporalInstant();      // Date → Temporal
 const legacy = new Date(instant.epochMilliseconds);  // Temporal → Date
 ```
 
-Convert at the edges; keep `Temporal` everywhere inside.
+Within a Temporal-selected scope, convert at the edges and keep Temporal values
+inside that scope.
