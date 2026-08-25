@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -Eeuo pipefail
+
+trap 'status=$?; echo "Public safety integration tests failed at line ${LINENO} (status ${status})." >&2; exit "$status"' ERR
 
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
@@ -13,7 +15,7 @@ cleanup() {
 trap cleanup EXIT
 
 tree="$(git write-tree)"
-subject=".axm/extensions/@craigsmitham/skills/temporal-dates/src/SKILL.md"
+subject="skills/temporal-dates/src/SKILL.md"
 
 make_fixture() {
   local fixture
@@ -24,6 +26,7 @@ make_fixture() {
   git -C "$fixture" config user.email "public-safety@example.invalid"
   git -C "$fixture" add -f -A
   git -C "$fixture" commit -qm baseline
+  ln -s AGENTS.md "$fixture/CLAUDE.md"
   printf '%s\n' "$fixture"
 }
 
@@ -65,7 +68,7 @@ if find "$test_root" -maxdepth 1 \
 fi
 
 mismatch_fixture="$(make_fixture)"
-mismatch_manifest=".axm/extensions/@agentxm/skills/axm/skill.json"
+mismatch_manifest="agent_extensions/agentxm/@agentxm/skills/axm/skill.json"
 jq '.version = "0.26.3"' "$mismatch_fixture/$mismatch_manifest" \
   >"$mismatch_fixture/$mismatch_manifest.next"
 mv "$mismatch_fixture/$mismatch_manifest.next" "$mismatch_fixture/$mismatch_manifest"
@@ -108,30 +111,30 @@ expect_failure "staged private content hidden by a clean worktree" \
   _ "$staged_fixture" "$(dirname "$real_axm")"
 
 untracked_fixture="$(make_fixture)"
-printf 'api_key = exposed\n' >"$untracked_fixture/.axm/extensions/@craigsmitham/untracked-secret.txt"
+printf 'api_key = exposed\n' >"$untracked_fixture/skills/untracked-secret.txt"
 TMPDIR="$test_root" run_gate "$untracked_fixture" --view git-index >/dev/null
 expect_failure "untracked secret in workspace mode" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
   _ "$untracked_fixture" "$(dirname "$real_axm")"
 
 eval_result_fixture="$(make_fixture)"
-mkdir -p "$eval_result_fixture/.axm/extensions/@craigsmitham/skills/author-docs/evals/results"
+mkdir -p "$eval_result_fixture/skills/author-docs/evals/results"
 printf '{"evidence_class":"authoring-smoke"}\n' \
-  >"$eval_result_fixture/.axm/extensions/@craigsmitham/skills/author-docs/evals/results/smoke.json"
+  >"$eval_result_fixture/skills/author-docs/evals/results/smoke.json"
 expect_failure "routine evaluation result stored in extension source" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
   _ "$eval_result_fixture" "$(dirname "$real_axm")"
 
 eval_runs_fixture="$(make_fixture)"
-mkdir -p "$eval_runs_fixture/.axm/extensions/@craigsmitham/skills/author-docs/evals/runs"
+mkdir -p "$eval_runs_fixture/skills/author-docs/evals/runs"
 printf '{"evidence_class":"authoring-smoke"}\n' \
-  >"$eval_runs_fixture/.axm/extensions/@craigsmitham/skills/author-docs/evals/runs/smoke.json"
+  >"$eval_runs_fixture/skills/author-docs/evals/runs/smoke.json"
 expect_failure "routine evaluation run stored under an alternative source path" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
   _ "$eval_runs_fixture" "$(dirname "$real_axm")"
 
 malformed_suite_fixture="$(make_fixture)"
-malformed_suite=".axm/extensions/@craigsmitham/skills/author-docs/evals/evals.json"
+malformed_suite="skills/author-docs/evals/evals.json"
 jq 'del(.suite_version)' "$malformed_suite_fixture/$malformed_suite" \
   >"$malformed_suite_fixture/$malformed_suite.next"
 mv "$malformed_suite_fixture/$malformed_suite.next" "$malformed_suite_fixture/$malformed_suite"
@@ -140,7 +143,7 @@ expect_failure "malformed Agent Skill evaluation source" \
   _ "$malformed_suite_fixture" "$(dirname "$real_axm")"
 
 subagent_metadata_fixture="$(make_fixture)"
-subagent_manifest=".axm/extensions/@craigsmitham/subagents/researcher/subagent.json"
+subagent_manifest="subagents/researcher/subagent.json"
 jq 'del(.license)' "$subagent_metadata_fixture/$subagent_manifest" \
   >"$subagent_metadata_fixture/$subagent_manifest.next"
 mv "$subagent_metadata_fixture/$subagent_manifest.next" \
@@ -150,18 +153,18 @@ expect_failure "public subagent without required license metadata" \
   _ "$subagent_metadata_fixture" "$(dirname "$real_axm")"
 
 subagent_source_fixture="$(make_fixture)"
-jq 'del(.subagents.researcher)' "$subagent_source_fixture/.axm/settings.json" \
-  >"$subagent_source_fixture/.axm/settings.json.next"
-mv "$subagent_source_fixture/.axm/settings.json.next" \
-  "$subagent_source_fixture/.axm/settings.json"
+jq 'del(.subagents.researcher)' "$subagent_source_fixture/axm.json" \
+  >"$subagent_source_fixture/axm.json.next"
+mv "$subagent_source_fixture/axm.json.next" \
+  "$subagent_source_fixture/axm.json"
 expect_failure "public subagent missing from workspace source authority" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
   _ "$subagent_source_fixture" "$(dirname "$real_axm")"
 
 eval_symlink_fixture="$(make_fixture)"
-mkdir -p "$eval_symlink_fixture/.axm/extensions/@craigsmitham/skills/author-docs/evals/files"
+mkdir -p "$eval_symlink_fixture/skills/author-docs/evals/files"
 ln -s ../../src/SKILL.md \
-  "$eval_symlink_fixture/.axm/extensions/@craigsmitham/skills/author-docs/evals/files/escaped-source.md"
+  "$eval_symlink_fixture/skills/author-docs/evals/files/escaped-source.md"
 expect_failure "evaluation source symlink into runtime payload" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
   _ "$eval_symlink_fixture" "$(dirname "$real_axm")"
@@ -195,13 +198,15 @@ fi
 
 trusted_eval_fixture="$(make_fixture)"
 eval_sentinel="$test_root/snapshot-eval-validator-executed"
-trusted_eval_validator=".axm/extensions/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
+trusted_eval_validator="agent_extensions/agentxm/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
 printf '#!/usr/bin/env node\nimport { writeFileSync } from "node:fs";\nwriteFileSync("%s", "executed\\n");\n' "$eval_sentinel" \
   >"$trusted_eval_fixture/$trusted_eval_validator"
 git -C "$trusted_eval_fixture" add "$trusted_eval_validator"
 git -C "$trusted_eval_fixture" show "HEAD:$trusted_eval_validator" \
   >"$trusted_eval_fixture/$trusted_eval_validator"
-TMPDIR="$test_root" run_gate "$trusted_eval_fixture" --view git-index >/dev/null
+expect_failure "staged acquired evaluator source mismatch" \
+  env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh --view git-index' \
+  _ "$trusted_eval_fixture" "$(dirname "$real_axm")"
 if [[ -e "$eval_sentinel" ]]; then
   echo "The safety gate executed the evaluation validator from the untrusted snapshot." >&2
   exit 1

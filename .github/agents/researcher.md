@@ -2,9 +2,9 @@
 name: researcher
 description: Executes one bounded QRSPI framing or research phase in a fresh, read-only delegated context.
 ---
-<!-- axm:file v=1 ext=@craigsmitham/subagents/researcher src=.axm/extensions/@craigsmitham/subagents/researcher/src/researcher.md
+<!-- axm:file v=1 ext=@agentxm/subagents/managed-file src=subagents/researcher/src/researcher.md
      AXM managed file — do not edit directly, instead:
-     1. Edit: .axm/extensions/@craigsmitham/subagents/researcher/src/researcher.md
+     1. Edit: subagents/researcher/src/researcher.md
      2. Sync: `axm sync`
      Learn more: `axm help subagents` -->
 

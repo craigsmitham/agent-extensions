@@ -21,7 +21,7 @@ fi
 
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
-trusted_eval_validator="$repo_root/.axm/extensions/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
+trusted_eval_validator="$repo_root/agent_extensions/agentxm/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
 
 if ! command -v axm >/dev/null 2>&1; then
   echo "AXM is required. Install the latest release from https://axm.sh." >&2
@@ -71,8 +71,8 @@ assert_sync_converged() {
     select(
       .ok == true and
       (.result.outcome == "previewed" or .result.outcome == "no-op") and
-      .result.errorCount == 0 and
-      .result.blockedCount == 0
+      .result.counts.failed == 0 and
+      .result.counts.blocked == 0
     )
   ' "$output" >/dev/null; then
     cat "$output"
@@ -128,6 +128,20 @@ else
   axm lint --view workspace --strict
 fi
 
+authored_roots=(
+  "$validation_root/knowledge"
+  "$validation_root/packs"
+  "$validation_root/rules"
+  "$validation_root/skills"
+  "$validation_root/subagents"
+)
+
+find_authored_manifests() {
+  find "${authored_roots[@]}" -type f \
+    \( -name skill.json -o -name subagent.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
+    "$@"
+}
+
 expected=(
   knowledge/docs
   knowledge/effect-v4
@@ -166,9 +180,8 @@ expected=(
 
 expected_list="$(printf '%s\n' "${expected[@]}")"
 actual_list="$(
-  find "$validation_root/.axm/extensions/@craigsmitham" -type f \
-    \( -name skill.json -o -name subagent.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
-    | sed -E "s#^${validation_root}/.axm/extensions/@craigsmitham/([^/]+/[^/]+)/.*#\\1#" \
+  find_authored_manifests \
+    | sed -E "s#^${validation_root}/([^/]+/[^/]+)/.*#\\1#" \
     | sort
 )"
 
@@ -178,21 +191,26 @@ if [[ "$expected_list" != "$actual_list" ]]; then
   exit 1
 fi
 
-if ! node "$trusted_eval_validator" validate --root "$validation_root"; then
-  echo "Agent Skill evaluation source does not conform to repository policy." >&2
-  exit 1
-fi
+while IFS= read -r -d '' manifest; do
+  package_root="$(dirname "$manifest")"
+  if ! node "$trusted_eval_validator" validate \
+    --root "$validation_root" \
+    --package "${package_root#"$validation_root/"}"; then
+    echo "Agent Skill evaluation source does not conform to repository policy." >&2
+    exit 1
+  fi
+done < <(find "$validation_root/skills" -mindepth 2 -maxdepth 2 -name skill.json -print0)
 
 if rg -n --hidden \
   '(/Users/|/home/[A-Za-z0-9._-]+|~/(Code|Notes|OneDrive)|agent-extensions-private|personal-os|\.exe\.xyz|craig@)' \
-  "$validation_root/.axm/extensions/@craigsmitham"; then
+  "${authored_roots[@]}"; then
   echo "Found a private or machine-specific identifier in public package content." >&2
   exit 1
 fi
 
 if rg -n --hidden -i \
   '(api[_-]?key|client[_-]?secret|access[_-]?token|private[_-]?key|password)[[:space:]]*[:=][[:space:]]*[^$<{[:space:]]' \
-  "$validation_root/.axm/extensions/@craigsmitham"; then
+  "${authored_roots[@]}"; then
   echo "Found a possible hard-coded secret in public package content." >&2
   exit 1
 fi
@@ -209,16 +227,17 @@ while IFS= read -r -d '' link; do
 done < <(find "$validation_root" -path "$validation_root/.git" -prune -o -type l -print0)
 
 while IFS= read -r -d '' manifest; do
-  jq -e '
+  relative_manifest="${manifest#"$validation_root/"}"
+  expected_directory="$(dirname "$relative_manifest")"
+  jq -e --arg expected_directory "$expected_directory" '
     (.description | type == "string" and length > 0) and
     (.keywords | type == "array" and length > 0) and
     (.license | type == "string" and length > 0) and
     (.homepage == "https://github.com/craigsmitham/agent-extensions") and
     (.repository.url == "https://github.com/craigsmitham/agent-extensions") and
-    (.repository.directory | startswith(".axm/extensions/@craigsmitham/"))
+    (.repository.directory == $expected_directory)
   ' "$manifest" >/dev/null
-done < <(find "$validation_root/.axm/extensions/@craigsmitham" -type f \
-  \( -name skill.json -o -name subagent.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) -print0)
+done < <(find_authored_manifests -print0)
 
 while IFS= read -r license_id; do
   if [[ ! -f "$validation_root/LICENSES/${license_id}.txt" ]]; then
@@ -226,9 +245,7 @@ while IFS= read -r license_id; do
     exit 1
   fi
 done < <(
-  find "$validation_root/.axm/extensions/@craigsmitham" -type f \
-    \( -name skill.json -o -name subagent.json -o -name pack.json -o -name knowledge.json -o -name rule.json \) \
-    -print0 \
+  find_authored_manifests -print0 \
     | xargs -0 jq -r '.license' \
     | rg -o '[A-Za-z0-9][A-Za-z0-9.-]*' \
     | rg -v '^(AND|OR|WITH)$' \
@@ -244,20 +261,20 @@ if jq -e --argjson expected_count "${#expected[@]}" '
     (.rules | to_entries[] | {type: "rules", key, source: (.value | source)}),
     (.subagents | to_entries[] | {type: "subagents", key, source: (.value | source)})
   ]) as $entries |
-  ([$entries[] | select(.source | startswith("workspace:@craigsmitham/"))] |
+  ([$entries[] | select(.source == "workspace")] |
     length == $expected_count) and
   all($entries[];
-    (.source | startswith("workspace:@craigsmitham/")) or
+    (.source == "workspace") or
     (.type == "skills" and .key == "axm" and
-      (.source | startswith("@agentxm/skills/axm"))) or
+      (.source | startswith("agentxm:@agentxm/skills/axm"))) or
     (.type == "packs" and
       (.key == "agent-engineering" or
        .key == "context-engineering" or
        .key == "harness-engineering" or
        .key == "skill-engineering") and
-      .source == ("@agentxm/packs/" + .key))
+      .source == ("agentxm:@agentxm/packs/" + .key))
   )
-' "$validation_root/.axm/settings.json" >/dev/null; then
+' "$validation_root/axm.json" >/dev/null; then
   :
 else
   echo "The workspace contains an unexpected package owner or source." >&2
@@ -266,7 +283,7 @@ fi
 
 while IFS= read -r -d '' manifest; do
   axm knowledge lint --path "$(dirname "$manifest")"
-done < <(find "$validation_root/.axm/extensions/@craigsmitham/knowledge" \
+done < <(find "$validation_root/knowledge" \
   -mindepth 2 -maxdepth 2 -name knowledge.json -print0)
 
 if [[ "$view" == "git-index" ]]; then

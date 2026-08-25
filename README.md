@@ -58,7 +58,6 @@ Install the replacement `@agentxm` identities; the previously published
 Canonical packages live under:
 
 ```text
-.axm/extensions/@craigsmitham/
 ├── knowledge/
 ├── packs/
 ├── rules/
@@ -67,7 +66,8 @@ Canonical packages live under:
 ```
 
 Agent-specific skill directories are AXM-managed projections. Author canonical
-content under `.axm/extensions`, not through those projections.
+content under the root package directories above, not through those
+projections. Acquired packages live under `agent_extensions/<source-key>/`.
 
 ## Contributing and publishing
 

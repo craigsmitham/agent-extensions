@@ -1,0 +1,29 @@
+{
+  "$schema": "https://axm.sh/schemas/knowledge.schema.json",
+  "owner": "@craigsmitham",
+  "name": "product-management",
+  "version": "0.1.0",
+  "type": "knowledge",
+  "format": {
+    "name": "okf",
+    "version": "0.2"
+  },
+  "bundleRoot": "src",
+  "description": "Product management principles for outcomes, product risks, empowered teams, discovery, delivery, evidence, and product strategy",
+  "keywords": [
+    "product-management",
+    "product-strategy",
+    "product-discovery",
+    "product-delivery",
+    "product-risks",
+    "outcomes"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "standalone": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "knowledge/product-management"
+  }
+}

@@ -7,3 +7,6 @@
 
 # Generated AXM build intermediates
 /.axm/build/
+/.axm/
+*.axm-staging/
+*.axm-backup/

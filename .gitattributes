@@ -1,2 +1,3 @@
-.axm/extensions/@craigsmitham/skills/author-okf/src/references/SPEC.md -whitespace
+skills/author-okf/src/references/SPEC.md -whitespace
 LICENSES/*.txt -whitespace
+/agent_extensions/** -text -whitespace
