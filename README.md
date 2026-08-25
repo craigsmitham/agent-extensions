@@ -29,15 +29,19 @@ Install the replacement `@agentxm` identities; the previously published
 | `effect-v4` | Effect v4 guidance: a routing skill plus a knowledge bundle of twenty-two guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification | `axm install @craigsmitham/packs/effect-v4` |
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
+| `gen-stack` | Opinionated generative software guidance joining authoritative requirements, architecture, work items, implementation constraints, and independent evidence loops | `axm install @craigsmitham/packs/gen-stack` |
 | `qrspi` | Frame concern-aware Research Briefs when needed and execute them through a read-only researcher subagent | `axm install @craigsmitham/packs/qrspi` |
-| `software-architecture` | Durable architecture knowledge plus setup, authoring, and maintenance workflows for human-first architecture docs and product quality requirements | `axm install @craigsmitham/packs/software-architecture` |
-| `software-engineering` | Software-work-item authoring, shared engineering knowledge, and concise YAGNI and Tidy First rules | `axm install @craigsmitham/packs/software-engineering` |
+
+The former `software-architecture` and `software-engineering` packs are
+superseded by `gen-stack`. Their final published versions remain available for
+reproducibility but should not be used for new adoption.
 
 ## Standalone knowledge
 
 | Bundle | Purpose | Install |
 | --- | --- | --- |
 | `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
+| `gen-stack` | Cross-cutting authority, evidence, feedback, trust, compaction, and bounded-regeneration doctrine | `axm install @craigsmitham/knowledge/gen-stack` |
 | `product-management` | Product outcomes, risks, empowered teams, discovery, delivery, evidence, and product strategy | `axm install @craigsmitham/knowledge/product-management` |
 | `software-architecture` | Durable system meaning, product quality requirements, boundaries, invariants, and evidence-aware architecture documentation | `axm install @craigsmitham/knowledge/software-architecture` |
 | `software-engineering` | Evidence-timed design change and software work items for incidents, defects, and feature requests | `axm install @craigsmitham/knowledge/software-engineering` |

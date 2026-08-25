@@ -29,9 +29,12 @@
     "author-software-work-items": "workspace",
     "question": "workspace",
     "research": "workspace",
-    "axm": "agentxm:@agentxm/skills/axm@0.27.15",
     "reconcile-architecture-docs": "workspace",
-    "setup-architecture-docs": "workspace"
+    "setup-architecture-docs": "workspace",
+    "axm": {
+      "source": "workspace",
+      "origin": "bundled"
+    }
   },
   "rules": {
     "field-notes": "workspace",
@@ -48,7 +51,8 @@
     "product-management": "workspace",
     "strategy": "workspace",
     "software-engineering": "workspace",
-    "software-architecture": "workspace"
+    "software-architecture": "workspace",
+    "gen-stack": "workspace"
   },
   "subagents": {
     "researcher": "workspace"
@@ -60,7 +64,8 @@
     "software-engineering": "workspace",
     "agent-engineering": "agentxm:@agentxm/packs/agent-engineering",
     "qrspi": "workspace",
-    "software-architecture": "workspace"
+    "software-architecture": "workspace",
+    "gen-stack": "workspace"
   },
   "owner": "@craigsmitham"
 }

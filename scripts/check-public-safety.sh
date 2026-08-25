@@ -146,6 +146,7 @@ expected=(
   knowledge/docs
   knowledge/effect-v4
   knowledge/field-notes
+  knowledge/gen-stack
   knowledge/knowledge-management
   knowledge/product-management
   knowledge/software-architecture
@@ -155,6 +156,7 @@ expected=(
   packs/docs
   packs/effect-v4
   packs/field-notes
+  packs/gen-stack
   packs/qrspi
   packs/software-architecture
   packs/software-engineering
@@ -253,7 +255,12 @@ done < <(
 )
 
 if jq -e --argjson expected_count "${#expected[@]}" '
-  def source: if type == "object" then .source else . end;
+  def source:
+    if type == "object" and .source == "workspace" and .origin == "bundled"
+    then "bundled"
+    elif type == "object" then .source
+    else .
+    end;
   ([
     (.skills | to_entries[] | {type: "skills", key, source: (.value | source)}),
     (.knowledge | to_entries[] | {type: "knowledge", key, source: (.value | source)}),
@@ -266,7 +273,8 @@ if jq -e --argjson expected_count "${#expected[@]}" '
   all($entries[];
     (.source == "workspace") or
     (.type == "skills" and .key == "axm" and
-      (.source | startswith("agentxm:@agentxm/skills/axm"))) or
+      ((.source | startswith("agentxm:@agentxm/skills/axm")) or
+       .source == "bundled")) or
     (.type == "packs" and
       (.key == "agent-engineering" or
        .key == "context-engineering" or

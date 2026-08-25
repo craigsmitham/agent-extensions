@@ -10,6 +10,7 @@ license-selection policy and package-boundary rules are documented in
   `product-management`, `software-architecture`, `software-engineering`,
   `strategy`, and `workflow-automation` knowledge bundles are licensed under
   `CC-BY-SA-4.0`.
+- The `gen-stack` knowledge bundle is licensed under `CC-BY-4.0`.
 - `author-okf` is licensed under `MIT AND Apache-2.0`: Craig's original skill,
   templates, and validator use MIT, while the vendored Open Knowledge Format
   specification retains its upstream Apache-2.0 license.

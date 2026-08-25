@@ -1,8 +1,8 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.6.0",
-  "description": "Human-first software architecture knowledge and profile-conforming workflows for required system context and concise semantic deltas over repository evidence",
+  "version": "0.7.0",
+  "description": "Final software-architecture composition retained for reproducibility; superseded by @craigsmitham/packs/gen-stack",
   "keywords": [
     "software-architecture",
     "architecture-documentation",
@@ -15,7 +15,13 @@
     "value-propositions",
     "use-cases",
     "quality-attributes",
-    "product-quality-requirements",
+    "requirements-engineering",
+    "requirement-classification",
+    "functional-requirements",
+    "process-requirements",
+    "human-factors-requirements",
+    "usability-requirements",
+    "subject-colocated-requirements",
     "boundaries",
     "invariants",
     "progressive-disclosure",
@@ -28,7 +34,7 @@
     "ownership",
     "architecture-decisions",
     "assurance",
-    "architecture-constraints"
+    "constraint-requirements"
   ],
   "repository": {
     "type": "git",
@@ -40,9 +46,10 @@
   "type": "pack",
   "name": "software-architecture",
   "dependencies": {
-    "@craigsmitham/knowledge/software-architecture": ">=3.1.0",
-    "@craigsmitham/skills/author-architecture-docs": ">=3.1.0",
-    "@craigsmitham/skills/setup-architecture-docs": ">=0.5.0",
-    "@craigsmitham/skills/reconcile-architecture-docs": ">=0.3.0"
+    "@craigsmitham/knowledge/gen-stack": ">=0.1.0",
+    "@craigsmitham/knowledge/software-architecture": ">=4.1.0",
+    "@craigsmitham/skills/author-architecture-docs": ">=4.1.0",
+    "@craigsmitham/skills/setup-architecture-docs": ">=0.7.0",
+    "@craigsmitham/skills/reconcile-architecture-docs": ">=0.5.0"
   }
 }

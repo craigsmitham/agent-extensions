@@ -50,9 +50,10 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [docs](knowledge/docs/src/index.md) | Portable documentation craft for authoring, naming, information architecture, auditing, and improving explainers, guides, principles, and evidence-backed patterns |
 | [effect-v4](knowledge/effect-v4/src/index.md) | Opinionated Effect v4 guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification |
 | [field-notes](knowledge/field-notes/src/index.md) | Operational field-note practice for factual and diagnostic evidence capture, impact-aware triage, evidence-led findings, and verified corrective action |
+| [gen-stack](knowledge/gen-stack/src/index.md) | Opinionated software change guidance connecting intent, authoritative requirements, architecture, implementation, evaluations, and operational feedback |
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-management](knowledge/product-management/src/index.md) | Product management principles for outcomes, product risks, empowered teams, discovery, delivery, evidence, and product strategy |
-| [software-architecture](knowledge/software-architecture/src/index.md) | Human-first software architecture guidance and the required OKF profile for system context, decisions, constraints, product quality requirements, boundaries, and selected views |
+| [software-architecture](knowledge/software-architecture/src/index.md) | Human-first software architecture and requirements guidance with an OKF profile for systems, subject-colocated obligations, decisions, boundaries, and selected views |
 | [software-engineering](knowledge/software-engineering/src/index.md) | Software engineering guidance for evidence-timed design change and context-rich work items for incidents, defects, and feature delivery |
 | [strategy](knowledge/strategy/src/index.md) | Strategy as coherent choices about participation and advantage, supported by capabilities, value creation, and evidence |
 | [workflow-automation](knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
@@ -66,7 +67,7 @@ When working with Effect, use Effect v4 APIs and conventions. Do not use Effect
 v3 APIs or carry v3 patterns forward; verify ambiguous guidance against current
 v4 sources.
 
-<!-- axm:point v=1 ext=@craigsmitham/rules/yagni@0.1.2 kind=rule -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/yagni@0.1.3 kind=rule -->
 
 ## YAGNI
 
@@ -76,7 +77,7 @@ Defer the commitment unless it serves a current feature, constraint, invariant,
 or concrete risk. If delay would close an option that is costly to recover,
 take only the cheapest safe action that preserves it.
 
-<!-- axm:point v=1 ext=@craigsmitham/rules/tidy-first@0.1.2 kind=rule -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/tidy-first@0.1.3 kind=rule -->
 
 ## Tidy First
 

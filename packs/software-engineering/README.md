@@ -1,8 +1,12 @@
 # Software engineering
 
+> **Superseded:** this pack is retained for reproducibility and will be
+> deprecated in the registry after version `1.1.0` is published. For active
+> development, install `@craigsmitham/packs/gen-stack`.
+
 Software engineering judgment and authoring workflows for evidence-rich
 software work items and evidence-timed design change.
-The pack keeps YAGNI and Tidy First as distinct, concise rules while routing
+The historical pack keeps YAGNI and Tidy First as distinct, concise rules while routing
 work-item authoring through a focused skill backed by shared knowledge.
 
 ## Included extensions
@@ -22,6 +26,19 @@ knowledge package. The knowledge package remains useful on its own.
 ```bash
 axm install @craigsmitham/packs/software-engineering
 ```
+
+For active repositories, migrate explicitly:
+
+```bash
+axm uninstall @craigsmitham/packs/software-engineering
+axm install @craigsmitham/packs/gen-stack
+```
+
+Version `1.1.0` is a migration-only final release. It brings the work-item
+workflow onto the new authority and Requirement-impact semantics and includes
+the shared Gen Stack knowledge required by that workflow. It does not alias or
+transitively install the complete Gen Stack pack. Published versions and source
+remain available so older installations can still be reproduced.
 
 ## Usage
 

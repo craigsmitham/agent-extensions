@@ -1,17 +1,22 @@
 # Software architecture
 
+> **Superseded:** this pack is retained for reproducibility and will be
+> deprecated in the registry after version `0.7.0` is published. For active
+> development, install `@craigsmitham/packs/gen-stack`.
+
 Software architecture knowledge and focused workflows for setting up,
 authoring, and reconciling architecture docs that preserve accepted, durable
-functional meaning, product quality requirements, and structural meaning
-without copying facts that executable or live sources own better.
+functional meaning, subject-colocated requirements, and structural meaning
+without duplicating obligations across architecture views or copying facts that
+executable or live sources own better.
 
 ## Included extensions
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/software-architecture` | Human-first, risk-driven architecture meaning; the mandatory lifecycle, ownership, decision-policy, and assurance kernel; named decisions and constraints; product quality requirements; selected views; and the Just Enough Architecture Docs pattern |
+| `@craigsmitham/knowledge/software-architecture` | Human-first architecture and requirements meaning; the mandatory System and context kernel; subject-colocated requirements; named decisions; selected views; and the Just Enough Architecture Docs pattern |
 | `@craigsmitham/skills/setup-architecture-docs` | Establish the system boundary, root, required context kernel, local adoption, authority routes, maintenance triggers, and agent discovery without inferred architecture |
-| `@craigsmitham/skills/author-architecture-docs` | Create or revise an explicitly requested profile concept, including context, ADR, and constraint concepts, while routing exact current facts to their authorities |
+| `@craigsmitham/skills/author-architecture-docs` | Create or revise an explicitly requested System, Requirement, ADR, or other architecture concept while routing exact current facts to their authorities |
 | `@craigsmitham/skills/reconcile-architecture-docs` | Reconcile established docs and profile migrations through bounded repair, making semantic changes only with explicit user authority |
 
 The three skills are non-standalone: they load the bundled knowledge through
@@ -23,19 +28,27 @@ OKF v0.2 and conform to the bundled software-architecture-docs profile.
 Repository-local accepted authority governs meaning, while the profile governs
 representation and permitted variance.
 
-## Revision 0.6.0
+## Final revision 0.7.0
 
-This release updates the pack floors to knowledge `3.1.0`, authoring `3.1.0`,
-setup `0.5.0`, and reconciliation `0.3.0`. Every one of profile `0.9.0`'s 23
-concept types now has a focused one-artifact guide, including the four required
-root system-context concepts, accepted ADRs, and binding constraints. The
-profile contract is unchanged; rollback is to pack `0.5.0` and its prior member
-versions.
+This is a migration-only final release. It brings the architecture workflows
+onto profile `0.10.2`, the single Requirement authority semantics, and the
+shared Gen Stack knowledge those workflows require. It does not alias or
+transitively install the complete Gen Stack pack. Future cross-cutting
+development is distributed through `@craigsmitham/packs/gen-stack`. Published
+versions and source remain available so older installations can still be
+reproduced.
 
 ## Install
 
 ```bash
 axm install @craigsmitham/packs/software-architecture
+```
+
+For active repositories, migrate explicitly:
+
+```bash
+axm uninstall @craigsmitham/packs/software-architecture
+axm install @craigsmitham/packs/gen-stack
 ```
 
 ## Workflow
@@ -48,9 +61,11 @@ axm install @craigsmitham/packs/software-architecture
   need review, repair, reconciliation, consolidation, pruning, or lifecycle
   attention.
 - Use the knowledge bundle directly to reason about responsibilities,
-  boundaries, dependency direction, invariants, offerings, audiences, needs,
+  boundaries, dependency direction, invariants, requirement classification,
+  functional, quality, process, human-factors, and usability obligations,
+  offerings, audiences, needs,
   jobs to be done, value propositions, use cases, capabilities, features,
-  surfaces, product quality requirements, DDD contexts, C4 structures, or
+  surfaces, subject-colocated requirements, DDD contexts, C4 structures, or
   Wardley mapping.
 - Keep undecided alternatives in proposals and precise current facts in their
   executable or live authorities.
@@ -62,7 +77,7 @@ workflow routing boundaries, accepted desired-state handling, authority
 reconciliation, demand-and-value separation, product-quality authority, C4
 containment, strategic freshness, maintenance lifecycle decisions, and
 resistance to empty scaffolding or exhaustive prose mirrors. Focused execution
-cases cover all six system-context, decision, and constraint types.
+cases cover system-context, requirement, and decision concepts.
 
 ## License
 
