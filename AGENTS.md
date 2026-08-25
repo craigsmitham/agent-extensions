@@ -66,27 +66,27 @@ When working with Effect, use Effect v4 APIs and conventions. Do not use Effect
 v3 APIs or carry v3 patterns forward; verify ambiguous guidance against current
 v4 sources.
 
-<!-- axm:point v=1 ext=@craigsmitham/rules/yagni@0.1.1 kind=rule -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/yagni@0.1.2 kind=rule -->
 
 ## YAGNI
 
 Before adding capability, structure, process, or scope for future use, consult
-the [YAGNI principle](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/design-and-change/yagni-and-speculative-complexity.md).
+the YAGNI principle in the installed software-engineering Knowledge bundle.
 Defer the commitment unless it serves a current feature, constraint, invariant,
 or concrete risk. If delay would close an option that is costly to recover,
 take only the cheapest safe action that preserves it.
 
-<!-- axm:point v=1 ext=@craigsmitham/rules/tidy-first@0.1.1 kind=rule -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/tidy-first@0.1.2 kind=rule -->
 
 ## Tidy First
 
 When current structure materially increases the difficulty or risk of an
-authorized software behavior change, consult the [Tidy First
-pattern](.axm/extensions/@craigsmitham/knowledge/software-engineering/src/design-and-change/tidy-first.md).
+authorized software behavior change, consult the Tidy First pattern in the
+installed software-engineering Knowledge bundle.
 Choose first, after, later, or never. If tidying first, make only the smallest
 behavior-preserving change that makes the authorized change easier.
 
-<!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.1 kind=rule -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.2 kind=rule -->
 
 ## Field notes
 
@@ -120,8 +120,8 @@ other sensitive values. Do not rerun a mutation merely to recover evidence.
 
 ### How to record
 
-On the first qualifying incident in a session, read the
-[capture instructions](.axm/extensions/@craigsmitham/rules/field-notes/src/capture.md).
+On the first qualifying incident in a session, read `capture.md` alongside the
+installed field-notes rule source.
 Append one note for each qualifying incident. Recording it is expected behavior,
 not an admission of failure.
 

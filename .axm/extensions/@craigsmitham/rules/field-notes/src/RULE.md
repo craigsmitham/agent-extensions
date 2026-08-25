@@ -30,8 +30,8 @@ other sensitive values. Do not rerun a mutation merely to recover evidence.
 
 ### How to record
 
-On the first qualifying incident in a session, read the
-[capture instructions](.axm/extensions/@craigsmitham/rules/field-notes/src/capture.md).
+On the first qualifying incident in a session, read `capture.md` alongside the
+installed field-notes rule source.
 Append one note for each qualifying incident. Recording it is expected behavior,
 not an admission of failure.
 
