@@ -21,7 +21,9 @@ technique.
 
 | Representation | What it owns |
 | --- | --- |
-| Requirement | The canonical accepted expression of an obligation derived from Intent, its eligible Architecture subject, and its stable identity |
+| Requirement | The local decision to adopt an obligation, its canonical normative expression, eligible Architecture subject, and stable identity |
+| Incorporated normative reference | The referenced definitions and conformance semantics for the identified provisions; it does not own the local decision to adopt them |
+| Supporting model or view | An explanatory or analytical representation whose normative role and precedence are explicit |
 | Architecture | Responsibility, authority, boundaries, decisions, relationships, and the response to the Requirement |
 | Implementation | The current realization |
 | Evaluation definition | The method, cases, oracle, thresholds, and conditions used to assess the Requirement |
@@ -31,7 +33,7 @@ technique.
 
 An executable check may intentionally repeat a Requirement almost word for
 word. That redundancy is useful because the two artifacts answer different
-questions: the Requirement says what shall be true; the evaluation asks
+questions: the Requirement owns what is required; the evaluation asks
 whether a realized subject satisfies it. The check should reference the stable
 `requirement_id` when it claims that coverage.
 
@@ -43,7 +45,11 @@ of a predicate to exist in exactly one place.
 ## Judgment
 
 - Keep an accepted Requirement even when code or tests make the same predicate
-  easy to infer. `Is`, `passes`, and `was observed` do not establish `shall`.
+  easy to infer. `Is`, `passes`, and `was observed` do not establish a local
+  obligation.
+- Permit multiple representations inside one Requirement when they clarify
+  different aspects of the same obligation. Name which representation is
+  normative, explanatory, or derived and define precedence if they can differ.
 - Prefer evaluation diversity that has genuinely different blind spots, such
   as an example, property check, analysis, and runtime measure. Several checks
   generated from the same ambiguous interpretation are redundant in volume,

@@ -14,6 +14,13 @@ generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
 
 # Documenting system assurance
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Create the required `System Assurance` concept at `assurance.md` so a reader
@@ -27,6 +34,16 @@ compliance authorities that own exact criteria and current results. Separate
 corpus-governance policy from independently maintained obligations on system
 work. Do not infer an obligation from available tests or treat a passing check
 as proof that an assurance policy was accepted.
+
+## Representation
+
+Use the OKF envelope and the profile's exact `System Assurance` type and root
+path. Present residual body meaning in this preferred order: required
+confidence and scope, evidence authorities, review or approval routes,
+reassessment triggers, bounded exceptions, and links to current results. Keep
+criteria, results, and independently maintained obligations with their native
+owners instead of copying them into an assurance checklist. This order is
+authoring guidance, not profile conformance.
 
 ## Steps
 

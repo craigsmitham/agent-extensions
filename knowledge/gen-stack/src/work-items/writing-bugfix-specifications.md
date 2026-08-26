@@ -17,15 +17,25 @@ sources:
   - id: requirement-impact
     resource: ../control-loop/analyzing-requirement-impact.md
     title: Analyzing Requirement impact
+  - id: requirement-change-guide
+    resource: specifying-requirement-changes.md
+    title: Specifying Requirement changes
   - id: preserving-context
     resource: preserving-design-and-delivery-context.md
     title: Preserving design and delivery context in software work items
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T17:31:25Z
+  at: 2026-08-26T20:16:50Z
 ---
 
 # Writing bugfix specifications
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide when investigation has identified concrete defective behavior
 or a defective condition in the realized system and an authorized decision has
@@ -54,6 +64,31 @@ it, how the response is designed and delivered, and what evidence will verify
 it—without turning the Bugfix into a second Defect report or rewriting the
 originating Signal.
 
+## Representation
+
+Use exact native tracker fields for identity, type, workflow state, priority,
+assignment, and relationships when their semantics match. Present residual
+body content in this preferred order: summary, identified Bugs and linked
+Defect Provenance, corrective decision, expected and corrected behavior,
+Requirement and Architecture impact, scope and constraints, Change Design,
+verification, then delivery and recovery. The [tracker-ready
+template](#tracker-ready-template) is a logical fallback; omit inapplicable
+sections and do not duplicate native fields, Defect evidence, or canonical
+Requirements.
+
+## Apply the common work-item guides
+
+This guide owns the Bug-specific corrective composition. Use [Preserving
+evidence and authority in software work
+items](preserving-work-item-evidence-and-authority.md) for Defect-report
+provenance and corrective authority, [Maintaining work-item identity,
+relationships, and
+lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md) for
+separate identities and transitions, [Managing work-item metadata and
+labels](managing-work-item-metadata-and-labels.md) for host fields and external
+mutation, and [Titling and summarizing work
+items](titling-and-summarizing-work-items.md) for the derived brief.
+
 ## Preconditions
 
 - At least one linked Defect report preserves the originating Signal,
@@ -67,7 +102,8 @@ originating Signal.
 
 ## 1. Create a separate Bugfix identity
 
-Create a new work item or other explicit Specification container. Link every
+Apply the shared identity guide. Create a new work item or other explicit
+Specification container. Link every
 material Defect report and preserve the host's relationship to incidents,
 occurrences, regressions, and related Bugs.
 
@@ -102,9 +138,11 @@ calling it a Bugfix Specification.
 
 ## 3. Record the corrective decision and authority
 
-State which decision selected corrective change, who or what had authority,
-and which outcomes remain possible. Record priority, target, ownership, or
-delivery timing only when already decided by the applicable authority.
+Apply the shared evidence and authority guide. State which decision selected
+corrective change, who or what had authority, and which outcomes remain
+possible. Apply the shared metadata guide to priority, target, ownership, and
+delivery timing; record them only when already decided by the applicable
+authority.
 
 Identifying a Bug does not itself authorize implementation. Keep the decision
 to correct separate from the diagnosis and from the later evidence that the
@@ -141,6 +179,32 @@ When one Bug implicates several Defects, state which proposed change addresses
 each one and which authority must accept it. An authorized Bugfix does not by
 itself accept a Requirement or Architecture change.
 
+Most Bugfixes restore satisfaction of unchanged desired state and therefore
+must not contain a Requirement-change entry. When the authorized response does
+change desired state, apply [Specifying Requirement
+changes](specifying-requirement-changes.md) to develop each candidate addition,
+revision, retirement, replacement, split, or merge. Keep those candidate
+changes distinct from the correction until the applicable authority accepts
+them. If accepted corrected behavior does not yet exist, that missing decision
+blocks the dependent correction; the Bugfix cannot manufacture it.
+
+Explicitly surface every material missing, underdeveloped, misplaced,
+disputed, or contradicted Requirement, Surface, C4 element, responsibility,
+boundary, or Evaluation route. Use the shared [candidate Architecture and
+Requirements
+guide](../architecture/developing-candidate-architecture-and-requirements.md)
+and only the element guides implicated by the evidence. For each gap state its
+evidence, impact on the correction, stable options or candidate repair,
+recommendation, applicable authority, and blocking status.
+
+A missing accepted expectation, unresolved Requirement subject, or disputed
+boundary that determines the correction is blocking: complete the Bugfix draft
+only to the point that remains truthful, then stop before dependent delivery or
+mutation. A missing evaluation route is normally non-blocking when corrected
+behavior and Architecture are already accepted; preserve the gap and recommend
+the needed Evaluation work while allowing the Bugfix Specification to proceed.
+Do not turn either kind of gap into accepted meaning inside the Bugfix.
+
 ## 6. Bound scope, constraints, and non-goals
 
 State affected behavior, actors, data, interfaces, components, environments,
@@ -148,10 +212,6 @@ and versions only as far as they shape the correction. Preserve unchanged
 constraints and invariants that the Bugfix must conserve. Name explicit
 non-goals when they prevent the correction from becoming an opportunistic
 feature or unrelated refactor.
-
-If an adjacent tidy makes the correction safer or more legible, apply the
-[Tidy First pattern](../patterns/tidy-first.md) deliberately and keep the
-behavior-preserving tidy distinguishable from the Bugfix behavior change.
 
 ## 7. Develop the proportional Change Design
 
@@ -266,6 +326,15 @@ bounded outcome should change, and why does that matter?
 - Applicable Requirements:
 - Affected Architecture and decisions:
 - Candidate authority changes requiring acceptance:
+- Material cross-stack gaps, evidence, and impact:
+- Options and recommendation:
+- Applicable authority and blocking status:
+
+## Proposed Requirement changes
+
+Include only when the response changes desired state. Use one
+Requirement-change entry per independently decidable change; otherwise state
+`None — restores satisfaction of unchanged Requirements`.
 
 ## Scope and constraints
 
@@ -310,8 +379,17 @@ be gathered.
 - Diagnosis, correction authority, and verification evidence remain distinct.
 - Current and corrected behavior have an accepted basis or a visible authority
   gap.
+- Material cross-stack gaps include evidence, impact, options or a candidate
+  correction, a recommendation, authority, and blocking status.
+- A blocking meaning gap stops dependent correction work, while a non-blocking
+  gap does not prevent an otherwise truthful Bugfix Specification.
 - Requirement and Architecture impact is explicit without creating a second
   normative authority.
+- Requirement-change entries appear only when desired state changes; a normal
+  Bugfix states that it restores unchanged Requirements.
+- Any proposed Requirement addition, revision, retirement, replacement, split,
+  or merge follows the common identity, lifecycle, lineage, authority, blocker,
+  and consequence guidance.
 - Scope, unchanged constraints, and non-goals prevent accidental feature work.
 - Change Design is proportional and consequential unknowns remain open.
 - Verification conditions are behavioral; the Evaluation or testing strategy

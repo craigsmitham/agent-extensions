@@ -25,10 +25,17 @@ sources:
     title: Gen Stack vocabulary and relationship model
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T15:42:30Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Change Design
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 A **Change Design** is the bounded technical response formed while deciding
 how to realize a software change within applicable Requirements and
@@ -181,7 +188,6 @@ external document name as another semantic authority.
 - [Requirements engineering](/architecture/requirements/requirements-engineering.md)
 - [Analyzing Requirement impact](/control-loop/analyzing-requirement-impact.md)
 - [Preserving design and delivery context in software work items](/work-items/preserving-design-and-delivery-context.md)
-- [YAGNI: defer speculative capability and structure](/principles/yagni-and-speculative-complexity.md)
 
 [^google-design-docs]: Google describes collaborative design documents as a
     pre-implementation review surface for goals, strategy, decisions,

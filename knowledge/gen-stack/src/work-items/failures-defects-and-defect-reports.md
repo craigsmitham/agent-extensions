@@ -25,10 +25,17 @@ sources:
     title: GitHub Docs — Managing issue types in an organization
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T17:31:25Z
+  at: 2026-08-26T20:14:40Z
 ---
 
 # Failures, defects, and defect reports
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 A **defect** is an imperfection or deficiency in the system or in a work
 product that describes, governs, realizes, or evaluates it. A **failure** is
@@ -173,11 +180,17 @@ processes.[^github-issue-types][^azure-bug] Portable guidance can therefore
 teach *defect report* as the semantic artifact while allowing the host to
 supply its issue type, fields, and workflow.
 
+[Managing work-item metadata and
+labels](managing-work-item-metadata-and-labels.md) supplies the common procedure
+for projecting that meaning into host fields without treating labels as proof.
+
 The host also owns whether a recurrence reopens an existing report or creates
 a new linked item. Azure, for example, recommends a new linked bug for a
 regression rather than reopening the earlier one.[^azure-bug] The portable
 requirement is to preserve the relationship and the new evidence, not to force
-one workflow rule everywhere.
+one workflow rule everywhere. [Maintaining work-item identity, relationships,
+and lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md)
+owns the common procedure.
 
 ## Severity, priority, status, and resolution
 
@@ -227,6 +240,9 @@ For the recording procedure and tracker-ready template, see
 [Recording defect reports](recording-defect-reports.md).
 For the corrective-change procedure, see
 [Writing bugfix specifications](writing-bugfix-specifications.md).
+For source occurrence, claim-state, and decision-authority handling shared by
+both, see [Preserving evidence and authority in software work
+items](preserving-work-item-evidence-and-authority.md).
 
 [^azure-bug]: Microsoft Azure Boards, “Define, capture, triage, and manage bugs.”
 [^github-issue-types]: GitHub Docs, “Managing issue types in an organization.”

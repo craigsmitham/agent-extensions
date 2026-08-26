@@ -11,10 +11,17 @@ sources:
     title: Goal-oriented behavior and use cases
   - resource: /profile/gen-stack-application-profile.md#capability
     title: Gen Stack application profile — Capability
-generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting capabilities
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -25,6 +32,16 @@ outcome-oriented ability of an identified organization, system, or subsystem.
 
 Confirm the bearer and level. Do not create a capability merely by renaming a
 feature, application, process, team, goal, or planned work item.
+
+## Representation
+
+Use the OKF envelope, the profile's exact `Capability` type and collection,
+and controlled relationships in their native roles. Present residual body
+meaning in this preferred order: bearer and outcome-oriented ability, scope
+and level, responsibilities and conditions, material exclusions, relationships
+to Features, Offerings, Use Cases, or C4 elements, and evidence. Do not repeat
+frontmatter edges as a body inventory. This order is authoring guidance, not
+profile conformance.
 
 ## Steps
 
@@ -39,10 +56,14 @@ feature, application, process, team, goal, or planned work item.
 5. Include decomposition only when each child remains an ability at a declared
    level. Use an adjacent same-named directory only when that hierarchy serves
    a real browsing need.
-6. Link consequential jobs, use cases that exercise the ability, features,
-   surfaces, domain authorities, C4 realization, accepted Requirements, and
-   evidence, then update `architecture/capabilities/index.md`. Do not make the Capability
-   statement a second normative formulation of those obligations.
+6. Record controlled C4 mappings under
+   `relationships.is-realized-by-c4-element`. Offerings, Use Cases, and Features
+   own their forward Capability assertions; do not duplicate the reciprocal
+   roles here. Link other consequential context in prose.
+7. From the repository root, run `scripts/sync-gen-stack-relationships.py`, then link
+   accepted Requirements and evidence and update
+   `architecture/capabilities/index.md`. Do not make the Capability statement a
+   second normative formulation of those obligations.
 
 ## Final check
 
@@ -54,6 +75,7 @@ feature, application, process, team, goal, or planned work item.
 - Relationships show realization without making another view subordinate.
 - Related use cases exercise the ability without redefining it as a goal or
   flow.
+- Relationship synchronization reports no changes.
 
 ## Related
 

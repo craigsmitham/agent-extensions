@@ -9,10 +9,17 @@ sources:
     title: OODA as the Gen Stack control loop
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T20:16:50Z
 ---
 
 # Analyzing Requirement impact
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide whenever a software work item may affect accepted desired state
 or evidence about it. The analysis records a relationship; it does not accept,
@@ -22,6 +29,16 @@ This is a bounded Orientation activity. Preserve the originating Signal and
 its Observations, classify them against existing authority, and leave the
 result unresolved when the evidence cannot support a repair
 hypothesis.[^ooda-control-loop]
+
+## Representation
+
+Keep this transient analysis in the work item, review, or conversation that
+owns the current Orientation. Present it in this preferred order: originating
+Signal and observations, applicable Requirement IDs, classification, evidence
+and uncertainty, Architecture and Evaluation consequences, candidate next
+step, blocking status, and authority needed. Use native links and fields where
+their semantics match, do not copy canonical Requirement expressions, and do
+not invent a persistent identity or profile metadata for the analysis itself.
 
 ## Classify the relationship
 
@@ -41,6 +58,47 @@ Requirement into the work item as another normative statement. A short quoted
 or paraphrased predicate may provide reader context when its authority and link
 remain explicit.
 
+This classification does not select a Requirement operation. When supported
+analysis identifies a candidate new obligation or proposed change or
+retirement, continue with [Specifying Requirement changes in software work
+items](../work-items/specifying-requirement-changes.md). That guide distinguishes
+addition, same-identity revision, retirement, replacement, split, merge,
+representation-only maintenance, and unresolved identity. Possible
+non-satisfaction and implementation-only work normally stop here.
+
+## Assess cross-stack meaning gaps
+
+Requirement impact may expose missing, underdeveloped, misplaced, disputed, or
+contradicted Architecture and Requirement meaning. Apply [Developing candidate
+Architecture and
+Requirements](/architecture/developing-candidate-architecture-and-requirements.md)
+when any such gap is material, then use only the implicated [Surface](/architecture/surfaces/developing-surfaces.md),
+[C4 structure](/architecture/structure/developing-c4-structure.md), or
+[Requirement](/architecture/requirements/developing-requirements.md) guide.
+
+Record each material gap with:
+
+```text
+Gap and implicated element:
+Evidence and confidence:
+Impact on the current work item or action:
+Options or candidate correction:
+Recommendation:
+Applicable authority:
+Blocking status: blocking | non-blocking
+```
+
+Use `blocking` only when the missing meaning prevents a truthful or safe next
+action. A Bugfix whose corrected behavior has no accepted basis is blocked
+before delivery, while its Defect Report can still preserve the observation and
+gap. Use `non-blocking` when the current artifact can proceed honestly—for
+example, when an accepted correction can be specified while a missing
+Evaluation Definition is separately recommended.
+
+Do not call a missing document a Defect unless an applicable expectation or
+intended use establishes that deficiency. Do not make every gap a decision
+gate; surface it and continue when it does not control the authorized action.
+
 ## Work-item block
 
 Use the smallest useful subset of:
@@ -52,7 +110,9 @@ Applicable Requirements:
 Relationship to desired state:
 Architecture impact:
 Evidence impact:
+Cross-stack gaps and blocking status:
 Required authority:
+Next route: impact only | specify Requirement change
 Unknowns:
 ```
 

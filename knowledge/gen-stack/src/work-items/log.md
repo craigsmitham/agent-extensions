@@ -2,6 +2,31 @@
 
 ## 2026-08-26
 
+- **Common Requirement-change guidance**: Added [Specifying Requirement
+  changes](specifying-requirement-changes.md) for additions, revisions,
+  retirements, replacements, splits, and merges. Change and Bugfix
+  Specifications now distinguish impact classification from an explicit
+  desired-state delta, preserve identity and lineage, surface action-specific
+  blockers, and route per-entry acceptance and downstream reconciliation.
+- **Material meaning gaps in change work**: Defect Reports, Change
+  Specifications, and Bugfix Specifications now raise missing,
+  underdeveloped, misplaced, disputed, or contradicted Requirements, Surfaces,
+  C4 structure, and Evaluation routes with evidence, impact, options,
+  recommendation, authority, and blocking status. Intake can continue through
+  an indeterminate expectation, while a Bugfix stops before dependent delivery
+  when accepted corrected behavior or load-bearing Architecture is unresolved.
+- **Common work-item guidance**: Added [Preserving evidence and authority in
+  software work items](preserving-work-item-evidence-and-authority.md),
+  [Maintaining work-item identity, relationships, and
+  lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md),
+  and [Managing work-item metadata and
+  labels](managing-work-item-metadata-and-labels.md). The collection index now
+  chooses artifact type and applicable common concerns, while type-specific
+  Guides retain only their specialized workflow and templates.
+- **Defect report guide**: Reorganized [Recording defect
+  reports](recording-defect-reports.md) around a minimum reporting path,
+  outcome-focused template, conditional enrichment, and lifecycle maintenance
+  while preserving evidence, authority, safety, and verification boundaries.
 - **Cross-stack Bugfix scope**: Clarified that a Bug is a realized-system
   Defect, that it may implicate several additional Defects across Gen Stack
   work products, and that one Bugfix Specification may coordinate changes for
@@ -80,12 +105,11 @@
 - **Work items**: Added paired explainers and guides for operational incident
   records, software Defect Reports, and change work under
   [Software work items](index.md).
-- **Principles and patterns**: Reframed
-  [YAGNI](../principles/yagni-and-speculative-complexity.md) as a principle
-  of timing, optionality, and deferred commitment, and added
-  [Tidy First](../patterns/tidy-first.md) as its related just-in-time
-  structural-change pattern.
+- **Principles and patterns (historical)**: Reframed YAGNI as a principle of
+  timing, optionality, and deferred commitment, and added Tidy First as its
+  related just-in-time structural-change pattern. Gen Stack 0.10.0 later
+  removed both from the bundle.
 - **Expansion**: Broadened invariant guidance beyond architectural guardrails
   and added a paired invariant-authoring guide.
-- **Creation**: Established the bundle with architecture guidance and
-  [YAGNI and speculative complexity](../principles/yagni-and-speculative-complexity.md).
+- **Creation**: Established the bundle with architecture guidance and the
+  then-current YAGNI material, which Gen Stack 0.10.0 later removed.

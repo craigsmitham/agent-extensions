@@ -11,15 +11,31 @@ sources:
   - id: documenting-requirements
     resource: documenting-requirements.md
     title: Documenting requirements
+  - id: ears-syntax
+    resource: easy-approach-to-requirements-syntax.md
+    title: Easy Approach to Requirements Syntax (EARS)
   - id: nasa-requirements
     resource: https://www.nasa.gov/reference/appendix-c-how-to-write-a-good-requirement/
     title: NASA — How to Write a Good Requirement
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Expressing invariants
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
+An invariant or predicate is one focused specification method, not a required
+form. Use [Selecting a requirement specification
+method](selecting-a-requirement-specification-method.md) when state-machine,
+temporal, algebraic, or other representations may preserve the accepted
+meaning more clearly.
 
 Use this guide when a requirement, domain model, design, proof, or
 implementation needs to state a property that must survive every permitted
@@ -50,6 +66,17 @@ Gather:
 
 Do not invent a mandatory invariant merely because a stronger system sounds
 desirable. Confirm its authority, necessity, feasibility, and consequences.
+
+## Representation
+
+When the invariant is an accepted obligation, use the native Requirement
+representation from [Documenting requirements](documenting-requirements.md)
+and put its one canonical predicate in `## Requirement`; do not create an
+Invariant concept or duplicate YAML field. Keep executable assertions,
+property tests, model checks, and monitors in their repository-native formats
+as witnesses linked by stable Requirement identity. For analysis, present
+predicate, scope, conditions, preservation boundary, failure meaning, and
+evidence without persistence metadata.
 
 ## 1. Classify the invariant's role
 
@@ -119,6 +146,14 @@ specialized pattern:
 
 > At every **[relevant state or observation point]**, **[subject]** shall
 > preserve **[predicate]** within **[scope or bounds]**.
+
+This universal observation-boundary form is a Gen Stack invariant
+specialization, not one of the five simple [EARS
+patterns](easy-approach-to-requirements-syntax.md#the-five-simple-patterns).
+Use the EARS state- or event-driven form when the preservation claim genuinely
+applies during one continuing state or after one discrete trigger. Retain `At
+every …` when the accepted meaning is preservation across all declared
+observation points; do not force that scope into an inaccurate EARS keyword.
 
 Prefer domain terms and explicit quantifiers such as *every*, *exactly one*,
 *at most one*, or *no*. Define tolerances and exceptional states. Keep

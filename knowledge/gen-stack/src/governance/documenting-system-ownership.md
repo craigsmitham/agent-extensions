@@ -14,6 +14,13 @@ generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
 
 # Documenting system ownership
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Create the required `System Ownership` concept at `ownership.md` so a reader
@@ -26,6 +33,15 @@ history, usernames, directory ownership, or the current on-call roster. Find
 the stable authority for volatile membership and contact detail. If no accepted
 route exists, preserve that gap as `unknown` rather than naming an invented
 owner.
+
+## Representation
+
+Use the OKF envelope and the profile's exact `System Ownership` type and root
+path. Present residual body meaning in this preferred order: accountable role
+or mechanism, stewardship boundary and exclusions, continuity or transfer,
+escalation, and links to current roster or contact authorities. Keep document
+status and provenance in OKF frontmatter and do not duplicate linked process
+Requirements. This order is authoring guidance, not profile conformance.
 
 ## Steps
 

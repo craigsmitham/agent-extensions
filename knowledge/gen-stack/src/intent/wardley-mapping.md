@@ -28,10 +28,17 @@ sources:
     title: "Danny Buerkli — Where the map ends: understanding Wardley maps' limitations"
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-25T19:19:59Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Wardley mapping
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 Wardley Mapping is a strategic sensemaking practice for improving situational
 awareness before choosing action. A **Wardley map** represents a chain of

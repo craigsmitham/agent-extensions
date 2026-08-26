@@ -8,6 +8,9 @@ sources:
   - id: incident-records
     resource: operational-incident-records.md
     title: Operational incident records
+  - id: requirement-change-guide
+    resource: specifying-requirement-changes.md
+    title: Specifying Requirement changes
   - id: atlassian-incident-response
     resource: https://www.atlassian.com/incident-management/handbook/incident-response
     title: Atlassian — How we respond to an incident
@@ -28,10 +31,17 @@ sources:
     title: NIST SP 800-61 Rev. 3 — Incident response recommendations and considerations
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T20:16:50Z
 ---
 
 # Recording operational incidents
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide to create and maintain the recognized live work item for an
 operational incident. It assumes the organization already owns declaration
@@ -48,6 +58,36 @@ Responders and stakeholders can recover the current impact, service and
 response state, command, objectives, actions, chronology, communication, exit
 criteria, and next transition without reconstructing them from chat or
 interrupting the people doing mitigation.
+
+## Representation
+
+Use the incident host's exact native fields for identity, incident state,
+severity, command roles, timestamps, services, and relationships when their
+semantics match. Present only residual body content in this preferred live
+order: current brief, impact and scope, current control and objective, active
+roles and actions, decisions and hypotheses, chronology and communications,
+safe evidence, then resolution, validation, closure, and follow-up as they
+become applicable. The [tracker-ready template](#tracker-ready-template) is a
+logical fallback, not a demand to duplicate native fields or keep empty
+sections.
+
+## Apply the common work-item guides
+
+This guide owns incident-specific response content. Use the shared guides for
+the portable mechanics it does not redefine:
+
+- [Preserving evidence and authority in software work
+  items](preserving-work-item-evidence-and-authority.md) for source inventory,
+  claim state, safe evidence, unknowns, and decision authority;
+- [Maintaining work-item identity, relationships, and
+  lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md) for
+  reuse, parent and child incidents, duplicates, transitions, closure, and
+  independently owned follow-up;
+- [Managing work-item metadata and
+  labels](managing-work-item-metadata-and-labels.md) for severity, priority,
+  assignment, status, labels, and verified tracker mutation; and
+- [Titling and summarizing work
+  items](titling-and-summarizing-work-items.md) for the live brief.
 
 ## 1. Choose the correct and safe response channel
 
@@ -74,15 +114,11 @@ than manufacturing an incident lifecycle.
 
 ## 2. Establish one incident identity and its relationships
 
-Search for an existing incident that owns the same active response. Add an
-observation to that record when it is another source of the same occurrence.
-Create a separate related or child incident when it has independently managed
-impact, command, communication, or closure conditions.
-
-Record the declaration source and time, declaring authority, triggering alert
-or report, and parent, child, duplicate, or related incident identifiers. One
-wider event can produce several incidents, while recurring incidents can link
-to one problem or defect without losing their individual chronology.
+Apply the shared identity and lifecycle guide. For incidents, reuse the item
+only while it owns the same active response. Create a separate related or child
+incident when impact, command, communication, or closure is independently
+managed. Preserve the declaration source, time, authority, triggering source,
+and relationships; never sacrifice an occurrence's chronology to consolidation.
 
 ## 3. Title and continuously re-derive the live brief
 
@@ -130,7 +166,7 @@ conditions tested without the impact; tested-unaffected scope can constrain the
 blast radius as usefully as affected scope.
 
 Use the local severity definition and cite the evidence that satisfies it.
-Separate:
+Apply the shared metadata guide and keep separate:
 
 - **severity** — the impact or threat under the local scale;
 - **priority** — a relative attention decision when several demands compete;
@@ -240,7 +276,8 @@ warns against premature closure.[^microsoft-incident-management]
 
 ## 11. Resolve or close under the local policy
 
-Apply the host's state names and closure authority. Preserve the underlying
+Apply the shared lifecycle guide and the host's state names and closure
+authority. Preserve the underlying
 moments separately when they exist:
 
 - impact started;
@@ -273,9 +310,16 @@ Depending on what the occurrence reveals and local policy requires, link:
 - corrective changes and their verification; and
 - parent, child, recurring, or related incidents.
 
-Do not use the incident's resolved or closed state as a proxy for completing
-those artifacts. Conversely, do not keep emergency response open merely to
-hold a permanent-fix backlog.
+The shared lifecycle guide governs these relationships and transitions. Do not
+use the incident's resolved or closed state as a proxy for completing those
+artifacts. Conversely, do not keep emergency response open merely to hold a
+permanent-fix backlog.
+
+An incident record stops at Requirement-impact orientation. When follow-up
+proposes changed desired state, link a separately authorized Change or Bugfix
+Specification that applies [Specifying Requirement
+changes](specifying-requirement-changes.md); do not place the candidate delta
+or its acceptance lifecycle under incident-response authority.
 
 ## Tracker-ready template
 

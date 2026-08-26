@@ -16,10 +16,17 @@ sources:
     title: Classifying requirements in software architecture
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-25T19:47:49Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Human-centred requirements in software architecture
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 Human-centred requirements describe accepted outcomes at the relationship
 between people and a system. The profile keeps `usability` and

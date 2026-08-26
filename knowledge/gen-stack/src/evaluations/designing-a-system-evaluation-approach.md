@@ -11,15 +11,38 @@ sources:
     title: Gen Stack application profile — System Evaluation Approach
   - resource: ../architecture/requirements/one-authority-many-witnesses.md
     title: One authority, many witnesses
+  - resource: ../architecture/requirements/easy-approach-to-requirements-syntax.md
+    title: Easy Approach to Requirements Syntax (EARS)
+generated:
+  by: codex/gpt-5.6
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Designing a system evaluation approach
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
 Create a coherent evaluation portfolio whose Definitions and Results remain at
 their repository-native authorities while people can find evidence by
 Architecture subject, Requirement, and Evaluation Role.
+
+## Representation
+
+Use the OKF envelope, the profile's exact `System Evaluation Approach` type and
+path, and its five required second-level headings in their required order:
+scope and objectives, evaluation portfolio, navigation and reporting, evidence
+and lifecycle, then gaps and maintenance. Inside them, link repository-native
+Definitions, Suites, Executions, Results, and Reports by their stable native
+identities; do not copy their fields or current results into the governed
+concept. Exact headings come from the profile; any lower-level organization is
+proportional authoring guidance.
 
 ## 1. Bound the approach
 
@@ -41,6 +64,23 @@ judgment procedure, and provenance needs. Use:
 Choose method and lifetime for the claim and consequence. Combine economical
 implementation-local checks, durable boundary evaluations, and operational
 evaluations where their different blind spots matter.
+
+For a Requirement expressed with [EARS](../architecture/requirements/easy-approach-to-requirements-syntax.md),
+use its clauses as inputs to Definition design without treating the syntax as
+an executable test specification:
+
+| Requirement element | Evaluation Definition concern |
+| --- | --- |
+| Optional-feature clause | Applicable configuration or product variant |
+| Continuing-state clause | Setup and maintained preconditions |
+| Desired or unwanted trigger | Stimulus, observed event, or sampled condition |
+| Obligated subject | Canonical Architecture subject being evaluated |
+| Required response | Expected outcome, oracle, or judgment criterion |
+| Bounds in the response | Threshold, tolerance, population, or observation window |
+
+The Definition still owns its method, cases or sampling, oracle, environment,
+and uncertainty. Deriving those details requires evaluation judgment; EARS
+only helps preserve the Requirement's applicability and expected response.
 
 ## 3. Organize suites for execution, not authority
 

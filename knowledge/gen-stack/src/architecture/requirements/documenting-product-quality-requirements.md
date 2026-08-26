@@ -14,21 +14,41 @@ sources:
   - id: requirement-classification
     resource: /architecture/requirements/requirement-classification.md
     title: Classifying requirements in software architecture
+  - id: selecting-method
+    resource: selecting-a-requirement-specification-method.md
+    title: Selecting a requirement specification method
   - id: iso-25030
     resource: https://www.iso.org/standard/72116.html
     title: ISO/IEC 25030:2019 — Quality requirements framework
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Documenting quality requirements
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide after a system, software product, service, or data quality
 concern has an accepted authority and needs one assessable obligation on a
 durable architecture subject. A quality-model classification helps readers
 find and compare the requirement; it does not supply its need, target, or
 evidence.[^product-quality]
+
+## Representation
+
+Inherit the native OKF and profile representation from [Documenting
+requirements](documenting-requirements.md). Use the profile's
+`requirement_type: quality`, `quality_model`, `quality_characteristic`, and
+`quality_subcharacteristic` fields as their single representation. In the
+canonical expression, prefer this logical order: context and load, obligated
+subject, required quality outcome, criterion or tolerance, and material
+exceptions. Classification metadata does not replace the assessable outcome.
 
 ## 1. Engineer the quality outcome
 
@@ -76,12 +96,18 @@ Performance is normally `quality` when a workload, population, distribution,
 window, or tolerance qualifies how well behavior must be delivered. A timing
 rule can instead be functional when it is part of the domain behavior itself.
 
-## 3. Draft the statement
+## 3. Express the quality outcome
 
-Use the ordinary profile form:
+Use [Selecting a requirement specification
+method](selecting-a-requirement-specification-method.md). A quality-attribute
+scenario can expose source, stimulus, environment, response, and response
+measure; EARS can structure a suitable textual expression; quantitative
+relations, tables, simulations, or an incorporated external standard may be
+clearer for other outcomes. These options are illustrative, not exhaustive.
 
-> When `[relevant quality context]`, `[subject]` shall `[assessable quality
-> outcome]` `[within accepted bounds]`.
+One natural-language response form is:
+
+> `[subject]` shall `[assessable quality outcome]` `[within accepted bounds]`.
 
 Prefer one quality factor per Requirement. A single outcome can have several
 conditions or bounds when they qualify the same obligation. Split statements
@@ -156,10 +182,10 @@ Vague:
 
 Synthetic, assessable example:
 
-> During declared booking hours, the reservation service shall accept or
-> reject valid reservation requests during at least 99.9 percent of one-minute
-> observation intervals in each calendar month, excluding declared maintenance
-> windows.
+> While declared booking hours are in effect, the reservation service shall
+> accept or reject valid reservation requests during at least 99.9 percent of
+> one-minute observation intervals in each calendar month, excluding declared
+> maintenance windows.
 
 The percentage, interval, calendar boundary, and exclusions are synthetic
 example decisions, not portable defaults. A real Requirement needs source

@@ -5,8 +5,19 @@
 # Generated evaluation runs
 /.work/evals/
 
-# Generated AXM build intermediates
-/.axm/build/
+# Generated AXM local state and staging directories
 /.axm/
 *.axm-staging/
 *.axm-backup/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Local scratch output
+/tmp/
+
+# Machine-local files
+.DS_Store
+._*
+/.claude/settings.local.json

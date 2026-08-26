@@ -12,6 +12,13 @@ generated: { by: codex/gpt-5.6, at: "2026-08-26T15:10:00Z" }
 
 # Documenting architecture decision policies
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Create the required `Architecture Decision Policy` concept at `decisions.md`
@@ -23,6 +30,16 @@ Confirm the accepted decision and review authority. Distinguish a policy for
 recording accepted choices from proposals, design discussions, delivery work,
 and the records themselves. A policy is required even when no local ADR is
 currently justified.
+
+## Representation
+
+Use the OKF envelope and the profile's exact `Architecture Decision Policy`
+type and root path. Present residual body meaning in this preferred order:
+decision threshold, acceptance and supersession authority, record location and
+minimum content, reconsideration triggers, and evidence or policy links. Keep
+individual decisions and independently binding process obligations in their
+own artifacts; do not duplicate native metadata in the body. This order is
+authoring guidance, not profile conformance.
 
 ## Steps
 

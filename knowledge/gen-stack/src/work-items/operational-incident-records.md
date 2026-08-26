@@ -28,10 +28,17 @@ sources:
     title: NIST SP 800-61 Rev. 3 — Incident response recommendations and considerations
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T13:59:18Z
+  at: 2026-08-26T20:14:40Z
 ---
 
 # Operational incident records
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 An **operational incident** is an unplanned occurrence that disrupts, reduces,
 or imminently threatens the quality of a service and warrants coordinated
@@ -225,8 +232,13 @@ into Markdown; it means the incident identity, current authority, state,
 evidence, and relationships remain recoverable without depending on a vendor's
 ambiguous label.
 
-For the recording procedure and progressive tracker-ready template, see
-[Recording operational incidents](recording-operational-incidents.md).
+For the portable transition and relationship procedure, see [Maintaining
+work-item identity, relationships, and
+lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md). For
+field and label projection, see [Managing work-item metadata and
+labels](managing-work-item-metadata-and-labels.md). For the incident-specific
+recording procedure and progressive tracker-ready template, see [Recording
+operational incidents](recording-operational-incidents.md).
 
 [^atlassian-incident-response]: Atlassian, “How we respond to an incident.”
 [^google-incident-document]: Google SRE, “Example Incident State Document.”

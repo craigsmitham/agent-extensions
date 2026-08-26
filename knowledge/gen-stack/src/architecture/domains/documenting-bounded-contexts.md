@@ -9,10 +9,17 @@ sources:
     title: Domain-driven design
   - resource: /profile/gen-stack-application-profile.md#bounded-context
     title: Gen Stack application profile — Bounded Context
-generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting bounded contexts
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -25,6 +32,16 @@ Confirm a coherent model boundary with accepted purpose and authority. A code
 folder, service, team, or database is evidence only when it actually realizes
 that model; none establishes a bounded context by itself.
 
+## Representation
+
+Use the OKF envelope, the profile's exact `Bounded Context` type and
+collection, and controlled relationships in their native roles. Present
+residual body meaning in this preferred order: model boundary and authority,
+responsibility, ubiquitous language and important distinctions, material
+exclusions, dependencies or translations, modeled Subdomains, and evidence.
+Do not turn a service inventory or reciprocal relationship list into a second
+representation. This order is authoring guidance, not profile conformance.
+
 ## Steps
 
 1. Name the context for the model understood by domain experts and
@@ -33,13 +50,16 @@ that model; none establishes a bounded context by itself.
    from the [application profile](/profile/gen-stack-application-profile.md#bounded-context). Do not add `classification`.
 3. State the context's purpose, model and ubiquitous-language scope, policy or
    state authority, and material exclusions.
-4. Identify the subdomains it models, allowing many-to-many mappings. Link
-   reciprocally without nesting the context beneath a subdomain.
+4. Record each modeled Subdomain under
+   `relationships.models-subdomain`, allowing many-to-many mappings without
+   nesting the context beneath a Subdomain.
 5. Link the context map that owns the complete inter-context relationship
    view; keep only the context's consequential local relationships here. Link
    accepted invariant and boundary Requirements colocated beneath this context
    or another eligible subject.
-6. Link code, schemas, configuration, tests, or architecture checks as current
+6. From the repository root, run `scripts/sync-gen-stack-relationships.py` so Subdomain and
+   Context Map reciprocal views are current; do not author them independently.
+7. Link code, schemas, configuration, tests, or architecture checks as current
    realization or conformance evidence, then update `architecture/domains/contexts/index.md`.
 
 ## Final check
@@ -49,6 +69,7 @@ that model; none establishes a bounded context by itself.
 - Implementation structure is evidence rather than the definition.
 - Inter-context obligations have one Requirement authority and are not copied
   from the Context Map.
+- Relationship synchronization reports no changes.
 
 ## Related
 

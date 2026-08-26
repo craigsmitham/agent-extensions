@@ -25,21 +25,16 @@
     "author-okf": "workspace",
     "craft-effect-v4": "workspace",
     "audit-docs": "workspace",
-    "author-gen-stack": "workspace",
-    "author-software-work-items": "workspace",
     "question": "workspace",
     "research": "workspace",
-    "reconcile-gen-stack": "workspace",
-    "setup-gen-stack": "workspace",
     "axm": {
       "source": "workspace",
       "origin": "bundled"
-    }
+    },
+    "gen-stack": "workspace"
   },
   "rules": {
     "field-notes": "workspace",
-    "yagni": "workspace",
-    "tidy-first": "workspace",
     "use-effect-v4": "workspace"
   },
   "knowledge": {

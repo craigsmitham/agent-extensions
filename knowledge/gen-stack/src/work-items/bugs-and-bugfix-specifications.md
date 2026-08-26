@@ -25,10 +25,17 @@ sources:
     title: ISO — ISO/IEC/IEEE 29119-1:2022 Software testing general concepts
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T17:31:25Z
+  at: 2026-08-26T20:14:40Z
 ---
 
 # Bugs and bugfix specifications
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 A **Defect report** preserves an observed or received Signal and the evidence,
 investigation, and decisions that follow. Investigation may identify a
@@ -186,6 +193,15 @@ host. Defect-report status follows evidence and disposition. Completing one
 does not silently transition the other; record verification and closure in
 each artifact according to its own purpose and host workflow.
 
+[Maintaining work-item identity, relationships, and
+lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md) owns
+the common procedure for those separate identities and transitions. [Managing
+work-item metadata and labels](managing-work-item-metadata-and-labels.md) owns
+their host-field projection.
+
 For the authoring procedure and adaptable work-item template, see
 [Writing bugfix specifications](writing-bugfix-specifications.md). For intake
 and investigation, see [Recording defect reports](recording-defect-reports.md).
+For provenance and corrective authority shared across the pair, see
+[Preserving evidence and authority in software work
+items](preserving-work-item-evidence-and-authority.md).

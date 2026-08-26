@@ -11,19 +11,39 @@ sources:
   - id: human-centred-requirements
     resource: /architecture/requirements/human-centred-requirements.md
     title: Human-centred requirements in software architecture
+  - id: selecting-method
+    resource: selecting-a-requirement-specification-method.md
+    title: Selecting a requirement specification method
   - id: iso-29148
     resource: https://www.iso.org/standard/72089.html
     title: ISO/IEC/IEEE 29148:2018 — Requirements engineering
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Documenting human-factors requirements
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 Use this guide when the primary obligation arises from human capabilities,
 limitations, workload, cognition, safety, health, well-being, or the physical
 or organizational environment of human-system operation.
+
+## Representation
+
+Inherit the native OKF and profile representation from [Documenting
+requirements](documenting-requirements.md) and use
+`requirement_type: human-factors` as the single type representation. In the
+canonical expression, prefer this logical order: human role and context,
+task or responsibility, relevant capability or limitation, obligated subject,
+required accommodation or system behavior, and accepted outcome or limit.
+Keep private research and participant data with their own authority.
 
 ## 1. Establish the human-system context
 
@@ -53,8 +73,14 @@ boundary and accessibility examples.
 
 ## 3. Draft an observable human-system obligation
 
-> When `[operating condition]`, `[subject]` shall `[human-system outcome or
-> protection]` `[within an accepted human limit]`.
+Use [Selecting a requirement specification
+method](selecting-a-requirement-specification-method.md). EARS can expose an
+operating state, event, or unwanted condition; workload models, task or state
+models, simulation, and incorporated human-factors standards can make other
+semantic difficulties clearer. One natural-language response form is:
+
+> `[subject]` shall `[human-system outcome or protection]` `[within an accepted
+> human limit]`.
 
 Name the observable system-side obligation while preserving the human outcome
 that justifies it. Avoid claims that a system can directly guarantee an
@@ -85,10 +111,11 @@ Weak:
 
 Synthetic human-factors Requirement:
 
-> When more than the accepted critical-alarm workload arrives during one
-> operator's monitoring interval, the alarm console shall group correlated
-> alarms and preserve every unacknowledged critical condition for reassignment.
+> If more than the accepted critical-alarm workload arrives during one
+> operator's monitoring interval, then the alarm console shall present
+> correlated alarms as groups.
 
 The actual workload bound and correlation authority must come from accepted
 human-factors evidence; they must not be invented to make the example appear
-precise.
+precise. Preserving unacknowledged critical conditions is a separate
+Requirement when that outcome is independently accepted and satisfiable.

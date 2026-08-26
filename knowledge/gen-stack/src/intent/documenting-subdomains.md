@@ -9,10 +9,17 @@ sources:
     title: Domain-driven design
   - resource: ../profile/gen-stack-application-profile.md#subdomain
     title: Gen Stack application profile — Subdomain
-generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting subdomains
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -26,6 +33,16 @@ Confirm the problem-space responsibility and strategic context. Do not infer a
 subdomain from a code folder, team, service, or bounded context. Classification
 is relative to the documented system and can change when strategy changes.
 
+## Representation
+
+Use the OKF envelope, the profile's exact `Subdomain` type, native
+`classification` field, and matching collection path. Present residual body
+meaning in this preferred order: problem-space responsibility, important
+distinctions, classification rationale, material exclusions, Bounded Context
+relationships, and evidence. Do not restate classification or reciprocal
+relationship projections as parallel body metadata. This order is authoring
+guidance, not profile conformance.
+
 ## Steps
 
 1. Name the business or problem-space knowledge the system must address.
@@ -36,8 +53,10 @@ is relative to the documented system and can change when strategy changes.
    the `Subdomain` type and fields from the [application profile](../profile/gen-stack-application-profile.md#subdomain).
 4. Explain the responsibility, important distinctions, classification
    rationale, and material exclusions.
-5. Link bounded contexts that model all or part of the subdomain without
-   implying containment or a one-to-one mapping.
+5. Update each related Bounded Context's
+   `relationships.models-subdomain` assertion. Run
+   run `scripts/sync-gen-stack-relationships.py` from the repository root to materialize
+   `is-modeled-by-bounded-context` here; do not author both endpoint views.
 6. Update the classification index. Treat a later reclassification as a path
    and concept-ID migration, updating inbound links and the log.
 
@@ -47,6 +66,7 @@ is relative to the documented system and can change when strategy changes.
 - Its classification is explicit, justified, and matches its path.
 - Related bounded contexts remain sibling concepts.
 - Exclusions prevent overlap with neighboring subdomains.
+- Relationship synchronization reports no changes.
 
 ## Related
 

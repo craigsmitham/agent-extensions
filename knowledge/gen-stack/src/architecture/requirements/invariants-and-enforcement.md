@@ -31,10 +31,17 @@ sources:
     title: PostgreSQL — Constraints
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-25T19:19:59Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Invariants, preservation, and enforcement
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 An **invariant** is a property that must remain true throughout a defined set
 of states or across every permitted transition. It expresses something the

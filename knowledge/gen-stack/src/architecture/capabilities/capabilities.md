@@ -30,11 +30,18 @@ sources:
     resource: https://framework.scaledagile.com/features-and-capabilities
     title: Scaled Agile Framework — Features and Capabilities
 generated:
-  by: codex/gpt-5
-  at: 2026-08-26T15:10:00Z
+  by: codex/gpt-5.6
+  at: 2026-08-26T19:44:29Z
 ---
 
 # Capabilities in software architecture
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 A capability view answers a durable architecture question:
 
@@ -225,8 +232,9 @@ defines `Capability`, `Feature`, and `Surface` types, common frontmatter, paths,
 and manual validation rules alongside the architecture docs' DDD and C4
 concepts. The [Gen Stack vocabulary and relationship model](/glossary.md) owns
 the identifiers, direction, reciprocity, and author-facing meanings of their
-controlled cross-view relationships. Structured relationship frontmatter
-remains deferred until consumer requirements justify it.
+controlled cross-view relationships. The profile's `relationships` map makes
+those consequential edges locally discoverable while preserving one
+authoritative assertion and mechanically synchronized reciprocal views.
 
 Use the focused guides for [capabilities](/architecture/capabilities/documenting-capabilities.md),
 [features](/architecture/features/documenting-features.md), and

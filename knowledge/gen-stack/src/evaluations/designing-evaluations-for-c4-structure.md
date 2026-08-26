@@ -13,10 +13,28 @@ sources:
 
 # Designing evaluations for C4 structure
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Evaluate Requirement satisfaction and structural realization across the
 canonical C4 Software System → Container → Component hierarchy.
+
+## Representation
+
+Author Definitions, Suites, Executions, Results, and Reports in their
+repository-native formats. Use exact native fields for identity, Evaluation
+Role, C4 subject, Requirement IDs, method, conditions, oracle, thresholds,
+Implementation revision, and evidence links when available. Add residual prose
+only for meaning the schema cannot carry. Prefer Definition content in this
+logical order: bounded claim, subject and criteria authority, method and cases,
+conditions, oracle and thresholds, then evidence and lifecycle. Do not make a
+C4 View or an OKF concept the concrete Evaluation container.
 
 ## Steps
 

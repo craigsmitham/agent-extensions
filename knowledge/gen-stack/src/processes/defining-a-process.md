@@ -19,10 +19,17 @@ sources:
     title: Software work items
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T15:02:03Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Defining a Process
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide to define one reusable Process around a valuable outcome. The
 Process may coordinate people, automation, and several kinds of work items. It
@@ -70,6 +77,19 @@ unknowns and assumptions, and name the event or evidence that will resolve
 them. Do not fill every template field speculatively during early Intent or
 Architecture work; do complete the information that current decisions,
 coordination, or enactment depend on.
+
+## Representation
+
+Use the repository's native process notation, workflow model, or executable
+format for facts it can express exactly. Let that model own triggers,
+activities, decisions, flows, roles, inputs, outputs, and closing outcomes when
+supported; add a companion page only for residual purpose, authority,
+exclusions, rationale, evidence, or limitations. Without an established native
+format, use the [canonical-definition composition](#11-record-the-canonical-definition-and-selected-views)
+in this preferred order: purpose and authority, boundary, work and decisions,
+work items, guides and constraints, measures, then realizations and views.
+Omit empty sections and never maintain a prose transcription of an executable
+model.
 
 ## 1. Declare the purpose and authority
 

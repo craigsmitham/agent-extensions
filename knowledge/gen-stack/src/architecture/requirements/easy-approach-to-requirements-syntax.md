@@ -19,10 +19,17 @@ sources:
     title: Gen Stack application profile — Requirements
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T13:22:37Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Easy Approach to Requirements Syntax (EARS)
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 The Easy Approach to Requirements Syntax (EARS) gently constrains natural
 language by arranging a small set of clauses in a consistent temporal order.
@@ -30,11 +37,19 @@ The result remains readable prose, but its optional feature, operating state,
 trigger, obligated subject, and required response are easier to
 distinguish.[^ears-official]
 
+EARS is one optional method in Gen Stack's open specification portfolio. Use
+[Selecting a requirement specification
+method](selecting-a-requirement-specification-method.md) before choosing it;
+an unlisted method is equally admissible when it better serves the quality
+criteria and preserves authority.
+
 EARS governs the shape of one textual requirement. It does not establish that
 the obligation is necessary, accepted, feasible, correct, or complete in a
 set. Those questions remain with [requirements
 engineering](requirements-engineering.md) and [Documenting
-requirements](documenting-requirements.md).
+requirements](documenting-requirements.md). The current Gen Stack profile does
+not require every statement to use EARS; use it where its clauses preserve the
+accepted meaning rather than forcing an obligation into an inaccurate form.
 
 ## One sentence, ordered clauses
 
@@ -125,7 +140,7 @@ classification, and place in the corpus.
 | EARS element | Gen Stack interpretation |
 | --- | --- |
 | `<system name>` | The explicitly named eligible Architecture concept referenced by the Requirement's `subject` field. It need not be the whole System. |
-| `shall` | The profile's required keyword for the one binding statement under `## Requirement`. |
+| `shall` | EARS's binding imperative within an EARS expression; the profile does not require this method or keyword. |
 | `<system response>` | The bounded outcome the subject is obligated to provide, preserve, prevent, or constrain. |
 | EARS pattern | The clause structure of the statement. It does not determine `requirement_type`. |
 | One or more responses | Syntactically valid EARS, subject to the Gen Stack rule that independently changeable or satisfiable obligations are split. |

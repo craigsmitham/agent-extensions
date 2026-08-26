@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate mechanically decidable gen-stack profile rules."""
+"""Validate the Gen Stack corpus at ``<repository-root>/gen-stack``."""
 
 from __future__ import annotations
 
@@ -9,7 +9,6 @@ import re
 import sys
 from collections import deque
 from pathlib import Path, PurePosixPath
-from urllib.parse import unquote
 
 try:
     import yaml
@@ -17,120 +16,30 @@ except ImportError:  # pragma: no cover - environment failure path
     print("PyYAML is required to run this validator.", file=sys.stderr)
     raise SystemExit(2)
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
 
-PROFILE_ID = "gen-stack"
-PROFILE_VERSION = "0.1.0"
-COMMON_FIELDS = ("type", "title", "description", "status")
-VALID_STATUSES = {"draft", "stable", "deprecated"}
-REQUIRED_ROOT_CONCEPTS = {
-    "system.md": "System",
-    "lifecycle.md": "System Lifecycle",
-    "ownership.md": "System Ownership",
-    "decisions.md": "Architecture Decision Policy",
-    "assurance.md": "System Assurance",
-}
-EVALUATION_APPROACH_PATH = "evaluations/system-evaluation-approach.md"
-EVALUATION_APPROACH_TYPE = "System Evaluation Approach"
-EVALUATION_APPROACH_SECTIONS = (
-    "Scope and objectives",
-    "Evaluation portfolio",
-    "Navigation and reporting",
-    "Evidence and lifecycle",
-    "Gaps and maintenance",
-)
-GOVERNED_TYPES = {
-    *REQUIRED_ROOT_CONCEPTS.values(),
+from gen_stack_profile.corpus import LINK_RE, local_markdown_targets, parse_frontmatter  # noqa: E402
+from gen_stack_profile.location import inspect_repository  # noqa: E402
+from gen_stack_profile.profile import (  # noqa: E402
+    COMMON_FIELDS,
+    EVALUATION_APPROACH_PATH,
+    EVALUATION_APPROACH_SECTIONS,
     EVALUATION_APPROACH_TYPE,
-    "Architecture Decision Record",
-    "Requirement",
-    "Offering",
-    "Audience",
-    "Need",
-    "Job to Be Done",
-    "Value Proposition",
-    "Use Case",
-    "Capability",
-    "Feature",
-    "Surface",
-    "Subdomain",
-    "Bounded Context",
-    "Context Map",
-    "C4 Software System",
-    "C4 Container",
-    "C4 Component",
-    "C4 View",
-}
-PROHIBITED_PROFILE_LIKE_TYPES = {
-    "Architecture Constraint",
-    "Architecture Overview",
-    "Constraint Set",
-    "Product Quality Requirement",
-    "Product Quality View",
-    "Quality Concern",
-    "Risk Driver",
-    "Risk Driver Set",
-}
-REQUIREMENT_TYPES = {
-    "functional",
-    "quality",
-    "process",
-    "human-factors",
-    "usability",
-    "constraint",
-}
-REQUIREMENT_SUBJECT_TYPES = {
-    "System",
-    "Capability",
-    "Feature",
-    "Surface",
-    "Bounded Context",
-    "C4 Software System",
-    "C4 Container",
-    "C4 Component",
-}
-QUALITY_CHARACTERISTICS = {
-    "functional-suitability",
-    "performance-efficiency",
-    "compatibility",
-    "interaction-capability",
-    "reliability",
-    "security",
-    "maintainability",
-    "flexibility",
-    "safety",
-}
-PLURAL_CATCH_ALLS = {
-    "offerings.md",
-    "audiences.md",
-    "needs.md",
-    "jobs.md",
-    "value-propositions.md",
-    "use-cases.md",
-    "requirements.md",
-    "product-quality-requirements.md",
-    "capabilities.md",
-    "features.md",
-    "surfaces.md",
-    "subdomains.md",
-    "bounded-contexts.md",
-    "context-maps.md",
-    "software-systems.md",
-    "components.md",
-}
-LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
-
-
-def parse_frontmatter(path: Path) -> tuple[dict[str, object], str]:
-    text = path.read_text(encoding="utf-8")
-    if not text.startswith("---\n"):
-        return {}, text
-    marker = text.find("\n---\n", 4)
-    if marker < 0:
-        raise ValueError("frontmatter closing delimiter is missing")
-    data = yaml.safe_load(text[4:marker]) or {}
-    if not isinstance(data, dict):
-        raise ValueError("frontmatter must be a mapping")
-    return data, text[marker + 5 :]
+    GOVERNED_TYPES,
+    PLURAL_CATCH_ALLS,
+    PROFILE_ID,
+    PROFILE_VERSION,
+    PROHIBITED_PROFILE_LIKE_TYPES,
+    QUALITY_CHARACTERISTICS,
+    REQUIRED_ROOT_CONCEPTS,
+    REQUIREMENT_SUBJECT_TYPES,
+    REQUIREMENT_LIFECYCLES,
+    REQUIREMENT_TYPES,
+    VALID_STATUSES,
+)
+from gen_stack_profile.relationships import analyze_relationships  # noqa: E402
 
 
 def path_matches(concept_type: str, relative: PurePosixPath) -> bool:
@@ -190,65 +99,48 @@ def path_matches(concept_type: str, relative: PurePosixPath) -> bool:
     return True
 
 
-def local_markdown_targets(path: Path, root: Path) -> set[Path]:
-    targets: set[Path] = set()
-    text = path.read_text(encoding="utf-8")
-    for raw in LINK_RE.findall(text):
-        target = raw.strip().split()[0].strip("<>")
-        if not target or target.startswith(("#", "http://", "https://", "mailto:")):
-            continue
-        target = unquote(target.split("#", 1)[0].split("?", 1)[0])
-        candidate = root / target.lstrip("/") if target.startswith("/") else path.parent / target
-        try:
-            resolved = candidate.resolve(strict=False)
-            resolved.relative_to(root)
-        except (OSError, ValueError):
-            continue
-        if resolved.is_dir():
-            resolved = resolved / "index.md"
-        if resolved.suffix == "":
-            resolved = resolved.with_suffix(".md")
-        if resolved.is_file():
-            targets.add(resolved)
-    return targets
+def validate(repository_root: Path) -> dict[str, object]:
+    location = inspect_repository(repository_root)
+    if location.diagnostics:
+        errors = [
+            {
+                "rule": item.rule,
+                "path": _repository_relative(item.path, location.repository_root),
+                "message": item.message,
+            }
+            for item in location.diagnostics
+        ]
+        return result(
+            location.repository_root,
+            location.corpus_root,
+            errors,
+            0,
+            location.state,
+        )
+    return validate_corpus(location.repository_root, location.corpus_root)
 
 
-def validate(root: Path) -> dict[str, object]:
+def _repository_relative(path: Path, repository_root: Path) -> str:
+    try:
+        return path.relative_to(repository_root).as_posix()
+    except ValueError:
+        return str(path)
+
+
+def validate_corpus(repository_root: Path, root: Path) -> dict[str, object]:
     errors: list[dict[str, str]] = []
 
     def error(rule: str, path: Path, message: str) -> None:
-        try:
-            shown = path.relative_to(root).as_posix()
-        except ValueError:
-            shown = str(path)
-        errors.append({"rule": rule, "path": shown, "message": message})
+        errors.append(
+            {
+                "rule": rule,
+                "path": _repository_relative(path, repository_root),
+                "message": message,
+            }
+        )
 
     root = root.resolve()
     root_index = root / "index.md"
-    if not root_index.is_file():
-        error("root-index", root_index, "The Gen Stack corpus root must contain index.md.")
-        return result(root, errors, 0)
-
-    try:
-        root_meta, root_body = parse_frontmatter(root_index)
-    except (OSError, ValueError, yaml.YAMLError) as exc:
-        error("root-frontmatter", root_index, str(exc))
-        return result(root, errors, 0)
-
-    if root_meta.get("okf_version") != "0.2":
-        error("okf-version", root_index, 'Root frontmatter must declare okf_version: "0.2".')
-    normalized_body = re.sub(r"\s+", " ", root_body)
-    adoption = re.search(
-        rf"\badopts\b.*?{re.escape(PROFILE_ID)}.*?\b(?:version\s+)?{re.escape(PROFILE_VERSION)}\b",
-        normalized_body,
-        flags=re.IGNORECASE,
-    )
-    if adoption is None or not re.search(r"\[[^\]]+\]\([^)]+\)", adoption.group(0)):
-        error(
-            "profile-adoption",
-            root_index,
-            f"Root index must explicitly adopt and link {PROFILE_ID} version {PROFILE_VERSION}.",
-        )
 
     for filename, concept_type in REQUIRED_ROOT_CONCEPTS.items():
         path = root / filename
@@ -428,6 +320,14 @@ def validate(root: Path) -> dict[str, object]:
 
     validate_requirement_relations(root, concept_files, concept_metadata, requirement_ids, error)
 
+    relationship_analysis = analyze_relationships(root)
+    for diagnostic in relationship_analysis.diagnostics:
+        error(
+            diagnostic.rule,
+            root / diagnostic.path.as_posix(),
+            diagnostic.message,
+        )
+
     markdown_files = {root_index.resolve(), *(path.resolve() for path in root.rglob("*.md"))}
     reachable: set[Path] = set()
     queue: deque[Path] = deque([root_index.resolve()])
@@ -443,7 +343,13 @@ def validate(root: Path) -> dict[str, object]:
         if path.resolve() not in reachable:
             error("root-reachability", path, "Concept is not reachable from the root index.")
 
-    return result(root, errors, governed_count)
+    return result(
+        repository_root,
+        root,
+        errors,
+        governed_count,
+        "conforming" if not errors else "invalid",
+    )
 
 
 def validate_requirement(
@@ -457,6 +363,7 @@ def validate_requirement(
     report = error
     requirement_id = meta.get("requirement_id")
     requirement_type = meta.get("requirement_type")
+    requirement_lifecycle = meta.get("requirement_lifecycle")
     subject = meta.get("subject")
     if not isinstance(requirement_id, str) or not requirement_id.strip():
         report("requirement-id", path, "Requirement requires a non-empty requirement_id.")
@@ -469,6 +376,12 @@ def validate_requirement(
             "requirement-type",
             path,
             "requirement_type must be functional, quality, process, human-factors, usability, or constraint.",
+        )
+    if requirement_lifecycle not in REQUIREMENT_LIFECYCLES:
+        report(
+            "requirement-lifecycle",
+            path,
+            "requirement_lifecycle must be active or retired.",
         )
     if not isinstance(subject, str) or not subject.strip():
         report("requirement-subject", path, "Requirement requires one bundle-relative subject link.")
@@ -485,6 +398,14 @@ def validate_requirement(
         report("requirement-body", path, "Requirement body requires a ## Requirement section.")
     if not re.search(r"^## Rationale\s*$", body, flags=re.MULTILINE):
         report("requirement-rationale", path, "Requirement body requires a ## Rationale section.")
+    if requirement_lifecycle == "retired" and not re.search(
+        r"^## Lifecycle\s*$", body, flags=re.MULTILINE
+    ):
+        report(
+            "requirement-lifecycle-body",
+            path,
+            "A retired Requirement body requires a ## Lifecycle section with retirement decision Provenance.",
+        )
     if requirement_type == "quality":
         for field in ("quality_model", "quality_characteristic", "quality_subcharacteristic"):
             value = meta.get(field)
@@ -499,7 +420,7 @@ def validate_requirement(
                 path,
                 "ISO/IEC 25010:2023 quality_characteristic is not recognized by this profile.",
             )
-    for field in ("requirement_sources", "derived_from"):
+    for field in ("requirement_sources", "derived_from", "supersedes"):
         value = meta.get(field)
         if value is not None and (
             not isinstance(value, list)
@@ -517,6 +438,14 @@ def validate_requirement_relations(
 ) -> None:
     report = error
     parents_by_id: dict[str, list[str]] = {}
+    supersedes_by_id: dict[str, list[str]] = {}
+    metadata_by_id: dict[str, dict[str, object]] = {}
+    for relative, meta in concept_metadata.items():
+        if meta.get("type") != "Requirement":
+            continue
+        requirement_id = meta.get("requirement_id")
+        if isinstance(requirement_id, str):
+            metadata_by_id[requirement_id] = meta
     for path in concept_files:
         relative = PurePosixPath(path.relative_to(root).as_posix())
         meta = concept_metadata.get(relative)
@@ -544,14 +473,39 @@ def validate_requirement_relations(
                 elif parent not in requirement_ids:
                     report("requirement-derivation", path, f"derived_from references unknown requirement_id {parent}.")
 
-    def has_cycle(node: str, active: set[str], visited: set[str]) -> bool:
+        predecessors = meta.get("supersedes", [])
+        if isinstance(requirement_id, str) and isinstance(predecessors, list):
+            typed_predecessors = [item for item in predecessors if isinstance(item, str)]
+            supersedes_by_id[requirement_id] = typed_predecessors
+            for predecessor in typed_predecessors:
+                if predecessor == requirement_id:
+                    report("requirement-supersession", path, "A Requirement cannot supersede itself.")
+                elif predecessor not in requirement_ids:
+                    report(
+                        "requirement-supersession",
+                        path,
+                        f"supersedes references unknown requirement_id {predecessor}.",
+                    )
+                elif metadata_by_id.get(predecessor, {}).get("requirement_lifecycle") != "retired":
+                    report(
+                        "requirement-supersession-lifecycle",
+                        path,
+                        f"superseded Requirement {predecessor} must have requirement_lifecycle retired.",
+                    )
+
+    def has_cycle(
+        node: str,
+        edges: dict[str, list[str]],
+        active: set[str],
+        visited: set[str],
+    ) -> bool:
         if node in active:
             return True
         if node in visited:
             return False
         active.add(node)
-        for parent in parents_by_id.get(node, []):
-            if parent in parents_by_id and has_cycle(parent, active, visited):
+        for target in edges.get(node, []):
+            if target in edges and has_cycle(target, edges, active, visited):
                 return True
         active.remove(node)
         visited.add(node)
@@ -559,7 +513,7 @@ def validate_requirement_relations(
 
     visited: set[str] = set()
     for requirement_id in parents_by_id:
-        if has_cycle(requirement_id, set(), visited):
+        if has_cycle(requirement_id, parents_by_id, set(), visited):
             report(
                 "requirement-derivation-cycle",
                 requirement_ids[requirement_id],
@@ -567,11 +521,29 @@ def validate_requirement_relations(
             )
             break
 
+    visited = set()
+    for requirement_id in supersedes_by_id:
+        if has_cycle(requirement_id, supersedes_by_id, set(), visited):
+            report(
+                "requirement-supersession-cycle",
+                requirement_ids[requirement_id],
+                "supersedes relationships must not contain a cycle.",
+            )
+            break
 
-def result(root: Path, errors: list[dict[str, str]], governed_count: int) -> dict[str, object]:
+
+def result(
+    repository_root: Path,
+    corpus_root: Path,
+    errors: list[dict[str, str]],
+    governed_count: int,
+    state: str,
+) -> dict[str, object]:
     return {
         "profile": {"identity": PROFILE_ID, "version": PROFILE_VERSION},
-        "root": str(root),
+        "repository_root": str(repository_root),
+        "corpus_root": str(corpus_root),
+        "state": state,
         "structural_result": "pass" if not errors else "fail",
         "semantic_result": "unknown",
         "governed_concepts": governed_count,
@@ -582,10 +554,16 @@ def result(root: Path, errors: list[dict[str, str]], governed_count: int) -> dic
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("corpus_root", type=Path)
+    parser.add_argument(
+        "repository_root",
+        nargs="?",
+        type=Path,
+        default=Path("."),
+        help="Repository root; defaults to the current directory.",
+    )
     parser.add_argument("--json", action="store_true", dest="json_output")
     args = parser.parse_args()
-    report = validate(args.corpus_root)
+    report = validate(args.repository_root)
     if args.json_output:
         print(json.dumps(report, indent=2, sort_keys=True))
     else:

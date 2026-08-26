@@ -31,10 +31,17 @@ sources:
     title: Google SRE — Monitoring Distributed Systems
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T16:47:44Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Evaluation as bounded evidence
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 What does an Evaluation own in Gen Stack, and why is it neither just a test nor
 proof that a system is fit?

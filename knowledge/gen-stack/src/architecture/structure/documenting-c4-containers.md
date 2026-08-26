@@ -1,7 +1,7 @@
 ---
 type: Guide
 title: Documenting C4 containers
-description: Use when an application or data store inside a declared software system needs container-level identity; create one C4 Container concept with its responsibility and technology boundary.
+description: Use when an accepted application or data-store boundary inside a declared Software System needs canonical identity; record one C4 Container with its responsibility and technology boundary.
 tags: [architecture-documentation, c4-model, containers, applications, data-stores, authoring]
 status: draft
 sources:
@@ -9,10 +9,17 @@ sources:
     title: C4 model
   - resource: /profile/gen-stack-application-profile.md#c4-container
     title: Gen Stack application profile — C4 Container
-generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting C4 containers
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -21,9 +28,24 @@ application or data store inside exactly one software system.
 
 ## Before you begin
 
+Confirm that the runtime boundary, responsibility, and one containing Software
+System are accepted. When those are still inferred, underdeveloped, misplaced,
+or disputed, use [Developing C4 structure](developing-c4-structure.md) first.
+Direct accepted authoring does not require repeating candidate development.
+
 Identify exactly one containing software system and a real application or data-store
-boundary. A C4 container is not necessarily a Docker container, deployment
-node, infrastructure tier, team, or bounded context.
+boundary. A C4 Container is not necessarily a Docker container, deployment
+node, infrastructure tier, team, or Bounded Context.
+
+## Representation
+
+Use the OKF envelope, the profile's exact `C4 Container` type and collection,
+and the native `belongs-to-c4-software-system` assertion. Present residual body
+meaning in this preferred order: owning Software System and runtime boundary,
+responsibilities, interfaces, dependencies and data, operational constraints,
+material exclusions, Component navigation, and evidence. Do not repeat
+containment or generated inventories in the body. This order is authoring
+guidance, not profile conformance.
 
 ## Steps
 
@@ -31,6 +53,8 @@ node, infrastructure tier, team, or bounded context.
    current evidence. Identify exactly one containing C4 Software System.
 2. Create its canonical file using the `C4 Container` type and common fields
    from the [application profile](/profile/gen-stack-application-profile.md#c4-container).
+   Record its one containing System under
+   `relationships.belongs-to-c4-software-system`.
 3. State its runtime boundary, containing software system, and one concise
    active responsibility naming the outcome, policy, state, or authority it
    owns. Add material non-responsibilities rather than inventorying functions.
@@ -42,7 +66,9 @@ node, infrastructure tier, team, or bounded context.
    the containing system's required root concepts. Record only a consequential
    exception, such as a distinct owner, lifecycle, criticality, support policy,
    or retirement path.
-7. Link capabilities, surfaces, bounded contexts, accepted Requirements,
+7. From the repository root, run `scripts/sync-gen-stack-relationships.py` so System and
+   path-derived Component containment views are current.
+8. Link capabilities, surfaces, bounded contexts, accepted Requirements,
    deployment evidence, and selected views. Explain how the boundary responds
    to linked invariant or guarantee Requirements without repeating their
    binding statements. Add the concept to `architecture/structure/containers/index.md`.
@@ -56,6 +82,7 @@ node, infrastructure tier, team, or bounded context.
 - Parent system context is not repeated without a meaningful
   exception.
 - Infrastructure placement remains in deployment views.
+- Relationship synchronization reports no changes.
 
 ## Related
 

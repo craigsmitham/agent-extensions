@@ -19,10 +19,17 @@ sources:
     title: ISO — ISO/IEC/IEEE 29148:2018 Requirements engineering
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T16:30:00Z
+  at: 2026-08-26T20:14:40Z
 ---
 
 # Change specifications and delivery work
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 A **Change Specification** is a bounded composition used to shape, coordinate,
 and assess a proposed or authorized change to the System or its Architecture.
@@ -182,6 +189,13 @@ host's identifiers, fields, status transitions, and relationships. A tracker
 item may serve as the Change Specification container without changing the
 meaning or canonical owner of anything it references.
 
+Use [Managing work-item metadata and
+labels](managing-work-item-metadata-and-labels.md) to project that meaning into
+host fields, and [Maintaining work-item identity, relationships, and
+lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md) to
+manage the Specification and its related delivery items without forcing a
+ticket-conversion pipeline.
+
 ## Choosing another artifact
 
 Use another artifact when:
@@ -201,3 +215,6 @@ Use another artifact when:
 
 For the authoring procedure and adaptable template, see
 [Writing change specifications](writing-change-specifications.md).
+For source and authority handling shared with every substantive work item, see
+[Preserving evidence and authority in software work
+items](preserving-work-item-evidence-and-authority.md).

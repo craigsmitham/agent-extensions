@@ -1,8 +1,8 @@
 # Gen Stack
 
 Opinionated software-change guidance combining OODA control with
-human-oriented Intent, canonical Requirements, Architecture, Compilation,
-Implementation, Evaluations, and operational learning.
+human-oriented Intent, co-developed Architecture and canonical Requirements,
+Compilation, Implementation, Evaluations, and operational learning.
 
 ## Scope
 
@@ -14,6 +14,12 @@ knowledge packages. Its central rule is **one authority, many witnesses**:
 accepted Requirements own desired-state obligations, while architecture,
 implementations, tests, evaluations, and runtime observations retain their
 different roles and may intentionally represent the same predicate.
+
+Gen Stack is a human-governed development method. Agents can gather evidence,
+surface tensions, develop alternatives, recommend responses, and draft
+artifacts. Only the applicable human or institutional authority can ratify
+Intent, Requirements, Architecture, or another binding decision. An agent must
+keep a candidate's maturity separate from its authority to be acted on.
 
 The authority and transformation model is influenced by Chad Fowler's
 [The Generative Stack](https://chadfowler.com/regenerative-software/3miwhqqvwxc2x/)
@@ -32,19 +38,97 @@ axm install @craigsmitham/packs/gen-stack
 ```
 
 Open `src/index.md` to browse the bundle or use AXM Knowledge concept search.
+Use [Adopting Gen Stack](src/adopting-gen-stack.md) to establish a first
+strictly conforming corpus from either greenfield intent or brownfield
+evidence without claiming complete coverage, realization, or satisfaction.
 
-Version `0.7.0` adds the Evaluation explainer and general, Surface, and C4
-design guides; defines Evaluation Roles, Suites, and Reports; and requires the
-governed System Evaluation Approach in the draft `gen-stack` application
-profile. Concrete Definitions, Suites, Executions, Results, and Reports remain
-repository-native. OODA and Requirement-impact guidance remains in
-`src/control-loop/`; reusable Process authoring guidance remains in
-`src/processes/`.
+An adopting repository places its one supported corpus at `./gen-stack/`.
+The directory is the deterministic discovery location; `gen-stack/index.md`
+must still declare OKF v0.2 and explicitly adopt the supported profile. The
+repository root and alternate corpus paths are unsupported.
+
+From this package directory, pass the adopting repository root explicitly:
+
+```bash
+scripts/gen-stack.py --repository-root <repository-root> status
+scripts/gen-stack.py --repository-root <repository-root> evaluation-context
+scripts/sync-gen-stack-relationships.py <repository-root>
+scripts/sync-gen-stack-relationships.py <repository-root> --check
+scripts/validate-gen-stack-profile.py <repository-root>
+```
+
+When these scripts are available from the adopting repository, run them from
+its root without a positional argument. They derive `./gen-stack`; they do not
+scan upward or support a corpus-location override.
+
+Humans and harnesses can use the read-only [inspection
+tools](scripts/README.md) for concept lookup, Surface and C4 hierarchy,
+directly associated Requirements, explicit cross-view relationships,
+evaluation context, provenance, snapshots, and corpus-only comparison. The
+CLI exposes a [versioned machine contract](scripts/contracts/README.md).
+
+Python-based consumers should reuse `gen_stack_profile.InspectionPlane` or the
+lower-level `inspect_repository(repository_root)` rather than reproducing
+location, adoption, indexing, or relationship logic.
+
+Synchronization edits only the producer-owned `relationships` block, preserves
+unrelated frontmatter, and refuses to write when authoritative assertions are
+malformed or contradictory.
+
+Version `0.15.0` adds the read-only Gen Stack inspection plane: one reusable
+profile index behind a task-oriented CLI, versioned machine contracts,
+direct-Requirement Surface and C4 evaluation context, controlled relationship
+provenance, deterministic snapshots, and corpus-only comparison. It does not
+add peer-owned Implementation or concrete Evaluation mappings.
+
+Version `0.14.0` establishes one native-first representation policy across the
+method: establish Gen Stack meaning, use the artifact's native format, apply an
+applicable profile as a delta, map only to exact host semantics, and add the
+smallest residual body content. Every Guide now states its native target and
+preferred logical presentation while omitting empty content, duplicate fields,
+and false persistence metadata. The OKF profile remains `0.4.0`; the update
+clarifies its relationship to OKF and does not add style-only conformance. It
+also adds one strict day-one adoption workflow for greenfield and brownfield
+repositories while keeping corpus coverage, realization, satisfaction, and
+fitness separate from conformance.
+
+Version `0.13.0` adds the shared Requirement-change workflow and profile
+`0.4.0` lifecycle contract. Canonical Requirements are explicitly `active` or
+`retired`; additions, revisions, retirements, replacements, splits, and merges
+share one identity, authority, blocker, and reconciliation model; and
+successors preserve many-to-many lineage through `supersedes` without
+transferring meaning or Evaluation evidence. The profile validator and
+relationship synchronizer enforce lifecycle and supersession integrity.
+
+Version `0.12.0` adds a shared candidate Architecture and Requirements
+workflow with distinct Surface, C4 structure, and Requirement specializations
+for greenfield and brownfield work. It separates evidence extraction and
+candidate development from canonical accepted authoring, makes misplaced
+Requirement subjects reviewable through load-bearing placement tests, and
+integrates actionable blocking and non-blocking meaning-gap dispositions into
+work items, Change Design, scenario review, and bounded regeneration.
+
+Version `0.11.0` consolidates portable work-item evidence and authority,
+identity and lifecycle, and metadata and label concerns into shared Guides.
+The work-item index now chooses both the semantic artifact and the smallest
+applicable common-guide set, while incident, defect, Change Specification, and
+Bugfix Specification Guides retain their specialized content.
+
+Version `0.10.0` made human ratification explicit throughout the method,
+removed the YAGNI and Tidy First guidance, and introduced Gen Stack profile
+`0.3.0`. The profile prescribes `./gen-stack/` as the sole supported repository
+location and records controlled corpus relationships under top-level
+`relationships` maps with one authoritative assertion and synchronized
+reciprocal views. The glossary remains the semantic authority. Explanations
+deepen understanding, Guides support action, and neither adds semantic or
+profile-conformance rules. Concrete Evaluation Definitions, Suites,
+Executions, Results, and Reports remain repository-native.
 
 ## License
 
-The bundle is licensed under CC-BY-SA-4.0. This preserves the reciprocal
-license previously declared by the consolidated software-architecture and
-software-engineering knowledge packages. Referenced sources retain their own
-rights; citations identify influence and provenance rather than relicensing
-source material.
+The package is licensed under `CC-BY-SA-4.0 AND MIT`. Files under `src/` are
+licensed under CC-BY-SA-4.0, preserving the reciprocal license previously
+declared by the consolidated software-architecture and software-engineering
+knowledge packages. Original files under `scripts/` are licensed under MIT.
+Referenced sources retain their own rights; citations identify influence and
+provenance rather than relicensing source material.

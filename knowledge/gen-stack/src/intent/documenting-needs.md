@@ -14,6 +14,13 @@ generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
 
 # Documenting needs
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Create one `Need` concept under `intent/needs/` that states a consequential
@@ -25,6 +32,16 @@ response.
 Confirm that the need is accepted, durable, and relevant to architecture. Keep
 tentative discovery hypotheses in research and proposed responses in product
 or delivery work until they are accepted.
+
+## Representation
+
+Use the OKF envelope and the profile's exact `Need` type and collection.
+Present residual body meaning in this preferred order: solution-independent
+condition or outcome, affected audiences and circumstances, why it matters,
+material exclusions, related concepts, and evidence or visible evidence gaps.
+Keep native metadata and links in their owning fields and do not introduce a
+feature-request template. This order is authoring guidance, not profile
+conformance.
 
 ## Steps
 

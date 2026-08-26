@@ -1,14 +1,20 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.7.0",
-  "description": "A cohesive, opinionated generative software system joining OODA control, intent, canonical requirements, architecture, work items, implementation, and independent evidence loops",
+  "version": "2.7.0",
+  "description": "A cohesive, opinionated generative software system with controlled Requirement lifecycle and change, a fixed repository gen-stack/ corpus, and independent evidence loops",
   "keywords": [
     "generative-software",
     "ooda",
     "control-loop",
     "signals",
     "requirements",
+    "candidate-architecture",
+    "requirement-change",
+    "requirement-lifecycle",
+    "brownfield",
+    "greenfield",
+    "meaning-gaps",
     "software-architecture",
     "software-engineering",
     "evaluations",
@@ -26,12 +32,7 @@
   "type": "pack",
   "name": "gen-stack",
   "dependencies": {
-    "@craigsmitham/knowledge/gen-stack": ">=0.7.0",
-    "@craigsmitham/skills/author-software-work-items": ">=3.0.0",
-    "@craigsmitham/skills/author-gen-stack": ">=2.0.0",
-    "@craigsmitham/skills/setup-gen-stack": ">=2.0.0",
-    "@craigsmitham/skills/reconcile-gen-stack": ">=2.0.0",
-    "@craigsmitham/rules/yagni": ">=0.1.4",
-    "@craigsmitham/rules/tidy-first": ">=0.1.4"
+    "@craigsmitham/knowledge/gen-stack": ">=0.14.0",
+    "@craigsmitham/skills/gen-stack": ">=1.7.0"
   }
 }

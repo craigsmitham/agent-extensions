@@ -25,10 +25,22 @@ sources:
     title: Documenting requirements
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Writing requirements with EARS
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
+Use EARS only when its structured natural-language clauses fit the dominant
+semantic difficulty. Gen Stack does not prefer it universally or restrict
+Requirements to documented methods; start with [Selecting a requirement
+specification method](selecting-a-requirement-specification-method.md).
 
 Use this guide to express one already accepted, subject-centered obligation in
 EARS. The result is one correctly ordered statement for the Requirement's
@@ -39,6 +51,16 @@ This procedure begins after the source, acceptance, subject, level, and
 requirements](documenting-requirements.md) for that wider workflow and [Easy
 Approach to Requirements Syntax
 (EARS)](easy-approach-to-requirements-syntax.md) for the syntax model.
+
+## Representation
+
+Use EARS as the syntax of the canonical expression inside the native
+Requirement `## Requirement` section; do not add EARS-specific frontmatter or
+a parallel statement. Order clauses by temporal meaning—optional feature,
+continuing state, trigger or unwanted condition, obligated subject, response—
+and omit clauses that do not apply. Keep rationale, identifiers, lifecycle,
+subject, sources, and evaluation links in their profile or artifact-owned
+locations.
 
 ## 1. State the subject and one response
 

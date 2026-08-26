@@ -16,10 +16,17 @@ sources:
     title: Linear Method — Write issues, not user stories
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T16:11:30Z
+  at: 2026-08-26T20:14:40Z
 ---
 
 # Titling and summarizing work items
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide when creating any work item, and again whenever what is known
 about it materially changes. It applies to operational incident records, defect
@@ -27,11 +34,29 @@ reports, Change Specifications, Bugfix Specifications, and accepted delivery
 work alike. For why the brief is a separate artifact from the body, read
 [Work item titles and summaries](work-item-titles-and-summaries.md).
 
+For a brief-only request, use this guide alone: do not load body, lifecycle, or
+metadata guidance merely because those concerns exist on the item. When the
+request also creates or changes body meaning, apply [Preserving evidence and
+authority in software work items](preserving-work-item-evidence-and-authority.md).
+When it mutates tracker fields, uses a batch, or encounters partial failures,
+also apply [Managing work-item metadata and
+labels](managing-work-item-metadata-and-labels.md).
+
 ## Goal
 
 Someone scanning a list, a roll-up, or a search result can tell what the item
 is and why it exists without opening it, and someone who does open it finds
 nothing in the brief that the item does not support.
+
+## Representation
+
+Use the host's native title and summary or description affordances when they
+exist. The title names the affected subject and observed condition, requested
+outcome, or authorized change; the one- or two-sentence summary then states why
+the item exists, current evidence or decision state, and the next material
+action. Do not add a second title or summary block to the body, and do not use
+a label or state field as a substitute for either. If the host has no summary
+field, place the summary once at the start of the body.
 
 ## 1. Title what the item is about
 
@@ -140,11 +165,10 @@ moment that has passed.
 ## 6. Sweep a collection as one low-risk pass
 
 Making a backlog, project, or epic legible is a distinct operation from
-refinement. Process the whole selected collection, keep each edit inside the
-title and summary, continue past an item-local failure, and report which items
-could not be updated. When the two fields cannot be written in one operation,
-write the summary first and the title last, so a newly sharpened title never
-points at a stale summary.
+refinement. Apply the shared metadata guide for exact targeting, authorization,
+partial failure, and readback. Keep each edit inside the title and summary.
+When the two fields cannot be written in one operation, write the summary first
+and the title last, so a newly sharpened title never points at a stale summary.
 
 ## Final check
 

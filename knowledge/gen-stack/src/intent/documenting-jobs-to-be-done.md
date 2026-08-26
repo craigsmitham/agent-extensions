@@ -14,6 +14,13 @@ generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
 
 # Documenting Jobs to Be Done
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Create one `Job to Be Done` concept under `intent/jobs/` that explains progress
@@ -25,6 +32,16 @@ Start from accepted evidence about actual choices, constraints, alternatives,
 or struggling moments. A plausible sentence is not evidence. Keep interview
 records, named participants, tentative segmentation, and opportunity scoring
 in their research authority.
+
+## Representation
+
+Use the OKF envelope and the profile's exact `Job to Be Done` type and
+collection. Present residual body meaning in this preferred order: audience
+and circumstances, sought progress, supported functional, social, or emotional
+forces, exclusions, consequential relationships, and evidence and confidence.
+Keep provenance and controlled links in native fields; omit unsupported force
+categories instead of leaving empty sections. This order is authoring guidance,
+not profile conformance.
 
 ## Steps
 

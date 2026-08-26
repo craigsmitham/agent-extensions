@@ -9,10 +9,17 @@ sources:
     title: Goal-oriented behavior and use cases
   - resource: ../profile/gen-stack-application-profile.md#use-case
     title: Gen Stack application profile — Use Case
-generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting use cases
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -27,6 +34,16 @@ readers cannot infer reliably from tests or interfaces alone. Start from the
 subject boundary and an actor-goal inventory; expand only goals whose value,
 risk, ambiguity, or architectural consequences justify maintenance. A Job to
 Be Done may explain motivating demand, but it does not replace the use case.
+
+## Representation
+
+Use the OKF envelope, the profile's exact `Use Case` type and collection, and
+controlled relationships in their profile roles. The [suggested
+body](#suggested-body) is the preferred residual order: subject and actors,
+goal and outcome, main success scenario, material extensions, then Architecture
+relationships and evidence. Vary prose and proportional detail, omit
+inapplicable extensions, and do not duplicate frontmatter or Requirement
+expressions. The suggested headings are not additional profile conformance.
 
 ## Steps
 
@@ -57,12 +74,14 @@ Be Done may explain motivating demand, but it does not replace the use case.
    independently accepted obligation, link its Requirement rather than using a
    binding `shall` statement or maintaining a second normative formulation. Do
    not enumerate every test variation.
-7. State exclusions and connect the use case to the relevant capabilities it
-   exercises, independently meaningful features that enable it, surfaces
-   through which it is enacted, bounded contexts whose authority it uses, C4
-   elements that realize it, and dynamic views that illustrate selected
-   scenarios.
-8. Link Requirements that own accepted obligations and contracts, tests,
+7. State exclusions. Record each controlled Capability edge under
+   `relationships.exercises-capability`. Features author
+   `enables-use-case`; do not duplicate its reciprocal here. Explain surfaces,
+   domain authority, realization, and selected dynamic views in prose where no
+   controlled role applies.
+8. From the repository root, run `scripts/sync-gen-stack-relationships.py` so reciprocal
+   views and any Requirement-source backlinks are current.
+9. Link Requirements that own accepted obligations and contracts, tests,
    executable examples, and runtime evidence that own precise or current
    facts. Review the result with both domain or value participants and
    technical participants, then update `intent/use-cases/index.md`.
@@ -122,6 +141,7 @@ only when its meaning is genuinely inapplicable, not merely unknown.
 - Accepted scenario obligations have one linked Requirement authority.
 - Exact permutations and current facts remain with their better authorities.
 - The use case is neither the underlying Job to Be Done nor a delivery story.
+- Relationship synchronization reports no changes.
 
 ## Related
 

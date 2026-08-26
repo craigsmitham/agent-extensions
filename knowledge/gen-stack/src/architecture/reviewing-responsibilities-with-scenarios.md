@@ -12,10 +12,17 @@ sources:
   - id: parnas-decomposition
     resource: https://doi.org/10.1145/361598.361623
     title: D. L. Parnas — On the Criteria To Be Used in Decomposing Systems into Modules
-generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:07:37Z" }
 ---
 
 # Reviewing responsibilities with scenarios
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -35,6 +42,15 @@ prohibition, boundary rule, or required failure or recovery outcome, treat it
 as a candidate Requirement. The architecture review identifies its subject and
 response; the Requirement owns the obligation.
 
+When the scenario instead exposes a missing, underdeveloped, misplaced, or
+disputed encounter point, structural element, or obligation, use the shared
+[candidate Architecture and Requirements
+guide](developing-candidate-architecture-and-requirements.md), followed only by
+the implicated [Surface](surfaces/developing-surfaces.md), [C4
+structure](structure/developing-c4-structure.md), or
+[Requirement](requirements/developing-requirements.md) guide. Do not repair a
+finding silently inside the review.
+
 ## Before you begin
 
 Choose a bounded subject and the canonical C4 elements, bounded contexts, or
@@ -42,6 +58,16 @@ other responsibility-bearing elements under review. Select a small set of
 use-case scenarios: at least one main success scenario and the extension
 scenarios most likely to expose policy, failure, recovery, trust, or authority
 boundaries. This is a semantic architecture review, not profile validation.
+
+## Representation
+
+Keep scenario review in the native review, work-item, or decision surface; it
+is not a governed concept. Present the scenario and evidence, then current
+responsibility assignment, interaction sequence, boundary or failure findings,
+candidate repairs, tradeoffs, recommendation, blocking status, and decision
+authority. Diagrams and sequence traces are supporting views. Do not assign
+canonical identities or acceptance metadata until an authority accepts the
+result through the applicable authoring route.
 
 ## Steps
 
@@ -81,8 +107,10 @@ boundaries. This is a semantic architecture review, not profile validation.
    boundary owning that semantic change rather than leaking variation through
    the model.
 8. Reconcile each finding as an implementation defect, obsolete document,
-   insufficient evidence, or unresolved architecture decision. Do not let the
-   newest artifact silently win.
+   candidate missing or misplaced Architecture, candidate Requirement,
+   insufficient evidence, or unresolved Architecture decision. Record material
+   gaps with evidence, impact, recommendation, authority, and blocking status.
+   Do not let the newest artifact silently win.
 9. Update accepted responsibilities, non-responsibilities, relationships, use
    cases, linked Requirements, and selected dynamic views together. Keep
    proposed restructures and candidate Requirements in their proper lifecycle

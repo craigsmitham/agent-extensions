@@ -1,7 +1,7 @@
 ---
 type: Guide
 title: Documenting C4 software systems
-description: Use when a software-system boundary and value need C4 representation; create one Software System concept with clear responsibility and interaction context.
+description: Use when an accepted software-system boundary and value need canonical C4 representation; record one Software System concept with clear responsibility and interaction context.
 tags: [architecture-documentation, c4-model, software-systems, boundaries, authoring]
 status: draft
 sources:
@@ -9,10 +9,17 @@ sources:
     title: C4 model
   - resource: /profile/gen-stack-application-profile.md#c4-software-system
     title: Gen Stack application profile — C4 Software System
-generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting C4 software systems
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -21,9 +28,25 @@ highest-level software boundary being described.
 
 ## Before you begin
 
+Confirm that the subject, boundary, responsibility, value, and material
+relationships are accepted. When they are still being inferred from greenfield
+design or brownfield implementation, use [Developing C4
+structure](developing-c4-structure.md) first. Direct accepted authoring does
+not require repeating candidate development.
+
 Confirm that the subject is a software system whose interactions matter to the
-documented System. Do not equate it automatically with an offering,
-capability, bounded context, repository, or organizational unit.
+documented System. Do not equate it automatically with an Offering,
+Capability, Bounded Context, repository, or organizational unit.
+
+## Representation
+
+Use the OKF envelope, the profile's exact `C4 Software System` type and
+collection, and controlled relationships in their native roles. Present
+residual body meaning in this preferred order: value and boundary,
+responsibilities, direct interactors, consequential relationships, material
+exclusions, contained Container navigation, and evidence. Do not duplicate a
+generated container inventory or frontmatter edges in prose. This order is
+authoring guidance, not profile conformance.
 
 ## Steps
 
@@ -42,7 +65,11 @@ capability, bounded context, repository, or organizational unit.
    Lifecycle, System Ownership, Architecture Decision Policy, and System Assurance concepts.
    Do not repeat their content here. For an external system, link a stable
    external authority only when its context is consequential and available.
-7. Link offerings, capabilities, domain concepts, accepted Requirements,
+7. Each contained C4 Container owns a
+   `relationships.belongs-to-c4-software-system` assertion. Run
+   run `scripts/sync-gen-stack-relationships.py` from the repository root to materialize
+   `contains-c4-container` here; do not author both roles.
+8. Link offerings, capabilities, domain concepts, accepted Requirements,
    current implementation evidence, and selected views without making them C4
    children. An accepted invariant or guarantee is a Requirement of an
    eligible subject, not part of the responsibility sentence. Update the
@@ -56,6 +83,7 @@ capability, bounded context, repository, or organizational unit.
 - Its primary or external role is explicit.
 - Interactors and relationship meanings are understandable.
 - The required root system context is discoverable without duplication.
+- Relationship synchronization reports no changes.
 
 ## Related
 

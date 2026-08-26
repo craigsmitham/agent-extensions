@@ -15,11 +15,18 @@ sources:
     resource: goal-oriented-behavior.md
     title: Goal-oriented behavior and use cases
 generated:
-  by: codex/gpt-5
-  at: 2026-08-26T15:10:00Z
+  by: codex/gpt-5.6
+  at: 2026-08-26T19:44:29Z
 ---
 
 # Offerings and value
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 Architecture needs a view that begins before system behavior and structure:
 
@@ -237,8 +244,9 @@ structural profile types.
 The [Gen Stack vocabulary and relationship model](../glossary.md) owns their
 preferred terms and controlled relationship meanings. The [goal-oriented
 behavior](goal-oriented-behavior.md) foundation elaborates the Use Case
-boundary. Relationship frontmatter remains deferred; ordinary Markdown links
-and explicit prose carry the controlled meanings.
+boundary. The profile's `relationships` map records consequential controlled
+edges with readable roles and synchronized reciprocal views; prose still
+explains what each edge means in context.
 
 Use the focused guides for [offerings](documenting-offerings.md),
 [audiences](documenting-audiences.md),

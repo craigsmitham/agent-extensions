@@ -27,11 +27,18 @@ sources:
     resource: /intent/goal-oriented-behavior.md
     title: Goal-oriented behavior and use cases
 generated:
-  by: codex/gpt-5
-  at: 2026-08-26T15:10:00Z
+  by: codex/gpt-5.6
+  at: 2026-08-26T19:44:29Z
 ---
 
 # C4 model
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 The C4 model is an abstraction-first approach to visualizing software
 architecture. It gives people a shared structural vocabulary and a related set
@@ -164,8 +171,9 @@ When representing maintained C4 elements and views in an OKF bundle, apply the
 profile](/profile/gen-stack-application-profile.md)
 for their type usage, metadata, paths, containment, and validation rules. The
 [Gen Stack vocabulary and relationship model](/glossary.md) owns the
-author-facing cross-view relationship meanings. Structured relationship
-frontmatter remains deferred.
+author-facing cross-view relationship meanings. The profile's `relationships`
+map records controlled containment, projection, and cross-view realization
+roles; canonical paths remain authoritative for Component containment.
 
 Use the focused guides for [software
 systems](/architecture/structure/documenting-c4-software-systems.md),

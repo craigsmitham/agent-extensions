@@ -14,6 +14,13 @@ generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
 
 # Documenting value propositions
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Create one `Value Proposition` concept under `intent/value-propositions/` that
@@ -25,6 +32,15 @@ or job.
 Confirm the offering, audience, promised benefit, and authority for the claim.
 Do not promote campaign language, roadmap intent, current pricing, or an
 unmeasured outcome into accepted architecture meaning.
+
+## Representation
+
+Use the OKF envelope and the profile's exact `Value Proposition` type and
+collection. Present residual body meaning in this preferred order: offering
+and audience, addressed Need or Job, promised benefit, how value is recognized,
+scope and limitations, dependencies, and evidence. Use native `stale_after`
+when applicable and do not repeat it or other OKF metadata in the body. This
+order is authoring guidance, not profile conformance.
 
 ## Steps
 

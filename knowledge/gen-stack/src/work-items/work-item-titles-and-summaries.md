@@ -19,10 +19,17 @@ sources:
     title: Google SRE — Managing Incidents
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T16:11:30Z
+  at: 2026-08-26T20:14:40Z
 ---
 
 # Work item titles and summaries
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 A work item's **brief** is its title plus a one- or two-sentence summary. The
 brief is the item's interface; the body and structured fields are its evidence.
@@ -165,6 +172,10 @@ act on it.
 
 For the authoring procedure, read
 [Titling and summarizing work items](titling-and-summarizing-work-items.md).
+For the distinct authority and host-projection rules that make a brief-only
+sweep safe, read [Preserving evidence and authority in software work
+items](preserving-work-item-evidence-and-authority.md) and [Managing work-item
+metadata and labels](managing-work-item-metadata-and-labels.md).
 The type-specific titling steps live in
 [Recording operational incidents](recording-operational-incidents.md),
 [Recording defect reports](recording-defect-reports.md),

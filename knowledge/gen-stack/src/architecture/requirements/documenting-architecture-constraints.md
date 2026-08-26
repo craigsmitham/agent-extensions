@@ -11,19 +11,42 @@ sources:
   - id: requirement-classification
     resource: /architecture/requirements/requirement-classification.md
     title: Classifying requirements in software architecture
+  - id: selecting-method
+    resource: selecting-a-requirement-specification-method.md
+    title: Selecting a requirement specification method
+  - id: external-conformance
+    resource: specifying-external-conformance-requirements.md
+    title: Specifying external-conformance requirements
   - id: iso-29148
     resource: https://www.iso.org/standard/72089.html
     title: ISO/IEC/IEEE 29148:2018 — Requirements engineering
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Documenting constraint requirements
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 Use this guide when the primary accepted obligation narrows the permitted
 design, implementation, technology, interface, legal, policy, platform, or
 operating space of an architecture subject.
+
+## Representation
+
+Inherit the native OKF and profile representation from [Documenting
+requirements](documenting-requirements.md) and use
+`requirement_type: constraint` as the single type representation. In the
+canonical expression, prefer this logical order: authority and applicability,
+obligated subject, mandated or prohibited condition, scope and exceptions,
+consequence, and release or reconsideration trigger. Link accepted decisions
+or external authorities rather than copying them as parallel constraints.
 
 ## 1. Confirm that the limit is binding
 
@@ -58,15 +81,34 @@ protocol, schema form, connector, or external interface technology is
 
 ## 3. Draft the bounded limitation
 
-Useful forms include:
+Use [Selecting a requirement specification
+method](selecting-a-requirement-specification-method.md). EARS is useful when
+the constraint's applicability maps accurately to its clauses. `Where`
+means that an optional feature is included, not merely that a legal,
+jurisdictional, or configuration condition exists. Use `While` for a
+continuing operating state and `When` or `If…then` only for a discrete desired
+or unwanted trigger.
 
-> When `[scope or condition]`, `[subject]` shall use `[mandated option]`.
+An unconditional constraint can use the ubiquitous EARS form:
 
-> When `[scope or condition]`, `[subject]` shall not `[prohibited option or
+> `[subject]` shall use `[mandated option]`.
+
+A state-qualified constraint can apply the state-driven form:
+
+> While `[operating state]`, `[subject]` shall not `[prohibited option or
 > outcome]`.
+
+When an authoritative scope such as a jurisdiction or information class does
+not map cleanly to EARS, retain a bounded non-EARS formulation rather than
+mislabeling the scope as an optional feature or event:
 
 > For `[affected information, interaction, or operation]`, `[subject]` shall
 > remain within `[binding boundary]`.
+
+For conformance to a standard, schema, or profile, follow [Specifying
+external-conformance requirements](specifying-external-conformance-requirements.md)
+so the exact target, version, class, scope, deviations, and authority roles
+remain clear.
 
 State one limitation and enough context to interpret it. Avoid smuggling a
 preferred design into the statement by calling it a standard. If an external

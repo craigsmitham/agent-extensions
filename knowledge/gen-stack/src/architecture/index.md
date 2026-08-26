@@ -14,6 +14,7 @@ or independent use justifies promoting an individual concept.
 ## Start here
 
 - [Software architecture overview](overview.md) - What software architecture owns, what it deliberately leaves to other authorities, and how it relates desired structure to current implementation.
+- [Developing candidate Architecture and Requirements](developing-candidate-architecture-and-requirements.md) - Use when greenfield intent or brownfield evidence suggests missing, underdeveloped, misplaced, or disputed architectural meaning; develop bounded candidate Surfaces, C4 structure, and Requirements without treating implementation as desired-state authority.
 - [Reviewing responsibilities with scenarios](reviewing-responsibilities-with-scenarios.md) - Use when representative scenarios must test whether architectural responsibilities are well placed; exercise them to expose change spread, coupling, authority violations, and misplaced data variation.
 
 ## Architecture subjects
@@ -31,4 +32,4 @@ or independent use justifies promoting an individual concept.
 
 ## Gen Stack corpus profile
 
-- [Gen Stack profile](../profile/) - The normative vocabulary and OKF application profile for governed corpus semantics and representation.
+- [Gen Stack profile](../profile/) - The authority boundary between canonical glossary meaning, governed OKF representation, supporting Explanations, and authoring Guides.

@@ -11,20 +11,40 @@ sources:
   - id: human-centred-requirements
     resource: /architecture/requirements/human-centred-requirements.md
     title: Human-centred requirements in software architecture
+  - id: selecting-method
+    resource: selecting-a-requirement-specification-method.md
+    title: Selecting a requirement specification method
   - id: iso-9241-11
     resource: https://www.iso.org/standard/63500.html
     title: ISO 9241-11:2018 — Usability definitions and concepts
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Documenting usability requirements
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide when the primary accepted obligation is an outcome of use:
 specified users achieving specified goals with required effectiveness,
 efficiency, satisfaction, learnability, error recovery, or another defined
 interaction outcome in a context of use.[^iso-9241-11]
+
+## Representation
+
+Inherit the native OKF and profile representation from [Documenting
+requirements](documenting-requirements.md) and use
+`requirement_type: usability` as the single type representation. In the
+canonical expression, prefer this logical order: specified users and context,
+goal and task, obligated Surface or other subject, required interaction
+outcome, criterion or tolerance, and material exclusions. Link the evaluation
+method instead of turning it into a second obligation.
 
 ## 1. Define the context of use
 
@@ -56,9 +76,16 @@ unclear.
 
 ## 3. Draft the outcome of use
 
-> When `[specified users]` perform `[task]` under `[material context]`,
-> `[subject]` shall enable `[accepted effectiveness, efficiency, satisfaction,
-> learnability, or recovery outcome]` `[within accepted bounds]`.
+Use [Selecting a requirement specification
+method](selecting-a-requirement-specification-method.md). EARS may separate a
+continuing context from an interaction trigger; a context-of-use scenario,
+task model, quantitative criterion, or incorporated accessibility standard may
+better preserve other meaning. Keep users, task, and context visible. One
+natural-language response form is:
+
+> `[subject]` shall enable `[specified users]` to achieve `[accepted
+> effectiveness, efficiency, satisfaction, learnability, or recovery outcome]`
+> `[within accepted bounds]`.
 
 Write the desired outcome, not the evaluation protocol. The Requirement can
 include an accepted measure or criterion while leaving participant sampling,
@@ -91,9 +118,10 @@ Weak:
 
 Synthetic usability Requirement:
 
-> During an active incident, an on-call engineer familiar with the incident
-> process shall identify the affected production region from the incident
-> console without consulting another system.
+> While an incident is active, when an on-call engineer familiar with the
+> incident process attempts to identify the affected production region, the
+> incident console shall enable the engineer to identify the region without
+> consulting another system.
 
 A real requirement may also need an accepted time, error, or satisfaction
 criterion. The synthetic example deliberately does not invent one.

@@ -21,11 +21,18 @@ sources:
     resource: https://contextmapper.org/docs/architecture-validation-with-archunit/
     title: Context Mapper — Validating the Implementation against the Model
 generated:
-  by: codex/gpt-5
-  at: 2026-08-26T13:07:31Z
+  by: codex/gpt-5.6
+  at: 2026-08-26T19:44:29Z
 ---
 
 # Domain-driven design
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 Domain-driven design (DDD) is an approach to developing software for a complex
 domain by building, applying, and continually refining a model of that domain.
@@ -328,8 +335,9 @@ an OKF bundle, apply the [Gen Stack application
 profile](/profile/gen-stack-application-profile.md)
 for their type usage, metadata, paths, classification, and validation rules.
 The [Gen Stack vocabulary and relationship model](/glossary.md) owns the
-author-facing cross-view relationship meanings. Structured relationship
-frontmatter remains deferred.
+author-facing cross-view relationship meanings. The profile's `relationships`
+map records controlled model mappings and map participation while prose keeps
+directional dependency and translation meaning explicit.
 
 Use the focused guides for [subdomains](/intent/documenting-subdomains.md),
 [bounded contexts](/architecture/domains/documenting-bounded-contexts.md), and [context

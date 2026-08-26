@@ -157,21 +157,16 @@ expected=(
   packs/gen-stack
   packs/qrspi
   rules/field-notes
-  rules/tidy-first
   rules/use-effect-v4
-  rules/yagni
   skills/audit-docs
   skills/author-docs
-  skills/author-gen-stack
   skills/author-okf
-  skills/author-software-work-items
   skills/craft-effect-v4
   skills/field-notes
+  skills/gen-stack
   skills/improve-whatever
   skills/question
-  skills/reconcile-gen-stack
   skills/research
-  skills/setup-gen-stack
   skills/temporal-dates
   subagents/researcher
 )

@@ -22,10 +22,17 @@ sources:
     title: Mozilla RFC template
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T15:42:30Z
+  at: 2026-08-26T20:14:40Z
 ---
 
 # Preserving design and delivery context in software work items
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide when source material for a Defect Report, Change Specification,
 or other work item already contains technical investigation, design, planning,
@@ -36,6 +43,21 @@ When the response still needs to be reasoned through, use [Developing a Change
 Design](../design/developing-a-change-design.md) first. A Change Design is the
 bounded technical response, not a required standalone document; this guide
 preserves it when a work item is the chosen durable home.[^change-design]
+
+Use [Preserving evidence and authority in software work
+items](preserving-work-item-evidence-and-authority.md) for the source inventory,
+claim maturity, safe evidence, and decision-authority mechanics. This guide
+specializes that foundation for technical design and delivery material.
+
+## Representation
+
+Use the work item's native fields and links first, then retain residual design
+and delivery meaning in this preferred order: context and scope, applicable and
+candidate Requirements, affected Architecture and decisions, Change Design,
+verification context, delivery work, then open questions and authority. The
+compositions below are adaptable body fallbacks, not mandatory templates.
+Omit unsupported sections, link independent authorities, and never duplicate
+host fields or promote a sketch, proposal, or plan through formatting alone.
 
 ## Core rule
 
@@ -124,7 +146,7 @@ reasoning is part of what later readers need.[^google-design-docs][^mozilla-rfc-
 
 ## 2. Preserve provenance and authority state
 
-For each item, retain who or what established it and label its current state:
+Apply the shared evidence guide. For technical context, also distinguish:
 
 - **observed**, **confirmed**, or **hypothesized** for investigation;
 - **constraint** or **assumption** for design inputs;

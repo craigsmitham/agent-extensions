@@ -13,10 +13,28 @@ sources:
 
 # Designing evaluations for Surfaces
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Evaluate actor-facing behavior and the Implementation that realizes each
 canonical Surface while preserving the Surface interaction hierarchy.
+
+## Representation
+
+Author Definitions, Suites, Executions, Results, and Reports in their
+repository-native formats. Use exact native fields for identity, Evaluation
+Role, Surface subject, Requirement IDs, method, conditions, oracle, thresholds,
+Implementation revision, and evidence links when available. Add residual prose
+only for meaning the schema cannot carry. Prefer Definition content in this
+logical order: bounded claim, subject and criteria authority, method and cases,
+conditions and sampling, oracle and thresholds, then evidence and lifecycle.
+Do not wrap concrete Evaluations in OKF or duplicate native links in prose.
 
 ## Steps
 

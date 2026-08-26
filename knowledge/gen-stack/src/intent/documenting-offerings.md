@@ -9,10 +9,17 @@ sources:
     title: Offerings and value in software architecture
   - resource: ../profile/gen-stack-application-profile.md#offering
     title: Gen Stack application profile — Offering
-generated: { by: codex/gpt-5.6, at: "2026-08-26T15:10:00Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting offerings
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -30,6 +37,16 @@ An Offering is an Intent concept. It may source or shape a Requirement, but it
 must not be used as the Requirement's `subject`; assign an accepted obligation
 to the eligible Architecture concept that is actually obligated.
 
+## Representation
+
+Use the OKF envelope, the profile's exact `Offering` type and collection, and
+profile relationship roles only when applicable. Present residual body meaning
+in this preferred order: offered value, circumstances, boundary and
+exclusions, consequential audiences and needs, Capability dependencies, and
+evidence. Keep controlled edges in `relationships` and other OKF facts in
+frontmatter; do not reproduce either as a body inventory. This order is
+authoring guidance, not profile conformance.
+
 ## Steps
 
 1. Name the offering in the language its audiences and maintainers recognize.
@@ -40,9 +57,13 @@ to the eligible Architecture concept that is actually obligated.
    matters. Avoid describing only the software currently used to provide it.
 4. Define its boundary and material exclusions. Say what adjacent products,
    services, operations, or outcomes it does not own.
-5. Link consequential audiences, needs, jobs, propositions, use cases, and
-   capabilities in prose. Keep those concepts in their own canonical files.
-6. Link the accepted authority or evidence for the definition, then add the
+5. Explain consequential audiences, needs, jobs, propositions, and use cases in
+   prose. Record each controlled Capability edge under
+   `relationships.depends-on-capability`; do not author the reciprocal
+   `supports-offering` role.
+6. From the repository root, run `scripts/sync-gen-stack-relationships.py` so reciprocal
+   views and any Requirement-source backlinks are current.
+7. Link the accepted authority or evidence for the definition, then add the
    offering to `intent/offerings/index.md` using its canonical title and
    description.
 
@@ -52,6 +73,7 @@ to the eligible Architecture concept that is actually obligated.
 - It does not imply that an offering is a C4 system or commercial product.
 - Its exclusions prevent it from absorbing neighboring architecture views.
 - Material relationships and evidence are explicit without copied inventories.
+- Relationship synchronization reports no changes.
 
 ## Related
 

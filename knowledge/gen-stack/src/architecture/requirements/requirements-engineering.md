@@ -1,7 +1,7 @@
 ---
 type: Explanation
 title: Requirements engineering in software architecture
-description: How needs become accepted, subject-centered requirements that guide Architecture and Implementation, and how statement quality, set quality, validation, verification, traceability, and evidence remain distinct.
+description: How Intent, Architecture, and recognized sources co-develop into accepted subject-centered obligations, and how requirement quality, validation, verification, traceability, and evidence remain distinct.
 tags: [requirements-engineering, requirements, traceability, architecture, verification, validation]
 status: draft
 sources:
@@ -11,21 +11,36 @@ sources:
   - id: incose-writing-requirements
     resource: https://www.incose.org/docs/default-source/working-groups/requirements-wg/gtwr/incose_rwg_gtwr_v4_040423_final_drafts.pdf
     title: INCOSE Guide to Writing Requirements, version 4
+  - id: selecting-method
+    resource: selecting-a-requirement-specification-method.md
+    title: Selecting a requirement specification method
   - id: gen-stack-profile
     resource: /profile/gen-stack-application-profile.md#requirement
     title: Gen Stack application profile — Requirement
+  - id: requirement-change-guide
+    resource: /work-items/specifying-requirement-changes.md
+    title: Specifying Requirement changes
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T02:30:09Z
+  at: 2026-08-26T20:16:50Z
 ---
 
 # Requirements engineering in software architecture
 
-Requirements engineering is not primarily sentence polishing. It transforms
-stakeholder needs, policies, risks, use cases, and higher-level obligations
-into an agreed set of requirements that can guide architecture and realization
-and support later evaluation. Writing quality matters, but a clear sentence
-can still express the wrong obligation or an infeasible target.[^incose-writing-requirements]
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
+
+Requirements engineering is not primarily sentence polishing or a phase that
+precedes Architecture. It co-develops stakeholder Intent, recognized sources,
+candidate Architecture, and candidate obligations into an agreed set of
+subject-centered Requirements and an Architecture capable of responding to
+them. Writing quality matters, but a clear sentence can still express the
+wrong obligation, obligate the wrong subject, or demand an infeasible
+response.[^incose-writing-requirements]
 
 This Gen Stack profile addresses one bounded part of that work: preserving
 accepted, architecture-significant requirements beside the durable subjects
@@ -35,32 +50,43 @@ specified.[^gen-stack-profile]
 
 ## From source concern to maintained evidence
 
-Requirements work is iterative rather than a one-way document pipeline:
+Requirements and Architecture work are iterative rather than a one-way
+document pipeline:
 
 ```text
-need, policy, risk, use case, or higher-level obligation
-                              │
-                 elicit, analyze, model, negotiate
-                              ▼
-                    candidate requirement
-                              │
-             verify the statement and validate its meaning
-                              ▼
-                     accepted requirement
-                              │
-           architecture response and system realization
-                              ▼
-                    evaluation evidence
-                              │
-           learning, impact analysis, and controlled change
-                              └───────────────↺
+                    Intent and recognized sources
+                                 │
+                     elicit, analyze, model
+                                 ▼
+              candidate Architecture ⇄ candidate Requirements
+                subjects and responses    obligations and constraints
+                                 │
+             scenarios, prototypes, evaluation design, negotiation
+                                 ▼
+              accepted Architecture + accepted Requirements
+                                 │
+                  realization and evaluation evidence
+                                 │
+             learning, impact analysis, and controlled change
+                                 └──────────────────────────↺
 ```
 
-The activities overlap. Architecture can expose missing, conflicting, or
-infeasible requirements. Prototypes and evaluations can reveal that a stated
-need was misunderstood. A changed requirement can require renewed agreement,
-architecture analysis, and evidence; it should not be treated as a local prose
-edit.
+Intent shapes both candidate Architecture and candidate Requirements.
+Architecture provides the subjects, boundaries, responsibilities,
+interactions, and response hypotheses needed to discover and place
+obligations. Requirements test, constrain, and refine that shape. Prototypes
+and evaluation design can reveal that a stated need, proposed obligation, or
+architectural response was misunderstood. A change to either side can require
+renewed agreement, analysis, and evidence; it should not be treated as a local
+prose edit.
+
+Use [Developing candidate Architecture and
+Requirements](../developing-candidate-architecture-and-requirements.md) and
+[Developing Requirements](developing-requirements.md) for this exploratory,
+evidence-bound work. Use [Documenting
+requirements](documenting-requirements.md) only after the obligation and its
+subject are accepted. This separates development from canonical recording
+without imposing a temporal Architecture-first or Requirements-first process.
 
 ## Needs, requirements, and acceptance
 
@@ -75,18 +101,25 @@ requirement. It means the requirement is authoritative desired state for the
 documented system. Delivery plans, implementation status, and current evidence
 remain with the authorities that manage them.
 
-## Architecture gives requirements subjects
+## Architecture and requirements co-develop
 
 Architecture and requirements answer different questions about the same
 system. Architecture identifies durable subjects, boundaries,
-responsibilities, and relationships. Requirements state what those subjects
-shall do or be, under which relevant conditions and bounds. Implementations
-realize both; evaluations provide evidence about satisfaction.
+responsibilities, and relationships. Requirements state the accepted
+obligations on those subjects under relevant conditions and bounds.
+Implementations realize both; evaluations provide evidence about satisfaction.
 
-This ordering makes obligations readable relative to the system. A CLI
-command, capability, bounded context, or component can own a coherent group of
-requirements without making a test runner's unit, integration, or end-to-end
-hierarchy the primary reader model.
+Architecture is logically prior as the frame that identifies what exists and
+can bear an obligation, but it need not be temporally complete before
+Requirement development begins. Candidate obligations frequently reveal
+missing subjects, misplaced responsibilities, or untenable boundaries. The
+two are therefore developed together while their accepted authority remains
+separate.
+
+This architectural frame makes obligations readable relative to the system. A
+CLI command, capability, bounded context, or component can own a coherent
+group of Requirements without making a test runner's unit, integration, or
+end-to-end hierarchy the primary reader model.
 
 The subject also fixes the level of abstraction. A system-level requirement
 should not prescribe a lower-level design unless that choice is itself an
@@ -116,11 +149,12 @@ The vocabulary used for a claim does not create another semantic owner:
 | Architecture decision | The record owns the accepted choice and rationale; an independently binding limitation produced by the choice becomes a constraint Requirement sourced by the decision |
 | Test, schema, check, or telemetry rule | Implementation, enforcement, or satisfaction evidence unless an accepted obligation is separately admitted |
 
-Not every sentence that influences change is a Requirement. “The Billing
+Not every expression that influences change is a Requirement. “The Billing
 context owns posted-invoice state” assigns architecture authority. “At every
 commit, the Billing context shall preserve the posted-invoice total” states an
-obligation. Architecture may explain the authority and preservation response,
-but the Requirement remains the sole normative formulation.
+obligation in structured natural language. Architecture may explain the
+authority and preservation response, but the Requirement remains the sole
+local authority for the accepted obligation.
 
 The profile's conformance rules and its required corpus-governance policies
 govern the documentation itself; they are not Requirements of the documented
@@ -129,11 +163,12 @@ an independently maintained obligation on system development, operation, or
 governance, represent that obligation as a `process` Requirement and link it
 from the kernel concept.
 
-Reserve `shall` for binding Requirement statements in a conforming corpus.
-Words such as *must*, *guarantee*, *preserve*, *prohibit*, *only*, and
+Words such as *shall*, *must*, *guarantee*, *preserve*, *prohibit*, *only*, and
 *required* outside Requirements are review signals, not automatic proof that a
-new Requirement exists. Confirm acceptance, subject, and independent value
-before extracting one.
+new Requirement exists. A method may use another normative notation, so judge
+authority from the accepted Requirement and the declared role of its
+representations rather than from one keyword. Confirm acceptance, subject, and
+independent value before extracting an obligation.
 
 ## Quality of a requirement is not a quality requirement
 
@@ -185,6 +220,28 @@ complete system specification. Use [Reviewing a requirement
 set](/architecture/requirements/reviewing-requirement-sets.md) when a system, capability, use
 case, baseline, release, or other declared scope needs a set-level conclusion.
 
+## Specification methods serve requirement quality
+
+Gen Stack is method-open and quality-governed. A Requirement may use structured
+or ordinary natural language, a quantitative form, a predicate, a contract, a
+table, a state model, a schema, a formal expression, an incorporated normative
+reference, or another suitable method. Documented methods are examples and
+reusable guidance, not an allowlist.
+
+Different methods expose different defects. Structured language can reveal
+missing conditions and compound responses; decision tables can reveal missing
+or overlapping combinations; state models can reveal unreachable states and
+incomplete transitions; and formal analysis can produce counterexamples within
+its declared model and bounds. None of them establishes that the obligation is
+necessary, accepted, correct, feasible, or complete in a set merely by being
+well formed.
+
+Select the method by the obligation's dominant semantic difficulty, intended
+readers, consequence, and lifecycle cost. Then apply the same individual and
+set quality criteria. Use [Selecting a requirement specification
+method](selecting-a-requirement-specification-method.md) for the open selection
+process and the authority boundaries of the resulting artifacts.
+
 ## Verification and validation have different objects
 
 The same words are used at several lifecycle stages, so name both the activity
@@ -192,7 +249,7 @@ and its object:
 
 | Activity and object | Governing question |
 | --- | --- |
-| **Requirement verification** | Is the requirement or declared set well formed and organized according to its rules? |
+| **Requirement verification** | Is the requirement expression or declared set well formed and organized according to its applicable rules? |
 | **Requirement validation** | Does the requirement or declared set correctly represent the source needs and intended outcomes? |
 | **Realized-system verification** | Does the implemented subject satisfy the accepted requirements? |
 | **Realized-system validation** | Does the realized system meet stakeholder needs in its intended context of use? |
@@ -237,6 +294,37 @@ Traceability should help validate meaning and analyze change, not merely fill
 a matrix. A source link is useful when a reviewer can follow it to determine
 why the obligation exists. A derivation link is useful when changing the
 parent would require reconsidering the child.
+
+## Controlled Requirement change
+
+Acceptance establishes a Requirement as active desired state; it does not make
+the Requirement immutable. Controlled change begins with impact analysis, then
+specifies an explicit desired-state delta before canonical mutation. The
+primitive operations are addition, revision, and retirement. Replacement,
+split, and merge compose retirement with one or more additions and explicit
+supersession lineage. Representation-only corrections and unresolved questions
+are not Requirement changes unless accepted meaning changes.
+
+Lifecycle, implementation satisfaction, and evidence validity are independent:
+
+| Dimension | Question |
+| --- | --- |
+| Requirement lifecycle | Is the accepted obligation currently `active` or retained as `retired` history? |
+| Implementation satisfaction | Does the realized subject currently satisfy the active obligation? |
+| Evidence validity | Does a particular Evaluation Result still support its exact target and interpretation? |
+
+Retirement therefore preserves the canonical record, stable identifier, last
+accepted expression, rationale, sources, and decision provenance while ending
+its normative force. A successor points to each retired predecessor through
+`supersedes`; that lineage does not establish equivalence, derivation, or
+transfer historical evidence. Subject changes, splits, and merges require
+explicit identity decisions because they alter what the obligation is about or
+how independently it can be accepted and satisfied.
+
+Use [Specifying Requirement
+changes](/work-items/specifying-requirement-changes.md) for the full workflow,
+including action-specific blockers, partial acceptance, canonicalization, and
+downstream reconciliation.
 
 ## Standards boundary
 

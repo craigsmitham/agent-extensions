@@ -12,6 +12,13 @@ generated: { by: codex/gpt-5.6, at: "2026-08-26T15:10:00Z" }
 
 # Documenting system lifecycle
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Create the required `System Lifecycle` concept at `lifecycle.md` so readers can
@@ -24,6 +31,16 @@ support state and change horizon. Do not infer lifecycle from repository age,
 deployment activity, current implementation, or OKF `status`. If accepted
 meaning is unavailable, report semantic profile conformance as `unknown`
 instead of creating a placeholder.
+
+## Representation
+
+Use the OKF envelope and the profile's exact `System Lifecycle` type and root
+path. Present residual body meaning in this preferred order: accepted support
+or lifecycle state, material change horizon, expected evolution, reassessment
+triggers, and links to volatile schedule or status authorities. Do not copy
+OKF document status, dates owned elsewhere, or linked process obligations into
+parallel body metadata. This order is authoring guidance, not profile
+conformance.
 
 ## Steps
 

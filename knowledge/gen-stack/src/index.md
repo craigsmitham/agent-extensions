@@ -4,30 +4,34 @@ okf_version: "0.2"
 # gen-stack
 
 Gen Stack is an opinionated method for carrying software change from Signals
-and Observations through human-oriented Intent, canonical Requirements,
-Architecture, proportional Change Design, Compilation, Implementation,
-Evaluations, and operational learning. OODA governs how the method adapts
-without confusing those authorities and activities or allowing evidence to
-rewrite Intent automatically.
+and Observations through human-oriented Intent, co-developed Architecture and
+canonical Requirements, proportional Change Design, Compilation,
+Implementation, Evaluations, and operational learning. OODA governs how the
+method adapts without confusing those authorities and activities or allowing
+evidence to rewrite Intent automatically.
 
-Begin with [The Gen Stack method](overview.md), then follow the authority or
-activity that owns the question in front of you. This bundle is the canonical
-knowledge authority for the complete method; its sections preserve the
-distinct meanings of Intent, Architecture, Processes, Principles, Patterns,
-Change Design, Evaluations, Implementation, and adaptive control without
-distributing their relationships across packages.
+Begin with [How the Gen Stack operates](overview.md), then follow the authority
+or activity that owns the question in front of you. This bundle is the
+canonical knowledge authority for the complete method; its sections preserve
+the distinct meanings of Intent, Architecture, Processes, Change Design,
+Evaluations, Implementation, and adaptive control
+without distributing their relationships across packages.
 
 ## Overview
 
-- [The Gen Stack method](overview.md) - How the Gen Stack authority model, compositional Specifications, proportional Change Design, reusable Processes, and OODA control loop connect Signals, Intent, canonical Requirements, Architecture, Implementation, Evaluations, and operational learning.
+- [How the Gen Stack operates](overview.md) - How Intent shapes co-developed Architecture and Requirements, how they constrain and assess Implementation, how OODA governs adaptation, and how every artifact uses native-first representation with least complexity.
+
+## Adoption
+
+- [Adopting Gen Stack](adopting-gen-stack.md) - Use when a greenfield or brownfield repository is establishing its first Gen Stack corpus; achieve day-one OKF and profile conformance while keeping incomplete coverage, realization, and evidence explicit.
 
 ## Reference
 
-- [Gen Stack vocabulary and relationship model](glossary.md) - The semantic authority for Gen Stack terms, canonical relationships, cardinalities, recording locations, and prohibited inferences across the complete method.
+- [Gen Stack vocabulary and relationship model](glossary.md) - The semantic authority for Gen Stack terms, stable identifiers, definitions, distinctions, relationship meaning and cardinality, and prohibited inferences across the complete method.
 
 ## Profile
 
-- [Gen Stack profile](profile/) - The normative vocabulary and OKF application profile for cross-cutting governance, Intent, Architecture, and subject-colocated Requirements.
+- [Gen Stack profile](profile/) - The representation delta over OKF v0.2 for the governed subset, linked to authoritative glossary meaning and supporting explanations and authoring guides.
 
 ## Cross-cutting governance
 
@@ -66,11 +70,3 @@ distributing their relationships across packages.
 ## Control loop
 
 - [Control loop](control-loop/) - OODA and change-intake guidance for interpreting Signals and Observations, selecting authorized decisions, and taking bounded action.
-
-## Principles
-
-- [Principles](principles/) - Normative defaults for judging the timing, scope, and necessity of software change.
-
-## Patterns
-
-- [Patterns](patterns/) - Contextual, reusable solutions for sequencing and shaping software change.

@@ -9,13 +9,31 @@ sources:
     title: Gen Stack application profile — System
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T20:18:00Z
 ---
 
 # Documenting systems
 
-Create `system.md` at the corpus root before assigning system-wide
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
+Create `/system.md` at the corpus root (`<repository-root>/gen-stack/system.md`)
+before assigning system-wide
 requirements.
+
+## Representation
+
+Use the OKF envelope and the profile's exact `System` type and root path. Keep
+title, description, document status, provenance, and controlled relationships
+in their native frontmatter homes. Present residual body meaning in this
+preferred order: purpose, boundary, material exclusions, environmental
+relationships, narrower-view navigation, and evidence. Omit inapplicable
+detail and do not repeat frontmatter or linked Requirement statements in the
+body. This body order is guidance, not an additional profile rule.
 
 1. Name the single documented system and the purpose that distinguishes it.
 2. State the boundary in terms a reader can apply when deciding what is inside

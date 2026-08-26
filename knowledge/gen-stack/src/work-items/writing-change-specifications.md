@@ -17,15 +17,25 @@ sources:
   - id: requirement-impact
     resource: ../control-loop/analyzing-requirement-impact.md
     title: Analyzing Requirement impact
+  - id: requirement-change
+    resource: specifying-requirement-changes.md
+    title: Specifying Requirement changes in software work items
   - id: preserving-context
     resource: preserving-design-and-delivery-context.md
     title: Preserving design and delivery context in software work items
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T16:30:00Z
+  at: 2026-08-26T20:16:50Z
 ---
 
 # Writing change specifications
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide when a proposed or authorized change to the System or its
 Architecture has a recognizable boundary and needs a durable composition for
@@ -38,6 +48,30 @@ Implementers and reviewers can recover why the change exists, its current
 authority, which Requirements and Architecture constrain it, how the response
 is designed, how evidence will be gathered, and what remains unresolved—without
 turning the work item into a second authority for those constituents.
+
+## Representation
+
+Use exact native tracker fields for identity, type, workflow state, priority,
+assignment, and relationships when their semantics match. Present residual
+body content in this preferred order: summary and source Provenance, change
+decision, outcome and scope, Requirement impact and proposed changes,
+Architecture impact and gaps, Change Design, verification, delivery and
+recovery, risks and open questions, then lifecycle relationships. The
+[tracker-ready template](#tracker-ready-template) is a logical composition and
+target-neutral fallback; omit inapplicable sections and do not duplicate native
+fields or linked canonical authorities.
+
+## Apply the common work-item guides
+
+This guide owns the bounded change composition. Use [Preserving evidence and
+authority in software work items](preserving-work-item-evidence-and-authority.md)
+for source and decision handling, [Maintaining work-item identity,
+relationships, and
+lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md) for
+the Specification identity and transitions, [Managing work-item metadata and
+labels](managing-work-item-metadata-and-labels.md) for host fields and external
+mutation, and [Titling and summarizing work
+items](titling-and-summarizing-work-items.md) for the derived brief.
 
 ## Preconditions
 
@@ -64,26 +98,20 @@ may require several Specifications with independent delivery, rollback, or
 verification. Choose the smallest identity that can move through decision and
 delivery coherently.
 
-Do not retitle an Incident Record, Defect Report, source request, or
-investigation into the Change Specification. Link those artifacts so each
-retains its own evidence and lifecycle.
+Apply the shared identity guide. Do not retitle an Incident Record, Defect
+Report, source request, or investigation into the Change Specification. Link
+those artifacts so each retains its own evidence and lifecycle.
 
 ## 2. Preserve source context and Provenance
 
-Inventory every material initiating source before synthesis. Record its source
-type, stable identifier and authoritative link, observation or request time,
-relevant context, and a direct statement or faithful synopsis when available.
-Mark whether supplied claims are observed, reported, inferred, hypothesized,
-proposed, recommended, accepted, or rejected.
+Apply the shared evidence guide to inventory every material initiating source,
+preserve its safe authoritative route, and label each claim's maturity.
 
 Keep source wording separate from normalized analysis. Do not attribute an
 inferred need, generalized demand, or selected response to someone who only
 suggested one mechanism.
 
-For a public work item, never copy personal information, private customer
-content, credentials, confidential commercial data, or restricted evidence.
-Use a safe synopsis and an access-controlled source link when the provenance
-itself is not public.
+The shared evidence guide owns public and restricted evidence handling.
 
 ## 3. State the current condition and intended change
 
@@ -111,9 +139,9 @@ State the current decision explicitly:
 - verified within stated evidence limits; or
 - superseded by a linked change.
 
-Identify who or what has authority for the recorded decision. Priority,
-ownership, target release, and delivery timing are separate decisions; record
-them only when the applicable authority has made them.
+Identify who or what has authority for the recorded decision. Apply the shared
+metadata guide to priority, ownership, target release, and delivery timing;
+record them only when the applicable authority has made them.
 
 A detailed Specification does not authorize itself. If authority is missing or
 disputed, preserve that gap and the exact decision needed rather than advancing
@@ -136,6 +164,15 @@ the work item as another normative authority. A proposed verification condition
 or test may repeat the predicate as a distinct witness without becoming the
 Requirement.
 
+When the classification identifies a candidate new obligation or proposed
+change or retirement, apply [Specifying Requirement changes in software work
+items](specifying-requirement-changes.md). Create one independently decidable
+entry for each addition, same-identity revision, retirement, replacement,
+split, or merge; preserve predecessor-to-successor lineage, identity decisions,
+applicability, authority, and action-specific blockers. Do not add a change
+entry for possible non-satisfaction of unchanged desired state,
+implementation-only work, or representation maintenance.
+
 ## 6. Analyze Architecture impact
 
 Identify affected responsibilities, boundaries, relationships, decisions, and
@@ -149,6 +186,15 @@ eligible Requirement subjects from accepted Architecture. Distinguish:
 Do not select an Architecture subject from current code location or invent a
 durable boundary merely to make the work item look complete. Link the canonical
 Architecture concepts and ADRs when they exist.
+
+When either impact analysis exposes missing, underdeveloped, misplaced,
+disputed, or contradicted Requirements, Surfaces, C4 structure, or evaluation
+meaning, apply the shared [candidate Architecture and Requirements
+guide](../architecture/developing-candidate-architecture-and-requirements.md)
+and only the implicated element guides. Record evidence, impact, options,
+recommendation, applicable authority, and whether the gap blocks the named next
+action. Continue with a proposed Specification when it can remain honest about
+the gap; stop before any dependent accepted-authority or delivery mutation.
 
 ## 7. Bound constraints, invariants, and non-goals
 
@@ -223,9 +269,10 @@ List consequential unknowns, what could resolve each one, and who or what owns
 the needed decision or evidence. Record residual risks and accepted exceptions
 only when an applicable authority has done so.
 
-Link related Signals, Incidents, Defect Reports, Specifications, Requirements,
-Architecture, ADRs, tasks, Implementation revisions, and Evaluation evidence.
-Preserve many-to-many relationships rather than forcing a parent-child shape.
+Apply the shared identity guide when linking Signals, Incidents, Defect
+Reports, Specifications, Requirements, Architecture, ADRs, tasks,
+Implementation revisions, and Evaluation evidence. Preserve many-to-many
+relationships rather than forcing a parent-child shape.
 
 ## 13. Derive the title and summary last
 
@@ -283,10 +330,27 @@ what is its current decision state, and why does it matter?
   gap | unresolved
 - Required authority or follow-up:
 
+### Proposed Requirement changes when applicable
+
+- Work-item-local change label:
+- Operation and composition pattern:
+- Current Requirement IDs and candidate successor labels:
+- Proposed meaning, subject, type, identity, and applicability:
+- Architecture, derived-Requirement, Implementation, and Evaluation impact:
+- Meaning maturity, decision authority, readiness, and blocked action:
+- Resolution and canonical Requirement links when available:
+
 ## Architecture impact
 
 - Affected Architecture and ADRs:
 - Unchanged, proposed, accepted, or unresolved impact:
+
+## Cross-stack gaps
+
+- Missing, underdeveloped, misplaced, disputed, or contradicted meaning:
+- Evidence and impact:
+- Options and recommendation:
+- Applicable authority and blocking status:
 
 ## Change Design
 
@@ -328,6 +392,8 @@ what is its current decision state, and why does it matter?
 - Source evidence remains attributable and distinct from normalized analysis.
 - Decision, Requirements, Architecture, Design, delivery, and evidence states
   are visible rather than conflated.
+- Every actual Requirement delta follows the common change guide; impact-only,
+  implementation-only, and representation-only work does not manufacture one.
 - Canonical authorities are linked instead of copied into competing normative
   statements.
 - Verification conditions and evidence strategy remain distinct.
@@ -335,4 +401,7 @@ what is its current decision state, and why does it matter?
   approved.
 - Unknowns, non-goals, recovery, and the next authorized action are explicit
   where material.
+- Material cross-stack gaps carry evidence, impact, options, a recommendation,
+  authority, and blocking status without forcing a gate when the current action
+  can proceed honestly.
 - The title and summary are derived from the authoritative body.

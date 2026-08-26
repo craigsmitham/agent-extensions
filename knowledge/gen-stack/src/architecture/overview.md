@@ -10,10 +10,17 @@ sources:
     title: ISO/IEC/IEEE 42010:2022 — Architecture description
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T15:28:07Z
+  at: 2026-08-26T20:07:37Z
 ---
 
 # Software architecture overview
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 Software architecture comprises the durable structural concepts, properties,
 and consequential decisions by which a system retains its intended qualities
@@ -25,13 +32,32 @@ Within this bundle, Intent concepts record desired outcomes, motivations,
 actor goals, scenarios, and problem-space distinctions. Architecture concepts
 record accepted subjects, responsibilities, relationships, decisions, and
 response meaning. Requirement concepts alone canonically record accepted
-obligations derived from Intent and assigned to the documented System or
-another eligible Architecture subject. A system also has an effective architecture
-expressed through its implemented structure and behavior. Source code and
-configuration show current implementation, tests and contracts establish
-supported behavior, and a proposal explores a possible future. When these
-authorities disagree, the disagreement is something to resolve; none silently
-takes over another's responsibility.
+obligations arising from Intent or another recognized source and assigned to
+the documented System or another eligible Architecture subject.
+
+Intent shapes both Architecture and Requirements, and they are co-developed.
+Candidate Architecture supplies the subjects, boundaries, responsibilities,
+interactions, and response hypotheses needed to formulate useful obligations;
+candidate Requirements test, constrain, and refine that shape. Once accepted,
+Architecture owns the subject and response while each Requirement owns its
+obligation. Their semantic separation prevents competing authority; it does
+not imply independent development or a universal Architecture-first or
+Requirements-first sequence.
+
+[Developing candidate Architecture and
+Requirements](developing-candidate-architecture-and-requirements.md) provides
+the shared greenfield and brownfield workflow for evidence extraction, gap
+classification, subject placement, authority, and blocking status. Its
+Surface, C4 structure, and Requirement specializations keep the element
+distinctions explicit. The corresponding `Documenting ...` guides begin only
+after the applicable meaning is accepted.
+
+A system also has an effective architecture expressed through its implemented
+structure and behavior. Source code and configuration show current
+implementation, tests and contracts establish supported behavior, and a
+proposal explores a possible future. When these authorities disagree, the
+disagreement is something to resolve; none silently takes over another's
+responsibility.
 
 Architecture should remain useful through a substantial rewrite. It may name
 stable elements and constrain their relationships, but it should not mirror a

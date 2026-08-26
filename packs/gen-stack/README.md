@@ -1,34 +1,35 @@
 # Gen Stack
 
 An opinionated software-change system that uses OODA to carry Signals and
-Observations through human-oriented Intent, canonical Requirements,
-Architecture, Compilation, Implementation, Evaluations, and operational
-learning.
+Observations through human-oriented Intent, co-developed Architecture and
+canonical Requirements, Compilation, Implementation, Evaluations, and
+operational learning.
 
 The pack installs one knowledge authority and focused workflows around this
 contract:
 
 - a Gen Stack corpus owns cross-cutting system governance, Intent,
   Architecture, subject-colocated Requirements, and the System Evaluation
-  Approach;
-- Requirements are canonicalized Intent and obligate exactly one eligible
-  Architecture subject;
+  Approach, and its sole supported repository location is `./gen-stack/`;
+- Intent shapes co-developed Architecture and Requirements; Architecture owns
+  durable subjects and responses, while each Requirement owns one accepted
+  obligation on exactly one eligible Architecture subject;
 - the repository owns Implementation and concrete Evaluation Definitions,
   Suites, Executions, Results, and Reports; and
 - Signals, Observations, results, and other evidence enter the OODA loop without
   becoming desired state by themselves.
 
+People remain the primary authors and accountable authorities for desired
+state and durable system shape. The skill can develop candidates, compare
+options, recommend a response, draft artifacts, and record explicit decisions;
+it cannot ratify Intent, Requirements, or Architecture on a person's behalf.
+
 ## Included extensions
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/gen-stack` | Gen Stack terminology, profile, authority, change-loop, Implementation, Evaluation, and regeneration guidance |
-| `@craigsmitham/skills/author-software-work-items` | Author Change Specifications, Bugfix Specifications, Defect Reports, and Operational Incident Records with explicit Requirement, Architecture, and evidence impact |
-| `@craigsmitham/skills/author-gen-stack` | Author one accepted corpus concept or bounded subject |
-| `@craigsmitham/skills/setup-gen-stack` | Establish the smallest conforming Gen Stack corpus |
-| `@craigsmitham/skills/reconcile-gen-stack` | Assess or reconcile an established corpus |
-| `@craigsmitham/rules/yagni` | Defer speculative commitments while preserving costly options cheaply |
-| `@craigsmitham/rules/tidy-first` | Consider the smallest useful structural preparation before behavior change |
+| `@craigsmitham/knowledge/gen-stack` | Gen Stack terminology, strict greenfield and brownfield adoption, profile, authority, change-loop, Implementation, Evaluation, and regeneration guidance |
+| `@craigsmitham/skills/gen-stack` | Route bounded change development, work-item authoring, and accepted established-corpus authoring through one human-governed surface |
 
 ## Install
 
@@ -36,14 +37,58 @@ contract:
 axm install @craigsmitham/packs/gen-stack
 ```
 
-The current pack uses Gen Stack knowledge `0.7.0`,
-`author-software-work-items` `3.0.0`, the `gen-stack` OKF application profile
-`0.1.0`, and version `2.0.0` of `author-gen-stack`, `setup-gen-stack`, and
-`reconcile-gen-stack`. Knowledge `0.7.0` adds a governed System Evaluation
-Approach, subject- and Requirement-navigable evaluation guidance, and distinct
-Requirement-satisfaction and Architecture-realization reporting while keeping
-concrete evaluation artifacts repository-native. It provides no aliases or
-compatibility paths for superseded package, profile, workflow, or concept
+Pack `2.7.0` uses Gen Stack knowledge `0.14.0`, the `gen-stack` OKF
+application profile `0.4.0`, and the unified `gen-stack` skill `1.7.0`. The
+glossary owns semantic meaning; the profile owns fixed `./gen-stack/`
+placement, discovery, and governed representation; Explanations deepen
+understanding; and Guides support action. Concrete evaluation artifacts remain
+repository-native.
+
+This release combines native-first representation with exact-path corpus
+inspection and stronger fixed-placement evaluation fixtures and evidence. It
+uses each artifact's native format and exact host fields first, applies the OKF
+profile only as a delta, gives every Guide an artifact-specific logical
+presentation contract, and keeps fallbacks, transient outputs, and derived
+views proportionate and non-authoritative. The knowledge bundle also supplies
+the human adoption workflow for establishing a strictly conforming first
+corpus from greenfield intent or brownfield evidence. The unified skill still
+stops before initial setup, connection, federation, or migration; this release
+does not treat the Guide as authorization for that agent mutation.
+
+The earlier `2.6.0` release made the supersession evidence boundary explicit in activated
+skill behavior: predecessor Results retain their exact Requirement and
+Execution context, and successor satisfaction begins unknown.
+
+The earlier `2.5.0` release made coupled-knowledge resolution deterministic and strengthened
+the valid fixed-corpus evaluation fixture around the canonical Capability
+collection.
+
+The earlier `2.4.0` release added controlled Requirement additions, revisions, retirements,
+replacements, splits, and merges; explicit active and retired lifecycle;
+many-to-many supersession lineage; action-specific blockers; and regression
+coverage across happy, error, and unresolved paths.
+
+The earlier `2.3.0` release made `./gen-stack/` the deterministic
+established-corpus location across the profile, tools, skill, and evaluation
+fixtures. Existing
+adopters move the complete corpus to that path and update repository-external
+references; the skill itself continues to stop before setup or migration.
+
+The earlier `2.2.0` release added shared and element-specific candidate
+Architecture and Requirement development, material gap disposition across change work, and
+behavioral coverage for greenfield, brownfield, placement, blocking,
+non-blocking, direct-authoring, adoption-boundary, and documentation-routing
+cases. It retains the shared work-item evidence, identity, lifecycle, metadata,
+and label foundations introduced in `2.1.0`.
+
+The earlier `2.0.0` breaking release replaced `author-gen-stack` and
+`author-software-work-items` with `gen-stack`. It retired `setup-gen-stack`
+without an agent-workflow replacement: the unified skill still does not
+execute initial corpus setup, profile adoption, connection, federation, or
+migration. The current knowledge bundle provides human-led adoption guidance;
+that Guide is not authorization for agent mutation. The release also removed
+the YAGNI and Tidy First rules and their dedicated knowledge content. The pack
+provides no aliases or compatibility paths for the retired package or workflow
 identities.
 
 ## Working model

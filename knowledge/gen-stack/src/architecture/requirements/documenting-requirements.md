@@ -14,30 +14,46 @@ sources:
   - id: requirement-classification
     resource: /architecture/requirements/requirement-classification.md
     title: Classifying requirements in software architecture
-  - id: ears-syntax
-    resource: easy-approach-to-requirements-syntax.md
-    title: Easy Approach to Requirements Syntax (EARS)
-  - id: writing-requirements-with-ears
-    resource: writing-requirements-with-ears.md
-    title: Writing requirements with EARS
+  - id: selecting-method
+    resource: selecting-a-requirement-specification-method.md
+    title: Selecting a requirement specification method
+  - id: requirement-change-guide
+    resource: /work-items/specifying-requirement-changes.md
+    title: Specifying Requirement changes
   - id: incose-writing-requirements
     resource: https://www.incose.org/docs/default-source/working-groups/requirements-wg/gtwr/incose_rwg_gtwr_v4_040423_final_drafts.pdf
     title: INCOSE Guide to Writing Requirements, version 4
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+  at: 2026-08-26T20:16:50Z
 ---
 
 # Documenting requirements
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide to create one accepted Requirement that a reader can understand,
 an architecture can respond to, and evidence can reference. The result is not
 merely a well-formed sentence: its source, subject, necessity, feasibility, and
 correctness must also withstand review.[^requirements-engineering]
 
-A Requirement is the canonical accepted expression of an obligation derived
-from Intent. Its sources preserve why the obligation exists; its `subject`
-identifies exactly one eligible Architecture concept that is obligated.
+A Requirement is the canonical accepted expression of an obligation arising
+from Intent or another recognized source. Its sources preserve why the
+obligation exists; its `subject` identifies exactly one eligible Architecture
+concept that is obligated.
+
+Requirements cannot be developed independently of Architecture. This guide
+records an obligation and subject whose meaning is already accepted. When the
+obligation or its subject is missing, inferred, underdeveloped, misplaced, or
+disputed, use [Developing Requirements](developing-requirements.md) and the
+shared [candidate-development
+guide](../developing-candidate-architecture-and-requirements.md) first. Direct
+accepted authoring does not require repeating candidate-development ceremony.
 
 ## Before you start
 
@@ -45,15 +61,16 @@ Confirm that:
 
 - an applicable authority has accepted the obligation, not merely requested or
   proposed it;
-- the source need, policy, use case, risk, decision, or parent requirement is
-  available for validation;
+- the source need, policy, use case, risk, accepted Architecture decision or
+  responsibility analysis, or parent requirement is available for validation;
 - one eligible architecture subject owns the obligation; and
 - the Gen Stack corpus is the intended authority for this durable
   Requirement.
 
 If the obligation or subject is still undecided, keep the material in its
 request, need, proposal, investigation, or decision lifecycle. Do not turn
-uncertainty into accepted architecture merely to complete a document.
+uncertainty into accepted Architecture merely to complete a document. Route
+the decision through [Developing Requirements](developing-requirements.md).
 
 Before drafting, distinguish the obligation from neighboring meaning:
 
@@ -72,6 +89,18 @@ admission does not depend on whether code or tests make the predicate easy to
 infer. Do not create a parallel invariant, guarantee, or policy record as a
 second normative authority for the same obligation.
 
+## Representation
+
+Use the OKF envelope and the profile's exact `Requirement` type, colocation,
+`requirement_id`, `requirement_type`, `requirement_lifecycle`, `subject`, and
+applicable lineage, source, quality, or relationship fields. Do not duplicate
+those fields in a body metadata block. The profile-required body order is
+`## Requirement`, then `## Rationale`, plus `## Lifecycle` for a retired
+Requirement. Within those sections, lead with the one canonical expression,
+then the accepted reason and source context, and finally retirement decision
+Provenance when applicable. Additional tables, models, or references remain
+subordinate representations with explicit roles and precedence.
+
 ## 1. Establish the source and intended outcome
 
 State in working notes:
@@ -83,17 +112,21 @@ State in working notes:
 - applicable constraints, assumptions, conflicts, or higher-level
   requirements.
 
-This analysis may reveal that the source concern should produce several
-requirements, a use case, an architecture decision, or no requirement at all.
-Preserve the source faithfully even when analysis rejects its proposed
-solution.
+Confirm the accepted source and intended outcome that justified the
+Requirement. If this check instead reveals several candidate obligations, a
+Use Case, an Architecture decision or change, or no Requirement at all, stop
+canonical authoring and return to [Developing
+Requirements](developing-requirements.md). Preserve the source faithfully
+without allowing it to become a competing normative formulation.
 
 ## 2. Choose the subject, level, and type
 
-Identify the canonical architecture subject before drafting. The subject fixes
+Confirm the accepted Architecture subject before drafting. The subject fixes
 which thing is obligated and the abstraction level at which the outcome should
-be stated. If no eligible subject exists, decide separately whether the
-missing architecture concept deserves durable identity.
+be stated. Subject selection is architectural judgment, not a clerical
+placement step. If review exposes a missing or misplaced subject, stop
+canonical authoring and return to candidate Architecture and Requirement
+development rather than admitting either as accepted to complete the other.
 
 Do not use an Offering, Audience, Need, Job to Be Done, Value Proposition, Use
 Case, or Subdomain as the subject. Those concepts may preserve the Intent or
@@ -120,65 +153,67 @@ constraint. A requirement on a system should normally state the required
 outcome; derived requirements can later constrain lower-level subjects when
 architecture decisions justify them.
 
-## 3. Draft one observable obligation
+## 3. Select and apply a specification method
 
-The profile requires one necessary, bounded, verifiable `shall` statement.
-The [Easy Approach to Requirements Syntax
-(EARS)](easy-approach-to-requirements-syntax.md) provides a structured
-natural-language clause model for condition-and-response statements. A common
-event-driven form is:
+Use [Selecting a requirement specification
+method](selecting-a-requirement-specification-method.md) to diagnose the
+obligation's dominant semantic difficulty and choose any method that expresses
+it faithfully at proportionate lifecycle cost. EARS, quantitative forms,
+invariants, contracts, tables, state models, schemas, formal expressions,
+incorporated normative references, and examples are possibilities, not a
+closed list or a ranking.
 
-> When `[relevant condition]`, `[subject]` shall `[required outcome]`
-> `[within relevant bounds]`.
+The Requirement concept remains the canonical local authority for one accepted
+obligation. Within `## Requirement`:
 
-Conditions and bounds are optional only when the intended scope remains
-unambiguous without them. Use `shall` because it is the profile's binding
-keyword, not because that word can turn an unaccepted idea into a requirement.
-In governed corpus concepts, reserve author-authored binding `shall`
-statements for this section of a Requirement. Use [Writing requirements with
-EARS](writing-requirements-with-ears.md) to distinguish optional features,
-continuing states, desired triggers, and unwanted triggers and to compose them
-in the required order.
+- identify the obligated subject consistently with the `subject` link;
+- make applicability, outcome, predicate, limitation, or conformance target
+  explicit enough for the selected method;
+- include material bounds, units, quantifiers, versions, tolerances, or
+  exceptions when omitting them would broaden or obscure the obligation;
+- keep independently accepted, changeable, or satisfiable obligations
+  separate; and
+- distinguish the normative expression from any explanation, example,
+  supporting model, or incorporated reference.
 
-Adapt the pattern to the obligation without changing its ownership:
+A Requirement may use more than one representation when their authority and
+precedence are unambiguous. A human-readable explanation can accompany a
+formal expression; a decision table can define a rule while examples exercise
+selected rows; and an external standard can supply incorporated conformance
+semantics. Do not let those representations become independently maintained
+local obligations.
 
-| Obligation semantics | Useful formulation |
-| --- | --- |
-| Invariant | At every `[observation boundary]`, `[subject]` shall preserve `[predicate]`. |
-| Prohibition | When `[condition]`, `[subject]` shall not `[forbidden outcome]`. |
-| Boundary guarantee | When `[interaction crosses boundary]`, `[subject]` shall `[required guarantee]`. |
-| Process | When `[trigger]`, `[subject or its governed process]` shall `[required review, approval, production, or operational outcome]`. |
+When the normative expression uses natural language:
 
-`Invariant` is not a requirement type. Choose `functional`, `quality`,
-`process`, `human-factors`, `usability`, or `constraint` according to what is
-required, while the statement preserves the invariant semantics.
-
-While drafting:
-
-- name the subject explicitly and use active voice;
+- name the subject explicitly and prefer active voice;
+- use a binding modal such as `shall` consistently with the selected form;
 - state what is needed rather than how to implement it;
 - use defined terms and consistent units;
 - replace vague qualities such as *fast*, *gracefully*, *appropriate*, or
   *user-friendly* with an observable outcome or defined criterion;
 - avoid vague pronouns, open-ended clauses, incomplete references, and
-  unbounded comparisons;
-- separate obligations joined by `and`, `or`, or `and/or` when they can be
-  satisfied, changed, or evaluated independently; and
-- keep definitions, assumptions, rationale, examples, and verification
-  procedures outside the binding statement.
+  unbounded comparisons; and
+- separate conjunctions when they contain independent obligations.
 
 These language checks adapt the structured-natural-language practices in the
-INCOSE writing guide.[^incose-writing-requirements]
+INCOSE writing guide.[^incose-writing-requirements] Other methods need their
+own syntax, semantics, interpretation, and review checks. Method conformance
+does not turn an unaccepted idea into a Requirement.
 
-A qualitative outcome can be valid when it is still unambiguous and
-verifiable. Do not invent a number merely to make a statement look rigorous.
+Keep rationale, source interpretation, evaluation procedures, and current
+evidence outside the normative expression. A qualitative outcome can be valid
+when it is still unambiguous and verifiable; do not invent a number merely to
+make an obligation look rigorous.
 
 ## 4. Preserve rationale and traceability
 
 Under `## Rationale`, explain why the requirement exists or what consequence
 it prevents. Add `requirement_sources` when a maintained concept or external
-authority lets a reviewer validate that rationale. Use `derived_from` only
-when the obligation follows from a maintained parent Requirement.
+authority lets a reviewer validate that rationale. An accepted Architecture
+concept or decision or a responsibility analysis may be a source when it
+establishes why a derived obligation exists; it does not thereby own the
+obligation. Use `derived_from` only when the obligation follows from a
+maintained parent Requirement.
 
 Do not hide assumptions in the binding statement. Validate them and preserve
 them with the source, rationale, decision, or other authority that manages
@@ -198,7 +233,7 @@ Review the candidate before admission:
 | Feasible | Can it be realized within applicable technical, cost, schedule, legal, and risk constraints? | Analyze, negotiate, revise, or reject it; prose cannot repair infeasibility. |
 | Verifiable | Could credible evidence distinguish satisfaction from failure? | Make the observable outcome, criterion, context, or tolerance explicit without prescribing the method. |
 | Correct | Does it faithfully transform the source need or authority? | Validate with the source and correct the obligation, not merely its wording. |
-| Conforming | Does it follow this profile and the corpus's approved terminology and identifier convention? | Apply the local form after the engineering meaning is sound. |
+| Conforming | Does it follow the selected method, this profile's representation rules, and the corpus's approved terminology and identifier convention? | Apply method-specific checks after the engineering meaning is sound; for EARS, run its [final statement check](writing-requirements-with-ears.md#8-check-the-final-statement). |
 
 Passing a wording check does not establish necessity, feasibility, or
 correctness. Those require source, stakeholder, domain, architecture, and
@@ -227,10 +262,20 @@ After verification, validation, and agreement:
    `<subject-without-.md>/requirements/<requirement_type>/<requirement>.md`.
 3. Add only the indexes this first concept earns.
 4. Set `subject` to the canonical bundle-relative concept link.
-5. Put the binding statement under `## Requirement` and its rationale under
-   `## Rationale`.
-6. Add source and derivation relations only when they communicate real
-   traceability.
+5. Set `requirement_lifecycle: active`; acceptance and current implementation
+   satisfaction remain separate concerns.
+6. Put the canonical normative expression under `## Requirement`, make the
+   roles of any additional representations explicit, and put its rationale
+   under `## Rationale`.
+7. Add `requirement_sources` and `derived_from` only when they communicate real
+   traceability. Keep `subject`, `requirement_sources`, and `derived_from` as
+   their authoritative encodings; do not duplicate them under `relationships`.
+8. Record incorporated standards under
+   `relationships.incorporates-normative-reference` when the Requirement
+   adopts their definitions or conformance semantics.
+9. From the repository root, run `scripts/sync-gen-stack-relationships.py` to materialize
+   governed reciprocal views on subjects, internal sources, parent
+   Requirements, ADR responses, and internal normative references.
 
 The normative fields and eligible subjects are defined by the [software
 architecture docs
@@ -250,19 +295,34 @@ Replace any former binding formulation in the architecture concept with a
 relationship to the Requirement and an explanation of the subject,
 responsibility, boundary, or architecture response. A source such as a Use Case
 may retain the scenario or desired outcome that justifies the Requirement, but
-it must not present itself as a second normative `shall` authority.
+it must not present itself as a second normative authority.
 
 Evidence that a realization satisfies the Requirement is different from the
 earlier verification that the statement is well formed and validation that it
 correctly represents its source need.
 
+Do not author reciprocal relationship roles on the Requirement independently.
+After editing an assertion source, relationship synchronization must report no
+changes.
+
 ## 9. Review changes as engineering changes
 
-When the source, subject, condition, bound, or outcome changes, analyze impact
-on derived requirements, architecture decisions, realization, and evidence.
-Retain the stable identifier for ordinary evolution; do not reuse an identifier
-after retirement. Let the authority that manages acceptance and change decide
-whether the revision requires renewed agreement or a new Requirement.
+When the source, subject, type, condition, bound, outcome, incorporated
+reference, or lifecycle changes, apply [Specifying Requirement
+changes](/work-items/specifying-requirement-changes.md). Analyze the candidate
+delta before editing canonical desired state, preserve the decision and its
+authority, and reconcile affected sources, derived Requirements, Architecture,
+realization, Evaluation Definitions, and evidence routes.
+
+Retain the identifier for a revision only when the accepted obligation keeps
+its identity. A subject change is identity-significant and requires an explicit
+decision. Splits and merges create new identifiers. Retirement changes
+`requirement_lifecycle` to `retired`, preserves the historical record and its
+last accepted expression, and records the decision under `## Lifecycle`; never
+delete the Requirement or reuse its identifier. A successor records retired
+predecessor identifiers in `supersedes`. Supersession preserves lineage but
+does not transfer evidence or imply that the successor is equivalent to, or
+derived from, its predecessor.
 
 ## Examples and repairs
 
@@ -274,8 +334,8 @@ Weak:
 
 Stronger:
 
-> When installation cannot complete, the CLI install command shall leave the
-> workspace in its pre-installation state.
+> If installation cannot complete, then the CLI install command shall leave
+> the workspace in its pre-installation state.
 
 The stronger statement names the binding subject, condition, and observable
 outcome. Its rationale and source must still establish that the outcome is
@@ -285,17 +345,17 @@ necessary, feasible, and correct.
 
 Compound:
 
-> When a reservation is rejected, the reservation service shall preserve
+> If a reservation is rejected, then the reservation service shall preserve
 > available capacity and notify the requester.
 
 Split this when preservation and notification can change or be evaluated
 independently:
 
-> When a reservation is rejected, the reservation service shall leave
+> If a reservation is rejected, then the reservation service shall leave
 > available capacity unchanged.
 
-> When a reservation is rejected, the reservation service shall identify the
-> rejection to the requester.
+> If a reservation is rejected, then the reservation service shall identify
+> the rejection to the requester.
 
 ### Remove an unaccepted design choice
 

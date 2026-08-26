@@ -17,12 +17,22 @@ sources:
   - id: requirements-engineering
     resource: requirements-engineering.md
     title: Requirements engineering in software architecture
+  - id: selecting-method
+    resource: selecting-a-requirement-specification-method.md
+    title: Selecting a requirement specification method
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-25T19:47:49Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Classifying requirements in software architecture
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 Requirement classification answers **what kind of obligation has been
 accepted**. It does not determine whether the obligation is a requirement,
@@ -34,19 +44,24 @@ Requirement has one predictable subject-colocated home. The six types are a
 profile adaptation of useful standards distinctions, not a claim that every
 standards taxonomy partitions the world in exactly the same way.[^iso-29148]
 
-## Three questions that must stay separate
+## Four questions that must stay separate
 
 | Question | Answer owned by |
 | --- | --- |
 | Is this an accepted obligation? | The Requirement admission and acceptance process |
 | What kind of obligation is it? | `requirement_type` |
+| How should its meaning be expressed or analyzed? | The selected specification method |
 | How will satisfaction be established? | Evidence and assurance authorities |
 
-A structured clause such as “When …, the subject shall …” is a writing form.
-It can express any of the six types. A source need, policy, scenario, risk, or
-higher-level requirement is an input. It becomes a Requirement only after its
-meaning, subject, feasibility, and authority are established. Neither the
-clause form nor the input type supplies acceptance.
+A structured clause, decision table, state model, predicate, schema, formal
+expression, or incorporated normative reference is a specification method or
+one of its outputs. It does not determine which of the six types applies. A
+source need, policy, scenario, risk, or higher-level requirement is an input.
+It becomes a Requirement only after its meaning, subject, feasibility, and
+authority are established. Neither the method nor the input type supplies
+acceptance. Use [Selecting a requirement specification
+method](selecting-a-requirement-specification-method.md) after classifying the
+meaning.
 
 ## The profile types
 

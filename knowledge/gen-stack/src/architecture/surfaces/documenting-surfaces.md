@@ -1,7 +1,7 @@
 ---
 type: Guide
 title: Documenting surfaces
-description: Use when an actor-facing encounter point needs identity independent of its structural realization; create one Surface concept that defines it.
+description: Use when an accepted actor-facing encounter point needs canonical identity independent of its structural realization; record one Surface concept and its earned navigation.
 tags: [architecture-documentation, surfaces, interactions, applications, apis, authoring]
 status: draft
 sources:
@@ -11,10 +11,17 @@ sources:
     title: Goal-oriented behavior and use cases
   - resource: /profile/gen-stack-application-profile.md#surface
     title: Gen Stack application profile — Surface
-generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting surfaces
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -23,9 +30,25 @@ encounter system behavior.
 
 ## Before you begin
 
-Use a surface when an application, API, command line, protocol, device, or
+Confirm that the applicable authority has accepted the Surface identity,
+interaction boundary, actors, and material relationships. When those are still
+missing, inferred, underdeveloped, misplaced, or disputed, use [Developing
+Surfaces](developing-surfaces.md) first. Direct accepted authoring does not
+require repeating that candidate-development workflow.
+
+Use a Surface when an application, API, command line, protocol, device, or
 console has a consequential interaction boundary. Do not infer its C4 type
 from its interaction role.
+
+## Representation
+
+Use the OKF envelope, the profile's exact `Surface` type and canonical path,
+including nested path semantics for a narrower Surface. Present residual body
+meaning in this preferred order: actors and encounter boundary, recognizable
+behavior, scope and exclusions, interaction hierarchy, Feature and C4
+relationships, and evidence. Keep path-derived containment and synchronized
+relationship roles out of duplicate body metadata. This order is authoring
+guidance, not profile conformance.
 
 ## Steps
 
@@ -42,10 +65,13 @@ from its interaction role.
    concerns only when they materially shape the interaction. Link accepted
    obligations as subject-colocated Requirements rather than recording
    constraints in the Surface prose.
-6. Link features available through the surface, use cases it supports, C4
-   elements realizing it, and relevant evidence. Colocate accepted surface
-   obligations beneath its `requirements/<requirement_type>/` collection, then
-   update the immediate surface index.
+6. Record controlled C4 mappings under
+   `relationships.is-realized-by-c4-element`. Features own
+   `is-available-through-surface`; do not duplicate the reciprocal here.
+   Canonical nested paths own parent-child Surface containment.
+7. From the repository root, run `scripts/sync-gen-stack-relationships.py`, link relevant
+   evidence, colocate accepted obligations beneath
+   `requirements/<requirement_type>/`, and update the immediate Surface index.
 
 ## Final check
 
@@ -57,6 +83,7 @@ from its interaction role.
 - Material constraints and realization evidence are linked, not duplicated.
 - Recursive surface navigation communicates the product interaction model,
   not the test runner's suite hierarchy.
+- Relationship synchronization reports no changes.
 
 ## Related
 

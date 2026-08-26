@@ -11,10 +11,17 @@ sources:
     title: Goal-oriented behavior and use cases
   - resource: /profile/gen-stack-application-profile.md#feature
     title: Gen Stack application profile — Feature
-generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting features
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -31,6 +38,16 @@ meaning, omit the Feature and link directly from the Use Case to its other
 architecture views. Keep prioritization, release state, estimates, and
 implementation tasks in delivery authorities.
 
+## Representation
+
+Use the OKF envelope, the profile's exact `Feature` type and collection, and
+controlled relationships in their native roles. Present residual body meaning
+in this preferred order: recognizable outcome, actors and conditions, behavior
+and boundaries, material exclusions, related Use Cases, Capabilities,
+Surfaces, and C4 elements, then evidence. Keep delivery state and tracker
+metadata out of the concept and do not duplicate frontmatter edges. This order
+is authoring guidance, not profile conformance.
+
 ## Steps
 
 1. Name the recognizable behavior in actor or domain language rather than by
@@ -42,10 +59,14 @@ implementation tasks in delivery authorities.
 4. Explain material exclusions and failure context shared across use cases,
    surfaces, or implementations. Link accepted behavior, invariant, failure,
    or recovery Requirements rather than restating their binding outcomes.
-5. Link the use cases it enables, capabilities it contributes to, surfaces
-   through which it is available, domain authorities governing it, and C4
-   elements realizing it.
-6. Link tests or executable examples that own precise supported scenarios,
+5. Record controlled edges under `relationships.enables-use-case`,
+   `relationships.contributes-to-capability`,
+   `relationships.is-available-through-surface`, and
+   `relationships.is-realized-by-c4-element` as applicable. Explain domain
+   authority in prose.
+6. From the repository root, run `scripts/sync-gen-stack-relationships.py`; do not author
+   the reciprocal endpoint roles independently.
+7. Link tests or executable examples that own precise supported scenarios,
    then update `architecture/features/index.md`.
 
 ## Final check
@@ -57,6 +78,7 @@ implementation tasks in delivery authorities.
 - Accepted behavior and failure obligations have one linked Requirement
   authority.
 - Exact behavior inventories remain with executable evidence.
+- Relationship synchronization reports no changes.
 
 ## Related
 

@@ -9,10 +9,17 @@ sources:
     title: Gen Stack application profile — Architecture Decision Record
   - resource: /governance/documenting-architecture-decision-policies.md
     title: Documenting architecture decision policies
-generated: { by: codex/gpt-5.6, at: "2026-08-26T15:10:00Z" }
+generated: { by: codex/gpt-5.6, at: "2026-08-26T20:18:00Z" }
 ---
 
 # Documenting architecture decision records
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 ## Goal
 
@@ -25,6 +32,16 @@ Confirm that the applicable `decisions.md` policy requires a record and that
 the named authority has accepted the choice. Keep an unaccepted option,
 investigation, or proposal in its existing lifecycle; do not write an ADR in
 order to make a decision appear complete.
+
+## Representation
+
+Use the OKF envelope, the profile's exact `Architecture Decision Record` type
+and collection, and controlled relationships in their native roles. Present
+residual body meaning in this preferred order: decision context, accepted
+choice, rationale, material alternatives, consequences, and supersession or
+reconsideration conditions. Keep document status and provenance in OKF
+frontmatter and do not use an ADR body to duplicate linked Requirements. This
+order is authoring guidance, not profile conformance.
 
 ## Steps
 
@@ -43,9 +60,13 @@ order to make a decision appear complete.
    decision creates such a limitation, admit a constraint Requirement with the
    ADR as a `requirement_sources` authority instead of leaving the obligation
    only in the consequences.
-7. State the assumptions, events, or evidence that require reconsideration or
+7. Record each Requirement the choice responds to under
+   `relationships.responds-to-requirement`, then run
+   run `scripts/sync-gen-stack-relationships.py` from the repository root to materialize
+   `is-addressed-by-adr` on those Requirements.
+8. State the assumptions, events, or evidence that require reconsideration or
    supersession.
-8. When superseded, retain the record, link its replacement, and keep it
+9. When superseded, retain the record, link its replacement, and keep it
    reachable. Do not use OKF `status` as the semantic decision status.
 
 ## Final check
@@ -58,6 +79,7 @@ order to make a decision appear complete.
 - Any independently binding limitation produced by the decision has one
   constraint Requirement authority; the ADR continues to own the choice and
   rationale.
+- Relationship synchronization reports no changes.
 
 ## Related
 

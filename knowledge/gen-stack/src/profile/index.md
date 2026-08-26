@@ -1,18 +1,21 @@
 # Gen Stack profile
 
-The normative vocabulary and OKF application profile for cross-cutting
-governance, Intent, Architecture, and subject-colocated Requirements, with
-a governed System Evaluation Approach that routes to concrete Evaluations and
-operational evidence retained by their repository and runtime authorities.
+The authority boundary, fixed repository placement, and representation delta
+over the native OKF v0.2 contract for cross-cutting governance, Intent, Architecture,
+subject-colocated Requirements, and the System Evaluation Approach. The
+glossary owns meaning; profile `0.4.0` owns `gen-stack/` placement and governed
+representation, including controlled relationship roles and synchronized
+reciprocal views; Explanations support understanding; and Guides support
+authoring.
 
 ## Define the semantics
 
-- [Gen Stack vocabulary and relationship model](../glossary.md) - The semantic authority for Gen Stack terms, canonical relationships, cardinalities, recording locations, and prohibited inferences across the complete method.
+- [Gen Stack vocabulary and relationship model](../glossary.md) - The semantic authority for Gen Stack terms, stable identifiers, definitions, distinctions, relationship meaning and cardinality, and prohibited inferences across the complete method.
 
 ## Apply the profile
 
-- [Gen Stack application profile for OKF v0.2](gen-stack-application-profile.md) - The application profile for a durable human-authored corpus of cross-cutting system governance, Intent, Architecture, subject-colocated Requirements, and a discoverable System Evaluation Approach.
+- [Gen Stack application profile for OKF v0.2](gen-stack-application-profile.md) - The application profile for a durable human-authored corpus at repository `gen-stack/`, governing cross-cutting system governance, Intent, Architecture, subject-colocated Requirements, and a discoverable System Evaluation Approach.
 
 ## Author individual governed concepts
 
-- [Intent guides](../intent/), [Architecture guidance](../architecture/), and [Evaluation guidance](../evaluations/) - Focused procedures for creating governed concepts, reviewing their relationships, and designing the repository-native evaluation portfolio they govern.
+- [Intent guidance](../intent/), [Architecture guidance](../architecture/), and [Evaluation guidance](../evaluations/) - Subject-colocated Explanations for understanding and Guides for creating governed concepts without adding semantic or profile authority.

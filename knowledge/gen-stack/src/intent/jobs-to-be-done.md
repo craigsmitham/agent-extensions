@@ -19,10 +19,17 @@ sources:
     title: Goal-oriented behavior and use cases
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T15:10:00Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Jobs to Be Done
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 Jobs to Be Done (JTBD) is a demand-side way to understand why people or
 organizations seek, choose, retain, replace, or reject a response. Its central
@@ -172,8 +179,9 @@ with a chosen subject without becoming the use case itself.
 
 The [Gen Stack application
 profile for OKF v0.2](../profile/gen-stack-application-profile.md)
-defines the exact `Job to Be Done` type, frontmatter, body expectations, path,
-and profile-validation rules.
+defines the exact `Job to Be Done` type, common frontmatter, canonical path,
+and profile-validation rules. This Explanation and the focused guide own the
+deeper conceptual and authoring treatment without adding conformance rules.
 
 Use [Documenting Jobs to Be
 Done](documenting-jobs-to-be-done.md) to create one maintained job

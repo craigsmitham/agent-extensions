@@ -15,11 +15,18 @@ sources:
     resource: https://www.alistaircockburn.com/Books
     title: Alistair Cockburn — Books
 generated:
-  by: codex/gpt-5
-  at: 2026-08-26T13:07:31Z
+  by: codex/gpt-5.6
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Goal-oriented behavior and use cases
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 Architecture needs a behavioral view between demand and software structure:
 
@@ -170,8 +177,8 @@ authority.
 
 The [Gen Stack application profile for OKF
 v0.2](../profile/gen-stack-application-profile.md)
-defines the `Use Case` type usage, its `intent/use-cases/` path, body
-requirements, and validation rules. The [Gen Stack vocabulary and relationship
+defines the `Use Case` type usage, common frontmatter, its
+`intent/use-cases/` path, and validation rules. The [Gen Stack vocabulary and relationship
 model](../glossary.md) owns the controlled meanings used to connect it to other
 views. Use the [Documenting use cases](documenting-use-cases.md) guide to create
 one artifact and [Documenting C4

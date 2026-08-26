@@ -13,10 +13,17 @@ sources:
     title: Documenting process requirements
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T15:02:03Z
+  at: 2026-08-26T19:12:18Z
 ---
 
 # Process
+
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
 
 A **Process** is a reusable, bounded description of coordinated human and
 automated work that begins in response to one or more events, transforms

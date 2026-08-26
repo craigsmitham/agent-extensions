@@ -16,6 +16,13 @@ generated: { by: codex/gpt-5.6, at: "2026-08-26T14:02:36Z" }
 
 # Documenting audiences
 
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
+
 ## Goal
 
 Create one `Audience` concept under `intent/audiences/` for a durable group to
@@ -29,6 +36,16 @@ concept. A role such as operator or purchaser is contextual and need not define
 one permanent audience classification. Likewise, an actor is a role relative
 to one use case and subject; an automated external system can be an actor
 without becoming an Audience.
+
+## Representation
+
+Use the OKF envelope and the profile's exact `Audience` type and collection.
+Present residual body meaning in this preferred order: durable group,
+architecturally relevant circumstances, contextual roles, material
+exclusions, related Intent or Architecture concepts, and evidence limitations.
+Keep title, description, document status, provenance, and controlled
+relationships in their native fields rather than repeating them in the body.
+This order is authoring guidance, not profile conformance.
 
 ## Steps
 

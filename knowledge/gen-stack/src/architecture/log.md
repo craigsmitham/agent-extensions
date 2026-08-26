@@ -1,11 +1,27 @@
 # Software architecture update log
 
 Historical entries below describe the retired architecture-specific profile.
-The current normative profile is `gen-stack` version `0.1.0` under
+The current normative profile is `gen-stack` version `0.4.0` under
 `../profile/`; this log does not define compatibility behavior.
 
 ## 2026-08-26
 
+- **Candidate development and canonical recording**: Added a shared guide for
+  evidence extraction, gap classification, element routing, subject placement,
+  human authority, and blocking status, plus distinct development guides for
+  Surfaces, C4 structure, and Requirements. Existing `Documenting ...` guides
+  now begin from accepted meaning and route unresolved meaning back to the
+  candidate workflow.
+- **Load-bearing Requirement subjects**: Added encounter, structural,
+  replacement, scope, and authority tests so obligations are placed on the
+  subject that must continue to bear them rather than the Component, test, or
+  file where evidence happened to appear. Requirement inference from
+  implementation is distinct from derivation from an accepted parent.
+- **Co-developed Architecture and Requirements**: Clarified that Architecture
+  provides the subjects and response frame for requirement development while
+  candidate Requirements constrain and refine Architecture; accepted
+  Architecture and Requirements retain separate authorities without a
+  universal temporal sequence.
 - **Subject-first guidance**: Replaced the form-first `foundations/` and
   `guides/` collections with Requirements, Decisions, Capabilities, Features,
   Surfaces, Domains, and C4 Structure collections aligned with the current Gen

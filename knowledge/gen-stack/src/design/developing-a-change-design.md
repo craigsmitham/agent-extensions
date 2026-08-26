@@ -14,15 +14,19 @@ sources:
   - id: preserving-context
     resource: /work-items/preserving-design-and-delivery-context.md
     title: Preserving design and delivery context in software work items
-  - id: yagni
-    resource: /principles/yagni-and-speculative-complexity.md
-    title: "YAGNI: defer speculative capability and structure"
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T15:42:30Z
+  at: 2026-08-26T20:07:37Z
 ---
 
 # Developing a Change Design
+
+> **Authority:** This Guide applies the canonical meaning in the [Gen Stack
+> vocabulary and relationship model](/glossary.md). When it authors a
+> profile-governed corpus concept, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) owns its required
+> representation. This Guide supports action and adds neither semantic authority
+> nor profile-conformance rules.
 
 Use this guide when an agent or human needs to reason through materially
 ambiguous or consequential implementation choices before coding or capturing
@@ -37,6 +41,18 @@ Design](change-design.md).
 Reach a proportional technical response whose inputs, choices, consequences,
 maturity, unknowns, and verification approach are clear enough for the next
 authorized action. Retain it only as durably as the work requires.
+
+## Representation
+
+Choose the least durable adequate native container before choosing headings. A
+conversation uses lightweight prose; a tracker uses native fields plus its
+body; an established RFC or design system uses its own schema. Present residual
+meaning in this preferred order: scope and decision state, inputs and accepted
+boundaries, selected response, affected responsibilities and interactions,
+interfaces and state, failure handling, alternatives and tradeoffs,
+consequences and risks, verification, then open questions. Omit inapplicable
+material. Do not invent an ID, status, owner, timestamp, or lifecycle for a
+transient design, and do not duplicate host fields in a persisted one.
 
 ## 1. Decide whether design work is needed
 
@@ -74,6 +90,15 @@ exists, not automatic authority for what should exist. Apply [Analyzing
 Requirement impact](/control-loop/analyzing-requirement-impact.md) when desired
 state may change.
 
+If those inputs reveal missing, underdeveloped, misplaced, disputed, or
+contradicted Requirements, Surfaces, or C4 structure, use [Developing candidate
+Architecture and
+Requirements](/architecture/developing-candidate-architecture-and-requirements.md)
+before designing around the gap. Record its evidence, impact, recommendation,
+authority, and blocking status. A blocking gap stops only the response that
+depends on unresolved meaning; a non-blocking gap remains visible while design
+continues within accepted boundaries.
+
 ## 3. Frame the bounded design question
 
 State:
@@ -98,10 +123,7 @@ reversibility, and evidence cost.
 
 Keep an option when its rejection explains the selected response or prevents
 likely repetition. Do not enumerate imaginary technologies or future features
-to make the discussion look complete. Apply the [YAGNI
-principle](/principles/yagni-and-speculative-complexity.md) to defer capability
-and structure that no current feature, constraint, invariant, or concrete risk
-requires.
+to make the discussion look complete.
 
 ## 5. Specify the selected response
 
@@ -138,8 +160,9 @@ Keep these distinctions visible:
   outcome; **testing strategy** states how to gather that evidence.
 
 When a design discussion uncovers a candidate Requirement or Architecture
-change, record the impact and required authority. Do not silently approve it
-by continuing into implementation.
+change or shows that an existing claim is misplaced, record the evidence,
+impact, candidate options, recommendation, required authority, and blocking
+status. Do not silently approve it by continuing into implementation.
 
 ## 7. State maturity, authority, and unknowns
 
@@ -263,3 +286,5 @@ Requirement through a response that departed from the proposed Design.
 - The capture home is no more durable than the work requires.
 - Any standalone document has an established owner and lifecycle rather than
   an invented convention.
+- Material meaning gaps were routed to candidate Surface, C4 structure, or
+  Requirement development and did not become hidden Design assumptions.

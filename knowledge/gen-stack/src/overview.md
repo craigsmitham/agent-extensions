@@ -1,8 +1,8 @@
 ---
 type: Explanation
-title: The Gen Stack method
-description: How the Gen Stack authority model, compositional Specifications, proportional Change Design, reusable Processes, and OODA control loop connect Signals, Intent, canonical Requirements, Architecture, Implementation, Evaluations, and operational learning.
-tags: [generative-stack, specifications, processes, ooda, control-loop, signals, observations, software-change, requirements, architecture, change-design, evaluations, feedback]
+title: How the Gen Stack operates
+description: How Intent shapes co-developed Architecture and Requirements, how they constrain and assess Implementation, how OODA governs adaptation, and how every artifact uses native-first representation with least complexity.
+tags: [generative-stack, concept-of-operations, operating-model, specifications, processes, ooda, control-loop, signals, observations, software-change, requirements, architecture, change-design, evaluations, feedback]
 sources:
   - id: fowler-generative-stack
     resource: https://chadfowler.com/regenerative-software/3miwhqqvwxc2x/
@@ -11,22 +11,97 @@ sources:
     resource: https://www.coljohnboyd.com/documents/1995-06-28__Boyd_John_R__The_Essence_of_Winning_and_Losing__PPT-PDF.pdf
     title: John R. Boyd — The Essence of Winning and Losing
 generated:
-  by: codex/gpt-5
-  at: 2026-08-26T15:42:30Z
+  by: codex/gpt-5.6
+  at: 2026-08-26T20:46:52Z
 ---
 
-# The Gen Stack method
+# How the Gen Stack operates
 
-Gen Stack combines an authority model with an adaptive control loop. The
-authority model distinguishes what each representation owns:
+> **Authority:** The [Gen Stack vocabulary and relationship
+> model](/glossary.md) is authoritative for canonical terms and relationships.
+> This Explanation develops understanding without redefining them. When it
+> discusses a profile-governed corpus representation, the [Gen Stack application
+> profile](/profile/gen-stack-application-profile.md) governs that representation.
+> This document adds neither semantic authority nor profile-conformance rules.
+
+This is the method-level concept of operations for Gen Stack: a compact account
+of how the approach turns human direction into a shaped system, realized
+software, evidence, and learning. Adopters use it to understand and tailor the
+method; they are not required to author a separate concept-of-operations
+artifact.
+
+## Operating model
+
+Intent supplies the outcomes, motivations, constraints, and context that shape
+both Architecture and Requirements. Architecture is logically primary as the
+organizing frame: it proposes the system's subjects, boundaries,
+responsibilities, interactions, and response shape. Requirements make accepted
+obligations on those subjects canonical. They are developed together rather
+than handed off in a universal sequence: candidate Architecture makes useful
+Requirements expressible, while candidate Requirements test, constrain, and
+refine the Architecture.
+
+Once accepted, the authorities remain distinct. Architecture owns the durable
+subjects and response meaning; each Requirement owns one obligation on one
+eligible Architecture subject. Neither silently redefines the other.
+Active Requirements carry current normative force. Retired Requirements remain
+as historical records with stable identity, last accepted expression, and
+decision provenance; replacement lineage does not silently transfer meaning or
+evidence to a successor.
+
+## Human-governed development
+
+Gen Stack treats people as the primary authors and accountable authorities for
+the system's desired state and durable shape. An agent assists that work; it
+does not replace the judgment, responsibility, or institutional authority that
+makes a decision binding.
+
+An agent may gather and organize evidence, identify contradictions, develop
+candidate Intent, Requirements, Architecture, and Change Design, compare
+alternatives, make a recommendation, draft an artifact, and faithfully record
+an explicitly accepted decision. It must not infer acceptance from silence,
+from implementation activity, from polished prose, or from its own confidence.
+When a material choice remains open, the agent presents stable alternatives,
+their relevant tradeoffs, and a recommendation, then asks the applicable human
+authority to decide before recording the result as accepted.
+
+Two independent dimensions keep this boundary visible:
+
+- **Meaning maturity** describes the claim itself: observed, exploratory,
+  candidate, recommended, proposed, accepted, rejected, or superseded.
+- **Action authority** describes what may happen next: read-only analysis,
+  drafting, authorized repository mutation, authorized external mutation, or
+  an action awaiting approval.
+
+A mature recommendation can still lack authority to be recorded or acted on.
+Conversely, authorization to edit a document does not authorize the agent to
+invent its meaning. Local, reversible implementation choices may be delegated
+within an independently authorized change, but they do not silently establish
+new Intent, Requirements, or Architecture.
 
 ```text
-Intent → canonical Requirement → eligible Architecture subject and response
-                                      ↓
-Compilation → Implementation Units
-                                      ↓
-                    Evaluation Definition → Execution → Result
+                         Intent
+                    shapes both
+                 ↙              ↘
+       Architecture  ⇄  Requirements
+                 ↘              ↙
+           Compilation and Evaluation Definition
+                 ↓                   ↓
+        Implementation revision  Evaluation Execution
+                 └────────── assessed by ──────────┘
+                                  ↓
+                         Results and Observations
 ```
+
+Compilation translates accepted Requirements and Architecture into bounded
+Implementation changes. Evaluation Definitions turn accepted obligations,
+architectural claims, risks, and assurance needs into reusable assessment
+contracts. They guide realization by making success and failure observable,
+but they do not own desired state. Evaluation Executions apply those contracts
+to a particular Implementation and context; Results provide evidence without
+becoming Requirements or Architecture.
+
+## Adaptation through the stack
 
 OODA governs how the stack learns which authority or activity should change:
 
@@ -41,6 +116,16 @@ Decide on an authorized repair hypothesis
 Act to investigate, change, compile, evaluate, deploy, or roll back
                   └───────────────────────────────↺
 ```
+
+A new Signal does not automatically become a Requirement or an implementation
+change. Orientation compares observations with Intent, Requirements,
+Architecture, Implementation, Evaluations, operations, and Provenance. Decision
+selects an authorized repair hypothesis at the smallest responsible scope.
+Action may investigate, revise Intent, co-develop Architecture and Requirements,
+compile, implement, evaluate, deploy, or roll back. The outcome becomes new
+evidence for the next loop.
+
+## Supporting coordination
 
 [Change Design](design/change-design.md) supplies proportional technical
 reasoning between accepted meaning and bounded Action. It may remain in the
@@ -59,6 +144,13 @@ or Architecture changes, while Bugfix Specifications specialize them for
 authorized corrective work. Neither is a mandatory document template. A
 Bugfix Specification remains linked to its provenance-bearing Defect Reports;
 it is never a report under a new title.
+
+[Specifying Requirement
+changes](work-items/specifying-requirement-changes.md) separates impact analysis
+from the actual desired-state delta. It gives additions, revisions,
+retirements, replacements, splits, and merges a common identity, lifecycle,
+lineage, authority, blocker, and reconciliation model without making the work
+item a second normative Requirement authority.
 
 [Evaluation as bounded evidence](evaluations/evaluation-as-bounded-evidence.md)
 explains why tests are only one Evaluation method and how Definitions,
@@ -84,13 +176,72 @@ enactment, but OODA is not a mandatory Process template and the Process does
 not become another authority over Intent, Requirements, Architecture,
 Implementation, or Evaluations.
 
-Neither model transfers authority automatically. A Signal or Observation is
-not Intent. Intent is human-oriented direction, not raw feedback. A Requirement
-canonically expresses accepted Intent but must obligate an eligible
-Architecture subject. Intent is not a direct Compilation input. A Requirement
-is not its architecture response. An Evaluation is not the Requirement it
-evaluates. An OODA Decision selects a repair hypothesis but does not authorize
-it beyond the applicable human or institutional authority.
+## Represent meaning with least complexity
+
+Gen Stack establishes an artifact's semantic role and authority before
+choosing how to present it. Representation then follows this order:
+
+```text
+Gen Stack meaning → native artifact format → applicable profile
+                  → exact host mapping → residual body content
+```
+
+Use the native format or host as the first presentation contract. An OKF
+concept uses the OKF envelope; a work item uses exact tracker fields; an
+Evaluation Definition, Process model, schema, or implementation artifact uses
+its repository-owned format. Apply a declared profile only as a delta over
+that native contract. Add Gen Stack-specific structure only for meaning that
+neither layer can carry faithfully.
+
+Five rules keep this predictable without creating a universal template:
+
+1. **Native first.** Use an existing field, construct, link, or container when
+   its documented semantics match the fact.
+2. **Match meaning, not labels.** A similarly named field is not a valid home
+   when its lifecycle, authority, cardinality, or evidence semantics differ.
+3. **Delta only.** A profile or Gen Stack guide adds only what the underlying
+   format does not already govern.
+4. **One owner per fact.** Record a fact once in its canonical field or
+   artifact and derive summaries, reciprocal links, exports, and views from
+   that source.
+5. **Fallback last.** Put a fact in prose or a compact metadata block only
+   when no exact native affordance exists; remove that fallback when a richer
+   target can represent the fact natively.
+
+Artifact-specific Guides provide a preferred logical order for the residual
+content that readers need. That order is a presentation contract: prose,
+section labels, and proportional detail may vary, and inapplicable content is
+omitted rather than represented by empty sections. Exact headings, fields, or
+paths are conformance requirements only when the native format or an applicable
+profile explicitly says so.
+
+Durability determines how much presentation machinery is justified. Durable
+authorities need stable identity, provenance, and lifecycle in their native
+form. Work items use host mechanics plus a recognizable semantic body.
+Transient analysis and conversational Change Design use lightweight contextual
+structure and do not invent persistence metadata. Reports, dashboards,
+reciprocal links, and exports identify themselves as derived projections and
+preserve links to their canonical sources.
+
+| Artifact class | Native representation owner | Gen Stack addition |
+| --- | --- | --- |
+| Governed System, Intent, Requirement, Architecture, and System Evaluation Approach concepts | OKF v0.2 plus the adopted application profile | Only the profile delta and Guide-supported residual body meaning |
+| Work items and work-item Specifications | Tracker identity, fields, relationships, and body | Artifact-specific logical body order, evidence and authority distinctions, and fallback facts the host cannot express |
+| Change Design | Conversation, work item, or established repository design format | Proportional reasoning and explicit maturity; no mandatory document |
+| Process definitions | Repository process notation, workflow model, or executable format | Residual purpose, authority, rationale, exclusions, evidence, and limits |
+| Implementation Units and generation records | Repository code, schema, configuration, manifest, and provenance formats | Stable links to accepted authorities and bounded conservation context |
+| Evaluation Definitions, Suites, Executions, Results, and Reports | Repository evaluation schemas, runners, and evidence stores | Stable Requirement and Architecture relationships and bounded evidence semantics |
+| Signals, Observations, Orientations, Decisions, and Actions | Their source system, telemetry, work item, decision record, or current conversation | Only context and distinctions needed for the bounded control-loop step |
+| Dashboards, summaries, reciprocal links, and exports | Generated projection over canonical sources | Declared scope, as-of context, source links, and honest unknowns |
+
+Neither the operating model nor its supporting coordination transfers
+authority automatically. A Signal or Observation is not Intent. Intent is
+human-oriented direction, not raw feedback. A Requirement may arise from Intent
+or another recognized source, but must obligate an eligible Architecture
+subject. Intent is not a direct Compilation input. A Requirement is not its
+architectural response. An Evaluation is not the Requirement or Architecture
+it evaluates. An OODA Decision selects a repair hypothesis but does not
+authorize it beyond the applicable human or institutional authority.
 
 ## What the method optimizes for
 
@@ -116,15 +267,18 @@ it beyond the applicable human or institutional authority.
 ## Boundaries
 
 Gen Stack does not choose product priority, accept Requirements, approve
-architecture, implement evaluator infrastructure, or authorize production
-release. It supplies a shared method for keeping those decisions and artifacts
-coherent. It also does not require every implementation-local test to map to a
-maintained Requirement; only an evaluation that claims Requirement coverage
-needs the stable relationship.
+Architecture, or authorize production release. It supplies a shared method for
+humans and agents to develop those decisions and keep their artifacts coherent.
+It also does not require every implementation-local test to map to a maintained
+Requirement; only an evaluation that claims Requirement coverage needs the
+stable relationship.
 
 The method is deliberately opinionated but not a claim that fully autonomous
-regenerative software is mature. Adopt only the next step supported by current
-needs and evidence.
+regenerative software is mature. Operationalize only the next capability that
+current needs and evidence support. When a repository declares profile
+adoption, however, its corpus must conform from activation rather than treating
+partial structure as a maturity stage; use [Adopting Gen
+Stack](adopting-gen-stack.md) for the greenfield and brownfield workflow.
 
 See [OODA as the Gen Stack control loop](control-loop/ooda-control-loop.md) for
 the complete mapping and [Analyzing Requirement

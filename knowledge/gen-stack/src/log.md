@@ -2,6 +2,108 @@
 
 ## 2026-08-26
 
+- **Gen Stack 0.15.0 — corpus inspection plane**: Added a read-only reusable
+  inspection library, task-oriented CLI, versioned JSON Schema, deterministic
+  snapshots and comparison. Humans and harnesses can resolve governed concepts
+  and Requirement IDs; inspect controlled relationship provenance; navigate
+  Surface and C4 hierarchies; and request an `evaluation-context` projection
+  containing direct Requirements, explicit cross-view mappings, and evaluation
+  governance. The projection preserves unknowns and does not claim Requirement
+  inheritance, physical Suite layout, Implementation realization, Evaluation
+  coverage, satisfaction, or fitness.
+- **Strict day-one adoption**: Added [Adopting Gen
+  Stack](adopting-gen-stack.md), one workflow for greenfield and brownfield
+  repositories that requires a complete accepted kernel, OKF and profile
+  validation, and named semantic review at activation while reporting corpus
+  coverage, Implementation realization, Evaluation coverage, satisfaction,
+  and operational fitness separately. Clarified in the overview that gradual
+  operationalization does not permit a partially conforming adopted corpus.
+- **Gen Stack 0.14.0 — native-first representation**: Established the
+  method-wide sequence from semantic role through native format, applicable
+  profile, exact host mapping, and residual body content. Added an
+  artifact-class mapping and a compact `Representation` contract to every
+  Guide so independently authored artifacts converge on recognizable logical
+  shape without a universal template, empty sections, duplicate facts, or
+  invented persistence metadata. Clarified that the Gen Stack application
+  profile is a delta over OKF v0.2 and that Guide body order adds no profile
+  conformance.
+- **Gen Stack 0.13.0 — controlled Requirement change**: Added a shared
+  Requirement-change Guide that separates impact analysis from the actual
+  desired-state delta and gives additions, revisions, retirements,
+  replacements, splits, and merges consistent baseline, identity, authority,
+  blocker, decision, canonicalization, and reconciliation treatment.
+- **Gen Stack profile 0.4.0 — Requirement lifecycle and supersession**: Added
+  required `active` and `retired` lifecycle, preservation and Provenance rules
+  for retired Requirements, and successor-owned `supersedes` lineage with
+  validator and relationship-projection enforcement. Supersession does not
+  imply equivalence, derivation, satisfaction, or transfer of Evaluation
+  evidence.
+- **Gen Stack 0.12.0 — candidate Architecture and Requirement development**:
+  Added one shared evidence-bound workflow and distinct Surface, C4 structure,
+  and Requirement guides for greenfield and brownfield development. The
+  guidance classifies missing, underdeveloped, misplaced, disputed, and
+  contradicted meaning; tests Requirement subject placement against encounter,
+  replacement, scope, structure, and authority; distinguishes inference from
+  derivation; and records evidence, impact, options, recommendation, authority,
+  and blocking status without treating candidates as accepted.
+- **Cross-stack gap disposition**: Integrated the candidate workflow into
+  Requirement-impact analysis, Defect Reports, Change Specifications, Bugfix
+  Specifications, Change Design, scenario-based responsibility review, and
+  bounded regeneration. Blocking gaps stop only dependent action; non-blocking
+  gaps remain visible without creating ritual escalation, and missing
+  documentation is not automatically classified as a Defect.
+- **Gen Stack 0.11.0 — portable work-item foundations**: Added shared Guides
+  for evidence and authority, identity and lifecycle, and metadata and labels;
+  made the work-item index their canonical chooser; and refactored work-item
+  type guidance to retain incident-, defect-, change-, and bugfix-specific
+  meaning while referencing the common procedures.
+- **Gen Stack profile 0.3.0 — fixed repository placement**: Prescribed
+  `<repository-root>/gen-stack/` as the sole supported corpus location,
+  retained `gen-stack/index.md` as the OKF and profile-adoption authority, and
+  prohibited root placement, alternate-path configuration, scanning, and
+  upward discovery. Profile tools now accept a repository root, default to the
+  current directory, derive `gen-stack/`, report repository and corpus roots,
+  and reject missing, misplaced, invalid, or boundary-escaping candidates.
+- **Gen Stack profile 0.3.0 — explicit controlled relationships**: Added the
+  producer-owned top-level `relationships` map with readable semantic roles,
+  one authoritative assertion source, synchronized reciprocal endpoint views,
+  domain, range, cardinality, and drift validation, and a deterministic
+  round-trip synchronizer. Existing Requirement fields and selected canonical
+  paths remain authoritative; peer-owned Implementation, Evaluation, Signal,
+  Observation, Decision, and Action encodings remain outside the corpus
+  contract.
+- **Gen Stack 0.10.0 — human-governed development**: Made human or
+  institutional ratification explicit for binding Intent, Requirements,
+  Architecture, and related decisions. Agents may develop candidates and
+  recommendations and may record explicitly accepted meaning, while meaning
+  maturity remains separate from authority to act.
+- **Focused method boundary**: Removed the YAGNI principle and Tidy First
+  pattern, their collections, and their cross-links from the bundle. Their
+  earlier presence remains recorded here as history rather than discoverable
+  current guidance.
+- **Gen Stack 0.9.0 — explicit documentation authority**: Established one
+  four-role contract across the bundle: the glossary owns canonical semantics,
+  profile `0.2.0` owns governed OKF representation, Explanations deepen
+  understanding, and Guides support action. The profile now provides the
+  canonical Understand and Author routes while remaining minimal; supporting
+  documents conform and add no semantic or profile-conformance rules. No new
+  explainer type or folder was introduced. The `author-gen-stack` and
+  `setup-gen-stack` skills are versioned `2.2.0` with conflict-precedence
+  evaluation cases.
+- **Architecture and Requirements co-development**: Reframed the method's
+  concept of operations, vocabulary, and profile so Intent shapes
+  co-developed Architecture and Requirements. Architecture supplies the
+  organizing subjects and response shape; Requirements own accepted
+  obligations that test and constrain that shape; Evaluation Definitions
+  guide realization and Executions assess Implementation without taking over
+  either authority.
+- **Gen Stack 0.8.0 — method-open requirement specification**: Kept
+  individual-Requirement and set-quality criteria first-class, added guidance
+  for selecting any proportionate method by semantic fit and authority
+  clarity, retained EARS as one optional method, and added explicit treatment
+  of external normative conformance. Profile `0.2.0` now governs durable
+  representation rather than prescribing an authoring syntax; the
+  `author-gen-stack` and `setup-gen-stack` skills are versioned `2.1.0`.
 - **Bug and Defect corrective scope**: Defined Bug explicitly as the
   realized-system specialization of Defect, clarified that one Bug may
   implicate several additional Defects across Requirements, Architecture,
@@ -13,10 +115,10 @@
   model](glossary.md). The preferred label and meaning are unchanged; the
   identifier now matches its label as every other vocabulary identifier does,
   and no consumer referenced the prior value.
-- **Requirement classification encodings**: Bound each of the six Requirement
-  classification identifiers to its `requirement_type` profile value in the
-  glossary, so the mapping from `human-factors-requirement` to `human-factors`
-  is stated rather than inferred.
+- **Requirement classification encodings**: Kept the six canonical
+  classifications in the glossary and their `requirement_type` encodings in
+  the profile, including the explicit `human-factors-requirement` to
+  `human-factors` mapping.
 - **Glossary attribution**: Cited the declared ISO/IEC 25040, ISO/IEC/IEEE
   29119 series, and Chad Fowler evaluation sources in the Evaluations section
   footnotes, which previously declared them without attribution.
@@ -78,10 +180,9 @@
   items](work-items/) from `control-loop/` to the top-level `work-items/`
   collection so durable case-record guidance remains distinct from OODA and
   from reusable Processes.
-- **Principle and pattern collections**: Placed the [YAGNI
-  principle](principles/yagni-and-speculative-complexity.md) and [Tidy First
-  pattern](patterns/tidy-first.md) in distinct top-level `principles/` and
-  `patterns/` collections.
+- **Principle and pattern collections (historical)**: Placed the YAGNI
+  principle and Tidy First pattern in distinct top-level collections. Gen
+  Stack 0.10.0 later removed both from the bundle.
 - **Evaluation guidance consolidation**: Kept Evaluation identities and
   relationships in the [Gen Stack vocabulary](glossary.md), retained
   uncertainty and evaluator-failure handling in Signal reconciliation, and
@@ -105,9 +206,9 @@
 - **Vocabulary authority**: Established the [Gen Stack vocabulary and
   relationship model](glossary.md) as the semantic authority for preferred
   terms, stable local identifiers, canonical relationship direction, domain,
-  range, cardinality, recording location, and prohibited inference; narrowed
-  the application profile to governed OKF representation, relationship
-  encoding, and conformance.
+  range, cardinality, and prohibited inference; narrowed the application
+  profile to governed OKF representation, relationship encoding, recording
+  location, and conformance.
 - **Subject-first organization**: Reorganized the Knowledge bundle around the
   Gen Stack profile's semantic neighborhoods while keeping the bundle distinct
   from an instantiated profile corpus.
@@ -147,8 +248,9 @@
   its text, worksheet, or diagram.
 - **Knowledge consolidation**: Moved the complete software-architecture and
   software-engineering corpora, architecture profile validator, synthetic
-  example, work-item guidance, YAGNI principle, and Tidy First pattern into Gen
-  Stack as one canonical, locally cross-referenced knowledge authority.
+  example, work-item guidance, and the then-current YAGNI principle and Tidy
+  First pattern into Gen Stack as one canonical, locally cross-referenced
+  knowledge authority. Gen Stack 0.10.0 later removed both named topics.
 - **Package retirement**: Removed the legacy project-authored pack and
   knowledge package roots after preserving their published-version migration
   guidance in the Gen Stack pack and their source history in version control.
