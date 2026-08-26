@@ -5,8 +5,8 @@ description: Use when C4 Software Systems, Containers, or Components need satisf
 tags: [evaluations, c4, software-systems, containers, components, requirements]
 status: draft
 sources:
-  - resource: designing-a-system-evaluation-approach.md
-    title: Designing a system evaluation approach
+  - resource: designing-evaluation-protocols.md
+    title: Designing Evaluation Protocols
   - resource: ../architecture/structure/c4-model.md
     title: C4 model
 ---
@@ -27,18 +27,15 @@ canonical C4 Software System → Container → Component hierarchy.
 
 ## Representation
 
-Author Definitions, Suites, Executions, Results, and Reports in their
-repository-native formats. Use exact native fields for identity, Evaluation
-Role, C4 subject, Requirement IDs, method, conditions, oracle, thresholds,
-Implementation revision, and evidence links when available. Add residual prose
-only for meaning the schema cannot carry. Prefer Definition content in this
-logical order: bounded claim, subject and criteria authority, method and cases,
-conditions, oracle and thresholds, then evidence and lifecycle. Do not make a
-C4 View or an OKF concept the concrete Evaluation container.
+Author governed Protocols using the profile and keep Suites, Executions,
+Results, and Reports in their repository-native formats. Use Requirement IDs
+for satisfaction claims and canonical C4 element paths for realization claims.
+Cases may follow the C4 hierarchy for navigation, but a C4 View and a Suite
+folder are never Protocol targets.
 
 ## Steps
 
-1. Attach each Definition to the narrowest canonical C4 element whose accepted
+1. Attach each Protocol to the narrowest canonical C4 element whose accepted
    responsibility or boundary owns the claim. C4 Views select and project
    elements; they are evaluation context, not evaluation subjects.
 2. For `requirement-satisfaction`, reference subject-colocated Requirement IDs
@@ -56,7 +53,7 @@ C4 View or an OKF concept the concrete Evaluation container.
 4. Combine static architecture checks, dependency and schema analysis,
    contract tests, dynamic scenarios, deployment inspection, fault injection,
    and operational measures according to the claim. A generated diagram or
-   dependency graph is an Observation until a Definition applies criteria.
+   dependency graph is an Observation until a Protocol applies criteria.
 5. Project Results down and up the C4 hierarchy and across linked Surface,
    Feature, Capability, and Bounded Context views. Do not infer those mappings
    from C4 containment.
@@ -77,6 +74,6 @@ C4 View or an OKF concept the concrete Evaluation container.
 
 ## Related
 
-- [Designing a system evaluation approach](designing-a-system-evaluation-approach.md)
+- [Designing Evaluation Protocols](designing-evaluation-protocols.md)
 - [C4 model](../architecture/structure/c4-model.md)
 - [Reviewing responsibilities with scenarios](../architecture/reviewing-responsibilities-with-scenarios.md)

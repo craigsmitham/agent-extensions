@@ -11,8 +11,9 @@ from pathlib import Path
 SCRIPT_ROOT = Path(__file__).parents[1]
 CLI_PATH = SCRIPT_ROOT / "gen-stack.py"
 CONTRACT_ROOT = SCRIPT_ROOT / "contracts"
-SCHEMA_PATH = CONTRACT_ROOT / "gen-stack-inspection-v1alpha1.schema.json"
+SCHEMA_PATH = CONTRACT_ROOT / "gen-stack-inspection-v1alpha2.schema.json"
 EXAMPLE_PATH = CONTRACT_ROOT / "evaluation-context.example.json"
+CANDIDATES_EXAMPLE_PATH = CONTRACT_ROOT / "evaluation-candidates.example.json"
 if str(SCRIPT_ROOT) not in sys.path:
     sys.path.insert(0, str(SCRIPT_ROOT))
 
@@ -84,29 +85,40 @@ The fixture needs an observable, non-private obligation.
 {lifecycle_body}"""
 
 
-def evaluation_approach() -> str:
+def evaluation_protocol(
+    title: str,
+    protocol_id: str,
+    role: str,
+    target_field: str,
+    targets: list[str],
+    *,
+    lifecycle: str = "active",
+) -> str:
+    encoded_targets = "\n".join(f"  - {target}" for target in targets)
     return concept(
-        "System Evaluation Approach",
-        "Synthetic evaluation approach",
-        body="""## Scope and objectives
+        "Evaluation Protocol",
+        title,
+        metadata=f"""protocol_id: {protocol_id}
+protocol_lifecycle: {lifecycle}
+evaluation_role: {role}
+{target_field}:
+{encoded_targets}
+""",
+        body="""## Claim
 
-The approach covers the synthetic system.
+The realized Surface satisfies the accepted boundary Requirement.
 
-## Evaluation portfolio
+## Assessment
 
-Definitions remain repository-native.
+Exercise a rejected install operation.
 
-## Navigation and reporting
+## Judgment
 
-Evidence is navigable by subject and Requirement.
+Pass when the accepted boundary remains unchanged.
 
 ## Evidence and lifecycle
 
-Unknown and harness errors remain visible.
-
-## Gaps and maintenance
-
-Coverage gaps remain explicit.""",
+Unknown and harness errors remain visible.""",
     )
 
 
@@ -116,6 +128,9 @@ class SyntheticCorpus:
         self.repository_root = Path(self.temp.name)
         self.root = self.repository_root / "gen-stack"
         self.root.mkdir()
+        implementation = self.repository_root / "src" / "processor.py"
+        implementation.parent.mkdir(parents=True)
+        implementation.write_text("# Public synthetic implementation fixture.\n", encoding="utf-8")
         self._write_kernel(include_architecture=include_architecture)
         if include_architecture:
             self._write_architecture()
@@ -147,9 +162,66 @@ class SyntheticCorpus:
             root_links.append(f"- [{concept_type}]({filename})")
         self.write(
             "evaluations/index.md",
-            "# Evaluations\n\n- [Approach](system-evaluation-approach.md)\n",
+            "# Evaluations\n\n" + ("- [Protocols](protocols/)\n" if include_architecture else "No protocols are admitted.\n"),
         )
-        self.write("evaluations/system-evaluation-approach.md", evaluation_approach())
+        if include_architecture:
+            self.write(
+                "evaluations/protocols/index.md",
+                "# Protocols\n\n- [Requirements](requirements/)\n- [Architecture](architecture/)\n- [Implementation](implementation/)\n",
+            )
+            self.write(
+                "evaluations/protocols/requirements/index.md",
+                "# Requirement protocols\n\n- [Preserve install boundary](preserve-install-boundary.md)\n- [Retired install behavior](retired-install-behavior.md)\n",
+            )
+            self.write(
+                "evaluations/protocols/requirements/preserve-install-boundary.md",
+                evaluation_protocol(
+                    "Preserve install boundary protocol",
+                    "SYN-EVAL-0001",
+                    "requirement-satisfaction",
+                    "requirements",
+                    ["SYN-REQ-0001"],
+                ),
+            )
+            self.write(
+                "evaluations/protocols/requirements/retired-install-behavior.md",
+                evaluation_protocol(
+                    "Retired install behavior protocol",
+                    "SYN-EVAL-0002",
+                    "requirement-satisfaction",
+                    "requirements",
+                    ["SYN-REQ-0001", "SYN-REQ-0002"],
+                    lifecycle="retired",
+                ),
+            )
+            self.write(
+                "evaluations/protocols/architecture/index.md",
+                "# Architecture protocols\n\n- [Preserve processor boundary](preserve-processor-boundary.md)\n",
+            )
+            self.write(
+                "evaluations/protocols/architecture/preserve-processor-boundary.md",
+                evaluation_protocol(
+                    "Preserve processor boundary protocol",
+                    "SYN-EVAL-0003",
+                    "architecture-realization",
+                    "architecture_authorities",
+                    ["/architecture/structure/containers/api/components/processor.md"],
+                ),
+            )
+            self.write(
+                "evaluations/protocols/implementation/index.md",
+                "# Implementation protocols\n\n- [Processor module](processor-module.md)\n",
+            )
+            self.write(
+                "evaluations/protocols/implementation/processor-module.md",
+                evaluation_protocol(
+                    "Processor module protocol",
+                    "SYN-EVAL-0004",
+                    "implementation-conformance",
+                    "implementation_units",
+                    ["src/processor.py"],
+                ),
+            )
         root_links.append("- [Evaluations](evaluations/)")
         if include_architecture:
             root_links.append("- [Architecture](architecture/)")
@@ -162,7 +234,7 @@ okf_version: "0.2"
 # Synthetic Gen Stack corpus
 
 This public fixture adopts the
-[gen-stack profile](https://example.test/gen-stack) version 0.4.0.
+[gen-stack profile](https://example.test/gen-stack) version 0.5.0.
 
 """
             + "\n".join(root_links)
@@ -398,6 +470,10 @@ class InspectionPlaneTest(unittest.TestCase):
         self.assertEqual("active", shown["requirement_lifecycle"])
         self.assertIn("Requirement", shown["sections"])
 
+        protocol_why = self.plane.why("SYN-EVAL-0001")["data"]
+        self.assertEqual("stable-protocol-id", protocol_why["identity"]["kind"])
+        self.assertEqual("SYN-EVAL-0001", protocol_why["identity"]["reference"])
+
     def test_show_requirements_is_direct_only_and_preserves_lifecycle(self) -> None:
         parent = self.plane.show("/architecture/surfaces/cli.md", "requirements")["data"]["result"]
         self.assertEqual([], parent["direct_requirements"])
@@ -425,6 +501,14 @@ class InspectionPlaneTest(unittest.TestCase):
         )
         self.assertTrue(context["cross_view_mappings"])
         self.assertFalse(context["c4_views"][0]["evaluation_subject"])
+        protocols = {
+            item["protocol_id"]: item
+            for item in context["governance"]["evaluation_protocols"]
+        }
+        self.assertEqual("Evaluation Protocol", protocols["SYN-EVAL-0001"]["type"])
+        self.assertEqual(["SYN-REQ-0001"], protocols["SYN-EVAL-0001"]["targets"])
+        protocol = self.plane.show("SYN-EVAL-0001")["data"]["result"]
+        self.assertEqual("requirement-satisfaction", protocol["evaluation_role"])
         self.assertEqual("not-inferred", context["interpretation"]["requirement_inheritance"])
 
     def test_scoped_evaluation_context_separates_ancestors_and_explicit_relations(self) -> None:
@@ -439,6 +523,131 @@ class InspectionPlaneTest(unittest.TestCase):
         self.assertTrue(
             any(item["type"] == "C4 Component" for item in context["related_subjects"])
         )
+
+    def test_evaluation_candidates_are_policy_neutral_and_match_explicit_protocols(self) -> None:
+        projection = self.plane.evaluation_candidates()
+        repeated = self.plane.evaluation_candidates()
+        self.assertEqual(projection["output_digest"], repeated["output_digest"])
+        candidates = projection["data"]["candidates"]
+        by_pair = {
+            (item["role"], item["protocol_target"]): item for item in candidates
+        }
+
+        requirement = by_pair[("requirement-satisfaction", "SYN-REQ-0001")]
+        self.assertEqual(
+            "/architecture/surfaces/cli/install.md",
+            requirement["subject"]["ref"],
+        )
+        self.assertEqual(
+            ["SYN-EVAL-0001"],
+            [
+                item["protocol_id"]
+                for item in requirement["matching_protocols"]["active"]
+            ],
+        )
+        self.assertEqual(
+            ["SYN-EVAL-0002"],
+            [
+                item["protocol_id"]
+                for item in requirement["matching_protocols"]["retired"]
+            ],
+        )
+        self.assertIn(
+            ("requirement-satisfaction", "SYN-REQ-0003"),
+            by_pair,
+        )
+        self.assertEqual(
+            [],
+            by_pair[("requirement-satisfaction", "SYN-REQ-0003")][
+                "matching_protocols"
+            ]["active"],
+        )
+
+        architecture = by_pair[
+            (
+                "architecture-realization",
+                "/architecture/structure/containers/api/components/processor.md",
+            )
+        ]
+        self.assertEqual(
+            ["SYN-EVAL-0003"],
+            [
+                item["protocol_id"]
+                for item in architecture["matching_protocols"]["active"]
+            ],
+        )
+        implementation = by_pair[("implementation-conformance", "src/processor.py")]
+        self.assertEqual(
+            "active-protocol-declared-implementation-unit",
+            implementation["basis"],
+        )
+
+        exclusions = projection["data"]["excluded"]
+        self.assertTrue(
+            any(
+                item["reason"] == "retired-requirement"
+                and item["target"]["requirement_id"] == "SYN-REQ-0002"
+                for item in exclusions
+            )
+        )
+        self.assertTrue(
+            any(item["reason"] == "c4-view-is-projection" for item in exclusions)
+        )
+        interpretation = projection["data"]["interpretation"]
+        self.assertEqual("not-assessed", interpretation["selection_claim"])
+        self.assertEqual("not-assessed", interpretation["coverage_claim"])
+        self.assertTrue(
+            any(item["claim"] == "protocol-adequacy" for item in projection["unknowns"])
+        )
+
+    def test_scoped_evaluation_candidates_exclude_ancestors_and_implementation_discovery(self) -> None:
+        projection = self.plane.evaluation_candidates(
+            "/architecture/surfaces/cli/install.md"
+        )["data"]
+        candidates = projection["candidates"]
+        targets = {
+            (item["role"], item["protocol_target"]): item for item in candidates
+        }
+        self.assertNotIn(
+            ("architecture-realization", "/architecture/surfaces/cli.md"),
+            targets,
+        )
+        self.assertIn(
+            (
+                "architecture-realization",
+                "/architecture/structure/containers/api/components/processor.md",
+            ),
+            targets,
+        )
+        self.assertFalse(
+            any(item["role"] == "implementation-conformance" for item in candidates)
+        )
+        self.assertEqual(
+            ["/architecture/surfaces/cli.md"],
+            [item["ref"] for item in projection["ancestor_context"]],
+        )
+        self.assertEqual(
+            "primary",
+            targets[
+                ("architecture-realization", "/architecture/surfaces/cli/install.md")
+            ]["scope_relation"],
+        )
+        self.assertEqual(
+            "cross-view",
+            targets[
+                (
+                    "architecture-realization",
+                    "/architecture/structure/containers/api/components/processor.md",
+                )
+            ]["scope_relation"],
+        )
+
+    def test_c4_view_is_not_an_eligible_candidate_scope(self) -> None:
+        with self.assertRaises(InspectionFailure) as raised:
+            self.plane.evaluation_candidates(
+                "/architecture/structure/views/containers.md"
+            )
+        self.assertEqual("ineligible-evaluation-subject", raised.exception.code)
 
     def test_ordinary_markdown_link_does_not_become_graph_relation(self) -> None:
         with self.assertRaises(InspectionFailure) as raised:
@@ -496,6 +705,28 @@ class InspectionPlaneTest(unittest.TestCase):
         self.assertEqual(0, json_run.returncode, json_run.stdout + json_run.stderr)
         payload = json.loads(json_run.stdout)
         self.assertEqual(SCHEMA_VERSION, payload["schema_version"])
+        candidates_run = subprocess.run(
+            [
+                sys.executable,
+                str(CLI_PATH),
+                "-C",
+                str(self.fixture.repository_root),
+                "--json",
+                "evaluation-candidates",
+                "/architecture/surfaces/cli/install.md",
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(
+            0,
+            candidates_run.returncode,
+            candidates_run.stdout + candidates_run.stderr,
+        )
+        candidates_payload = json.loads(candidates_run.stdout)
+        self.assertEqual("evaluation-candidates", candidates_payload["operation"])
+        self.assertEqual(SCHEMA_VERSION, candidates_payload["schema_version"])
         human_run = subprocess.run(
             [
                 sys.executable,
@@ -580,12 +811,18 @@ class InspectionContractTest(unittest.TestCase):
     def test_schema_and_public_example_are_parseable_and_version_aligned(self) -> None:
         schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
         example = json.loads(EXAMPLE_PATH.read_text(encoding="utf-8"))
+        candidates_example = json.loads(
+            CANDIDATES_EXAMPLE_PATH.read_text(encoding="utf-8")
+        )
         self.assertEqual("https://json-schema.org/draft/2020-12/schema", schema["$schema"])
         self.assertEqual(SCHEMA_VERSION, schema["properties"]["schema_version"]["const"])
         self.assertEqual(SCHEMA_VERSION, example["schema_version"])
+        self.assertEqual(SCHEMA_VERSION, candidates_example["schema_version"])
         self.assertEqual("evaluation-context", example["operation"])
+        self.assertEqual("evaluation-candidates", candidates_example["operation"])
         self.assertEqual("direct-only", example["data"]["interpretation"]["requirement_association"])
         self.assertNotIn(Path.home().as_posix(), json.dumps(example))
+        self.assertNotIn(Path.home().as_posix(), json.dumps(candidates_example))
 
     def test_documented_cli_entrypoint_has_help(self) -> None:
         completed = subprocess.run(
@@ -596,6 +833,7 @@ class InspectionContractTest(unittest.TestCase):
         )
         self.assertEqual(0, completed.returncode, completed.stderr)
         self.assertIn("usage:", completed.stdout)
+        self.assertIn("evaluation-candidates", completed.stdout)
 
     def test_invalid_diff_input_still_emits_the_machine_envelope(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

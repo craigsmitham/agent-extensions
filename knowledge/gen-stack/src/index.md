@@ -56,8 +56,9 @@ without distributing their relationships across packages.
 ## Evaluations
 
 - [Evaluations](evaluations/) - Why Evaluation is broader than testing but
-  narrower than assurance, and how Definitions, Executions, Results,
-  observations, and decisions retain distinct authority.
+  narrower than assurance, and how governed Protocols, repository-native
+  Executions and Results, observations, and decisions retain distinct
+  authority.
 
 ## Processes
 
@@ -69,4 +70,4 @@ without distributing their relationships across packages.
 
 ## Control loop
 
-- [Control loop](control-loop/) - OODA and change-intake guidance for interpreting Signals and Observations, selecting authorized decisions, and taking bounded action.
+- [Control loop](control-loop/) - OODA, cross-stack diagnosis, and change-intake guidance for interpreting Signals and Observations, selecting authorized decisions, and taking bounded action without allowing evidence to rewrite desired state automatically.

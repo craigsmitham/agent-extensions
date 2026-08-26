@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Assisting humans with bounded Gen Stack change development, Requirement additions, revisions, retirements, replacements, splits, and merges, greenfield and brownfield candidate extraction, evidence-rich software work items, material meaning-gap disposition, native-first artifact presentation, and explicitly accepted concepts in an established supported-profile corpus while preserving human ratification and peer authorities.",
+    "intended_use": "Assisting humans with bounded Gen Stack change development, Requirement additions, revisions, retirements, replacements, splits, and merges, greenfield and brownfield candidate extraction, governed Evaluation Protocol authoring, evidence-rich software work items, material meaning-gap disposition, native-first artifact presentation, and explicitly accepted concepts in an established supported-profile corpus while preserving human ratification and peer authorities.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic Gen Stack orientation, decision support, Requirement impact and change operations, identity and lifecycle, replacement lineage, non-transfer of evidence, partial acceptance, greenfield and brownfield candidate development, Surface and C4 structure extraction, Requirement inference and placement, material gap disposition, fixed repository gen-stack/ discovery, established-corpus authoring, work-item authoring, native-format and exact-field mapping, fallback representation, transient Change Design, derived projections, repository-native Evaluation and Process artifacts, authority-precedence, provenance, metadata projection, relationship and lifecycle maintenance, persisted readback, partial batch failure, unsupported setup and migration, human-ratification, and routing-collision cases.",
+    "case_source": "Synthetic Gen Stack orientation, decision support, Requirement impact and change operations, identity and lifecycle, replacement lineage, non-transfer of evidence, partial acceptance, greenfield and brownfield candidate development, Surface and C4 structure extraction, Requirement inference and placement, material gap disposition, fixed repository gen-stack/ discovery, established-corpus authoring, governed Evaluation Protocol authoring, work-item authoring, native-format and exact-field mapping, fallback representation, transient Change Design, derived projections, repository-native Evaluation execution and Process artifacts, authority-precedence, provenance, metadata projection, relationship and lifecycle maintenance, persisted readback, partial batch failure, unsupported setup and migration, human-ratification, and routing-collision cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -91,6 +91,8 @@
       "Representation maintenance does not create a Requirement change",
       "Requirement-change decisions and blockers remain entry-specific",
       "Requirement authority remains distinct from evaluation witnesses",
+      "Evaluation Protocol role and target authority remain explicit",
+      "Protocol Coverage, evidence state, and bounded outcome remain distinct",
       "Work-item provenance remains traceable",
       "Work-item metadata remains a projection rather than authority",
       "Work-item identities and relationships remain independently recoverable",
@@ -101,7 +103,7 @@
       "Semantic matches beat similar field names",
       "Fallback structure appears only when a native affordance is absent",
       "Derived and transient artifacts do not gain false authority",
-      "Repository-native Evaluation and Process artifacts remain native",
+      "Evaluation Protocol authority remains governed while execution and Process artifacts remain native",
       "Preferred logical order converges without universal templates",
       "Local reversible delegated choices do not create ritual escalation",
       "Routing and execution claims remain distinct"
@@ -300,6 +302,16 @@
         "assertion": "The existing evaluation is retained even though it repeats the Requirement sentence, because it references RES-REQ-0050 and owns assessment rather than intent."
       },
       {
+        "gate": "Evaluation Protocol role and target authority remain explicit",
+        "case_id": 38,
+        "assertion": "Each concept uses exact type Evaluation Protocol, one unique protocol_id, active lifecycle, one role, and only that role's matching target field."
+      },
+      {
+        "gate": "Protocol Coverage, evidence state, and bounded outcome remain distinct",
+        "case_id": 38,
+        "assertion": "Executable Cases, Suites, Executions, Results, and Reports remain repository-native; no outcome or coverage is invented."
+      },
+      {
         "gate": "Native contracts precede Gen Stack residual presentation",
         "case_id": 116,
         "assertion": "The concept uses OKF frontmatter for type, title, description, status, and any truthful standard provenance fields."
@@ -330,12 +342,12 @@
         "assertion": "No synthetic document ID, OKF frontmatter, tracker status, owner, creation date, or lifecycle field is invented."
       },
       {
-        "gate": "Repository-native Evaluation and Process artifacts remain native",
+        "gate": "Evaluation Protocol authority remains governed while execution and Process artifacts remain native",
         "case_id": 122,
-        "assertion": "The existing YAML registry is used instead of an OKF document or generic Evaluation template."
+        "assertion": "The YAML registry is treated as a repository-native executable projection or binding, not a second Protocol authority."
       },
       {
-        "gate": "Repository-native Evaluation and Process artifacts remain native",
+        "gate": "Evaluation Protocol authority remains governed while execution and Process artifacts remain native",
         "case_id": 124,
         "assertion": "The BPMN model remains the canonical representation for trigger, flow, decisions, roles, and closing outcome."
       },

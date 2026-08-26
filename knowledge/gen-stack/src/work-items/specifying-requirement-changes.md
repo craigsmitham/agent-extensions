@@ -19,7 +19,7 @@ sources:
     title: Documenting requirements
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T20:16:50Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # Specifying Requirement changes in software work items
@@ -183,7 +183,7 @@ Before specifying a delta:
 1. preserve the originating Signal, Observations, and unavailable evidence;
 2. resolve every current Requirement by stable ID and canonical link;
 3. identify applicable Intent, Architecture, normative references, parent and
-   derived Requirements, Implementation, and Evaluation Definitions;
+   derived Requirements, Implementation, and Evaluation Protocols;
 4. distinguish accepted authority from source requests, current behavior,
    tests, and interpretations; and
 5. reopen the canonical Requirements immediately before mutation so a stale
@@ -238,7 +238,7 @@ For each entry, identify material impact on:
   decisions;
 - parent, derived, overlapping, or conflicting Requirements;
 - current Implementation and compatibility or migration;
-- Evaluation Definitions, coverage claims, Executions, Results, and reports;
+- Evaluation Protocols, coverage claims, Executions, Results, and reports;
 - operations, observability, rollback, and recovery; and
 - external normative-reference versions, scopes, exceptions, and lifecycle.
 
@@ -262,7 +262,7 @@ truthful or safe next action. Always name that action.
 | Revise versus replace is unresolved | Both identity options and recommendation | Canonicalization |
 | Candidate conflicts with accepted Requirements | Set conflict, options, and authority | Acceptance and dependent delivery |
 | Feasibility or verifiability is unknown | Needed analysis, prototype, or negotiation | Acceptance when material |
-| Evaluation Definition is missing | Evaluation work and evidence owner | Verification, usually not Requirement acceptance |
+| Evaluation Protocol is missing | Evaluation work and evidence owner | Verification, usually not Requirement acceptance |
 | Required evidence is unavailable | Exact unknown and affected claim | Only the dependent claim or action |
 | Canonical baseline changed | New baseline and re-orientation | Mutation |
 | External target or version is unclear | Exact conformance target and adoption scope | Acceptance |
@@ -312,7 +312,7 @@ permission to use work-item prose as Compilation input.
 After canonicalization:
 
 - let implementation work link the active Requirements;
-- update or create Evaluation Definitions under their own authority;
+- update or create Evaluation Protocols under their own authority;
 - preserve historical Results and predecessor coverage without relabeling;
 - record satisfaction, non-satisfaction, or unknown separately from acceptance;
 - keep rollout, migration, and recovery with delivery authorities; and

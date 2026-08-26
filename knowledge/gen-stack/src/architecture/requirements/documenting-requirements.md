@@ -25,7 +25,7 @@ sources:
     title: INCOSE Guide to Writing Requirements, version 4
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T20:16:50Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # Documenting requirements
@@ -312,7 +312,7 @@ reference, or lifecycle changes, apply [Specifying Requirement
 changes](/work-items/specifying-requirement-changes.md). Analyze the candidate
 delta before editing canonical desired state, preserve the decision and its
 authority, and reconcile affected sources, derived Requirements, Architecture,
-realization, Evaluation Definitions, and evidence routes.
+realization, Evaluation Protocols, and evidence routes.
 
 Retain the identifier for a revision only when the accepted obligation keeps
 its identity. A subject change is identity-significant and requires an explicit

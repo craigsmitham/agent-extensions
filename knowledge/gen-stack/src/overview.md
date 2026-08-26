@@ -12,7 +12,7 @@ sources:
     title: John R. Boyd — The Essence of Winning and Losing
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T20:46:52Z
+  at: 2026-08-26T23:10:00Z
 ---
 
 # How the Gen Stack operates
@@ -85,7 +85,7 @@ new Intent, Requirements, or Architecture.
                  ↙              ↘
        Architecture  ⇄  Requirements
                  ↘              ↙
-           Compilation and Evaluation Definition
+           Compilation and Evaluation Protocol
                  ↓                   ↓
         Implementation revision  Evaluation Execution
                  └────────── assessed by ──────────┘
@@ -94,7 +94,7 @@ new Intent, Requirements, or Architecture.
 ```
 
 Compilation translates accepted Requirements and Architecture into bounded
-Implementation changes. Evaluation Definitions turn accepted obligations,
+Implementation changes. Evaluation Protocols turn accepted obligations,
 architectural claims, risks, and assurance needs into reusable assessment
 contracts. They guide realization by making success and failure observable,
 but they do not own desired state. Evaluation Executions apply those contracts
@@ -153,12 +153,17 @@ lineage, authority, blocker, and reconciliation model without making the work
 item a second normative Requirement authority.
 
 [Evaluation as bounded evidence](evaluations/evaluation-as-bounded-evidence.md)
-explains why tests are only one Evaluation method and how Definitions,
+explains why tests are only one Evaluation method and how Protocols,
 Executions, Results, observations, assurance, and decisions retain distinct
-authority. [Designing a system evaluation
-approach](evaluations/designing-a-system-evaluation-approach.md) turns those
-distinctions into subject- and Requirement-navigable portfolios and separate
-Requirement-satisfaction and Architecture-realization reports.
+authority. [Evaluation Protocols as assessment
+contracts](evaluations/evaluation-protocols-as-assessment-contracts.md) and
+[Designing Evaluation Protocols](evaluations/designing-evaluation-protocols.md)
+turn those distinctions into Requirement-, Architecture-, and
+Implementation-shaped assessment contracts with separate reporting
+projections. [Deriving evaluation coverage in
+harnesses](evaluations/deriving-evaluation-coverage-in-harnesses.md) shows how
+repository tooling can consume policy-neutral candidates without making the
+inspection layer own coverage selection, Suite bindings, or execution policy.
 
 The loop is inspired by Chad Fowler's account of a generative stack that moves
 from human intent through structured clauses, evaluations, implementation, and
@@ -188,7 +193,7 @@ Gen Stack meaning → native artifact format → applicable profile
 
 Use the native format or host as the first presentation contract. An OKF
 concept uses the OKF envelope; a work item uses exact tracker fields; an
-Evaluation Definition, Process model, schema, or implementation artifact uses
+  Evaluation Protocol, Process model, schema, or implementation artifact uses
 its repository-owned format. Apply a declared profile only as a delta over
 that native contract. Add Gen Stack-specific structure only for meaning that
 neither layer can carry faithfully.
@@ -225,12 +230,13 @@ preserve links to their canonical sources.
 
 | Artifact class | Native representation owner | Gen Stack addition |
 | --- | --- | --- |
-| Governed System, Intent, Requirement, Architecture, and System Evaluation Approach concepts | OKF v0.2 plus the adopted application profile | Only the profile delta and Guide-supported residual body meaning |
+| Governed System, Intent, Requirement, Architecture, and Evaluation Protocol concepts | OKF v0.2 plus the adopted application profile | Only the profile delta and Guide-supported residual body meaning |
 | Work items and work-item Specifications | Tracker identity, fields, relationships, and body | Artifact-specific logical body order, evidence and authority distinctions, and fallback facts the host cannot express |
 | Change Design | Conversation, work item, or established repository design format | Proportional reasoning and explicit maturity; no mandatory document |
 | Process definitions | Repository process notation, workflow model, or executable format | Residual purpose, authority, rationale, exclusions, evidence, and limits |
 | Implementation Units and generation records | Repository code, schema, configuration, manifest, and provenance formats | Stable links to accepted authorities and bounded conservation context |
-| Evaluation Definitions, Suites, Executions, Results, and Reports | Repository evaluation schemas, runners, and evidence stores | Stable Requirement and Architecture relationships and bounded evidence semantics |
+| Evaluation Protocols | Governed OKF concepts under `gen-stack/evaluations/protocols/` | Stable role, target, claim, assessment, judgment, and evidence lifecycle |
+| Evaluation Suites, Executions, Results, and Reports | Repository evaluation schemas, runners, and evidence stores | Protocol and Case identity, bounded provenance, role-separated projections, and explicit unknowns |
 | Signals, Observations, Orientations, Decisions, and Actions | Their source system, telemetry, work item, decision record, or current conversation | Only context and distinctions needed for the bounded control-loop step |
 | Dashboards, summaries, reciprocal links, and exports | Generated projection over canonical sources | Declared scope, as-of context, source links, and honest unknowns |
 

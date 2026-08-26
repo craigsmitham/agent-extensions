@@ -31,7 +31,7 @@ sources:
     title: Open Knowledge Format v0.2
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T19:12:18Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # Specifying external-conformance requirements
@@ -158,7 +158,7 @@ and permitted variability unresolved.
 | External normative reference | Its definitions, provisions, and conformance semantics |
 | Local application profile, when applicable | Additional permitted restrictions and conformance rules |
 | Applicability or disposition mapping | The interpretation of which external provisions apply locally; not a copied normative specification |
-| Evaluation Definition | Validator, inspection, test, sampling, oracle, criteria, and conditions |
+| Evaluation Protocol | Validator, inspection, test, sampling, oracle, criteria, and conditions |
 | Evaluation Result | The observations and outcomes for one identified target revision and attempt |
 
 Name the external authority in the Requirement's normative expression and link
@@ -180,7 +180,7 @@ generate an applicability and evidence view outside the Requirement:
 external provision
     → applicable / not applicable / tailored / unresolved
     → local subject or Requirement
-    → Evaluation Definition
+    → Evaluation Protocol
     → bounded Result
 ```
 

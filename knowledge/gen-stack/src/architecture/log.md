@@ -1,11 +1,15 @@
 # Software architecture update log
 
 Historical entries below describe the retired architecture-specific profile.
-The current normative profile is `gen-stack` version `0.4.0` under
+The current normative profile is `gen-stack` version `0.5.0` under
 `../profile/`; this log does not define compatibility behavior.
 
 ## 2026-08-26
 
+- **Evaluation Protocol integration**: Profile `0.5.0` makes durable assessment
+  contracts follow Requirement, Architecture, and Implementation authority;
+  Architecture realization targets include accepted Architecture subjects and
+  decisions while excluding C4 Views as projections.
 - **Candidate development and canonical recording**: Added a shared guide for
   evidence extraction, gap classification, element routing, subject placement,
   human authority, and blocking status, plus distinct development guides for

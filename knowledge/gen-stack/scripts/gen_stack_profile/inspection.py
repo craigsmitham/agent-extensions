@@ -14,9 +14,10 @@ from typing import Any, Iterable
 
 from .corpus import Concept, load_concepts
 from .profile import (
+    ARCHITECTURE_REALIZATION_TYPES,
     ARCHITECTURE_VIEWS,
     C4_ELEMENTS,
-    EVALUATION_APPROACH_PATH,
+    EVALUATION_PROTOCOL_TYPE,
     GOVERNED_TYPES,
     PROFILE_ID,
     PROFILE_VERSION,
@@ -26,9 +27,9 @@ from .profile import (
 from .relationships import Edge, RelationshipAnalysis, analyze_relationships
 
 
-SCHEMA_VERSION = "gen-stack-inspection/v1alpha1"
+SCHEMA_VERSION = "gen-stack-inspection/v1alpha2"
 PRODUCER_NAME = "gen-stack-inspection"
-PRODUCER_VERSION = "0.1.0"
+PRODUCER_VERSION = "0.2.0"
 MAX_SEARCH_RESULTS = 50
 MAX_GRAPH_RESULTS = 500
 MAX_CONCEPT_BYTES = 2 * 1024 * 1024
@@ -237,6 +238,7 @@ class InspectionPlane:
         self.conforming = self.state == "conforming" and self.structural_result == "pass"
         self.concepts: dict[PurePosixPath, Concept] = {}
         self.requirement_ids: dict[str, PurePosixPath] = {}
+        self.protocol_ids: dict[str, PurePosixPath] = {}
         self.analysis = RelationshipAnalysis({}, {}, {}, [])
         self.edges: tuple[Edge, ...] = ()
         self.edge_by_ref: dict[str, Edge] = {}
@@ -259,6 +261,12 @@ class InspectionPlane:
                 for relative, concept in self.concepts.items()
                 if concept.metadata.get("type") == "Requirement"
                 and isinstance(concept.metadata.get("requirement_id"), str)
+            }
+            self.protocol_ids = {
+                str(concept.metadata["protocol_id"]): relative
+                for relative, concept in self.concepts.items()
+                if concept.metadata.get("type") == EVALUATION_PROTOCOL_TYPE
+                and isinstance(concept.metadata.get("protocol_id"), str)
             }
             requirements: dict[PurePosixPath, list[PurePosixPath]] = defaultdict(list)
             children: dict[PurePosixPath, list[PurePosixPath]] = defaultdict(list)
@@ -436,6 +444,8 @@ class InspectionPlane:
         candidate = value.strip()
         if candidate in self.requirement_ids:
             return self.requirement_ids[candidate]
+        if candidate in self.protocol_ids:
+            return self.protocol_ids[candidate]
         if candidate.startswith("gen-stack/"):
             candidate = candidate[len("gen-stack/") :]
         candidate = candidate.lstrip("/")
@@ -480,6 +490,25 @@ class InspectionPlane:
                     "subject": concept.metadata.get("subject"),
                 }
             )
+        if concept.metadata.get("type") == EVALUATION_PROTOCOL_TYPE:
+            role = concept.metadata.get("evaluation_role")
+            target_field = {
+                "requirement-satisfaction": "requirements",
+                "architecture-realization": "architecture_authorities",
+                "implementation-conformance": "implementation_units",
+            }.get(role)
+            summary.update(
+                {
+                    "protocol_id": concept.metadata.get("protocol_id"),
+                    "protocol_lifecycle": concept.metadata.get(
+                        "protocol_lifecycle"
+                    ),
+                    "evaluation_role": role,
+                    "targets": concept.metadata.get(target_field, [])
+                    if target_field
+                    else [],
+                }
+            )
         return summary
 
     def _concept_view(
@@ -500,6 +529,12 @@ class InspectionPlane:
                 "requirement_type",
                 "requirement_lifecycle",
                 "subject",
+                "protocol_id",
+                "protocol_lifecycle",
+                "evaluation_role",
+                "requirements",
+                "architecture_authorities",
+                "implementation_units",
             }
         }
         view = self._concept_summary(relative)
@@ -557,6 +592,7 @@ class InspectionPlane:
             "show",
             "search",
             "evaluation-context",
+            "evaluation-candidates",
             "snapshot",
             "path",
             "why",
@@ -638,7 +674,7 @@ class InspectionPlane:
                 "Architecture Decision Policy",
                 "System Assurance",
             },
-            "evaluations": {"System Evaluation Approach"},
+            "evaluations": {EVALUATION_PROTOCOL_TYPE},
         }
         if kind not in selectors:
             raise InspectionFailure(
@@ -725,14 +761,27 @@ class InspectionPlane:
             description = str(concept.metadata.get("description", "")).casefold()
             concept_type = str(concept.metadata.get("type", "")).casefold()
             requirement_id = str(concept.metadata.get("requirement_id", "")).casefold()
+            protocol_id = str(concept.metadata.get("protocol_id", "")).casefold()
             reference = _ref(relative).casefold()
             body = concept.body.casefold()
-            haystack = " ".join((title, description, concept_type, requirement_id, reference, body))
+            haystack = " ".join(
+                (
+                    title,
+                    description,
+                    concept_type,
+                    requirement_id,
+                    protocol_id,
+                    reference,
+                    body,
+                )
+            )
             if not all(term in haystack for term in terms):
                 continue
             score = 0
             phrase = query.casefold().strip()
             if requirement_id == phrase:
+                score += 100
+            if protocol_id == phrase:
                 score += 100
             if title == phrase:
                 score += 80
@@ -845,28 +894,291 @@ class InspectionPlane:
             },
         }
 
-    def evaluation_context(self, value: str | None = None) -> dict[str, object]:
-        self.require_conforming("evaluation-context")
+    def _evaluation_scope(
+        self,
+        value: str | None,
+        *,
+        operation: str,
+        eligible_types: set[str] | frozenset[str],
+    ) -> tuple[
+        PurePosixPath | None,
+        set[PurePosixPath],
+        set[PurePosixPath],
+        list[PurePosixPath],
+    ]:
         primary = self.resolve(value) if value is not None else None
-        if primary is not None and self.concepts[primary].metadata.get("type") not in REQUIREMENT_SUBJECT_TYPES:
+        if (
+            primary is not None
+            and self.concepts[primary].metadata.get("type") not in eligible_types
+        ):
             raise InspectionFailure(
                 "ineligible-evaluation-subject",
-                f"{_ref(primary)} is not an eligible Architecture subject.",
+                f"{_ref(primary)} is not an eligible Architecture subject for {operation}.",
             )
-
-        hierarchy_types = {"Surface", *C4_ELEMENTS}
         if primary is None:
             included = {
                 relative
                 for relative, concept in self.concepts.items()
-                if concept.metadata.get("type") in REQUIREMENT_SUBJECT_TYPES
+                if concept.metadata.get("type") in eligible_types
             }
-            primary_scope: set[PurePosixPath] = set(included)
-            ancestors: list[PurePosixPath] = []
-        else:
-            primary_scope = self._descendants({primary})
-            included = self._cross_view_closure(set(primary_scope))
-            ancestors = self._ancestors(primary)
+            return primary, set(included), included, []
+        primary_scope = self._descendants({primary})
+        return (
+            primary,
+            primary_scope,
+            self._cross_view_closure(set(primary_scope)),
+            self._ancestors(primary),
+        )
+
+    def _matching_protocols(
+        self, role: str, target: str
+    ) -> dict[str, list[dict[str, object]]]:
+        matches: dict[str, list[dict[str, object]]] = {
+            "active": [],
+            "retired": [],
+        }
+        for relative, concept in sorted(self.concepts.items()):
+            if (
+                concept.metadata.get("type") != EVALUATION_PROTOCOL_TYPE
+                or concept.metadata.get("evaluation_role") != role
+            ):
+                continue
+            target_field = {
+                "requirement-satisfaction": "requirements",
+                "architecture-realization": "architecture_authorities",
+                "implementation-conformance": "implementation_units",
+            }[role]
+            if target not in concept.metadata.get(target_field, []):
+                continue
+            lifecycle = str(concept.metadata.get("protocol_lifecycle"))
+            if lifecycle in matches:
+                matches[lifecycle].append(self._concept_summary(relative))
+        return matches
+
+    def _scope_relation(
+        self,
+        relative: PurePosixPath,
+        *,
+        primary: PurePosixPath | None,
+        primary_scope: set[PurePosixPath],
+    ) -> str:
+        if primary is None:
+            return "complete-corpus"
+        if relative == primary:
+            return "primary"
+        if relative in primary_scope:
+            return "descendant"
+        return "cross-view"
+
+    def evaluation_candidates(self, value: str | None = None) -> dict[str, object]:
+        """Project policy-neutral Evaluation role-and-target candidates."""
+
+        self.require_conforming("evaluation-candidates")
+        primary, primary_scope, included, ancestors = self._evaluation_scope(
+            value,
+            operation="evaluation-candidates",
+            eligible_types=ARCHITECTURE_REALIZATION_TYPES,
+        )
+        candidate_subjects = {
+            relative
+            for relative in included
+            if self.concepts[relative].metadata.get("type")
+            in ARCHITECTURE_REALIZATION_TYPES
+        }
+
+        candidates: list[dict[str, object]] = []
+        excluded: list[dict[str, object]] = []
+        requirement_paths = sorted(
+            {
+                requirement
+                for subject in candidate_subjects
+                for requirement in self.requirements_by_subject.get(subject, [])
+            },
+            key=lambda path: str(self.concepts[path].metadata.get("requirement_id")),
+        )
+        for relative in requirement_paths:
+            concept = self.concepts[relative]
+            requirement_id = str(concept.metadata.get("requirement_id"))
+            subject = self.resolve(str(concept.metadata.get("subject")))
+            scope_relation = self._scope_relation(
+                subject,
+                primary=primary,
+                primary_scope=primary_scope,
+            )
+            if concept.metadata.get("requirement_lifecycle") == "retired":
+                excluded.append(
+                    {
+                        "role": "requirement-satisfaction",
+                        "target": self._concept_summary(relative),
+                        "reason": "retired-requirement",
+                        "scope_relation": scope_relation,
+                    }
+                )
+                continue
+            candidates.append(
+                {
+                    "role": "requirement-satisfaction",
+                    "protocol_target": requirement_id,
+                    "target": self._concept_summary(relative),
+                    "subject": self._concept_summary(subject),
+                    "basis": "active-direct-requirement",
+                    "scope_relation": scope_relation,
+                    "matching_protocols": self._matching_protocols(
+                        "requirement-satisfaction", requirement_id
+                    ),
+                }
+            )
+
+        for relative in sorted(candidate_subjects):
+            target = _ref(relative)
+            candidates.append(
+                {
+                    "role": "architecture-realization",
+                    "protocol_target": target,
+                    "target": self._concept_summary(relative),
+                    "subject": None,
+                    "basis": "eligible-architecture-authority",
+                    "scope_relation": self._scope_relation(
+                        relative,
+                        primary=primary,
+                        primary_scope=primary_scope,
+                    ),
+                    "matching_protocols": self._matching_protocols(
+                        "architecture-realization", target
+                    ),
+                }
+            )
+
+        if primary is None:
+            implementation_targets = sorted(
+                {
+                    str(target)
+                    for concept in self.concepts.values()
+                    if concept.metadata.get("type") == EVALUATION_PROTOCOL_TYPE
+                    and concept.metadata.get("evaluation_role")
+                    == "implementation-conformance"
+                    and concept.metadata.get("protocol_lifecycle") == "active"
+                    for target in concept.metadata.get("implementation_units", [])
+                }
+            )
+            for target in implementation_targets:
+                candidates.append(
+                    {
+                        "role": "implementation-conformance",
+                        "protocol_target": target,
+                        "target": {
+                            "ref": target,
+                            "type": "Implementation Unit",
+                        },
+                        "subject": None,
+                        "basis": "active-protocol-declared-implementation-unit",
+                        "scope_relation": "complete-corpus",
+                        "matching_protocols": self._matching_protocols(
+                            "implementation-conformance", target
+                        ),
+                    }
+                )
+
+        projected_views: set[PurePosixPath] = set()
+        for relative, concept in sorted(self.concepts.items()):
+            if concept.metadata.get("type") != "C4 View":
+                continue
+            projected = {
+                edge.object
+                for edge in self.edges
+                if edge.relationship_id == "c4-view-projects-element"
+                and edge.subject == relative
+                and isinstance(edge.object, PurePosixPath)
+            }
+            if primary is None or projected.intersection(included):
+                projected_views.add(relative)
+        for relative in sorted(projected_views):
+            excluded.append(
+                {
+                    "role": "architecture-realization",
+                    "target": self._concept_summary(relative),
+                    "reason": "c4-view-is-projection",
+                    "scope_relation": "context",
+                }
+            )
+
+        role_order = {
+            "requirement-satisfaction": 0,
+            "architecture-realization": 1,
+            "implementation-conformance": 2,
+        }
+        candidates.sort(
+            key=lambda item: (
+                role_order[str(item["role"])],
+                str(item["protocol_target"]),
+            )
+        )
+        excluded.sort(
+            key=lambda item: (
+                role_order[str(item["role"])],
+                str(item["target"].get("ref", "")),
+            )
+        )
+        data = {
+            "scope": {
+                "primary": self._concept_summary(primary) if primary else None,
+                "mode": "scoped" if primary else "complete-corpus",
+            },
+            "candidates": candidates,
+            "excluded": excluded,
+            "ancestor_context": [
+                self._concept_summary(relative) for relative in ancestors
+            ],
+            "interpretation": {
+                "candidate_meaning": "eligible role-and-target pair for consideration",
+                "selection_claim": "not-assessed",
+                "coverage_claim": "not-assessed",
+                "protocol_adequacy_claim": "not-assessed",
+                "requirement_association": "direct-only",
+                "requirement_inheritance": "not-inferred",
+                "implementation_discovery": "active-protocol-targets-only",
+            },
+        }
+        return self.envelope(
+            "evaluation-candidates",
+            data,
+            unknowns=[
+                {
+                    "claim": "candidate-selection",
+                    "reason": "An adopting policy or assurance authority determines which candidates are in scope for required coverage.",
+                },
+                {
+                    "claim": "evaluation-coverage",
+                    "reason": "Matching Protocols are projected, but applicability and required coverage depend on a separately supplied scope or policy.",
+                },
+                {
+                    "claim": "protocol-adequacy",
+                    "reason": "Protocol presence does not establish that its claim, assessment, or judgment adequately evaluates the target.",
+                },
+                {
+                    "claim": "executable-realization",
+                    "reason": "Suites, executable Cases, bindings, and discovery remain repository-native.",
+                },
+                {
+                    "claim": "implementation-candidate-completeness",
+                    "reason": "Corpus inspection exposes only Implementation Units already targeted by active Protocols and cannot discover uncovered Units.",
+                },
+                {
+                    "claim": "evidence-and-outcome",
+                    "reason": "Candidate projection does not inspect Executions, evidence state, Results, or outcomes.",
+                },
+            ],
+        )
+
+    def evaluation_context(self, value: str | None = None) -> dict[str, object]:
+        self.require_conforming("evaluation-context")
+        primary, primary_scope, included, ancestors = self._evaluation_scope(
+            value,
+            operation="evaluation-context",
+            eligible_types=REQUIREMENT_SUBJECT_TYPES,
+        )
+
+        hierarchy_types = {"Surface", *C4_ELEMENTS}
 
         surface_starts = sorted(
             relative
@@ -969,9 +1281,11 @@ class InspectionPlane:
             "cross_view_mappings": mappings,
             "c4_views": projected_views,
             "governance": {
-                "system_evaluation_approach": self._governance_view(
-                    PurePosixPath(EVALUATION_APPROACH_PATH)
-                ),
+                "evaluation_protocols": [
+                    self._governance_view(relative)
+                    for relative, concept in sorted(self.concepts.items())
+                    if concept.metadata.get("type") == EVALUATION_PROTOCOL_TYPE
+                ],
                 "system_assurance": self._governance_view(
                     PurePosixPath("assurance.md")
                 ),
@@ -994,7 +1308,7 @@ class InspectionPlane:
                 },
                 {
                     "claim": "evaluation-coverage",
-                    "reason": "Concrete Evaluation artifacts and coverage mappings are outside this projection.",
+                    "reason": "Protocol presence is projected, but coverage scope, evidence state, and outcomes require a separate assessment.",
                 },
             ],
         )
@@ -1109,11 +1423,15 @@ class InspectionPlane:
                     "kind": (
                         "stable-requirement-id"
                         if concept.metadata.get("type") == "Requirement"
+                        else "stable-protocol-id"
+                        if concept.metadata.get("type") == EVALUATION_PROTOCOL_TYPE
                         else "okf-path-derived"
                     ),
                     "reference": (
                         concept.metadata.get("requirement_id")
                         if concept.metadata.get("type") == "Requirement"
+                        else concept.metadata.get("protocol_id")
+                        if concept.metadata.get("type") == EVALUATION_PROTOCOL_TYPE
                         else _ref(relative)
                     ),
                     "canonical_path": f"gen-stack/{relative.as_posix()}",

@@ -13,7 +13,7 @@ sources:
     title: Developing candidate Architecture and Requirements
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T20:46:52Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # Adopting Gen Stack
@@ -46,7 +46,7 @@ operational maturity:
 | OKF conformance | Required and passing |
 | Gen Stack profile structural conformance | Required and passing |
 | Semantic review of governed meaning | Required and passing through a named review authority |
-| Required cross-cutting kernel and System Evaluation Approach | Present, accepted, and conforming |
+| Required cross-cutting kernel and Evaluation navigation | Present, accepted, and conforming |
 | Optional Intent and Architecture coverage | May be incomplete; every admitted concept must conform |
 | Requirement coverage | Unassessed or unaccepted areas may remain incomplete; every known accepted obligation in scope must have one active canonical Requirement |
 | Implementation realization | May be `pass`, `fail`, or `unknown` from bounded evidence |
@@ -77,7 +77,7 @@ Before creating the adopted corpus, identify:
 - the supported Gen Stack profile version;
 - the human or institutional authorities that can accept the System boundary,
   lifecycle, ownership, Architecture Decision policy, assurance posture,
-  System Evaluation Approach, Architecture, and Requirements;
+  Evaluation Protocols, Architecture, and Requirements;
 - the authoritative or evidentiary sources available to those decisions; and
 - the day-one coverage boundary and known material omissions.
 
@@ -134,7 +134,7 @@ authorities and maturity.
 | Contract, policy, law, or external standard | Possible Requirement source or incorporated normative reference |
 | API, schema, compatibility commitment, or runbook | Peer authority or evidence according to local governance |
 | Code, configuration, deployment, and data layout | Implementation evidence |
-| Test or other reusable assessment | Evaluation Definition or witness, never automatically a Requirement |
+| Test or other reusable assessment | Candidate Evaluation Protocol, Case, or witness, never automatically a Requirement |
 | Execution result, telemetry, support report, or incident | Evaluation Result, Observation, or Signal according to its native meaning |
 | Repeated relied-upon behavior without accepted desired state | Evidence for an inferred candidate obligation |
 
@@ -182,29 +182,33 @@ If an authority cannot truthfully accept one of these concepts, adoption is
 blocked. Do not replace the missing decision with `unknown`, `TBD`, an empty
 section, a guessed owner, or a generic policy.
 
-## 4. Ratify the System Evaluation Approach
+## 4. Admit Evaluation Protocols and navigation
 
-Create `evaluations/index.md` and
-`evaluations/system-evaluation-approach.md` through [Designing a System
-Evaluation Approach](/evaluations/designing-a-system-evaluation-approach.md).
-Use the exact type, path, and required headings from the profile.
+Create `evaluations/index.md` as navigation. Admit each durable accepted
+assessment claim through [Designing Evaluation
+Protocols](/evaluations/designing-evaluation-protocols.md), using the exact
+role-specific path, fields, and headings from the profile. Omit
+`evaluations/protocols/` when no Protocol is yet accepted; report the resulting
+coverage gaps separately rather than inventing a portfolio.
 
-The Approach may truthfully begin with sparse evidence. It must still state:
+For each admitted Protocol, establish:
 
-- the System, realized-state boundary, decisions supported, and material
-  exclusions;
-- the known portfolio of repository-native Evaluation Definitions and their
-  roles;
-- how evidence is found by Architecture subject, Requirement ID, and
-  Evaluation Role when those concepts or Definitions exist;
+- one role and its matching Requirement, Architecture, or Implementation
+  targets;
+- a bounded claim, assessment method or sampling strategy, judgment procedure,
+  and evidence lifecycle;
+- how repository-native Cases, Suites, Executions, Results, and Reports link to
+  the Protocol;
+- how evidence is found by Architecture subject, Requirement ID, Protocol role,
+  or Implementation Unit;
 - where Executions, Results, and Reports remain authoritative;
 - how provenance, `unknown`, failures, and harness errors are preserved; and
-- current coverage gaps, stewardship, lifecycle, and review triggers.
+- stewardship, refresh, and retirement triggers.
 
-Do not copy concrete Evaluation artifacts into the governed corpus, fabricate
-an evaluation portfolio, or turn an absent Result into a pass. An accepted
-approach to finding, interpreting, and improving sparse evidence can conform
-even while coverage and satisfaction remain incomplete.
+Do not copy run evidence into the governed corpus, fabricate Protocol coverage,
+or turn an absent Result into a pass. A conforming corpus can have sparse or no
+Protocols while coverage, evidence state, and outcomes remain explicitly
+incomplete or unknown.
 
 ## 5. Select optional day-one coverage
 
@@ -241,8 +245,8 @@ Follow the application profile rather than reconstructing its layout here.
 Within one coherent adoption change:
 
 1. create `gen-stack/` at the repository root as an OKF v0.2 bundle;
-2. author the five required root concepts and the required Evaluation
-   navigation and System Evaluation Approach;
+2. author the five required root concepts and required Evaluation navigation,
+   plus only accepted Evaluation Protocols;
 3. author only the accepted optional concepts and Requirements selected for
    day one;
 4. add only navigation earned by maintained concepts and keep every concept
@@ -252,10 +256,11 @@ Within one coherent adoption change:
 6. make `gen-stack/index.md` explicitly adopt and link the supported Gen Stack
    profile version.
 
-Keep Implementation, concrete Evaluations, Signals, Observations, work items,
-and operational records in their repository-native authorities. Link them
-where their meaning and host permit; do not move or copy them merely to make
-the corpus appear complete.
+Keep Implementation, Evaluation Suites, Cases that do not need governed
+identity, Executions, Results, Reports, Signals, Observations, work items, and
+operational records in their repository-native authorities. Link them where
+their meaning and host permit; do not move or copy them merely to make the
+corpus appear complete.
 
 ## 7. Validate before activation
 
@@ -291,7 +296,7 @@ Named semantic review: pass | fail | unknown
 Declared corpus coverage: <bounded statement>
 Known coverage gaps: <identified gaps or none known within the assessed scope>
 Implementation realization: pass | fail | mixed | unknown, with evidence scope
-Evaluation coverage and Requirement satisfaction: pass | fail | mixed | unknown, with evidence scope
+Protocol coverage, evidence state, and outcomes: <separate role-specific projections>
 Operational fitness or release decision: <separate authority and result | not assessed>
 ```
 
@@ -308,8 +313,8 @@ governed corpus, and reassess the kernel when its named triggers occur.
 
 - The corpus occupies exactly `<repository-root>/gen-stack/` and its root
   index declares OKF v0.2 and supported-profile adoption.
-- All five root governance concepts and the System Evaluation Approach are
-  present, accepted, conforming, and reachable.
+- All five root governance concepts and Evaluation navigation are present,
+  accepted, conforming, and reachable; every admitted Protocol also conforms.
 - Greenfield proposals or brownfield implementation evidence did not become
   desired state without ratification.
 - Optional day-one coverage is bounded rather than padded with speculative or
@@ -318,8 +323,8 @@ governed corpus, and reassess the kernel when its named triggers occur.
   active canonical Requirement; only unassessed or unaccepted meaning remains
   outside the corpus.
 - Every admitted Requirement has one eligible subject and one normative owner.
-- Peer Implementation, Evaluation, Signal, Observation, work-item, and
-  operational authorities remain repository-native.
+- Peer Implementation, Evaluation execution and evidence, Signal, Observation,
+  work-item, and operational authorities remain repository-native.
 - OKF, structural profile, and named semantic-review results all pass.
 - Coverage, realization, satisfaction, and fitness remain separate and retain
   `unknown` or failure where evidence requires it.

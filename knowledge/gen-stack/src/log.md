@@ -2,6 +2,48 @@
 
 ## 2026-08-26
 
+- **Cross-stack incoherence diagnosis**: Added [Diagnosing and reconciling
+  cross-stack
+  incoherence](control-loop/diagnosing-and-reconciling-cross-stack-incoherence.md),
+  a bounded Guide for diagnosing drift, missing meaning, contradictions, and
+  Evaluation gaps without presuming which part of the stack is wrong. The
+  workflow uses Evaluations as discriminating evidence, routes repairs to
+  their canonical owners and authorities, and preserves partial, deferred, and
+  unknown outcomes without introducing a standing Process or new governed
+  concept.
+- **Gen Stack 0.17.0 — policy-neutral evaluation candidates**: Added the
+  read-only `evaluation-candidates` operation, machine contract
+  `gen-stack-inspection/v1alpha2`, public synthetic example, and harness
+  integration guidance. The projection derives eligible Requirement and
+  Architecture role-and-target pairs, exposes active and retired Protocol
+  matches, records retired-Requirement and C4 View exclusions, and limits
+  Implementation discovery to Units already named by active Protocols. It
+  explicitly does not select required coverage, judge Protocol adequacy,
+  discover uncovered Implementation Units, bind Suites, execute evaluations,
+  or establish evidence, outcomes, assurance, or release authorization.
+  Profile `0.5.0` remains unchanged because the addition is a read-only
+  projection, not a new governed corpus concept or field.
+- **Gen Stack pack 2.9.0**: Advances the bundled knowledge dependency to
+  `0.17.0` while retaining skill `1.8.0`; the harness integration is knowledge
+  and inspection behavior and does not expand the skill's authoring authority.
+- **Gen Stack 0.16.0 and profile 0.5.0 — governed Evaluation Protocols**:
+  Replaced the required System Evaluation Approach with optional, durable
+  Evaluation Protocols organized by `requirement-satisfaction`,
+  `architecture-realization`, or `implementation-conformance`. Added
+  role-specific targets, Protocol lifecycle, Case and Coverage semantics,
+  three-axis reporting, executable validation, inspection projection, focused
+  guidance, and a synthetic Pet Store example. `evaluations/index.md` remains
+  required navigation; Suites, executable Cases, Executions, Results, Reports,
+  and run evidence remain repository-native.
+- **Stable evaluation vocabulary migration**: Made Evaluation Protocol the
+  preferred label while retaining stable identifier `evaluation-definition`
+  and the established relationship IDs whose meaning remains continuous.
+  Retired System Evaluation Approach and redistributed its responsibilities to
+  System, System Assurance, Protocols, Suites, Executions, Results, Reports,
+  derived navigation, and work items.
+- **Gen Stack skill 1.8.0 and pack 2.8.0**: Added governed Protocol authoring to
+  established-corpus work, preserved the boundary against executable tests and
+  evaluation runs, and revised behavioral cases for profile `0.5.0`.
 - **Gen Stack 0.15.0 — corpus inspection plane**: Added a read-only reusable
   inspection library, task-oriented CLI, versioned JSON Schema, deterministic
   snapshots and comparison. Humans and harnesses can resolve governed concepts

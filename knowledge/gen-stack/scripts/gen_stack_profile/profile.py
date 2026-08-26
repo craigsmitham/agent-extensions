@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 
 PROFILE_ID = "gen-stack"
-PROFILE_VERSION = "0.4.0"
+PROFILE_VERSION = "0.5.0"
 COMMON_FIELDS = ("type", "title", "description", "status")
 VALID_STATUSES = {"draft", "stable", "deprecated"}
 REQUIRED_ROOT_CONCEPTS = {
@@ -16,18 +16,39 @@ REQUIRED_ROOT_CONCEPTS = {
     "decisions.md": "Architecture Decision Policy",
     "assurance.md": "System Assurance",
 }
-EVALUATION_APPROACH_PATH = "evaluations/system-evaluation-approach.md"
-EVALUATION_APPROACH_TYPE = "System Evaluation Approach"
-EVALUATION_APPROACH_SECTIONS = (
-    "Scope and objectives",
-    "Evaluation portfolio",
-    "Navigation and reporting",
+EVALUATION_PROTOCOL_TYPE = "Evaluation Protocol"
+EVALUATION_PROTOCOL_LIFECYCLES = {"active", "retired"}
+EVALUATION_PROTOCOL_ROLES = {
+    "requirement-satisfaction": "requirements",
+    "architecture-realization": "architecture_authorities",
+    "implementation-conformance": "implementation_units",
+}
+EVALUATION_PROTOCOL_DIRECTORIES = {
+    "requirement-satisfaction": "requirements",
+    "architecture-realization": "architecture",
+    "implementation-conformance": "implementation",
+}
+EVALUATION_PROTOCOL_SECTIONS = (
+    "Claim",
+    "Assessment",
+    "Judgment",
     "Evidence and lifecycle",
-    "Gaps and maintenance",
 )
+ARCHITECTURE_REALIZATION_TYPES = {
+    "System",
+    "Architecture Decision Record",
+    "Capability",
+    "Feature",
+    "Surface",
+    "Bounded Context",
+    "Context Map",
+    "C4 Software System",
+    "C4 Container",
+    "C4 Component",
+}
 GOVERNED_TYPES = {
     *REQUIRED_ROOT_CONCEPTS.values(),
-    EVALUATION_APPROACH_TYPE,
+    EVALUATION_PROTOCOL_TYPE,
     "Architecture Decision Record",
     "Requirement",
     "Offering",
@@ -56,6 +77,7 @@ PROHIBITED_PROFILE_LIKE_TYPES = {
     "Quality Concern",
     "Risk Driver",
     "Risk Driver Set",
+    "System Evaluation Approach",
 }
 REQUIREMENT_TYPES = {
     "functional",
@@ -302,11 +324,15 @@ PEER_OWNED_RELATIONSHIP_IDS = frozenset(
         "implementation-unit-realizes-authority",
         "evaluation-definition-evaluates-requirement",
         "evaluation-definition-evaluates-architecture-realization",
+        "evaluation-protocol-evaluates-implementation-conformance",
+        "evaluation-protocol-defines-case",
         "evaluation-suite-groups-definition",
         "evaluation-execution-applies-definition",
         "evaluation-execution-assesses-implementation",
         "evaluation-execution-produces-result",
         "evaluation-result-evidences-requirement",
+        "evaluation-result-evidences-architecture-realization",
+        "evaluation-result-evidences-implementation-conformance",
         "evaluation-report-projects-result",
         "signal-draws-attention-to",
         "observation-informs-orientation",

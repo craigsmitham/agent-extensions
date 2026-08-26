@@ -9,13 +9,15 @@ The pack installs one knowledge authority and focused workflows around this
 contract:
 
 - a Gen Stack corpus owns cross-cutting system governance, Intent,
-  Architecture, subject-colocated Requirements, and the System Evaluation
-  Approach, and its sole supported repository location is `./gen-stack/`;
+  Architecture, subject-colocated Requirements, Evaluation Protocols, and
+  required Evaluation navigation, and its sole supported repository location
+  is `./gen-stack/`;
 - Intent shapes co-developed Architecture and Requirements; Architecture owns
   durable subjects and responses, while each Requirement owns one accepted
   obligation on exactly one eligible Architecture subject;
-- the repository owns Implementation and concrete Evaluation Definitions,
-  Suites, Executions, Results, and Reports; and
+- the governed corpus owns Evaluation Protocols while the repository owns
+  Implementation and executable evaluation machinery, including Suites,
+  Executions, Results, and Reports; and
 - Signals, Observations, results, and other evidence enter the OODA loop without
   becoming desired state by themselves.
 
@@ -37,15 +39,21 @@ it cannot ratify Intent, Requirements, or Architecture on a person's behalf.
 axm install @craigsmitham/packs/gen-stack
 ```
 
-Pack `2.7.0` uses Gen Stack knowledge `0.14.0`, the `gen-stack` OKF
-application profile `0.4.0`, and the unified `gen-stack` skill `1.7.0`. The
+Pack `2.9.0` uses Gen Stack knowledge `0.17.0`, the `gen-stack` OKF
+application profile `0.5.0`, and the unified `gen-stack` skill `1.8.0`. The
 glossary owns semantic meaning; the profile owns fixed `./gen-stack/`
 placement, discovery, and governed representation; Explanations deepen
-understanding; and Guides support action. Concrete evaluation artifacts remain
+understanding; and Guides support action. Protocols are governed; executable
+Cases and tests, Suites, Executions, Results, Reports, and run evidence remain
 repository-native.
 
-This release combines native-first representation with exact-path corpus
-inspection and stronger fixed-placement evaluation fixtures and evidence. It
+This release adds policy-neutral Evaluation candidate projection for harness
+integration while retaining governed, role-specific Evaluation Protocols and
+separate Protocol Coverage, evidence state, and bounded outcomes in reporting.
+Candidate eligibility does not select required coverage, judge Protocol
+adequacy, prescribe a Suite or adapter, or establish evidence or outcomes. The
+release also retains native-first representation, exact-path corpus
+inspection, and fixed-placement evaluation fixtures. It
 uses each artifact's native format and exact host fields first, applies the OKF
 profile only as a delta, gives every Guide an artifact-specific logical
 presentation contract, and keeps fallbacks, transient outputs, and derived

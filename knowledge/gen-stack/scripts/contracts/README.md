@@ -6,11 +6,14 @@ guide](../README.md).
 
 ## Contract
 
-Every operation returns a
-[`gen-stack-inspection/v1alpha1`](gen-stack-inspection-v1alpha1.schema.json)
+Every current operation returns a
+[`gen-stack-inspection/v1alpha2`](gen-stack-inspection-v1alpha2.schema.json)
 envelope. The schema is JSON Schema 2020-12. The
-[evaluation-context example](evaluation-context.example.json) uses only public
-synthetic data.
+[evaluation-context example](evaluation-context.example.json) and
+[evaluation-candidates example](evaluation-candidates.example.json) use only
+public synthetic data. The superseded
+[`v1alpha1` schema](gen-stack-inspection-v1alpha1.schema.json) remains available
+for consumers of retained output; it does not describe current producer output.
 
 The envelope always carries:
 
@@ -42,8 +45,9 @@ Queries return an `operation-ineligible` diagnostic instead.
 
 ## Concept identity
 
-Non-Requirement concepts use bundle-relative OKF path references beginning
-with `/`. Requirements can also be resolved by their stable `requirement_id`.
+Most concepts use bundle-relative OKF path references beginning with `/`.
+Requirements can also be resolved by stable `requirement_id`, and Evaluation
+Protocols by stable `protocol_id`.
 Source paths in outputs begin with `gen-stack/` and never contain the local
 absolute repository path.
 
@@ -68,10 +72,31 @@ Ordinary Markdown links do not create controlled relationships.
 - separate `ancestor_context` for a scoped request;
 - explicitly asserted `cross_view_mappings`;
 - C4 Views labeled as non-evaluation subjects; and
-- the System Evaluation Approach and System Assurance sources.
+- governed Evaluation Protocol and System Assurance sources.
 
 It never computes inherited Requirements, physical suite layout,
-implementation realization, or evaluation coverage.
+implementation realization, Protocol coverage, evidence state, or outcomes.
+
+## Evaluation candidates
+
+`evaluation-candidates` projects policy-neutral role-and-target pairs. It
+includes matching active and retired Protocol summaries while retaining these
+separate questions:
+
+- candidate eligibility;
+- selection by an adopting policy or authority;
+- presence of an applicable active Protocol;
+- semantic adequacy of that Protocol;
+- local executable realization; and
+- evidence state and bounded outcome.
+
+Active Requirements become candidates only through their direct subject
+assignment. Eligible Architecture authorities become architecture-realization
+candidates; C4 Views remain excluded projections. Complete-corpus inspection
+can expose Implementation Units already named by active Protocols, but cannot
+discover uncovered Units. The composite of `role` and `protocol_target`
+identifies a candidate within the bound snapshot; the operation does not mint
+a governed candidate identity.
 
 ## Snapshot and diff
 

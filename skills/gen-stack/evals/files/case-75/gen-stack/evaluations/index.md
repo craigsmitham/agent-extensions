@@ -1,5 +1,3 @@
 # Evaluations
 
-Evaluation governance for the synthetic system.
-
-- [Synthetic system evaluation approach](system-evaluation-approach.md)
+No Evaluation Protocols are admitted in this synthetic fixture.

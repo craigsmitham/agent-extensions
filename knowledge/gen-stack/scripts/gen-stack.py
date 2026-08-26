@@ -69,6 +69,12 @@ def parser() -> argparse.ArgumentParser:
     )
     context_parser.add_argument("subject", nargs="?")
 
+    candidates_parser = commands.add_parser(
+        "evaluation-candidates",
+        help="Project policy-neutral Evaluation role-and-target candidates.",
+    )
+    candidates_parser.add_argument("subject", nargs="?")
+
     commands.add_parser("snapshot", help="Emit a deterministic corpus snapshot envelope.")
 
     path_parser = commands.add_parser("path", help="Find a controlled relationship path.")
@@ -209,6 +215,8 @@ def main(argv: list[str] | None = None) -> int:
             payload = plane.search(" ".join(args.terms))
         elif args.command == "evaluation-context":
             payload = plane.evaluation_context(args.subject)
+        elif args.command == "evaluation-candidates":
+            payload = plane.evaluation_candidates(args.subject)
         elif args.command == "snapshot":
             payload = plane.snapshot()
         elif args.command == "path":

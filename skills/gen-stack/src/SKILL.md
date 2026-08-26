@@ -1,6 +1,6 @@
 ---
 name: gen-stack
-description: Assists humans with bounded Gen Stack software change by orienting Signals and evidence; developing candidate Intent, Requirement additions, revisions, retirements, replacements, Architecture, and Change Design; surfacing missing, underdeveloped, misplaced, or disputed meaning; drafting or updating software work items; and recording explicitly accepted concepts in an established `gen-stack/` supported-profile corpus. Use for issues, defects, incidents, Change Specifications, Bugfix Specifications, requirements, architecture, brownfield extraction, greenfield design, ADRs, capabilities, features, surfaces, DDD, C4, governance, and evaluation impact. Use also to recognize unsupported initial corpus setup, adoption, connection, federation, or migration requests and stop without mutation. Not for autonomous acceptance of desired state or architecture, implementation, backlog management, post-incident review, concrete Evaluation authoring, or release authorization.
+description: Assists humans with bounded Gen Stack software change by orienting Signals and evidence; developing candidate Intent, Requirement lifecycle changes, Architecture, Evaluation Protocols, and Change Design; surfacing meaning gaps; drafting software work items; and recording explicitly accepted concepts in an established supported-profile `gen-stack/` corpus. Use for defects, incidents, Change or Bugfix Specifications, requirements, architecture, ADRs, capabilities, features, surfaces, DDD, C4, governance, evaluation protocols, brownfield extraction, and greenfield design. Use also to recognize unsupported initial corpus setup, adoption, connection, federation, or migration and stop without mutation. Not for autonomous acceptance, implementation, executable test authoring, evaluation execution, backlog management, post-incident review, or release authorization.
 ---
 
 # Gen Stack
@@ -158,7 +158,7 @@ bounded enumeration within `gen-stack/` is allowed when the requested work
 requires existing corpus navigation. A directory named `gen-stack` without
 the required declaration is not an established corpus. This branch
 covers cross-cutting System governance, Intent, subject-colocated Requirements,
-Architecture, accepted ADRs, and the System Evaluation Approach. The profile's
+Architecture, accepted ADRs, and Evaluation Protocols. The profile's
 governed-type inventory is the route map; do not maintain a second
 type/path/field map here.
 
@@ -196,11 +196,11 @@ corresponding `documenting-*` guide and skips this candidate route.
 
 ### Outside this skill
 
-Implementation, concrete repository-native Evaluation Definitions or tests,
-backlog management, post-incident review, and production or release
-authorization remain with their governing workflows. Faithfully transferring
-accepted context into an in-scope artifact is allowed; performing the adjacent
-work is not.
+Implementation, executable test or Case implementation, Evaluation execution
+and evidence production, backlog management, post-incident review, and
+production or release authorization remain with their governing workflows.
+Faithfully transferring accepted context into an in-scope Protocol or other
+artifact is allowed; performing the adjacent work is not.
 
 ## Common workflow
 
@@ -345,17 +345,20 @@ searching for or migrating another corpus. Then:
   retired predecessor in a successor's `supersedes` field;
 - treat supersession as lineage only: do not infer equivalence, derivation, or
   implementation satisfaction; keep each historical Evaluation Result bound to
-  the predecessor Requirement, Evaluation Definition, Implementation revision,
+  the predecessor Requirement, Evaluation Protocol, Implementation revision,
   inputs, and environment it actually assessed, and leave successor
   satisfaction unknown until successor-specific evidence supports it;
 - preserve Intent as non-binding direction and Architecture as durable subject,
   responsibility, boundary, relationship, decision, and response meaning;
 - author only the requested governed concept and navigation it earns;
-- keep Implementation, Signals, Observations, Feedback, and concrete
-  Evaluations repository-native, using their existing schemas and link fields
-  before adding residual Gen Stack context; and
-- use the governed `evaluations/` area only for an explicitly requested System
-  Evaluation Approach and navigation.
+- keep Implementation, Signals, Observations, Feedback, executable Cases and
+  tests, Suites, Executions, Results, Reports, and other run evidence
+  repository-native, using their existing schemas and link fields before adding
+  residual Gen Stack context; and
+- use the governed `evaluations/protocols/` area for explicitly accepted
+  Evaluation Protocols, organized by Requirement-satisfaction,
+  Architecture-realization, or Implementation-conformance role; keep
+  `evaluations/index.md` navigational and do not invent Protocol coverage.
 
 Follow the selected Author Guide and exact profile structure. For one accepted
 Requirement, put the normative expression in `## Requirement` and its reason in

@@ -1,7 +1,7 @@
 ---
 type: Explanation
 title: Evaluation as bounded evidence
-description: Why Evaluation is broader than testing but narrower than assurance, and how Definitions, Executions, Results, observations, and decisions retain distinct authority.
+description: Why Evaluation is broader than testing but narrower than assurance, and how Protocols, Executions, Results, observations, and decisions retain distinct authority.
 tags: [evaluations, evidence, testing, verification, validation, assurance, provenance, monitoring, requirements]
 status: draft
 sources:
@@ -31,7 +31,7 @@ sources:
     title: Google SRE — Monitoring Distributed Systems
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T19:12:18Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # Evaluation as bounded evidence
@@ -68,19 +68,20 @@ Gen Stack keeps them separate:
 | Identity | What it owns | What it does not own |
 | --- | --- | --- |
 | Requirement | The accepted obligation and its stable identity | The assessment method or current satisfaction state |
-| Evaluation Definition | The assessed subject and criteria, method, cases or sampling, oracle or judgment procedure, thresholds, and conditions | The accepted obligation, one execution, or its observations |
-| Evaluation Execution | One bounded application of a Definition to identified inputs or observations, environment, realized state, and evaluator | The reusable method or a conclusion beyond that attempt or window |
+| Evaluation Protocol | One bounded claim and role, its criteria authority, method, cases or sampling, oracle or judgment procedure, thresholds, conditions, and evidence lifecycle | The accepted obligation or Architecture meaning, one execution, or its observations |
+| Evaluation Case | One Protocol-scoped example, scenario, property, sample, or review instance | An independent claim, role, or criteria authority |
+| Evaluation Execution | One bounded application of an exact Protocol revision to selected Cases or a sample, inputs or observations, environment, realized state, and evaluator | The reusable contract or a conclusion beyond that attempt or window |
 | Evaluation Result | The observations, measurements, ratings, and assertion or judgment outcomes produced by the Execution | Release approval, general fitness, or a change to Intent |
-| Observation | Contextual evidence about what is or happened | An evaluation conclusion unless an Evaluation Definition was applied |
+| Observation | Contextual evidence about what is or happened | An evaluation conclusion unless an Evaluation Protocol was applied |
 | Assurance or governance decision | Whether the available evidence is sufficient for the decision in scope | The underlying criteria, execution, or result |
 
 This separation lets a method change without silently changing a Requirement,
-lets the same Definition run against several Implementation revisions, and
+lets the same Protocol run against several Implementation revisions, and
 lets decision makers reconsider the same Result without rewriting what was
 observed.
 
 Suites and Reports organize these identities without replacing them. An
-**Evaluation Suite** groups Definitions where they are practical to execute
+**Evaluation Suite** groups Protocols or Cases where they are practical to execute
 and maintain. An **Evaluation Report** projects Results for a reader and
 question. A Suite can span several architecture subjects, while several
 Reports can project the same Results by subject, Requirement, role, release,
@@ -89,29 +90,30 @@ organizes.
 
 ## Separate the claim before choosing the method
 
-Every Evaluation Definition has one primary Evaluation Role:
+Every Evaluation Protocol has one primary Evaluation Protocol Role:
 
 | Role | Primary question | Required traceability |
 | --- | --- | --- |
 | `requirement-satisfaction` | Does the realized subject satisfy the accepted obligation under stated conditions? | One or more stable `requirement_id` values and their subjects |
 | `architecture-realization` | Does the Implementation realize the accepted architecture responsibility, boundary, interface, relationship, or decision? | One or more stable Architecture subjects or ADRs |
-| `other-bounded-claim` | Does the identified subject meet another explicit criterion? | The named criteria authority and bounded claim |
+| `implementation-conformance` | Does an Implementation Unit conform to a repository-local contract or invariant? | One or more mechanically resolvable Implementation Units and the local contract |
 
 This separation prevents a structurally faithful implementation from being
 reported as satisfying every Requirement, and prevents passing behavioral
 checks from proving that accepted boundaries and responsibilities were
-realized. Evidence may inform multiple questions, but a Definition and Report
+realized. A local conformance pass proves neither. Evidence may inform multiple
+questions, but a Protocol and Report
 must not blur their primary claim.
 
 ## Criteria do not create desired state
 
-An Evaluation Definition needs explicit criteria, but criteria can have
+An Evaluation Protocol needs explicit criteria, but criteria can have
 different authorities. They may come from a Requirement, interface contract,
 accepted risk threshold, hypothesis, baseline, operational objective, or
 external standard. The Evaluation must identify that authority rather than
 acquire it.
 
-When an Evaluation claims Requirement coverage, its Definition references the
+When an Evaluation claims Requirement coverage, its Protocol references the
 stable `requirement_id`. It may repeat the Requirement predicate in executable
 or assessable form because the two representations answer different questions:
 
@@ -173,11 +175,11 @@ whose subject and interface survive the Implementation being replaced, but
 local tests still contribute economical feedback while that Implementation
 exists.
 
-## Monitoring becomes Evaluation only through a definition
+## Monitoring becomes Evaluation only through a Protocol
 
 Telemetry is not automatically an Evaluation Result. A contextual latency
 series, error log, user report, or cost measure may be recorded as an
-Observation. It participates in an Evaluation when a Definition identifies the
+Observation. It participates in an Evaluation when a Protocol identifies the
 subject, criteria, measurement or sampling method, relevant conditions,
 judgment procedure, and observation window.
 
@@ -199,7 +201,7 @@ A Result is interpretable only when a reader can recover the material identity
 of the activity that produced it. The exact representation is repository
 specific, but useful provenance commonly binds:[^w3c-prov]
 
-- the Evaluation Definition and version applied;
+- the exact Evaluation Protocol revision and selected Cases or sample;
 - the Requirement or other criteria authority when coverage is claimed;
 - the evaluated Implementation revision or other realized state;
 - material inputs, fixtures, datasets, prompts, or observations;
@@ -217,7 +219,7 @@ volatile details into Requirements or architecture documents.[^nasa-software-tes
 
 A pass means only that the identified Execution met its defined oracle or
 judgment procedure. It does not establish that the Requirement is correct,
-that the Evaluation Definition is complete, that all relevant conditions were
+that the Evaluation Protocol is complete, that all relevant conditions were
 sampled, or that a governance authority has approved the system.
 
 A failure identifies a disagreement that must be classified. Possible causes
@@ -268,7 +270,7 @@ rewrite desired state:
 ```text
 Requirement or other criterion authority
                  ↓ informs
-       Evaluation Definition
+       Evaluation Protocol
                  ↓ applied by
        Evaluation Execution ── assesses ──→ identified realized state
                  ↓ produces
@@ -277,26 +279,27 @@ Requirement or other criterion authority
       Observation or Signal → Orient → Decide → Act → new evidence
 ```
 
-The governed System Evaluation Approach explains how a system composes these methods,
-boundaries, lifetimes, evidence routes, and known gaps. That approach owns
-portfolio understanding and discovery—not the criteria inside Definitions,
-the Results of Executions, or the assurance decisions that use them. How the
-Gen Stack profile represents it is defined by the [Gen Stack application
-profile](../profile/gen-stack-application-profile.md#system-evaluation-approach).
+Governed Protocols expose the durable claims, methods, boundaries, lifetimes,
+and evidence routes without requiring a separate portfolio authority.
+`evaluations/index.md` and repository-native reports project their organization
+and known gaps; neither owns the Protocol criteria, Execution Results, or
+assurance decisions. The [Gen Stack application
+profile](../profile/gen-stack-application-profile.md#evaluation-protocols)
+defines their governed representation.
 
 ## Common misreadings
 
 - **“Evaluation means automated test.”** Automation is one execution mode;
   criterion-bound human and analytical methods can also produce Evaluation
   Results.
-- **“The suite is the Definition.”** A suite is a repository grouping. It may
-  realize several Definitions, and one Definition may depend on several suites
+- **“The suite is the Protocol.”** A suite is a repository grouping. It may
+  realize several Protocols, and one Protocol may depend on several suites
   or methods.
 - **“Monitoring is already live evaluation.”** Monitoring supplies
   observations; explicit criteria and a bounded application make it an
   Evaluation.
 - **“Passing proves fitness.”** Passing establishes only the bounded claim
-  supported by the Definition, Execution conditions, and oracle.
+  supported by the Protocol, Execution conditions, and oracle.
 - **“A failure tells us what to fix.”** It establishes a disagreement, not its
   owning defect or authorized correction.
 - **“Traceability requires backlinks everywhere.”** Stable outward references
@@ -306,6 +309,8 @@ profile](../profile/gen-stack-application-profile.md#system-evaluation-approach)
 ## Related
 
 - [Gen Stack vocabulary and relationship model](../glossary.md#evaluations)
+- [Evaluation Protocols as assessment contracts](evaluation-protocols-as-assessment-contracts.md)
+- [Designing Evaluation Protocols](designing-evaluation-protocols.md)
 - [One authority, many witnesses](../architecture/requirements/one-authority-many-witnesses.md)
 - [Requirements engineering in software architecture](../architecture/requirements/requirements-engineering.md)
 - [Documenting system assurance](../governance/documenting-system-assurance.md)

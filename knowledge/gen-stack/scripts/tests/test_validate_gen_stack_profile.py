@@ -80,36 +80,40 @@ Partial state would make the outcome ambiguous.
 """
 
 
-def evaluation_approach() -> str:
+def evaluation_protocol(
+    *,
+    role: str = "requirement-satisfaction",
+    targets: str = "requirements:\n  - SYN-REQ-0001",
+) -> str:
     return """---
-type: System Evaluation Approach
-title: Synthetic system evaluation approach
-description: How synthetic evaluations are discovered, navigated, reported, and maintained.
+type: Evaluation Protocol
+title: Preserve accepted state protocol
+description: Assesses one bounded synthetic claim.
 status: stable
+protocol_id: SYN-EVAL-0001
+protocol_lifecycle: active
+evaluation_role: %s
+%s
 ---
 
-# Synthetic system evaluation approach
+# Preserve accepted state protocol
 
-## Scope and objectives
+## Claim
 
-The approach covers the synthetic System and supports assurance review.
+The realized subject preserves accepted state.
 
-## Evaluation portfolio
+## Assessment
 
-Repository-native definitions and suites use explicit Evaluation Roles.
+Exercise the bounded synthetic condition.
 
-## Navigation and reporting
+## Judgment
 
-Subject and Requirement views separate satisfaction from realization.
+Pass only when accepted state is unchanged.
 
 ## Evidence and lifecycle
 
 Results preserve provenance, unknown, failures, and review triggers.
-
-## Gaps and maintenance
-
-Known coverage gaps remain visible and have a maintenance route.
-"""
+""" % (role, targets)
 
 
 class ProfileValidatorTest(unittest.TestCase):
@@ -132,11 +136,8 @@ class ProfileValidatorTest(unittest.TestCase):
         evaluations = self.root / "evaluations"
         evaluations.mkdir()
         (evaluations / "index.md").write_text(
-            "# Evaluations\n\n- [System evaluation approach](system-evaluation-approach.md)\n",
+            "# Evaluations\n\nNo Evaluation Protocols are admitted yet.\n",
             encoding="utf-8",
-        )
-        (evaluations / "system-evaluation-approach.md").write_text(
-            evaluation_approach(), encoding="utf-8"
         )
         links.append("- [Evaluations](evaluations/)")
         (self.root / "index.md").write_text(
@@ -147,7 +148,7 @@ okf_version: "0.2"
 # Synthetic Gen Stack corpus
 
 This documentation set adopts the
-[gen-stack profile](https://example.test/profile) version 0.4.0.
+[gen-stack profile](https://example.test/profile) version 0.5.0.
 
 """
             + "\n".join(links)
@@ -197,7 +198,7 @@ This documentation set adopts the
         self.assertEqual("pass", report["structural_result"])
         self.assertEqual("conforming", report["state"])
         self.assertEqual("unknown", report["semantic_result"])
-        self.assertEqual("0.4.0", report["profile"]["version"])
+        self.assertEqual("0.5.0", report["profile"]["version"])
         self.assertEqual(str(self.repository_root.resolve()), report["repository_root"])
         self.assertEqual(str(self.root.resolve()), report["corpus_root"])
 
@@ -232,7 +233,7 @@ This documentation set adopts the
         index.write_text(
             index.read_text(encoding="utf-8").replace(
                 "This documentation set adopts the\n"
-                "[gen-stack profile](https://example.test/profile) version 0.4.0.",
+                "[gen-stack profile](https://example.test/profile) version 0.5.0.",
                 "This is an ordinary OKF bundle.",
             ),
             encoding="utf-8",
@@ -244,7 +245,7 @@ This documentation set adopts the
     def test_unsupported_profile_version_is_invalid(self) -> None:
         index = self.root / "index.md"
         index.write_text(
-            index.read_text(encoding="utf-8").replace("version 0.4.0", "version 0.2.0"),
+            index.read_text(encoding="utf-8").replace("version 0.5.0", "version 0.2.0"),
             encoding="utf-8",
         )
         report = VALIDATOR.validate(self.repository_root)
@@ -475,14 +476,160 @@ Provenance remains available from its source record.
             "pass", VALIDATOR.validate(self.repository_root)["structural_result"]
         )
 
-    def test_missing_evaluation_approach_fails(self) -> None:
-        (self.root / "evaluations" / "system-evaluation-approach.md").unlink()
-        self.assertIn("required-evaluation-approach", self.rules())
+    def add_requirement_protocol(
+        self, *, role: str = "requirement-satisfaction", targets: str = "requirements:\n  - SYN-REQ-0001"
+    ) -> Path:
+        protocols = self.root / "evaluations" / "protocols"
+        requirements = protocols / "requirements"
+        requirements.mkdir(parents=True)
+        (protocols / "index.md").write_text(
+            "# Evaluation protocols\n\n- [Requirements](requirements/)\n",
+            encoding="utf-8",
+        )
+        (requirements / "index.md").write_text(
+            "# Requirement-satisfaction protocols\n\n- [Preserve accepted state](preserve-state.md)\n",
+            encoding="utf-8",
+        )
+        path = requirements / "preserve-state.md"
+        path.write_text(evaluation_protocol(role=role, targets=targets), encoding="utf-8")
+        (self.root / "evaluations" / "index.md").write_text(
+            "# Evaluations\n\n- [Protocols](protocols/)\n",
+            encoding="utf-8",
+        )
+        return path
 
-    def test_evaluation_approach_requires_sections(self) -> None:
+    def test_evaluations_index_is_required_but_protocols_are_optional(self) -> None:
+        (self.root / "evaluations" / "index.md").unlink()
+        self.assertIn("evaluation-navigation", self.rules())
+
+    def test_evaluations_index_must_be_reachable_from_root(self) -> None:
+        root_index = self.root / "index.md"
+        root_index.write_text(
+            root_index.read_text(encoding="utf-8").replace(
+                "- [Evaluations](evaluations/)\n", ""
+            ),
+            encoding="utf-8",
+        )
+        self.assertIn("evaluation-navigation-reachability", self.rules())
+
+    def test_retired_system_evaluation_approach_is_rejected(self) -> None:
         path = self.root / "evaluations" / "system-evaluation-approach.md"
         path.write_text(concept("System Evaluation Approach"), encoding="utf-8")
-        self.assertIn("evaluation-approach-section", self.rules())
+        with (self.root / "evaluations" / "index.md").open(
+            "a", encoding="utf-8"
+        ) as index:
+            index.write("- [Legacy approach](system-evaluation-approach.md)\n")
+        self.assertIn("superseded-evaluation-approach", self.rules())
+
+    def test_requirement_protocol_passes_with_active_requirement(self) -> None:
+        self.add_system_requirement()
+        self.add_requirement_protocol()
+        self.sync_relationships()
+        self.assertEqual("pass", VALIDATOR.validate(self.repository_root)["structural_result"])
+
+    def test_protocol_requires_exact_sections(self) -> None:
+        self.add_system_requirement()
+        path = self.add_requirement_protocol()
+        path.write_text(evaluation_protocol().replace("## Judgment", "## Verdict"), encoding="utf-8")
+        self.assertIn("evaluation-protocol-section", self.rules())
+
+    def test_protocol_role_and_path_must_agree(self) -> None:
+        self.add_system_requirement()
+        self.add_requirement_protocol(
+            role="architecture-realization",
+            targets="architecture_authorities:\n  - /system.md",
+        )
+        self.assertIn("evaluation-protocol-path-role", self.rules())
+
+    def test_protocol_target_fields_are_role_exclusive(self) -> None:
+        self.add_system_requirement()
+        self.add_requirement_protocol(
+            targets="requirements:\n  - SYN-REQ-0001\narchitecture_authorities:\n  - /system.md",
+        )
+        self.assertIn("evaluation-protocol-target-exclusivity", self.rules())
+
+    def test_active_protocol_cannot_target_retired_requirement(self) -> None:
+        body = requirement(requirement_lifecycle="retired") + """
+
+## Lifecycle
+
+The synthetic authority retired this obligation.
+"""
+        self.add_system_requirement(body)
+        self.add_requirement_protocol()
+        self.assertIn("evaluation-protocol-requirement-lifecycle", self.rules())
+
+    def test_architecture_protocol_rejects_c4_view(self) -> None:
+        views = self.root / "architecture" / "structure" / "views"
+        views.mkdir(parents=True)
+        (self.root / "architecture" / "index.md").write_text(
+            "# Architecture\n\n- [Structure](structure/)\n", encoding="utf-8"
+        )
+        (views.parent / "index.md").write_text("# Structure\n\n- [Views](views/)\n", encoding="utf-8")
+        (views / "index.md").write_text("# Views\n\n- [Context](system-context.md)\n", encoding="utf-8")
+        (views / "system-context.md").write_text(
+            concept("C4 View", "Context").replace("status: stable", "status: stable\nview_type: system-context\nrelationships:\n  projects-c4-element:\n    - /system.md"),
+            encoding="utf-8",
+        )
+        with (self.root / "index.md").open("a", encoding="utf-8") as index:
+            index.write("- [Architecture](architecture/)\n")
+        protocols = self.root / "evaluations" / "protocols"
+        architecture = protocols / "architecture"
+        architecture.mkdir(parents=True)
+        (protocols / "index.md").write_text("# Protocols\n\n- [Architecture](architecture/)\n", encoding="utf-8")
+        (architecture / "index.md").write_text("# Architecture protocols\n\n- [Context](context.md)\n", encoding="utf-8")
+        (architecture / "context.md").write_text(
+            evaluation_protocol(
+                role="architecture-realization",
+                targets="architecture_authorities:\n  - /architecture/structure/views/system-context.md",
+            ),
+            encoding="utf-8",
+        )
+        (self.root / "evaluations" / "index.md").write_text("# Evaluations\n\n- [Protocols](protocols/)\n", encoding="utf-8")
+        self.assertIn("evaluation-protocol-architecture-type", self.rules())
+
+    def test_implementation_protocol_requires_resolving_repository_unit(self) -> None:
+        protocols = self.root / "evaluations" / "protocols"
+        implementation = protocols / "implementation"
+        implementation.mkdir(parents=True)
+        (protocols / "index.md").write_text(
+            "# Protocols\n\n- [Implementation](implementation/)\n", encoding="utf-8"
+        )
+        (implementation / "index.md").write_text(
+            "# Implementation protocols\n\n- [Mapper](mapper.md)\n", encoding="utf-8"
+        )
+        (implementation / "mapper.md").write_text(
+            evaluation_protocol(
+                role="implementation-conformance",
+                targets="implementation_units:\n  - src/pets/mapper.ts",
+            ),
+            encoding="utf-8",
+        )
+        (self.root / "evaluations" / "index.md").write_text(
+            "# Evaluations\n\n- [Protocols](protocols/)\n", encoding="utf-8"
+        )
+        self.assertIn("evaluation-protocol-implementation-resolves", self.rules())
+        unit = self.repository_root / "src" / "pets"
+        unit.mkdir(parents=True)
+        (unit / "mapper.ts").write_text("export {};\n", encoding="utf-8")
+        self.assertEqual(
+            "pass", VALIDATOR.validate(self.repository_root)["structural_result"]
+        )
+
+    def test_empty_protocol_role_directory_fails(self) -> None:
+        protocols = self.root / "evaluations" / "protocols"
+        architecture = protocols / "architecture"
+        architecture.mkdir(parents=True)
+        (protocols / "index.md").write_text(
+            "# Protocols\n\n- [Architecture](architecture/)\n", encoding="utf-8"
+        )
+        (architecture / "index.md").write_text(
+            "# Architecture protocols\n", encoding="utf-8"
+        )
+        (self.root / "evaluations" / "index.md").write_text(
+            "# Evaluations\n\n- [Protocols](protocols/)\n", encoding="utf-8"
+        )
+        self.assertIn("empty-evaluation-protocol-role", self.rules())
 
 
 class AuthorityContractTest(unittest.TestCase):

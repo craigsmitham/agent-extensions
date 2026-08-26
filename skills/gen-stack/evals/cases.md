@@ -6,7 +6,7 @@ agent. `evals.json` is the machine-readable authority.
 
 Cases 1–40 preserve the established-corpus authoring coverage formerly owned by
 `author-gen-stack`. They cover governance, Intent, Architecture,
-subject-colocated Requirements, the System Evaluation Approach, profile and
+subject-colocated Requirements, Evaluation Protocols, profile and
 glossary authority, witness separation, routing, and refusal to invent accepted
 meaning. The former unprofiled-corpus case now verifies the intentional
 unsupported-adoption stop.
@@ -65,13 +65,20 @@ Suite 1.6.0 makes case 111 an explicit evidence-lineage analysis, binding the
 historical Result to its recorded predecessor and Execution context and asking
 for the successor-specific Evaluation route without implying corpus mutation.
 
-Suite 1.7.0 adds cases 116–124 for native-first representation across governed
+Suite 1.7.0 added cases 116–124 for native-first representation across governed
 OKF concepts, tracker work items, portable fallbacks, derived views, transient
-Change Design, repository-native Evaluation Definitions, and executable
+Change Design, repository-native evaluation machinery, and executable
 Process models. These cases require exact semantic field matching, one owner
 per fact, preferred artifact-specific logical order, and omission of empty or
 duplicated structure without turning presentation guidance into profile
 conformance.
+
+Suite 1.8.0 revises cases 38, 75, 116, and 122 for profile `0.5.0`: Evaluation
+Protocols are governed assessment contracts organized by role, while Cases,
+Suites, Executions, Results, Reports, and executable bindings retain their
+repository-native authorities. The cases preserve separate Requirement
+satisfaction, Architecture realization, and Implementation conformance claims
+without reintroducing a System Evaluation Approach.
 
 The suite passes only when the unified routing surface retains both authoring
 capabilities, unsupported adoption work stops cleanly, material desired-state

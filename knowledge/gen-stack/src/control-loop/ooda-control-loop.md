@@ -13,7 +13,7 @@ sources:
     title: Chad Fowler — The Generative Stack
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T19:12:18Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # OODA as the Gen Stack control loop
@@ -99,7 +99,7 @@ authority.
 
 Apply the bounded Decision as a test. An Action may gather more evidence,
 change an authority, run Compilation, modify an Implementation Unit, execute an
-Evaluation Definition, deploy an authorized change, or roll it back. Keep the
+Evaluation Protocol, deploy an authorized change, or roll it back. Keep the
 Action observable, containable, reversible where practical, and explicit about
 the expected closure evidence.
 
@@ -123,8 +123,8 @@ consequence rises or the Action approaches a slower Pace layer.
 | Architecture | Subjects, boundaries, responsibilities, and responses used during Orientation and changed only through architecture authority. |
 | Compilation | One possible Action that transforms Architecture and its Requirements into Implementation Units. |
 | Implementation | Realized state that can be observed, diagnosed during Orientation, and changed by an authorized Action. |
-| Evaluation Definition | An assessment method used to test a Decision or discriminate among competing orientations. |
-| Evaluation Execution | An Action applying a Definition to identified inputs, environment, and Implementation. |
+| Evaluation Protocol | An assessment contract used to test a Decision or discriminate among competing orientations. |
+| Evaluation Execution | An Action applying an exact Protocol revision to identified inputs, environment, and Implementation. |
 | Evaluation Result | An Observation produced by an Execution; evidence for the next Orientation, not a Decision. |
 | Provenance | Memory that makes Orientation accountable rather than dependent on the latest Signal. |
 

@@ -2,9 +2,10 @@
 
 Use these read-only tools when a human, agent, or harness needs to understand
 an established profile-governed `gen-stack/` corpus without reconstructing its
-rules from Markdown files. They report only corpus-owned meaning; they do not
-discover implementation artifacts, concrete evaluations, coverage, or
-operational fitness.
+rules from Markdown files. They report only corpus-owned meaning and
+policy-neutral candidates; they do not select required coverage, discover
+implementation artifacts, execute concrete evaluations, judge Protocol
+adequacy, or establish operational fitness.
 
 ## Preconditions
 
@@ -83,12 +84,44 @@ The result coordinates:
 - explicit cross-view mappings;
 - C4 Views as context, never evaluation subjects;
 - separate ancestor context for scoped inspection; and
-- the System Evaluation Approach and System Assurance guidance.
+- governed Evaluation Protocols and System Assurance guidance.
 
 Use this structure to inform evaluation subjects, claims, scenarios, and
 navigation. Keep executable Suites in their repository-native organization.
-The projection does not assert implementation realization or existing
-evaluation coverage.
+Protocol presence is projected, but the operation does not assert Protocol
+coverage, evidence currency, an outcome, or implementation realization.
+
+## Derive policy-neutral evaluation candidates
+
+Request eligible role-and-target pairs for the complete corpus:
+
+```bash
+python3 knowledge/gen-stack/scripts/gen-stack.py \
+  -C <repository-root> --json evaluation-candidates
+```
+
+Or scope the projection to one eligible Architecture authority:
+
+```bash
+python3 knowledge/gen-stack/scripts/gen-stack.py \
+  -C <repository-root> --json evaluation-candidates \
+  /architecture/surfaces/cli/install.md
+```
+
+The result includes active, directly assigned Requirement candidates;
+eligible Architecture-authority candidates; explicit cross-view scope;
+matching active and retired Protocols; retired-Requirement and C4 View
+exclusions; and ancestor context. Complete-corpus output also includes
+Implementation Units already declared by active implementation-conformance
+Protocols. It cannot discover uncovered Implementation Units.
+
+Candidate projection is decision support. A candidate is eligible for
+consideration, not automatically selected or required. A Protocol match is
+not a claim of adequacy, executable realization, evidence currency, outcome,
+assurance, or release authorization. Apply an identified local policy or
+authority outside this operation before interpreting selected candidates as
+`defined` or `uncovered` Protocol Coverage. See [Deriving evaluation coverage
+in harnesses](../src/evaluations/deriving-evaluation-coverage-in-harnesses.md).
 
 ## Explain and compare corpus meaning
 
@@ -120,9 +153,10 @@ python3 knowledge/gen-stack/scripts/gen-stack.py --json diff before.json after.j
 ## Machine contract and exit behavior
 
 The [contract reference](contracts/README.md),
-[JSON Schema](contracts/gen-stack-inspection-v1alpha1.schema.json), and
-[synthetic example](contracts/evaluation-context.example.json) define the
-machine surface.
+[current JSON Schema](contracts/gen-stack-inspection-v1alpha2.schema.json),
+[evaluation-context example](contracts/evaluation-context.example.json), and
+[evaluation-candidates example](contracts/evaluation-candidates.example.json)
+define the machine surface.
 
 The CLI exits zero for a successful eligible query. Validation failure,
 ineligible operations, unresolved references, missing graph paths, and invalid

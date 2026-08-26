@@ -8,5 +8,5 @@ status: stable
 # Synthetic system assurance
 
 Repository review and automated evaluation provide ordinary change evidence.
-The approach is reassessed when system consequence or external obligations
-change.
+This assurance position is reassessed when system consequence or external
+obligations change.

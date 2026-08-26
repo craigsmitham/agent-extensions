@@ -52,6 +52,7 @@ From this package directory, pass the adopting repository root explicitly:
 ```bash
 scripts/gen-stack.py --repository-root <repository-root> status
 scripts/gen-stack.py --repository-root <repository-root> evaluation-context
+scripts/gen-stack.py --repository-root <repository-root> evaluation-candidates
 scripts/sync-gen-stack-relationships.py <repository-root>
 scripts/sync-gen-stack-relationships.py <repository-root> --check
 scripts/validate-gen-stack-profile.py <repository-root>
@@ -74,6 +75,25 @@ location, adoption, indexing, or relationship logic.
 Synchronization edits only the producer-owned `relationships` block, preserves
 unrelated frontmatter, and refuses to write when authoritative assertions are
 malformed or contradictory.
+
+Version `0.17.0` adds a policy-neutral `evaluation-candidates` inspection
+operation and harness-integration guidance. The projection derives eligible
+Requirement-satisfaction and Architecture-realization role-and-target pairs,
+shows explicit Protocol matches and exclusions, and exposes only
+Protocol-declared Implementation Units. It leaves candidate selection,
+required coverage, Protocol adequacy, executable realization, evidence,
+outcomes, assurance, and release policy to their proper adopting authorities.
+The machine contract advances to `gen-stack-inspection/v1alpha2`; profile
+`0.5.0` is unchanged because no governed corpus type or field was added.
+
+Version `0.16.0` introduces profile `0.5.0` and governed Evaluation Protocols
+for Requirement satisfaction, Architecture realization, and Implementation
+conformance. It retires the System Evaluation Approach, keeps
+`evaluations/index.md` as navigation, and leaves executable Cases, Suites,
+Executions, Results, Reports, and run evidence repository-native. The profile
+validator and inspection plane now enforce and project Protocol identity,
+lifecycle, role, targets, and required assessment structure without claiming
+coverage, evidence currency, outcomes, or assurance.
 
 Version `0.15.0` adds the read-only Gen Stack inspection plane: one reusable
 profile index behind a task-oriented CLI, versioned machine contracts,

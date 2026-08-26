@@ -23,10 +23,13 @@ if str(SCRIPT_DIR) not in sys.path:
 from gen_stack_profile.corpus import LINK_RE, local_markdown_targets, parse_frontmatter  # noqa: E402
 from gen_stack_profile.location import inspect_repository  # noqa: E402
 from gen_stack_profile.profile import (  # noqa: E402
+    ARCHITECTURE_REALIZATION_TYPES,
     COMMON_FIELDS,
-    EVALUATION_APPROACH_PATH,
-    EVALUATION_APPROACH_SECTIONS,
-    EVALUATION_APPROACH_TYPE,
+    EVALUATION_PROTOCOL_DIRECTORIES,
+    EVALUATION_PROTOCOL_LIFECYCLES,
+    EVALUATION_PROTOCOL_ROLES,
+    EVALUATION_PROTOCOL_SECTIONS,
+    EVALUATION_PROTOCOL_TYPE,
     GOVERNED_TYPES,
     PLURAL_CATCH_ALLS,
     PROFILE_ID,
@@ -50,8 +53,12 @@ def path_matches(concept_type: str, relative: PurePosixPath) -> bool:
     )
     if required_path is not None:
         return relative == PurePosixPath(required_path)
-    if concept_type == EVALUATION_APPROACH_TYPE:
-        return relative == PurePosixPath(EVALUATION_APPROACH_PATH)
+    if concept_type == EVALUATION_PROTOCOL_TYPE:
+        return (
+            len(parts) == 4
+            and parts[:2] == ("evaluations", "protocols")
+            and parts[2] in set(EVALUATION_PROTOCOL_DIRECTORIES.values())
+        )
     if concept_type == "Architecture Decision Record":
         return len(parts) == 3 and parts[:2] == ("architecture", "decisions")
     if concept_type == "Requirement":
@@ -161,30 +168,39 @@ def validate_corpus(repository_root: Path, root: Path) -> dict[str, object]:
     evaluations_index = root / "evaluations" / "index.md"
     if not evaluations_index.is_file():
         error("evaluation-navigation", evaluations_index, "The corpus must contain evaluations/index.md.")
-    evaluation_approach = root / EVALUATION_APPROACH_PATH
-    if not evaluation_approach.is_file():
+    legacy_approach = root / "evaluations" / "system-evaluation-approach.md"
+    if legacy_approach.exists():
         error(
-            "required-evaluation-approach",
-            evaluation_approach,
-            f"The corpus must contain {EVALUATION_APPROACH_PATH} with type {EVALUATION_APPROACH_TYPE}.",
+            "superseded-evaluation-approach",
+            legacy_approach,
+            "system-evaluation-approach.md is retired in profile 0.5.0; distribute durable claims to Evaluation Protocols and their owning authorities.",
         )
-    else:
-        try:
-            approach_meta, approach_body = parse_frontmatter(evaluation_approach)
-        except (OSError, ValueError, yaml.YAMLError):
-            approach_meta, approach_body = {}, ""
-        if approach_meta.get("type") != EVALUATION_APPROACH_TYPE:
+    protocols_root = root / "evaluations" / "protocols"
+    if protocols_root.exists():
+        role_directories = set(EVALUATION_PROTOCOL_DIRECTORIES.values())
+        present_roles = sorted(path for path in protocols_root.iterdir() if path.is_dir())
+        if not present_roles:
             error(
-                "required-evaluation-approach-type",
-                evaluation_approach,
-                f"{EVALUATION_APPROACH_PATH} must have the exact profile type {EVALUATION_APPROACH_TYPE}.",
+                "empty-evaluation-protocol-collection",
+                protocols_root,
+                "evaluations/protocols/ must be omitted until its first Evaluation Protocol is admitted.",
             )
-        for section in EVALUATION_APPROACH_SECTIONS:
-            if not re.search(rf"^## {re.escape(section)}\s*$", approach_body, flags=re.MULTILINE):
+        for role_directory in present_roles:
+            if role_directory.name not in role_directories:
                 error(
-                    "evaluation-approach-section",
-                    evaluation_approach,
-                    f"System Evaluation Approach requires a ## {section} section.",
+                    "evaluation-protocol-role-directory",
+                    role_directory,
+                    "Protocol role directory must be requirements, architecture, or implementation.",
+                )
+                continue
+            named_files = sorted(
+                path for path in role_directory.glob("*.md") if path.name != "index.md"
+            )
+            if not named_files:
+                error(
+                    "empty-evaluation-protocol-role",
+                    role_directory,
+                    "A Protocol role directory must be omitted until it contains a named Evaluation Protocol.",
                 )
 
     for forbidden_collection in (
@@ -236,6 +252,11 @@ def validate_corpus(repository_root: Path, root: Path) -> dict[str, object]:
     for requirement_root in root.rglob("requirements"):
         if not requirement_root.is_dir():
             continue
+        if requirement_root.relative_to(root).parts[:2] == (
+            "evaluations",
+            "protocols",
+        ):
+            continue
         type_directories = sorted(path for path in requirement_root.iterdir() if path.is_dir())
         if not type_directories:
             error(
@@ -267,6 +288,7 @@ def validate_corpus(repository_root: Path, root: Path) -> dict[str, object]:
     governed_count = 0
     concept_metadata: dict[PurePosixPath, dict[str, object]] = {}
     requirement_ids: dict[str, Path] = {}
+    protocol_ids: dict[str, Path] = {}
 
     for path in concept_files:
         relative = PurePosixPath(path.relative_to(root).as_posix())
@@ -310,6 +332,10 @@ def validate_corpus(repository_root: Path, root: Path) -> dict[str, object]:
                     )
             if concept_type == "Requirement":
                 validate_requirement(path, relative, meta, body, requirement_ids, error)
+            if concept_type == EVALUATION_PROTOCOL_TYPE:
+                validate_evaluation_protocol(
+                    path, relative, meta, body, protocol_ids, error
+                )
 
         current = path.parent
         while current != root:
@@ -319,6 +345,13 @@ def validate_corpus(repository_root: Path, root: Path) -> dict[str, object]:
             current = current.parent
 
     validate_requirement_relations(root, concept_files, concept_metadata, requirement_ids, error)
+    validate_evaluation_protocol_targets(
+        repository_root,
+        root,
+        concept_metadata,
+        requirement_ids,
+        error,
+    )
 
     relationship_analysis = analyze_relationships(root)
     for diagnostic in relationship_analysis.diagnostics:
@@ -339,6 +372,12 @@ def validate_corpus(repository_root: Path, root: Path) -> dict[str, object]:
         for target in local_markdown_targets(path, root):
             if target.resolve() in markdown_files:
                 queue.append(target.resolve())
+    if evaluations_index.is_file() and evaluations_index.resolve() not in reachable:
+        error(
+            "evaluation-navigation-reachability",
+            evaluations_index,
+            "evaluations/index.md must be reachable from the root index.",
+        )
     for path in concept_files:
         if path.resolve() not in reachable:
             error("root-reachability", path, "Concept is not reachable from the root index.")
@@ -350,6 +389,197 @@ def validate_corpus(repository_root: Path, root: Path) -> dict[str, object]:
         governed_count,
         "conforming" if not errors else "invalid",
     )
+
+
+def validate_evaluation_protocol(
+    path: Path,
+    relative: PurePosixPath,
+    meta: dict[str, object],
+    body: str,
+    protocol_ids: dict[str, Path],
+    error: object,
+) -> None:
+    report = error
+    protocol_id = meta.get("protocol_id")
+    lifecycle = meta.get("protocol_lifecycle")
+    role = meta.get("evaluation_role")
+
+    if not isinstance(protocol_id, str) or not protocol_id.strip():
+        report("evaluation-protocol-id", path, "Evaluation Protocol requires a non-empty protocol_id.")
+    elif protocol_id in protocol_ids:
+        report(
+            "evaluation-protocol-id-unique",
+            path,
+            f"protocol_id duplicates {protocol_ids[protocol_id].name}.",
+        )
+    else:
+        protocol_ids[protocol_id] = path
+
+    if lifecycle not in EVALUATION_PROTOCOL_LIFECYCLES:
+        report(
+            "evaluation-protocol-lifecycle",
+            path,
+            "protocol_lifecycle must be active or retired.",
+        )
+    if role not in EVALUATION_PROTOCOL_ROLES:
+        report(
+            "evaluation-protocol-role",
+            path,
+            "evaluation_role must be requirement-satisfaction, architecture-realization, or implementation-conformance.",
+        )
+    elif len(relative.parts) >= 3:
+        expected_directory = EVALUATION_PROTOCOL_DIRECTORIES[role]
+        if relative.parts[2] != expected_directory:
+            report(
+                "evaluation-protocol-path-role",
+                path,
+                f"{role} Protocols must be under evaluations/protocols/{expected_directory}/.",
+            )
+
+    matching_field = EVALUATION_PROTOCOL_ROLES.get(role) if isinstance(role, str) else None
+    target_fields = set(EVALUATION_PROTOCOL_ROLES.values())
+    present = {field for field in target_fields if field in meta}
+    if matching_field is None or present != {matching_field}:
+        report(
+            "evaluation-protocol-target-exclusivity",
+            path,
+            "Evaluation Protocol must contain exactly the target field selected by evaluation_role and omit the other role target fields.",
+        )
+    elif not _non_empty_unique_strings(meta.get(matching_field)):
+        report(
+            "evaluation-protocol-targets",
+            path,
+            f"{matching_field} must be a non-empty list of unique non-empty strings.",
+        )
+
+    for section in EVALUATION_PROTOCOL_SECTIONS:
+        if not re.search(rf"^## {re.escape(section)}\s*$", body, flags=re.MULTILINE):
+            report(
+                "evaluation-protocol-section",
+                path,
+                f"Evaluation Protocol requires a ## {section} section.",
+            )
+
+
+def _non_empty_unique_strings(value: object) -> bool:
+    return (
+        isinstance(value, list)
+        and bool(value)
+        and all(isinstance(item, str) and item.strip() for item in value)
+        and len(value) == len(set(value))
+    )
+
+
+def validate_evaluation_protocol_targets(
+    repository_root: Path,
+    root: Path,
+    concept_metadata: dict[PurePosixPath, dict[str, object]],
+    requirement_ids: dict[str, Path],
+    error: object,
+) -> None:
+    report = error
+    requirement_meta_by_id = {
+        requirement_id: concept_metadata.get(
+            PurePosixPath(path.relative_to(root).as_posix()), {}
+        )
+        for requirement_id, path in requirement_ids.items()
+    }
+    for relative, meta in concept_metadata.items():
+        if meta.get("type") != EVALUATION_PROTOCOL_TYPE:
+            continue
+        path = root / relative.as_posix()
+        role = meta.get("evaluation_role")
+        lifecycle = meta.get("protocol_lifecycle")
+
+        if role == "requirement-satisfaction" and _non_empty_unique_strings(
+            targets := meta.get("requirements")
+        ):
+            for requirement_id in targets:
+                requirement_meta = requirement_meta_by_id.get(requirement_id)
+                if requirement_meta is None:
+                    report(
+                        "evaluation-protocol-requirement-resolves",
+                        path,
+                        f"requirements references unknown requirement_id {requirement_id}.",
+                    )
+                elif (
+                    lifecycle == "active"
+                    and requirement_meta.get("requirement_lifecycle") != "active"
+                ):
+                    report(
+                        "evaluation-protocol-requirement-lifecycle",
+                        path,
+                        f"Active Protocol targets retired Requirement {requirement_id}; retire or retarget the Protocol.",
+                    )
+
+        if role == "architecture-realization" and _non_empty_unique_strings(
+            targets := meta.get("architecture_authorities")
+        ):
+            for target in targets:
+                if not target.startswith("/") or "?" in target or "#" in target:
+                    report(
+                        "evaluation-protocol-architecture-target",
+                        path,
+                        f"architecture_authorities target {target!r} must be a bundle-relative concept path.",
+                    )
+                    continue
+                target_relative = PurePosixPath(target.lstrip("/"))
+                if ".." in target_relative.parts:
+                    report(
+                        "evaluation-protocol-architecture-target",
+                        path,
+                        f"architecture_authorities target {target!r} escapes the corpus.",
+                    )
+                    continue
+                target_meta = concept_metadata.get(target_relative)
+                if target_meta is None:
+                    report(
+                        "evaluation-protocol-architecture-resolves",
+                        path,
+                        f"architecture_authorities target {target!r} must resolve to a maintained concept.",
+                    )
+                elif target_meta.get("type") not in ARCHITECTURE_REALIZATION_TYPES:
+                    report(
+                        "evaluation-protocol-architecture-type",
+                        path,
+                        f"architecture_authorities target {target!r} has ineligible type {target_meta.get('type')!r}; C4 Views are projections and are not eligible.",
+                    )
+
+        if role == "implementation-conformance" and _non_empty_unique_strings(
+            targets := meta.get("implementation_units")
+        ):
+            for target in targets:
+                target_relative = PurePosixPath(target)
+                if (
+                    target_relative.is_absolute()
+                    or not target_relative.parts
+                    or ".." in target_relative.parts
+                    or target_relative.parts[0] == "gen-stack"
+                ):
+                    report(
+                        "evaluation-protocol-implementation-target",
+                        path,
+                        f"implementation_units target {target!r} must be a repository-relative path outside gen-stack/.",
+                    )
+                    continue
+                candidate = (repository_root / target_relative.as_posix()).resolve(
+                    strict=False
+                )
+                try:
+                    candidate.relative_to(repository_root)
+                except ValueError:
+                    report(
+                        "evaluation-protocol-implementation-target",
+                        path,
+                        f"implementation_units target {target!r} escapes the repository.",
+                    )
+                    continue
+                if not candidate.exists():
+                    report(
+                        "evaluation-protocol-implementation-resolves",
+                        path,
+                        f"implementation_units target {target!r} must resolve to a maintained file or directory.",
+                    )
 
 
 def validate_requirement(

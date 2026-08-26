@@ -1,6 +1,6 @@
 {
   "skill_name": "gen-stack",
-  "suite_version": "1.7.0",
+  "suite_version": "1.8.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -502,13 +502,13 @@
     {
       "id": 38,
       "stage": "execution",
-      "prompt": "Our corpus adopts the current Gen Stack profile. Create its accepted System Evaluation Approach. The system uses tests/api for durable boundary Definitions, tests/unit for implementation-local Definitions, CI artifacts for Executions and Results, and an operations dashboard for operational evaluations. Evidence must be navigable by Surface, C4 element, and Requirement ID. Publish separate requirement-satisfaction and architecture-realization reports, preserve unknown and harness errors, and review the approach when a public boundary, Requirement set, evaluator, or assurance policy changes. Do not move or copy the concrete evaluation artifacts into the corpus.",
-      "expected_output": "One profile-conforming System Evaluation Approach at evaluations/system-evaluation-approach.md plus the earned evaluations index and root navigation, faithfully routing to repository-native evaluation authorities.",
+      "prompt": "Our corpus adopts the current Gen Stack profile. Create three accepted Evaluation Protocols: requirement-satisfaction for active PET-REQ-0042; architecture-realization for /architecture/surfaces/pet-api.md; and implementation-conformance for src/pets/pet-mapper.ts. Their bounded claims, methods, judgments, and evidence lifecycles are supplied. Existing executable Cases and Suites remain in tests/, CI owns Executions and Results, and dashboards own reports. Keep role reporting separate and preserve unknown and harness errors. Do not execute or copy run evidence.",
+      "expected_output": "Three profile-conforming governed Evaluation Protocols under role-specific paths plus earned navigation, with repository-native execution and evidence authorities left in place.",
       "assertions": [
-        "The concept uses exact type System Evaluation Approach and the canonical evaluations/system-evaluation-approach.md path.",
-        "Its five required sections preserve the supplied scope, portfolio routes, subject and Requirement navigation, separate report roles, provenance statuses, review triggers, and gaps without inventing coverage.",
-        "The approach references repository-native Definitions, Suites, Executions, Results, Reports, and operational evidence without copying them into corpus concepts.",
-        "Only evaluations/index.md and necessary root navigation are added; no physical suite hierarchy or additional evaluation concepts are invented."
+        "Each concept uses exact type Evaluation Protocol, one unique protocol_id, active lifecycle, one role, and only that role's matching target field.",
+        "Protocols use evaluations/protocols/requirements, architecture, and implementation paths and the four required body sections.",
+        "Requirement Architecture subject is derived rather than duplicated, the Surface is an eligible realization authority, and the Implementation Unit remains repository-local.",
+        "Executable Cases, Suites, Executions, Results, and Reports remain repository-native; no outcome or coverage is invented."
       ]
     },
     {
@@ -1004,8 +1004,7 @@
         { "source": "evals/files/case-75/gen-stack/assurance.md", "target": "gen-stack/assurance.md" },
         { "source": "evals/files/case-75/gen-stack/architecture/index.md", "target": "gen-stack/architecture/index.md" },
         { "source": "evals/files/case-75/gen-stack/architecture/capabilities/index.md", "target": "gen-stack/architecture/capabilities/index.md" },
-        { "source": "evals/files/case-75/gen-stack/evaluations/index.md", "target": "gen-stack/evaluations/index.md" },
-        { "source": "evals/files/case-75/gen-stack/evaluations/system-evaluation-approach.md", "target": "gen-stack/evaluations/system-evaluation-approach.md" }
+        { "source": "evals/files/case-75/gen-stack/evaluations/index.md", "target": "gen-stack/evaluations/index.md" }
       ],
       "artifact_paths": ["gen-stack"],
       "assertions": [
@@ -1176,11 +1175,11 @@
     {
       "id": 88,
       "stage": "execution",
-      "prompt": "Draft a Bugfix Specification for an authorized correction: ORD-REQ-0042 requires rejected orders to preserve inventory and the accepted Order API Surface and Order Service boundary are unchanged. The failing case is known, but no reusable Evaluation Definition covers it yet. Surface the gap and keep the Bugfix moving.",
-      "expected_output": "A Bugfix Specification grounded in the accepted Requirement and Architecture that marks the missing Evaluation Definition as a non-blocking evidence gap, recommends creation and execution of the evaluation, and continues without inventing results.",
+      "prompt": "Draft a Bugfix Specification for an authorized correction: ORD-REQ-0042 requires rejected orders to preserve inventory and the accepted Order API Surface and Order Service boundary are unchanged. The failing case is known, but no reusable Evaluation Protocol covers it yet. Surface the gap and keep the Bugfix moving.",
+      "expected_output": "A Bugfix Specification grounded in the accepted Requirement and Architecture that marks the missing Evaluation Protocol as a non-blocking evidence gap, recommends creation and execution of the evaluation, and continues without inventing results.",
       "assertions": [
         "ORD-REQ-0042 and the accepted Surface and structural boundary remain the authorities for corrected behavior.",
-        "The missing Evaluation Definition is raised with its evidence impact, recommendation, owner or authority, and non-blocking status.",
+        "The missing Evaluation Protocol is raised with its evidence impact, recommendation, owner or authority, and non-blocking status.",
         "The Bugfix Specification proceeds because the missing future evidence route does not make the accepted correction ambiguous.",
         "No Evaluation Result, test execution, Requirement change, or Architecture change is invented."
       ]
@@ -1455,25 +1454,25 @@
     {
       "id": 111,
       "stage": "execution",
-      "prompt": "Review evidence handling for an accepted replacement: retired Requirement AUTH-REQ-0010 is superseded by active AUTH-REQ-0041. Historical Evaluation Result run-88 passed AUTH-REQ-0010 under its recorded Evaluation Definition, Implementation revision, inputs, and environment. Explain exactly what run-88 remains bound to and what successor-specific Evaluation Definition or explicit reinterpretation and Execution would be needed for AUTH-REQ-0041. Do not mutate a corpus or run an evaluation.",
+      "prompt": "Review evidence handling for an accepted replacement: retired Requirement AUTH-REQ-0010 is superseded by active AUTH-REQ-0041. Historical Evaluation Result run-88 passed AUTH-REQ-0010 under its recorded Evaluation Protocol, Implementation revision, inputs, and environment. Explain exactly what run-88 remains bound to and what successor-specific Evaluation Protocol or explicit reinterpretation and Execution would be needed for AUTH-REQ-0041. Do not mutate a corpus or run an evaluation.",
       "expected_output": "Correct lineage recording with no evidence transfer; run-88 remains evidence about the retired predecessor and the successor's satisfaction remains unknown until evaluated against its exact meaning and context.",
       "assertions": [
         "AUTH-REQ-0041 supersedes AUTH-REQ-0010 without being treated as equivalent or derived.",
         "run-88 remains bound to AUTH-REQ-0010 and its recorded execution context.",
         "AUTH-REQ-0041 satisfaction is not inferred from predecessor evidence.",
-        "The response identifies the Evaluation Definition or reinterpretation and execution needed for the successor."
+        "The response identifies the Evaluation Protocol or reinterpretation and execution needed for the successor."
       ]
     },
     {
       "id": 112,
       "stage": "execution",
-      "prompt": "An authority has accepted and admitted active Requirement OPS-REQ-0018. It has not been implemented, and no Evaluation Definition exists yet. Change its lifecycle to draft until delivery catches up.",
+      "prompt": "An authority has accepted and admitted active Requirement OPS-REQ-0018. It has not been implemented, and no Evaluation Protocol exists yet. Change its lifecycle to draft until delivery catches up.",
       "expected_output": "A correction that keeps the accepted Requirement active while separately reporting implementation non-satisfaction and missing evaluation coverage as unknown or planned peer state.",
       "assertions": [
         "OPS-REQ-0018 remains requirement_lifecycle active because accepted normative force is independent of implementation.",
         "OKF status and Requirement lifecycle are not used to encode delivery progress.",
         "Implementation satisfaction remains false or unknown and Evaluation coverage remains missing without invented results.",
-        "The missing Evaluation Definition does not retroactively undo acceptance."
+        "The missing Evaluation Protocol does not retroactively undo acceptance."
       ]
     },
     {
@@ -1484,7 +1483,7 @@
       "assertions": [
         "The word remove is interpreted through Requirement lifecycle as retirement, not erasure.",
         "BILL-REQ-0009 remains discoverable with its stable identifier and last accepted expression.",
-        "Downstream architecture, implementation plans, evaluation definitions, reports, and navigation are reviewed without rewriting historical evidence.",
+        "Downstream architecture, implementation plans, Evaluation Protocols, reports, and navigation are reviewed without rewriting historical evidence.",
         "No successor, replacement, or supersession edge is invented."
       ]
     },
@@ -1556,10 +1555,6 @@
         {
           "source": "evals/files/case-75/gen-stack/evaluations/index.md",
           "target": "gen-stack/evaluations/index.md"
-        },
-        {
-          "source": "evals/files/case-75/gen-stack/evaluations/system-evaluation-approach.md",
-          "target": "gen-stack/evaluations/system-evaluation-approach.md"
         }
       ],
       "artifact_paths": [
@@ -1636,13 +1631,13 @@
     {
       "id": 122,
       "stage": "execution",
-      "prompt": "Our repository owns Evaluation Definitions in an existing YAML test registry with native fields `id`, `requirement_ids`, `subject`, `method`, `oracle`, `conditions`, and `thresholds`. Draft the definition for active Requirement INST-REQ-0042. Keep Gen Stack relationships and evidence boundaries, but use the repository format.",
-      "expected_output": "A repository-native Evaluation Definition that fills the exact registry fields, references the Requirement once through requirement_ids, and adds only residual notes that the schema cannot express.",
+      "prompt": "Our established corpus adopts the current profile, and the accepted bounded assessment claim covers active Requirement INST-REQ-0042. Our YAML test registry has native fields `id`, `requirement_ids`, `subject`, `method`, `oracle`, `conditions`, and `thresholds`. Author the governed Evaluation Protocol and explain how the registry entry should project or compile it without creating a second criteria authority. Do not implement tests or execute it.",
+      "expected_output": "One requirement-satisfaction Evaluation Protocol in the governed corpus plus a native registry mapping that derives executable fields from it without duplicating Requirement or Protocol authority.",
       "assertions": [
-        "The existing YAML registry is used instead of an OKF document or generic Evaluation template.",
-        "INST-REQ-0042 is represented through requirement_ids and is not duplicated as an independently maintained Requirement statement in prose.",
-        "Subject, method, oracle, conditions, and thresholds use their exact native fields.",
-        "The definition remains an assessment contract and does not claim an Execution, Result, coverage pass, or accepted desired state."
+        "The accepted claim is authored as an Evaluation Protocol under evaluations/protocols/requirements/ with exact profile fields and sections.",
+        "INST-REQ-0042 appears in requirements and its Architecture subject is derived rather than independently asserted.",
+        "The YAML registry is treated as a repository-native executable projection or binding, not a second Protocol authority.",
+        "No test implementation, Execution, Result, coverage pass, or accepted desired state is invented."
       ]
     },
     {

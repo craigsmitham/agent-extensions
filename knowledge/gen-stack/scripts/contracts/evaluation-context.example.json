@@ -1,14 +1,14 @@
 {
-  "schema_version": "gen-stack-inspection/v1alpha1",
+  "schema_version": "gen-stack-inspection/v1alpha2",
   "producer": {
     "name": "gen-stack-inspection",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
   },
   "snapshot": {
     "profile": {
       "identity": "gen-stack",
-      "version": "0.4.0"
+      "version": "0.5.0"
     },
     "snapshot_id": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
     "corpus_digest": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
@@ -33,19 +33,25 @@
     "cross_view_mappings": [],
     "c4_views": [],
     "governance": {
-      "system_evaluation_approach": {
-        "ref": "/evaluations/system-evaluation-approach.md",
-        "type": "System Evaluation Approach",
-        "title": "Synthetic evaluation approach",
-        "description": "How the public synthetic system organizes evaluation guidance.",
-        "status": "stable",
-        "sections": {},
-        "body": "Synthetic evaluation guidance.",
-        "source": {
-          "path": "gen-stack/evaluations/system-evaluation-approach.md",
-          "digest": "sha256:4444444444444444444444444444444444444444444444444444444444444444"
+      "evaluation_protocols": [
+        {
+          "ref": "/evaluations/protocols/requirements/preserve-state.md",
+          "type": "Evaluation Protocol",
+          "title": "Preserve accepted state",
+          "description": "Assesses one accepted synthetic obligation.",
+          "status": "stable",
+          "protocol_id": "SYN-EVAL-0001",
+          "protocol_lifecycle": "active",
+          "evaluation_role": "requirement-satisfaction",
+          "targets": ["SYN-REQ-0001"],
+          "sections": {},
+          "body": "Synthetic evaluation protocol.",
+          "source": {
+            "path": "gen-stack/evaluations/protocols/requirements/preserve-state.md",
+            "digest": "sha256:4444444444444444444444444444444444444444444444444444444444444444"
+          }
         }
-      },
+      ],
       "system_assurance": {
         "ref": "/assurance.md",
         "type": "System Assurance",
@@ -88,7 +94,7 @@
     },
     {
       "claim": "evaluation-coverage",
-      "reason": "Concrete Evaluation artifacts and coverage mappings are outside this projection."
+      "reason": "Protocol presence is projected, but coverage scope, evidence state, and outcomes require a separate assessment."
     }
   ],
   "output_digest": "sha256:6666666666666666666666666666666666666666666666666666666666666666"

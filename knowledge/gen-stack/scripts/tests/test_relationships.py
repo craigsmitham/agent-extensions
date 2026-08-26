@@ -100,7 +100,7 @@ okf_version: "0.2"
 # Synthetic Gen Stack corpus
 
 This corpus adopts the
-            [gen-stack profile](https://example.test/profile) version 0.4.0.
+            [gen-stack profile](https://example.test/profile) version 0.5.0.
 """,
             encoding="utf-8",
         )

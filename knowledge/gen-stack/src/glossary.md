@@ -2,7 +2,7 @@
 type: Reference
 title: Gen Stack vocabulary and relationship model
 description: The semantic authority for Gen Stack terms, stable identifiers, definitions, distinctions, relationship meaning and cardinality, and prohibited inferences across the complete method.
-tags: [glossary, vocabulary, terminology, concept-model, gen-stack, specification, change-specification, bugfix-specification, defect, defect-report, bug, process, process-model, process-enactment, work-items, workflow, ooda, control-loop, pace-layer, trust-gradient, signals, observations, relationships, relationship-semantics, cardinality, traceability, intent, value, requirements, requirement-classification, architecture, change-design, technical-design, evaluations, evaluation-definition, evaluation-execution, evaluation-result, implementation, implementation-unit, system-context, architecture-decisions, capabilities, features, surfaces, domain-driven-design, c4]
+tags: [glossary, vocabulary, terminology, concept-model, gen-stack, specification, change-specification, bugfix-specification, defect, defect-report, bug, process, process-model, process-enactment, work-items, workflow, ooda, control-loop, pace-layer, trust-gradient, signals, observations, relationships, relationship-semantics, cardinality, traceability, intent, value, requirements, requirement-classification, architecture, change-design, technical-design, evaluations, evaluation-protocol, evaluation-case, evaluation-coverage, evaluation-execution, evaluation-result, implementation, implementation-unit, system-context, architecture-decisions, capabilities, features, surfaces, domain-driven-design, c4]
 status: draft
 sources:
   - id: boyd-ooda
@@ -22,7 +22,7 @@ sources:
     title: Process
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T20:16:50Z
+  at: 2026-08-26T23:10:00Z
 ---
 
 # Gen Stack vocabulary and relationship model
@@ -76,7 +76,7 @@ definitions:
 | Subdomains, Bounded Contexts, and Context Maps | [Domain-driven design](architecture/domains/domain-driven-design.md) |
 | C4 elements and views | [C4 model](architecture/structure/c4-model.md) |
 | Requirements and their classifications | [Requirements engineering](architecture/requirements/requirements-engineering.md) and [Requirement classification](architecture/requirements/requirement-classification.md) |
-| Evaluation concepts and the System Evaluation Approach | [Evaluation as bounded evidence](evaluations/evaluation-as-bounded-evidence.md) |
+| Evaluation concepts and Protocols | [Evaluation as bounded evidence](evaluations/evaluation-as-bounded-evidence.md) and [Evaluation Protocols as assessment contracts](evaluations/evaluation-protocols-as-assessment-contracts.md) |
 | Change Design | [Change Design](design/change-design.md) |
 | Processes | [Process](processes/process.md) |
 | Adaptive control | [OODA as the Gen Stack control loop](control-loop/ooda-control-loop.md) |
@@ -531,64 +531,93 @@ corpus.
 
 ## Evaluations
 
+<a id="term-evaluation"></a>
 **Evaluation** (`evaluation`) is a criterion-referenced assessment of an
 identified realized subject under stated conditions that produces evidence
 for a bounded purpose.[^iso-25040] It may use automated or human-performed
 testing, analysis, inspection, review, simulation, measurement, study, or
-continuous operational assessment. An Evaluation that claims satisfaction of an accepted
-obligation references the applicable Requirement; no method, passing result,
-or observed baseline owns or rewrites that obligation.
+continuous operational assessment. An Evaluation that claims satisfaction of
+an accepted obligation references the applicable Requirement; no method,
+passing result, or observed baseline owns or rewrites that obligation.
 
-**Evaluation Definition** (`evaluation-definition`) owns what is assessed, the
-applicable criteria, method, cases or sampling strategy, oracle or judgment
-procedure, thresholds, and conditions. It references the stable
-`requirement_id` when it claims Requirement coverage and may intentionally
-repeat the Requirement predicate. By making the expected evidence and failure
-conditions explicit, it can guide Implementation work without becoming an
-authority for the Requirement or Architecture it evaluates.
+<a id="term-evaluation-definition"></a>
+**Evaluation Protocol** (`evaluation-definition`) is the durable assessment
+contract that owns one bounded claim, its primary role, criteria authority,
+assessment method, cases or sampling strategy, oracle or judgment procedure,
+thresholds, material conditions, and evidence lifecycle. The stable identifier
+is retained from the former preferred label *Evaluation Definition* because
+the meaning is continuous. A Protocol may intentionally repeat an authoritative
+predicate so that it can be assessed, but it does not become the Requirement,
+Architecture, or Implementation authority it evaluates.
 
-**Evaluation Role** (`evaluation-role`) classifies the primary claim made by
-an Evaluation Definition. `requirement-satisfaction` asks whether a realized
-subject satisfies identified Requirements; `architecture-realization` asks
-whether Implementation realizes an Architecture subject's accepted
-responsibilities, boundaries, interfaces, relationships, or decisions; and
-`other-bounded-claim` names another criteria authority and claim. One
-Definition has one primary role even when its evidence informs several views.
+<a id="term-evaluation-role"></a>
+**Evaluation Protocol Role** (`evaluation-role`) classifies the primary claim
+made by an Evaluation Protocol:
 
+- `requirement-satisfaction` asks whether a realized subject satisfies one or
+  more identified active Requirements;
+- `architecture-realization` asks whether Implementation realizes one or more
+  accepted Architecture authorities; and
+- `implementation-conformance` asks whether an Implementation Unit conforms to
+  one or more repository-local implementation contracts or invariants.
+
+One Protocol has exactly one primary role even when its evidence informs
+several views. The roles distinguish the authority of the claim, not the test
+technology, suite directory, or execution mechanism.
+
+<a id="term-evaluation-case"></a>
+**Evaluation Case** (`evaluation-case`) is one Protocol-scoped example,
+scenario, property, sample, or review instance used to exercise the Protocol's
+claim and judgment procedure. It inherits the Protocol's role and criteria
+authority. A Case that needs an independent claim, lifecycle, outcome, or
+reporting identity should instead become its own Evaluation Protocol.
+
+<a id="term-evaluation-protocol-coverage"></a>
+**Evaluation Protocol Coverage** (`evaluation-protocol-coverage`) is the
+relationship between an in-scope Requirement, Architecture authority, or
+Implementation Unit and the existence of an applicable maintained Evaluation
+Protocol. Coverage is `defined` or `uncovered` for a declared scope and time;
+it says neither that evidence is current nor that the subject passes. Mere
+eligibility for evaluation or appearance in a policy-neutral candidate
+projection does not establish that the target is in scope, that coverage is
+required, or that a matching Protocol is adequate.
+
+<a id="term-evaluation-suite"></a>
 **Evaluation Suite** (`evaluation-suite`) is a named repository-native grouping
-of Evaluation Definitions for execution, maintenance, or reporting. A Suite
-does not own the criteria in its Definitions, need not mirror the Architecture
-hierarchy, and may span subjects or roles.
+of Evaluation Protocols or their Cases for execution, maintenance, or
+reporting. A Suite does not own their criteria, need not mirror an Architecture
+hierarchy, and may span subjects or roles. Its physical organization may mirror
+the governed Protocol hierarchy when that improves maintainability.
 
+<a id="term-evaluation-execution"></a>
 **Evaluation Execution** (`evaluation-execution`) is one bounded application
-of an Evaluation Definition. It binds the Definition to identified inputs or
-observations, environment, Implementation revision or other realized state,
-evaluator, and either an attempt or a declared observation window.
+of an exact Evaluation Protocol revision. It binds the Protocol and selected
+Cases or sample to identified inputs or observations, environment and
+configuration, Implementation revision, evaluator or harness, and either an
+attempt or a declared observation window.
 
+<a id="term-evaluation-result"></a>
 **Evaluation Result** (`evaluation-result`) records the observations,
 measurements, ratings, and assertion or judgment outcomes produced by an
 Evaluation Execution. It provides evidence no stronger than the bounded
 Execution and its criteria establish; it is not a governance decision or a
 change to Intent.
 
+<a id="term-evaluation-report"></a>
 **Evaluation Report** (`evaluation-report`) is a traceable projection or
 aggregation of Evaluation Results for a declared audience, scope, filter, and
-time. It preserves links to the underlying Executions and Definitions and
-states how `pass`, `fail`, `unknown`, and harness errors are rolled up. It is
-not itself an Evaluation Result, a Requirement authority, or an assurance
+time. It preserves links to the underlying Executions and Protocols and keeps
+Protocol Coverage (`uncovered` or `defined`), evidence state (`absent`,
+`stale`, `current`, `skipped`, or `harness-error`), and bounded outcome
+(`pass`, `fail`, or `unknown`) separate. Requirement satisfaction,
+Architecture realization, and Implementation conformance are logically
+separate report projections even when one physical report renders all three.
+It is not itself an Evaluation Result, a Requirement authority, or an assurance
 decision.
-
-<a id="term-system-evaluation-approach"></a>
-**System Evaluation Approach** (`system-evaluation-approach`) is the
-cross-cutting governance and discovery concept that defines how one documented
-System's evaluation portfolio supports decisions, routes to repository-native
-Evaluation artifacts, preserves evidence limits and lifecycle, and exposes
-material gaps. It is not an Evaluation Definition, Suite, Result, Report, or
-assurance decision.
 
 Testing is an Evaluation method, not a synonym for
 Evaluation.[^iso-29119-series] Telemetry can supply Observations, but
-collection alone does not make it an Evaluation; an Evaluation Definition must
+collection alone does not make it an Evaluation; an Evaluation Protocol must
 supply criteria, method, conditions, and a bounded observation window. See
 [Evaluation as bounded
 evidence](evaluations/evaluation-as-bounded-evidence.md) for the distinctions
@@ -602,6 +631,7 @@ configuration, prompts, workflow definitions, build and deployment
 definitions, and other machine-consumed artifacts. It owns what exists now; it
 does not establish what shall exist or why the architecture was chosen.
 
+<a id="term-implementation-unit"></a>
 **Implementation Unit** (`implementation-unit`) is a named, mechanically resolvable part of the
 Implementation treated as one coherent scope for generation, change,
 replacement, deletion, provenance, or implementation-local testing. It may be
@@ -753,6 +783,12 @@ The relationship tables use these controlled collective terms:
 - **Eligible Architecture subject** (`eligible-architecture-subject`) means a
   System, Capability, Feature, Surface, Bounded Context, C4 Software System, C4
   Container, or C4 Component that may own Requirements under the profile.
+- <a id="term-architecture-realization-authority"></a>**Architecture realization authority** (`architecture-realization-authority`)
+  means a System, Architecture Decision Record, Capability, Feature, Surface,
+  Bounded Context, Context Map, C4 Software System, C4 Container, or C4
+  Component whose accepted meaning may be evaluated for realization by
+  Implementation. A C4 View is excluded because it projects canonical elements
+  rather than owning the realized structure it depicts.
 - **C4 element** (`c4-element`) means a C4 Software System, C4 Container, or C4
   Component. A C4 View is a projection, not an element.
 - **Gen Stack authority or activity** (`gen-stack-authority-or-activity`)
@@ -772,13 +808,17 @@ The relationship tables use these controlled collective terms:
 | <a id="relationship-architecture-constrains-compilation"></a>`architecture-constrains-compilation` | Architecture concept → Compilation | **constrains** | **is constrained by** | Compilation → `1..*` Architecture concepts; concept → `0..*` Compilations | Architecture supplies the accepted contract; it is not output produced by Compilation, and raw Intent does not bypass Requirements as a direct input. |
 | <a id="relationship-compilation-produces-implementation-unit"></a>`compilation-produces-implementation-unit` | Compilation → Implementation Unit | **produces** | **is produced by** | One bounded Compilation → `1..*` Units; a Unit may be regenerated many times | The produced Units collectively update the Implementation; Compilation does not decide or rewrite its accepted inputs. |
 | <a id="relationship-implementation-unit-realizes-authority"></a>`implementation-unit-realizes-authority` | Implementation Unit → Architecture concept or Requirement | **realizes** | **is realized by** | `0..*` ↔ `0..*` | The link states the current realization; implementation does not establish what shall exist. |
-| <a id="relationship-evaluation-definition-evaluates-requirement"></a>`evaluation-definition-evaluates-requirement` | Evaluation Definition → Requirement | **evaluates** | **is evaluated by** | `0..*` ↔ `0..*` | The definition owns the assessment method and may repeat the predicate; it does not own the obligation. |
-| <a id="relationship-evaluation-definition-evaluates-architecture-realization"></a>`evaluation-definition-evaluates-architecture-realization` | Evaluation Definition → Architecture concept | **evaluates realization of** | **has realization evaluated by** | `0..*` ↔ `0..*` | The definition assesses whether Implementation realizes accepted architecture meaning; it does not make the evaluator or current structure authoritative for Architecture. |
-| <a id="relationship-evaluation-suite-groups-definition"></a>`evaluation-suite-groups-definition` | Evaluation Suite → Evaluation Definition | **groups** | **is grouped in** | `0..*` ↔ `0..*` | Grouping supports execution and maintenance; it does not transfer criteria authority or imply Architecture containment. |
-| <a id="relationship-evaluation-execution-applies-definition"></a>`evaluation-execution-applies-definition` | Evaluation Execution → Evaluation Definition | **applies** | **is applied by** | Execution → `1` Definition; Definition → `0..*` Executions | The Execution uses one identified assessment method; it does not alter that definition. |
+| <a id="relationship-evaluation-definition-evaluates-requirement"></a>`evaluation-definition-evaluates-requirement` | Evaluation Protocol → Requirement | **evaluates satisfaction of** | **has satisfaction evaluated by** | Role `requirement-satisfaction`: Protocol → `1..*` active Requirements; Requirement → `0..*` Protocols. Other roles: Protocol → `0` Requirements. | The Protocol derives the realized Architecture subject from each Requirement's canonical `subject`; it does not duplicate or override that subject link or own the obligation. Prefer one Requirement per Protocol when that yields a clearer claim and lifecycle. |
+| <a id="relationship-evaluation-definition-evaluates-architecture-realization"></a>`evaluation-definition-evaluates-architecture-realization` | Evaluation Protocol → Architecture realization authority | **evaluates realization of** | **has realization evaluated by** | Role `architecture-realization`: Protocol → `1..*` authorities; authority → `0..*` Protocols. Other roles: Protocol → `0` authorities. | The Protocol assesses whether Implementation realizes accepted Architecture meaning; it does not make the evaluator or current structure authoritative for Architecture. A C4 View is never a target. |
+| <a id="relationship-evaluation-protocol-evaluates-implementation-conformance"></a>`evaluation-protocol-evaluates-implementation-conformance` | Evaluation Protocol → Implementation Unit | **evaluates conformance of** | **has conformance evaluated by** | Role `implementation-conformance`: Protocol → `1..*` Units; Unit → `0..*` Protocols. Other roles: Protocol → `0` Units. | The Protocol evaluates a repository-local implementation contract or invariant without promoting that contract into Architecture or a Requirement. |
+| <a id="relationship-evaluation-protocol-defines-case"></a>`evaluation-protocol-defines-case` | Evaluation Protocol → Evaluation Case | **defines** | **is defined by** | Protocol → `0..*` Cases; Case → `1` Protocol | A Case inherits its Protocol's role and criteria authority; it does not establish independent coverage or an independently reportable claim. |
+| <a id="relationship-evaluation-suite-groups-definition"></a>`evaluation-suite-groups-definition` | Evaluation Suite → Evaluation Protocol | **groups** | **is grouped in** | `0..*` ↔ `0..*` | Grouping supports execution and maintenance; it does not transfer criteria authority or imply Architecture containment. The stable identifier retains the former label while the preferred target term is Protocol. |
+| <a id="relationship-evaluation-execution-applies-definition"></a>`evaluation-execution-applies-definition` | Evaluation Execution → Evaluation Protocol | **applies** | **is applied by** | Execution → `1` Protocol revision; Protocol → `0..*` Executions | The Execution uses one exact assessment contract revision; it does not alter that Protocol. The stable identifier retains the former label while the preferred target term is Protocol. |
 | <a id="relationship-evaluation-execution-assesses-implementation"></a>`evaluation-execution-assesses-implementation` | Evaluation Execution → Implementation revision | **assesses** | **is assessed in** | Execution → `1` revision; revision → `0..*` Executions | The Execution binds one realized state, inputs or observations, evaluator, environment, and attempt or observation window; its evidence does not automatically generalize to another state. |
 | <a id="relationship-evaluation-execution-produces-result"></a>`evaluation-execution-produces-result` | Evaluation Execution → Evaluation Result | **produces** | **is produced by** | `1` ↔ `1` | The Result records that Execution's observations, measurements, ratings, and assertion or judgment outcomes; it is not a governance decision. |
 | <a id="relationship-evaluation-result-evidences-requirement"></a>`evaluation-result-evidences-requirement` | Evaluation Result → Requirement | **provides evidence for** | **has evidence from** | `0..*` ↔ `0..*` | The evidence supports only the bounded claim established by the Execution and its criteria; it does not rewrite desired state. |
+| <a id="relationship-evaluation-result-evidences-architecture-realization"></a>`evaluation-result-evidences-architecture-realization` | Evaluation Result → Architecture realization authority | **provides realization evidence for** | **has realization evidence from** | `0..*` ↔ `0..*` | Evidence is bounded to the applied Protocol, realized revision, conditions, and observation window; it neither changes Architecture nor proves assurance. |
+| <a id="relationship-evaluation-result-evidences-implementation-conformance"></a>`evaluation-result-evidences-implementation-conformance` | Evaluation Result → Implementation Unit | **provides conformance evidence for** | **has conformance evidence from** | `0..*` ↔ `0..*` | Evidence is bounded to the evaluated Unit and revision; a local pass does not establish Requirement satisfaction or Architecture realization. |
 | <a id="relationship-evaluation-report-projects-result"></a>`evaluation-report-projects-result` | Evaluation Report → Evaluation Result | **projects** | **appears in** | Report → `0..*` Results; Result → `0..*` Reports | The Report is a navigational or decision-support view; aggregation does not create a stronger Result or an assurance decision. |
 
 ### Control and learning

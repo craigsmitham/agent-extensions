@@ -13,18 +13,25 @@ from permission to act, stops for human ratification of material desired-state
 or Architecture decisions, and preserves the distinct authority of
 Implementation and Evaluations.
 
+Version `1.8.0` adds profile `0.5.0` Evaluation Protocol authoring for accepted
+Requirement-satisfaction, Architecture-realization, and
+Implementation-conformance claims. It keeps executable Cases and tests,
+Suites, Executions, Results, Reports, and run evidence repository-native and
+does not infer coverage or outcomes. Evaluation suite `1.8.0` exercises this
+boundary and the role-specific Protocol representation.
+
 Version `1.7.0` uses native-first representation for governed concepts and
 repository artifacts, maps only to host fields with exact semantics, keeps one
 owner per fact, and uses body fallbacks only for residual meaning. It also
 makes fixed-corpus inspection an exact-path probe rather than repository
 enumeration. Evaluation suite `1.7.0` covers governed OKF concepts, tracker
 fields and fallbacks, derived views, transient Change Design,
-repository-native Evaluation and Process artifacts, and deterministic corpus
+repository-native evaluation machinery and Process artifacts, and deterministic corpus
 discovery.
 
 Version `1.6.0` makes the supersession evidence boundary explicit in activated
 behavior: historical Evaluation Results remain bound to the predecessor
-Requirement, Evaluation Definition, Implementation revision, inputs, and
+Requirement, Evaluation Protocol, Implementation revision, inputs, and
 environment actually assessed, while successor satisfaction begins unknown.
 Evaluation suite `1.6.0` tests that boundary without conflating it with corpus
 mutation preconditions.

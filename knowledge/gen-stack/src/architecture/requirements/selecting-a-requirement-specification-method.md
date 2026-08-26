@@ -43,7 +43,7 @@ sources:
     title: Cucumber Gherkin reference
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T19:12:18Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # Selecting a requirement specification method
@@ -151,7 +151,7 @@ an output, state which role it serves:
 | Explanatory representation | Reader-oriented interpretation that must not independently change the obligation |
 | Supporting analysis model | A table, scenario, state space, predicate, projection, or formal abstraction used to expose meaning or defects |
 | Architecture | The subject's responsibilities, boundaries, relationships, decisions, and response |
-| Evaluation Definition | The assessment method, oracle, cases, thresholds, sampling, and conditions |
+| Evaluation Protocol | The assessment method, oracle, cases, thresholds, sampling, and conditions |
 | Evaluation Result or Observation | What one bounded execution or operating context established |
 
 A Requirement may use more than one notation inside one canonical concept when

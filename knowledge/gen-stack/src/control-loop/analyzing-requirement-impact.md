@@ -9,7 +9,7 @@ sources:
     title: OODA as the Gen Stack control loop
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T20:16:50Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # Analyzing Requirement impact
@@ -93,7 +93,7 @@ action. A Bugfix whose corrected behavior has no accepted basis is blocked
 before delivery, while its Defect Report can still preserve the observation and
 gap. Use `non-blocking` when the current artifact can proceed honestly—for
 example, when an accepted correction can be specified while a missing
-Evaluation Definition is separately recommended.
+Evaluation Protocol is separately recommended.
 
 Do not call a missing document a Defect unless an applicable expectation or
 intended use establishes that deficiency. Do not make every gap a decision

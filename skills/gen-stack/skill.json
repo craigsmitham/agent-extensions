@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "gen-stack",
-  "version": "1.7.0",
-  "description": "Help humans develop bounded Gen Stack change, including Requirement additions, revisions, retirements, and replacements, without making their Requirement or Architecture decisions",
+  "version": "1.8.0",
+  "description": "Help humans develop bounded Gen Stack change and governed Evaluation Protocols without making their Requirement or Architecture decisions",
   "keywords": [
     "gen-stack",
     "software-change",
@@ -28,6 +28,7 @@
     "domain-driven-design",
     "architecture-decisions",
     "evaluation-impact",
+    "evaluation-protocols",
     "human-authority",
     "decision-support"
   ],

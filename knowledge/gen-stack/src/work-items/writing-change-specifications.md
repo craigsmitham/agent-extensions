@@ -25,7 +25,7 @@ sources:
     title: Preserving design and delivery context in software work items
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T20:16:50Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # Writing change specifications
@@ -245,7 +245,7 @@ Do not define success only as completing tasks, merging code, or deploying.
 
 Identify the evidence needed across applicable unit, integration, contract,
 system, migration, operational, security, or human review levels. Link existing
-Evaluation Definitions and name any that need creation, correction, rerun, or
+Evaluation Protocols and name any that need creation, correction, rerun, or
 reinterpretation.
 
 Keep expected future evidence separate from Evaluation Results that already

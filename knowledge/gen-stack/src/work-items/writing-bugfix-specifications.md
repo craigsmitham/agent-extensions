@@ -25,7 +25,7 @@ sources:
     title: Preserving design and delivery context in software work items
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T20:16:50Z
+  at: 2026-08-26T22:30:00Z
 ---
 
 # Writing bugfix specifications
@@ -244,7 +244,7 @@ constraints.
 
 Explain how evidence will be gathered across the necessary levels,
 environments, fixtures, data, integration boundaries, and operational checks.
-Link existing Evaluation Definitions and identify any that need creation,
+Link existing Evaluation Protocols and identify any that need creation,
 correction, rerun, or reinterpretation.
 
 Keep verification conditions distinct from the strategy used to gather
@@ -355,7 +355,7 @@ Observable conditions that establish the correction and material regressions.
 
 ### Evaluation or testing strategy
 
-How, where, and with which identified Evaluation Definitions the evidence will
+How, where, and with which identified Evaluation Protocols the evidence will
 be gathered.
 
 ## Delivery and recovery

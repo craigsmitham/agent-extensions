@@ -5,8 +5,8 @@ description: Use when Surface behavior or realization needs evaluation coverage;
 tags: [evaluations, surfaces, requirements, usability, accessibility, interaction]
 status: draft
 sources:
-  - resource: designing-a-system-evaluation-approach.md
-    title: Designing a system evaluation approach
+  - resource: designing-evaluation-protocols.md
+    title: Designing Evaluation Protocols
   - resource: ../architecture/surfaces/documenting-surfaces.md
     title: Documenting surfaces
 ---
@@ -27,14 +27,11 @@ canonical Surface while preserving the Surface interaction hierarchy.
 
 ## Representation
 
-Author Definitions, Suites, Executions, Results, and Reports in their
-repository-native formats. Use exact native fields for identity, Evaluation
-Role, Surface subject, Requirement IDs, method, conditions, oracle, thresholds,
-Implementation revision, and evidence links when available. Add residual prose
-only for meaning the schema cannot carry. Prefer Definition content in this
-logical order: bounded claim, subject and criteria authority, method and cases,
-conditions and sampling, oracle and thresholds, then evidence and lifecycle.
-Do not wrap concrete Evaluations in OKF or duplicate native links in prose.
+Author governed Protocols using the profile and keep Suites, Executions,
+Results, and Reports in their repository-native formats. Use the Protocol's
+role-specific target field for Requirement IDs or Surface authority. Prefer
+Case organization that follows the Surface interaction shape when useful, but
+do not infer role or containment from a Suite folder.
 
 ## Steps
 
@@ -42,12 +39,13 @@ Do not wrap concrete Evaluations in OKF or duplicate native links in prose.
    Use the parent only for behavior or quality that genuinely spans its
    children.
 2. For `requirement-satisfaction`, reference the Surface-colocated Requirement
-   IDs. Derive scenarios from relevant Use Cases without making the Use Case
-   or test the obligation authority.
+   IDs and derive the Surface subject from them. Derive scenarios from relevant
+   Use Cases without making the Use Case, Case, or test the obligation authority.
 3. Cover recognizable success behavior and material extensions, failures,
    recovery, trust transitions, accessibility, usability, human factors,
    compatibility, and operational conditions in proportion to consequence.
-4. For `architecture-realization`, assess whether the implemented encounter
+4. For `architecture-realization`, target the canonical Surface and assess
+   whether the implemented encounter
    point preserves the Surface boundary, actors, exposed behavior, feature and
    Use Case mappings, trust boundary, and consequential accessibility or
    operational response.
@@ -73,6 +71,6 @@ Do not wrap concrete Evaluations in OKF or duplicate native links in prose.
 
 ## Related
 
-- [Designing a system evaluation approach](designing-a-system-evaluation-approach.md)
+- [Designing Evaluation Protocols](designing-evaluation-protocols.md)
 - [Documenting surfaces](../architecture/surfaces/documenting-surfaces.md)
 - [Goal-oriented behavior and use cases](../intent/goal-oriented-behavior.md)
