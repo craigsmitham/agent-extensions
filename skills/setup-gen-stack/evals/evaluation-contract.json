@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Planning or establishing a minimal, discoverable, OKF v0.2 Gen Stack corpus with the required cross-cutting System governance kernel, explicit system-to-corpus mappings, conditional Intent and Architecture collections, and no invented semantic state or repository-native corpus sections.",
+    "intended_use": "Planning or establishing a minimal, discoverable, OKF v0.2 Gen Stack corpus with the required cross-cutting System governance kernel, governed System Evaluation Approach, explicit system-to-corpus mappings, conditional Intent and Architecture collections, and no invented semantic state or copied repository-native evaluation artifacts.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic strict-kernel bootstrap, connection, federation, required-profile and obligation-owner migration, conditional-collection, assessment-only, system-boundary, maintenance-boundary, outcome-verification, read-only check-authority, decision-presentation, and routing cases.",
+    "case_source": "Synthetic strict-kernel and System Evaluation Approach bootstrap, connection, federation, required-profile and obligation-owner migration, conditional-collection, assessment-only, system-boundary, maintenance-boundary, outcome-verification, read-only check-authority, decision-presentation, and routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -79,6 +79,7 @@
       "No local waiver from required OKF or profile conformance",
       "Accepted obligations have one Requirement authority",
       "Tests do not substitute for Requirement authority",
+      "The governed evaluation approach does not absorb repository-native evaluation authorities",
       "Routing and execution claims remain distinct",
       "Decision presentation remains neutral and complete"
     ],
@@ -154,6 +155,11 @@
         "gate": "Tests do not substitute for Requirement authority",
         "case_id": 23,
         "assertion": "The accepted policy, not the test, establishes the Requirement's normative authority and traceability."
+      },
+      {
+        "gate": "The governed evaluation approach does not absorb repository-native evaluation authorities",
+        "case_id": 24,
+        "assertion": "Concrete Definitions, Suites, Executions, Results, and Reports remain linked repository-native authorities rather than corpus concepts."
       }
     ]
   },

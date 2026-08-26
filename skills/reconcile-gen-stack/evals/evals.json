@@ -170,11 +170,11 @@
     {
       "id": 14,
       "stage": "execution",
-      "prompt": "Review our established Gen Stack corpus without changing files. Its root declares OKF v0.2 and adopts a retired architecture-specific profile version, has no lifecycle.md, ownership.md, decisions.md, or assurance.md, and one Feature lacks required profile metadata. Report conformance against the current installed profile precisely.",
+      "prompt": "Review our established Gen Stack corpus without changing files. Its root declares OKF v0.2 and adopts a retired architecture-specific profile version, has no lifecycle.md, ownership.md, decisions.md, assurance.md, evaluations/index.md, or System Evaluation Approach, and one Feature lacks required profile metadata. Report conformance against the current installed profile precisely.",
       "expected_output": "A read-only conformance review that recognizes the retired profile as requiring migration to the current profile, reports the missing required kernel and metadata violation as current-profile failures, reports OKF separately, and preserves unknown where semantic evidence cannot decide.",
       "assertions": [
         "OKF v0.2 and gen-stack profile results are reported separately.",
-        "The obsolete adoption version, missing five required root concepts, and Feature metadata problem are classified as current-profile nonconformance.",
+        "The obsolete adoption version, missing five required root concepts, missing System Evaluation Approach and navigation, and Feature metadata problem are classified as current-profile nonconformance.",
         "None of the violations is accepted as a repository-local waiver or harmless format deviation.",
         "Unavailable structural or semantic evidence remains unknown rather than pass.",
         "No repository file is changed in review-only mode."
@@ -195,7 +195,7 @@
     {
       "id": 16,
       "stage": "execution",
-      "prompt": "Review our established corpus without changing files. It adopts the current gen-stack profile and has lifecycle.md, ownership.md, and decisions.md, but assurance is mentioned only in a C4 Software System document and assurance.md is absent.",
+      "prompt": "Review our established corpus without changing files. It adopts the current gen-stack profile and has lifecycle.md, ownership.md, decisions.md, and a profile-conforming System Evaluation Approach, but assurance is mentioned only in a C4 Software System document and assurance.md is absent.",
       "expected_output": "A read-only profile finding that assurance.md is a missing required root concept, the C4 mention cannot substitute for it, and profile conformance fails while OKF conformance remains separately assessed.",
       "assertions": [
         "The missing assurance.md is identified as profile nonconformance even though related prose exists elsewhere.",
@@ -207,13 +207,14 @@
     {
       "id": 17,
       "stage": "execution",
-      "prompt": "Migrate our established Gen Stack corpus from the retired architecture-specific profile to the current profile. You are authorized to create System from the accepted boundary, preserve the other root concepts, migrate two accepted ADRs into named records, convert three binding external constraints and two product quality requirements into subject-colocated Requirements with stable IDs, and remove the old top-level constraints and quality forms. Preserve proposals outside accepted architecture.",
-      "expected_output": "An authorized semantic migration to the current profile with five required root concepts, atomic accepted ADRs, subject-colocated Requirements, updated navigation and adoption, proposals preserved outside accepted architecture, duplicates removed, and separate OKF and profile verification.",
+      "prompt": "Migrate our established Gen Stack corpus from the retired architecture-specific profile to the current profile. You are authorized to create System from the accepted boundary, preserve the other root concepts, migrate two accepted ADRs into named records, convert three binding external constraints and two product quality requirements into subject-colocated Requirements with stable IDs, and remove the old top-level constraints and quality forms. Its accepted evaluation policy names repository tests and CI results, separates Requirement satisfaction from Architecture realization, preserves unknown, and uses subject and Requirement navigation; represent that as the required System Evaluation Approach without copying concrete evidence. Preserve proposals outside accepted architecture.",
+      "expected_output": "An authorized semantic migration to the current profile with five required root concepts, the governed System Evaluation Approach, atomic accepted ADRs, subject-colocated Requirements, updated navigation and adoption, proposals preserved outside accepted architecture, duplicates removed, and separate OKF and profile verification.",
       "assertions": [
         "The accepted system context moves to lifecycle.md, ownership.md, decisions.md as policy, and assurance.md without leaving duplicated overview or C4 ownership.",
         "Only accepted decisions become named Architecture Decision Records under architecture/decisions/; proposals retain their original lifecycle.",
         "Each binding external constraint becomes one named Requirement with requirement_type constraint beneath its explicit subject, and old constraint forms are removed.",
         "Indexes, inbound links, log, and root adoption are updated to the current profile version.",
+        "The accepted evaluation policy becomes the canonical System Evaluation Approach and routes to repository-native tests and CI results without copying them.",
         "The handoff reports base OKF and structural plus manual semantic profile results separately."
       ]
     },
@@ -240,8 +241,20 @@
         "No duplicate-authority finding is reported solely from identical wording across the two roles.",
         "The handoff distinguishes authority, evaluation definition, execution evidence, and any future governance decision."
       ]
+    },
+    {
+      "id": 20,
+      "stage": "execution",
+      "prompt": "Review our current-profile Gen Stack corpus without changing files. It contains evaluations/index.md and evaluations/system-evaluation-approach.md with the required five sections. It also contains evaluations/latest-results.md, which copies volatile CI results into the corpus. A reviewer says the entire evaluations directory is prohibited and should be deleted. Report the actual conformance boundary and required maintenance.",
+      "expected_output": "A read-only reconciliation that preserves the required evaluation navigation and System Evaluation Approach, identifies the copied volatile results as nonconforming concrete evaluation content, and recommends restoring those results to their repository-native authority while repairing links.",
+      "assertions": [
+        "The required evaluations/index.md and System Evaluation Approach are retained and not classified as prohibited.",
+        "The copied latest-results.md is distinguished from the governed Approach and classified as a corpus-boundary problem.",
+        "The report routes volatile Results back to their repository-native authority and requires repaired navigation without deleting evidence.",
+        "No files change in review-only mode, and profile conformance remains separate from evaluation coverage or fitness."
+      ]
     }
   ],
-  "suite_version": "1.0.0",
+  "suite_version": "1.1.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

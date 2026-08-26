@@ -49,6 +49,12 @@ distributing their relationships across packages.
 
 - [Implementation](implementation/) - Replaceable realized state, regeneration boundaries, conservation obligations, operational memory, and rollback.
 
+## Evaluations
+
+- [Evaluations](evaluations/) - Why Evaluation is broader than testing but
+  narrower than assurance, and how Definitions, Executions, Results,
+  observations, and decisions retain distinct authority.
+
 ## Processes
 
 - [Processes](processes/) - Reusable, bounded models of coordinated work that turn meaningful triggers into intended outcomes while preserving explicit authority, work-item identity, and evidence.

@@ -47,8 +47,8 @@ reasoning between accepted meaning and bounded Action. It may remain in the
 conversation, be captured in a work item, or exceptionally be maintained as a
 dedicated document. It is not another required authority layer: Requirements
 still own obligations, Architecture owns durable response meaning, Work items
-own delivery state, and Implementation and Evaluations own realized state and
-evidence.
+own delivery state, Implementation owns realized state, and Evaluations own
+assessment and evidence.
 
 A [Specification](glossary.md#specifications) gives one bounded system or
 change a navigable whole by composing the relevant representations. It is not
@@ -59,6 +59,14 @@ or Architecture changes, while Bugfix Specifications specialize them for
 authorized corrective work. Neither is a mandatory document template. A
 Bugfix Specification remains linked to its provenance-bearing Defect Reports;
 it is never a report under a new title.
+
+[Evaluation as bounded evidence](evaluations/evaluation-as-bounded-evidence.md)
+explains why tests are only one Evaluation method and how Definitions,
+Executions, Results, observations, assurance, and decisions retain distinct
+authority. [Designing a system evaluation
+approach](evaluations/designing-a-system-evaluation-approach.md) turns those
+distinctions into subject- and Requirement-navigable portfolios and separate
+Requirement-satisfaction and Architecture-realization reports.
 
 The loop is inspired by Chad Fowler's account of a generative stack that moves
 from human intent through structured clauses, evaluations, implementation, and

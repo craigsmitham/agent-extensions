@@ -3,12 +3,13 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Set up Gen Stack in this repository. AGENTS.md already exists, the deployable application is the clear system boundary, and there is no Gen Stack corpus yet. The application is active with an ongoing change horizon, repository owners are the accepted maintenance and escalation route, repository review accepts architecture changes and requires an ADR only for durable consequential choices, and ordinary repository review is the accepted assurance obligation unless regulated or safety-relevant behavior enters scope. Keep it minimal.",
-      "expected_output": "A minimal conforming OKF v0.2 docs/Gen Stack corpus with explicit gen-stack profile adoption, the five required root concepts, and a concise AGENTS.md discovery route, without invented meaning or empty conditional collections.",
+      "prompt": "Set up Gen Stack in this repository. AGENTS.md already exists, the deployable application is the clear system boundary, and there is no Gen Stack corpus yet. The application is active with an ongoing change horizon, repository owners are the accepted maintenance and escalation route, repository review accepts architecture changes and requires an ADR only for durable consequential choices, and ordinary repository review plus automated tests is the accepted assurance and evaluation approach unless regulated or safety-relevant behavior enters scope. Test definitions and results stay in the repository; missing coverage remains unknown. Keep it minimal.",
+      "expected_output": "A minimal conforming OKF v0.2 docs/Gen Stack corpus with explicit gen-stack profile adoption, the five required root concepts, the governed System Evaluation Approach and navigation, and a concise AGENTS.md discovery route, without invented meaning or empty conditional collections.",
       "assertions": [
         "The deployable application is recorded as the documented system boundary.",
-        "The root index declares OKF v0.2, explicitly adopts and links the installed gen-stack profile version, and links lifecycle.md, ownership.md, decisions.md, and assurance.md.",
+        "The root index declares OKF v0.2, explicitly adopts and links the installed gen-stack profile version, and links lifecycle.md, ownership.md, decisions.md, assurance.md, and evaluations/index.md.",
         "The five required concepts faithfully express the supplied accepted System and context, including the bounded ordinary-review assurance conclusion and its reassessment trigger.",
+        "The System Evaluation Approach routes to repository-native tests and results, preserves unknown coverage, and does not invent additional methods or reports.",
         "AGENTS.md points to the architecture-doc root and shared pack without copying the portable method.",
         "No empty decisions, constraints, value, capability, feature, domain, structure, concern, or overview collection is created.",
         "The handoff states the resulting system-to-root mapping, verification performed, unresolved gaps, and appropriate next workflow in terms of what is now true."
@@ -17,13 +18,14 @@
     },
     {
       "id": 2,
-      "prompt": "Adopt the architecture-doc workflow for a repository that already uses architecture/index.md and has useful responsibility and boundary documents linked from it. Do not move them just to match a default path.",
-      "expected_output": "Setup preserves the established root and useful profile-permitted organization, establishes required OKF and profile adoption, and adds only missing adoption and discovery information.",
+      "prompt": "Adopt the architecture-doc workflow for a repository that already uses architecture/index.md and has useful responsibility and boundary documents linked from it. Repository tests and CI results are the accepted evaluation authorities, but no accepted navigation or reporting policy has been supplied. Do not move existing material just to match a default path.",
+      "expected_output": "Setup preserves the established root and useful profile-permitted organization, establishes required OKF and profile adoption where authority permits, and exposes the missing System Evaluation Approach meaning before claiming full conformance.",
       "assertions": [
         "The existing architecture/index.md remains canonical rather than being duplicated under docs/architecture/.",
         "Existing substantive documents are preserved and remain reachable.",
         "The non-default root is retained as a profile-permitted repository choice rather than represented as a waiver.",
         "The root declares OKF v0.2 and explicitly adopts the installed profile version.",
+        "The missing evaluation navigation and reporting policy remains a semantic gap rather than being invented from the existence of tests and CI results.",
         "No broad migration or rewrite is performed."
       ],
       "stage": "execution"
@@ -49,7 +51,7 @@
         "The profile's canonical layout is applied conditionally rather than treated as mandatory scaffolding.",
         "No empty documentation collections are created.",
         "Microservices are not recorded as accepted architecture without authority.",
-        "The smallest valid adoption surface includes the five required root concepts but no unearned optional collection."
+        "The smallest valid adoption surface includes the five required root concepts and System Evaluation Approach navigation but no unearned optional collection."
       ],
       "stage": "execution"
     },
@@ -61,7 +63,7 @@
         "Existing OKF and current profile adoption are recognized as the required representation contract.",
         "The Gen Stack corpus root remains docs/architecture/.",
         "The applicable Gen Stack profile identity and version are discoverable from the root.",
-        "OKF and profile conformance are verified and reported separately, with insufficient evidence preserved as unknown."
+        "OKF and profile conformance are verified and reported separately, with the required System Evaluation Approach assessed and insufficient evidence preserved as unknown."
       ],
       "stage": "execution"
     },
@@ -80,11 +82,11 @@
     {
       "id": 7,
       "prompt": "Set up Gen Stack corpus around the one existing accepted concept at docs/architecture/intent/use-cases/confirm-reservation.md. There are no other architecture concepts yet. Keep the corpus ready to grow consistently.",
-      "expected_output": "A bounded setup result that preserves the existing concept and identifies the required lifecycle, ownership, decision-policy, and assurance meaning that must be accepted before setup can claim a conforming corpus.",
+      "expected_output": "A bounded setup result that preserves the existing concept and identifies the required lifecycle, ownership, decision-policy, assurance, and System Evaluation Approach meaning that must be accepted before setup can claim a conforming corpus.",
       "assertions": [
         "The accepted concept is routed to intent/use-cases/confirm-reservation.md rather than a plural use-cases.md catch-all.",
         "The use-cases collection appears because its first concept exists and includes index.md navigation only when the required root kernel can also be established from accepted meaning.",
-        "Missing required system context is not replaced by placeholders or hidden in the root index.",
+        "Missing required system and evaluation-approach context is not replaced by placeholders or hidden in the root index.",
         "No empty capability, feature, domain, structure, or concern collection is created.",
         "Setup does not rewrite or add use-case semantics beyond the existing accepted document."
       ],
@@ -93,10 +95,10 @@
     {
       "id": 8,
       "prompt": "Set up Gen Stack corpus for an active project whose repository owner route is authoritative, but no accepted system lifecycle terminology or architecture decision route exists yet.",
-      "expected_output": "A truthful setup boundary that links the accepted owner route, surfaces the missing lifecycle, decision-policy, and assurance meaning, and does not claim profile-conforming adoption until those required concepts can be established.",
+      "expected_output": "A truthful setup boundary that links the accepted owner route, surfaces the missing lifecycle, decision-policy, assurance, and System Evaluation Approach meaning, and does not claim profile-conforming adoption until those required concepts can be established.",
       "assertions": [
         "The repository owner route is linked rather than copied as a roster.",
-        "Missing lifecycle terminology, decision policy, and assurance obligations are reported as required semantic gaps.",
+        "Missing lifecycle terminology, decision policy, assurance obligations, and evaluation-approach meaning are reported as required semantic gaps.",
         "No lifecycle or authority is inferred from usernames, commits, or directory structure.",
         "The missing required context prevents a claim of profile-conforming setup even though the system boundary and owner route are clear.",
         "The setup remains usable for either a solo project or a later multi-team system."
@@ -127,7 +129,7 @@
       "assertions": [
         "The request is treated as read-only even though the target setup is otherwise clear.",
         "The adoption brief identifies the system, proposed canonical root, instruction route, required OKF and profile versions, authority routes or gaps, and repository state with evidence status.",
-        "The recommended setup is bounded to the root index plus lifecycle.md, ownership.md, decisions.md, and assurance.md, and it does not invent their substantive meaning.",
+        "The recommended setup is bounded to the root index, five root concepts, evaluations/index.md, and the System Evaluation Approach, and it does not invent their substantive meaning.",
         "Adapter- or host-observed artifact and filesystem evidence shows no created, modified, or deleted task artifact, and structured tool-call evidence records only local non-mutating inspection within the observed task boundary; a self-reported no-change statement alone is insufficient, and unavailable observation evidence remains unknown.",
         "The handoff explicitly states that no files changed and names what would be created or connected if setup is later authorized."
       ],
@@ -136,7 +138,7 @@
     {
       "id": 11,
       "prompt": "Connect the accepted architecture material supplied at inputs/case-11-system-boundary.md and inputs/case-11-decisions-index.md to Gen Stack. For this synthetic repository, those input paths are the established maintained locations and must remain in place. The service is the clear documented system, neither location is an established Gen Stack corpus root, and AGENTS.md is canonical.",
-      "expected_output": "A connection playbook that preserves and links the accepted material in place but identifies the missing required lifecycle, ownership, and assurance meaning before claiming a conforming canonical corpus.",
+      "expected_output": "A connection playbook that preserves and links the accepted material in place but identifies the missing required lifecycle, ownership, assurance, and System Evaluation Approach meaning before claiming a conforming canonical corpus.",
       "files": [
         "evals/files/case-11-system-boundary.md",
         "evals/files/case-11-decisions-index.md"
@@ -144,8 +146,8 @@
       "assertions": [
         "The repository is classified as a connection case rather than a blank bootstrap or established-corpus maintenance case.",
         "One canonical system-to-root mapping is established without moving or rewriting the accepted input material.",
-        "The accepted boundary and decision route remain sources rather than substitutes for all five required root concepts.",
-        "The missing lifecycle, ownership, and assurance conclusions remain visible and setup is not reported conforming.",
+        "The accepted boundary and decision route remain sources rather than substitutes for all five required root concepts or the System Evaluation Approach.",
+        "The missing lifecycle, ownership, assurance, and evaluation-approach conclusions remain visible and setup is not reported conforming.",
         "AGENTS.md gains one concise discovery route and no empty taxonomy is created."
       ],
       "stage": "execution"
@@ -158,7 +160,7 @@
         "The explicit repository authority is sufficient to classify the setup as federation without asking a ritual confirmation.",
         "Catalog and fulfillment each map to exactly one accepted canonical Gen Stack corpus root.",
         "The repository instruction route exposes both system-to-root mappings and the shared method without creating an unaccepted platform Gen Stack corpus.",
-        "Each system requires its own lifecycle, ownership, decision-policy, and assurance concepts; missing meaning is not inferred from the mapping or replaced by empty files.",
+        "Each system requires its own lifecycle, ownership, decision-policy, assurance, and System Evaluation Approach concepts; missing meaning is not inferred from the mapping or replaced by empty files.",
         "No empty taxonomy, unaccepted platform corpus, or cross-system substantive claim is generated."
       ],
       "stage": "execution"
@@ -326,7 +328,7 @@
     {
       "id": 22,
       "stage": "execution",
-      "prompt": "Migrate our coherent legacy Gen Stack corpus to the current gen-stack profile. The accepted System boundary and all five kernel concepts are established. You are explicitly authorized to transfer semantic ownership of one accepted statement: the Payments context currently says that after every committed settlement, captured amount shall equal the sum of immutable allocations. Preserve the context's settlement-policy authority and the transaction-boundary response, move the binding invariant to one subject-colocated Requirement, update links and navigation, and leave unrelated prose unchanged.",
+      "prompt": "Migrate our coherent legacy Gen Stack corpus to the current gen-stack profile. The accepted System boundary, all five kernel concepts, and a profile-conforming System Evaluation Approach are established. You are explicitly authorized to transfer semantic ownership of one accepted statement: the Payments context currently says that after every committed settlement, captured amount shall equal the sum of immutable allocations. Preserve the context's settlement-policy authority and the transaction-boundary response, move the binding invariant to one subject-colocated Requirement, update links and navigation, and leave unrelated prose unchanged.",
       "expected_output": "A bounded profile migration that preserves the Payments context as architecture, gives the accepted invariant one subject-colocated Requirement authority, removes the duplicated normative formulation, and verifies the resulting adoption without widening scope.",
       "assertions": [
         "The accepted invariant becomes one Requirement with a stable ID, explicit Payments context subject, suitable requirement type, and committed-state observation boundary.",
@@ -338,7 +340,7 @@
     {
       "id": 23,
       "stage": "execution",
-      "prompt": "Migrate a coherent legacy corpus to the current profile. An accepted operations policy says failed deployment shall leave the active release unchanged, and a deployment test repeats that sentence with policy ID OPS-17. You are authorized to transfer the accepted obligation to a Requirement. Preserve the test as a linked evaluation witness and do not infer desired state from the test itself.",
+      "prompt": "Migrate a coherent legacy corpus to the current profile; its System Evaluation Approach is already accepted and profile-conforming. An accepted operations policy says failed deployment shall leave the active release unchanged, and a deployment test repeats that sentence with policy ID OPS-17. You are authorized to transfer the accepted obligation to a Requirement. Preserve the test as a linked evaluation witness and do not infer desired state from the test itself.",
       "expected_output": "A migration that creates one Requirement authority from the accepted policy, preserves the identically worded test as a linked witness, removes only duplicate normative architecture prose, and verifies the new profile structure.",
       "assertions": [
         "The accepted policy, not the test, establishes the Requirement's normative authority and traceability.",
@@ -346,8 +348,21 @@
         "Only competing normative formulations are removed; purposeful evaluation redundancy remains.",
         "The handoff reports OKF and profile results separately and does not claim the test proves Requirement acceptance."
       ]
+    },
+    {
+      "id": 24,
+      "stage": "execution",
+      "prompt": "Set up a conforming Gen Stack corpus for one synthetic service. Its System boundary and five root governance concepts are accepted. Evaluation Definitions and Results already live under tests/ and CI. The accepted evaluation approach uses implementation-local, boundary, and operational methods; readers must navigate evidence by Architecture subject and Requirement ID; requirement-satisfaction and architecture-realization reports remain separate; missing evidence and harness errors remain visible. Create only what the current profile requires and keep concrete evaluation artifacts repository-native.",
+      "expected_output": "A conforming initial corpus containing the root kernel plus evaluations/index.md and one governed System Evaluation Approach that routes to repository-native evidence without copying Definitions, Suites, Executions, Results, or Reports into the corpus.",
+      "assertions": [
+        "The root links evaluations/index.md, which links evaluations/system-evaluation-approach.md with exact type System Evaluation Approach.",
+        "The Approach contains the five profile-required sections and faithfully records the supplied scope, portfolio, navigation, reporting, evidence lifecycle, and gaps policy.",
+        "Architecture-subject and Requirement-ID navigation is required without forcing physical test-suite paths to mirror an architecture tree.",
+        "Requirement-satisfaction and architecture-realization reporting remain distinct, and unknown and harness-error outcomes survive roll-up.",
+        "Concrete Definitions, Suites, Executions, Results, and Reports remain linked repository-native authorities rather than corpus concepts."
+      ]
     }
   ],
-  "suite_version": "1.0.0",
+  "suite_version": "1.1.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

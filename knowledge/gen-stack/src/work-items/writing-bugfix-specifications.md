@@ -22,7 +22,7 @@ sources:
     title: Preserving design and delivery context in software work items
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T16:11:30Z
+  at: 2026-08-26T17:31:25Z
 ---
 
 # Writing bugfix specifications
@@ -47,11 +47,12 @@ corrective-decision, unchanged-expectation, and regression requirements below.
 
 ## Goal
 
-Implementers and reviewers can recover which Bug is being corrected, which
-evidence and authority justify the change, which Requirements and Architecture
-constrain it, how the response is designed and delivered, and what evidence
-will verify it—without turning the Bugfix into a second Defect report or
-rewriting the originating Signal.
+Implementers and reviewers can recover which Bugs anchor the correction, which
+related Defects are established or still suspected, which evidence and
+authority justify each change, which Requirements and Architecture constrain
+it, how the response is designed and delivered, and what evidence will verify
+it—without turning the Bugfix into a second Defect report or rewriting the
+originating Signal.
 
 ## Preconditions
 
@@ -86,6 +87,13 @@ investigation established:
 Name the affected behavior, triggering conditions, and established scope.
 Distinguish confirmed findings from remaining hypotheses. Link the evidence
 and diagnosis in the Defect report rather than restating their full history.
+
+Record any additional established Defects in Requirements, Architecture,
+Change Design, Implementation, Evaluations, tests, or documentation separately
+from suspected Defects. A Bug is itself a realized-system Defect; these
+additional Defects describe the cross-stack scope that the authorized
+correction may need to coordinate. Do not relabel an unconfirmed cause as a
+Defect merely because it appears in the Bugfix.
 
 If the work concerns only a defective Requirement, Architecture representation,
 test, or document and no concrete system Bug has been identified, use the
@@ -128,6 +136,10 @@ proportionately. Classify whether the Bugfix:
 
 Link canonical Requirements and Architecture subjects. Do not copy a binding
 obligation into the Bugfix as a second normative authority.
+
+When one Bug implicates several Defects, state which proposed change addresses
+each one and which authority must accept it. An authorized Bugfix does not by
+itself accept a Requirement or Architecture change.
 
 ## 6. Bound scope, constraints, and non-goals
 
@@ -186,8 +198,9 @@ rollout, observability, rollback, and ownership needed for the current planning
 horizon. Link child delivery tasks rather than forcing every execution detail
 into the Specification.
 
-One Bugfix Specification may address several Bugs, and one Bug may require
-several Bugfixes with independent delivery or rollback. Preserve these links
+One Bugfix Specification may address several Bugs and coordinate changes for
+several related Defects. One Bug or related Defect may require several changes
+with independent authority, delivery, or rollback. Preserve these links
 instead of assuming a one-to-one parent-child shape.
 
 ## 11. Derive the title and summary last
@@ -223,12 +236,14 @@ and reviewable. Omit unsupported sections rather than inventing content.
 
 ## Summary
 
-What Bug is being corrected, what bounded outcome should change, and why does
-that matter?
+Which Bugs anchor the correction, which related Defects shape its scope, what
+bounded outcome should change, and why does that matter?
 
-## Bug and provenance
+## Bugs, related Defects, and provenance
 
-- Identified Bug:
+- Identified Bugs:
+- Established related Defects:
+- Remaining defect hypotheses:
 - Defect reports:
 - Related incidents, occurrences, or regressions:
 - Confirmed scope and remaining uncertainty:
@@ -288,7 +303,10 @@ be gathered.
 - The Bugfix has a separate identity; no Defect report was retitled or
   replaced.
 - Every material Defect report remains linked as Provenance.
-- A concrete Bug and an authorized corrective decision are both present.
+- At least one concrete Bug and an authorized corrective decision are both
+  present.
+- Established related Defects are distinguished from remaining hypotheses,
+  and each proposed correction retains its applicable authority.
 - Diagnosis, correction authority, and verification evidence remain distinct.
 - Current and corrected behavior have an accepted basis or a visible authority
   gap.
@@ -301,4 +319,4 @@ be gathered.
 - Delivery, rollout, rollback, and residual risk are proportional to the
   change.
 - Relationship cardinalities are preserved rather than forced into one report,
-  one Bug, and one Bugfix.
+  one Defect, one Bug, and one Bugfix.

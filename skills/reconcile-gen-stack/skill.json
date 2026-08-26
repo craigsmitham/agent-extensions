@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "reconcile-gen-stack",
-  "version": "1.0.2",
-  "description": "Assess and reconcile a profile-conforming Gen Stack corpus across governance, Intent, Architecture, and subject-colocated Requirements",
+  "version": "2.0.0",
+  "description": "Assess and reconcile a profile-conforming Gen Stack corpus across governance, Intent, Architecture, subject-colocated Requirements, and the System Evaluation Approach",
   "keywords": [
     "software-architecture",
     "gen-stack",
@@ -20,6 +20,7 @@
     "ownership",
     "architecture-decisions",
     "assurance",
+    "evaluation-approach",
     "requirements-engineering",
     "semantic-delta",
     "stable-identity",

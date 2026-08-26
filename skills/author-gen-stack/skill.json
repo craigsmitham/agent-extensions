@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "author-gen-stack",
-  "version": "1.0.2",
-  "description": "Create concise profile-conforming governance, Intent, Requirement, and Architecture concepts while preserving repository-native implementation and evaluation authorities",
+  "version": "2.0.0",
+  "description": "Create concise profile-conforming governance, Intent, Requirement, Architecture, and System Evaluation Approach concepts while preserving repository-native implementation and concrete evaluation authorities",
   "keywords": [
     "software-architecture",
     "gen-stack",
@@ -25,6 +25,7 @@
     "system-ownership",
     "architecture-decisions",
     "system-assurance",
+    "evaluation-approach",
     "requirements-engineering",
     "requirement-classification",
     "functional-requirements",

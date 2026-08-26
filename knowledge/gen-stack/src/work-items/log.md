@@ -2,6 +2,10 @@
 
 ## 2026-08-26
 
+- **Cross-stack Bugfix scope**: Clarified that a Bug is a realized-system
+  Defect, that it may implicate several additional Defects across Gen Stack
+  work products, and that one Bugfix Specification may coordinate changes for
+  several related Defects while preserving separate authority and Provenance.
 - **Change Specifications**: Replaced request-centered work-item guidance with
   [Change specifications and delivery
   work](change-specifications-and-delivery-work.md) and [Writing change

@@ -25,7 +25,7 @@ sources:
     title: GitHub Docs — Managing issue types in an organization
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T13:59:18Z
+  at: 2026-08-26T17:31:25Z
 ---
 
 # Failures, defects, and defect reports
@@ -53,8 +53,8 @@ Several concepts that trackers often collapse answer different questions:
 | Failure | Executed behavior did not meet an applicable expectation | Which work product contains the defect |
 | Defect | A flaw exists in code, requirements, configuration, tests, documentation, or another work product | Which correction should be chosen or when it will be delivered |
 | Defect report | Evidence, classification, investigation, decisions, relationships, and status are managed in one traceable record | That every claim in the record is confirmed |
-| Bug | Investigation identified concrete defective behavior or a defective condition in the realized system | That correction is authorized or that one report maps to one Bug |
-| Bugfix Specification | An authorized corrective change for one or more Bugs is bounded for design, delivery, and verification | That its Defect reports can be retitled, replaced, or closed |
+| Bug | Investigation identified a Defect expressed as concrete defective behavior or a defective condition in the realized system | That correction is authorized, that every contributing Defect is known, or that one report maps to one Bug |
+| Bugfix Specification | An authorized corrective change for one or more Bugs is bounded and may coordinate changes addressing several related Defects | That its Defect reports can be retitled, replaced, or closed, or that proposed authority changes are accepted |
 | Correction or fix | A change was made to remove or compensate for a cause | That the original discrepancy and relevant regressions were verified |
 | Verification evidence | The chosen resolution satisfies its stated conditions | That every related risk or occurrence has disappeared |
 

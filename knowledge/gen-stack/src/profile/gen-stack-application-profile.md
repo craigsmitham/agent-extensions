@@ -1,8 +1,8 @@
 ---
 type: Standard
 title: Gen Stack application profile for OKF v0.2
-description: The application profile for a durable human-authored corpus of cross-cutting system governance, Intent, Architecture, and subject-colocated Requirements.
-tags: [gen-stack, okf, application-profile, intent, architecture, requirements, governance]
+description: The application profile for a durable human-authored corpus of cross-cutting system governance, Intent, Architecture, subject-colocated Requirements, and a discoverable System Evaluation Approach.
+tags: [gen-stack, okf, application-profile, intent, architecture, requirements, evaluations, governance]
 status: draft
 sources:
   - id: gen-stack-vocabulary
@@ -35,7 +35,7 @@ generated:
 | Profile version | `0.1.0` |
 | Base specification | OKF v0.2 |
 | Status | Draft |
-| Applies to | The required root kernel and admitted concepts under `intent/`, `architecture/`, and subject-colocated `requirements/` collections |
+| Applies to | The required root kernel, System Evaluation Approach, and admitted concepts under `intent/`, `architecture/`, and subject-colocated `requirements/` collections |
 | Audience | Intent, requirements, architecture, and governance authors; maintainers; reviewers; and profile validators |
 
 ## Purpose and scope
@@ -46,7 +46,10 @@ This profile governs the durable, human-authored part of a Gen Stack:
 - Intent preserves what outcomes matter and why;
 - Requirements canonically express accepted obligations derived from Intent;
   and
-- Architecture defines the eligible subjects those obligations shape.
+- Architecture defines the eligible subjects those obligations shape; and
+- the System Evaluation Approach makes the repository-native evaluation
+  portfolio discoverable and explains how its evidence is navigated and
+  reported.
 
 The root is a scope boundary, not another semantic layer. `system.md` defines
 the documented subject and context. `lifecycle.md`, `ownership.md`,
@@ -54,14 +57,16 @@ the documented subject and context. `lifecycle.md`, `ownership.md`,
 Architecture. Root placement expresses that cross-cutting scope; it does not
 make these concepts containers for the other concepts.
 
-Implementation and Evaluations are peer authorities outside this corpus
-contract. The repository owns code, configuration, schemas, tests, evaluation
-definitions, and their exact current organization. Signals, Observations, and
-evaluation results are inputs and evidence in the operating loop. The
+Implementation and concrete Evaluation artifacts are peer authorities outside
+this corpus contract. The repository owns code, configuration, schemas,
+Evaluation Definitions, Suites, Executions, Results, Reports, and their exact
+current organization. The corpus owns only the governed System Evaluation
+Approach and navigation into those authorities. Signals, Observations, and
+Evaluation Results are inputs and evidence in the operating loop. The
 [Gen Stack vocabulary and relationship model](../glossary.md) defines their
 relationships to governed concepts. This profile MUST NOT require corpus
-`implementation/`, `evaluations/`, `feedback/`, `signals/`, or `observations/`
-collections.
+`implementation/`, `feedback/`, `signals/`, or `observations/` collections or
+place concrete evaluation artifacts in the corpus.
 
 Requirements are canonicalized Intent. A Requirement is the sole normative
 expression of one accepted obligation and is assigned to exactly one eligible
@@ -102,10 +107,11 @@ The third result is never implied by the first two. Missing evidence produces
 `unknown`, not pass. Complete profile conformance combines executable
 structural validation with a named manual semantic review.
 
-A conforming corpus MUST contain the five required root concepts, use governed
-types at canonical paths, keep every maintained concept reachable from the
-root, maintain one normative Requirement authority per accepted obligation,
-and colocate each Requirement with its one canonical Architecture subject.
+A conforming corpus MUST contain the five required root concepts and the
+System Evaluation Approach, use governed types at canonical paths, keep every
+maintained concept reachable from the root, maintain one normative Requirement
+authority per accepted obligation, and colocate each Requirement with its one
+canonical Architecture subject.
 
 ## Common frontmatter
 
@@ -138,6 +144,32 @@ System, and linked from the governance concept.
 decisions are `Architecture Decision Record` concepts under
 `architecture/decisions/`. `assurance.md` identifies the required evidence and
 review model; evaluation definitions and results remain repository-native.
+
+## System Evaluation Approach
+
+The corpus MUST contain `evaluations/index.md` as navigation and
+`evaluations/system-evaluation-approach.md` with exact type `System Evaluation
+Approach`. The Approach is cross-cutting governance and discovery for one
+documented System; it is not an Evaluation Definition, Suite, Result, Report,
+or assurance decision.
+
+Its body MUST use these sections and satisfy their contracts:
+
+| Section | Minimum semantic contract |
+| --- | --- |
+| `## Scope and objectives` | Identifies the System and realized-state boundary, decisions supported, material exclusions, and relationship to System Assurance. |
+| `## Evaluation portfolio` | Explains the methods, lifetimes, primary Evaluation Roles, evidence diversity, and route map to canonical repository-native Definitions, Suites, protocols, Executions, Results, and Reports. |
+| `## Navigation and reporting` | Defines navigable projections by canonical Architecture subject and stable Requirement ID, with distinct reports for `requirement-satisfaction` and `architecture-realization`; other bounded claims are named. |
+| `## Evidence and lifecycle` | Defines provenance, result statuses, treatment of `unknown` and harness errors, roll-up rules, stewardship, recency, and review triggers. |
+| `## Gaps and maintenance` | Records material coverage gaps, unsupported conditions, stale or missing evaluators, and the route for repair without presenting absence as pass. |
+
+The Approach MUST NOT require physical Suites or report stores to mirror an
+Architecture tree. It MUST instead make current evidence navigable through
+the canonical subject hierarchies and cross-view relationships. For maintained
+Surfaces, this includes their recursive interaction hierarchy. For maintained
+C4 elements, this includes Software System → Container → Component; C4 Views
+remain projections and MUST NOT be treated as evaluation subjects. A claimed
+covered Requirement is navigable through its stable ID and canonical subject.
 
 ## Intent
 
@@ -286,6 +318,9 @@ lifecycle.md
 ownership.md
 decisions.md
 assurance.md
+evaluations/
+  index.md
+  system-evaluation-approach.md
 intent/
   offerings/
   audiences/
@@ -306,7 +341,8 @@ architecture/
   structure/views/
 ```
 
-Collections exist only when they contain admitted concepts. Every present
+The `evaluations/` collection is always required for its governed Approach.
+Other collections exist only when they contain admitted concepts. Every present
 collection has a navigational `index.md`. Plural catch-all concept documents
 are prohibited.
 
@@ -367,10 +403,12 @@ frontmatter for them.
 ## Authority and maintenance
 
 Intent owns desired outcomes and reasons. Requirements own accepted
-obligations. Architecture owns durable response meaning. The repository owns
-Implementation and Evaluations. Runtime and observability systems own current
-operation and Observations. A passing test, current code property, or runtime
-observation is evidence, not accepted desired state by itself.
+obligations. Architecture owns durable response meaning. The corpus System
+Evaluation Approach owns evaluation portfolio governance and discovery; the
+repository owns Implementation and concrete Evaluation artifacts. Runtime and
+observability systems own current operation and Observations. A passing test,
+current code property, or runtime observation is evidence, not accepted
+desired state by itself.
 
 Each collection index states its grouping rule and links immediate concepts or
 narrower collections. Every concept remains reachable from the root. A path

@@ -21,6 +21,9 @@ provenance and effects are unknown, and exercise both the supported-recommendati
 and no-recommendation forms of the exact decision-presentation contract.
 Migration also preserves an identically worded test as a linked witness while
 using accepted policy—not executable evidence—as Requirement authority.
+The required-evaluation-approach case establishes the governed corpus route and
+subject- and Requirement-navigable reporting contract while keeping concrete
+Definitions, Suites, Executions, Results, and Reports repository-native.
 
 The suite passes when setup leaves an explicit, discoverable mapping from every
 documented system to one canonical architecture-doc root, records only accepted

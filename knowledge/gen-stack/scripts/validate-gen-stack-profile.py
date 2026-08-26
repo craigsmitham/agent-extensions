@@ -29,8 +29,18 @@ REQUIRED_ROOT_CONCEPTS = {
     "decisions.md": "Architecture Decision Policy",
     "assurance.md": "System Assurance",
 }
+EVALUATION_APPROACH_PATH = "evaluations/system-evaluation-approach.md"
+EVALUATION_APPROACH_TYPE = "System Evaluation Approach"
+EVALUATION_APPROACH_SECTIONS = (
+    "Scope and objectives",
+    "Evaluation portfolio",
+    "Navigation and reporting",
+    "Evidence and lifecycle",
+    "Gaps and maintenance",
+)
 GOVERNED_TYPES = {
     *REQUIRED_ROOT_CONCEPTS.values(),
+    EVALUATION_APPROACH_TYPE,
     "Architecture Decision Record",
     "Requirement",
     "Offering",
@@ -131,6 +141,8 @@ def path_matches(concept_type: str, relative: PurePosixPath) -> bool:
     )
     if required_path is not None:
         return relative == PurePosixPath(required_path)
+    if concept_type == EVALUATION_APPROACH_TYPE:
+        return relative == PurePosixPath(EVALUATION_APPROACH_PATH)
     if concept_type == "Architecture Decision Record":
         return len(parts) == 3 and parts[:2] == ("architecture", "decisions")
     if concept_type == "Requirement":
@@ -254,11 +266,39 @@ def validate(root: Path) -> dict[str, object]:
         if meta.get("type") != concept_type:
             error("required-root-type", path, f"{filename} must have the exact profile type {concept_type}.")
 
+    evaluations_index = root / "evaluations" / "index.md"
+    if not evaluations_index.is_file():
+        error("evaluation-navigation", evaluations_index, "The corpus must contain evaluations/index.md.")
+    evaluation_approach = root / EVALUATION_APPROACH_PATH
+    if not evaluation_approach.is_file():
+        error(
+            "required-evaluation-approach",
+            evaluation_approach,
+            f"The corpus must contain {EVALUATION_APPROACH_PATH} with type {EVALUATION_APPROACH_TYPE}.",
+        )
+    else:
+        try:
+            approach_meta, approach_body = parse_frontmatter(evaluation_approach)
+        except (OSError, ValueError, yaml.YAMLError):
+            approach_meta, approach_body = {}, ""
+        if approach_meta.get("type") != EVALUATION_APPROACH_TYPE:
+            error(
+                "required-evaluation-approach-type",
+                evaluation_approach,
+                f"{EVALUATION_APPROACH_PATH} must have the exact profile type {EVALUATION_APPROACH_TYPE}.",
+            )
+        for section in EVALUATION_APPROACH_SECTIONS:
+            if not re.search(rf"^## {re.escape(section)}\s*$", approach_body, flags=re.MULTILINE):
+                error(
+                    "evaluation-approach-section",
+                    evaluation_approach,
+                    f"System Evaluation Approach requires a ## {section} section.",
+                )
+
     for forbidden_collection in (
         "constraints",
         "quality",
         "implementation",
-        "evaluations",
         "feedback",
         "signals",
         "observations",

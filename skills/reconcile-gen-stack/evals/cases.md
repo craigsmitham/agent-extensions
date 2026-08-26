@@ -16,6 +16,9 @@ results, reject local waivers, preserve unknown, and route initial adoption of
 legacy Markdown to setup.
 They also reject deletion of an evaluation merely because it repeats the
 predicate of the Requirement it explicitly references.
+The evaluation-boundary case preserves the profile-required navigation and
+System Evaluation Approach while identifying copied volatile Results as
+repository-native evidence that does not belong in the corpus.
 
 The suite passes when the skill reconciles an established documentation set
 without silently deciding architecture, treating recency as authority, or

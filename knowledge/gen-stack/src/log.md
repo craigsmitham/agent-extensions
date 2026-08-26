@@ -2,6 +2,36 @@
 
 ## 2026-08-26
 
+- **Bug and Defect corrective scope**: Defined Bug explicitly as the
+  realized-system specialization of Defect, clarified that one Bug may
+  implicate several additional Defects across Requirements, Architecture,
+  Implementation, Evaluations, tests, and documentation, and allowed one
+  Bugfix Specification to coordinate separately authorized changes addressing
+  several related Defects without absorbing their authorities or Provenance.
+- **Vocabulary identifier correction**: Renamed the Pace layer identifier from
+  `pace` to `pace-layer` in [the vocabulary and relationship
+  model](glossary.md). The preferred label and meaning are unchanged; the
+  identifier now matches its label as every other vocabulary identifier does,
+  and no consumer referenced the prior value.
+- **Requirement classification encodings**: Bound each of the six Requirement
+  classification identifiers to its `requirement_type` profile value in the
+  glossary, so the mapping from `human-factors-requirement` to `human-factors`
+  is stated rather than inferred.
+- **Glossary attribution**: Cited the declared ISO/IEC 25040, ISO/IEC/IEEE
+  29119 series, and Chad Fowler evaluation sources in the Evaluations section
+  footnotes, which previously declared them without attribution.
+- **Gen Stack 0.7.0 and workflow 2.0.0**: Versioned the Knowledge bundle for
+  the evaluation-profile contract and versioned `setup-gen-stack`,
+  `author-gen-stack`, and `reconcile-gen-stack` for their required System
+  Evaluation Approach behavior and evaluation-boundary regressions.
+- **Evaluation model and adoption**: Added [Evaluation as bounded
+  evidence](evaluations/evaluation-as-bounded-evidence.md), defined Evaluation
+  Roles, Suites, and Reports, and added general, Surface, and C4 design guides.
+  The draft profile now requires a governed System Evaluation Approach with
+  subject- and Requirement-navigable evidence and distinct
+  Requirement-satisfaction and Architecture-realization reporting while
+  leaving concrete Definitions, Suites, Executions, Results, and Reports at
+  repository-native authorities.
 - **Bugs and corrective work**: Added [Bugs and bugfix
   specifications](work-items/bugs-and-bugfix-specifications.md) and [Writing
   bugfix specifications](work-items/writing-bugfix-specifications.md), defined

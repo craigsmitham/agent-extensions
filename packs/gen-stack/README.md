@@ -9,10 +9,12 @@ The pack installs one knowledge authority and focused workflows around this
 contract:
 
 - a Gen Stack corpus owns cross-cutting system governance, Intent,
-  Architecture, and subject-colocated Requirements;
+  Architecture, subject-colocated Requirements, and the System Evaluation
+  Approach;
 - Requirements are canonicalized Intent and obligate exactly one eligible
   Architecture subject;
-- the repository owns Implementation and Evaluations; and
+- the repository owns Implementation and concrete Evaluation Definitions,
+  Suites, Executions, Results, and Reports; and
 - Signals, Observations, results, and other evidence enter the OODA loop without
   becoming desired state by themselves.
 
@@ -34,17 +36,15 @@ contract:
 axm install @craigsmitham/packs/gen-stack
 ```
 
-The current pack uses Gen Stack knowledge `0.6.0`,
+The current pack uses Gen Stack knowledge `0.7.0`,
 `author-software-work-items` `3.0.0`, the `gen-stack` OKF application profile
-`0.1.0`, and the `author-gen-stack`, `setup-gen-stack`, and
-`reconcile-gen-stack` skill identities. Knowledge `0.6.0` organizes guidance
-by the profile's semantic neighborhoods, keeps software work-item guidance at
-`src/work-items/`, defines bounded Change Specifications and corrective Bugfix
-Specifications as first-class work-item roles, keeps unbounded requests as
-Signals or source records, and removes redundant intent-to-feedback and
-change-signal reconciliation concepts without treating this explanatory bundle
-as an instantiated system corpus. It provides no aliases or compatibility
-paths for superseded package, profile, workflow, or concept identities.
+`0.1.0`, and version `2.0.0` of `author-gen-stack`, `setup-gen-stack`, and
+`reconcile-gen-stack`. Knowledge `0.7.0` adds a governed System Evaluation
+Approach, subject- and Requirement-navigable evaluation guidance, and distinct
+Requirement-satisfaction and Architecture-realization reporting while keeping
+concrete evaluation artifacts repository-native. It provides no aliases or
+compatibility paths for superseded package, profile, workflow, or concept
+identities.
 
 ## Working model
 

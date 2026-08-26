@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Assessing and reconciling established OKF v0.2 Gen Stack corpora across cross-cutting governance, Intent, Architecture, and Requirements while preserving repository-native implementation, evaluation, and operational authorities.",
+    "intended_use": "Assessing and reconciling established OKF v0.2 Gen Stack corpora across cross-cutting governance, Intent, Architecture, Requirements, and the governed System Evaluation Approach while preserving repository-native implementation, concrete evaluation, and operational authorities.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic reconciliation, authority, reduction, required-kernel substitution, ADR and Requirement migration, hidden-obligation ownership, profile conformance, adoption-precondition, and routing cases.",
+    "case_source": "Synthetic reconciliation, authority, reduction, required-kernel and System Evaluation Approach boundaries, ADR and Requirement migration, hidden-obligation ownership, profile conformance, adoption-precondition, and routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -78,6 +78,7 @@
       "No local waiver from required profile conformance",
       "Accepted obligations have one Requirement authority",
       "Purposeful evaluation redundancy is preserved",
+      "The governed evaluation approach is preserved without admitting volatile results",
       "Routing and execution claims remain distinct"
     ],
     "calibration": "Check one known pass, one known failure, and one unknown before relying on a model grader."
@@ -142,6 +143,11 @@
         "gate": "Purposeful evaluation redundancy is preserved",
         "case_id": 19,
         "assertion": "The property evaluation remains because its repeated predicate is assessment logic linked by requirement_id, not competing desired-state authority."
+      },
+      {
+        "gate": "The governed evaluation approach is preserved without admitting volatile results",
+        "case_id": 20,
+        "assertion": "The required evaluations/index.md and System Evaluation Approach are retained and not classified as prohibited."
       }
     ]
   },

@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Authoring explicitly requested profile-conforming cross-cutting governance, Intent, Requirement, and Architecture concepts while preserving repository-native Implementation and Evaluation authorities.",
+    "intended_use": "Authoring explicitly requested profile-conforming cross-cutting governance, Intent, Requirement, Architecture, and System Evaluation Approach concepts while preserving repository-native Implementation and concrete Evaluation authorities.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic Gen Stack profile authoring, root-governance scope, Intent-to-Requirement canonicalization, eligible Architecture-subject enforcement, six-type classification, obligation ownership, invariant routing, authority, organization, ADR, lifecycle, repository-native peer boundaries, same-pack routing, refusal, and migration-precondition cases.",
+    "case_source": "Synthetic Gen Stack profile authoring, root-governance and System Evaluation Approach scope, Intent-to-Requirement canonicalization, eligible Architecture-subject enforcement, six-type classification, obligation ownership, invariant routing, authority, organization, ADR, lifecycle, repository-native peer boundaries, same-pack routing, refusal, and migration-precondition cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -77,6 +77,7 @@
       "No invented authority, evidence, or approval",
       "Accepted obligations have one Requirement authority",
       "Requirement authority remains distinct from evaluation witnesses",
+      "The governed evaluation approach preserves concrete evaluation authorities",
       "Routing and execution claims remain distinct"
     ],
     "calibration": "Check one known pass, one known failure, and one unknown before relying on a model grader."
@@ -146,6 +147,11 @@
         "gate": "Accepted obligations have one Requirement authority",
         "case_id": 37,
         "assertion": "The Offering is rejected as the Requirement subject even though it motivates the obligation."
+      },
+      {
+        "gate": "The governed evaluation approach preserves concrete evaluation authorities",
+        "case_id": 38,
+        "assertion": "The approach references repository-native Definitions, Suites, Executions, Results, Reports, and operational evidence without copying them into corpus concepts."
       }
     ]
   },

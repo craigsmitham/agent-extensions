@@ -8,12 +8,21 @@ sources:
   - id: boyd-ooda
     resource: https://www.coljohnboyd.com/documents/1995-06-28__Boyd_John_R__The_Essence_of_Winning_and_Losing__PPT-PDF.pdf
     title: John R. Boyd — The Essence of Winning and Losing
+  - id: fowler-evaluations
+    resource: https://chadfowler.com/regenerative-software/3mb526js42k26/
+    title: Chad Fowler — Evaluations Are the Real Codebase
+  - id: iso-25040
+    resource: https://www.iso.org/standard/83467.html
+    title: ISO/IEC 25040:2024 — Quality evaluation framework
+  - id: iso-29119-series
+    resource: https://committee.iso.org/sites/jtc1sc7/%68ome/projects/flagship-standards/isoiecieee-29119-series.html
+    title: ISO/IEC/IEEE 29119 series — Software testing
   - id: process
     resource: processes/process.md
     title: Process
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T15:42:30Z
+  at: 2026-08-26T17:31:25Z
 ---
 
 # Gen Stack vocabulary and relationship model
@@ -75,12 +84,15 @@ preserves the originating Signal, source, expectation, evidence, investigation,
 classification, disposition, and Provenance. It does not itself prove a Defect
 or Bug, specify a corrective change, or become a Bugfix Specification.
 
-**Bug** (`bug`) is concrete defective behavior or a defective condition in the
-realized system identified through investigation. A Bug may be evidenced by
-one or more Defect reports and may expose Defects in Requirements,
-Architecture, Change Design, Implementation, Evaluations, or other work
-products. Identifying a Bug does not by itself authorize correction or require
-a Bugfix Specification.
+**Bug** (`bug`) is a Defect expressed as concrete defective behavior or a
+defective condition in the realized system and identified through
+investigation. A Bug may be evidenced by one or more Defect reports and may
+arise from, be sustained by, or expose additional Defects in Requirements,
+Architecture, Change Design, Implementation, Evaluations, tests, or other work
+products. One Defect may contribute to several Bugs. A suspected Defect
+remains a diagnostic hypothesis until it is established relative to an
+applicable expectation or intended use. Identifying a Bug does not by itself
+authorize correction or require a Bugfix Specification.
 
 ## Cross-cutting system context and governance
 
@@ -192,26 +204,29 @@ All six classifications use the Gen Stack profile's `Requirement` concept
 type and exactly one `requirement_type` value. Choose the classification from
 the obligation's primary accepted meaning.
 
-**Functional Requirement** (`functional-requirement`) defines required behavior, information,
-transformation, state transition, response, preservation, or service.
+**Functional Requirement** (`functional-requirement`, profile value
+`functional`) defines required behavior, information, transformation, state
+transition, response, preservation, or service.
 
-**Quality Requirement** (`quality-requirement`) defines a required degree or assessable condition of
-system, product, service, use, or data quality provided by the obligated
-subject.
+**Quality Requirement** (`quality-requirement`, profile value `quality`)
+defines a required degree or assessable condition of system, product, service,
+use, or data quality provided by the obligated subject.
 
-**Process Requirement** (`process-requirement`) defines an obligation on an accepted lifecycle,
-development, operational, or governance process.
+**Process Requirement** (`process-requirement`, profile value `process`)
+defines an obligation on an accepted lifecycle, development, operational, or
+governance process.
 
-**Human-Factors Requirement** (`human-factors-requirement`) defines an obligation arising from human
-capabilities, limitations, safety, workload, cognition, health, or environment.
+**Human-Factors Requirement** (`human-factors-requirement`, profile value
+`human-factors`) defines an obligation arising from human capabilities,
+limitations, safety, workload, cognition, health, or environment.
 
-**Usability Requirement** (`usability-requirement`) defines an
-interaction-quality obligation concerned with effective, efficient, learnable,
-or satisfying use in a stated context.
+**Usability Requirement** (`usability-requirement`, profile value `usability`)
+defines an interaction-quality obligation concerned with effective, efficient,
+learnable, or satisfying use in a stated context.
 
-**Constraint Requirement** (`constraint-requirement`) defines a binding limitation on the permitted
-design, implementation, technology, interface, law, policy, or operating
-conditions.
+**Constraint Requirement** (`constraint-requirement`, profile value
+`constraint`) defines a binding limitation on the permitted design,
+implementation, technology, interface, law, policy, or operating conditions.
 
 Eligible Requirement subjects are System, Capability, Feature, Surface,
 Bounded Context, C4 Software System, C4 Container, and C4 Component. Intent
@@ -363,14 +378,19 @@ not accept a proposed Requirement or Architecture change, authorize delivery,
 or make the Specification the common authority for its constituents.
 
 **Bugfix Specification** (`bugfix-specification`) is a Change Specification
-scoped to an authorized corrective change responding to one or more Bugs. It links
-the Defect reports that preserve originating Signals and Provenance and may
-compose a Bug and diagnosis synopsis, the correction decision and authority,
-applicable or candidate Requirements, affected Architecture, unchanged
-constraints, Change Design, verification and evaluation context, and delivery
-work. It is a separate artifact, never a retitled Defect report. The name does
-not accept a proposed Requirement or Architecture change or prove that the Bug
-has been corrected or verified.
+scoped to an authorized corrective change responding to one or more Bugs. It
+may coordinate changes intended to correct or compensate for one or more
+related Defects across the work products that describe, govern, realize, or
+evaluate the system. The identified Bugs anchor its corrective purpose; the
+related Defects describe its potentially cross-stack scope. It links the
+Defect reports that preserve originating Signals and Provenance and may
+compose a Bug and diagnosis synopsis, established related Defects and
+remaining hypotheses, the correction decision and authority, applicable or
+candidate Requirements, affected Architecture, unchanged constraints, Change
+Design, verification and evaluation context, and delivery work. It is a
+separate artifact, never a retitled Defect report. The name does not accept a
+proposed Requirement or Architecture change or prove that a Bug or related
+Defect has been corrected or verified.
 
 Change Specification and Bugfix Specification are work-item composition roles,
 not governed concept types, mandatory templates, or required repository
@@ -383,22 +403,59 @@ corpus.
 
 ## Evaluations
 
-**Evaluation** (`evaluation`) is an executable assessment of whether a realized subject
-satisfies a Requirement under stated conditions. It may assess initial
-generation or replacement, but does not own or rewrite the obligation.
+**Evaluation** (`evaluation`) is a criterion-referenced assessment of an
+identified realized subject under stated conditions that produces evidence
+for a bounded purpose.[^iso-25040] It may use automated or human-performed
+testing, analysis, inspection, review, simulation, measurement, study, or
+continuous operational assessment. An Evaluation that claims satisfaction of an accepted
+obligation references the applicable Requirement; no method, passing result,
+or observed baseline owns or rewrites that obligation.
 
 **Evaluation Definition** (`evaluation-definition`) owns what is assessed, the
-method, cases, oracle, thresholds, and conditions. It references the stable
+applicable criteria, method, cases or sampling strategy, oracle or judgment
+procedure, thresholds, and conditions. It references the stable
 `requirement_id` when it claims Requirement coverage and may intentionally
 repeat the Requirement predicate.
 
-**Evaluation Execution** (`evaluation-execution`) is one bounded attempt that binds an Evaluation
-Definition to identified inputs, environment, Implementation, and evaluator.
+**Evaluation Role** (`evaluation-role`) classifies the primary claim made by
+an Evaluation Definition. `requirement-satisfaction` asks whether a realized
+subject satisfies identified Requirements; `architecture-realization` asks
+whether Implementation realizes an Architecture subject's accepted
+responsibilities, boundaries, interfaces, relationships, or decisions; and
+`other-bounded-claim` names another criteria authority and claim. One
+Definition has one primary role even when its evidence informs several views.
 
-**Evaluation Result** (`evaluation-result`) records the observations and assertion outcomes produced
-by an Evaluation Execution. It provides evidence no stronger than the bounded
-execution and its oracle establish; it is not a governance decision or a
+**Evaluation Suite** (`evaluation-suite`) is a named repository-native grouping
+of Evaluation Definitions for execution, maintenance, or reporting. A Suite
+does not own the criteria in its Definitions, need not mirror the Architecture
+hierarchy, and may span subjects or roles.
+
+**Evaluation Execution** (`evaluation-execution`) is one bounded application
+of an Evaluation Definition. It binds the Definition to identified inputs or
+observations, environment, Implementation revision or other realized state,
+evaluator, and either an attempt or a declared observation window.
+
+**Evaluation Result** (`evaluation-result`) records the observations,
+measurements, ratings, and assertion or judgment outcomes produced by an
+Evaluation Execution. It provides evidence no stronger than the bounded
+Execution and its criteria establish; it is not a governance decision or a
 change to Intent.
+
+**Evaluation Report** (`evaluation-report`) is a traceable projection or
+aggregation of Evaluation Results for a declared audience, scope, filter, and
+time. It preserves links to the underlying Executions and Definitions and
+states how `pass`, `fail`, `unknown`, and harness errors are rolled up. It is
+not itself an Evaluation Result, a Requirement authority, or an assurance
+decision.
+
+Testing is an Evaluation method, not a synonym for
+Evaluation.[^iso-29119-series] Telemetry can supply Observations, but
+collection alone does not make it an Evaluation; an Evaluation Definition must
+supply criteria, method, conditions, and a bounded observation window. See
+[Evaluation as bounded
+evidence](evaluations/evaluation-as-bounded-evidence.md) for the distinctions
+among methods, boundaries, lifetimes, provenance, assurance, and
+decisions.[^fowler-evaluations]
 
 ## Implementation
 
@@ -487,7 +544,7 @@ Implementation is the materialized output.
 **Provenance** (`provenance`) preserves the lineage of decisions, constraints, incidents,
 rejected alternatives, and generated artifacts.
 
-**Pace layer** (`pace`) is a decision-relative grouping of authorities,
+**Pace layer** (`pace-layer`) is a decision-relative grouping of authorities,
 artifacts, or assets whose acceptable rate of change is similar because their
 consequences, evidence needs, and recovery costs are similar. It is not a
 required physical layer or fixed hierarchy. Requirements, public contracts,
@@ -565,10 +622,13 @@ The relationship tables use these controlled collective terms:
 | `compilation-produces-implementation-unit` | Compilation → Implementation Unit | **produces** | **is produced by** | One bounded Compilation → `1..*` Units; a Unit may be regenerated many times | Compilation provenance identifies its outputs | The produced Units collectively update the Implementation; Compilation does not decide or rewrite its accepted inputs. |
 | `implementation-unit-realizes-authority` | Implementation Unit → Architecture concept or Requirement | **realizes** | **is realized by** | `0..*` ↔ `0..*` | Implementation or provenance points to the stable concept or `requirement_id` | The link states the current realization; implementation does not establish what shall exist. |
 | `evaluation-definition-evaluates-requirement` | Evaluation Definition → Requirement | **evaluates** | **is evaluated by** | `0..*` ↔ `0..*` | Evaluation Definition references `requirement_id` | The definition owns the assessment method and may repeat the predicate; it does not own the obligation. |
+| `evaluation-definition-evaluates-architecture-realization` | Evaluation Definition → Architecture concept | **evaluates realization of** | **has realization evaluated by** | `0..*` ↔ `0..*` | Evaluation Definition references the canonical Architecture subject or ADR | The definition assesses whether Implementation realizes accepted architecture meaning; it does not make the evaluator or current structure authoritative for Architecture. |
+| `evaluation-suite-groups-definition` | Evaluation Suite → Evaluation Definition | **groups** | **is grouped in** | `0..*` ↔ `0..*` | Repository-native Suite manifest or runner configuration | Grouping supports execution and maintenance; it does not transfer criteria authority or imply Architecture containment. |
 | `evaluation-execution-applies-definition` | Evaluation Execution → Evaluation Definition | **applies** | **is applied by** | Execution → `1` Definition; Definition → `0..*` Executions | Evaluation Execution | The Execution uses one identified assessment method; it does not alter that definition. |
-| `evaluation-execution-assesses-implementation` | Evaluation Execution → Implementation revision | **assesses** | **is assessed in** | Execution → `1` revision; revision → `0..*` Executions | Evaluation Execution | The Execution binds one realized state, inputs, evaluator, and environment; its observations do not automatically generalize to another state. |
-| `evaluation-execution-produces-result` | Evaluation Execution → Evaluation Result | **produces** | **is produced by** | `1` ↔ `1` | Evaluation Result identifies its Execution | The Result records that attempt's observations and assertion outcomes; it is not a governance decision. |
-| `evaluation-result-evidences-requirement` | Evaluation Result → Requirement | **provides evidence for** | **has evidence from** | `0..*` ↔ `0..*` | Evaluation evidence points outward to `requirement_id`; the Requirement has no volatile backlink | The evidence supports only the bounded claim established by the execution and oracle; it does not rewrite desired state. |
+| `evaluation-execution-assesses-implementation` | Evaluation Execution → Implementation revision | **assesses** | **is assessed in** | Execution → `1` revision; revision → `0..*` Executions | Evaluation Execution | The Execution binds one realized state, inputs or observations, evaluator, environment, and attempt or observation window; its evidence does not automatically generalize to another state. |
+| `evaluation-execution-produces-result` | Evaluation Execution → Evaluation Result | **produces** | **is produced by** | `1` ↔ `1` | Evaluation Result identifies its Execution | The Result records that Execution's observations, measurements, ratings, and assertion or judgment outcomes; it is not a governance decision. |
+| `evaluation-result-evidences-requirement` | Evaluation Result → Requirement | **provides evidence for** | **has evidence from** | `0..*` ↔ `0..*` | Evaluation evidence points outward to `requirement_id`; the Requirement has no volatile backlink | The evidence supports only the bounded claim established by the Execution and its criteria; it does not rewrite desired state. |
+| `evaluation-report-projects-result` | Evaluation Report → Evaluation Result | **projects** | **appears in** | Report → `0..*` Results; Result → `0..*` Reports | Repository-native Report records its scope, filter, generation time, and underlying Executions | The Report is a navigational or decision-support view; aggregation does not create a stronger Result or an assurance decision. |
 
 ### Control and learning
 
@@ -610,6 +670,17 @@ realizing element.
 [^boyd-ooda]: [John R. Boyd's OODA model](https://www.coljohnboyd.com/documents/1995-06-28__Boyd_John_R__The_Essence_of_Winning_and_Losing__PPT-PDF.pdf)
     supplies the Observe, Orient, Decide-as-hypothesis, Act-as-test, and feedback
     semantics adapted here.
+[^fowler-evaluations]: [Chad Fowler's “Evaluations Are the Real
+    Codebase”](https://chadfowler.com/regenerative-software/3mb526js42k26/)
+    distinguishes implementation-coupled, boundary-surviving, and live
+    evaluations as evidence with different lifetimes and blind spots.
+[^iso-25040]: [ISO/IEC 25040:2024](https://www.iso.org/standard/83467.html)
+    provides a quality-evaluation framework for target entities while leaving
+    specific test methods to other authorities.
+[^iso-29119-series]: The official [ISO/IEC/IEEE 29119 series
+    overview](https://committee.iso.org/sites/jtc1sc7/%68ome/projects/flagship-standards/isoiecieee-29119-series.html)
+    distinguishes testing concepts, processes, documentation, design
+    techniques, and static review.
 [^process]: [Process](processes/process.md) owns the fuller definition
     and its boundaries from work items, workflows, procedures, practices,
     Capabilities, governing obligations, and OODA.

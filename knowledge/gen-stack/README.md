@@ -33,12 +33,13 @@ axm install @craigsmitham/packs/gen-stack
 
 Open `src/index.md` to browse the bundle or use AXM Knowledge concept search.
 
-Version `0.6.0` keeps software work-item guidance in the top-level
-`src/work-items/` collection and removes redundant intent-to-feedback and
-change-signal reconciliation concepts. OODA and Requirement-impact guidance
-remain in `src/control-loop/`; reusable Process authoring guidance remains in
-`src/processes/`. The clean `gen-stack` application profile remains at
-`src/profile/`.
+Version `0.7.0` adds the Evaluation explainer and general, Surface, and C4
+design guides; defines Evaluation Roles, Suites, and Reports; and requires the
+governed System Evaluation Approach in the draft `gen-stack` application
+profile. Concrete Definitions, Suites, Executions, Results, and Reports remain
+repository-native. OODA and Requirement-impact guidance remains in
+`src/control-loop/`; reusable Process authoring guidance remains in
+`src/processes/`.
 
 ## License
 

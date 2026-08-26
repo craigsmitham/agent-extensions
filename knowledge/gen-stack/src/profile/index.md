@@ -2,8 +2,8 @@
 
 The normative vocabulary and OKF application profile for cross-cutting
 governance, Intent, Architecture, and subject-colocated Requirements, with
-Implementation, Evaluations, and operational evidence retained by their
-repository and runtime authorities.
+a governed System Evaluation Approach that routes to concrete Evaluations and
+operational evidence retained by their repository and runtime authorities.
 
 ## Define the semantics
 
@@ -11,8 +11,8 @@ repository and runtime authorities.
 
 ## Apply the profile
 
-- [Gen Stack application profile for OKF v0.2](gen-stack-application-profile.md) - The application profile for a durable human-authored corpus of cross-cutting system governance, Intent, Architecture, and subject-colocated Requirements.
+- [Gen Stack application profile for OKF v0.2](gen-stack-application-profile.md) - The application profile for a durable human-authored corpus of cross-cutting system governance, Intent, Architecture, subject-colocated Requirements, and a discoverable System Evaluation Approach.
 
 ## Author individual governed concepts
 
-- [Intent guides](../intent/) and [Architecture guidance](../architecture/) - Focused procedures for creating governed concepts and reviewing their relationships.
+- [Intent guides](../intent/), [Architecture guidance](../architecture/), and [Evaluation guidance](../evaluations/) - Focused procedures for creating governed concepts, reviewing their relationships, and designing the repository-native evaluation portfolio they govern.

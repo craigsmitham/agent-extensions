@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "setup-gen-stack",
-  "version": "1.0.2",
-  "description": "Plan or establish discoverable, profile-conforming Gen Stack corpus adoption with a cross-cutting System governance kernel and explicit system-to-corpus mappings",
+  "version": "2.0.0",
+  "description": "Plan or establish discoverable, profile-conforming Gen Stack corpus adoption with cross-cutting governance, a System Evaluation Approach, and explicit system-to-corpus mappings",
   "keywords": [
     "software-architecture",
     "gen-stack",
@@ -22,6 +22,7 @@
     "system-ownership",
     "decision-policy",
     "system-assurance",
+    "evaluation-approach",
     "stable-identity",
     "documentation"
   ],

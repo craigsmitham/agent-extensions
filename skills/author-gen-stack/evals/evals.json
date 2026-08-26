@@ -501,8 +501,20 @@
         "The Offering or value proposition remains available through requirement_sources so the canonical Requirement preserves its Intent lineage.",
         "No duplicate Requirement, replacement Offering, or speculative Architecture subject is created."
       ]
+    },
+    {
+      "id": 38,
+      "stage": "execution",
+      "prompt": "Our corpus adopts the current Gen Stack profile. Create its accepted System Evaluation Approach. The system uses tests/api for durable boundary Definitions, tests/unit for implementation-local Definitions, CI artifacts for Executions and Results, and an operations dashboard for operational evaluations. Evidence must be navigable by Surface, C4 element, and Requirement ID. Publish separate requirement-satisfaction and architecture-realization reports, preserve unknown and harness errors, and review the approach when a public boundary, Requirement set, evaluator, or assurance policy changes. Do not move or copy the concrete evaluation artifacts into the corpus.",
+      "expected_output": "One profile-conforming System Evaluation Approach at evaluations/system-evaluation-approach.md plus the earned evaluations index and root navigation, faithfully routing to repository-native evaluation authorities.",
+      "assertions": [
+        "The concept uses exact type System Evaluation Approach and the canonical evaluations/system-evaluation-approach.md path.",
+        "Its five required sections preserve the supplied scope, portfolio routes, subject and Requirement navigation, separate report roles, provenance statuses, review triggers, and gaps without inventing coverage.",
+        "The approach references repository-native Definitions, Suites, Executions, Results, Reports, and operational evidence without copying them into corpus concepts.",
+        "Only evaluations/index.md and necessary root navigation are added; no physical suite hierarchy or additional evaluation concepts are invented."
+      ]
     }
   ],
-  "suite_version": "1.0.0",
+  "suite_version": "1.1.0",
   "evaluation_contract": "evals/evaluation-contract.json"
 }

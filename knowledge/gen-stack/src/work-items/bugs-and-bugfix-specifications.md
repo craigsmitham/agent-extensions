@@ -25,7 +25,7 @@ sources:
     title: ISO — ISO/IEC/IEEE 29119-1:2022 Software testing general concepts
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T16:11:30Z
+  at: 2026-08-26T17:31:25Z
 ---
 
 # Bugs and bugfix specifications
@@ -48,14 +48,15 @@ and delivery require.
 | --- | --- | --- |
 | Defect | An imperfection or deficiency exists in the system or a work product such as a Requirement, Architecture, Change Design, Implementation, Evaluation, test, or document | That the Defect has produced observable system behavior or that a correction is authorized |
 | Defect report | An observation, received concern, or static finding and its Provenance are being preserved and investigated | That a Defect or Bug exists, or that the report specifies a change |
-| Bug | Investigation has identified concrete defective behavior or a defective condition in the realized system | That the Bug must be corrected now or by a particular mechanism |
-| Bugfix Specification | An authorized corrective change for one or more Bugs has a bounded composition for design, delivery, and verification | That the originating Defect reports can be replaced, retitled, or closed |
+| Bug | Investigation has identified a Defect expressed as concrete defective behavior or a defective condition in the realized system | That the Bug must be corrected now, that every contributing Defect is known, or that one mechanism will correct it |
+| Bugfix Specification | An authorized corrective change for one or more Bugs has a bounded composition that may coordinate changes addressing several related Defects | That the originating Defect reports can be replaced, retitled, or closed, or that proposed authority changes are accepted |
 
 A Defect is deliberately broad. A Requirement can be incomplete, Architecture
 can assign the wrong responsibility, a test can assert the wrong result, and
 Implementation can realize defective behavior. Not every Defect is a Bug. Bug
-is the narrower term for the concrete system behavior or condition established
-through investigation.
+is the narrower term for a Defect expressed as concrete system behavior or
+condition and established through investigation. One Bug may arise from, be
+sustained by, or expose several additional Defects across those work products.
 
 ## The relationship is a network
 
@@ -67,19 +68,24 @@ Observation, received concern, or static finding
             Signal, evidence, Provenance
                          │
                   investigation
-              ┌──────────┼───────────┐
-              ▼          ▼           ▼
-          no Defect   other Defect   Bug
-                      in Requirement, │
-                      Architecture,   │ authorized correction
-                      test, etc.      ▼
+              ┌──────────┼──────────────┐
+              ▼          ▼              ▼
+          no Defect   Defect(s)         Bug
+                     without a Bug       │
+                                        ├── may implicate additional Defects
+                                        │   in Requirements, Architecture,
+                                        │   Implementation, Evaluations, etc.
+                                        │
+                                authorized correction
+                                        │
+                                        ▼
                                Bugfix Specification
                                Change Design, delivery,
                                and verification context
-                                      │
-                                      ▼
-                             corrective Action and
-                             verification evidence
+                                        │
+                                        ▼
+                               corrective Action and
+                               verification evidence
 ```
 
 The diagram is explanatory, not a required pipeline. Static investigation may
@@ -91,8 +97,12 @@ The relationships are many-to-many:
 
 - several Defect reports can provide evidence for one Bug;
 - one report can reveal several Bugs or other Defects;
-- one Bugfix Specification can correct several related Bugs; and
-- one Bug can require several independently delivered Bugfix Specifications.
+- one Bug can implicate several additional Defects, and one Defect can
+  contribute to several Bugs;
+- one Bugfix Specification can respond to several related Bugs and coordinate
+  changes addressing several related Defects; and
+- one Bug or related Defect can require several independently delivered and
+  authorized changes.
 
 Links preserve those facts without merging the artifacts or their lifecycles.
 
@@ -143,7 +153,8 @@ Specification](change-specifications-and-delivery-work.md), not a new semantic
 authority. At the granularity needed for the correction, it may contain or
 reference:
 
-- the identified Bug and linked Defect reports;
+- the identified Bugs, established related Defects, remaining defect
+  hypotheses, and linked Defect reports;
 - the decision and authority to correct it;
 - applicable Requirements and the accepted expectation;
 - affected Architecture responsibilities, boundaries, and decisions;
@@ -154,11 +165,13 @@ reference:
 - an Evaluation or testing strategy; and
 - delivery work, sequencing, rollout, rollback, and residual risk.
 
-Each constituent keeps its own authority. A Bugfix Specification can propose a
-Requirement or Architecture change, but it cannot accept one. It can identify
-Implementation to change, but current code does not become the source of
-desired behavior. Its verification context explains what evidence is needed;
-an Evaluation Execution and Result own the actual assessment and evidence.
+Each constituent keeps its own authority. Coordinating several Defect
+corrections does not merge their meanings or lifecycles. A Bugfix Specification
+can propose a Requirement or Architecture change, but it cannot accept one. It
+can identify Implementation to change, but current code does not become the
+source of desired behavior. Its verification context explains what evidence is
+needed; an Evaluation Execution and Result own the actual assessment and
+evidence.
 
 ## Container and lifecycle
 

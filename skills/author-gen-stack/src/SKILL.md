@@ -1,6 +1,6 @@
 ---
 name: author-gen-stack
-description: "Creates or revises explicitly requested concepts in an established OKF v0.2 Gen Stack corpus: cross-cutting System governance, Intent, Architecture, and subject-colocated Requirements. Use for offerings, audiences, needs, jobs, value propositions, use cases, subdomains, requirements, capabilities, features, surfaces, DDD, C4, accepted ADRs, lifecycle, ownership, decision policy, assurance, or corpus organization. Not for initial profile adoption, corpus-wide reconciliation, choosing unaccepted meaning, implementing the system, or authoring repository-native evaluations."
+description: "Creates or revises explicitly requested concepts in an established OKF v0.2 Gen Stack corpus: cross-cutting System governance, Intent, Architecture, subject-colocated Requirements, and the System Evaluation Approach. Use for offerings, audiences, needs, jobs, value propositions, use cases, subdomains, requirements, capabilities, features, surfaces, DDD, C4, accepted ADRs, lifecycle, ownership, decision policy, assurance, evaluation approach, or corpus organization. Not for initial profile adoption, corpus-wide reconciliation, choosing unaccepted meaning, implementing the system, or authoring concrete repository-native evaluations."
 ---
 
 # Author Gen Stack concepts
@@ -32,6 +32,7 @@ adopt the current profile, preserve existing material and route the work to
 | Need | Read from `knowledge/gen-stack/src/` |
 | --- | --- |
 | System, lifecycle, ownership, decision policy, assurance | matching `governance/documenting-*.md` guide |
+| System Evaluation Approach | `evaluations/designing-a-system-evaluation-approach.md` and `evaluations/evaluation-as-bounded-evidence.md` |
 | Offering, Audience, Need, Job to Be Done, Value Proposition, Use Case, Subdomain | matching `intent/documenting-*.md` guide |
 | Requirement or its six types | `architecture/requirements/documenting-requirements.md`, `architecture/requirements/requirement-classification.md`, then the matching type guide in that directory |
 | Capability, Feature, Surface | matching guide under `architecture/{capabilities|features|surfaces}/` |
@@ -50,8 +51,10 @@ adopt the current profile, preserve existing material and route the work to
    code, test results, operational behavior, or a proposal.
 2. **Classify the meaning.** Use a root concept for cross-cutting system
    context or governance, Intent for desired outcomes and reasons, Requirement
-   for one accepted obligation, and Architecture for a durable subject,
-   responsibility, boundary, relationship, decision, or response.
+   for one accepted obligation, Architecture for a durable subject,
+   responsibility, boundary, relationship, decision, or response, and the
+   System Evaluation Approach for portfolio governance and discovery into
+   repository-native assessment evidence.
 3. **Choose the canonical owner.** Give each governed concept one stable named
    file. Intent sources may motivate a Requirement but cannot own it. Assign a
    Requirement to exactly one eligible Architecture subject: System,
@@ -72,14 +75,19 @@ adopt the current profile, preserve existing material and route the work to
    in `## Rationale`. Let Architecture explain the obligated subject and its
    response without duplicating the obligation.
 7. **Preserve peer authorities.** Do not create corpus Implementation,
-   Evaluations, Feedback, Signals, or Observations concepts or directories.
-   Link repository-native implementation and evaluation evidence when useful.
+   Feedback, Signals, or Observations concepts or directories. Within the
+   required `evaluations/` area, author only the explicitly requested System
+   Evaluation Approach and navigation. Link repository-native Evaluation
+   Definitions, Suites, Executions, Results, Reports, and evidence; do not copy
+   them into corpus concepts.
    Tests and evaluations may repeat a Requirement predicate while referencing
    its stable `requirement_id`.
 8. **Create only earned navigation.** Add the minimum collection indexes needed
    by the admitted concept. Individual ADRs go under
    `architecture/decisions/`; `decisions.md` remains the root governance
-   policy. Do not create empty collections or plural catch-all concept files.
+   policy. The System Evaluation Approach earns `evaluations/index.md` and root
+   navigation but no concrete evaluation subcollections. Do not create empty
+   collections or plural catch-all concept files.
 9. **Verify.** Check links, reachability, exact type and path, Requirement
    colocation and subject resolution, one normative owner, and absence of
    invented meaning. Run the established OKF check and
@@ -95,5 +103,5 @@ unresolved subject, acceptance, coverage, implementation, evaluation, or
 operational gap without turning it into profile nonconformance.
 
 Do not choose an architecture, accept a requirement, change implementation,
-author repository-native evaluations, or modify external records unless the
+author concrete repository-native evaluations, or modify external records unless the
 user separately authorized that work.

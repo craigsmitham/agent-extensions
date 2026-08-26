@@ -64,6 +64,38 @@ Partial state would make the outcome ambiguous.
 """
 
 
+def evaluation_approach() -> str:
+    return """---
+type: System Evaluation Approach
+title: Synthetic system evaluation approach
+description: How synthetic evaluations are discovered, navigated, reported, and maintained.
+status: stable
+---
+
+# Synthetic system evaluation approach
+
+## Scope and objectives
+
+The approach covers the synthetic System and supports assurance review.
+
+## Evaluation portfolio
+
+Repository-native definitions and suites use explicit Evaluation Roles.
+
+## Navigation and reporting
+
+Subject and Requirement views separate satisfaction from realization.
+
+## Evidence and lifecycle
+
+Results preserve provenance, unknown, failures, and review triggers.
+
+## Gaps and maintenance
+
+Known coverage gaps remain visible and have a maintenance route.
+"""
+
+
 class ProfileValidatorTest(unittest.TestCase):
     def setUp(self) -> None:
         self.temp = tempfile.TemporaryDirectory()
@@ -79,6 +111,16 @@ class ProfileValidatorTest(unittest.TestCase):
             title = concept_type
             (self.root / filename).write_text(concept(concept_type, title), encoding="utf-8")
             links.append(f"- [{title}]({filename})")
+        evaluations = self.root / "evaluations"
+        evaluations.mkdir()
+        (evaluations / "index.md").write_text(
+            "# Evaluations\n\n- [System evaluation approach](system-evaluation-approach.md)\n",
+            encoding="utf-8",
+        )
+        (evaluations / "system-evaluation-approach.md").write_text(
+            evaluation_approach(), encoding="utf-8"
+        )
+        links.append("- [Evaluations](evaluations/)")
         (self.root / "index.md").write_text(
             """---
 okf_version: "0.2"
@@ -238,11 +280,14 @@ This documentation set adopts the
             index.write("- [Architecture](architecture/)\n")
         self.assertEqual("pass", VALIDATOR.validate(self.root)["structural_result"])
 
-    def test_repository_native_authority_collection_is_prohibited(self) -> None:
-        evaluations = self.root / "evaluations"
-        evaluations.mkdir()
-        (evaluations / "index.md").write_text("# Evaluations\n", encoding="utf-8")
-        self.assertIn("superseded-collection", self.rules())
+    def test_missing_evaluation_approach_fails(self) -> None:
+        (self.root / "evaluations" / "system-evaluation-approach.md").unlink()
+        self.assertIn("required-evaluation-approach", self.rules())
+
+    def test_evaluation_approach_requires_sections(self) -> None:
+        path = self.root / "evaluations" / "system-evaluation-approach.md"
+        path.write_text(concept("System Evaluation Approach"), encoding="utf-8")
+        self.assertIn("evaluation-approach-section", self.rules())
 
 
 if __name__ == "__main__":

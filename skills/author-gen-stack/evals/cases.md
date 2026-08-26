@@ -34,6 +34,9 @@ The authority-and-witness case requires an accepted Requirement to remain
 present alongside an identically worded, explicitly linked evaluation.
 The Intent-subject boundary case requires an Offering to remain source
 traceability while an existing Surface owns the canonical accepted obligation.
+The System Evaluation Approach case admits the one governed evaluation
+portfolio concept and earned navigation while keeping concrete Definitions,
+Suites, Executions, Results, Reports, and operational evidence repository-native.
 
 The routing matrix distinguishes initial setup, bounded authoring, established
 corpus reconciliation, and an ambiguous request using only the three same-pack
