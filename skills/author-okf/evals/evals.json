@@ -1,6 +1,6 @@
 {
   "skill_name": "author-okf",
-  "suite_version": "0.1.2",
+  "suite_version": "0.1.3",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -53,6 +53,20 @@
         "No neighboring skill is selected for a job it does not own.",
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 5,
+      "stage": "execution",
+      "prompt": "Maintain a synthetic OKF v0.2 bundle containing one Guide and one Process. Their bodies already establish the Guide's selection condition and outcome and the Process's triggering event and closing outcome. Make their concept previews and enclosing index support correct selection without inventing new metadata fields.",
+      "expected_output": "Routeable one-sentence descriptions in existing OKF metadata, exact copies in the enclosing index, preserved body authority, truthful lifecycle metadata, and successful validation.",
+      "assertions": [
+        "The Guide description names its selection condition and supported outcome.",
+        "The Process description names its triggering event and closing outcome.",
+        "Preconditions remain distinct from selection conditions and Process triggers.",
+        "The enclosing index copies both canonical descriptions exactly.",
+        "No custom routing field or fabricated provenance is added.",
+        "The completed bundle is validated."
       ]
     }
   ]

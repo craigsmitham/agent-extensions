@@ -36,9 +36,8 @@ or MDN documentation.
 
 ## Management and architecture sources
 
-The `gen-stack`, `knowledge-management`, `product-management`,
-`software-architecture`, `software-engineering`, and `strategy` bundles
-synthesize ideas from public
+The `gen-stack`, `knowledge-management`, `product-management`, and `strategy`
+bundles synthesize ideas from public
 sources identified in each concept's provenance metadata. These include the
 FAIR Guiding Principles, W3C PROV, KCS, ISO/IEC/IEEE 42010, D. L. Parnas's work
 on modular decomposition, Kent Beck's writing and interviews on YAGNI and Tidy
@@ -50,9 +49,21 @@ to Win writing, and Harvard Business School's value-stick materials. The
 bundles and related rule packages contain original summaries and applications;
 they do not vendor those sources or reproduce their proprietary templates.
 
+Gen Stack `0.3.0` consolidates the original guidance previously published in
+the `software-architecture` and `software-engineering` knowledge packages. The
+merged package preserves their source-level attribution and CC-BY-SA-4.0
+reciprocal licensing; the former published package versions retain their
+original identities and licenses.
+
 The `gen-stack` bundle and pack are explicitly influenced by Chad Fowler's
 [The Generative Stack](https://chadfowler.com/regenerative-software/3miwhqqvwxc2x/)
 and the surrounding Regenerative Software series. They contain an original
 software-change method and terminology for authority, Requirements,
 evaluations, and bounded regeneration; they do not vendor Fowler's prose or
 diagrams. Individual concepts identify the source claims they use.
+
+The `gen-stack` bundle and pack also adapt the Observe, Orient, Decide, and Act
+control semantics from John R. Boyd's
+[The Essence of Winning and Losing](https://www.coljohnboyd.com/documents/1995-06-28__Boyd_John_R__The_Essence_of_Winning_and_Losing__PPT-PDF.pdf).
+They apply OODA as an original software-change control model and do not vendor
+Boyd's briefing or diagram.

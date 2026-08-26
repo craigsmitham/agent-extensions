@@ -41,10 +41,8 @@ reproducibility but should not be used for new adoption.
 | Bundle | Purpose | Install |
 | --- | --- | --- |
 | `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
-| `gen-stack` | Cross-cutting authority, evidence, feedback, trust, compaction, and bounded-regeneration doctrine | `axm install @craigsmitham/knowledge/gen-stack` |
+| `gen-stack` | Cohesive Intent, Requirements, Architecture, work-item, Implementation, Evaluation, OODA, and regenerative-software guidance | `axm install @craigsmitham/knowledge/gen-stack` |
 | `product-management` | Product outcomes, risks, empowered teams, discovery, delivery, evidence, and product strategy | `axm install @craigsmitham/knowledge/product-management` |
-| `software-architecture` | Durable system meaning, product quality requirements, boundaries, invariants, and evidence-aware architecture documentation | `axm install @craigsmitham/knowledge/software-architecture` |
-| `software-engineering` | Evidence-timed design change and software work items for incidents, defects, and feature requests | `axm install @craigsmitham/knowledge/software-engineering` |
 | `strategy` | Coherent choices about participation, advantage, capabilities, evidence, and value creation | `axm install @craigsmitham/knowledge/strategy` |
 | `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |
 

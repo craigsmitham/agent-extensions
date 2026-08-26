@@ -6,7 +6,7 @@ risk. It preserves the question mark in Kent Beck's formulation: first, after,
 later, and never can all be responsible outcomes.
 
 The injected rule stays deliberately concise and links to the fuller Tidy First
-pattern in the software-engineering knowledge bundle. It is not standalone;
+pattern in the Gen Stack knowledge bundle. It is not standalone;
 install the pack that provides both extensions:
 
 ```bash

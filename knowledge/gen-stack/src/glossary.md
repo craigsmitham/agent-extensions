@@ -1,0 +1,615 @@
+---
+type: Reference
+title: Gen Stack vocabulary and relationship model
+description: The semantic authority for Gen Stack terms, canonical relationships, cardinalities, recording locations, and prohibited inferences across the complete method.
+tags: [glossary, vocabulary, terminology, concept-model, gen-stack, specification, change-specification, bugfix-specification, defect, defect-report, bug, process, process-model, process-enactment, work-items, workflow, ooda, control-loop, pace-layer, trust-gradient, signals, observations, relationships, relationship-semantics, cardinality, traceability, intent, value, requirements, requirement-classification, architecture, change-design, technical-design, evaluations, evaluation-definition, evaluation-execution, evaluation-result, implementation, implementation-unit, system-context, architecture-decisions, capabilities, features, surfaces, domain-driven-design, c4]
+status: draft
+sources:
+  - id: boyd-ooda
+    resource: https://www.coljohnboyd.com/documents/1995-06-28__Boyd_John_R__The_Essence_of_Winning_and_Losing__PPT-PDF.pdf
+    title: John R. Boyd — The Essence of Winning and Losing
+  - id: process
+    resource: processes/process.md
+    title: Process
+generated:
+  by: codex/gpt-5.6
+  at: 2026-08-26T15:42:30Z
+---
+
+# Gen Stack vocabulary and relationship model
+
+## Authority and scope
+
+This reference is the semantic authority for the Gen Stack method. It owns the
+preferred names, local identifiers, definitions, distinctions, and controlled
+relationship semantics used throughout this bundle. Explanations and guides
+may apply or elaborate the vocabulary, but they defer to this reference when
+they name a term, relationship, cardinality, canonical recording location, or
+prohibited inference.
+
+The [Gen Stack application profile](profile/gen-stack-application-profile.md)
+is the separate authority for representing the governed subset as OKF
+concepts. It owns governed types, paths, metadata fields, colocation, and
+profile validation. A profile field that records a controlled relationship is
+an encoding of the relationship defined here, not an independent definition.
+
+The backticked identifier following each preferred term is stable within this
+vocabulary. Relationship identifiers are stable in the same way. Identifiers
+use lower-kebab-case, are never reassigned to different meanings, and do not
+commit the bundle to a public IRI or a particular semantic-web technology.
+Changes to a preferred label preserve its identifier when the meaning remains
+the same; changes to meaning are recorded in the bundle log.
+
+This human-readable reference is authoritative. The bundle does not currently
+publish a normative RDF, OWL, SHACL, or other machine-readable ontology. A
+future projection must identify the published bundle version or source
+revision it represents and be generated from, or mechanically checked against,
+this reference before it can claim equivalence.
+
+## Signals and observations
+
+**Signal** (`signal`) is an indication that some part of the Gen Stack may require
+attention. A request, anomaly, incident, Evaluation Result, environmental
+change, or runtime event can be a Signal. It carries no conclusion about what
+should change, whether anything has been accepted, or which authority is
+responsible.
+
+**Observation** (`observation`) is a contextual record of something perceived in the system or
+its environment. It states what was observed, with relevant conditions,
+Provenance, and uncertainty; it is evidence about what is or happened, not what
+ought to be. A Signal may reference one or more Observations, and an Observation
+may exist without triggering action.
+
+## Defects and corrective work
+
+**Defect** (`defect`) is an imperfection or deficiency in the system or in a
+work product that describes, governs, realizes, or evaluates it—including
+Requirements, Architecture, Change Design, Implementation, Evaluations, tests,
+and documentation—relative to an applicable expectation or intended use. A
+Defect does not by itself establish observable defective system behavior or
+authorize correction.
+
+**Defect report** (`defect-report`) is a Work item created from an Observation,
+received concern, or static finding that may indicate one or more Defects. It
+preserves the originating Signal, source, expectation, evidence, investigation,
+classification, disposition, and Provenance. It does not itself prove a Defect
+or Bug, specify a corrective change, or become a Bugfix Specification.
+
+**Bug** (`bug`) is concrete defective behavior or a defective condition in the
+realized system identified through investigation. A Bug may be evidenced by
+one or more Defect reports and may expose Defects in Requirements,
+Architecture, Change Design, Implementation, Evaluations, or other work
+products. Identifying a Bug does not by itself authorize correction or require
+a Bugfix Specification.
+
+## Cross-cutting system context and governance
+
+These concepts appear at the corpus root because they apply across Intent and
+Architecture. Root placement expresses scope, not semantic containment.
+
+**System** (`system`) is the root subject being documented. It defines the system's
+purpose, boundary, material exclusions, and important environmental
+relationships and owns genuinely system-wide Requirements. It is not an
+Offering or a C4 Software System.
+
+**System Lifecycle** (`system-lifecycle`) records the accepted lifecycle or support state, material
+change horizon, expected evolution, and events that trigger reassessment.
+
+**System Ownership** (`system-ownership`) records stable maintenance accountability, its stewardship
+boundary, and continuity, transfer, or escalation routes without copying a
+volatile roster.
+
+**Architecture Decision Policy** (`architecture-decision-policy`) defines
+which choices require an Architecture Decision Record, who or what accepts and
+supersedes them, where records live, their minimum content, and when they must
+be reconsidered.
+
+**System Assurance** (`system-assurance`) defines the confidence required for architecture-
+significant change, the evidence authorities used to establish it, required
+review or approval, and reassessment triggers.
+
+Lifecycle, Ownership, Decision Policy, and Assurance are governance concepts,
+not Requirement subjects. A binding obligation expressed through them becomes
+a linked Process Requirement owned by an eligible Architecture subject,
+normally System.
+
+## Intent
+
+**Intent** (`intent`) captures human-oriented direction about desired outcomes and why
+they matter. It is formed or revised through Orientation in response to
+Signals, Observations, and other context, but is not those inputs. It may be
+informal, incomplete, conflicting, or not yet accepted.
+
+### Offering
+
+**Offering** (`offering`) is a coherent unit of value intentionally made available to one or
+more audiences. It may combine people, process, and software and is not
+necessarily a commercial product or software boundary.
+
+### Audience
+
+**Audience** (`audience`) is a durable group for whom an offering, need, value claim, or
+interaction is consequential. An Audience is not a named person or a research
+persona, and roles such as user, operator, sponsor, or beneficiary remain
+contextual.
+
+### Need
+
+**Need** (`need`) is a solution-independent problem, constraint, opportunity, or desired
+outcome that matters to an audience in particular circumstances. A Need
+explains why change may matter without prescribing a response.
+
+### Job to Be Done
+
+**Job to Be Done** (`job-to-be-done`) describes progress that an audience seeks in particular
+circumstances without assuming the product, service, process, feature, or
+software structure that will enable it.
+
+### Value Proposition
+
+**Value Proposition** (`value-proposition`) is a scoped promise that an Offering will create a
+recognizable benefit for an Audience by addressing a Need or Job to Be Done. It
+is not proof that the promised outcome occurred.
+
+### Use Case
+
+**Use Case** (`use-case`) is an intent-bearing description of how a primary actor interacts
+with a subject to achieve a goal, including the successful outcome and material
+alternative or failure paths.
+
+These concepts are complementary views of Intent, not stages in a required
+hierarchy. Any may provide source or context for Requirements. None is itself
+a normative Requirement or an eligible Requirement subject.
+
+### Domain
+
+**Subdomain** (`subdomain`) is a cohesive part of the problem domain, classified as core,
+supporting, or generic according to its strategic role. It describes problem
+space and does not prescribe software or organizational structure.
+
+## Architecture
+
+Architecture supplies the mostly human-authored contract that constrains
+Compilation within the Gen Stack. It defines accepted subjects,
+responsibilities, boundaries, relationships, decisions, and structural
+responses, and contains the subject-colocated Requirements that obligate those
+subjects while preserving the distinct authority of each.
+
+The preferred term **Architecture** has the stable identifier `architecture`.
+
+### Requirements
+
+**Requirement** (`requirement`) is the canonical, accepted expression of an obligation derived
+from Intent and assigned to exactly one eligible Architecture subject. It
+states what that subject shall do, achieve, preserve, prevent, or constrain.
+Requirements make accepted obligations explicit enough to shape architecture
+and inform implementation; they remain distinct from the Intent or authority
+that motivates them and the Evaluations that assess them.
+
+#### Requirement types
+
+All six classifications use the Gen Stack profile's `Requirement` concept
+type and exactly one `requirement_type` value. Choose the classification from
+the obligation's primary accepted meaning.
+
+**Functional Requirement** (`functional-requirement`) defines required behavior, information,
+transformation, state transition, response, preservation, or service.
+
+**Quality Requirement** (`quality-requirement`) defines a required degree or assessable condition of
+system, product, service, use, or data quality provided by the obligated
+subject.
+
+**Process Requirement** (`process-requirement`) defines an obligation on an accepted lifecycle,
+development, operational, or governance process.
+
+**Human-Factors Requirement** (`human-factors-requirement`) defines an obligation arising from human
+capabilities, limitations, safety, workload, cognition, health, or environment.
+
+**Usability Requirement** (`usability-requirement`) defines an
+interaction-quality obligation concerned with effective, efficient, learnable,
+or satisfying use in a stated context.
+
+**Constraint Requirement** (`constraint-requirement`) defines a binding limitation on the permitted
+design, implementation, technology, interface, law, policy, or operating
+conditions.
+
+Eligible Requirement subjects are System, Capability, Feature, Surface,
+Bounded Context, C4 Software System, C4 Container, and C4 Component. Intent
+concepts—including Offering, Audience, Need, Job to Be Done, Value Proposition,
+Use Case, and Subdomain—may provide source or context but never own
+Requirements. Other governed concepts may provide decision or view meaning
+without becoming subjects. In a Gen Stack corpus, each Requirement remains
+physically colocated beneath its owning Architecture subject rather than in a
+top-level Requirements collection.
+
+### Decisions
+
+**Architecture Decision Record** (`architecture-decision-record`) records one
+accepted, durable architecture choice together with its context, rationale,
+material alternatives, consequences, and supersession or reconsideration
+conditions. A proposal or unresolved option is not an Architecture Decision
+Record.
+
+### Capabilities and behavior
+
+**Capability** (`capability`) is an outcome-oriented ability of an identified organization,
+system, or subsystem at a declared level, independent of the processes,
+people, or technology that realize it.
+
+**Feature** (`feature`) is independently recognizable behavior with an intended outcome,
+actors and conditions, and durable identity across one or more Use Cases or
+Surfaces. A Feature is not a delivery epic or test suite.
+
+**Surface** (`surface`) is an actor-facing encounter point with identified actors, an
+interaction boundary, recognizable behavior, and material exclusions.
+Surfaces may contain narrower Surfaces when each has independent durable
+identity, such as CLI → command → subcommand or web application → page. This
+hierarchy models interaction, not C4 containment. A Surface may be realized by
+one or more C4 elements, and one C4 element may support multiple Surfaces.
+
+### Domain model boundaries
+
+**Bounded Context** (`bounded-context`) is the boundary within which a particular domain model and
+its ubiquitous language apply consistently and have defined authority. It is
+not automatically a service, deployment, repository, team, or database.
+
+**Context Map** (`context-map`) is a directional relationship view of Bounded Contexts that
+makes their dependencies, translation boundaries, coordination choices, and
+consequences explicit. It is more than a diagram of boxes and untyped lines.
+
+### C4
+
+**C4 Software System** (`c4-software-system`) is a software boundary that delivers value and has
+responsibilities, direct interactors, and consequential relationships.
+
+**C4 Container** (`c4-container`) is an application or data-store runtime boundary contained by
+exactly one C4 Software System. Containers do not contain other containers.
+
+**C4 Component** (`c4-component`) is a cohesive responsibility with defined interfaces and
+dependencies inside exactly one C4 Container. Components do not recursively
+contain other components.
+
+**C4 View** (`c4-view`) is a projection of canonical C4 elements that answers one
+architecture question.
+
+The root System remains distinct from a C4 Software System, and C4 Views do not
+become canonical structural elements merely by projecting them.
+
+## Change design
+
+**Change Design** (`change-design`) is a bounded technical response formed
+while deciding how to realize a software change within applicable Requirements
+and Architecture. It makes the material choices, rationale, tradeoffs,
+affected responsibilities and interactions, interfaces, state and data
+behavior, failure handling, risks, verification approach, and unresolved
+questions explicit at the granularity the change requires.
+
+A Change Design is not necessarily a document. It may exist only in a design
+conversation, be captured in a Work item, or exceptionally be maintained as a
+dedicated repository concept under an established lifecycle. Its container,
+detail, or implementation status does not confer authority. Requirements own
+accepted obligations; Architecture owns durable response meaning; Architecture
+Decision Records own accepted durable choices that need an independent
+lifecycle; Work items own delivery state; Implementation owns current realized
+state; and Evaluations own assessment and evidence.
+
+The Gen Stack application profile does not govern Change Design as a concept
+type or require a `design/` collection in an instantiated system corpus.
+
+Change Design may reveal candidate Requirements or proposed Architecture
+changes, but it does not accept them. It guides a bounded Decision and Action
+without becoming another required authority layer in the Gen Stack. See
+[Change Design](design/change-design.md) for the full boundary and [Developing
+a Change Design](design/developing-a-change-design.md) for the proportional
+workflow and capture choices.
+
+Designing commonly occurs during Orient, a Decision may select the response,
+and Action may realize and test it. This sequence does not make every design
+conversation a maintained Orientation, Decision record, Work item, or corpus
+concept.
+
+## Specifications
+
+**Specification** (`specification`) is a bounded, named composition of Gen
+Stack representations assembled to guide, coordinate, and assess the
+realization of a system or change. Depending on its scope, a Specification may
+contain or reference source context and Intent, Observations, applicable or
+candidate Requirements, Architecture and decisions, Change Design,
+verification context, and Work items.
+
+Specification is a composition role, not another semantic authority. Each
+constituent retains its canonical meaning, owner, maturity, and lifecycle, and
+the Specification's container does not make every included claim normative or
+accepted. In ordinary shorthand, Implementation may be said to realize a
+Specification. More precisely, Implementation realizes the applicable
+Requirements, Architecture, and selected Change Design; Work items coordinate
+delivery, while Evaluations assess the realized state.
+
+**Specification constituent** (`specification-constituent`) is a
+representation included in or referenced by a Specification for the distinct
+role it already owns. Inclusion does not copy or transfer that authority.
+
+**Specification container** (`specification-container`) is the conversation,
+work item, document, directory, or linked set through which the composition is
+presented and navigated. A container may hold several constituent kinds, but
+it is not their common authority or necessarily their canonical home.
+
+The capitalized preferred term **Specification** names this Gen Stack
+composition role. A repository or external practice may use the generic word
+*specification* for one authoritative contract, a temporary proposal, a
+historical design record, or a generator input. Determine that artifact's
+local authority and change-flow model rather than importing it from the name.
+A repository may make a Specification container historical, maintained, or an
+executable source without making every constituent normative or collapsing
+their Gen Stack roles.
+
+Gen Stack does not use **functional specification** or **technical
+specification** as preferred authority terms. In a locally named functional
+specification, accepted behavioral obligations remain Requirements and
+problem or outcome context remains Intent. In a technical specification, the
+bounded response remains Change Design, durable accepted meaning remains
+Architecture, and a mixed container may act as a Specification. Classify the
+claims rather than inferring meaning from either document label.
+
+**Change Specification** (`change-specification`) is a Specification scoped to
+a bounded proposed or authorized change to the System or its Architecture. It
+may compose motivating Signals, Observations, source context and Intent,
+applicable or candidate Requirements, affected Architecture and decisions,
+Change Design, verification context, and delivery work. A candidate change
+must have a recognizable affected context, intended outcome, material
+exclusions, and current decision state; an unbounded request remains a Signal
+or source record rather than becoming a Change Specification. The name does
+not accept a proposed Requirement or Architecture change, authorize delivery,
+or make the Specification the common authority for its constituents.
+
+**Bugfix Specification** (`bugfix-specification`) is a Change Specification
+scoped to an authorized corrective change responding to one or more Bugs. It links
+the Defect reports that preserve originating Signals and Provenance and may
+compose a Bug and diagnosis synopsis, the correction decision and authority,
+applicable or candidate Requirements, affected Architecture, unchanged
+constraints, Change Design, verification and evaluation context, and delivery
+work. It is a separate artifact, never a retitled Defect report. The name does
+not accept a proposed Requirement or Architecture change or prove that the Bug
+has been corrected or verified.
+
+Change Specification and Bugfix Specification are work-item composition roles,
+not governed concept types, mandatory templates, or required repository
+documents. A work item may serve as their Specification container, and a
+bounded Specification may exist only in a conversation. Completeness is judged
+against the stated scope and next authorized action, not against a universal
+inventory of constituent kinds. The Gen Stack application profile does not
+require a Specification concept or collection in an instantiated system
+corpus.
+
+## Evaluations
+
+**Evaluation** (`evaluation`) is an executable assessment of whether a realized subject
+satisfies a Requirement under stated conditions. It may assess initial
+generation or replacement, but does not own or rewrite the obligation.
+
+**Evaluation Definition** (`evaluation-definition`) owns what is assessed, the
+method, cases, oracle, thresholds, and conditions. It references the stable
+`requirement_id` when it claims Requirement coverage and may intentionally
+repeat the Requirement predicate.
+
+**Evaluation Execution** (`evaluation-execution`) is one bounded attempt that binds an Evaluation
+Definition to identified inputs, environment, Implementation, and evaluator.
+
+**Evaluation Result** (`evaluation-result`) records the observations and assertion outcomes produced
+by an Evaluation Execution. It provides evidence no stronger than the bounded
+execution and its oracle establish; it is not a governance decision or a
+change to Intent.
+
+## Implementation
+
+**Implementation** (`implementation`) is the current realization of the system in code, schemas,
+configuration, prompts, workflow definitions, build and deployment
+definitions, and other machine-consumed artifacts. It owns what exists now; it
+does not establish what shall exist or why the architecture was chosen.
+
+**Implementation Unit** (`implementation-unit`) is a named, mechanically resolvable part of the
+Implementation treated as one coherent scope for generation, change,
+replacement, deletion, provenance, or implementation-local testing. It may be
+a file, module, package, schema, configuration set, service codebase, or
+deployable artifact. An Implementation Unit may realize all or part of one or
+more architecture concepts or Requirements and need not coincide one-to-one
+with a C4 element. It is a current realization boundary, not an architecture
+subject, and does not own Requirements.
+
+**Implementation revision** (`implementation-revision`) is one identified
+state of the Implementation to which an Evaluation Execution or other evidence
+can be bound without generalizing the result to a different state.
+
+## Gen Stack
+
+**Gen Stack** (`gen-stack`) is the software-change method that distinguishes
+Signals, Observations, Intent, canonical Requirements, Architecture,
+Compilation, Implementation, Evaluations, and operational learning while OODA
+governs adaptation across them. Change Design supplies proportional technical
+reasoning for a bounded response, while Specifications compose the
+representations relevant to a bounded system or change. Neither becomes
+another required authority layer.
+
+**Process** (`process`) is a reusable, bounded description of coordinated human and
+automated work that begins in response to one or more events, transforms
+information or state through activities, and ends in an intended outcome that
+creates or preserves value for identified stakeholders. A Process definition
+does not become binding merely because it is documented; its normative
+authority must come from identified Requirements, policies, standards, or
+other recognized authorities.[^process]
+
+**Process enactment** (`process-enactment`) is one performance of a Process for particular events,
+inputs, participants, resources, and conditions. An enactment may involve
+several work items, and one work item may participate in several Processes.
+
+**Work item** (`work-item`) is a durable case record that preserves lifecycle state,
+evidence, decisions, authority, and relationships for one occurrence, request,
+investigation, or body of work. It may support or be governed by a Process but
+is not the Process itself.
+
+**OODA control loop** (`ooda-control-loop`) is the adaptive process through which the Gen Stack
+Observes Signals and Observations, Orients across its authorities and evidence,
+Decides on an authorized repair hypothesis, and Acts to test it. OODA governs
+learning and change across the stack; its activities are not additional
+artifact layers.[^boyd-ooda]
+
+**Observe** (`observe`) receives Signals and records contextual Observations without
+turning them into desired state.
+
+**Orient** (`orient`) interprets Observations using Intent, Requirements, Architecture,
+Implementation, Evaluations, operational context, prior experience, and
+Provenance. Orientation is an activity, not a maintained authority or synonym
+for Intent.
+
+**Orientation** (`orientation`) is one bounded, evidence-linked interpretation
+formed through Orient. It frames candidate Decisions without authorizing one.
+
+**Decide** (`decide`) selects an authorized hypothesis about what to preserve,
+investigate, or change. A Decision is not necessarily an Architecture Decision
+Record and does not confer authority on its maker.
+
+**Decision** (`decision`) is the hypothesis selected through Decide within the
+applicable human or institutional authority.
+
+**Act** (`act`) applies the bounded Decision as a test, producing further Observations.
+An Action may investigate, change an authority, run Compilation, modify
+Implementation, execute an Evaluation, deploy, or roll back.
+
+**Action** (`action`) is one bounded application of a Decision through Act. It
+tests the Decision and may produce new Observations.
+
+**Compilation** (`compilation`) is the constrained transformation of Architecture and its
+Requirements into Implementation Units. Intent informs and is canonicalized by
+Requirements; it is not a direct Compilation input. Generated Implementation
+Units must conform to the accepted Architecture contract, while the
+Implementation is the materialized output.
+
+**Provenance** (`provenance`) preserves the lineage of decisions, constraints, incidents,
+rejected alternatives, and generated artifacts.
+
+**Pace layer** (`pace`) is a decision-relative grouping of authorities,
+artifacts, or assets whose acceptable rate of change is similar because their
+consequences, evidence needs, and recovery costs are similar. It is not a
+required physical layer or fixed hierarchy. Requirements, public contracts,
+persistent data, and conservation boundaries commonly demand slower change
+than bounded Implementation Units. Similar pace does not imply shared
+ownership or authority. See [OODA as the Gen Stack control
+loop](control-loop/ooda-control-loop.md#run-loops-at-the-pace-of-the-affected-authority).
+
+**Trust gradient** (`trust-gradient`) is the deliberate scaling of the authority
+granted to an Action and its blast radius to confidence established by
+evidence. Lower confidence, greater consequence, or proximity to a slower Pace
+layer calls for stronger constraints, containment, observability,
+reversibility, independent evaluation, and review. A Trust gradient does not
+assign permanent trust to a person, model, generator, evaluator, tool, or
+implementation path, and confidence does not confer decision authority. See
+[Bounded regeneration](implementation/bounded-regeneration.md).
+
+**Deletion** (`deletion`) makes it safe to remove or replace Implementation Units without
+breaking hidden dependencies.
+
+**Compaction** (`compaction`) keeps regeneration from accumulating complexity.
+
+## Relationship model
+
+A relationship is stated canonically as *subject — relationship → object*.
+Its inverse is a derived reading of the same fact, not a second independently
+maintained assertion. Record the relationship once at the location named
+below; generate inverse navigation and backlinks when needed. This provides
+bidirectional navigability without bidirectional authority.
+
+Each relationship row has one stable identifier even when different rows use
+the same natural-language verb. The domain and range state which preferred
+terms may occupy the subject and object positions; they do not create a class
+hierarchy.
+
+Cardinalities describe permitted semantic multiplicity: `1` means exactly
+one, `0..1` means optional one, `1..*` means one or more, and `0..*` means
+optional many. They do not require optional relationships to be documented
+when the relationship is inconsequential. Unless a machine-readable field is
+named, use an ordinary prose link; this model does not introduce relationship
+frontmatter.
+
+### Collective ranges
+
+The relationship tables use these controlled collective terms:
+
+- **Intent concept** (`intent-concept`) means an Offering, Audience, Need, Job
+  to Be Done, Value Proposition, Use Case, or Subdomain.
+- **Requirement source** (`requirement-source`) means a maintained
+  non-Requirement concept or external authority that explains an obligation's
+  origin. It may be an Intent concept, governance concept, decision, policy,
+  standard, or other accepted source; it motivates without owning the
+  Requirement.
+- **Architecture concept** (`architecture-concept`) means a maintained System,
+  Architecture Decision Record, Capability, Feature, Surface, Bounded Context,
+  Context Map, C4 Software System, C4 Container, C4 Component, or C4 View.
+- **Eligible Architecture subject** (`eligible-architecture-subject`) means a
+  System, Capability, Feature, Surface, Bounded Context, C4 Software System, C4
+  Container, or C4 Component that may own Requirements under the profile.
+- **C4 element** (`c4-element`) means a C4 Software System, C4 Container, or C4
+  Component. A C4 View is a projection, not an element.
+- **Gen Stack authority or activity** (`gen-stack-authority-or-activity`)
+  means any maintained authority or bounded activity in the method that a
+  Signal can implicate without diagnosing it.
+
+### Authority, realization, and evidence
+
+| ID | Domain → range | Canonical reading | Derived inverse reading | Cardinality | Canonical record | Meaning and prohibited inference |
+| --- | --- | --- | --- | --- | --- | --- |
+| `requirement-source-is-source-of-requirement` | Requirement source → Requirement | **is source of** | **originates from** | `0..*` ↔ `0..*` | `requirement_sources` on the Requirement | The source explains why the obligation exists; the Requirement canonically expresses the accepted obligation without transferring normative authority to the source. |
+| `requirement-is-derived-from-requirement` | Requirement → Requirement | **is derived from** | **is parent of** | `0..*` ↔ `0..*`, acyclic | `derived_from` on the child Requirement | The child obligation follows from a maintained parent; derivation does not make the statements interchangeable. |
+| `requirement-has-subject` | Requirement → eligible Architecture subject | **has subject** | **is subject of** | Requirement → `1`; subject → `0..*` | `subject` on the Requirement and subject-colocated placement | The Architecture subject is the thing obligated; Intent concepts cannot occupy this relationship, and the Requirement remains the sole owner of the binding statement. |
+| `adr-responds-to-requirement` | Architecture Decision Record → Requirement | **responds to** | **is addressed by** | `0..*` ↔ `0..*` | Link from the Architecture Decision Record | The decision explains an accepted architectural response; it does not replace or redefine the obligation. |
+| `architecture-constrains-compilation` | Architecture concept → Compilation | **constrains** | **is constrained by** | Compilation → `1..*` Architecture concepts; concept → `0..*` Compilations | Compilation provenance identifies the applied Architecture | Architecture supplies the accepted contract; it is not output produced by Compilation, and raw Intent does not bypass Requirements as a direct input. |
+| `compilation-produces-implementation-unit` | Compilation → Implementation Unit | **produces** | **is produced by** | One bounded Compilation → `1..*` Units; a Unit may be regenerated many times | Compilation provenance identifies its outputs | The produced Units collectively update the Implementation; Compilation does not decide or rewrite its accepted inputs. |
+| `implementation-unit-realizes-authority` | Implementation Unit → Architecture concept or Requirement | **realizes** | **is realized by** | `0..*` ↔ `0..*` | Implementation or provenance points to the stable concept or `requirement_id` | The link states the current realization; implementation does not establish what shall exist. |
+| `evaluation-definition-evaluates-requirement` | Evaluation Definition → Requirement | **evaluates** | **is evaluated by** | `0..*` ↔ `0..*` | Evaluation Definition references `requirement_id` | The definition owns the assessment method and may repeat the predicate; it does not own the obligation. |
+| `evaluation-execution-applies-definition` | Evaluation Execution → Evaluation Definition | **applies** | **is applied by** | Execution → `1` Definition; Definition → `0..*` Executions | Evaluation Execution | The Execution uses one identified assessment method; it does not alter that definition. |
+| `evaluation-execution-assesses-implementation` | Evaluation Execution → Implementation revision | **assesses** | **is assessed in** | Execution → `1` revision; revision → `0..*` Executions | Evaluation Execution | The Execution binds one realized state, inputs, evaluator, and environment; its observations do not automatically generalize to another state. |
+| `evaluation-execution-produces-result` | Evaluation Execution → Evaluation Result | **produces** | **is produced by** | `1` ↔ `1` | Evaluation Result identifies its Execution | The Result records that attempt's observations and assertion outcomes; it is not a governance decision. |
+| `evaluation-result-evidences-requirement` | Evaluation Result → Requirement | **provides evidence for** | **has evidence from** | `0..*` ↔ `0..*` | Evaluation evidence points outward to `requirement_id`; the Requirement has no volatile backlink | The evidence supports only the bounded claim established by the execution and oracle; it does not rewrite desired state. |
+
+### Control and learning
+
+| ID | Domain → range | Canonical reading | Derived inverse reading | Cardinality | Canonical record | Meaning and prohibited inference |
+| --- | --- | --- | --- | --- | --- | --- |
+| `signal-draws-attention-to` | Signal → Gen Stack authority or activity | **draws attention to** | **is implicated by** | Signal → `0..*` candidates; candidate → `0..*` Signals | Work item or Signal record | The relationship identifies a bounded area requiring Orientation when one is known; it does not establish the cause, desired state, or required change. |
+| `observation-informs-orientation` | Observation → Orientation | **informs** | **considers** | `0..*` ↔ `0..*` | Diagnosis or work item cites the Observation | Evidence contributes to interpretation but does not determine the conclusion by itself. |
+| `orientation-frames-decision` | Orientation → Decision | **frames** | **is framed by** | Orientation → `0..*` Decisions; Decision → `1` recorded Orientation | Decision or work item records its evidence-bound diagnosis | Orientation identifies plausible explanations and consequences; it does not supply authority to select one. |
+| `decision-selects-action` | Decision → Action | **selects** | **tests** | Decision → `0..*` Actions; Action → `1` Decision | Authorized work item, decision record, or equivalent governance authority | The Decision is a hypothesis tested through bounded Action; selection must remain within the applicable authority. |
+| `action-produces-observation` | Action → Observation | **produces** | **results from** | Action → `0..*` Observations; Observation → `0..1` initiating Action | Evaluation, operational, or work-item evidence | The Observation returns to the next Orientation and may support, contradict, or leave the hypothesis unknown; it is not automatic approval. |
+
+### Intent and Architecture views
+
+These relationships connect complementary views; they do not place every
+concept in one hierarchy.
+
+| ID | Domain → range | Canonical reading | Derived inverse reading | Cardinality | Canonical record | Meaning and prohibited inference |
+| --- | --- | --- | --- | --- | --- | --- |
+| `offering-depends-on-capability` | Offering → Capability | **depends on** | **supports** | `0..*` ↔ `0..*` | Link from the Offering | The offering requires the bearer's ability; an Offering is not itself a Capability. |
+| `use-case-exercises-capability` | Use Case → Capability | **exercises** | **is exercised by** | `0..*` ↔ `0..*` | Link from the Use Case | The subject invokes an ability while pursuing an actor goal; the Use Case is not the ability. |
+| `feature-enables-use-case` | Feature → Use Case | **enables** | **is enabled by** | `0..*` ↔ `0..*` | Link from the Feature | Recognizable behavior contributes to an actor goal; neither concept contains the other. |
+| `feature-contributes-to-capability` | Feature → Capability | **contributes to** | **is supported by** | `0..*` ↔ `0..*` | Link from the Feature | Recognizable behavior helps provide an ability; the Capability may require behavior that is not a Feature. |
+| `feature-is-available-through-surface` | Feature → Surface | **is available through** | **exposes** | `0..*` ↔ `0..*` | Link from the Feature | The Surface is an encounter point for behavior, not the Feature's structural container. |
+| `architecture-view-is-realized-by-c4-element` | Capability, Feature, or Surface → C4 element | **is realized by** | **realizes** | `0..*` ↔ `0..*` | Link from the Capability, Feature, or Surface | This maps architecture views; it does not make the concepts identical or add a C4 containment level. |
+| `bounded-context-models-subdomain` | Bounded Context → Subdomain | **models** | **is modeled by** | `0..*` ↔ `0..*` | Link from the Bounded Context | Model and problem-space boundaries may cross; folder ancestry does not prove a one-to-one mapping. |
+| `context-map-relates-context` | Context Map → Bounded Context | **relates** | **participates in** | Map → `1..*` Contexts; Context → `0..*` Maps | Context Map | The map owns its directional dependencies and translations; participation alone does not assert a dependency. |
+| `surface-contains-surface` | Surface → Surface | **contains** | **is contained by** | Parent → `0..*`; child → `0..1` parent | Narrower Surface path and its parent navigation | This is interaction hierarchy, not C4 containment or implementation ownership. |
+| `c4-system-contains-container` | C4 Software System → C4 Container | **contains** | **belongs to** | System → `0..*`; Container → `1` System | C4 Container identity and path | This is C4 runtime containment; it does not imply offering, capability, domain, team, or repository containment. |
+| `c4-container-contains-component` | C4 Container → C4 Component | **contains** | **belongs to** | Container → `0..*`; Component → `1` Container | C4 Component identity and path | This is C4 responsibility containment; a Component is not independently deployable merely because it is named. |
+| `c4-view-projects-element` | C4 View → C4 element | **projects** | **appears in** | View → `1..*`; element → `0..*` Views | C4 View | A projection selects canonical elements to answer a question; it does not create or own those elements. |
+
+The two natural-language uses of **realizes** have different identifiers and
+operate at different levels. `architecture-view-is-realized-by-c4-element`
+maps complementary Architecture views;
+`implementation-unit-realizes-authority` links current machine-consumed state
+to accepted meaning. Neither relationship transfers semantic authority to the
+realizing element.
+
+[^boyd-ooda]: [John R. Boyd's OODA model](https://www.coljohnboyd.com/documents/1995-06-28__Boyd_John_R__The_Essence_of_Winning_and_Losing__PPT-PDF.pdf)
+    supplies the Observe, Orient, Decide-as-hypothesis, Act-as-test, and feedback
+    semantics adapted here.
+[^process]: [Process](processes/process.md) owns the fuller definition
+    and its boundaries from work items, workflows, procedures, practices,
+    Capabilities, governing obligations, and OODA.

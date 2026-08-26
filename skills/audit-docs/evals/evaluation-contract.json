@@ -23,7 +23,7 @@
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic corpus-audit, single-document boundary, remediation-handoff, and routing cases.",
+    "case_source": "Synthetic corpus-audit, action-description discovery, single-document boundary, remediation-handoff, and routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",

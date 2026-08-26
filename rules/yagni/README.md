@@ -6,7 +6,7 @@ lifecycle while preserving current quality obligations and options that would
 be costly to recover.
 
 The injected rule stays deliberately concise and links to the fuller YAGNI
-principle in the software-engineering knowledge bundle. It is not standalone;
+principle in the Gen Stack knowledge bundle. It is not standalone;
 install the pack that provides both extensions:
 
 ```bash

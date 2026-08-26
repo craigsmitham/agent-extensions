@@ -149,8 +149,6 @@ expected=(
   knowledge/gen-stack
   knowledge/knowledge-management
   knowledge/product-management
-  knowledge/software-architecture
-  knowledge/software-engineering
   knowledge/strategy
   knowledge/workflow-automation
   packs/docs
@@ -158,24 +156,22 @@ expected=(
   packs/field-notes
   packs/gen-stack
   packs/qrspi
-  packs/software-architecture
-  packs/software-engineering
   rules/field-notes
   rules/tidy-first
   rules/use-effect-v4
   rules/yagni
   skills/audit-docs
-  skills/author-architecture-docs
   skills/author-docs
+  skills/author-gen-stack
   skills/author-okf
   skills/author-software-work-items
   skills/craft-effect-v4
   skills/field-notes
   skills/improve-whatever
   skills/question
-  skills/reconcile-architecture-docs
+  skills/reconcile-gen-stack
   skills/research
-  skills/setup-architecture-docs
+  skills/setup-gen-stack
   skills/temporal-dates
   subagents/researcher
 )

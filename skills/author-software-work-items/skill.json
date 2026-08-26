@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "author-software-work-items",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Create and revise evidence-rich software work items with explicit Requirement, architecture, and evaluation impact",
   "keywords": [
     "work-items",
@@ -11,6 +11,8 @@
     "bug-report",
     "defect-report",
     "feature-request",
+    "change-specification",
+    "bugfix-specification",
     "incident-record",
     "issue-title",
     "issue-summary",

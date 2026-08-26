@@ -4,21 +4,23 @@ Run each prompt in a fresh agent context with the skill and the Gen Stack
 pack's knowledge bundles. Do not provide the expected output or assertions to
 the test agent. `evals.json` is the machine-readable authority.
 
-The cases cover defect evidence and hypotheses, feature-request need versus
-solution, a changing incident record, a brief-only rewrite, refusal to turn
-unaccepted intake directly into implementation tasks, faithful preservation of
-supplied design and delivery context, absence of invented context, and linked
-cross-cutting design. It also covers faithful transfer of an accepted delivery
-item with exact code sketches, containment semantics, implementation surfaces,
-non-goals, verification conditions, testing strategy, and an unresolved design
-question. Provenance cases cover a delayed Sentry investigation-to-Linear
-handoff, individually traceable source occurrences, explicit unavailable
-evidence, a non-monitoring defect without irrelevant monitoring fields,
-persisted-item readback that lost a source link, and a research summary that
-must not replace the authoritative source pointer. Gen Stack cases cover a
-failed evaluation that intentionally repeats an authoritative Requirement, a
-feature request whose Requirement impact remains provisional, and an
-implementation-only delivery change whose existing evaluations must be rerun.
+The cases cover Defect Report evidence and hypotheses, source-request need
+versus solution, bounded proposed and authorized Change Specifications, a
+structural Architecture change, a quality-only change, a Bugfix Specification,
+an Architecture-document correction without a concrete system Bug, a changing
+Incident Record, a brief-only rewrite, and refusal to turn unbounded intake
+directly into a Specification or implementation tasks. They also cover faithful
+preservation of supplied design and delivery context, absence of invented
+context, and linked cross-cutting Design. Provenance cases cover a delayed
+Sentry investigation-to-Linear handoff, individually traceable source
+occurrences, explicit unavailable evidence, a non-monitoring defect without
+irrelevant monitoring fields, persisted-item readback that lost a source link,
+and a research summary that must not replace the authoritative source pointer.
+Gen Stack cases cover a failed Evaluation that intentionally repeats an
+authoritative Requirement, provisional Requirement impact at source intake, an
+implementation-only Change Specification whose existing Evaluations must be
+rerun, and routing between tracker work and canonical Gen Stack concept
+authoring.
 
 The suite passes when the selected artifact matches its lifecycle, facts and
 unknowns remain honest, supplied context is retained at its actual authority

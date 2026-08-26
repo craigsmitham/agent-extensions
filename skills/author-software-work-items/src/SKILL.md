@@ -1,6 +1,6 @@
 ---
 name: author-software-work-items
-description: Creates and revises software work items and tracker-ready issue content for feature requests, bug or defect reports, operational incidents, and work-item titles and summaries, including faithful technical context and explicit Requirement, architecture, and evaluation impact. Use when asked to write, file, draft, rewrite, or improve a software issue, ticket, bug report, feature or enhancement request, incident record, issue title, or issue summary. Not for independently designing or approving requirements, architecture, or implementation plans; faithfully transferring existing context is in scope. Not for backlog management, post-incident reviews, or implementation.
+description: Creates and revises software work items and tracker-ready issue content for bounded Change Specifications, Bugfix Specifications, Defect Reports, Operational Incident Records, and work-item titles and summaries, including faithful technical context and explicit Requirement, Architecture, and Evaluation impact. Use when asked to write, file, draft, rewrite, or improve a software issue, ticket, change or enhancement proposal, bug or defect report, corrective work item, incident record, issue title, or issue summary. Common tracker labels do not determine the artifact class. Not for independently designing or approving Requirements, Architecture, or implementation plans; faithfully transferring existing accepted or proposed context is in scope. Not for backlog management, post-incident reviews, or implementation.
 ---
 
 # Author software work items
@@ -10,9 +10,9 @@ stage, preserves its evidence, and remains legible in both an opened item and a
 tracker list.
 
 This skill is coupled to the Gen Stack pack. From the active AXM scope root,
-use the guides under `knowledge/software-engineering/src/work-items/` and the
+use the guides under `knowledge/gen-stack/src/work-items/` and the
 Gen Stack Requirement-impact guide at
-`knowledge/gen-stack/src/change-lifecycle/analyzing-requirement-impact.md`:
+`knowledge/gen-stack/src/control-loop/analyzing-requirement-impact.md`:
 
 | Job | Read | Add when the artifact boundary is uncertain |
 | --- | --- | --- |
@@ -20,8 +20,9 @@ Gen Stack Requirement-impact guide at
 | Existing technical design or delivery context | `preserving-design-and-delivery-context.md` | — |
 | Operational incident | `recording-operational-incidents.md` | `operational-incident-records.md` |
 | Suspected software defect | `recording-defect-reports.md` | `failures-defects-and-defect-reports.md` |
-| Requested new or changed functionality | `recording-feature-requests.md` | `feature-requests-requirements-and-delivery-work.md` |
-| Any material desired-state or evaluation impact | Gen Stack `analyzing-requirement-impact.md` | Software architecture `guides/documenting-requirements.md` only to interpret an existing accepted Requirement, never to author one |
+| Bounded proposed or authorized system or Architecture change | `writing-change-specifications.md` | `change-specifications-and-delivery-work.md` |
+| Authorized correction of an identified Bug | `writing-bugfix-specifications.md` | `bugs-and-bugfix-specifications.md` |
+| Any material desired-state or evaluation impact | Gen Stack `analyzing-requirement-impact.md` | Gen Stack `architecture/requirements/documenting-requirements.md` only to interpret an existing accepted Requirement, never to author one |
 
 Read `index.md` when selecting among types. Do not load every guide for a known
 type.
@@ -35,19 +36,28 @@ type.
   and lifecycles.
 - Use a **defect report** when observed behavior may violate an accepted
   expectation. Root-cause proof is not a prerequisite.
-- Use a **feature request** when someone seeks new or changed functionality. A
-  request preserves demand; it does not approve a requirement, solution, or
-  delivery commitment.
+- Use a **Bugfix Specification** only when investigation has identified a
+  concrete Bug and an authorized decision has selected corrective change. It
+  remains separate from every provenance-bearing Defect Report.
+- Use a **Change Specification** when a proposed or authorized change to the
+  System or its Architecture is bounded enough to state the affected context,
+  intended outcome, material exclusions, and current decision state. A
+  Specification may remain proposed; its container does not approve a
+  Requirement, Architecture change, Design, priority, or delivery commitment.
+- Treat an unbounded request, idea, or enhancement suggestion as a Signal or
+  source record rather than inventing a Change Specification. Preserve it
+  under the host's intake workflow when one exists, or name the Orientation or
+  decision needed before a bounded change work item can be written.
 - Use **brief-only revision** when the body and structured fields already own the
   facts and the caller only wants a clearer title and one- or two-sentence
   summary. Restating the brief must not change scope, priority, ownership,
   acceptance criteria, or status.
 
-If the artifact is an implementation task, accepted delivery item,
-investigation, post-incident review, architecture decision, or general project
-record, its governing workflow owns lifecycle, classification, placement, and
-host fields. Faithfully authoring or revising that artifact from supplied
-accepted context remains in scope; independently designing, approving, or
+If the artifact is an implementation task, source-intake record, accepted
+delivery item, investigation, post-incident review, architecture decision, or
+general project record, its governing workflow owns lifecycle, classification,
+placement, and host fields. Faithfully authoring or revising that artifact from
+supplied context remains in scope; independently designing, approving, or
 decomposing the work does not. Classification sets the item's primary meaning
 and minimum content, not a body ceiling.
 
@@ -84,10 +94,11 @@ and minimum content, not a body ceiling.
    to fit a shorter type template or invent what is absent; apply
    `preserving-design-and-delivery-context.md`.
 5. **Preserve type-specific meaning.** Apply the selected guide and local host
-   fields. Keep facts distinct from hypotheses, need distinct from proposed
-   solution, severity distinct from priority, and current mitigation distinct
-   from impact end, restoration, recovery, closure, and permanent correction.
-   Link related artifacts instead of merging their lifecycles.
+   fields. Keep facts distinct from hypotheses, source request distinct from
+   bounded change, proposal distinct from authorization, severity distinct
+   from priority, and current mitigation distinct from impact end,
+   restoration, recovery, closure, and permanent correction. Link related
+   artifacts instead of merging their lifecycles.
 6. **Analyze Requirement, architecture, and evidence impact.** Apply the Gen
    Stack Requirement-impact guide proportionately. Link applicable stable
    Requirement IDs and classify the relationship to desired state as possible

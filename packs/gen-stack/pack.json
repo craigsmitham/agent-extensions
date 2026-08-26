@@ -1,10 +1,13 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.1.0",
-  "description": "An opinionated generative software stack joining authoritative requirements, architecture, work items, implementation guidance, and independent evidence loops",
+  "version": "0.6.0",
+  "description": "A cohesive, opinionated generative software system joining OODA control, intent, canonical requirements, architecture, work items, implementation, and independent evidence loops",
   "keywords": [
     "generative-software",
+    "ooda",
+    "control-loop",
+    "signals",
     "requirements",
     "software-architecture",
     "software-engineering",
@@ -23,14 +26,12 @@
   "type": "pack",
   "name": "gen-stack",
   "dependencies": {
-    "@craigsmitham/knowledge/gen-stack": ">=0.1.0",
-    "@craigsmitham/knowledge/software-engineering": ">=1.1.0",
-    "@craigsmitham/knowledge/software-architecture": ">=4.1.0",
-    "@craigsmitham/skills/author-software-work-items": ">=1.0.0",
-    "@craigsmitham/skills/author-architecture-docs": ">=4.1.0",
-    "@craigsmitham/skills/setup-architecture-docs": ">=0.7.0",
-    "@craigsmitham/skills/reconcile-architecture-docs": ">=0.5.0",
-    "@craigsmitham/rules/yagni": ">=0.1.3",
-    "@craigsmitham/rules/tidy-first": ">=0.1.3"
+    "@craigsmitham/knowledge/gen-stack": ">=0.6.0",
+    "@craigsmitham/skills/author-software-work-items": ">=3.0.0",
+    "@craigsmitham/skills/author-gen-stack": ">=1.0.2",
+    "@craigsmitham/skills/setup-gen-stack": ">=1.0.2",
+    "@craigsmitham/skills/reconcile-gen-stack": ">=1.0.2",
+    "@craigsmitham/rules/yagni": ">=0.1.4",
+    "@craigsmitham/rules/tidy-first": ">=0.1.4"
   }
 }

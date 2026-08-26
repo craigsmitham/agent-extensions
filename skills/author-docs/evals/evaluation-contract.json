@@ -23,7 +23,7 @@
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic document-authoring, one-document review, corpus-audit boundary, and routing cases.",
+    "case_source": "Synthetic document-authoring, action-description routing, one-document review, corpus-audit boundary, and routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",

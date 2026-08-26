@@ -60,6 +60,12 @@ conformance and bundle coherence, not the host repository's documentation taxono
 
 - Let each description become more specific: bundle scope → section scope → concept distinction.
   Do not repeat one generic description at every level.
+- For an action-oriented concept such as a Guide, procedure, playbook, runbook, or Process, make
+  the description support selection before opening: pair the supported outcome with the observable
+  situation, event, symptom, or reader intent that makes it relevant. A Process preview names its
+  triggering condition and intended closing outcome. Keep access, knowledge, input, and state
+  preconditions distinct from both selection conditions and Process triggers; do not invent a new
+  metadata field for any of these concerns.
 - Treat `title` as a concept's canonical display name. Use it exactly as index link text and,
   normally, as the document-title heading; use a stable slug for the filename. Keep conventional
   headings such as `# Computation` when the spec assigns them meaning.
@@ -164,7 +170,7 @@ defining, applying, or validating a profile.
 |---|---|---|---|
 | `type` | **yes** | string | Kind of concept. Uncontrolled vocabulary — see [Type discipline](#type-discipline). |
 | `title` | rec | string | Canonical display name. Use exact wording in index links. Consumers may fall back to the filename. |
-| `description` | rec | string | One sentence distinguishing this concept from its neighbors. Reuse it in index entries and search snippets. |
+| `description` | rec | string | One sentence distinguishing this concept from its neighbors. For action concepts, include the selection condition and supported outcome; for Processes, include the trigger and closing outcome. Reuse it exactly in index entries and search snippets. |
 | `resource` | rec | URI/path | Canonical URI of the underlying asset. Omit for abstract concepts. |
 | `tags` | rec | list | Stable domain terms, aliases, and query vocabulary; do not merely repeat the title. |
 | `sources` | opt | list | Provenance. Each entry needs `resource`; `id`, `title`, `author`, `usage_count`, `last_modified` optional. |
