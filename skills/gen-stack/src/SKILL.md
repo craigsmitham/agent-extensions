@@ -1,6 +1,6 @@
 ---
 name: gen-stack
-description: Assists humans with bounded Gen Stack software change by orienting Signals and evidence; developing candidate Intent, Requirement lifecycle changes, Architecture, Evaluation Protocols, and Change Design; surfacing meaning gaps; drafting software work items; and recording explicitly accepted concepts in an established supported-profile `gen-stack/` corpus. Use for defects, incidents, Change or Bugfix Specifications, requirements, architecture, ADRs, capabilities, features, surfaces, DDD, C4, governance, evaluation protocols, brownfield extraction, and greenfield design. Use also to recognize unsupported initial corpus setup, adoption, connection, federation, or migration and stop without mutation. Not for autonomous acceptance, implementation, executable test authoring, evaluation execution, backlog management, post-incident review, or release authorization.
+description: Assists humans with bounded Gen Stack system explanation and software change by creating reader-oriented current-state briefs; orienting Signals and evidence; developing candidate Intent, Requirement lifecycle changes, Architecture, Evaluation Protocols, and Change Design; surfacing meaning gaps; drafting software work items; and recording explicitly accepted concepts in an established supported-profile `gen-stack/` corpus. Use for “brief me on” requests, defects, incidents, Change or Bugfix Specifications, requirements, architecture, ADRs, capabilities, features, surfaces, DDD, C4, governance, evaluation protocols, brownfield extraction, and greenfield design. Use also to recognize unsupported initial corpus setup, adoption, connection, federation, or migration and stop without mutation. Not for autonomous acceptance, implementation, executable test authoring, evaluation execution, backlog management, post-incident review, or release authorization.
 ---
 
 # Gen Stack
@@ -106,6 +106,27 @@ must not turn into an adoption plan or change.
 ## Route the work
 
 Choose one primary branch from the requested outcome, not from a familiar noun.
+
+### Gen Stack brief
+
+Use when someone asks to be briefed on, oriented to, or given a current-state
+explanation of a bounded part of a system that has adopted Gen Stack. Read
+`knowledge/gen-stack/src/control-loop/creating-gen-stack-briefs.md`. Inspect the
+exact `gen-stack/index.md` adoption location when the brief depends on corpus or
+profile claims, but remain read-only even when coverage, nonconformance,
+missing meaning, or incoherence is found.
+
+Answer the reader's question through only the relevant Intent, Architecture,
+Requirement, Implementation, Evaluation, operation, governance, and Provenance
+lenses. Keep OKF and profile conformance, documentation coverage and fitness,
+semantic coherence, implementation realization, Evaluation coverage, evidence
+state, bounded outcomes, and operational fitness distinct. Link claims to their
+sources, preserve inference and unknowns, and end with proportionate options
+and a labeled recommendation when supported. Do not turn the brief into a new
+governed concept, a corpus-wide audit, an accepted decision, or remedial
+mutation. If the brief exposes a material disagreement that requires diagnosis,
+route the next action to the cross-stack incoherence Guide without silently
+performing it.
 
 ### Software work item
 

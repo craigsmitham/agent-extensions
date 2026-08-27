@@ -1,6 +1,6 @@
 {
   "skill_name": "gen-stack",
-  "suite_version": "1.8.0",
+  "suite_version": "1.9.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -1663,6 +1663,37 @@
         "The companion page does not transcribe the complete process flow or create a competing template.",
         "Governing obligations are linked to their authority rather than asserted by the documentation container.",
         "The unresolved automation limit remains explicit and no implementation or approval is invented."
+      ]
+    },
+    {
+      "id": 125,
+      "stage": "routing",
+      "prompt": "Brief me on the checkout retry path in our Gen Stack-adopted service. I want the current state from the relevant architecture, requirements, implementation, evaluation, and operational lenses, including inconsistencies and sensible next options.",
+      "expected_selection": "gen-stack",
+      "catalog_neighbors": [
+        "audit-docs",
+        "author-docs",
+        "researcher"
+      ],
+      "assertions": [
+        "The selected skill is gen-stack because the requested outcome is a bounded cross-stack current-state brief.",
+        "The request is not routed as a corpus-wide documentation audit, generic documentation authoring, or unconstrained research.",
+        "Routing uses only catalog names and descriptions.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 126,
+      "stage": "execution",
+      "prompt": "Brief me on reservation recovery in our Gen Stack-adopted system. Accepted Requirement RES-REQ-0012 says capacity must be restored after an interrupted reservation unless confirmation committed. Architecture assigns serialization to Reservation Authority. Current code uses that owner, but the only test checks successful retry and no governed Evaluation Protocol covers interruption. An incident note says one stale reservation held capacity for 18 minutes; its exact build is unavailable. Explain the current state, assess Gen Stack conformity and health, identify any possible incoherence, and give me options. Do not change files or make the repair decision.",
+      "expected_output": "A concise, source-aware Gen Stack brief that explains reservation recovery through only the relevant lenses, separates corpus conformance from documentation, realization, Evaluation, and operational health, preserves unavailable evidence and neutral diagnosis, and presents proportionate next options without mutation.",
+      "assertions": [
+        "The response binds a bounded reservation-recovery question and distinguishes accepted Requirement and Architecture authority, current Implementation evidence, the limited test, and the incident observation.",
+        "OKF or profile conformance, documentation coverage, semantic coherence, implementation realization, Evaluation coverage, evidence state and outcomes, and operational fitness are not collapsed into one compliance or health verdict.",
+        "The missing governed Protocol is reported as an Evaluation coverage gap rather than a failed behavior, and the unavailable incident build preserves uncertainty rather than becoming proof of the responsible layer.",
+        "Possible incoherence is stated neutrally without presuming that the Requirement, Architecture, Implementation, test, or operation is wrong.",
+        "The options distinguish gathering discriminating evidence, defining or accepting an Evaluation Protocol through its authority, investigating the incident, and repairing only after a supported decision.",
+        "No governed brief artifact, corpus mutation, implementation change, Evaluation execution, accepted decision, or release conclusion is invented."
       ]
     }
   ]

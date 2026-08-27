@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Assisting humans with bounded Gen Stack change development, Requirement additions, revisions, retirements, replacements, splits, and merges, greenfield and brownfield candidate extraction, governed Evaluation Protocol authoring, evidence-rich software work items, material meaning-gap disposition, native-first artifact presentation, and explicitly accepted concepts in an established supported-profile corpus while preserving human ratification and peer authorities.",
+    "intended_use": "Briefing humans on the bounded current state of Gen Stack-adopted systems; assisting with Gen Stack change development, Requirement additions, revisions, retirements, replacements, splits, and merges, greenfield and brownfield candidate extraction, governed Evaluation Protocol authoring, evidence-rich software work items, material meaning-gap disposition, native-first artifact presentation, and explicitly accepted concepts in an established supported-profile corpus while preserving human ratification and peer authorities.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic Gen Stack orientation, decision support, Requirement impact and change operations, identity and lifecycle, replacement lineage, non-transfer of evidence, partial acceptance, greenfield and brownfield candidate development, Surface and C4 structure extraction, Requirement inference and placement, material gap disposition, fixed repository gen-stack/ discovery, established-corpus authoring, governed Evaluation Protocol authoring, work-item authoring, native-format and exact-field mapping, fallback representation, transient Change Design, derived projections, repository-native Evaluation execution and Process artifacts, authority-precedence, provenance, metadata projection, relationship and lifecycle maintenance, persisted readback, partial batch failure, unsupported setup and migration, human-ratification, and routing-collision cases.",
+    "case_source": "Synthetic Gen Stack current-state briefs, orientation, decision support, Requirement impact and change operations, identity and lifecycle, replacement lineage, non-transfer of evidence, partial acceptance, greenfield and brownfield candidate development, Surface and C4 structure extraction, Requirement inference and placement, material gap disposition, fixed repository gen-stack/ discovery, established-corpus authoring, governed Evaluation Protocol authoring, work-item authoring, native-format and exact-field mapping, fallback representation, transient Change Design, derived projections, repository-native Evaluation execution and Process artifacts, authority-precedence, provenance, metadata projection, relationship and lifecycle maintenance, persisted readback, partial batch failure, unsupported setup and migration, human-ratification, and routing-collision cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -93,6 +93,7 @@
       "Requirement authority remains distinct from evaluation witnesses",
       "Evaluation Protocol role and target authority remain explicit",
       "Protocol Coverage, evidence state, and bounded outcome remain distinct",
+      "Gen Stack briefs keep conformance and health dimensions distinct",
       "Work-item provenance remains traceable",
       "Work-item metadata remains a projection rather than authority",
       "Work-item identities and relationships remain independently recoverable",
@@ -141,6 +142,11 @@
     "threshold": "All critical gates pass and every material assertion passes for the claimed scope.",
     "minimum_pass_rate": 1,
     "critical_assertions": [
+      {
+        "gate": "Gen Stack briefs keep conformance and health dimensions distinct",
+        "case_id": 126,
+        "assertion": "OKF or profile conformance, documentation coverage, semantic coherence, implementation realization, Evaluation coverage, evidence state and outcomes, and operational fitness are not collapsed into one compliance or health verdict."
+      },
       {
         "gate": "Requirement impact and Requirement-change specification remain distinct",
         "case_id": 108,

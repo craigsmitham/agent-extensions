@@ -11,9 +11,11 @@ sources:
     title: Gen Stack application profile for OKF v0.2
   - resource: /architecture/developing-candidate-architecture-and-requirements.md
     title: Developing candidate Architecture and Requirements
+  - resource: /evaluations/deriving-evaluation-coverage-in-harnesses.md
+    title: Deriving evaluation coverage in harnesses
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T22:30:00Z
+  at: 2026-08-26T23:50:45Z
 ---
 
 # Adopting Gen Stack
@@ -204,6 +206,17 @@ For each admitted Protocol, establish:
 - where Executions, Results, and Reports remain authoritative;
 - how provenance, `unknown`, failures, and harness errors are preserved; and
 - stewardship, refresh, and retirement triggers.
+
+When repository tooling can make the assessment repeatable, prefer
+harness-assisted coverage derivation. Follow [Deriving evaluation coverage in
+harnesses](/evaluations/deriving-evaluation-coverage-in-harnesses.md) so the
+harness consumes the policy-neutral `evaluation-candidates` projection, binds
+it to the exact corpus snapshot and profile version, applies an identified
+repository-local coverage or assurance policy, and classifies each selected
+role-and-target pair as `defined` or `uncovered`. The projection supplies
+eligibility only: the adopting authority still decides what is in scope and
+whether coverage is required. Protocol adequacy, evidence state, outcomes,
+assurance, and release readiness remain separate judgments.
 
 Do not copy run evidence into the governed corpus, fabricate Protocol coverage,
 or turn an absent Result into a pass. A conforming corpus can have sparse or no

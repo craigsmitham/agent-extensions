@@ -80,6 +80,13 @@ repository-native authorities. The cases preserve separate Requirement
 satisfaction, Architecture realization, and Implementation conformance claims
 without reintroducing a System Evaluation Approach.
 
+Suite 1.9.0 adds cases 125–126 for the memorable “brief me on” route and its
+reader-oriented execution. They require a bounded current-state explanation,
+relevant-lens selection, source and inference boundaries, separate conformance
+and health dimensions, neutral treatment of possible incoherence, and
+proportionate next options without creating a governed brief artifact or
+assuming decision or mutation authority.
+
 The suite passes only when the unified routing surface retains both authoring
 capabilities, unsupported adoption work stops cleanly, material desired-state
 and Architecture choices remain human-governed, material cross-stack gaps have

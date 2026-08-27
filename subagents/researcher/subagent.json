@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "subagent",
   "name": "researcher",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Performs isolated, read-only Research Brief framing and evidence-backed research for QRSPI",
   "keywords": [
     "research",

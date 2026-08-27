@@ -2,7 +2,7 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "gen-stack",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "type": "knowledge",
   "format": {
     "name": "okf",
@@ -12,6 +12,8 @@
   "description": "A cohesive, opinionated software-change system spanning OODA control, intent, canonical Requirement lifecycle and change, architecture, work items, implementation, evaluations, and operational learning",
   "keywords": [
     "generative-stack",
+    "gen-stack-brief",
+    "current-state-explanation",
     "ooda",
     "control-loop",
     "signals",
@@ -66,5 +68,10 @@
     "type": "git",
     "url": "https://github.com/craigsmitham/agent-extensions",
     "directory": "knowledge/gen-stack"
+  },
+  "publish": {
+    "ignore": [
+      "*__pycache__*"
+    ]
   }
 }

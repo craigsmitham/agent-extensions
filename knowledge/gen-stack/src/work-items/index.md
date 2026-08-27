@@ -22,10 +22,11 @@ become the Process merely because a tracker supplies states or automation.
 | A proposed or authorized System or Architecture change has a recognizable boundary | [Change Specification](change-specifications-and-delivery-work.md) · [writing guide](writing-change-specifications.md) | Acceptance of its Requirements, Architecture, Design, priority, or delivery |
 | Only the displayed title and short summary need restating | [Work-item brief](work-item-titles-and-summaries.md) · [titling guide](titling-and-summarizing-work-items.md) | Authority to refine the body or metadata |
 
-Keep an unbounded request as a Signal or source record. Use an investigation
-when only uncertainty reduction is authorized. Use the host's ordinary task or
-delivery item when the change is already governed and only execution tracking
-remains.
+Keep an unbounded request as a Signal or source record. Use [Investigating
+possible defects](investigating-possible-defects.md) when only uncertainty
+reduction is authorized or a possible Defect needs discriminating evidence.
+Use the host's ordinary task or delivery item when the change is already
+governed and only execution tracking remains.
 
 ## Apply the common concerns
 
@@ -95,6 +96,8 @@ the delta guide.
 
 - [Failures, defects, and defect reports](failures-defects-and-defect-reports.md) - How observations and anomalies become classified defect reports; how failures, defects, incidents, corrections, verification, and closure differ; and why tracker labels do not prove diagnosis.
 - [Recording defect reports](recording-defect-reports.md) - Use when an observation may violate an accepted expectation and needs a safe, traceable record; preserve the discrepancy and evidence at intake, then maintain decisions and verification without inventing diagnosis or priority.
+- [Triaging defect reports](triaging-defect-reports.md) - Use when one or more Defect Reports need an evidence-backed disposition and next route; preserve occurrences and uncertainty while relating, consolidating, splitting, escalating, or routing cases without inventing diagnosis, priority, or corrective authority.
+- [Investigating possible defects](investigating-possible-defects.md) - Use when a prompt, alert, feedback record, Defect Report, Evaluation Result, or possible cross-stack incoherence may indicate a Defect; gather discriminating evidence, establish the narrowest supported disposition, and route or synchronize resulting work without presuming a Bug or corrective authority.
 - [Bugs and bugfix specifications](bugs-and-bugfix-specifications.md) - How investigation can identify a concrete Bug from one or more Defect reports, why the reports remain separate provenance, and how a Bugfix Specification drives an authorized corrective change.
 - [Writing bugfix specifications](writing-bugfix-specifications.md) - Use when investigation has identified a Bug and an authorized corrective change needs a separate delivery-driving Specification; link its Defect reports, bound the correction, develop the Change Design, and define verification without losing Provenance.
 

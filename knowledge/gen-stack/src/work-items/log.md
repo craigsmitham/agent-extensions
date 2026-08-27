@@ -2,6 +2,17 @@
 
 ## 2026-08-26
 
+- **Possible-defect investigation**: Added [Investigating possible
+  defects](investigating-possible-defects.md), a source-neutral Guide that
+  turns prompts, alerts, feedback, Defect Reports, Evaluation Results, and
+  cross-stack Signals into bounded evidence gathering, honest dispositions,
+  authorized routes, and verified source-system synchronization without
+  presuming a Bug or corrective authority.
+- **Defect-report triage**: Added [Triaging defect
+  reports](triaging-defect-reports.md) to produce evidence-backed dispositions
+  and next routes across duplicates, overlaps, splits, escalations, unresolved
+  expectations, and batch handling without turning triage into diagnosis,
+  priority, or corrective authority.
 - **Common Requirement-change guidance**: Added [Specifying Requirement
   changes](specifying-requirement-changes.md) for additions, revisions,
   retirements, replacements, splits, and merges. Change and Bugfix

@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Capture operational occurrences and turn recurring patterns into evidence-prioritized findings and verified improvements",
   "keywords": [
     "field-notes",

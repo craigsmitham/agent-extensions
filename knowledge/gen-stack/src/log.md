@@ -2,6 +2,31 @@
 
 ## 2026-08-26
 
+- **Gen Stack 0.18.0, skill 1.9.0, and pack 2.10.0 — Gen Stack briefs**:
+  Added [Creating a Gen Stack
+  brief](control-loop/creating-gen-stack-briefs.md), a reader-oriented Guide
+  for explaining the bounded current state of a Gen Stack-adopted system
+  through relevant stack lenses, assessing conformance, coverage, coherence,
+  realization, evidence, and fitness without collapsing them, and offering
+  proportionate next options without assuming decision or mutation authority.
+  Added the memorable “brief me on” skill route and versioned routing and
+  execution cases while retaining the read-only boundary.
+- **Harness-assisted adoption coverage**: Updated [Adopting Gen
+  Stack](adopting-gen-stack.md) to prefer harness-assisted Protocol Coverage
+  derivation when repository tooling improves repeatability, while keeping
+  scope selection with the adopting authority and separating coverage from
+  Protocol adequacy, evidence, outcomes, assurance, and release readiness.
+- **Possible-defect investigation**: Added [Investigating possible
+  defects](work-items/investigating-possible-defects.md), a source-neutral
+  Guide for gathering discriminating evidence, identifying the narrowest
+  supported disposition, routing resulting work to its proper authority, and
+  synchronizing source records while keeping investigation completion,
+  report closure, correction, and verification independent.
+- **Defect-report triage**: Added [Triaging defect
+  reports](work-items/triaging-defect-reports.md), an evidence-bound Guide for
+  relating, consolidating, splitting, escalating, and routing one or more
+  Defect Reports while preserving occurrences, uncertainty, decision
+  authority, and item-local batch outcomes.
 - **Cross-stack incoherence diagnosis**: Added [Diagnosing and reconciling
   cross-stack
   incoherence](control-loop/diagnosing-and-reconciling-cross-stack-incoherence.md),
