@@ -25,13 +25,26 @@
     "author-okf": "workspace",
     "craft-effect-v4": "workspace",
     "audit-docs": "workspace",
-    "question": "workspace",
+    "question": {
+      "source": "workspace",
+      "enabled": false
+    },
     "research": "workspace",
     "axm": {
       "source": "workspace",
       "origin": "bundled"
     },
-    "gen-stack": "workspace"
+    "gen-stack": "workspace",
+    "investigate": "workspace",
+    "spec": "workspace",
+    "design": "workspace",
+    "plan": "workspace",
+    "implement": "workspace",
+    "review": "workspace",
+    "ship": "workspace",
+    "shape": "workspace",
+    "quick-change": "workspace",
+    "sync-change": "workspace"
   },
   "rules": {
     "field-notes": "workspace",
@@ -48,14 +61,18 @@
     "gen-stack": "workspace"
   },
   "subagents": {
-    "researcher": "workspace"
+    "researcher": "workspace",
+    "reviewer": "workspace"
   },
   "packs": {
     "effect-v4": "workspace",
     "docs": "workspace",
     "field-notes": "workspace",
     "agent-engineering": "agentxm:@agentxm/packs/agent-engineering",
-    "qrspi": "workspace",
+    "qrspi": {
+      "source": "workspace",
+      "enabled": false
+    },
     "gen-stack": "workspace"
   },
   "owner": "@craigsmitham"

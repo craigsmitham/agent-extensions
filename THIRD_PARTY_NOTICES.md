@@ -67,3 +67,9 @@ control semantics from John R. Boyd's
 [The Essence of Winning and Losing](https://www.coljohnboyd.com/documents/1995-06-28__Boyd_John_R__The_Essence_of_Winning_and_Losing__PPT-PDF.pdf).
 They apply OODA as an original software-change control model and do not vendor
 Boyd's briefing or diagram.
+
+The Gen Stack Shape guidance and skill are conceptually influenced by Ryan
+Singer and Basecamp's public [Shape Up](https://basecamp.com/shapeup/)
+guidance, including appetite, boundaries, risks, pitches, and breadboarding.
+They adapt those ideas into an original Gen Stack change-intent and repository-
+impact workflow; they do not vendor Shape Up prose, diagrams, or templates.

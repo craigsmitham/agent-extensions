@@ -3,8 +3,11 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "question",
-  "version": "0.1.3",
-  "description": "Frames fast, concern-aware investigations as compact Research Briefs with prioritized questions",
+  "version": "1.0.0",
+  "publish": {
+    "ignore": []
+  },
+  "description": "Deprecated compatibility entry that forwards legacy Question invocations to Research framing",
   "keywords": [
     "research",
     "questions",
@@ -15,7 +18,7 @@
     "blind-review"
   ],
   "recommendedPacks": [
-    "@craigsmitham/packs/qrspi"
+    "@craigsmitham/packs/gen-stack"
   ],
   "repository": {
     "type": "git",
@@ -23,5 +26,6 @@
     "directory": "skills/question"
   },
   "homepage": "https://github.com/craigsmitham/agent-extensions",
-  "license": "MIT"
+  "license": "MIT",
+  "standalone": false
 }

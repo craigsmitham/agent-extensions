@@ -10,6 +10,25 @@
   [Licensing public extensions](docs/licensing.md) and preserve published and
   third-party obligations explicitly.
 
+## Extension authoring versus adoption
+
+This repository authors and distributes extension frameworks. The presence of
+a skill, subagent, pack, rule, hook, or knowledge bundle here does not mean the
+repository adopts that extension's operating model.
+
+Treat an extension being discussed or changed as the subject of authoring,
+maintenance, evaluation, or audit, not as an invoked workflow. Use the
+artifact-appropriate authoring and evaluation guidance. In particular,
+authoring Gen Stack extensions does not place this repository or its changes
+under the Gen Stack process; do not require a Change, Change Specification,
+Change Design, or other Gen Stack stage artifact merely because work concerns
+Gen Stack sources.
+
+Apply an extension's operating model to repository work only when the user
+explicitly asks to execute that workflow or repository instructions separately
+declare its adoption. Its sources may still be consulted as subject-matter
+authority when maintaining the extension.
+
 ## Agent Skill evaluation artifacts
 
 For every workspace-authored Agent Skill, keep the versioned evaluation
@@ -50,7 +69,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [docs](knowledge/docs/src/index.md) | Portable documentation craft for authoring, naming, information architecture, auditing, and improving explainers, guides, principles, and evidence-backed patterns |
 | [effect-v4](knowledge/effect-v4/src/index.md) | Opinionated Effect v4 guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification |
 | [field-notes](knowledge/field-notes/src/index.md) | Operational field-note practice for factual and diagnostic evidence capture, impact-aware triage, evidence-led findings, and verified corrective action |
-| [gen-stack](knowledge/gen-stack/src/index.md) | A cohesive, opinionated software-change system spanning OODA control, intent, canonical Requirement lifecycle and change, architecture, work items, implementation, evaluations, and operational learning |
+| [gen-stack](knowledge/gen-stack/src/index.md) | A cohesive, opinionated software-change system spanning shaping, OODA control, intent, canonical Requirement lifecycle and change, architecture, work items, implementation, evaluations, and operational learning |
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-management](knowledge/product-management/src/index.md) | Product management principles for outcomes, product risks, empowered teams, discovery, delivery, evidence, and product strategy |
 | [strategy](knowledge/strategy/src/index.md) | Strategy as coherent choices about participation and advantage, supported by capabilities, value creation, and evidence |

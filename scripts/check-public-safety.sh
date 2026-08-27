@@ -162,13 +162,24 @@ expected=(
   skills/author-docs
   skills/author-okf
   skills/craft-effect-v4
+  skills/design
   skills/field-notes
   skills/gen-stack
+  skills/implement
   skills/improve-whatever
+  skills/investigate
+  skills/plan
   skills/question
+  skills/quick-change
   skills/research
+  skills/review
+  skills/shape
+  skills/ship
+  skills/spec
+  skills/sync-change
   skills/temporal-dates
   subagents/researcher
+  subagents/reviewer
 )
 
 expected_list="$(printf '%s\n' "${expected[@]}")"

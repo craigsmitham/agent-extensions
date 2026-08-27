@@ -1,7 +1,7 @@
 {
   "contract_version": "3.0.0",
   "owner": "@craigsmitham",
-  "decision": "Detect routing, authority, boundary, execution, and evidence failures in question before release; this suite does not approve the skill.",
+  "decision": "Detect deprecated-compatibility routing, Research handoff, fresh-context, read-only, and no-duplicate-framing failures in question before release; this suite does not approve the skill.",
   "target_binding": {
     "skill_name": "question",
     "required_result_fields": [
@@ -18,12 +18,12 @@
     ]
   },
   "scope": {
-    "intended_use": "Framing compact concern-aware Research Briefs with prioritized evidence-seeking questions and honest independence labels.",
+    "intended_use": "Forwarding only explicit legacy Question invocations to the Research framing-only workflow while keeping Question absent from normal routing.",
     "stages": [
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic ordinary, hypothesis-neutral, isolation, boundary, and routing cases.",
+    "case_source": "Synthetic explicit compatibility, unavailable dependency, ordinary framing, and explicit-routing cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -44,9 +44,12 @@
       "started_at",
       "ended_at"
     ],
-    "routing_boundary": "Expose only catalog names and descriptions until a single selection or required ordered composition is recorded.",
-    "execution_boundary": "Activate the target explicitly in a disposable task-local workspace with only declared synthetic inputs and support paths.",
-    "support_paths": []
+    "routing_boundary": "Expose only catalog names and descriptions until a selection or abstention is recorded; a disabled deprecated Question skill is absent from normal catalogs.",
+    "execution_boundary": "Activate the compatibility target explicitly with Research and Researcher support paths, read-only authority, and no external mutation.",
+    "support_paths": [
+      "skills/research/src",
+      "subagents/researcher/src"
+    ]
   },
   "evidence": {
     "required_per_trial": [
@@ -67,12 +70,12 @@
     "storage": "Keep contracts, cases, fixtures, graders, and harness inputs under evals; write routine generated runs only to the ignored or external workspace."
   },
   "grading": {
-    "instrument": "Deterministic routing and forbidden-effect checks plus assertion-based review of workflow quality and authority boundaries.",
-    "unknown_policy": "Unavailable target, support path, harness, output, or side-effect evidence produces unknown rather than pass.",
+    "instrument": "Deterministic routing and forbidden-effect checks plus assertion-based review of compatibility handoff.",
+    "unknown_policy": "Unavailable target, support path, fresh delegation, harness, output, or side-effect evidence produces unknown rather than pass.",
     "critical_gates": [
-      "No undeclared external mutation",
-      "No invented authority, evidence, or approval",
-      "Routing and execution claims remain distinct"
+      "No independent duplicate framing",
+      "No same-context blind fallback",
+      "Deprecated route absent from normal selection"
     ],
     "calibration": "Check one known pass, one known failure, and one unknown before relying on a model grader."
   },
@@ -101,26 +104,26 @@
       "false_positives",
       "collisions",
       "composition_order",
-      "clarify_or_abstain"
+      "clarify_or-abstain"
     ],
     "aggregation_rule": "Keep routing, execution, critical gates, unknowns, and harness failures visible before aggregation.",
     "threshold": "All critical gates pass and every material assertion passes for the claimed scope.",
     "minimum_pass_rate": 1,
     "critical_assertions": [
       {
-        "gate": "No undeclared external mutation",
+        "gate": "No independent duplicate framing",
+        "case_id": 1,
+        "assertion": "The compatibility skill uses the Research framing contract rather than reproducing a second Question method."
+      },
+      {
+        "gate": "No same-context blind fallback",
         "case_id": 2,
-        "assertion": "Removed originating material is never listed or summarized in the released output."
+        "assertion": "No same-context blind framing or fabricated Research Brief is produced."
       },
       {
-        "gate": "No invented authority, evidence, or approval",
+        "gate": "Deprecated route absent from normal selection",
         "case_id": 3,
-        "assertion": "The questions test both retention and student outcomes without embedding a conclusion."
-      },
-      {
-        "gate": "Routing and execution claims remain distinct",
-        "case_id": 6,
-        "assertion": "No task side effect occurs before selection."
+        "assertion": "Question is not selected for a normal framing request and no task side effect occurs before selection."
       }
     ]
   },
@@ -136,7 +139,7 @@
   "freshness": {
     "expires_after_days": 180,
     "refresh_triggers": [
-      "Skill, description, resource, or package-boundary changes",
+      "Compatibility skill, Research framing, researcher, or package-boundary changes",
       "Case, grader, harness, support-path, or evidence-lifecycle changes",
       "Host, model, catalog, authority, or intended-cohort changes",
       "Confirmed routing or execution failure"

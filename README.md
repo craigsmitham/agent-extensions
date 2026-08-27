@@ -29,19 +29,22 @@ Install the replacement `@agentxm` identities; the previously published
 | `effect-v4` | Effect v4 guidance: a routing skill plus a knowledge bundle of twenty-two guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification | `axm install @craigsmitham/packs/effect-v4` |
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
-| `gen-stack` | Opinionated generative software guidance joining authoritative requirements, architecture, work items, implementation constraints, and independent evidence loops | `axm install @craigsmitham/packs/gen-stack` |
-| `qrspi` | Frame concern-aware Research Briefs when needed and execute them through a read-only researcher subagent | `axm install @craigsmitham/packs/qrspi` |
+| `gen-stack` | A Change-centered realization process spanning Shape, Research, Investigation, Change Specification and Design, Planning, Implementation with focused review feedback, fresh integrated Review, Shipping, and corpus learning | `axm install @craigsmitham/packs/gen-stack` |
 
 The former `software-architecture` and `software-engineering` packs are
 superseded by `gen-stack`. Their final published versions remain available for
 reproducibility but should not be used for new adoption.
+
+The former `qrspi` pack and standalone `question` skill are also superseded by
+`gen-stack`. Research now owns both concern-aware Research Brief framing and
+read-only evidence gathering through the Researcher subagent.
 
 ## Standalone knowledge
 
 | Bundle | Purpose | Install |
 | --- | --- | --- |
 | `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
-| `gen-stack` | Cohesive Intent, Requirements, Architecture, work-item, Implementation, Evaluation, OODA, and regenerative-software guidance | `axm install @craigsmitham/knowledge/gen-stack` |
+| `gen-stack` | Cohesive Shape, Intent, Requirements, Architecture, work-item, Implementation, Evaluation, OODA, and regenerative-software guidance | `axm install @craigsmitham/knowledge/gen-stack` |
 | `product-management` | Product outcomes, risks, empowered teams, discovery, delivery, evidence, and product strategy | `axm install @craigsmitham/knowledge/product-management` |
 | `strategy` | Coherent choices about participation, advantage, capabilities, evidence, and value creation | `axm install @craigsmitham/knowledge/strategy` |
 | `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |
@@ -53,7 +56,6 @@ reproducibility but should not be used for new adoption.
 | `temporal-dates` | JavaScript Temporal type selection, API usage, interoperability, and pitfalls | `axm install @craigsmitham/skills/temporal-dates` |
 | `author-okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/author-okf` |
 | `improve-whatever` | Evidence-based evaluation through the lens of Philippians 4:8–9 | `axm install @craigsmitham/skills/improve-whatever` |
-| `question` | Frame fast, concern-aware investigations as compact, prioritized Research Briefs | `axm install @craigsmitham/skills/question` |
 
 ## Layout
 
