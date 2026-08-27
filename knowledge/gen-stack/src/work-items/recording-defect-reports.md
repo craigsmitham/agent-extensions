@@ -39,8 +39,8 @@ sources:
     resource: https://arxiv.org/abs/2607.07593
     title: Khatib et al. — What Makes a Good Bug Report for an AI Agent?
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-27T03:09:27Z
+  by: codex/gpt-5
+  at: 2026-08-27T14:18:00Z
 ---
 
 # Recording defect reports
@@ -111,8 +111,9 @@ Ask what needs to be preserved:
   change is being proposed, write a [Change
   Specification](writing-change-specifications.md). Retain an unbounded
   request as a Signal or source record.
-- If only uncertainty reduction has been authorized, continue Orientation or
-  conduct bounded investigation activity within the current Defect Report.
+- If only uncertainty reduction has been authorized, apply [Investigating
+  possible defects](investigating-possible-defects.md) within the current
+  Defect Report or other least-durable adequate surface.
 - If a security vulnerability may be present, follow the organization's
   private vulnerability-disclosure process instead of publishing exploit
   details in an ordinary issue.[^github-private-vulnerability]

@@ -24,8 +24,8 @@ sources:
     resource: https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/managing-issue-types-in-an-organization
     title: GitHub Docs — Managing issue types in an organization
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-27T03:09:27Z
+  by: codex/gpt-5
+  at: 2026-08-27T14:18:00Z
 ---
 
 # Failures, defects, and defect reports
@@ -227,8 +227,9 @@ Use or link another artifact when:
   is being proposed — create a [Change
   Specification](change-specifications.md); retain an
   unbounded request as a Signal or source record;
-- only uncertainty reduction has been authorized — continue Orientation or
-  conduct bounded investigation activity within the current case;
+- only uncertainty reduction has been authorized — apply [Investigating
+  possible defects](investigating-possible-defects.md) within the current case
+  or other least-durable adequate surface;
 - investigation has identified a Bug and an accepted correction needs design,
   delivery, and verification context — create a separate
   [Bugfix Specification](bugs-and-bugfix-specifications.md), link its Defect

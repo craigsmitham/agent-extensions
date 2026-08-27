@@ -1,5 +1,27 @@
 # Gen Stack Update Log
 
+## 2026-08-27
+
+- **Interface-native Surface identity guidance**: Revised Surface development
+  and authoring so an adopting System can establish and consistently apply an
+  interface-native identity policy, such as one Surface per public CLI command
+  path, without turning that example into a universal rule. Distinguished
+  actor-visible commands, namespaces, routes, operations, and protocol methods
+  from aliases, flags, modes, handlers, tests, and source-tree groupings;
+  clarified parent, child, and Feature Requirement placement; and added
+  native-interface inventory reconciliation without transferring desired-state
+  authority to current implementation.
+
+- **Gen Stack 0.19.1 — defect triage and investigation boundaries**: Factored
+  defect handling so recording owns intake, triage owns report identity,
+  classification, current applicability, lifecycle disposition, impact, and
+  routing from available evidence, and investigation owns gathering and
+  interpreting new diagnostic evidence, including selective reproduction.
+  Added report age, evidence currency, later changes, and recurrence to triage
+  without using age as a proxy for validity, impact, priority, or closure.
+  Replaced repeated investigation procedure in triage with a bounded-question
+  handoff and reduced the two Guides from 5,069 to 2,985 words.
+
 ## 2026-08-26
 
 - **Purpose-relative work-item completion**: Centralized handoff,

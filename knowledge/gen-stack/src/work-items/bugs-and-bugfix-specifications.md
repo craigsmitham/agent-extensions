@@ -24,8 +24,8 @@ sources:
     resource: https://www.iso.org/standard/81291.html
     title: ISO — ISO/IEC/IEEE 29119-1:2022 Software testing general concepts
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-27T03:09:27Z
+  by: codex/gpt-5
+  at: 2026-08-27T14:18:00Z
 ---
 
 # Bugs and bugfix specifications
@@ -206,8 +206,10 @@ work-item metadata and labels](managing-work-item-metadata-and-labels.md) owns
 their host-field projection.
 
 For the authoring procedure and adaptable work-item template, see
-[Writing bugfix specifications](writing-bugfix-specifications.md). For intake
-and investigation, see [Recording defect reports](recording-defect-reports.md).
-For provenance and corrective authority shared across the pair, see
+[Writing bugfix specifications](writing-bugfix-specifications.md). For intake,
+see [Recording defect reports](recording-defect-reports.md). For diagnostic
+evidence gathering, see [Investigating possible
+defects](investigating-possible-defects.md). For provenance and corrective
+authority shared across the pair, see
 [Preserving evidence and authority in software work
 items](preserving-work-item-evidence-and-authority.md).
