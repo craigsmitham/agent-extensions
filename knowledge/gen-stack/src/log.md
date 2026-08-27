@@ -2,6 +2,16 @@
 
 ## 2026-08-26
 
+- **Selective defect-report reproduction**: Revised [Triaging defect
+  reports](work-items/triaging-defect-reports.md) so triagers preserve
+  occurrences, form candidate groups, and then decide whether one bounded,
+  safe, authorized, proportionate reproduction attempt could materially change
+  identity, classification, impact, urgency, or routing before final
+  relationship decisions. Required any attempt to preserve its conditions,
+  revision, result, limitations, and disposition impact; clarified that failure
+  to reproduce is bounded negative evidence and that reproduction is not a
+  prerequisite for completing triage; and condensed the workflow from nine
+  stages to seven.
 - **Gen Stack 0.19.0, skill 1.10.0, and pack 2.11.0 — authority-gated
   adoption**: Replaced physical-authorship language and the blanket agent
   adoption refusal with separate semantic ratification, mutation authority,

@@ -2,7 +2,7 @@
 type: Guide
 title: Triaging defect reports
 description: Use when one or more Defect Reports need an evidence-backed disposition and next route; preserve occurrences and uncertainty while relating, consolidating, splitting, escalating, or routing cases without inventing diagnosis, priority, or corrective authority.
-tags: [defect-report, triage, duplicate, overlap, merge, split, classification, routing, severity, priority, investigation]
+tags: [defect-report, triage, duplicate, overlap, merge, split, classification, routing, severity, priority, investigation, reproduction]
 status: draft
 sources:
   - id: defect-explainer
@@ -11,6 +11,9 @@ sources:
   - id: recording-defects
     resource: recording-defect-reports.md
     title: Recording defect reports
+  - id: investigating-defects
+    resource: investigating-possible-defects.md
+    title: Investigating possible defects
   - id: work-item-identity
     resource: maintaining-work-item-identity-relationships-and-lifecycle.md
     title: Maintaining work-item identity, relationships, and lifecycle
@@ -25,7 +28,7 @@ sources:
     title: Process
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T23:34:25Z
+  at: 2026-08-27T02:30:57Z
 ---
 
 # Triaging defect reports
@@ -50,121 +53,87 @@ defects, and defect reports](failures-defects-and-defect-reports.md).
 ## Goal
 
 Each report leaves triage with a recoverable, evidence-backed disposition and
-next route. Specifically:
-
-- every material occurrence remains traceable, including occurrences later
-  consolidated under a canonical report;
-- duplicate, overlap, split, and relationship decisions state their basis and
-  preserve uncertainty where identity is unresolved;
-- urgent operational or security concerns reach the appropriate channel;
-- current understanding distinguishes observation, confirmed Defect, Bug
-  hypothesis, identified Bug, and disputed or absent expectation;
-- impact is visible without silently assigning priority, ownership, schedule,
-  root cause, or corrective scope;
-- the next authorized action, owner or decision authority, and blocking
-  evidence are explicit; and
-- triage can be revisited when new evidence changes identity, impact,
-  classification, or route.
+next route. Material occurrences remain traceable; urgent or restricted cases
+reach the right channel; relationship decisions preserve uncertainty; and
+classification and impact remain distinct from diagnosis, priority, and
+corrective authority. The result names its owner, blocker, and review trigger
+so new evidence can revise it without reconstructing lost provenance.
 
 The desired outcome is not an empty queue. It is a queue whose cases are safely
 preserved, related, understood to the degree evidence permits, and routed to the
 right decision or investigation.
 
-## Representation
+## Representation and shared guidance
 
 Triage results belong in the native systems that own the affected Defect
 Reports, occurrences, relationships, evidence references, metadata, and next
 routes. Use native fields and relationship types when their semantics match;
-add only the smallest residual explanation needed to preserve disposition,
-uncertainty, authority, and provenance. Do not create a separate Gen Stack
-triage artifact or move tracker-owned facts into the governed `gen-stack/`
-corpus.
+add only residual disposition, uncertainty, authority, and provenance. Keep one
+canonical owner for each fact and link peer systems; summaries and generated
+views are projections, not additional authorities.
 
-When several source systems participate, keep one canonical owner for each
-fact and link the peers. A conversational summary or generated view is a
-projection, not another place to update identity, state, priority, assignment,
-or closure.
+This guide owns comparison, disposition, and next-route decisions. Use:
 
-## Apply the common work-item guides
-
-This guide owns the triage comparison, disposition, and next-route decision.
-Use the shared guides for:
-
-- [evidence and authority](preserving-work-item-evidence-and-authority.md),
-  including claim states, occurrence inventories, safe channels, unknowns, and
-  decision attribution;
+- [evidence and authority](preserving-work-item-evidence-and-authority.md) for
+  occurrences, claim states, safe channels, and attribution;
 - [identity, relationships, and
-  lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md),
-  including duplicate, merge, split, regression, resolution, verification,
-  closure, and reopening semantics;
-- [metadata and labels](managing-work-item-metadata-and-labels.md), including
-  type, workflow state, severity, priority, assignment, and authorized external
-  mutation; and
-- [titles and summaries](titling-and-summarizing-work-items.md) when triage
-  reveals a clearer discriminator.
+  lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md) for
+  duplicate, merge, split, regression, closure, and reopening semantics;
+- [metadata and labels](managing-work-item-metadata-and-labels.md) for governed
+  workflow state, severity, priority, assignment, and mutation; and
+- [titles and summaries](titling-and-summarizing-work-items.md) for clearer
+  discriminators.
 
 ## Guardrails
 
-- **Preserve before consolidating.** Capture each material occurrence and its
-  provenance before relating or consolidating reports.
+- **Preserve before consolidating.** Capture every material occurrence and its
+  provenance first.
 - **Similarity is orientation evidence, not identity proof.** Shared symptoms,
   components, traces, reporters, or time windows may suggest a relationship;
   they do not by themselves prove a duplicate or common cause.
-- **Triage is not diagnosis.** Keep observations, inferences, hypotheses,
-  confirmed Defects, and identified Bugs distinguishable.
-- **Relationship is not replacement.** Link overlap, dependency, regression,
-  common context, or suspected common cause without forcing reports into a
-  duplicate relationship.
-- **Impact is not priority.** Record consequence and scope as evidence; mutate
-  priority, assignment, and delivery timing only through their applicable
-  authority.
-- **Routing is not corrective authorization.** Investigation activity, incident
-  response,
-  Change Specification, or Bugfix Specification has its own scope and
-  authority.
+- **Triage is not diagnosis.** Keep observations, hypotheses, Defects, and Bugs
+  distinguishable; relate overlap or suspected common cause without forcing a
+  duplicate decision.
+- **Reproduction is selective evidence, not a gate.** Attempt it only when a
+  bounded result could materially change the disposition and the attempt is
+  safe, authorized, and proportionate.
+- **Impact is not priority; routing is not corrective authorization.** Mutate
+  priority, assignment, timing, or corrective scope only through their
+  applicable authority.
 - **Unknown is a valid disposition component.** Record the evidence or decision
   needed instead of manufacturing confidence.
-- **Respect evidence boundaries.** Move security-sensitive, personal, private,
-  or otherwise restricted evidence to an approved channel and leave only a safe
-  synopsis and controlled reference in a public report.
+- **Respect evidence boundaries.** Keep restricted evidence in an approved
+  channel and leave only a safe synopsis and controlled reference elsewhere.
 
 ## Triage the reports
 
-### 1. Bind the triage scope and authority
+### 1. Bind scope, authority, and urgent routes
 
 Identify the reports, time window, product or service boundary, and triage
 authority. Determine which decisions the triager may make directly and which
 require a product owner, incident commander, security role, domain authority,
 maintainer, or other named decision-maker.
 
-Do not infer that access to the tracker grants authority to change priority,
-close a report, disclose restricted evidence, accept a Requirement, identify a
-Bug, or authorize a correction. When a standing [Process](../processes/process.md)
-governs intake or triage, apply its entry criteria, roles, states, and escalation
-rules without transferring semantic authority to the workflow.
-
-### 2. Route urgent or restricted cases first
-
-Before comparing identity, check for cases that require an immediate channel:
-
-- current or imminent operational impact that meets the local response
-  threshold routes to an [operational incident
-  record](recording-operational-incidents.md);
-- a possible security vulnerability follows the organization's private
-  disclosure and response path rather than an ordinary public issue;
-- unsafe evidence moves to an approved controlled location while the report
-  retains a safe synopsis and reference; and
-- a material legal, safety, compliance, or data-integrity concern reaches its
-  designated authority.
+Before comparing reports, route current or imminent qualifying operational
+impact to an [operational incident record](recording-operational-incidents.md),
+possible vulnerabilities to the private security path, restricted evidence to
+an approved channel, and material legal, safety, compliance, or data-integrity
+concerns to their designated authority.
 
 Keep the Defect Report as provenance when another record coordinates the live
 response. Escalation changes the handling route; it does not erase the report
 or prove a Bug.
 
-### 3. Establish a comparable evidence basis
+Do not infer that tracker access grants authority to change priority, close a
+report, disclose restricted evidence, accept a Requirement, identify a Bug, or
+authorize a correction. Apply any standing [Process](../processes/process.md)
+without transferring semantic authority to its workflow.
 
-For each report, recover the smallest set of discriminators needed to compare
-cases:
+### 2. Preserve occurrences and form candidate groups
+
+Before relating or consolidating anything, preserve every material occurrence,
+its source, stable identifier, safe evidence, and provenance. Then recover the
+smallest discriminators needed to compare reports:
 
 - the accepted, disputed, inferred, or missing expectation;
 - the smallest observable discrepancy;
@@ -177,14 +146,49 @@ cases:
 - current claim state: observed, reported, measured, inferred, hypothesized,
   confirmed, or unknown.
 
+Group reports that may describe the same or related observable discrepancy.
+Compare symptoms and conditions before presumed cause. A candidate group or
+similarity score is an orientation aid, not a duplicate or relationship
+decision.
+
 Request missing information only when it can materially change identity,
-impact, classification, urgency, or route. A useful but incomplete occurrence
-must not disappear merely because ideal reproduction steps are unavailable.
+classification, impact, urgency, or route. Preserve useful incomplete reports;
+ideal reproduction steps are not an intake requirement.
+
+### 3. Decide whether selective reproduction would matter
+
+After forming candidate groups, but before final duplicate or relationship
+decisions, ask whether one bounded attempt to reproduce the observable
+discrepancy could materially change identity or relationship, classification,
+affected scope or impact, urgency, or the next route.
+
+Skip reproduction when existing evidence is sufficient, no plausible result
+would change the disposition, or the cost, delay, or risk is disproportionate.
+Attempt it only within authorized systems, data, revisions, and actions, with
+safeguards and a stopping condition. Production mutation, restricted-data
+access, security testing, and destructive experiments require separate
+authority.
+
+Record whether reproduction was selected and why. When attempting it, apply the
+evidence-planning and incremental gathering guidance in [Investigating possible
+defects](investigating-possible-defects.md), then record:
+
+- exact revision, conditions, inputs, and environment;
+- result: reproduced, not reproduced, inconclusive, or blocked;
+- material limitations and untested scope; and
+- how the result changed—or did not change—the disposition.
+
+Failure to reproduce is bounded negative evidence. It may weaken a hypothesis
+for the tested revision and conditions, but it does not prove that no Defect
+exists, that an occurrence did not happen, or that reports are unrelated.
+Triage may complete without reproduction when the available evidence supports
+a disposition and next route; otherwise defer the identity decision or route a
+specific investigation question.
 
 ### 4. Decide identity and relationships
 
-Compare the observable case before comparing presumed cause. Use the narrowest
-relationship supported by the evidence.
+Use the narrowest relationship supported by the preserved evidence and any
+selective reproduction result.
 
 | Finding | Disposition | Required preservation |
 | --- | --- | --- |
@@ -202,63 +206,46 @@ accessible provenance, established discussion, or required external identity.
 Age or identifier order alone is not a sufficient rule. Move no claim or
 evidence across confidentiality boundaries merely to make one report complete.
 
-### 5. Classify the current understanding
+### 5. Classify understanding and assess impact
 
 Record what the evidence supports now, without turning the workflow label into
 the conclusion:
 
-- **Defect Report awaiting investigation:** a discrepancy is preserved, but
-  whether a Defect exists or where it lies remains unresolved.
-- **Confirmed Defect:** an accepted expectation and a nonconforming work
-  product or behavior are established, while cause may still be unknown.
-- **Bug hypothesis:** evidence suggests a concrete software cause, but
-  investigation has not identified it with sufficient confidence.
-- **Identified Bug:** investigation has identified a concrete software problem
-  that can explain one or more reports; link the reports without replacing
-  their provenance.
-- **Expectation disputed or indeterminate:** the expected result lacks the
-  authority, clarity, completeness, or agreement needed for classification.
-- **Expected behavior or candidate change:** the observed behavior conforms to
-  the accepted expectation, or the request is for a different desired state;
-  preserve the originating Signal and route the proposed change separately.
-- **Insufficient safe evidence:** the case cannot yet be classified within the
-  available evidence boundary; record what is needed and who may provide or
-  decide it.
+| Classification | Evidence boundary |
+| --- | --- |
+| Awaiting investigation | A discrepancy is preserved; whether or where a Defect exists is unresolved. |
+| Confirmed Defect | An accepted expectation and nonconforming work product or behavior are established; cause may remain unknown. |
+| Bug hypothesis | Evidence suggests a concrete software cause but does not yet identify it. |
+| Identified Bug | A concrete software problem explains one or more reports; link rather than replace their provenance. |
+| Expectation disputed or indeterminate | Authority, clarity, completeness, or agreement is insufficient. |
+| Expected behavior or candidate change | Behavior conforms to accepted meaning, or different desired state is requested; preserve the Signal and route the change separately. |
+| Insufficient safe evidence | Record what is needed and who may provide or decide it. |
 
 If classification depends on reducing uncertainty, create or link a bounded
 investigation with an explicit question and completion condition. An
 investigation result may update the disposition; it does not silently rewrite
 what was originally observed.
 
-### 6. Surface cross-stack impact and meaning gaps
-
-Assess whether the report exposes a missing, underdeveloped, misplaced,
-disputed, or contradicted Requirement, Surface, C4 structure, Evaluation route,
-or operational understanding. Use [Analyzing Requirement
+For a material Requirement, Surface, C4 structure, Evaluation, or operational
+meaning gap, apply [Analyzing Requirement
 impact](../control-loop/analyzing-requirement-impact.md) and, when needed, the
-shared [candidate Architecture and Requirements
+[candidate Architecture and Requirements
 guide](../architecture/developing-candidate-architecture-and-requirements.md).
-
-Record each material gap with its evidence, impact, candidate options or
-correction, recommendation, applicable authority, and blocking status. Do not
-invent the missing meaning in order to finish triage. If evidence supports an
-actual candidate Requirement addition, revision, retirement, replacement,
-split, or merge, route it through a separately authorized Change or Bugfix
-Specification that applies [Specifying Requirement
+Record its evidence, impact, options or candidate correction, recommendation,
+authority, and blocking status; do not invent missing meaning to finish triage.
+Route an actual candidate Requirement change through a separately authorized
+Specification using [Specifying Requirement
 changes](specifying-requirement-changes.md).
-
-### 7. Assess impact without smuggling priority
 
 Summarize who or what is affected, consequence, extent, frequency, duration,
 recoverability, workaround, and evidence confidence. Include the scope tested
 and known not to be affected when it changes interpretation.
 
-Use this evidence to support the local severity model. Keep severity distinct
-from priority, assignment, target date, service commitment, and delivery
-sequence. If one of those decisions is required, name its authority and route
-it rather than substituting the triager's judgment.
+Use this evidence for the local severity model, while keeping priority,
+assignment, target date, service commitment, and delivery sequence with their
+applicable authorities.
 
-### 8. Select the next authorized route
+### 6. Select the next authorized route
 
 Choose the smallest next route that can resolve the material uncertainty or
 advance an authorized correction:
@@ -282,7 +269,7 @@ Record the next action or decision, responsible owner or authority, blocking
 condition, and completion or review trigger. Avoid vague outcomes such as
 “needs investigation” when the actual question can be named.
 
-### 9. Record and verify the triage decision
+### 7. Record and verify the triage decision
 
 Update each affected report with:
 
@@ -293,6 +280,8 @@ Update each affected report with:
   Bug, or Specification relationships;
 - preserved occurrence and provenance references;
 - current classification and material uncertainty;
+- selective reproduction decision and, when attempted, its conditions,
+  revision, result, limitations, and disposition impact;
 - impact assessment and any separately governed metadata decision;
 - next route, owner or authority, blocker, and review trigger; and
 - decision history when the disposition supersedes an earlier conclusion.
@@ -304,10 +293,10 @@ closure, or corrective scope.
 
 ## Triage batches without losing item-local decisions
 
-For a large intake, use automation to orient humans: normalize candidate
-discriminators, group similar observations, find existing relationships, and
-surface missing evidence. Treat every group or similarity score as a candidate,
-not a merge decision.
+For a large intake, use automation to normalize discriminators, form candidate
+groups, find existing relationships, and surface missing evidence. Treat each
+group as a candidate, then apply the selective-reproduction decision only where
+its result could matter; do not reproduce every report.
 
 Apply urgent-channel checks before bulk consolidation. Then record a distinct
 disposition on every report, including those in the same cluster. Preserve
@@ -315,11 +304,10 @@ partial success: one unsafe, ambiguous, or blocked item must not invalidate
 valid decisions on other reports, and one successful relationship must not be
 presented as evidence that the whole batch is resolved.
 
-Measure the process by decision quality and recoverability, not merely queue
-reduction. Useful signals include time to urgent routing, time to an actionable
-next route, reversals caused by lost evidence or premature consolidation,
-unowned or indefinitely waiting cases, and the age of unresolved identity or
-authority decisions.
+Measure decision quality and recoverability, not merely queue reduction.
+Useful signals include time to urgent routing or an actionable next route,
+reversals caused by premature consolidation, unowned cases, and the age of
+unresolved identity or authority decisions.
 
 ## Completion check
 
@@ -327,21 +315,22 @@ Triage is complete for a report when:
 
 - the report and every material occurrence remain recoverable;
 - urgent and restricted handling has been applied where needed;
+- the selective-reproduction decision and any bounded result are recoverable
+  when they could affect disposition;
 - its identity or relationship disposition and evidence basis are explicit;
 - its current classification and unknowns are distinguishable;
 - material impact and cross-stack gaps are visible;
 - the next authorized route, owner or authority, and trigger are recorded; and
 - the decision can be revisited without reconstructing lost provenance.
 
-Triage need not wait for root cause, a chosen correction, implementation,
-verification, closure, or every related report to reach the same lifecycle
-state.
+Triage need not wait for reproduction, root cause, a chosen correction,
+implementation, verification, closure, or every related report to reach the
+same lifecycle state.
 
 ## Standing Process considerations
 
-If triage recurs, encode only the durable coordination rules in a standing
-[Process](../processes/process.md): entry criteria, roles, decision authorities,
-states, escalation channels, review triggers, and observable outputs. Keep
-Defect Report meaning, relationship semantics, Requirement authority, and
-corrective authorization in their canonical owners rather than redefining them
-inside the Process.
+If triage recurs, a standing [Process](../processes/process.md) may own durable
+entry criteria, roles, decision authorities, states, escalation channels,
+review triggers, and outputs. Keep Defect Report meaning, relationship
+semantics, Requirement authority, and corrective authorization in their
+canonical owners.
