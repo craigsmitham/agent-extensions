@@ -25,7 +25,7 @@ sources:
     title: GitHub Docs — Managing issue types in an organization
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-26T20:14:40Z
+  at: 2026-08-27T03:09:27Z
 ---
 
 # Failures, defects, and defect reports
@@ -192,7 +192,7 @@ one workflow rule everywhere. [Maintaining work-item identity, relationships,
 and lifecycle](maintaining-work-item-identity-relationships-and-lifecycle.md)
 owns the common procedure.
 
-## Severity, priority, status, and resolution
+## Lifecycle and completion
 
 These fields express different decisions:
 
@@ -205,17 +205,17 @@ These fields express different decisions:
 | Resolution | Which disposition was chosen and why |
 | Verification result | What evidence shows whether that disposition satisfied its conditions |
 
-A severe defect can have an improbable trigger; a small defect can be
-strategically urgent. A merged correction is not yet a verified result, and a
-closed report does not always mean code changed. Legitimate dispositions
-include corrected and verified, duplicate, expected behavior, external cause,
-not reproducible with current evidence, deferred, or accepted risk.
+A severe Defect can have an improbable trigger; a small one can be urgent.
+Triage completion, report disposition, corrective delivery, verification, and
+closure are independent transitions. Legitimate closure may record expected
+behavior, duplicate, external cause, accepted risk, deferment, or evidence
+that a correction met its conditions; it does not always mean code changed.
 
-`Not reproducible` describes the present investigation, not proof that no
-defect exists. Missing environment state, transient dependencies, timing,
-data, or an intermittent trigger can prevent reproduction. Closure or
-deferment should therefore retain the evidence, rationale, and conditions that
-would justify revisiting the decision.
+`Not reproducible` is bounded negative evidence, not proof that no Defect
+exists. Every closure retains its evidence limit, authority, rationale, and
+review or reopening condition. The [recording guide's completion
+criteria](recording-defect-reports.md#completion-criteria) state the actionable
+and verified-closure boundaries without requiring diagnosis or a fix.
 
 ## Choosing a neighboring artifact
 

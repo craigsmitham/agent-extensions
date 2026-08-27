@@ -34,7 +34,7 @@ sources:
     title: Process
 generated:
   by: codex/gpt-5
-  at: 2026-08-26T23:47:25Z
+  at: 2026-08-27T03:09:27Z
 ---
 
 # Investigating possible defects
@@ -407,9 +407,9 @@ Source-system updates:
 Unknowns, blockers, and review trigger:
 ```
 
-## Completion check
+## Exit criteria
 
-The investigation is complete for its bounded purpose when:
+The investigation can exit for its bounded purpose when:
 
 - material originating Signals and occurrences remain traceable;
 - the question, expectation, revision, conditions, and evidence boundary are

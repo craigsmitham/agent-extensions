@@ -2,6 +2,13 @@
 
 ## 2026-08-26
 
+- **Purpose-relative work-item completion**: Centralized handoff,
+  disposition, delivery, and verified-closure boundaries in the shared
+  work-item lifecycle Guide; added a four-role completion comparison to the
+  work-item index; gave each role concise next-action, verified-closure, and
+  non-requirement criteria; renamed phase completion checks to exit criteria;
+  and reduced role templates and repeated shared-guide instructions so host
+  fields remain primary and role Guides contain only their distinctive delta.
 - **Selective defect-report reproduction**: Revised [Triaging defect
   reports](work-items/triaging-defect-reports.md) so triagers preserve
   occurrences, form candidate groups, and then decide whether one bounded,

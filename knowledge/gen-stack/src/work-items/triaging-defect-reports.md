@@ -28,7 +28,7 @@ sources:
     title: Process
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-27T02:30:57Z
+  at: 2026-08-27T03:09:27Z
 ---
 
 # Triaging defect reports
@@ -309,9 +309,9 @@ Useful signals include time to urgent routing or an actionable next route,
 reversals caused by premature consolidation, unowned cases, and the age of
 unresolved identity or authority decisions.
 
-## Completion check
+## Exit criteria
 
-Triage is complete for a report when:
+Triage can exit for a report when:
 
 - the report and every material occurrence remain recoverable;
 - urgent and restricted handling has been applied where needed;
