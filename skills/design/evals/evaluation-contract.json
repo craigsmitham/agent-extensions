@@ -23,7 +23,7 @@
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic pitch-first, specification-first, design-first, architecture-realization, evaluation-realization, optional implementation-conformance, explicit-selection, and implicit-abstention cases.",
+    "case_source": "Synthetic pitch-first, specification-first, design-first, architecture-realization, evaluation-realization, optional implementation-conformance, predecessor-acceptance, lifecycle-persistence, explicit-selection, and implicit-abstention cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -73,6 +73,8 @@
     "unknown_policy": "Unavailable target, support path, harness, output, or side-effect evidence produces unknown rather than pass.",
     "critical_gates": [
       "No invented desired-state or Architecture acceptance",
+      "Forward-stage acceptance requires an exact persisted Ready predecessor",
+      "First-screen Design presentation and update-in-place Draft persistence",
       "Accepted Architecture and required Protocols are technically realized",
       "Implementation-conformance Evaluations remain optional and separate",
       "No implementation or planning mutation",
@@ -111,6 +113,16 @@
     "threshold": "All critical gates pass and every material assertion passes for the claimed scope.",
     "minimum_pass_rate": 1,
     "critical_assertions": [
+      {
+        "gate": "Forward-stage acceptance requires an exact persisted Ready predecessor",
+        "case_id": 7,
+        "assertion": "The valid $design invocation changes exact persisted Specification CS-73 revision 4 from Ready to Accepted before dependent Design work begins."
+      },
+      {
+        "gate": "First-screen Design presentation and update-in-place Draft persistence",
+        "case_id": 1,
+        "assertion": "The first screen exposes the exact Ready Design identity, Specification binding, Summary, and `- None.` under Open items before technical detail."
+      },
       {
         "gate": "No invented desired-state or Architecture acceptance",
         "case_id": 2,

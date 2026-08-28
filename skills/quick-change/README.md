@@ -1,15 +1,11 @@
-# Quick Change
+# Quick Change — deprecated
 
-Produces the canonical Change Specification and Change Design together for one
-bounded, context-rich Change, reconciles their exact revisions, and returns a
-thin Change coordination handoff.
+`$quick-change` is retained only as a compatibility route. It recommends
+explicit `$spec` followed by `$design`, activates neither replacement, and
+produces no artifacts.
 
-Use `$quick-change` when both why-and-what and how need to be developed in one
-focused response. It preserves the same artifact contracts as the standalone
-`spec` and `design` skills and stops before implementation planning or coding.
-An unprefixed request for both artifacts does not activate this workflow.
-
-Install this non-standalone skill through `@craigsmitham/packs/gen-stack`.
+New installations of `@craigsmitham/packs/gen-stack` do not include this
+skill.
 
 ## License
 

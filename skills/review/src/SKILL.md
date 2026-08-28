@@ -46,9 +46,9 @@ fresh invocation and inspects primary evidence before relying on those results.
 
 1. Inspect the candidate and material primary evidence independently before
    relying on the implementer's conclusion.
-2. Read `references/review-result.md`, then load only the assigned focused
-   lens for checkpoint mode. For final mode read all four lenses and
-   `references/whole-change-review.md`:
+2. Use the exact portable result in `Reviewing candidate implementations`, then
+   load only the assigned focused lens for checkpoint mode. For final mode,
+   read all four lenses and `references/whole-change-review.md`:
    - `references/architecture-review.md`;
    - `references/requirement-review.md`;
    - `references/evaluation-review.md`; and
@@ -64,10 +64,10 @@ fresh invocation and inspects primary evidence before relying on those results.
    authority or candidate revision and location, expectation or risk, evidence
    and confidence, consequence, required outcome, and responsible route. Do
    not elevate style preference into correctness.
-6. Return the compact result from `references/review-result.md`: decision,
-   ordered required actions, supported findings, assurance summary, material
-   unknowns, and review boundary. Keep successful checklist detail out of the
-   result while visibly dispositioning every material claim.
+6. Return the compact result from `Reviewing candidate implementations`:
+   decision, ordered required actions, supported findings, assurance summary,
+   material unknowns, and review boundary. Keep successful checklist detail out
+   of the result while visibly dispositioning every material claim.
 
 For checkpoint mode use one disposition: `continue`,
 `implementation-revision-required`, `definition-reconciliation-required`,

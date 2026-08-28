@@ -1,8 +1,6 @@
 # Behavioral evaluation cases
 
-The machine-readable authority is `evals.json`. Run every case in a fresh,
-disposable context with the Gen Stack knowledge support path. Routing and
-activated execution are separate stages. The cases cover explicit selection,
-implicit abstention for ordinary code-change language, exact shared artifact
-contracts, Bugfix classification, action-relative blockers, reconciliation,
-and forbidden planning or implementation effects.
+The machine-readable authority is `evals.json`. Run each case in a fresh,
+disposable context. The suite verifies that the deprecated compatibility skill
+provides a bounded migration route to `$spec` followed by `$design`, never
+activates either replacement, and is not selected from unprefixed language.

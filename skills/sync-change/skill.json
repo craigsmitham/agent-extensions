@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "sync-change",
-  "version": "0.2.0",
-  "description": "Synchronizes one exact landed Gen Stack artifact after explicit persistence intent and verifies host-neutral persisted fidelity",
+  "version": "2.0.0",
+  "description": "Manually checkpoints or repairs one exact current Gen Stack artifact in its canonical work-item target and verifies persisted fidelity",
   "keywords": [
     "change",
     "change-artifact",

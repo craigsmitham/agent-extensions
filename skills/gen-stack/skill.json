@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "gen-stack",
-  "version": "4.0.0",
+  "version": "6.0.0",
   "publish": {
     "ignore": []
   },
@@ -31,7 +31,8 @@
     "change-specification",
     "change",
     "bugfix",
-    "quick-change",
+    "artifact-lifecycle",
+    "open-items",
     "defect-report",
     "incident-record",
     "work-items",

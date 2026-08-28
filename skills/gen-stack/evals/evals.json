@@ -1,6 +1,6 @@
 {
   "skill_name": "gen-stack",
-  "suite_version": "4.0.0",
+  "suite_version": "6.0.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -1852,12 +1852,15 @@
       "id": 139,
       "stage": "execution",
       "prompt": "Explain how exact Pitch, Change Specification, Change Design, and plan persistence fits into Gen Stack while remaining independent of any particular work-item host. Do not mutate anything or perform synchronization.",
-      "expected_output": "A concise explanation that identifies synchronization as a cross-cutting representation operation routed to sync-change, preserves one canonical home and exact artifact maturity, and does not add a lifecycle stage or vendor model.",
+      "expected_output": "A concise explanation of the shared Draft, Ready, Accepted lifecycle and event-driven canonical persistence contract without adding a vendor model or hidden conversation memory.",
       "assertions": [
-        "Synchronization is described as cross-cutting representation work rather than a change-realization stage or readiness gate.",
-        "One canonical artifact home and exact revision binding remain explicit.",
+        "Pitch, Change Specification, Change Design, and plan share only Draft, Ready, and Accepted; review and release states remain separate.",
+        "The first coherent Draft and every state change are persisted and verified in one canonical artifact location, while ordinary chat iteration is not synchronized.",
+        "A valid forward-stage invocation accepts only the exact persisted Ready predecessor before dependent work begins.",
+        "Draft has explicit Open items, and Ready or Accepted has none; material edits downgrade the artifact to Draft and invalidate dependent readiness.",
         "The explanation is work-item-host agnostic and prescribes no vendor fields, labels, hierarchy, workflow, or API.",
-        "Plan projection requires separate authorization and leaves the exact plan canonical.",
+        "Manual sync remains a repair or explicit checkpoint; derived implementation-record projection is outside Sync Change.",
+        "Lost chat-only edits after compaction return to the user rather than being reconstructed.",
         "No mutation or focused synchronization workflow is performed."
       ]
     },
@@ -1872,6 +1875,33 @@
         "Missing ratification and applicable authority remain explicit.",
         "The recommendation is not treated as invocation or semantic acceptance.",
         "No complete focused-stage artifact or task mutation is produced."
+      ]
+    },
+    {
+      "id": 141,
+      "stage": "execution",
+      "prompt": "Explain the streamlined focused-stage sequence after quick-change deprecation. Include what $spec, $design, $plan, and $implement accept, and whether review or ship accepts an implementation artifact. Do not perform any stage.",
+      "expected_output": "A concise sequence that replaces quick-change with explicit focused stages, identifies exact predecessor acceptance effects, and keeps review and release authority outside the artifact lifecycle.",
+      "assertions": [
+        "$spec accepts a persisted Ready Pitch, $design accepts a persisted Ready Specification, $plan accepts a persisted Ready Design after confirming the Specification is Accepted, and $implement accepts a persisted Ready plan.",
+        "Acceptance is limited to the predecessor artifact and does not silently ratify governed Requirement or Architecture meaning beyond that artifact's authority.",
+        "Review does not accept Implementation and Ship remains an explicit separately authorized final action.",
+        "Quick-change is deprecated in favor of $spec followed by $design, with no replacement skill silently activated.",
+        "No focused stage or mutation is performed."
+      ]
+    },
+    {
+      "id": 142,
+      "stage": "execution",
+      "prompt": "$gen-stack Explain the portable presentation language shared by Pitch, Change Specification, Change Design, plan, Review, and Ship. Cover first-screen order, Open items, visual keys, emoji, cards, tables, and handoffs. Do not create or mutate an artifact.",
+      "expected_output": "A concise orientation to the shared scannable presentation contract without performing a focused stage.",
+      "assertions": [
+        "Durable stage artifacts put title, Artifact, State, Canonical, optional Bound to, Summary, and Open items first; Review and Ship use their exact decision-first variants.",
+        "Text labels carry meaning; emoji and color are optional decoration and never the sole signal.",
+        "Draft, Ready, Accepted, persistence results, review dispositions, Evaluation Results, stable OI-, A-, F-, and U- identities, transition arrows, and explicit-absence markers remain distinct.",
+        "Steps, actions, findings, unknowns, and checkpoints use vertical cards; portable tables have at most four columns; empty optional sections are omitted.",
+        "The compact handoff carries exact artifact identity and state, canonical target and persistence fidelity, Open-item IDs, and the next eligible action with any acceptance effect.",
+        "No focused stage or mutation is performed."
       ]
     }
   ]

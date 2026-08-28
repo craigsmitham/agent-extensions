@@ -3,11 +3,10 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "plan",
-  "version": "0.6.0",
-  "description": "Explicit-only stage for planning evidence-guided realization and focused review for one coherent Change; never select from unprefixed natural language",
+  "version": "2.0.0",
+  "description": "Explicit-only stage that accepts a persisted Ready Design and produces one update-in-place Draft-to-Ready implementation plan",
   "keywords": [
     "implementation-plan",
-    "plan-projection",
     "planning",
     "sequencing",
     "architecture-realization",

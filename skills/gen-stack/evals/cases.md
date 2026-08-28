@@ -136,3 +136,14 @@ for an unprefixed Change Specification request instead of letting the umbrella
 author it; cases 131, 132, and 135 retain explicit sibling selection controls;
 and case 140 requires a thin `$spec` recommendation that stops without
 performing or activating the stage.
+
+Suite 5.0.0 adds the shared Draft, Ready, Accepted lifecycle, event-driven
+canonical persistence, exact forward-stage acceptance, update-in-place
+invalidation, compaction boundary, quick-change deprecation, and removal of
+derived implementation-record projection from Sync Change.
+
+Suite 6.0.0 adds case 142 for the shared artifact presentation language:
+first-screen identity and state, structured Open items, explicit state,
+fidelity, disposition, Result, reference, transition, and absence keys,
+optional emoji decoration, vertical cards, bounded tables, and compact recovery
+handoffs.

@@ -77,18 +77,34 @@ Signal
   ↓
 $shape ↔ $research / $investigate
   ↓
-Pitch → Change → $spec ⇄ $design → coherence → $plan
-                                           ↓
-          $implement ⇄ focused review → $review → authorized $ship
+Ready Pitch → $spec accepts Pitch → Ready Specification
+                                      ↓ $design accepts Specification
+                              Ready Design
+                                      ↓ $plan accepts Design
+                                Ready plan
+                                      ↓ $implement accepts plan
+          implementation ⇄ focused review → $review → authorized $ship
                                                         ↓
                                   observe, evaluate, learn, compact ───↺
 ```
 
 The route is proportional: discovery is optional and a useful outcome may be no
-change. Implementation routes converge on one Change with coherent
-Specification and Design revisions. Review recommends; separately held
-authority permits the final action. The canonical definition is
-[Deciding and realizing bounded software changes](../../knowledge/gen-stack/src/processes/deciding-and-realizing-software-changes.md).
+change. Pitch, Specification, Design, and plan share `Draft`, `Ready`, and
+`Accepted`, explicit Open items, and one canonical Change target. The first
+coherent Draft and every state change are persisted; ordinary chat iteration is
+not. Review recommends; separately held authority permits the final action. The
+canonical definition is [Deciding and realizing bounded software
+changes](../../knowledge/gen-stack/src/processes/deciding-and-realizing-software-changes.md).
+
+## Artifact usability
+
+Every portable Pitch, Specification, Design, and plan uses the same first-screen
+order: exact identity, state, canonical target, bindings, Summary, and Open
+items. Stable `OI-<n>`, `A-<n>`, `F-<n>`, and `U-<n>` references make blockers,
+actions, findings, and unknowns recoverable across turns. Detail is disclosed
+progressively, portable tables stay narrow, and Plan work and checkpoints use
+vertical cards. Text labels remain authoritative; emoji and color are optional
+host decoration and never carry meaning alone.
 
 ## Invocation model
 
@@ -99,8 +115,8 @@ mutation authority, review evidence, or release authority.
 | Selection | Extensions | Purpose |
 | --- | --- | --- |
 | Implicit or explicit | `gen-stack` | Explain the method, orient work, maintain an adopted corpus and Change coordination, and recommend the smallest eligible stage |
-| Explicit only | `$shape`, `$research`, `$investigate`, `$spec`, `$design`, `$quick-change`, `$plan`, `$implement`, `$review`, `$ship` | Perform one focused change-realization stage after the user deliberately selects it |
-| Implicit or explicit | `sync-change` | Persist an exact landed artifact when both the complete source and explicit persistence intent are present |
+| Explicit only | `$shape`, `$research`, `$investigate`, `$spec`, `$design`, `$plan`, `$implement`, `$review`, `$ship` | Perform one focused change-realization stage after the user deliberately selects it |
+| Implicit or explicit | `sync-change` | Perform a user-requested manual checkpoint or repair for one exact artifact |
 | Internal only | `researcher`, `reviewer` | Supply fresh-context read-only work to an activated skill |
 
 `$stage` is the documentation's host-neutral shorthand for deliberate
@@ -108,24 +124,28 @@ selection; use the host's native skill selector where its syntax differs.
 An unprefixed request such as “design this API,” “fix this bug,” or “review this
 diff” remains ordinary assistant work and does not acquire Gen Stack stage
 semantics. A completed stage may recommend another stage, but recommendations,
-handoffs, readiness, and workflow position never activate it. `sync-change` is
-the exception because synchronization is a cross-cutting representation
-operation rather than a decision-bearing stage; stage completion alone still
-does not trigger it.
+handoffs, readiness, and workflow position never activate it. A valid forward
+invocation does accept its exact persisted Ready predecessor before dependent
+work. Focused stages own automatic lifecycle-event writes; `sync-change`
+handles only manual checkpoints and repairs.
 
 ## What the pack installs
 
 | Extension layer | Included capability |
 | --- | --- |
 | Knowledge | `@craigsmitham/knowledge/gen-stack` supplies the canonical vocabulary, operating model, application profile, and guides |
-| Skills | `gen-stack` provides method and corpus orientation; the ten explicitly selected stages perform focused work; `sync-change` preserves exact landed artifacts |
+| Skills | `gen-stack` provides method and corpus orientation; nine explicit stages perform focused work; `sync-change` handles manual artifact checkpoints |
 | Fresh-context subagents | `researcher` performs isolated read-only research; `reviewer` performs focused or integrated read-only review |
 
-Version `5.0.0` introduces the deliberate invocation contract: focused stages
-are explicit-only, `gen-stack` is the implicit method and corpus gateway, and
-`sync-change` remains implicitly selectable only for exact-source persistence.
-This is an interaction-breaking release for callers that previously relied on
-natural-language stage activation; use the corresponding `$stage` explicitly.
+Version `7.0.0` adds the shared first-screen artifact presentation, textual
+visual keys, structured Open items, progressive disclosure, vertical cards,
+bounded tables, and compact recovery handoffs across the focused stages.
+
+Version `6.0.0` adds the shared update-in-place artifact lifecycle,
+event-driven persistence, exact predecessor acceptance, and compaction recovery
+boundary. It removes Quick Change and plan-to-task projection from the pack;
+use `$spec` followed by `$design`, and treat derived execution records as
+host-native coordination outside Sync Change.
 
 Install the pack rather than its coupled members:
 

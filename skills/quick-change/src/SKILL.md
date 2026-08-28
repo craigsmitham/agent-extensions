@@ -1,95 +1,22 @@
 ---
 name: quick-change
-description: Explicitly invoked Gen Stack stage that produces one Change Specification and Change Design together and reconciles their exact revisions. Select only when the user directly invokes `$quick-change` or the corresponding host control; never select it from an unprefixed natural-language request, even when that request resembles a combined specification-and-design task. Not for an ordinary quick code edit, an unbounded idea that needs shaping, implementation planning, coding, review, or shipping.
+description: Deprecated explicit compatibility route for the former combined Specification-and-Design stage. Select only for $quick-change or its host control to provide migration guidance. Recommend $spec followed by $design; do not activate either or produce artifacts.
 ---
 
-# Quick change
+# Quick change — deprecated
 
-Define one context-rich bounded Change in a single focused response while
-preserving the separate why-and-what and how artifacts.
+This skill is retained only so existing explicit invocations receive a safe,
+clear migration path.
 
-Use only after the user explicitly selects `$quick-change` or the corresponding
-host control. Natural-language similarity, including a request for both
-artifacts, does not activate this stage. Selection alone grants no semantic
-acceptance, mutation, or downstream-stage authority.
+When deliberately invoked:
 
-This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
-scope; in this source workspace read, in order:
+1. State that `$quick-change` is deprecated.
+2. Recommend invoking `$spec` and then `$design`.
+3. Explain that a valid `$design` invocation accepts the exact persisted Ready
+   Specification before producing its Design Draft.
+4. Stop.
 
-- `knowledge/gen-stack/src/processes/running-change-realization-stages.md`;
-- `knowledge/gen-stack/src/work-items/changes.md`;
-- `knowledge/gen-stack/src/work-items/writing-change-specifications.md`; and
-- `knowledge/gen-stack/src/design/developing-a-change-design.md`.
-
-When evidence establishes a Defect and remediation is an explicit purpose,
-also read
-`knowledge/gen-stack/src/work-items/addressing-defects-through-changes.md`.
-Do not load `spec` or `design` as required subworkflows or delegate to them;
-the shared knowledge contracts are the authority that keeps all three skills'
-artifacts identical.
-
-## Boundary
-
-Produce three distinct outputs for one Change:
-
-1. the canonical Change Specification for why and what;
-2. the canonical Change Design for how; and
-3. the thin Change coordination handoff that binds exact artifact revisions,
-   classification, coherence, and next action.
-
-Do not blend Design choices into the Change Specification or delivery state
-into either artifact. Do not accept human-owned semantic or technical
-decisions, plan implementation, mutate code, review a candidate, or ship.
-
-Use this combined route only when the request explicitly invokes it. A
-colloquial request to “make a quick change,” or an unprefixed request for both
-artifacts, does not activate this skill.
-
-## Produce the combined response
-
-1. Bind one Change, source records, intended outcome, scope, current
-   Implementation, accepted authorities, decision and action authority, and
-   the requested artifact form.
-2. Determine whether Bugfix classification applies: at least one established
-   Defect, an authorized remedial decision, and remediation as an explicit
-   purpose. Otherwise do not infer it.
-3. Develop the Change Specification according to its shared Guide. Keep all
-   technical response choices out of it.
-4. Develop the Change Design against that exact specification revision. When a
-   design choice exposes changed outcome, obligation, durable Architecture,
-   constraint, or semantic Protocol meaning, revise the Change Specification through
-   its authority and rebind the Design.
-5. Repeat the bounded reconciliation until the artifacts conform or one named
-   gap blocks them. Do not make an unresolved human decision merely to finish.
-6. Evaluate action-relative readiness. A visible gap may permit a draft; a
-   missing required semantic Protocol blocks ratification, coherence, and
-   dependent planning. Technical uncertainty may block Design acceptance
-   without invalidating a truthful Change Specification draft.
-7. Emit both canonical artifacts followed by the thin Change coordination
-   handoff. Stop before planning or implementation.
-
-## Output
-
-For the Change Specification and Change Design, use the exact semantic and
-representation contracts in their shared Guides. Do not reproduce or modify
-their heading inventories here.
-
-- Prefer exact native host fields when they satisfy each contract.
-- In a Markdown-only host or conversation, copy both exact canonical
-  fallbacks, retain every top-level heading, and use `Not applicable` only when
-  justified.
-- The outputs must be indistinguishable in structure and semantics from those
-  produced independently by `spec` and `design`.
-- Bugfix classification adds the conditional remediation content from its
-  Guide; it never renames either artifact.
-
-Then use the Change coordination contract from `Changes`, including exact
-artifact revision identities, `established` or `blocked` coherence with
-evidence, and one eligible next action. Do not claim coherence unless the exact
-Change Specification is ratified, the exact Change Design is accepted, their reconciliation
-conforms, and every required semantic Protocol is defined.
-
-If human ratification or Design acceptance has not actually occurred, present
-the appropriate requests and report coherence as not established or blocked.
-The combined response is complete when both truthful artifacts and the
-coordination handoff exist; planning and implementation remain separate.
+Do not author a Pitch, Change Specification, Change Design, coordination
+handoff, plan, implementation, review, or release result. Do not silently
+activate either replacement. Unprefixed combined-definition language does not
+select this skill.

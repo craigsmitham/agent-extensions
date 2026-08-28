@@ -29,9 +29,10 @@ authority from invocation alone, a review recommendation, passing checks,
 workflow status, or phrases such as “ready” or “looks good.”
 
 Resolve one exact Change, its exact Change Specification and Change Design
-revisions, one exact reviewed Implementation revision, one action, one target, required evidence,
-meaning authority already exercised, mutation authority, release authority,
-executor, credentials, approvals, rollback boundary, and observation window.
+revisions, one exact reviewed Implementation revision, one action, one target,
+required evidence, meaning authority already exercised, mutation authority,
+release authority, executor, credentials, approvals, rollback boundary, and
+observation window.
 Keep credentials symbolic and use only declared destinations. If any material
 identity or authority is absent, stop before mutation and name it.
 
@@ -52,7 +53,8 @@ identity or authority is absent, stop before mutation and name it.
    environment, timing, outcome, and limitations.
 7. Report actual effects, changed and unchanged targets, partial or failed
    state, rollback attempted and observed, residual risk, corpus disposition,
-   and the smallest safe next action.
+   and the smallest safe next action using the compact portable result in
+   `Shipping reviewed changes` when the host has no richer equivalent.
 
 Use precise states such as `shipped-and-observed`,
 `shipped-awaiting-observation`, `partially-applied`,

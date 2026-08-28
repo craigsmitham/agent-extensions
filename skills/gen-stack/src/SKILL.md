@@ -142,9 +142,7 @@ complete artifact:
 - `$design` for the proportional technical response, accepted Architecture
   realization, required Protocol realization, and optional separate
   Implementation-conformance Evaluations;
-- `$quick-change` for one combined Change Specification
-  and Change Design response with a Change coordination handoff;
-- `$plan` for an implementation-ready sequence with proportional focused review
+- `$plan` for a Ready implementation sequence with proportional focused review
   checkpoints;
 - `$implement` for an authorized candidate realization that dispositions focused
   reviewer actions;
@@ -168,17 +166,26 @@ filesystem neighborhood is unclear, recommend `$shape` instead of forcing a
 Change Specification or Change Design. Identify the smallest eligible explicit
 stage, its missing preconditions, and its authority boundary, then stop. A
 recommendation or handoff is not activation. Do not simulate that sibling's
-complete workflow here. Change Specification and Change Design may start in either order but must
-converge before planning. Any unresolved architecture-significant or
-Protocol-semantic decision returns to Change Specification and human authority rather
-than being delegated to Design or implementation.
+complete workflow here. Change Specification and Change Design may start in
+either order but must converge before planning. `$quick-change` is deprecated;
+recommend explicit `$spec` followed by `$design` and activate neither. Any
+unresolved architecture-significant or Protocol-semantic decision returns to
+Change Specification and human authority.
 
-Artifact synchronization is cross-cutting representation work, not another
-change-realization stage or readiness gate. `sync-change` may be selected
-implicitly only when both an exact landed artifact and an explicit persistence
-request exist. This skill does not perform that operation or invoke it after a
-stage; if orientation is already active, identify `sync-change` as the eligible
-operation and stop.
+Pitch, Change Specification, Change Design, and plan share `Draft`, `Ready`,
+and `Accepted`, one canonical Change target, and explicit Open items. Focused
+stages persist their first coherent Draft and every state change. `$spec`
+accepts Ready Pitch, `$design` accepts Ready Specification, `$plan` accepts
+Ready Design after confirming Accepted Specification, and `$implement`
+accepts Ready plan. Material edits downgrade affected artifacts in place. Use
+the shared first-screen presentation and visual key; do not invent parallel
+status badges, decorative headings, or duplicate handoff fields.
+Review and Ship remain outside this lifecycle.
+
+`sync-change` is only the user-requested manual checkpoint or repair path. It
+may be selected implicitly when both an exact artifact and explicit persistence
+intent exist. It does not perform automatic lifecycle writes or plan-to-task
+projection. This skill does not invoke it after a stage.
 
 ### Gen Stack brief
 
@@ -211,8 +218,8 @@ Bugfix is a Change classification. Title and summary revision is a
 cross-cutting authoring operation, not another role. Read `knowledge/gen-stack/src/work-items/index.md` when classification
 is uncertain; otherwise read the matching Guide:
 
-If the source is already an exact landed Pitch, Change coordination record,
-Change Specification, Change Design, or plan, do not reconstruct it through the
+If the source is already an exact landed Pitch, Change Specification, Change
+Design, or plan, do not reconstruct it through the
 general work-item authoring branch. An explicit persistence request with that
 exact source belongs to `sync-change`.
 
@@ -436,7 +443,7 @@ indeterminate expectation made visible. A Bugfix is blocked before dependent
 correction work when no accepted expectation defines corrected behavior or
 when unresolved Requirement subject or Architecture placement changes the
 authorized response. A missing required semantic Evaluation Protocol may be
-visible in a truthful draft but blocks ratification, Change coherence, and
+visible in a truthful Draft but blocks Ready state, Change coherence, and
 dependent planning.
 Derive the title and one- or two-sentence summary last from the authoritative
 body. After any external write, retrieve the persisted item and correct only

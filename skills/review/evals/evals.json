@@ -1,6 +1,6 @@
 {
   "skill_name": "review",
-  "suite_version": "0.4.0",
+  "suite_version": "1.0.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -91,7 +91,8 @@
       "prompt": "$review Implementation-focused checkpoint review of immutable synthetic diff cp-9. Report only the decision and actions a busy implementer needs, supported findings, a one-line assurance summary for each material area, material unknowns, and the exact boundary. Do not print the underlying checklists. The diff has one high-confidence null dereference at parser.ts:31; owner Implement; the existing parser-null check would verify correction.",
       "expected_output": "A compact exception-based checkpoint result with the null-dereference action first and no checklist dump.",
       "assertions": [
-        "Decision, required actions, findings, assurance summary, material unknowns, and review boundary are easy to locate.",
+        "The result starts with Subject, Mode, Focus, and Result, then Decision; required actions, findings, assurance summary, material unknowns, and review boundary are easy to locate.",
+        "The action is an A-1 vertical card, the finding is an F-1 vertical card, and the assurance table has no more than four columns.",
         "The action names the owner, required outcome, observable done condition, and finding identity.",
         "The result does not dump successful checklist items or bury the action behind a long narrative.",
         "Unassessed areas are marked unknown or not applicable rather than silently passed.",

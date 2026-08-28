@@ -2,7 +2,7 @@
 type: Explanation
 title: Deciding and realizing bounded software changes
 description: A recommended Process that carries a Signal through shaping, proportional uncertainty reduction, coherent change definition, implementation with focused review feedback, fresh integrated review, authorized shipping, and renewed observation.
-tags: [process, software-change, change, shape, pitch, research, investigation, change-specification, change-design, quick-change, implementation-planning, implementation, review, shipping, feedback, compaction]
+tags: [process, software-change, change, shape, pitch, research, investigation, change-specification, change-design, artifact-lifecycle, implementation-planning, implementation, review, shipping, feedback, compaction]
 status: draft
 sources:
   - id: gen-stack-overview
@@ -64,17 +64,15 @@ Signal, need, issue, or opportunity
           ↙               ↘
     $research         $investigate
           ↘               ↙
-                 Pitch
-                    ↓
-                 Change
-          $spec ⇄ $design
-             ↖ $quick-change ↗
-                    ↓
+             Ready Pitch
+                    ↓ $spec accepts Pitch
+        Change Specification ⇄ Change Design
+                    ↓ $plan accepts Ready Design
            Change coherence gate
                     ↓
-                  $plan
-                    ↓
-       $implement ⇄ focused review
+              Ready plan
+                    ↓ $implement accepts plan
+       Implementation ⇄ focused review
                     ↓
                  $review
                     ↓
@@ -95,8 +93,10 @@ these skills when it preserves their contracts and authority boundaries.
 Shaping is a focused Orientation activity that frames the proposed change as a
 Pitch. Research and investigation are optional uncertainty-reduction routes
 and may be entered from shaping or any later activity. Their evidence can
-return to a revised Pitch. Change Specification and Change Design co-evolve;
-`$quick-change` may produce both in one bounded response.
+return to a revised Pitch. Change Specification and Change Design co-evolve.
+The former combined `$quick-change` stage is deprecated; explicit `$spec`
+followed by `$design` now provides one simpler sequence with exact handoff
+acceptance.
 Implementation uses focused read-only review feedback at stable checkpoints and
 may repeat increments after findings. A fresh integrated review assesses the
 exact final candidate. Shipping produces new Observations and does not
@@ -133,19 +133,17 @@ force every Signal into a Change or every Change into delivery.
 | Learn and compact | What did the action establish, contradict, or render obsolete? | New Observations, bounded Results, repaired provenance, and authorized refinement or compaction | close or re-enter Orientation |
 
 Each activity follows [Running a change-realization
-stage](running-change-realization-stages.md). Its output may be conversational,
-host-native, or durable according to the artifact's own authority and required
-lifetime. When a focused capability deliberately remains independent of Gen
-Stack, the caller applying this Process owns the common stage handoff and corpus
-disposition around that capability's native artifact.
+stage](running-change-realization-stages.md). Pitch, Change Specification,
+Change Design, and plan share `Draft`, `Ready`, and `Accepted`, one canonical
+target, and an explicit Open items section. The active focused stage persists
+the first coherent Draft and later state changes; ordinary conversational edits
+remain unsynchronized. A valid forward-stage invocation accepts only the exact
+persisted Ready predecessor before dependent work.
 
-Persisting an exact stage artifact is a cross-cutting representation operation,
-not another activity or readiness gate in this Process. When the complete exact
-artifact and explicit persistence intent are both present, apply
-[Synchronizing change artifacts with work-item
-hosts](../work-items/synchronizing-change-artifacts.md) without re-authoring the
-artifact or advancing its maturity. Host-native implementation records may be
-projected from an exact plan only through that separately authorized operation.
+User-requested manual checkpoints and repairs use [Synchronizing change
+artifacts with work-item hosts](../work-items/synchronizing-change-artifacts.md).
+Sync Change copies exact current state; it does not advance lifecycle or create
+derived implementation records.
 
 ## Specification-first and design-first convergence
 
@@ -160,12 +158,13 @@ implementable merely because it is normative. The second activity reconciles
 the first; a material change sends the affected constituent back through its
 own activity.
 
-The resulting Change coordinates two sibling artifacts. The Change
+One canonical Change work item coordinates the sibling artifacts. The Change
 Specification owns why and what and remains agnostic about implementation-level
 Evaluations and tests. The Change Design owns how, including technical
 realization of required Requirement and Architecture Protocols and optional
-Implementation-conformance Evaluations. The Change binds their exact revisions
-and records whether reconciliation establishes coherence.
+Implementation-conformance Evaluations. Their current states, exact revisions,
+Open items, and reconciliation determine coherence directly; a separate Change
+coordination handoff is unnecessary.
 
 ## Readiness gates
 
@@ -190,15 +189,22 @@ Planning may rely on the Change as coherent only when:
 - no blocking product, Requirement, durable Architecture, or Protocol-semantic
   decision has been delegated to Design, planning, or implementation.
 
+At the `$plan` boundary the Specification is `Accepted`, the exact Design is
+persisted `Ready`, and both have no open items. The invocation verifies their
+bindings and accepts that Design before planning. A material later edit returns
+the affected artifact and its dependents to `Draft` in place.
+
 ### Implementation readiness
 
-Implementation may rely on the plan when it is bound to an exact coherent
+Implementation may rely on the plan when it is persisted `Ready`, has no Open
+items, and is bound to an exact coherent
 Change and exact Change Specification and Change Design revisions and identifies affected Implementation Units,
 dependencies, sequence, Evaluation or testing work, migration, observability,
 rollback, recovery, proportional Architecture, Requirements, Evaluations, and
 Implementation review checkpoints, final integrated review handoff, and
-remaining authorized local choices. An exploratory plan may exist earlier but
-must not claim this readiness.
+remaining authorized local choices. A partial plan may exist earlier but must
+remain `Draft`. A valid `$implement` invocation accepts the exact plan
+before mutation but still requires separate mutation authority.
 
 ### Release readiness
 

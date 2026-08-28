@@ -1,80 +1,63 @@
 ---
 name: implement
-description: Explicitly invoked Gen Stack stage that executes an authorized implementation-ready plan for one exact coherent software change. Select only when the user directly invokes `$implement` or the corresponding host control; never select it from an unprefixed natural-language request, even when that request resembles implementation. Not for inventing missing requirements or architecture, broad opportunistic cleanup, independently changing the plan's meaning, treating checkpoint review as final assurance, or shipping externally.
+description: Explicit-only Gen Stack stage that accepts an exact persisted Ready plan, then executes separately authorized bounded implementation and prepares one evidenced candidate for review. Select only for $implement or the corresponding host control. Not for inventing meaning, changing plan intent, treating checkpoint review as final assurance, or shipping.
 ---
 
 # Implement
 
-Produce one identifiable candidate Implementation revision that realizes the
-authorized plan within accepted meaning and is ready for independent review.
+Use only after deliberate `$implement` selection. Natural-language similarity
+or a Ready plan does not activate this stage.
 
-Use only after the user explicitly selects `$implement` or the corresponding
-host control. Natural-language requests to build, fix, or implement do not
-activate this Gen Stack stage. Selection alone grants no mutation authority;
-derive it from the complete request, repository policy, and host controls.
+Read through active AXM scope; in this workspace read:
 
-This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
-scope; in this source workspace read:
+1. `knowledge/gen-stack/src/processes/running-change-realization-stages.md`;
+2. `knowledge/gen-stack/src/processes/deciding-and-realizing-software-changes.md`;
+3. `knowledge/gen-stack/src/implementation/implementing-a-change-plan.md`.
 
-- `knowledge/gen-stack/src/processes/running-change-realization-stages.md`; and
-- `knowledge/gen-stack/src/implementation/implementing-a-change-plan.md`.
+## Preflight and acceptance
 
-Also obey repository-local instructions and use applicable technical skills for
-the implementation medium.
+Recover the canonical target after compaction. Verify the exact plan is
+persisted `Ready` with no Open items, its bound Specification and Design are
+`Accepted`, all bindings and readback are current, and no concurrent change
+exists. Persist plan `Ready → Accepted` before implementation mutation.
 
-## Preconditions and authority
+Plan acceptance is not mutation authority. Independently verify the user,
+repository policy, and host authorize the bounded implementation. Stop before
+mutation if either precondition is missing.
 
-Bind the implementation-ready plan, coherent Change, exact Change Specification
-and Change Design revisions, current
-repository revision, authorized mutation boundary, allowed tools, code
-execution, network, credentials, and external effects. Preserve unrelated user
-changes. If the plan is exploratory, stale, or no longer coherent with realized
-state, stop and recommend returning through an explicitly selected `$plan`.
+## Execute
 
-Implementation may make local reversible choices within delegated boundaries.
-It may not decide new product behavior, obligations, durable Architecture,
-architecture-significant tradeoffs, or release.
+1. Bind the Change, accepted artifacts, current Implementation, plan boundary,
+   repository instructions, checks, review checkpoints, and stopping condition.
+2. Preserve unrelated user and agent work.
+3. Implement in the plan's safe increments without rewriting its meaning.
+4. Execute required Protocol and ordinary verification feedback at the planned
+   points. Keep pass, fail, unknown, inconclusive, skipped, stale, and
+   harness-error distinct.
+5. Use fresh read-only focused review only at planned material checkpoints.
+   The implementer owns corrections.
+6. Disposition each reviewer action as `resolved`, `returned-upstream`,
+   `evidence-needed`, `disputed`, or no-longer-applicable, with exact subject
+   and evidence.
+7. Re-review claims made stale by material correction.
+8. Return changed desired state, durable Architecture, Protocol meaning, or
+   plan intent to its owning stage. Do not work around it.
+9. Prepare the exact candidate, performed checks, deviations, residual risk,
+   corpus effect, and fresh integrated-review handoff.
 
-## Implement
+A same-context self-check is non-independent and may be used only when the plan
+permits it. It never satisfies fresh final review.
 
-1. Reconfirm the current state and first safe step before mutation.
-2. Apply bounded changes in coherent increments that preserve invariants,
-   compatibility, repository conventions, and recovery options.
-3. Run proportionate checks and required Protocol Executions at the point where
-   they can distinguish correct from incorrect realization. Preserve exact
-   inputs, environment, outcome, limitations, and tool or harness failures.
-4. At each planned focused-review checkpoint, bind an exact immutable subject
-   and delegate one fresh, read-only `reviewer` assignment with the planned
-   Architecture, Requirements, Evaluations, or Implementation focus. Never let
-   the reviewer mutate the candidate. If fresh delegation is unavailable, use
-   only a plan-authorized fallback and label it non-independent.
-5. Disposition every required reviewer action as `resolved`,
-   `returned-upstream`, `evidence-needed`, `disputed`, or `superseded`. Record
-   the response, resulting revision or route, and evidence. Re-review affected
-   claims after material change; do not silently drop or mark a finding fixed.
-6. Return discoveries to their owner and recommend the explicit stage when
-   needed: `$spec` for outcome or obligation changes, `$design` for durable or
-   architecture-significant response changes, `$plan` for sequencing changes,
-   and `$research` or `$investigate` for unresolved evidence questions. Do not
-   activate the recommended stage.
-7. Record material deviation from the plan or Design, its evidence and reason,
-   and whether the responsible authority accepted, rejected, or has not decided
-   it. Do not rewrite earlier artifacts to conceal divergence.
-8. Inspect the final diff and persisted state. Remove only artifacts created by
-   this implementation whose removal is safe and intended.
-9. Prepare the exact candidate identity, changed units, realized authorities,
-   performed and missing checks, checkpoint review identities and action
-   dispositions, residual risks, recovery state, corpus disposition, and handoff
-   to a fresh integrated final review. Earlier checkpoint review is evidence,
-   not final assurance.
+## Invalidation
 
-## Completion
+If implementation reveals a material flaw in an Accepted Specification,
+Design, or plan, apply the shared update-in-place invalidation contract before
+dependent work resumes.
 
-Complete with an identifiable candidate, attributable evidence, and reconciled
-or blocking deviations and review actions. Report partial state and the next
-safe action on failure. Never repeat a mutation whose prior outcome is unknown
-or claim a rollback that was not observed.
+## Done
 
-Implementation completion does not establish Requirement satisfaction,
-Architecture realization, verified closure, or release readiness. Recommend a
-fresh integrated `$review`; do not activate it or ship the candidate.
+Stop with an evidenced candidate for `$review` or an exact upstream blocker,
+using the shared compact handoff.
+Review does not accept Implementation, and no checkpoint result grants release
+authority. Do not merge, deploy, publish, or perform any other final action;
+`$ship` remains explicit and separately authorized.
