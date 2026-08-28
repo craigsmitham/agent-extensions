@@ -7,6 +7,9 @@ the exact Requirement-satisfaction and Architecture-realization Evaluation
 Protocol changes, and reconciles design-first proposals without treating their
 mechanism as accepted desired state.
 
+Spec is a deliberate Gen Stack stage. Select `$spec` explicitly; ordinary
+requests for requirements or specifications do not activate this workflow.
+
 When a shaped Pitch is supplied, Spec preserves it as provisional provenance
 and determines the actual desired-state delta rather than copying anticipated
 impact into accepted meaning.

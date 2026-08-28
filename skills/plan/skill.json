@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "plan",
-  "version": "0.5.0",
-  "description": "Plans evidence-guided realization and focused review feedback for one coherent Change bound to exact accepted revisions",
+  "version": "0.6.0",
+  "description": "Explicit-only stage for planning evidence-guided realization and focused review for one coherent Change; never select from unprefixed natural language",
   "keywords": [
     "implementation-plan",
     "plan-projection",

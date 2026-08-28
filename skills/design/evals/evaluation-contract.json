@@ -23,7 +23,7 @@
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic pitch-first, specification-first, design-first, architecture-realization, evaluation-realization, optional implementation-conformance, positive-routing, and Spec-collision cases.",
+    "case_source": "Synthetic pitch-first, specification-first, design-first, architecture-realization, evaluation-realization, optional implementation-conformance, explicit-selection, and implicit-abstention cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -44,7 +44,7 @@
       "started_at",
       "ended_at"
     ],
-    "routing_boundary": "Expose only catalog names and descriptions until a single selection or required ordered composition is recorded.",
+    "routing_boundary": "Expose only catalog names, descriptions, and host invocation policy; explicit invocation selects design, while the same or adjacent unprefixed semantic request must abstain or clarify without side effects.",
     "execution_boundary": "Activate the target in a disposable task-local workspace with synthetic accepted meaning and no implementation or release authority.",
     "support_paths": [
       "knowledge/gen-stack/src"
@@ -134,7 +134,7 @@
       {
         "gate": "Routing and execution claims remain distinct",
         "case_id": 4,
-        "assertion": "Design is not selected for a why-and-what clarification request, and no task side effect occurs before selection."
+        "assertion": "Design is not selected because the host requires explicit invocation."
       }
     ]
   },

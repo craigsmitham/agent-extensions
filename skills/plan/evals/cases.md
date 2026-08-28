@@ -2,7 +2,7 @@
 
 The machine-readable authority is `evals.json`. Run each case in a fresh,
 disposable context with the Gen Stack knowledge support path. The suite covers
-positive routing, one adjacent collision, stage-specific happy and boundary
+explicit selection, implicit abstention, stage-specific happy and boundary
 execution, evidence-guided Architecture and Requirement Protocol execution,
 late or windowed Evaluations, missing Protocol meaning, proportional focused
 review checkpoints, no-ceremony behavior, external work-item-projection

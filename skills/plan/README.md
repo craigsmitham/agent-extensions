@@ -9,6 +9,9 @@ Requirements, Evaluations, and Implementation review feedback, and identifies
 affected units, migration, rollout, recovery, and upstream return conditions
 without rewriting accepted meaning or inventing delivery commitments.
 
+Plan is a deliberate Gen Stack stage. Select `$plan` explicitly; ordinary
+planning requests do not activate this workflow.
+
 Plan produces the canonical implementation course but does not create tracker
 or issue records. Explicit projection of an exact plan into host-native
 implementation records belongs to the pack's host-neutral `sync-change` skill.

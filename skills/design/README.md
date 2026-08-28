@@ -8,6 +8,9 @@ Architecture to technical realization and designs how every required
 Requirement-satisfaction and Architecture-realization Evaluation Protocol is
 implemented.
 
+Design is a deliberate Gen Stack stage. Select `$design` explicitly; ordinary
+technical-design requests do not activate this workflow.
+
 It can answer a sufficiently bounded Pitch, treating its rough response
 contours as hypotheses rather than selected Design. It supports pitch-first,
 specification-first, and design-first entry, but converges with

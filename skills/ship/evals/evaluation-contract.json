@@ -23,7 +23,7 @@
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic missing-authority, review-only, positive-routing, and readiness-collision cases.",
+    "case_source": "Synthetic missing-authority, review-only, explicit-selection, and implicit-abstention cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -44,7 +44,7 @@
       "started_at",
       "ended_at"
     ],
-    "routing_boundary": "Expose only catalog names and descriptions until a single selection or required ordered composition is recorded.",
+    "routing_boundary": "Expose only catalog names, descriptions, and host invocation policy; explicit invocation selects ship, while unprefixed release or readiness-review language must abstain or clarify without side effects.",
     "execution_boundary": "Activate the target with synthetic release metadata and no real credentials or destinations; mutation is allowed only when the harness provides the exact declared synthetic target.",
     "support_paths": [
       "knowledge/gen-stack/src"
@@ -122,7 +122,7 @@
       {
         "gate": "Routing and execution claims remain distinct",
         "case_id": 4,
-        "assertion": "Ship is not selected for readiness assessment alone and no task side effect occurs before selection."
+        "assertion": "Ship is not selected because the host requires explicit invocation."
       }
     ]
   },

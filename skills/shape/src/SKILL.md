@@ -1,6 +1,6 @@
 ---
 name: shape
-description: Shapes raw or mixed change context into a rough, bounded, repository-grounded Pitch with problem or opportunity, intended outcome, appetite, boundaries, anticipated Gen Stack impact, an inline filesystem breadboard, response contours, risks, authority, and a precise requested response. Use before spec or design when change intent needs framing or elicitation. Not for accepting Requirements or Architecture, prescribing implementation-level Evaluations or tests, selecting Design, planning, implementing, prioritizing, or authorizing change.
+description: Explicitly invoked Gen Stack stage that shapes raw or mixed change context into a rough, bounded, repository-grounded Pitch. Select only when the user directly invokes `$shape` or the corresponding host control; never select it from an unprefixed natural-language request, even when that request resembles shaping. Not for accepting desired meaning, selecting Design, planning, implementing, prioritizing, or authorizing change.
 ---
 
 # Shape
@@ -8,6 +8,11 @@ description: Shapes raw or mixed change context into a rough, bounded, repositor
 Turn one raw or mixed change Signal into a Pitch that can be discussed,
 refined, or answered by specification, design, research, investigation, or the
 applicable human authority.
+
+Use only after the user explicitly selects `$shape` or the corresponding host
+control. Natural-language similarity alone does not activate this stage.
+Selection alone grants no semantic acceptance, mutation, or downstream-stage
+authority; derive those independently from the request, policy, and host.
 
 This skill belongs to the Gen Stack pack. Probe these exact workspace-relative
 paths first and read them when present:
@@ -143,7 +148,8 @@ acceptance from silence or Pitch polish.
 ## Done
 
 Stop when the Pitch has a truthful disposition and either an exact requested
-response or a supported termination. Route a combined specification-and-design
-request to `quick-change`; otherwise route to `spec` or `design` as requested.
+response or a supported termination. Recommend `$quick-change` for a combined
+specification-and-design response; otherwise recommend `$spec` or `$design` as
+appropriate. A recommendation does not activate the next stage.
 Do not continue into those activities, planning, implementation, repository
 mutation, or external action unless separately invoked and authorized.

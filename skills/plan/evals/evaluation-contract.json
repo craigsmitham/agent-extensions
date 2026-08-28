@@ -23,7 +23,7 @@
       "routing",
       "execution"
     ],
-    "case_source": "Synthetic coherent-input, incoherent-input, evidence-guided realization, late-evaluation, missing-Protocol, material focused-review, proportional no-ceremony, positive-routing, product-roadmap collision, and external work-item projection collision cases.",
+    "case_source": "Synthetic coherent-input, incoherent-input, evidence-guided realization, late-evaluation, missing-Protocol, material focused-review, proportional no-ceremony, explicit-selection, implicit-abstention, and implicit Sync Change projection cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -44,7 +44,7 @@
       "started_at",
       "ended_at"
     ],
-    "routing_boundary": "Expose only catalog names and descriptions until a single selection or required ordered composition is recorded.",
+    "routing_boundary": "Expose only catalog names, descriptions, and host invocation policy; explicit invocation selects plan, unprefixed planning language abstains, and exact plan persistence intent may select sync-change without side effects.",
     "execution_boundary": "Activate the target in a disposable task-local workspace with synthetic exact revisions and no implementation mutation or scheduling authority.",
     "support_paths": [
       "knowledge/gen-stack/src"

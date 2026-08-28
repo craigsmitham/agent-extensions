@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "quick-change",
-  "version": "0.1.0",
-  "description": "Produces one Change Specification and Change Design together, reconciles their exact revisions, and returns a Change coordination handoff",
+  "version": "0.2.0",
+  "description": "Explicit-only stage for producing and reconciling one Change Specification and Change Design together; never select from unprefixed natural language",
   "keywords": [
     "quick-change",
     "combined-specification-design",

@@ -1,6 +1,6 @@
 {
   "skill_name": "spec",
-  "suite_version": "0.3.0",
+  "suite_version": "0.4.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -32,16 +32,16 @@
     {
       "id": 3,
       "stage": "routing",
-      "prompt": "/spec Distill this need into a coherent Change Specification with Requirement impact and verification conditions.",
+      "prompt": "$spec Distill this need into a coherent Change Specification with Requirement impact and verification conditions.",
       "expected_selection": "spec",
       "catalog_neighbors": [
         "design",
         "plan"
       ],
       "assertions": [
-        "The selected skill is spec.",
+        "The user's explicit skill invocation selects spec.",
         "No neighboring skill is selected for a job it does not own.",
-        "Routing uses only catalog names and descriptions.",
+        "The explicit invocation is treated as a control rather than evidence of implicit routing.",
         "No task side effect occurs before selection."
       ]
     },
@@ -49,16 +49,16 @@
       "id": 4,
       "stage": "routing",
       "prompt": "Design the technical response for an already coherent specification; compare alternatives for state ownership and failure recovery.",
-      "expected_selection": "design",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
         "design",
         "plan"
       ],
       "assertions": [
-        "Spec is not selected for a request whose desired outcome is only a technical response, and no task side effect occurs before selection.",
-        "Design is the owned outcome.",
-        "Routing does not rewrite the supplied Specification.",
-        "No implementation begins before selection."
+        "Spec is not selected because the host requires explicit invocation.",
+        "Design is not selected merely from natural-language similarity because it is also explicit-only.",
+        "The routing result records abstention or clarification without rewriting the supplied Specification.",
+        "No task side effect occurs before selection."
       ]
     },
     {

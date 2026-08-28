@@ -1,6 +1,6 @@
 ---
 name: review
-description: Performs a read-only focused checkpoint review or an independent integrated review of one exact candidate against its Change, exact Change Specification and Change Design revisions, plan, accepted Requirements and Architecture, Evaluation evidence, operational conditions, and corpus coherence. Use for architecture, requirements, evaluation, implementation, code, or release-readiness review. Not for silently fixing the candidate, collapsing distinct assurance claims, accepting desired state, or authorizing merge, deployment, publication, or release.
+description: Explicitly invoked Gen Stack stage that performs a read-only focused checkpoint review or independent integrated review of one exact candidate. Select only when the user directly invokes `$review` or the corresponding host control; never select it from an unprefixed natural-language request, even when that request resembles review. Not for silently fixing the candidate, collapsing distinct assurance claims, accepting desired state, or authorizing merge, deployment, publication, or release.
 ---
 
 # Review
@@ -8,6 +8,11 @@ description: Performs a read-only focused checkpoint review or an independent in
 Assess one exact immutable subject, lead with evidence-backed findings and
 actions, and recommend the next route without changing the subject or claiming
 release authority.
+
+Use only after the user explicitly selects `$review` or the corresponding host
+control. Natural-language review requests do not activate this Gen Stack stage.
+Selection grants read-only assessment authority only within the complete
+request and never grants mutation or release authority.
 
 This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
 scope; in this source workspace read:
@@ -27,9 +32,9 @@ ambiguous subject. Checkpoint mode uses one of `architecture`, `requirements`,
 `evaluations`, or `implementation`; final mode uses `integrated`.
 
 Review is read-only by default. If the user also asks for fixes, complete and
-identify the review first, then route changes through `implement` and review the
-new revision. Review findings and a readiness recommendation do not confer
-semantic acceptance or release authority.
+identify the review first, then recommend explicit `$implement` selection and a
+separate review of the new revision. Review findings and a readiness
+recommendation do not confer semantic acceptance or release authority.
 
 A checkpoint review supplies course-correction feedback for one stable
 increment. It never establishes release readiness. A final review independently
@@ -72,6 +77,7 @@ recommendation: `ready-for-release-decision`,
 `more-evidence-required`, or `unable-to-assess`. If no finding is supported,
 state that for the inspected scope without claiming universal correctness.
 
-Route candidate changes back to `implement`, meaning changes to `spec` or
-`design`, and evidence gaps to `research` or `investigate`. Only a separately
-authorized release decision is eligible for `ship`.
+Recommend `$implement` for candidate changes, `$spec` or `$design` for meaning
+changes, and `$research` or `$investigate` for evidence gaps. Only a separately
+authorized release decision is eligible for an explicitly selected `$ship`.
+These recommendations do not activate another stage.

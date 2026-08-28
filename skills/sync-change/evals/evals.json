@@ -1,6 +1,6 @@
 {
   "skill_name": "sync-change",
-  "suite_version": "0.1.0",
+  "suite_version": "0.2.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -33,11 +33,12 @@
       "id": 3,
       "stage": "routing",
       "prompt": "Write a new Change Specification for this bounded account-retention outcome and help me decide its unresolved requirement.",
-      "expected_selection": "spec",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": ["sync-change", "gen-stack", "design"],
       "assertions": [
-        "Spec, not sync-change, is selected for authoring new why-and-what meaning.",
-        "No host mutation occurs before routing.",
+        "Sync-change is not selected because no exact landed artifact exists.",
+        "Spec is not selected merely from natural-language similarity because it is explicit-only.",
+        "The routing result records abstention or clarification without authoring or host mutation.",
         "The unresolved Requirement decision remains with its authority."
       ]
     },
@@ -45,12 +46,39 @@
       "id": 4,
       "stage": "routing",
       "prompt": "Publish the exact reviewed implementation revision to the declared release target under the supplied release approval.",
-      "expected_selection": "ship",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": ["sync-change", "review", "implement"],
       "assertions": [
-        "Ship, not sync-change, is selected for the final release action.",
+        "Sync-change is not selected because the request is a release action rather than artifact persistence.",
+        "Ship is not selected merely from natural-language similarity because it is explicit-only.",
         "Work-item persistence is not confused with release publication.",
+        "The routing result records abstention or clarification and no side effect occurs."
+      ]
+    },
+    {
+      "id": 14,
+      "stage": "routing",
+      "prompt": "The Change Design is complete. Continue to whatever comes next.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": ["sync-change", "plan", "gen-stack"],
+      "assertions": [
+        "Sync-change is not selected merely because a stage artifact is complete.",
+        "No persistence intent or exact persistence target is invented.",
+        "No focused next stage is activated without explicit selection.",
         "No side effect occurs before routing."
+      ]
+    },
+    {
+      "id": 15,
+      "stage": "routing",
+      "prompt": "Create a tracker item from these rough notes and fill in whatever specification details are missing.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": ["sync-change", "spec", "gen-stack"],
+      "assertions": [
+        "Sync-change is not selected because the source is rough and incomplete rather than an exact landed artifact.",
+        "The request to invent missing meaning is not treated as representation-preserving synchronization.",
+        "Spec is not selected merely from natural-language similarity because it is explicit-only.",
+        "No tracker mutation occurs before routing."
       ]
     },
     {

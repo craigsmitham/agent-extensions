@@ -20,7 +20,7 @@
   "scope": {
     "intended_use": "Synchronizing one exact landed Pitch, Change coordination record, Change Specification, Change Design, or implementation plan with a host-neutral work-item system, and explicitly projecting one exact plan into host-native implementation records without re-authoring or expanding authority.",
     "stages": ["routing", "execution"],
-    "case_source": "Synthetic exact-artifact synchronization, missing-source, canonical-home, concurrency, harmless-normalization, unavailable-readback, inadequate-host, plan-projection, partial-batch, authority, and routing-collision cases.",
+    "case_source": "Synthetic exact-artifact synchronization, missing-source, stage-completion abstention, rough-source abstention, canonical-home, concurrency, harmless-normalization, unavailable-readback, inadequate-host, plan-projection, partial-batch, authority, and routing-collision cases.",
     "excluded_claims": [
       "Independent conformity approval",
       "Production readiness",
@@ -42,7 +42,7 @@
       "started_at",
       "ended_at"
     ],
-    "routing_boundary": "Expose only catalog names and descriptions until a single selection or required abstention is recorded.",
+    "routing_boundary": "Expose only catalog names and descriptions; select sync-change only when an exact complete landed artifact and explicit persistence intent are both present, otherwise abstain without side effects.",
     "execution_boundary": "Activate the target in a disposable task-local workspace with synthetic public artifacts and host observations; perform no real external mutation.",
     "support_paths": ["knowledge/gen-stack/src"]
   },
@@ -148,7 +148,7 @@
       {
         "gate": "Routing and execution claims remain distinct",
         "case_id": 3,
-        "assertion": "No host mutation occurs before routing."
+        "assertion": "Sync-change is not selected because no exact landed artifact exists."
       }
     ]
   },

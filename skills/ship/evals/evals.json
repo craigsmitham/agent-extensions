@@ -1,6 +1,6 @@
 {
   "skill_name": "ship",
-  "suite_version": "0.2.0",
+  "suite_version": "0.3.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -30,16 +30,16 @@
     {
       "id": 3,
       "stage": "routing",
-      "prompt": "/ship Merge exact reviewed revision r91 into the declared synthetic target under the supplied release approval, then verify persisted state.",
+      "prompt": "$ship Merge exact reviewed revision r91 into the declared synthetic target under the supplied release approval, then verify persisted state.",
       "expected_selection": "ship",
       "catalog_neighbors": [
         "review",
         "implement"
       ],
       "assertions": [
-        "The selected skill is ship.",
+        "The user's explicit skill invocation selects ship.",
         "No neighboring skill is selected for a job it does not own.",
-        "Routing uses only catalog names and descriptions.",
+        "The explicit invocation is treated as a control rather than evidence of implicit routing.",
         "No task side effect occurs before selection."
       ]
     },
@@ -47,16 +47,16 @@
       "id": 4,
       "stage": "routing",
       "prompt": "Review whether candidate r92 is release-ready and report evidence gaps. Do not merge or deploy it.",
-      "expected_selection": "review",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
         "review",
         "implement"
       ],
       "assertions": [
-        "Ship is not selected for readiness assessment alone and no task side effect occurs before selection.",
-        "Review owns the requested outcome.",
-        "The explicit no-mutation boundary is preserved.",
-        "No final action is attempted."
+        "Ship is not selected because the host requires explicit invocation.",
+        "Review is not selected merely from natural-language similarity because it is also explicit-only.",
+        "The routing result records abstention or clarification and preserves the no-mutation boundary.",
+        "No final action or other task side effect occurs before selection."
       ]
     }
   ]

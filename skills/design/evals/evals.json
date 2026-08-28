@@ -1,6 +1,6 @@
 {
   "skill_name": "design",
-  "suite_version": "0.3.0",
+  "suite_version": "0.4.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -33,16 +33,16 @@
     {
       "id": 3,
       "stage": "routing",
-      "prompt": "/design Compare technical alternatives and develop the proportional Change Design for this coherent specification.",
+      "prompt": "$design Compare technical alternatives and develop the proportional Change Design for this coherent specification.",
       "expected_selection": "design",
       "catalog_neighbors": [
         "spec",
         "plan"
       ],
       "assertions": [
-        "The selected skill is design.",
+        "The user's explicit skill invocation selects design.",
         "No neighboring skill is selected for a job it does not own.",
-        "Routing uses only catalog names and descriptions.",
+        "The explicit invocation is treated as a control rather than evidence of implicit routing.",
         "No task side effect occurs before selection."
       ]
     },
@@ -50,16 +50,16 @@
       "id": 4,
       "stage": "routing",
       "prompt": "Clarify why this change matters, which obligations change, and what observable conditions define success; do not select a solution yet.",
-      "expected_selection": "spec",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
         "spec",
         "plan"
       ],
       "assertions": [
-        "Design is not selected for a why-and-what clarification request, and no task side effect occurs before selection.",
-        "Spec owns the requested outcome.",
-        "Routing does not invent a technical response.",
-        "No implementation begins before selection."
+        "Design is not selected because the host requires explicit invocation.",
+        "Spec is not selected merely from natural-language similarity because it is also explicit-only.",
+        "The routing result records abstention or clarification without inventing a technical response.",
+        "No task side effect occurs before selection."
       ]
     },
     {

@@ -1,6 +1,6 @@
 {
   "skill_name": "plan",
-  "suite_version": "0.5.0",
+  "suite_version": "0.6.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -30,16 +30,16 @@
     {
       "id": 3,
       "stage": "routing",
-      "prompt": "/plan Turn this exact coherent Change Specification into an implementation-ready sequence with verification and rollback.",
+      "prompt": "$plan Turn this exact coherent Change Specification into an implementation-ready sequence with verification and rollback.",
       "expected_selection": "plan",
       "catalog_neighbors": [
         "spec",
         "implement"
       ],
       "assertions": [
-        "The selected skill is plan.",
+        "The user's explicit skill invocation selects plan.",
         "No neighboring skill is selected for a job it does not own.",
-        "Routing uses only catalog names and descriptions.",
+        "The explicit invocation is treated as a control rather than evidence of implicit routing.",
         "No task side effect occurs before selection."
       ]
     },

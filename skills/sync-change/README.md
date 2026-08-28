@@ -6,6 +6,11 @@ without re-authoring it. It can also deliberately project an exact plan into
 host-native implementation records when that external mutation is explicitly
 requested.
 
+The skill may be selected implicitly only when the complete exact landed
+artifact and an explicit persistence request are both present. Completing a
+stage, producing a handoff, or merely having tracker access does not activate
+synchronization, and selection does not independently authorize mutation.
+
 The skill is host-neutral: it inspects the selected system's native fields,
 relationships, representation, revisions, and readback behavior rather than
 prescribing one vendor's model. It preserves one canonical artifact home,

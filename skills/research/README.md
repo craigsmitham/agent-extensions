@@ -16,10 +16,10 @@ does not modify state, make the caller's decision, or apply its findings.
 - Independent framing matters because prior analysis contains a favored
   hypothesis, diagnosis, or solution.
 
-Use `investigate` instead to diagnose a concrete observed condition. Ordinary
-factual lookup does not need this workflow. On OpenAI hosts, Research is
-explicit-selection-only and does not activate from ordinary research-like
-language.
+Use `$investigate` instead to diagnose a concrete observed condition. Ordinary
+factual lookup does not need this workflow. Research is explicit-selection-only
+and does not activate from ordinary research-like language; supported hosts use
+their native invocation-policy control to enforce that portable contract.
 
 ## Install
 
@@ -36,14 +36,14 @@ extensions.
 Frame questions without gathering evidence:
 
 ```text
-/research Frame the questions most likely to change the decision about a
+$research Frame the questions most likely to change the decision about a
 limited pilot. Stop after returning the Research Brief.
 ```
 
 Research explicit questions with a concrete limit:
 
 ```text
-/research Use current public evidence to answer Q1 and Q2 below. Preserve both
+$research Use current public evidence to answer Q1 and Q2 below. Preserve both
 IDs and stop after five sources. ...
 ```
 

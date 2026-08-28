@@ -1,12 +1,17 @@
 ---
 name: spec
-description: Distills a bounded software-change need into the Change Specification for one Change, with human-ratifiable Intent, Requirement, Architecture, constraint, and semantic Evaluation Protocol changes. Use for requirements clarification, change specification, acceptance conditions, or reconciling a design-first proposal with desired state. Not for Change coordination, selecting the technical response, implementation-level Evaluations or tests, planning, coding, or accepting decisions for the human authority.
+description: Explicitly invoked Gen Stack stage that distills one bounded software-change need into its Change Specification. Select only when the user directly invokes `$spec` or the corresponding host control; never select it from an unprefixed natural-language request, even when that request resembles specification. Not for Change coordination, selecting the technical response, implementation-level Evaluations or tests, planning, coding, or accepting decisions for the human authority.
 ---
 
 # Spec
 
 Produce the why-and-what artifact for one bounded Change without taking over
 Change coordination, Change Design, or semantic authority.
+
+Use only after the user explicitly selects `$spec` or the corresponding host
+control. Natural-language similarity alone does not activate this stage.
+Selection alone grants no semantic acceptance, mutation, or downstream-stage
+authority.
 
 This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
 scope; in this source workspace read, in order:
@@ -77,6 +82,6 @@ semantic Protocol blocks ratification, Change coherence, and dependent
 planning. Ratification binds one exact revision but does not accept Design,
 establish coherence, authorize implementation, or verify delivery.
 
-Route a needed technical response to `design`, a combined explicitly requested
-specification-and-design job to `quick-change`, a diagnostic gap to
-`investigate`, and external evidence uncertainty to `research`.
+Recommend `$design` for a needed technical response, `$quick-change` for a
+combined response, `$investigate` for a diagnostic gap, or `$research` for
+external evidence uncertainty. A recommendation does not activate that stage.

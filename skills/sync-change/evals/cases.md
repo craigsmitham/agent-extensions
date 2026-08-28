@@ -4,7 +4,10 @@ The versioned suite covers routing and activated execution separately.
 
 - Exact landed artifact persistence selects Sync Change rather than rerunning
   Spec, Design, Plan, or Ship.
-- New semantic authoring and final release actions route to their own skills.
+- New semantic authoring and final release actions abstain because their owning
+  stages require explicit selection.
+- Stage completion without persistence intent and rough notes without an exact
+  landed artifact do not activate synchronization.
 - Complete sources remain required; summaries and handoffs are insufficient.
 - Native host contracts are inspected without importing vendor-specific fields,
   labels, workflows, or hierarchy into portable behavior.

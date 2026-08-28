@@ -1,12 +1,17 @@
 ---
 name: plan
-description: Produces an implementation-ready, evidence-guided plan for one exact coherent Change and its exact Change Specification and Change Design revisions, sequencing architectural realization, required Evaluation feedback, focused Architecture, Requirements, Evaluations, and Implementation review checkpoints, affected units, migration, rollout, recovery, and handoffs without rewriting accepted meaning. Use when a defined change needs implementation decomposition or execution sequencing. Not for creating external work items, clarifying desired state, selecting unresolved architecture, inventing Evaluation Protocol meaning, implementing, prioritizing, or treating an exploratory outline as authorization.
+description: Explicitly invoked Gen Stack stage that produces an implementation-ready, evidence-guided plan for one exact coherent Change. Select only when the user directly invokes `$plan` or the corresponding host control; never select it from an unprefixed natural-language request, even when that request resembles planning. Not for creating external work items, clarifying desired state, selecting unresolved architecture, inventing Evaluation Protocol meaning, implementing, prioritizing, or treating an exploratory outline as authorization.
 ---
 
 # Plan
 
 Turn one exact coherent Change into a safe, reviewable implementation
 course that an implementer can execute without rediscovering material reasoning.
+
+Use only after the user explicitly selects `$plan` or the corresponding host
+control. Natural-language similarity alone does not activate this stage.
+Selection alone grants no mutation, implementation, or downstream-stage
+authority.
 
 This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
 scope; in this source workspace read:
@@ -20,15 +25,15 @@ Bind the plan to the exact Change, Change Specification, Change Design, accepted
 Architecture, required Requirement-satisfaction and Architecture-realization
 Evaluation Protocols, current Implementation, and authority revisions. Verify
 the change-coherence gate. Missing or disputed Protocol claims, criteria,
-coverage, or judgment return to `spec`; missing technical realization of an
-accepted Protocol returns to `design`.
+coverage, or judgment return to the authority owning `$spec`; missing technical
+realization of an accepted Protocol returns to the authority owning `$design`.
 
 A plan sequences realization. It does not accept Requirements or Architecture,
 choose an unresolved response, set priority, assignment, estimate, target date,
 create external work items, or release. An exploratory plan may support a
-decision but must say it is not implementation-ready. Route an explicitly
-requested projection of the exact plan into host-native implementation records
-to `sync-change` after the plan exists.
+decision but must say it is not implementation-ready. If this invocation also
+contains an explicit persistence request, report the exact plan as eligible for
+`sync-change` after the plan exists; do not perform or activate synchronization.
 
 ## Plan
 
@@ -95,4 +100,5 @@ Preserve absent, pending, inconclusive, skipped, stale, and harness-error
 evidence rather than turning it into pass or fail.
 
 Only an `implementation-ready` plan with explicit mutation authority is
-eligible for `implement`. Do not implement merely because the plan is complete.
+eligible for an explicitly selected `$implement`. Do not implement merely
+because the plan is complete.

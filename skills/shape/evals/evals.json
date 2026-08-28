@@ -1,6 +1,6 @@
 {
   "skill_name": "shape",
-  "suite_version": "0.2.0",
+  "suite_version": "0.3.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -88,13 +88,13 @@
     {
       "id": 7,
       "stage": "routing",
-      "prompt": "/shape Turn this rough change request into a bounded Pitch with anticipated Gen Stack impact and a repository filesystem breadboard before we specify or design it.",
+      "prompt": "$shape Turn this rough change request into a bounded Pitch with anticipated Gen Stack impact and a repository filesystem breadboard before we specify or design it.",
       "expected_selection": "shape",
       "catalog_neighbors": ["spec", "design", "investigate"],
       "assertions": [
-        "The selected skill is shape.",
+        "The user's explicit skill invocation selects shape.",
         "No neighboring skill is selected for a job it does not own.",
-        "Routing uses only catalog names and descriptions.",
+        "The explicit invocation is treated as a control rather than evidence of implicit routing.",
         "No task side effect occurs before selection."
       ]
     },
@@ -102,26 +102,26 @@
       "id": 8,
       "stage": "routing",
       "prompt": "Design the technical response for an already coherent Change Specification; compare alternatives for cache ownership, freshness, and recovery.",
-      "expected_selection": "design",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": ["shape", "spec", "design"],
       "assertions": [
-        "Shape is not selected for a request that already asks for the technical response to a coherent Change Specification, and no task side effect occurs before selection.",
-        "Design is the owned outcome.",
-        "Routing does not regress the accepted Specification to a Pitch.",
-        "No implementation begins before selection."
+        "Shape is not selected because the host requires explicit invocation.",
+        "Design is not selected merely from natural-language similarity because it is also explicit-only.",
+        "The routing result records abstention or clarification without activating a Gen Stack stage.",
+        "No task side effect occurs before selection."
       ]
     },
     {
       "id": 9,
       "stage": "routing",
       "prompt": "Diagnose why the synthetic checkout service returns 409 after a retry. Gather discriminating evidence and do not propose a change yet.",
-      "expected_selection": "investigate",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": ["shape", "research", "spec"],
       "assertions": [
-        "Shape is not selected when the requested intermediate outcome is a diagnostic conclusion.",
-        "Investigate is the owned outcome.",
-        "Routing does not invent change intent before diagnosis.",
-        "No correction or Pitch is produced before selection."
+        "Shape is not selected because the host requires explicit invocation.",
+        "Investigate is not selected merely from natural-language similarity because it is also explicit-only.",
+        "The routing result records abstention or clarification without inventing change intent.",
+        "No correction, Pitch, or other task side effect occurs before selection."
       ]
     },
     {

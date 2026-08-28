@@ -1,29 +1,30 @@
 {
   "skill_name": "quick-change",
-  "suite_version": "0.1.0",
+  "suite_version": "0.2.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
       "id": 1,
       "stage": "routing",
-      "prompt": "/quick-change Produce the combined specification and design for this bounded account-recovery change.",
+      "prompt": "$quick-change Produce the combined specification and design for this bounded account-recovery change.",
       "expected_selection": "quick-change",
       "catalog_neighbors": ["spec", "design", "implement"],
       "assertions": [
-        "The selected skill is quick-change.",
-        "Routing uses only catalog names and descriptions.",
-        "No task side effect occurs before selection."
+        "The user's explicit skill invocation selects quick-change.",
+        "The explicit invocation is treated as a control rather than evidence of implicit routing.",
+        "No task side effect occurs before explicit selection."
       ]
     },
     {
       "id": 2,
       "stage": "routing",
       "prompt": "Make this quick code change: rename the synthetic local variable and run its unit test.",
-      "expected_selection": "implement",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": ["spec", "design", "quick-change"],
       "assertions": [
-        "Quick-change is not selected for an ordinary quick implementation request.",
-        "The requested outcome is implementation rather than combined definition.",
+        "Quick-change is not selected because the host requires explicit invocation.",
+        "Implement is not selected merely from natural-language similarity because it is also explicit-only.",
+        "The routing result records abstention or clarification without activating a Gen Stack stage.",
         "No task side effect occurs before selection."
       ]
     },

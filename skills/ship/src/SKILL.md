@@ -1,12 +1,17 @@
 ---
 name: ship
-description: Performs one explicitly authorized final action—such as merge, deployment, publication, rollout, or activation—on one exact reviewed revision, then reads back persisted state and reports partial, failed, or observed results. Use only when the user clearly asks to take the final external action and the exact subject, target, review evidence, mutation authority, and release authority are available. Not for planning a release, reviewing readiness alone, treating “looks good” as authorization, or broadening one action across environments.
+description: Explicitly invoked Gen Stack stage that performs one authorized final action on one exact reviewed revision and reads back persisted state. Select only when the user directly invokes `$ship` or the corresponding host control and clearly requests the named action; never select it from an unprefixed natural-language request, even when that request resembles shipping. Not for planning a release, reviewing readiness alone, treating “looks good” as authorization, or broadening one action across environments.
 ---
 
 # Ship
 
 Execute one exact authorized final action, verify what actually persisted, and
 return the result as bounded evidence and new Observation.
+
+Use only after the user explicitly selects `$ship` or the corresponding host
+control. Natural-language merge, deployment, publication, rollout, or
+activation requests do not activate this Gen Stack stage. Selection alone does
+not confer mutation or release authority.
 
 This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
 scope; in this source workspace read:
@@ -55,4 +60,5 @@ Use precise states such as `shipped-and-observed`,
 `rolled-back-observed` when the host has no more precise state.
 
 Shipping does not turn Results into desired state. Return new Observations to
-the Gen Stack control loop and route newly discovered work through Orientation.
+the Gen Stack control loop and recommend the appropriate explicit stage for
+newly discovered work without activating it.

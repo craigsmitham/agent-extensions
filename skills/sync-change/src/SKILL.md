@@ -1,6 +1,6 @@
 ---
 name: sync-change
-description: Synchronizes an exact landed Pitch, Change coordination record, Change Specification, Change Design, or implementation plan into a work-item host without re-authoring it, and deliberately projects an exact plan into host-native implementation records when explicitly requested. Use for persist, sync, copy, create, or update tracker or issue content from a landed Gen Stack artifact. Not for shaping, specifying, designing, planning, prioritizing, assigning, implementing, reviewing, or release publication.
+description: Synchronizes an exact landed Gen Stack artifact into a work-item host without re-authoring it, or deliberately projects an exact plan into host-native implementation records. Use when both the complete landed artifact and an explicit request to persist, sync, copy, create, update, or project it are present. Not for automatic follow-on synchronization, incomplete source material, shaping, specifying, designing, planning, prioritizing, implementing, reviewing, or release publication.
 ---
 
 # Sync Change
@@ -8,6 +8,12 @@ description: Synchronizes an exact landed Pitch, Change coordination record, Cha
 Preserve one exact change-realization artifact in a host-neutral work-item
 system, or deliberately project one exact plan into implementation records,
 without converting persistence into another authoring pass.
+
+Implicit selection requires both an exact complete landed artifact and explicit
+persistence intent. Stage completion, a handoff, or the mere availability of a
+tracker does not activate synchronization. Selection identifies the operation;
+external mutation still requires the exact target and authority supplied by the
+request, governing policy, and host controls.
 
 This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
 scope; in this source workspace read, in order:

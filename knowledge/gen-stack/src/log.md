@@ -1,5 +1,22 @@
 # Gen Stack Update Log
 
+## 2026-08-28
+
+- **Gen Stack 0.26.0, Gen Stack skill 4.0.0, focused stage skills, Sync Change
+  0.2.0, and pack 5.0.0 — deliberate stage invocation**: Made Shape, Research,
+  Investigate, Spec, Design, Quick Change, Plan, Implement, Review, and Ship
+  explicit user-selected stages. The Gen Stack umbrella now explains the
+  method, maintains governed corpus and coordination surfaces, and recommends
+  the smallest eligible stage without invoking or reproducing it. Sync Change
+  remains implicitly selectable only when a complete exact landed artifact and
+  explicit persistence intent are both present. Centralized the rule that
+  readiness, handoffs, and next-stage recommendations are not activation;
+  retained all semantic, mutation, review, and release authority gates; and
+  encoded explicit-only OpenAI host policy plus portable routing boundaries to
+  reduce ambient discovery and activation cost where the host supports it.
+  Revised routing suites to separate explicit controls from implicit
+  abstention.
+
 ## 2026-08-27
 
 - **Gen Stack 0.25.0, Gen Stack skill 3.2.0, Plan skill 0.5.0, Sync Change

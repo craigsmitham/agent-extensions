@@ -1,8 +1,8 @@
 ---
 type: Guide
 title: Running a change-realization stage
-description: Use when shaping, research, investigation, specification, design, planning, implementation, review, or shipping participates in one bounded software change; preserve exact inputs, authority, evidence, corpus impact, readiness, and recoverable handoffs.
-tags: [process, software-change, stage-contract, handoff, readiness, authority, provenance, corpus, compaction]
+description: Use after a person explicitly selects a focused Gen Stack stage for one bounded software change; preserve invocation, exact inputs, authority, evidence, corpus impact, readiness, and recoverable handoffs without automatically advancing the workflow.
+tags: [process, software-change, stage-contract, invocation, handoff, readiness, authority, provenance, corpus, compaction]
 status: draft
 sources:
   - id: process-definition
@@ -13,7 +13,7 @@ sources:
     title: How the Gen Stack operates
 generated:
   by: codex/gpt-5.6
-  at: 2026-08-27T23:32:00Z
+  at: 2026-08-28T12:00:00Z
 ---
 
 # Running a change-realization stage
@@ -34,11 +34,37 @@ shape.
 Produce one truthful, recoverable intermediate outcome whose inputs, authority,
 evidence, corpus impact, readiness, and eligible next routes are explicit.
 
+## Invocation and authority
+
+Gen Stack separates workflow selection from the authority to make decisions or
+change state:
+
+| Capability | Selection policy | Responsibility |
+| --- | --- | --- |
+| `gen-stack` | Implicit or explicit | Explain the method, orient work, maintain the governed corpus and coordination surfaces, and recommend an eligible stage |
+| `$shape`, `$research`, `$investigate`, `$spec`, `$design`, `$quick-change`, `$plan`, `$implement`, `$review`, `$ship` | Explicit only | Perform one focused change-realization stage after the person deliberately selects it |
+| `sync-change` | Implicit or explicit | Persist one exact landed artifact only when the complete source and explicit persistence intent are both present |
+| `researcher`, `reviewer` | Internal delegation only | Perform fresh-context work owned by an activated skill |
+
+`$stage` is host-neutral shorthand in this documentation for deliberate
+selection; use the active host's native selector where its syntax differs.
+An unprefixed request to shape, research, investigate, specify, design, plan,
+implement, review, or ship does not activate the corresponding Gen Stack stage.
+It may remain ordinary assistant work without Gen Stack guarantees. Explicit
+stage selection is necessary but not sufficient: required inputs, semantic
+authority, mutation authority, release authority, and host permissions remain
+independent gates.
+
+A stage may identify a next eligible action, but a recommendation, handoff,
+completed artifact, readiness result, or workflow position never activates the
+next stage. The person selects each focused stage deliberately.
+
 ## 1. Bind the stage
 
 Identify:
 
 - the initiating request or preceding handoff;
+- the exact explicit stage selection or corresponding host control;
 - the bounded change or diagnostic question;
 - exact input artifact and revision identities when they exist;
 - the current meaning maturity and action authority;
@@ -64,9 +90,9 @@ report the unmet corpus condition.
 
 ## 3. Execute only the stage's responsibility
 
-Produce the smallest sufficient activity outcome. Do not silently perform the
-next stage, accept a candidate, change priority, or execute an external final
-action merely because enough information is available.
+Produce the smallest sufficient activity outcome. Do not perform or activate
+the next stage, accept a candidate, change priority, or execute an external
+final action merely because enough information is available.
 
 When material evidence changes an upstream constituent:
 
@@ -135,20 +161,23 @@ Readiness established:
 Next eligible actions:
 ```
 
+Every next eligible action is a recommendation or recoverable handoff, not an
+invocation or grant of authority.
+
 Link canonical artifacts rather than copying their facts into the handoff.
 Use `transient exact output` when complete content is available in the current
 conversation but no durable identity exists; do not invent persistence
 metadata. State `not established` for a readiness condition whose evidence is
-missing. When authorized persistence is the next action, route the exact output
-to the artifact-synchronization operation rather than summarizing it in the
-handoff.
+missing. When the user explicitly requests persistence and the exact output is
+available, report it as eligible for `sync-change` rather than summarizing it or
+performing synchronization as a stage side effect.
 
 ## Valid exits
 
-A stage may complete with its intended intermediate outcome, return upstream,
-route laterally to research or investigation, terminate the Process, or stop on
-an explicit blocker. It does not fail merely because no implementation or
-shipping follows.
+A stage may complete with its intended intermediate outcome, recommend an
+explicit upstream or lateral stage, terminate the Process, or stop on an
+explicit blocker. It does not fail merely because no implementation or shipping
+follows, and it does not activate the recommended stage.
 
 Cancellation, timeout, retry exhaustion, partial mutation, and unavailable
 tools must name completed work, preserved artifacts, possible effects, and the
@@ -162,4 +191,5 @@ observed.
 - Maturity and authority were not inferred from workflow position.
 - Upstream meaning changes returned to their owner.
 - Corpus consideration was proportional and truthfully dispositioned.
-- Readiness and next routes are supported by evidence rather than stage labels.
+- Readiness and next recommendations are supported by evidence rather than
+  stage labels, and no recommendation was treated as activation.

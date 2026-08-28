@@ -1,6 +1,6 @@
 {
   "skill_name": "implement",
-  "suite_version": "0.3.0",
+  "suite_version": "0.4.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -30,16 +30,16 @@
     {
       "id": 3,
       "stage": "routing",
-      "prompt": "/implement Execute this authorized implementation-ready plan, verify it, and prepare the candidate for review.",
+      "prompt": "$implement Execute this authorized implementation-ready plan, verify it, and prepare the candidate for review.",
       "expected_selection": "implement",
       "catalog_neighbors": [
         "plan",
         "review"
       ],
       "assertions": [
-        "The selected skill is implement.",
+        "The user's explicit skill invocation selects implement.",
         "No neighboring skill is selected for a job it does not own.",
-        "Routing uses only catalog names and descriptions.",
+        "The explicit invocation is treated as a control rather than evidence of implicit routing.",
         "No task side effect occurs before selection."
       ]
     },
@@ -47,16 +47,16 @@
       "id": 4,
       "stage": "routing",
       "prompt": "Review candidate revision r41 against its specification and report findings; do not change it.",
-      "expected_selection": "review",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
         "plan",
         "review"
       ],
       "assertions": [
-        "Implement is not selected for an independent review request and no task side effect occurs before selection.",
-        "Review owns the requested outcome.",
-        "The read-only instruction is preserved.",
-        "No candidate mutation occurs before selection."
+        "Implement is not selected because the host requires explicit invocation.",
+        "Review is not selected merely from natural-language similarity because it is also explicit-only.",
+        "The routing result records abstention or clarification and preserves the read-only request.",
+        "No candidate mutation or other task side effect occurs before selection."
       ]
     },
     {

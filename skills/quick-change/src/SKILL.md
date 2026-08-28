@@ -1,12 +1,17 @@
 ---
 name: quick-change
-description: Produces the canonical Change Specification and Change Design together for one bounded Change, reconciles their exact revisions, and returns a thin Change coordination handoff. Use when the user explicitly invokes `/quick-change` or asks for a combined specification-and-design response with substantial context or intent. Not for an ordinary quick code edit, an unbounded idea that needs shaping, implementation planning, coding, review, or shipping.
+description: Explicitly invoked Gen Stack stage that produces one Change Specification and Change Design together and reconciles their exact revisions. Select only when the user directly invokes `$quick-change` or the corresponding host control; never select it from an unprefixed natural-language request, even when that request resembles a combined specification-and-design task. Not for an ordinary quick code edit, an unbounded idea that needs shaping, implementation planning, coding, review, or shipping.
 ---
 
 # Quick change
 
 Define one context-rich bounded Change in a single focused response while
 preserving the separate why-and-what and how artifacts.
+
+Use only after the user explicitly selects `$quick-change` or the corresponding
+host control. Natural-language similarity, including a request for both
+artifacts, does not activate this stage. Selection alone grants no semantic
+acceptance, mutation, or downstream-stage authority.
 
 This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
 scope; in this source workspace read, in order:
@@ -36,9 +41,9 @@ Do not blend Design choices into the Change Specification or delivery state
 into either artifact. Do not accept human-owned semantic or technical
 decisions, plan implementation, mutate code, review a candidate, or ship.
 
-Use this combined route only when the request explicitly invokes it or clearly
-asks for both artifacts. A colloquial request to “make a quick change” routes
-to implementation or clarification according to its actual outcome, not here.
+Use this combined route only when the request explicitly invokes it. A
+colloquial request to “make a quick change,” or an unprefixed request for both
+artifacts, does not activate this skill.
 
 ## Produce the combined response
 

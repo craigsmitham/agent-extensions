@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "shape",
-  "version": "0.2.0",
-  "description": "Shapes raw or mixed change context into an evaluation-agnostic, repository-grounded Pitch suitable for specification or design",
+  "version": "0.3.0",
+  "description": "Explicit-only stage for shaping raw or mixed change context into an evaluation-agnostic, repository-grounded Pitch; never select from unprefixed natural language",
   "keywords": [
     "shape",
     "pitch",

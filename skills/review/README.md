@@ -7,6 +7,9 @@ quality, Implementation quality, and whole-change integrity distinct while
 returning a compact decision, owned actions, findings, unknowns, and review
 boundary.
 
+Review is a deliberate Gen Stack stage. Select `$review` explicitly; ordinary
+code-review or readiness-review requests do not activate this workflow.
+
 Detailed review lenses guide assessment without being dumped into the result.
 The skill never mutates or releases its subject.
 

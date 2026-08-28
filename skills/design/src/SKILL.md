@@ -1,12 +1,17 @@
 ---
 name: design
-description: Develops the Change Design for one bounded Change, comparing material alternatives, realizing accepted Architecture and required Evaluation Protocols, and reconciling the exact Change Specification. Use for solution design, technical design, evaluation realization, or design-first proposals. Not for deciding desired behavior or durable Architecture, Change coordination, implementation planning, coding, or treating design detail as acceptance.
+description: Explicitly invoked Gen Stack stage that develops the Change Design for one bounded Change and reconciles it with the exact Change Specification. Select only when the user directly invokes `$design` or the corresponding host control; never select it from an unprefixed natural-language request, even when that request resembles design. Not for deciding desired behavior or durable Architecture, Change coordination, implementation planning, coding, or treating design detail as acceptance.
 ---
 
 # Design
 
 Produce the how artifact for one bounded Change without taking over its Change
 Specification, coordination state, or semantic authority.
+
+Use only after the user explicitly selects `$design` or the corresponding host
+control. Natural-language similarity alone does not activate this stage.
+Selection alone grants no semantic acceptance, mutation, or downstream-stage
+authority.
 
 This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
 scope; in this source workspace read, in order:
@@ -46,13 +51,15 @@ state, alter durable Architecture, or authorize implementation.
    state and data, failure and quality behavior, compatibility, migration,
    rollout, rollback, recovery, and implementation boundaries where material.
 5. Map every accepted Architecture authority to concrete technical
-   realization. Return any durable semantic change to `spec`.
+   realization. Return any durable semantic change to its authority and
+   recommend `$spec` when that stage is needed.
 6. Realize every required Requirement-satisfaction and Architecture-
    realization Protocol through executable families or Suites, seams, data and
    environments, execution, evidence, failure and inconclusive handling,
    traceability, and maintenance.
 7. Keep optional Implementation-conformance Evaluations separate. Return any
-   durable or release-critical claim to `spec` for classification.
+   durable or release-critical claim to its authority and recommend `$spec`
+   when classification belongs there.
 8. State Design maturity, acceptance authority, exact decision request, risks,
    and unresolved technical decisions.
 9. Reconcile with the exact Change Specification revision as `conforms`,
@@ -74,5 +81,6 @@ do not reproduce or modify its heading inventory here.
 
 Never lead with a recommendation before the comparison that supports it. An
 accepted Design still does not ratify semantic changes, establish Change
-coherence, authorize implementation, or coordinate delivery. Route those
-responsibilities to their owners.
+coherence, authorize implementation, or coordinate delivery. Return those
+responsibilities to their owners and recommend the applicable explicit stage
+without activating it.

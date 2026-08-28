@@ -1,12 +1,17 @@
 ---
 name: implement
-description: Executes an authorized implementation-ready plan for one exact coherent software change, preserving unrelated work, applying bounded changes, using required Evaluation and focused reviewer feedback, dispositioning review actions, and producing an evidenced candidate for independent final review. Use when the user asks to implement, build, fix, or execute an accepted change plan. Not for inventing missing requirements or architecture, broad opportunistic cleanup, independently changing the plan's meaning, treating checkpoint review as final assurance, or shipping externally.
+description: Explicitly invoked Gen Stack stage that executes an authorized implementation-ready plan for one exact coherent software change. Select only when the user directly invokes `$implement` or the corresponding host control; never select it from an unprefixed natural-language request, even when that request resembles implementation. Not for inventing missing requirements or architecture, broad opportunistic cleanup, independently changing the plan's meaning, treating checkpoint review as final assurance, or shipping externally.
 ---
 
 # Implement
 
 Produce one identifiable candidate Implementation revision that realizes the
 authorized plan within accepted meaning and is ready for independent review.
+
+Use only after the user explicitly selects `$implement` or the corresponding
+host control. Natural-language requests to build, fix, or implement do not
+activate this Gen Stack stage. Selection alone grants no mutation authority;
+derive it from the complete request, repository policy, and host controls.
 
 This skill belongs to the Gen Stack pack. Resolve knowledge through active AXM
 scope; in this source workspace read:
@@ -24,7 +29,7 @@ and Change Design revisions, current
 repository revision, authorized mutation boundary, allowed tools, code
 execution, network, credentials, and external effects. Preserve unrelated user
 changes. If the plan is exploratory, stale, or no longer coherent with realized
-state, stop or return to `plan`.
+state, stop and recommend returning through an explicitly selected `$plan`.
 
 Implementation may make local reversible choices within delegated boundaries.
 It may not decide new product behavior, obligations, durable Architecture,
@@ -47,10 +52,11 @@ architecture-significant tradeoffs, or release.
    `returned-upstream`, `evidence-needed`, `disputed`, or `superseded`. Record
    the response, resulting revision or route, and evidence. Re-review affected
    claims after material change; do not silently drop or mark a finding fixed.
-6. Route discoveries to their owner: `spec` for outcome or obligation changes,
-   `design` for durable or architecture-significant response changes, `plan`
-   for sequencing changes, and `research` or `investigate` for unresolved
-   evidence questions.
+6. Return discoveries to their owner and recommend the explicit stage when
+   needed: `$spec` for outcome or obligation changes, `$design` for durable or
+   architecture-significant response changes, `$plan` for sequencing changes,
+   and `$research` or `$investigate` for unresolved evidence questions. Do not
+   activate the recommended stage.
 7. Record material deviation from the plan or Design, its evidence and reason,
    and whether the responsible authority accepted, rejected, or has not decided
    it. Do not rewrite earlier artifacts to conceal divergence.
@@ -70,5 +76,5 @@ safe action on failure. Never repeat a mutation whose prior outcome is unknown
 or claim a rollback that was not observed.
 
 Implementation completion does not establish Requirement satisfaction,
-Architecture realization, verified closure, or release readiness. Route the
-candidate to a fresh integrated `review`; do not ship it.
+Architecture realization, verified closure, or release readiness. Recommend a
+fresh integrated `$review`; do not activate it or ship the candidate.
