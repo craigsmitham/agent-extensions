@@ -156,6 +156,7 @@ expected=(
   packs/field-notes
   packs/gen-stack
   packs/qrspi
+  packs/research
   rules/field-notes
   rules/use-effect-v4
   skills/audit-docs

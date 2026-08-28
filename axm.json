@@ -73,7 +73,8 @@
       "source": "workspace",
       "enabled": false
     },
-    "gen-stack": "workspace"
+    "gen-stack": "workspace",
+    "research": "workspace"
   },
   "owner": "@craigsmitham"
 }

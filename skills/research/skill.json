@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "research",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "publish": {
     "ignore": []
   },
@@ -19,7 +19,7 @@
   ],
   "standalone": false,
   "recommendedPacks": [
-    "@craigsmitham/packs/gen-stack"
+    "@craigsmitham/packs/research"
   ],
   "repository": {
     "type": "git",
