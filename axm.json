@@ -60,7 +60,8 @@
     "product-management": "workspace",
     "strategy": "workspace",
     "gen-stack": "workspace",
-    "work-management": "workspace"
+    "work-management": "workspace",
+    "software-engineering": "workspace"
   },
   "subagents": {
     "researcher": "workspace",

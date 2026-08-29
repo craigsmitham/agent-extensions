@@ -149,6 +149,7 @@ expected=(
   knowledge/gen-stack
   knowledge/knowledge-management
   knowledge/product-management
+  knowledge/software-engineering
   knowledge/strategy
   knowledge/work-management
   knowledge/workflow-automation

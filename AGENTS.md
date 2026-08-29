@@ -64,6 +64,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 
 ### @craigsmitham
 
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/software-engineering kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/work-management kind=knowledge -->
 
 | Bundle | Description |
@@ -74,6 +75,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [gen-stack](knowledge/gen-stack/src/index.md) | A cohesive, opinionated software-change system spanning shaping, OODA control, intent, canonical Requirement lifecycle and change, architecture, work items, implementation, evaluations, and operational learning |
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-management](knowledge/product-management/src/index.md) | Product management principles for outcomes, product risks, empowered teams, discovery, delivery, evidence, and product strategy |
+| [software-engineering](knowledge/software-engineering/src/index.md) | Portable engineering craft for a repository's execution surface: task graphs, script surfaces, caching intent, and invocation contracts for humans, agents, and CI |
 | [strategy](knowledge/strategy/src/index.md) | Strategy as coherent choices about participation and advantage, supported by capabilities, value creation, and evidence |
 | [work-management](knowledge/work-management/src/index.md) | Portable software work-item taxonomy, content contracts, templates, lifecycle, evidence, and tracker-neutral guidance |
 | [workflow-automation](knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
