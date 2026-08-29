@@ -44,7 +44,8 @@
     "ship": "workspace",
     "shape": "workspace",
     "quick-change": "workspace",
-    "sync-change": "workspace"
+    "sync-change": "workspace",
+    "manage-work-items": "workspace"
   },
   "rules": {
     "field-notes": "workspace",
@@ -58,7 +59,8 @@
     "knowledge-management": "workspace",
     "product-management": "workspace",
     "strategy": "workspace",
-    "gen-stack": "workspace"
+    "gen-stack": "workspace",
+    "work-management": "workspace"
   },
   "subagents": {
     "researcher": "workspace",
@@ -74,7 +76,8 @@
       "enabled": false
     },
     "gen-stack": "workspace",
-    "research": "workspace"
+    "research": "workspace",
+    "work-management": "workspace"
   },
   "owner": "@craigsmitham"
 }

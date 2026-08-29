@@ -150,6 +150,7 @@ expected=(
   knowledge/knowledge-management
   knowledge/product-management
   knowledge/strategy
+  knowledge/work-management
   knowledge/workflow-automation
   packs/docs
   packs/effect-v4
@@ -157,6 +158,7 @@ expected=(
   packs/gen-stack
   packs/qrspi
   packs/research
+  packs/work-management
   rules/field-notes
   rules/use-effect-v4
   skills/audit-docs
@@ -169,6 +171,7 @@ expected=(
   skills/implement
   skills/improve-whatever
   skills/investigate
+  skills/manage-work-items
   skills/plan
   skills/question
   skills/quick-change
