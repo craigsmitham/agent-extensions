@@ -3,17 +3,13 @@ type: Guide
 title: Preserving evidence and provenance
 description: Use when creating or substantively revising a work item so sources, uncertainty, attribution, and decision authority survive synthesis.
 tags: [work-item, evidence, provenance, attribution, uncertainty, authority, source-inventory]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/preserving-work-item-evidence-and-authority.md
-    title: Preserving evidence and authority in software work items
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
 # Preserving evidence and provenance
 
 Use this adapted guide for every new work item and substantive body
-revision.[^source-guide]
+revision.
 
 ## 1. Inventory before synthesis
 
@@ -59,6 +55,3 @@ Compare material claims with their sources, confirm that attribution and
 uncertainty survived compression, and check that stable links resolve when
 available. After an external write, read back the persisted item; a submitted
 payload is not persistence evidence.
-
-[^source-guide]: Adapted from the cited guide without its former framework-
-    specific vocabulary and corpus assumptions.

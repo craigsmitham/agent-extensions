@@ -1,5 +1,11 @@
 # Strategy update log
 
+## 2026-08-29
+
+- **Ownership**: Re-established Wardley Mapping as portable Strategy guidance,
+  separating situational awareness from strategic choice and preserving the
+  prior migration history below.
+
 ## 2026-08-21
 
 - **Migration**: Removed Wardley mapping after its canonical ownership moved

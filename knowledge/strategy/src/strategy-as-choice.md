@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Strategy as choice
 description: Why strategy consists of consequential, mutually reinforcing choices rather than aspirations, priorities, or activities alone.
 tags: [strategy, choices, tradeoffs, planning, strategic-focus]
 status: draft
@@ -25,7 +26,7 @@ Choices are strategic when they answer a connected set of questions:
 
 The answers must reinforce one another. Roger Martin emphasizes that the
 difficulty of the strategy choice cascade lies in integration, not filling five
-independent boxes.[^integration] A plausible choice can still be wrong when it
+independent boxes.[^martin-integration] A plausible choice can still be wrong when it
 requires incompatible capabilities or undermines the proposed advantage.
 
 Tradeoffs are evidence of choice, but sacrifice alone is not strategy. The
@@ -36,5 +37,5 @@ reduced scope.
 Plans sequence actions after choices have been made. Goals state desired
 results. Neither explains why this particular system of action should succeed.
 
-[^integration]: Martin describes fit and mutual reinforcement across the
+[^martin-integration]: Martin describes fit and mutual reinforcement across the
     cascade as the central integrative challenge.

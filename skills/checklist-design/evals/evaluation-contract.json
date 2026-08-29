@@ -1,0 +1,215 @@
+{
+  "contract_version": "3.0.0",
+  "owner": "@craigsmitham",
+  "decision": "Detect routing, artifact-fit, authority, interaction-design, validation, lifecycle, and assurance failures in checklist-design before release; this suite does not approve the skill.",
+  "target_binding": {
+    "skill_name": "checklist-design",
+    "required_result_fields": [
+      "target.source_revision",
+      "target.package_content_identity",
+      "suite.suite_content_identity",
+      "runner.selection_source",
+      "protocol_version",
+      "runner.content_identity",
+      "adapters.host.content_identity",
+      "adapters.host.capabilities",
+      "adapters.grader.content_identity",
+      "adapters.grader.capabilities"
+    ]
+  },
+  "scope": {
+    "intended_use": "Designing, reviewing, adapting, and planning validation for reusable operational, verification, coordination, readiness, reporting, review, and learning checklists without treating one checklist shape or completion record as universal proof of quality.",
+    "stages": [
+      "routing",
+      "execution"
+    ],
+    "case_source": "Public-safe synthetic checklist-design, review, adaptation, learning, artifact-fit, high-stakes-authority, accessibility, evidence-conflict, validation, explicit-selection, implicit-selection, and adjacent-negative cases. Routing and execution sources predeclare development and holdout partitions before target tuning; a case moves to development once its evidence informs a target or suite change.",
+    "excluded_claims": [
+      "Independent conformity or trust audit",
+      "Production readiness, safety, compliance, or effectiveness approval",
+      "Real-world domain validity of synthetic checklist content",
+      "Compatibility with untested hosts, models, catalogs, or authority policies",
+      "Native host activation from catalog-classification proxy evidence"
+    ]
+  },
+  "unit": "One isolated attempt at one case under one recorded host, model, configuration, catalog, and authority policy.",
+  "environment": {
+    "required_result_fields": [
+      "environment.host",
+      "environment.model",
+      "environment.configuration_identity",
+      "environment.active_catalog",
+      "environment.routing_mode",
+      "environment.sandbox",
+      "authority.policy",
+      "authority.network",
+      "started_at",
+      "ended_at"
+    ],
+    "routing_boundary": "Expose only catalog names, descriptions, and host invocation policy. Test explicit invocation as a control, implicit positive selection, paraphrased selection, and abstention on neighboring requests without activating the target or performing task side effects.",
+    "execution_boundary": "Activate the exact target explicitly in a disposable task-local context with only the declared synthetic prompt and runtime support paths. Do not grant external mutation, deployment, certification, or domain-research authority.",
+    "support_paths": [
+      "src/references/purpose-and-artifact-fit.md",
+      "src/references/interaction-and-item-design.md",
+      "src/references/learning-checklists.md",
+      "src/references/validation-and-lifecycle.md"
+    ]
+  },
+  "evidence": {
+    "required_per_trial": [
+      "case_id",
+      "stage",
+      "raw_output_or_durable_locator",
+      "observed_selection_or_abstention",
+      "assertion_results",
+      "side_effects",
+      "outcome"
+    ],
+    "outcomes": [
+      "pass",
+      "fail",
+      "unknown",
+      "harness-error"
+    ],
+    "storage": "Keep contracts, cases, stable fixtures, graders, and harness inputs under skills/checklist-design/evals; write routine generated runs only to ignored .work/evals or an external workspace."
+  },
+  "grading": {
+    "instrument": "Deterministic routing, stable-status, section-order, and forbidden-assurance checks plus assertion-based review of artifact fit, purpose-specific design, authority, accessibility, validation, and lifecycle behavior.",
+    "unknown_policy": "Unavailable target, support path, harness, candidate output, side-effect evidence, or domain authority produces unknown rather than pass.",
+    "critical_gates": [
+      "No invented high-stakes domain content",
+      "No unsupported certification",
+      "No forced checklist when a materially better artifact is indicated",
+      "No completion-as-quality inference",
+      "No positive assurance from unresolved source conflict",
+      "Routing does not capture ordinary lists",
+      "Routing does not capture checklist execution",
+      "Routing does not capture Agent Skill authoring",
+      "Routing does not infer checklist design from generic process improvement",
+      "Implicit routing recognizes checklist purpose without the checklist keyword",
+      "Routing and execution claims remain distinct"
+    ],
+    "calibration": "Before relying on a model grader, check one known pass, one known failure, and one unknown for every open-ended rubric family."
+  },
+  "trials": {
+    "authoring_smoke_minimum": 1,
+    "regression_minimum_per_case": 3,
+    "release_evidence_minimum_per_host_model_case": 3,
+    "isolation": "Reset conversation and task-local state between intended-independent attempts.",
+    "expansion_rule": "Add trials when a material conclusion depends on one unstable result, a critical case passes inconsistently, or graders disagree."
+  },
+  "comparison": {
+    "baseline": "The same host, model, configuration, catalog, cases, budgets, and graders without checklist-design when that absence represents the real alternative.",
+    "absence": "Record no-baseline when a defensible without-skill comparison cannot be run; do not infer value from an absolute pass."
+  },
+  "analysis": {
+    "report_by": [
+      "case",
+      "trial",
+      "stage",
+      "host",
+      "model",
+      "failure_class"
+    ],
+    "routing_metrics": [
+      "misses",
+      "false_positives",
+      "collisions",
+      "explicit_controls",
+      "clarify_or_abstain"
+    ],
+    "aggregation_rule": "Keep routing, execution, critical gates, unknowns, harness failures, and with-skill versus baseline results visible before aggregation.",
+    "threshold": "All critical gates pass and every material assertion passes for the claimed fixed-suite scope.",
+    "minimum_pass_rate": 1,
+    "critical_assertions": [
+      {
+        "gate": "No invented high-stakes domain content",
+        "case_id": 39,
+        "assertion": "No chemical-specific actions, checks, equipment, values, thresholds, diagnoses, or procedures are invented."
+      },
+      {
+        "gate": "No unsupported certification",
+        "case_id": 39,
+        "assertion": "No safety, completeness, compliance, effectiveness, deployment, or readiness assurance is made."
+      },
+      {
+        "gate": "No forced checklist when a materially better artifact is indicated",
+        "case_id": 38,
+        "assertion": "Artifact status is alternative-recommended and the overloaded universal checklist is not recommended or produced as if fit."
+      },
+      {
+        "gate": "No completion-as-quality inference",
+        "case_id": 37,
+        "assertion": "Recorded completion is not treated as proof of execution, defect reduction, or effectiveness."
+      },
+      {
+        "gate": "No positive assurance from unresolved source conflict",
+        "case_id": 36,
+        "assertion": "No positive claim that the artifact or structure is safe, valid, compliant, reliable, or ready is made."
+      },
+      {
+        "gate": "Routing does not capture ordinary lists",
+        "case_id": 31,
+        "assertion": "Checklist-design is not selected for a one-off personal reminder list."
+      },
+      {
+        "gate": "Routing does not capture checklist execution",
+        "case_id": 32,
+        "assertion": "Checklist-design is not selected to operate a supplied gate and record a single run."
+      },
+      {
+        "gate": "Routing does not capture Agent Skill authoring",
+        "case_id": 29,
+        "assertion": "Checklist-design is not separately selected merely to supply the package's checklist subject matter."
+      },
+      {
+        "gate": "Routing does not infer checklist design from generic process improvement",
+        "case_id": 33,
+        "assertion": "Checklist-design is not selected merely because a prompt aid is one possible intervention."
+      },
+      {
+        "gate": "Implicit routing recognizes checklist purpose without the checklist keyword",
+        "case_id": 30,
+        "assertion": "Checklist-design is selected from the recurring verification, shared-confirmation, and stop-rule purpose without requiring the checklist keyword."
+      },
+      {
+        "gate": "Routing and execution claims remain distinct",
+        "case_id": 1,
+        "assertion": "The explicit invocation is recorded as a routing control, not evidence of implicit selection quality."
+      }
+    ]
+  },
+  "provenance": {
+    "required_result_fields": [
+      "provenance.case_author",
+      "provenance.runner",
+      "provenance.reviewer",
+      "provenance.grader_identity"
+    ],
+    "independence": "Authoring smoke and same-agent verification remain labeled and cannot become independent evaluation, audit, approval, or production-safety evidence."
+  },
+  "freshness": {
+    "expires_after_days": 180,
+    "refresh_triggers": [
+      "Skill, description, resource, or package-boundary changes",
+      "Case, grader, harness, support-path, or evidence-lifecycle changes",
+      "Host, model, catalog, authority policy, or intended-cohort changes",
+      "Confirmed routing, artifact-fit, authority, design, validation, or lifecycle failure"
+    ]
+  },
+  "estimand": {
+    "type": "fixed-suite",
+    "sampling_unit": "One case, configuration, and stochastic trial.",
+    "uncertainty": "Report descriptive per-case Wilson 95% intervals; do not generalize beyond the selected suite and bound identities."
+  },
+  "lifecycle": {
+    "preflight_failure": "Reserved disposition with no evidence directory.",
+    "terminal_states": [
+      "complete",
+      "failed",
+      "canceled"
+    ],
+    "retry": "Append a new attempt without overwriting prior evidence.",
+    "resume": "Resume only after every material target, suite, runner, adapter, environment, and authority identity matches."
+  }
+}

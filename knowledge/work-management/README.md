@@ -16,6 +16,5 @@ The bundle is tracker-neutral and delivery-method-neutral. Repository
 instructions may add domain-specific content obligations, while native tracker
 fields remain the preferred representation for facts they can carry exactly.
 
-The knowledge package is licensed under CC-BY-SA-4.0. It adapts work-item
-material from the Gen Stack knowledge bundle under the same license while
-removing Gen Stack-specific operating-model dependencies.
+The knowledge package is licensed under CC-BY-SA-4.0 and is maintained as an
+independent, method-neutral work-management reference.

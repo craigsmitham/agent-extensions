@@ -3,13 +3,6 @@ type: Guide
 title: Authoring Changes
 description: Use when a bounded proposed or authorized software modification needs consistent motivation, outcome, scope, constraints, completion, verification, risks, and next action.
 tags: [change, authoring, outcome, scope, acceptance-criteria, verification, rollout, rollback]
-sources:
-  - id: changes-source
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/changes.md
-    title: Changes
-  - id: specification-source
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/writing-change-specifications.md
-    title: Writing Change Specifications
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
@@ -17,7 +10,7 @@ generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 
 The workflow retains portable Change coordination from the earlier model while
 folding useful why-and-what content into one process-agnostic work item instead
-of requiring separate stages.[^changes-source][^specification-source]
+of requiring separate stages.
 
 ## 1. Bind one Change
 
@@ -65,7 +58,3 @@ a separate specification or design document for every Change.
 Record material risks, unknowns, open decisions, dependencies, owners,
 authorities, and the next authorized action. Derive the title and summary last,
 map facts to native fields, and read back any external write.
-
-[^changes-source]: The coordination model was adapted from the cited source.
-[^specification-source]: Useful why-and-what content was retained without the
-    source's former mandatory stage and artifact lifecycle.

@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Product strategy
 description: How product strategy translates broader strategic choices into product problems, differentiated value, constraints, and decision context.
 tags: [product-strategy, strategic-context, product-vision, outcomes, prioritization]
 status: draft
@@ -7,6 +8,12 @@ sources:
   - id: svpg-product-model-google
     resource: https://www.svpg.com/the-product-model-at-google/
     title: SVPG — The Product Model at Google
+  - id: strategy-wardley-mapping
+    resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/strategy/src/wardley-mapping.md
+    title: Strategy — Wardley Mapping
+generated:
+  by: codex/gpt-5.6
+  at: 2026-08-29T20:34:30Z
 ---
 
 # Product strategy
@@ -33,7 +40,15 @@ capabilities, and value creation. Product management owns how those choices
 become product context and product decisions. It does not need to redefine the
 general discipline in order to apply it.
 
+A Wardley map can make the surrounding landscape, dependency chain, component
+evolution, and sources of inertia discussable. It informs product strategy; it
+does not choose a customer problem, advantage, or commitment on the team's
+behalf.[^strategy-wardley-mapping]
+
 Product strategy remains a hypothesis about where product effort will create
 meaningful results. Discovery and production evidence may challenge its
 assumptions; changing it deliberately is learning, while allowing unrelated
 local decisions to erode it is drift.
+
+[^strategy-wardley-mapping]: The Strategy bundle owns the portable explanation
+    of Wardley Mapping and its relationship to strategic choices.

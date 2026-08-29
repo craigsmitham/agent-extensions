@@ -3,17 +3,13 @@ type: Guide
 title: Recording Defect Reports
 description: Use when an observation or concern may indicate a defect and needs an actionable, evidence-preserving work item.
 tags: [defect-report, bug-report, recording, discrepancy, reproduction, impact, workaround]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/recording-defect-reports.md
-    title: Recording defect reports
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
 # Recording Defect Reports
 
 This guide adapts the earlier Defect Report authoring workflow to the portable
-taxonomy.[^source-guide]
+taxonomy.
 
 ## 1. Choose the record and channel
 
@@ -59,5 +55,3 @@ close under local policy.
 Derive the title and summary last. Apply the complete [Defect Report
 template](defect-report-template.md) only when native host fields cannot carry
 the meaning.
-
-[^source-guide]: Adapted from the cited authoring guide.

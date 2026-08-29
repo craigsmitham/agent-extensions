@@ -1,0 +1,28 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "checklist-design",
+  "version": "0.1.9",
+  "description": "Designs, reviews, and adapts reusable checklists by matching their purpose, interaction model, evidence, validation, and lifecycle to the real work",
+  "keywords": [
+    "checklist",
+    "checklist design",
+    "operational guidance",
+    "verification",
+    "coordination",
+    "learning scaffold",
+    "human factors",
+    "validation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/checklist-design"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "publish": {
+    "ignore": []
+  }
+}

@@ -26,26 +26,20 @@ Install the replacement `@agentxm` identities; the previously published
 
 | Pack | Purpose | Install |
 | --- | --- | --- |
-| `effect-v4` | Effect v4 guidance: a routing skill plus a knowledge bundle of twenty-two guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification | `axm install @craigsmitham/packs/effect-v4` |
+| `effect-v4` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect-v4` |
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
-| `gen-stack` | A Change-centered realization process spanning Shape, Research, Investigation, Change Specification and Design, Planning, Implementation with focused review feedback, fresh integrated Review, Shipping, and corpus learning | `axm install @craigsmitham/packs/gen-stack` |
-
-The former `software-architecture` and `software-engineering` packs are
-superseded by `gen-stack`. Their final published versions remain available for
-reproducibility but should not be used for new adoption.
-
-The former `qrspi` pack and standalone `question` skill are also superseded by
-`gen-stack`. Research now owns both concern-aware Research Brief framing and
-read-only evidence gathering through the Researcher subagent.
+| `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
+| `work-management` | Consistent Operational Incident Records, Defect Reports, and Changes across repositories and trackers | `axm install @craigsmitham/packs/work-management` |
+| `requirements-engineering` | Method-neutral requirements elicitation, analysis, specification, review, traceability, and lifecycle | `axm install @craigsmitham/packs/requirements-engineering` |
 
 ## Standalone knowledge
 
 | Bundle | Purpose | Install |
 | --- | --- | --- |
 | `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
-| `gen-stack` | Cohesive Shape, Intent, Requirements, Architecture, work-item, Implementation, Evaluation, OODA, and regenerative-software guidance | `axm install @craigsmitham/knowledge/gen-stack` |
 | `product-management` | Product outcomes, risks, empowered teams, discovery, delivery, evidence, and product strategy | `axm install @craigsmitham/knowledge/product-management` |
+| `software-engineering` | Portable execution-surface craft for task graphs, scripts, caching, and invocation contracts | `axm install @craigsmitham/knowledge/software-engineering` |
 | `strategy` | Coherent choices about participation, advantage, capabilities, evidence, and value creation | `axm install @craigsmitham/knowledge/strategy` |
 | `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |
 

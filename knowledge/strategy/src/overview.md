@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Strategy overview
 description: What strategy owns, how it connects choices to value and advantage, and what it leaves to planning and execution.
 tags: [strategy, strategic-choice, advantage, value-creation, explanation]
 status: draft

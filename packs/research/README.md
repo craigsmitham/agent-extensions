@@ -32,8 +32,8 @@ change the Research contract or introduce those packs' workflow semantics.
 - Independent framing matters because prior analysis favors a hypothesis,
   diagnosis, or solution.
 
-Use `investigate` instead to diagnose a concrete observed condition. Ordinary
-factual lookup does not need this workflow.
+Use the project's diagnostic workflow for a concrete observed condition.
+Ordinary factual lookup does not need this workflow.
 
 ## License
 

@@ -3,10 +3,6 @@ type: Guide
 title: Titling and summarizing work items
 description: Use when a work item must be recognizable in lists and search without changing its underlying body meaning.
 tags: [work-item, title, summary, brief, search, list-view]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/titling-and-summarizing-work-items.md
-    title: Titling and summarizing work items
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
@@ -15,7 +11,7 @@ generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 The title and summary are a derived brief for readers who encounter the item in
 lists, search, notifications, and relationships before opening it. Revising the
 brief does not change the underlying evidence, classification, priority,
-assignment, lifecycle, or body meaning.[^source-guide]
+assignment, lifecycle, or body meaning.
 
 ## Write the title
 
@@ -41,5 +37,3 @@ not add a root cause, decision, priority, or result absent from the body.
 Derive both title and summary after substantive authoring, and re-derive them
 when the item's meaning changes. Place the summary in the host's native field or
 at the start of the body, but do not maintain two divergent copies.
-
-[^source-guide]: Adapted from the cited guide.

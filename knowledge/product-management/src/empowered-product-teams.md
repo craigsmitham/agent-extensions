@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Empowered product teams
 description: Why durable cross-functional teams need strategic context, decision authority, complementary expertise, and accountability for outcomes.
 tags: [product-teams, empowerment, cross-functional, accountability, decision-rights]
 status: draft

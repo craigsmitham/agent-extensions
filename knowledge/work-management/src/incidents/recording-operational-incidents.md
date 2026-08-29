@@ -3,10 +3,6 @@ type: Guide
 title: Recording Operational Incidents
 description: Use when current or imminent service impact needs an attributable living record, clear control, chronology, handoff, and bounded exit conditions.
 tags: [incident, recording, current-state, command, chronology, mitigation, communication, handoff]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/recording-operational-incidents.md
-    title: Recording operational incidents
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
@@ -14,7 +10,7 @@ generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 
 Follow the consuming organization's emergency, security, safety, privacy,
 disaster-recovery, and communication policies. Creating a record does not
-authorize technical mitigation or public communication.[^source-guide]
+authorize technical mitigation or public communication.
 
 ## 1. Establish the incident and safe channel
 
@@ -56,5 +52,3 @@ Apply local exit and closure policy. Record closure authority, supporting
 evidence, residual risk, and reopening trigger. Link independently owned Defect
 Reports, Changes, post-incident review, or recovery items without requiring
 their completion for every incident closure.
-
-[^source-guide]: Adapted from the cited live-record guide.

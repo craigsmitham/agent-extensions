@@ -68,29 +68,9 @@ The pack does not provide:
 - backlog prioritization, capacity planning, roadmaps, or portfolio management;
 - a requirements, architecture, design, test, or operational-response system;
 - implementation, debugging, release, or production-mutation authority; or
-- Gen Stack stages, corpus semantics, or focused-artifact lifecycle.
-
-## Migration from Gen Stack
-
-The portable work-item capability formerly embedded in the Gen Stack knowledge
-and umbrella skill maps to this pack as follows:
-
-| Former surface | Work Management replacement |
-| --- | --- |
-| Three software work-item roles | Software work-item taxonomy |
-| Evidence, metadata, identity, relationship, lifecycle, technical-context, and title guidance | Common work-item guidance |
-| Defect Report and incident authoring | Role-specific guides and templates |
-| Change coordination and Bugfix classification | Portable Change guidance |
-| Gen Stack work-item routing | `manage-work-items` |
-
-Pitch, Change Specification, Change Design, focused stages, OKF system corpus,
-Requirement lifecycle, Architecture authority, and Evaluation Protocols have no
-replacement in this pack. Consuming repositories may link their own
-specifications, decisions, designs, tests, or other authorities.
+- an end-to-end stage model, governed corpus, or focused-artifact lifecycle.
 
 ## Attribution and license
 
 The pack metadata and README and the skill package are MIT-licensed. The
-knowledge bundle is CC-BY-SA-4.0 and adapts work-item material from the Gen
-Stack knowledge bundle under that license. Each member retains its declared
-license.
+knowledge bundle is CC-BY-SA-4.0. Each member retains its declared license.

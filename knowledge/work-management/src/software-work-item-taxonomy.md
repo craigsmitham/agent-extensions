@@ -3,17 +3,13 @@ type: Reference
 title: Software work-item taxonomy
 description: Defines the portable work-item roles, classifications, neighboring activities, and distinctions that every guide and template in this bundle applies.
 tags: [work-item, taxonomy, defect-report, bug-report, change, bugfix, incident-record, investigation, planning]
-sources:
-  - id: gen-stack-work-items
-    resource: https://github.com/craigsmitham/agent-extensions/tree/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items
-    title: Gen Stack software work-item sources
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
 # Software work-item taxonomy
 
 This reference adapts the earlier work-item distinctions while owning the
-portable meanings used throughout this bundle.[^gen-stack-work-items] A host
+portable meanings used throughout this bundle. A host
 may use different issue types, fields, labels, and statuses, but those are
 representations of these meanings rather than alternate definitions.
 
@@ -77,7 +73,3 @@ it cannot make an observation true, a decision authorized, or a result verified.
 Classify from the item's semantic job, not its current title, label, assignee,
 or workflow state. When evidence does not support a role, preserve the source
 as a host-native intake record until classification becomes possible.
-
-[^gen-stack-work-items]: The initial portable distinctions were adapted from
-    the cited Gen Stack work-item sources while removing their method-specific
-    corpus, stage, authority, and artifact-lifecycle dependencies.

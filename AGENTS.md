@@ -18,11 +18,9 @@ repository adopts that extension's operating model.
 
 Treat an extension being discussed or changed as the subject of authoring,
 maintenance, evaluation, or audit, not as an invoked workflow. Use the
-artifact-appropriate authoring and evaluation guidance. In particular,
-authoring Gen Stack extensions does not place this repository or its changes
-under the Gen Stack process; do not require a Change, Change Specification,
-Change Design, or other Gen Stack stage artifact merely because work concerns
-Gen Stack sources.
+artifact-appropriate authoring and evaluation guidance. Do not require an
+extension's domain artifacts merely because work concerns that extension's
+sources.
 
 Apply an extension's operating model to repository work only when the user
 explicitly asks to execute that workflow or repository instructions separately
@@ -58,25 +56,35 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 
 ### @agentxm
 
+<!-- axm:point v=1 ext=@agentxm/knowledge/agent-engineering kind=knowledge -->
+
 | Bundle | Description |
 | --- | --- |
 | [agent-engineering](agent_extensions/agentxm/@agentxm/knowledge/agent-engineering/src/index.md) | End-to-end design of goal-directed AI agent systems: agent behavior, multi-agent coordination, prompts, context, harness, skills, evaluation, trust, and operations |
 
 ### @craigsmitham
 
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/docs kind=knowledge -->
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/effect-v4 kind=knowledge -->
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/field-notes kind=knowledge -->
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/knowledge-management kind=knowledge -->
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/product-management kind=knowledge -->
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/requirements-engineering kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/software-engineering kind=knowledge -->
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/strategy kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/work-management kind=knowledge -->
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/workflow-automation kind=knowledge -->
 
 | Bundle | Description |
 | --- | --- |
 | [docs](knowledge/docs/src/index.md) | Portable documentation craft for authoring, naming, information architecture, auditing, and improving explainers, guides, principles, and evidence-backed patterns |
-| [effect-v4](knowledge/effect-v4/src/index.md) | Opinionated Effect v4 guides for data modeling, services and layers, failure, lifetimes, concurrency, platform integration, and verification |
+| [effect-v4](knowledge/effect-v4/src/index.md) | Checklists to consult when designing, implementing, maintaining, or reviewing Effect v4 TypeScript |
 | [field-notes](knowledge/field-notes/src/index.md) | Operational field-note practice for factual and diagnostic evidence capture, impact-aware triage, evidence-led findings, and verified corrective action |
-| [gen-stack](knowledge/gen-stack/src/index.md) | A cohesive, opinionated software-change system spanning shaping, OODA control, intent, canonical Requirement lifecycle and change, architecture, work items, implementation, evaluations, and operational learning |
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
-| [product-management](knowledge/product-management/src/index.md) | Product management principles for outcomes, product risks, empowered teams, discovery, delivery, evidence, and product strategy |
+| [product-management](knowledge/product-management/src/index.md) | Portable product management for value and demand, product strategy, outcomes, risks, empowered teams, discovery, delivery, and evidence |
+| [requirements-engineering](knowledge/requirements-engineering/src/index.md) | Portable requirements engineering for elicitation, analysis, specification, review, traceability, lifecycle, and evidence across project methods and tools |
 | [software-engineering](knowledge/software-engineering/src/index.md) | Portable engineering craft for a repository's execution surface: task graphs, script surfaces, caching intent, and invocation contracts for humans, agents, and CI |
-| [strategy](knowledge/strategy/src/index.md) | Strategy as coherent choices about participation and advantage, supported by capabilities, value creation, and evidence |
+| [strategy](knowledge/strategy/src/index.md) | Strategy as coherent choices about participation, advantage, value, and capabilities, informed by situational awareness and evidence |
 | [work-management](knowledge/work-management/src/index.md) | Portable software work-item taxonomy, content contracts, templates, lifecycle, evidence, and tracker-neutral guidance |
 | [workflow-automation](knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end v=1 region=knowledge -->

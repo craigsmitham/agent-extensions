@@ -3,10 +3,6 @@ type: Guide
 title: Linking Defects to corrective Changes
 description: Use when established defects and an authorized remedial purpose must remain traceable to a separate Change classified as Bugfix.
 tags: [defect, defect-report, change, bugfix, remediation, correction, regression]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/addressing-defects-through-changes.md
-    title: Addressing defects through Changes
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
@@ -15,7 +11,7 @@ generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 Classify a Change as **Bugfix** only when available evidence establishes a
 Defect and the Change has an authorized purpose to correct it or acceptably
 compensate for its unacceptable effect. Investigation, monitoring, risk
-acceptance, or deferment alone is not a Bugfix.[^source-guide]
+acceptance, or deferment alone is not a Bugfix.
 
 ## Preserve separate identities
 
@@ -41,5 +37,3 @@ The Change records delivery and verification for the correction. Each source
 Defect Report follows its own local disposition and closure policy. A delivered
 Bugfix does not automatically verify or close every report, and a closed report
 does not prove that the Change was delivered.
-
-[^source-guide]: Adapted from the cited corrective-change guide.

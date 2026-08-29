@@ -3,16 +3,12 @@ type: Explanation
 title: Defects and Defect Reports
 description: Explains how observations, failures, defects, reports, investigation, correction, verification, and closure remain distinct.
 tags: [defect, defect-report, bug, failure, observation, expectation, diagnosis, correction, verification]
-sources:
-  - id: source-explanation
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/failures-defects-and-defect-reports.md
-    title: Failures, defects, and defect reports
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
 # Defects and Defect Reports
 
-An **observation** records something perceived under stated conditions.[^source-explanation] A
+An **observation** records something perceived under stated conditions. A
 **failure** is an observed inability to perform as required or intended. A
 **Defect** is a deficiency in a system or work product relative to an
 applicable expectation or intended use. A **Defect Report** is the durable work
@@ -51,5 +47,3 @@ When correction is authorized, preserve the Defect Report and create or link a
 separate [Change](../changes/changes.md) classified as Bugfix. This keeps the
 observation history intact while the Change coordinates the intended
 modification.
-
-[^source-explanation]: Adapted from the cited explanation.

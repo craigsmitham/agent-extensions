@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Advantage and coherence
 description: How strategic advantage arises from a reinforcing system of choices that creates distinctive value and resists imitation.
 tags: [competitive-advantage, coherence, fit, differentiation, capabilities]
 status: draft

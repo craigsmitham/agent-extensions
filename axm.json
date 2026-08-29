@@ -23,29 +23,15 @@
     "field-notes": "workspace",
     "author-docs": "workspace",
     "author-okf": "workspace",
-    "craft-effect-v4": "workspace",
     "audit-docs": "workspace",
-    "question": {
-      "source": "workspace",
-      "enabled": false
-    },
     "research": "workspace",
     "axm": {
       "source": "workspace",
       "origin": "bundled"
     },
-    "gen-stack": "workspace",
-    "investigate": "workspace",
-    "spec": "workspace",
-    "design": "workspace",
-    "plan": "workspace",
-    "implement": "workspace",
-    "review": "workspace",
-    "ship": "workspace",
-    "shape": "workspace",
-    "quick-change": "workspace",
-    "sync-change": "workspace",
-    "manage-work-items": "workspace"
+    "checklist-design": "workspace",
+    "manage-work-items": "workspace",
+    "engineer-requirements": "workspace"
   },
   "rules": {
     "field-notes": "workspace",
@@ -59,26 +45,21 @@
     "knowledge-management": "workspace",
     "product-management": "workspace",
     "strategy": "workspace",
-    "gen-stack": "workspace",
     "work-management": "workspace",
+    "requirements-engineering": "workspace",
     "software-engineering": "workspace"
   },
   "subagents": {
-    "researcher": "workspace",
-    "reviewer": "workspace"
+    "researcher": "workspace"
   },
   "packs": {
     "effect-v4": "workspace",
     "docs": "workspace",
     "field-notes": "workspace",
     "agent-engineering": "agentxm:@agentxm/packs/agent-engineering",
-    "qrspi": {
-      "source": "workspace",
-      "enabled": false
-    },
-    "gen-stack": "workspace",
     "research": "workspace",
-    "work-management": "workspace"
+    "work-management": "workspace",
+    "requirements-engineering": "workspace"
   },
   "owner": "@craigsmitham"
 }

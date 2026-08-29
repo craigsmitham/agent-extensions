@@ -3,16 +3,12 @@ type: Guide
 title: Managing work-item lifecycle and completion
 description: Use when changing disposition, delivery, verification, operational, or closure state while keeping those dimensions independent.
 tags: [work-item, lifecycle, completion, disposition, delivery, verification, closure, handoff]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/maintaining-work-item-identity-relationships-and-lifecycle.md
-    title: Maintaining work-item identity, relationships, and lifecycle
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
 # Managing work-item lifecycle and completion
 
-One workflow status rarely carries all material state.[^source-guide] Preserve evidence and
+One workflow status rarely carries all material state. Preserve evidence and
 understanding, decision, delivery, verification, operational, follow-up, and
 closure dimensions separately when they matter.
 
@@ -45,6 +41,3 @@ Distinguish:
 A merge, deployment, mitigation, completed task, or cleared alert is not
 verification by itself. Map lifecycle dimensions into local workflow fields
 without claiming that the host status proves them.
-
-[^source-guide]: Adapted from the cited guide while removing its former
-    artifact-stage lifecycle.

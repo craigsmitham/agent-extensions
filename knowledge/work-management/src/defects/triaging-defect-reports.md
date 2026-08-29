@@ -3,10 +3,6 @@ type: Guide
 title: Triaging Defect Reports
 description: Use when one or more Defect Reports need evidence-backed classification, relationship decisions, and a next route without invented diagnosis or priority.
 tags: [defect-report, triage, duplicate, applicability, investigation, disposition, batch]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/triaging-defect-reports.md
-    title: Triaging defect reports
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
@@ -14,7 +10,7 @@ generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 
 Triage decides the report's current classification, relationships, and next
 route from available evidence. It does not automatically diagnose root cause,
-set priority, authorize correction, or close the item.[^source-guide]
+set priority, authorize correction, or close the item.
 
 ## Triage one report
 
@@ -45,5 +41,3 @@ that a partial tracker mutation was atomic.
 Read back every external change. Triage is complete when each in-scope report
 has an attributable current classification or explicit unknown, relationship
 decisions, and a next route consistent with its evidence.
-
-[^source-guide]: Adapted from the cited triage guide.

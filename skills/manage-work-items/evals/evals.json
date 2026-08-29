@@ -1,6 +1,6 @@
 {
   "skill_name": "manage-work-items",
-  "suite_version": "0.1.0",
+  "suite_version": "0.1.1",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -66,7 +66,7 @@
       "id": 5,
       "stage": "execution",
       "prompt": "Write a software Change to add resumable uploads. Include why, outcome, scope, constraints, acceptance conditions, verification, risks, and next action. Keep it process-agnostic.",
-      "expected_output": "A complete portable Change using the common and role contracts without importing Gen Stack artifacts or lifecycle.",
+      "expected_output": "A complete portable Change using the common and role contracts without importing unrelated method artifacts or lifecycle.",
       "assertions": [
         "The Change includes motivation, intended outcome, bounded scope and exclusions, constraints, acceptance conditions, verification strategy, risks, and next action.",
         "The response neither requires a specification, design, or test stage nor presents planned tests as completed evidence.",
@@ -106,7 +106,7 @@
       "stage": "routing",
       "prompt": "Turn these observations into a tracker-ready bug report and preserve the reproduction uncertainty.",
       "expected_selection": "manage-work-items",
-      "catalog_neighbors": ["gen-stack", "investigate", "author-docs"],
+      "catalog_neighbors": ["engineer-requirements", "research", "author-docs"],
       "assertions": [
         "The selected skill is manage-work-items.",
         "The request is recognized as Defect Report authoring rather than diagnosis, implementation, or general documentation.",
@@ -119,7 +119,7 @@
       "stage": "routing",
       "prompt": "Implement the fix for the cache race, run the tests, and open a pull request.",
       "expected_selection": "clarify-or-abstain",
-      "catalog_neighbors": ["manage-work-items", "implement"],
+      "catalog_neighbors": ["manage-work-items", "engineer-requirements"],
       "assertions": [
         "Manage-work-items is not selected for implementation work.",
         "The request is not reframed as work-item authoring.",
@@ -132,7 +132,7 @@
       "stage": "routing",
       "prompt": "Prioritize our backlog for next quarter and assign the top stories to the team.",
       "expected_selection": "clarify-or-abstain",
-      "catalog_neighbors": ["manage-work-items", "gen-stack"],
+      "catalog_neighbors": ["manage-work-items", "improve-whatever"],
       "assertions": [
         "Manage-work-items is not selected for backlog prioritization, capacity planning, or assignment.",
         "No priority or assignment mutation occurs.",
@@ -145,7 +145,7 @@
       "stage": "routing",
       "prompt": "Rewrite issue 44's title and two-sentence summary without changing its body or fields.",
       "expected_selection": "manage-work-items",
-      "catalog_neighbors": ["author-docs", "gen-stack"],
+      "catalog_neighbors": ["author-docs", "engineer-requirements"],
       "assertions": [
         "The selected skill is manage-work-items.",
         "The title-and-summary-only operation is recognized.",

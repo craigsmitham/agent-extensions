@@ -1,6 +1,6 @@
 {
   "skill_name": "temporal-dates",
-  "suite_version": "0.2.0",
+  "suite_version": "0.2.1",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -45,7 +45,6 @@
       "prompt": "Review JavaScript date and timezone code for DST bugs and choose the correct Temporal types.",
       "expected_selection": "temporal-dates",
       "catalog_neighbors": [
-        "craft-effect-v4",
         "author-docs"
       ],
       "assertions": [
@@ -59,14 +58,14 @@
       "id": 5,
       "stage": "routing",
       "prompt": "Replace Date.now and real-time sleeps in this Effect v4 service with Effect DateTime, Duration, Clock, and TestClock patterns.",
-      "expected_selection": "craft-effect-v4",
+      "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
-        "craft-effect-v4",
         "author-docs"
       ],
       "assertions": [
-        "Effect-specific date and clock work selects craft-effect-v4.",
+        "No Agent Skill is selected solely for Effect-specific DateTime and Clock work.",
         "temporal-dates is not selected for an Effect program's DateTime and Clock model.",
+        "The Effect knowledge checklist can be consulted directly without routing through a skill.",
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
       ]
@@ -77,7 +76,6 @@
       "prompt": "Our plain TypeScript scheduler uses new Date, timezone offsets, and date-fns. Review it and choose the right JavaScript Temporal types.",
       "expected_selection": "temporal-dates",
       "catalog_neighbors": [
-        "craft-effect-v4",
         "author-docs"
       ],
       "assertions": [
@@ -103,18 +101,14 @@
       "id": 8,
       "stage": "routing",
       "prompt": "This Effect v4 billing module is covered by a scoped AGENTS.md instruction that requires JavaScript Temporal for its domain dates. Implement its PlainDate billing cycle while keeping the surrounding Effect service patterns.",
-      "expected_selection": [
-        "temporal-dates",
-        "craft-effect-v4"
-      ],
+      "expected_selection": "temporal-dates",
       "catalog_neighbors": [
-        "craft-effect-v4",
         "author-docs"
       ],
       "assertions": [
         "The explicit scoped Temporal instruction selects temporal-dates even though the module uses Effect.",
-        "The surrounding Effect work also selects craft-effect-v4.",
-        "Selection composes the two responsibilities instead of treating the file as one indivisible runtime model.",
+        "No second skill is selected solely for the surrounding Effect service work.",
+        "The Effect knowledge checklist may be consulted directly without becoming a routing selection.",
         "No task side effect occurs before selection."
       ]
     },
@@ -124,7 +118,6 @@
       "prompt": "Review parsing in this TypeScript adapter. Its module instructions deliberately retain native JavaScript Date objects and do not authorize a Temporal migration.",
       "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
-        "craft-effect-v4",
         "author-docs"
       ],
       "assertions": [
@@ -152,7 +145,6 @@
       "prompt": "Review this existing Temporal.ZonedDateTime scheduling code for DST disambiguation and offset-conflict bugs.",
       "expected_selection": "temporal-dates",
       "catalog_neighbors": [
-        "craft-effect-v4",
         "author-docs"
       ],
       "assertions": [
@@ -168,7 +160,6 @@
       "prompt": "We need to improve date handling in a plain TypeScript module and are considering Date, date-fns, or another library, but no date/time model has been selected. Review the local logic without choosing a migration for us.",
       "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
-        "craft-effect-v4",
         "author-docs"
       ],
       "assertions": [

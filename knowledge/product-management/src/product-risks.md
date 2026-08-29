@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Product risks
 description: How value, usability, feasibility, and viability frame the evidence needed before and after committing to a product solution.
 tags: [product-risks, value, usability, feasibility, viability, discovery]
 status: draft
@@ -26,7 +27,7 @@ Four questions organize the risk that a proposed product solution will fail:
 These are evidence questions, not four sequential approval gates. Their
 importance changes with the idea and context. Investigate the risks that are
 material or disputed; demanding equal proof for every risk on every change adds
-delay without improving the decision.[^planning]
+delay without improving the decision.[^svpg-discovery-planning]
 
 The risks are shared by the cross-functional team. Different disciplines bring
 different expertise, but no handoff makes a solution valuable, usable,
@@ -37,5 +38,6 @@ commercial viability, and stakeholder approval does not establish customer
 value. Production evidence remains necessary because discovery reduces
 uncertainty; it does not eliminate it.
 
-[^planning]: SVPG recommends focusing discovery effort where risk is significant
-    or team members disagree rather than validating every assumption uniformly.
+[^svpg-discovery-planning]: SVPG recommends focusing discovery effort where
+    risk is significant or team members disagree rather than validating every
+    assumption uniformly.

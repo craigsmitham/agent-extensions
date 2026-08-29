@@ -146,9 +146,9 @@ expected=(
   knowledge/docs
   knowledge/effect-v4
   knowledge/field-notes
-  knowledge/gen-stack
   knowledge/knowledge-management
   knowledge/product-management
+  knowledge/requirements-engineering
   knowledge/software-engineering
   knowledge/strategy
   knowledge/work-management
@@ -156,8 +156,7 @@ expected=(
   packs/docs
   packs/effect-v4
   packs/field-notes
-  packs/gen-stack
-  packs/qrspi
+  packs/requirements-engineering
   packs/research
   packs/work-management
   rules/field-notes
@@ -165,26 +164,14 @@ expected=(
   skills/audit-docs
   skills/author-docs
   skills/author-okf
-  skills/craft-effect-v4
-  skills/design
+  skills/checklist-design
+  skills/engineer-requirements
   skills/field-notes
-  skills/gen-stack
-  skills/implement
   skills/improve-whatever
-  skills/investigate
   skills/manage-work-items
-  skills/plan
-  skills/question
-  skills/quick-change
   skills/research
-  skills/review
-  skills/shape
-  skills/ship
-  skills/spec
-  skills/sync-change
   skills/temporal-dates
   subagents/researcher
-  subagents/reviewer
 )
 
 expected_list="$(printf '%s\n' "${expected[@]}")"

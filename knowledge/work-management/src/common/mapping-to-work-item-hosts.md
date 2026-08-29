@@ -3,17 +3,13 @@ type: Guide
 title: Mapping work items to native hosts
 description: Use when representing work-item meaning in tracker fields, labels, relationships, and body content without duplicate authority.
 tags: [work-item, tracker, fields, labels, metadata, github, jira, linear, readback, batch]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/managing-work-item-metadata-and-labels.md
-    title: Managing work-item metadata and labels
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
 # Mapping work items to native hosts
 
 This guide adapts the earlier tracker metadata and label guidance to the
-portable work-item contract.[^source-guide]
+portable work-item contract.
 
 ## Establish meaning before mapping
 
@@ -45,5 +41,3 @@ After writing, retrieve the persisted item and compare identity, fields,
 relationships, and body with the intended result. In a batch, retain successful
 item-local writes, report each failure or unverified identity, and do not claim
 atomic success unless the host provides it.
-
-[^source-guide]: Adapted from the cited tracker-mapping guide.

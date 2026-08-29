@@ -3,17 +3,13 @@ type: Guide
 title: Maintaining work-item identity and relationships
 description: Use when creating, relating, duplicating, merging, splitting, superseding, or reopening work items without losing independently meaningful history.
 tags: [work-item, identity, relationships, duplicate, merge, split, supersession, reopening, regression]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/maintaining-work-item-identity-relationships-and-lifecycle.md
-    title: Maintaining work-item identity, relationships, and lifecycle
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
 # Maintaining work-item identity and relationships
 
 This guide adapts the identity and relationship portions of the earlier common
-lifecycle guidance.[^source-guide]
+lifecycle guidance.
 
 ## Reuse or create an identity
 
@@ -55,5 +51,3 @@ For a regression, preserve the new occurrence first, then follow local policy
 to reopen the earlier item or create a linked record. Never erase the earlier
 resolution or verification result; it remains evidence for its original
 revision and conditions.
-
-[^source-guide]: Adapted from the cited identity and lifecycle guide.

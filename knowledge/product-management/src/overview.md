@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Product management overview
 description: What product management is responsible for and how strategy, discovery, delivery, teams, and evidence fit together.
 tags: [product-management, product-operating-model, outcomes, discovery, explanation]
 status: draft
@@ -10,6 +11,12 @@ sources:
   - id: svpg-product-model
     resource: https://www.svpg.com/the-product-operating-model-an-introduction/
     title: SVPG — The Product Operating Model, An Introduction
+  - id: product-value-demand
+    resource: value-and-demand/value-and-demand-model.md
+    title: Product Management — Value and demand model
+generated:
+  by: codex/gpt-5.6
+  at: 2026-08-29T20:34:30Z
 ---
 
 # Product management overview
@@ -26,11 +33,13 @@ whether proposed and delivered solutions achieve the intended outcomes.
 Product work forms a connected system:
 
 1. Strategy supplies consequential choices and constraints.
-2. Product teams receive problems and outcomes rather than predetermined
+2. Evidence about offerings, audiences, needs, jobs, and value propositions
+   gives those choices product meaning.[^product-value-demand]
+3. Product teams receive problems and outcomes rather than predetermined
    solutions.
-3. Discovery reduces important product risks with evidence.
-4. Delivery creates and operates a production-quality product.
-5. Real use supplies evidence for the next decision.
+4. Discovery reduces important product risks with evidence.
+5. Delivery creates and operates a production-quality product.
+6. Real use supplies evidence for the next decision.
 
 ## Non-responsibilities
 
@@ -42,3 +51,6 @@ particular accountability for product value and viability.
 The discipline is also not a universal organizational prescription. Titles and
 structures vary; the enduring questions are where product decisions are made,
 which evidence informs them, and who is accountable for the resulting value.
+
+[^product-value-demand]: The value and demand model explains these concepts as
+    an evidence-backed graph rather than a prescribed artifact hierarchy.

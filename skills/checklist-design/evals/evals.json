@@ -1,0 +1,660 @@
+{
+  "skill_name": "checklist-design",
+  "suite_version": "0.1.9",
+  "evaluation_contract": "evals/evaluation-contract.json",
+  "evals": [
+    {
+      "id": 1,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "explicit-control",
+      "prompt": "$checklist-design Design a reusable release-verification checklist for a fictional service, including a validation plan.",
+      "expected_selection": "checklist-design",
+      "catalog_neighbors": [],
+      "assertions": [
+        "The explicit invocation selects checklist-design.",
+        "The explicit invocation is recorded as a routing control, not evidence of implicit selection quality.",
+        "The control isolates explicit target activation from adjacent-skill classification.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 2,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "explicit-checklist-design",
+      "prompt": "Design a reusable do-confirm checklist for teams to verify a fictional documentation release before publishing it.",
+      "expected_selection": "checklist-design",
+      "catalog_neighbors": [
+        "author-docs",
+        "plan"
+      ],
+      "assertions": [
+        "Checklist-design is selected from the implicit capability request.",
+        "The reusable checklist artifact and verification purpose are recognized.",
+        "Author-docs is not selected merely because the fictional subject is documentation.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 3,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "review-and-adapt",
+      "prompt": "Review and adapt this recurring shift-handoff checklist so that two roles verify the shared state rather than merely tick boxes.",
+      "expected_selection": "checklist-design",
+      "catalog_neighbors": [
+        "review",
+        "improve-whatever"
+      ],
+      "assertions": [
+        "Checklist-design is selected for review and adaptation of a reusable checklist.",
+        "The challenge-response or coordination purpose is within the route.",
+        "A general review skill does not displace the artifact-specific workflow.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 4,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "ordinary-list-negative",
+      "prompt": "Make me a short personal to-do list for buying groceries and packing a lunch.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "checklist-design"
+      ],
+      "assertions": [
+        "Checklist-design is not selected for an ordinary personal to-do list.",
+        "The presence of list language alone does not trigger the skill.",
+        "The request can be answered directly without a reusable checklist-design workflow.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 5,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "checklist-execution-negative",
+      "prompt": "Walk me through the existing checklist one item at a time and record my answers.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "checklist-design"
+      ],
+      "assertions": [
+        "Checklist-design is not selected to execute an existing checklist.",
+        "The distinction between artifact design and checklist operation is preserved.",
+        "No redesign is inferred from an execution request.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 6,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "runbook-negative",
+      "prompt": "Write a complete incident-response runbook with explanations, diagnostic branches, command references, and recovery procedures.",
+      "expected_selection": "author-docs",
+      "catalog_neighbors": [
+        "author-docs",
+        "checklist-design"
+      ],
+      "assertions": [
+        "Author-docs is selected for authoring a complete runbook.",
+        "Checklist-design is not selected for the explanatory and branching artifact.",
+        "The request's command-reference and recovery scope is recognized as documentation authoring.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 7,
+      "stage": "execution",
+      "execution_partition": "development",
+      "prompt": "Create a reusable release-verification checklist for the fictional Northstar documentation site. Supplied authoritative project facts: the static build must succeed; the link checker must report zero broken internal links; the accessibility smoke test must complete; the release coordinator must confirm the rollback snapshot identifier; any failed check stops publication and is escalated to the release owner. Use is desktop-based by one coordinator after content approval and before publication.",
+      "expected_output": "A candidate do-confirm or readiness-gate design grounded only in these supplied facts: the static build must succeed; the link checker must report zero broken internal links; the accessibility smoke test must complete; the release coordinator must confirm the rollback snapshot identifier; any failed check stops publication and is escalated to the release owner; one coordinator uses the aid on desktop after content approval and before publication. It has explicit fit, trigger, roles, observable evidence, failed-check behavior, validation, lifecycle, and gaps.",
+      "assertions": [
+        "Artifact status is candidate and no certification is implied.",
+        "The fit decision names a verification or readiness purpose and considers plausible alternatives.",
+        "Every domain-critical item traces to a supplied project fact rather than invented thresholds.",
+        "The trigger, coordinator role, evidence, stop rule, escalation, and completion condition are explicit.",
+        "The validation plan measures observed execution and release outcomes rather than completion alone.",
+        "Lifecycle ownership, sources, review triggers, and unresolved gaps are visible."
+      ]
+    },
+    {
+      "id": 8,
+      "stage": "execution",
+      "execution_partition": "development",
+      "prompt": "Design one universal checklist that diagnoses any outage across twenty-five fictional services, chooses among all possible dependency failures, explains the reasoning for each branch, and supplies the complete recovery procedure.",
+      "expected_output": "An alternative-recommended artifact-fit decision that compares a checklist with a decision tree, diagnostic playbook, or runbook and leaves the consequential deliverable choice with the user.",
+      "assertions": [
+        "Artifact status is alternative-recommended.",
+        "The response does not generate the requested universal branching checklist as if it were fit.",
+        "The decision comparison presents viable options in parallel before one recommendation.",
+        "The recommendation appears exactly once.",
+        "The final choice request neutrally permits choosing any listed option, revising, deferring, or requesting evidence.",
+        "Stable option labels are used across the comparison, recommendation, and choice request.",
+        "The response stops immediately after the choice request without beginning the downstream design or appending another preference."
+      ]
+    },
+    {
+      "id": 9,
+      "stage": "execution",
+      "execution_partition": "development",
+      "prompt": "Create a learning checklist for new analysts practicing how to distinguish a fictional routine signal from an anomaly. The learning goal is independent explanation and correct handling of novel examples after two weeks, not merely completing practice today. Learners receive coach feedback during week one and should need less prompting over time.",
+      "expected_output": "A candidate learning scaffold that distinguishes aided performance from learning and combines rationale, retrieval, feedback, reflection, fading, and delayed unassisted transfer evidence.",
+      "assertions": [
+        "The primary mode is learning-scaffold and the independent two-week outcome is explicit.",
+        "The design prompts retrieval, prediction, or explanation rather than only supplying steps.",
+        "Coach feedback, reflection, and fading are represented, and current and intended expertise are explicit.",
+        "Validation requires delayed unassisted performance on novel examples.",
+        "Successful completion while the checklist is visible is not treated as proof of learning.",
+        "A fuller lesson, simulation, rubric, or coaching artifact is considered where it owns part of the job."
+      ]
+    },
+    {
+      "id": 10,
+      "stage": "execution",
+      "execution_partition": "development",
+      "prompt": "Write a definitive surgical-emergency checklist that a hospital can deploy tomorrow. No clinical protocol, jurisdiction, equipment context, or accountable medical authority is available. Certify that the checklist is safe and complete.",
+      "expected_output": "A structure-only response that preserves the useful design brief and validation needs while refusing to invent clinical content or certify safety, completeness, or deployment readiness.",
+      "assertions": [
+        "Artifact status is structure-only.",
+        "No domain-specific surgical actions, checks, treatments, or equipment are invented.",
+        "No clinical values, thresholds, diagnoses, or assurances are invented.",
+        "The missing clinical, local, and accountable authority is explicit.",
+        "The requested safety, completeness, and deployment certification is not made.",
+        "The structure uses only domain-neutral placeholders while preserving evidence needs and the smallest safe next action."
+      ]
+    },
+    {
+      "id": 11,
+      "stage": "execution",
+      "execution_partition": "development",
+      "prompt": "Review only this synthetic shared deployment checklist; do not rewrite it. Context: two roles use it on mobile devices during interrupted work. The interface communicates state only with red and green. Checklist: '[ ] Everything ready. [ ] Security good. [ ] Deploy. [ ] Mark complete.' There is no trigger, evidence field, failed-check action, escalation route, version, or owner.",
+      "expected_output": "A review-only result that ties findings to ambiguity, accessibility, roles, false completion, interruption recovery, escalation, evidence, and lifecycle without silently rewriting the artifact.",
+      "assertions": [
+        "Artifact status is review-only and the supplied checklist is not replaced.",
+        "Findings identify ambiguous compound or non-observable items and false-completion risk.",
+        "Color-only state, mobile use, and interruption recovery are addressed as interaction concerns.",
+        "Missing trigger, roles, evidence, failed-check behavior, escalation, version, and owner are connected to consequences.",
+        "The response labels the work review-only or a design review and does not present the findings as validation."
+      ]
+    },
+    {
+      "id": 12,
+      "stage": "execution",
+      "execution_partition": "development",
+      "prompt": "Design a synthetic data-export readiness checklist that must both stop an unsafe export and leave evidence for a later reviewer. The operator needs a fast decision; the reviewer needs traceable values and source references. A failed readiness criterion must stop the export and name the escalation owner.",
+      "expected_output": "A candidate hybrid that names readiness-gate as primary, reporting-review as secondary, exposes the speed-versus-traceability tension, and structures evidence without allowing audit needs to obscure the stop decision.",
+      "assertions": [
+        "One primary and one secondary mode are named rather than silently blended.",
+        "The operational stop decision remains prominent while reviewer evidence is preserved.",
+        "The trigger, responsible roles, observable criteria, failed-gate action, and escalation owner are explicit or marked unresolved.",
+        "The validation plan distinguishes decision reliability from reporting completeness.",
+        "Completion is not treated as proof that the export was safe."
+      ]
+    },
+    {
+      "id": 13,
+      "stage": "execution",
+      "execution_partition": "development",
+      "prompt": "Adapt a synthetic export checklist using two supplied authoritative sources. Source A says records must be frozen before export. Source B says records must remain live throughout export. Both sources claim to govern the same workflow and neither has a date or precedence rule.",
+      "expected_output": "A bounded structure-only or review-only result that exposes the source conflict, identifies affected items and authority needed, and does not silently choose or merge incompatible requirements.",
+      "assertions": [
+        "The material source conflict and missing precedence or freshness evidence are explicit.",
+        "The response does not choose, average, or silently merge the incompatible instructions.",
+        "Affected checklist items and the accountable resolution needed are identified.",
+        "Any preserved structure clearly marks the domain-content gap.",
+        "No claim of validity, safety, or readiness is made."
+      ]
+    },
+    {
+      "id": 14,
+      "stage": "execution",
+      "execution_partition": "development",
+      "prompt": "Create a validation plan for an existing fictional quality checklist. Administrative records show 100% completion for six months, but defects continue and no one has observed use directly. Compare the checklist with current unaided review and a role-specific inspection scenario. Include evidence that would disconfirm the checklist's quality claim.",
+      "expected_output": "A validation-plan response that treats completion records as weak mechanism evidence, defines direct observation and comparative task outcomes, measures adverse effects and distribution, and names disconfirming results.",
+      "assertions": [
+        "One hundred percent recorded completion is not treated as proof of execution, defect reduction, or effectiveness.",
+        "The plan distinguishes content, usability, observed mechanism, comparative outcomes, harms, and durability.",
+        "Both supplied alternatives are compared under aligned tasks and measures.",
+        "Defects, unique findings, timing, workarounds, misselection, and unequal effects are considered where material.",
+        "Null outcomes, ritual compliance, delay, decay, and a superior alternative can disconfirm the quality claim.",
+        "The plan makes no independent approval or production-readiness claim."
+      ]
+    },
+    {
+      "id": 15,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "failure-focused-verification-without-checklist-term",
+      "prompt": "Release coordinators keep forgetting rollback identifiers and sign-off evidence. Design a reusable pre-publication verification aid with explicit stop conditions, role ownership, and a way to test whether it reduces omissions.",
+      "expected_selection": "checklist-design",
+      "catalog_neighbors": [
+        "author-docs",
+        "plan"
+      ],
+      "assertions": [
+        "Checklist-design is selected from the omission-control and reusable-verification purpose without requiring the word checklist.",
+        "The request is recognized as artifact design rather than release execution or general planning.",
+        "Neighboring documentation and planning skills do not displace the purpose-specific checklist workflow.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 16,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "learning-scaffold-without-checklist-term",
+      "prompt": "New analysts can follow coached steps today but cannot explain or handle novel examples two weeks later. Design a reusable practice aid that fades prompts and tests delayed unassisted transfer.",
+      "expected_selection": "checklist-design",
+      "catalog_neighbors": [
+        "author-docs",
+        "research"
+      ],
+      "assertions": [
+        "Checklist-design is selected from the reusable learning-scaffold and delayed-transfer purpose without requiring the word checklist.",
+        "The request is recognized as learning-aid design rather than domain research or lesson documentation alone.",
+        "The intended progression from supported practice to independent performance is within the route.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 17,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "casual-misspelled-positive",
+      "prompt": "can u fix this recurring preflite cheklist? ppl tick it after deploy; i need it to stop a bad release, show evidence, and recover after interruptions.",
+      "expected_selection": "checklist-design",
+      "catalog_neighbors": [
+        "review",
+        "improve-whatever"
+      ],
+      "assertions": [
+        "Checklist-design is selected despite casual wording and misspellings.",
+        "The request is recognized as redesign of a reusable readiness gate rather than execution of one instance.",
+        "A general review or improvement route does not displace the artifact-specific workflow.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 18,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "mixed-research-and-design",
+      "prompt": "Research current authoritative accessibility guidance for a reusable release checklist, then design the checklist and its validation plan from those sources. Do not start the design until the fresh research has been gathered and reviewed.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "research",
+        "author-docs"
+      ],
+      "assertions": [
+        "The unprefixed mixed request clarifies or abstains because research is explicit-only and checklist-design excludes conducting domain research.",
+        "Checklist-design is not selected alone for a request that requires fresh authoritative research before design.",
+        "Research is not selected without its required explicit invocation.",
+        "The response may identify a valid ordered workflow after explicit research invocation without implying a permanent package dependency.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 19,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "agent-skill-authoring-negative",
+      "prompt": "Create a portable Agent Skill named checklist-design with a SKILL.md, supporting references, evaluation cases, and model-routing metadata.",
+      "expected_selection": "author-agent-skill",
+      "catalog_neighbors": [
+        "author-agent-skill",
+        "checklist-design"
+      ],
+      "assertions": [
+        "Author-agent-skill is selected for authoring an Agent Skill package.",
+        "Checklist-design is not selected merely because it is the requested package name and subject.",
+        "The distinction between designing checklist artifacts and authoring a skill about them is preserved.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 20,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "sop-authoring-negative",
+      "prompt": "Turn this short checklist into a complete incident-response SOP with explanations, diagnostic branches, commands, recovery procedures, and reference material.",
+      "expected_selection": "author-docs",
+      "catalog_neighbors": [
+        "author-docs",
+        "checklist-design"
+      ],
+      "assertions": [
+        "Author-docs is selected for the requested complete SOP.",
+        "Checklist-design is not selected merely because a checklist is supplied as source material.",
+        "The explanatory, diagnostic, command-reference, and recovery scope is recognized as documentation authoring.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 21,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "ambiguous-process-improvement",
+      "prompt": "We keep missing things during launches. Help us fix the process.",
+      "expected_selection": "improve-whatever",
+      "catalog_neighbors": [
+        "checklist-design",
+        "improve-whatever",
+        "plan"
+      ],
+      "assertions": [
+        "The ambiguous process-improvement request does not select checklist-design without evidence that a reusable checklist is the intended aid.",
+        "The omission symptom alone is not treated as proof that a checklist fits.",
+        "Improve-whatever owns the open-ended process-improvement request while preserving the choice among process redesign, automation, training, planning, and checklist design.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 22,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "validation-plan-positive",
+      "prompt": "Our recurring inspection checklist shows 100% completion while defects continue. Design a validation plan that compares observed use and outcomes with unaided review.",
+      "expected_selection": "checklist-design",
+      "catalog_neighbors": [
+        "research",
+        "plan"
+      ],
+      "assertions": [
+        "Checklist-design is selected for validation planning of an existing reusable checklist.",
+        "The request is not reduced to generic planning or domain research.",
+        "Completion-versus-effectiveness is recognized as part of the skill's route.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 23,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "casual-checklist-execution-negative",
+      "prompt": "here's our go-live checklist. ask me each item, save my yes/no answers, and tell me when we're done.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "checklist-design"
+      ],
+      "assertions": [
+        "Checklist-design is not selected to operate a supplied checklist and record one run.",
+        "Casual wording does not erase the design-versus-execution boundary.",
+        "No artifact redesign or validation plan is inferred from the execution request.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 24,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "readiness-gate-review-without-checklist-term",
+      "prompt": "Review this recurring two-role release gate. It says only 'ready' and 'go'; make its stop criteria, evidence, escalation, and interruption recovery dependable without turning it into a full runbook.",
+      "expected_selection": "checklist-design",
+      "catalog_neighbors": [
+        "review",
+        "author-docs"
+      ],
+      "assertions": [
+        "Checklist-design is selected for review of a reusable readiness gate without requiring the word checklist.",
+        "The requested stop criteria, evidence, escalation, and recovery are recognized as checklist interaction design.",
+        "General review and documentation skills do not displace the artifact-specific route.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 25,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "personal-preflight-list-negative",
+      "prompt": "Make me a preflight checklist for my weekend trip: clothes, charger, snacks, and a book.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "checklist-design"
+      ],
+      "assertions": [
+        "Checklist-design is not selected for a personal packing list despite the words preflight and checklist.",
+        "High-overlap vocabulary does not override the ordinary-list boundary.",
+        "The request can be answered directly without a reusable checklist-design workflow.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 26,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "checklist-research-negative",
+      "prompt": "Research the history and empirical literature on surgical safety checklists, summarize disagreements, and cite the sources. Do not design or revise a checklist.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "research",
+        "checklist-design"
+      ],
+      "assertions": [
+        "The unprefixed research request clarifies or abstains because research is explicit-only.",
+        "Checklist-design is not selected when artifact design and revision are explicitly excluded.",
+        "The presence of checklist subject matter does not override the domain-research boundary.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 27,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "agent-skill-authoring-paraphrase-negative",
+      "prompt": "Build a reusable Codex skill that helps teams critique operational checklists. Package it with SKILL.md instructions, supporting references, routing metadata, and behavioral evals.",
+      "expected_selection": "author-agent-skill",
+      "catalog_neighbors": [
+        "author-agent-skill",
+        "checklist-design"
+      ],
+      "assertions": [
+        "Author-agent-skill is selected for building and packaging the requested reusable skill.",
+        "Checklist-design is not selected merely because the new skill will critique checklists.",
+        "The subject matter of a requested Agent Skill does not displace the Agent Skill authoring workflow.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 28,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "generic-process-improvement-paraphrase-negative",
+      "prompt": "Our overnight handoffs are inconsistent and people forget context. Improve the workflow, but first determine what kind of intervention actually fits.",
+      "expected_selection": "improve-whatever",
+      "catalog_neighbors": [
+        "checklist-design",
+        "improve-whatever",
+        "plan"
+      ],
+      "assertions": [
+        "Improve-whatever is selected for open-ended workflow improvement before an artifact is established.",
+        "Checklist-design is not selected merely because missed context could eventually motivate a checklist.",
+        "The request to determine the intervention prevents premature checklist selection.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 29,
+      "stage": "routing",
+      "routing_partition": "holdout",
+      "trigger_family": "agent-skill-subject-matter-paraphrase-negative",
+      "prompt": "Turn our checklist-review method into an installable Agent Skill. The deliverable is a portable skill package with activation guidance, supporting material, and routing and execution evals.",
+      "expected_selection": "author-agent-skill",
+      "catalog_neighbors": [
+        "author-agent-skill",
+        "checklist-design"
+      ],
+      "assertions": [
+        "Author-agent-skill is selected because the requested deliverable is an installable Agent Skill package.",
+        "Checklist-design is not separately selected merely to supply the package's checklist subject matter.",
+        "The artifact-authoring workflow owns activation guidance and evaluation assets.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 30,
+      "stage": "routing",
+      "routing_partition": "holdout",
+      "trigger_family": "shared-verification-aid-without-checklist-term",
+      "prompt": "Give two release coordinators a compact, repeatable aid for the final approval handoff. It should prompt each observable check, require shared confirmation, and stop the handoff when evidence is missing.",
+      "expected_selection": "checklist-design",
+      "catalog_neighbors": [
+        "plan",
+        "author-docs"
+      ],
+      "assertions": [
+        "Checklist-design is selected from the recurring verification, shared-confirmation, and stop-rule purpose without requiring the checklist keyword.",
+        "The request for a compact operational aid is not displaced by planning or general documentation authoring.",
+        "The interaction requirements remain within checklist design rather than checklist execution.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 31,
+      "stage": "routing",
+      "routing_partition": "holdout",
+      "trigger_family": "one-off-personal-list-paraphrase-negative",
+      "prompt": "Jot down a quick one-off list for my afternoon: return a library book, buy coffee, and call a friend.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "checklist-design"
+      ],
+      "assertions": [
+        "Checklist-design is not selected for a one-off personal reminder list.",
+        "List language without a reusable operational or learning purpose does not activate the skill.",
+        "The request can be answered directly without the checklist-design workflow.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 32,
+      "stage": "routing",
+      "routing_partition": "holdout",
+      "trigger_family": "operate-and-record-paraphrase-negative",
+      "prompt": "Use the approval gate I pasted, ask each prompt in order, record the answers, and tell me whether this run passed.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "checklist-design"
+      ],
+      "assertions": [
+        "Checklist-design is not selected to operate a supplied gate and record a single run.",
+        "The request does not imply redesign, adaptation, review, or validation planning.",
+        "The design-versus-execution boundary survives checklist synonyms.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 33,
+      "stage": "routing",
+      "routing_partition": "holdout",
+      "trigger_family": "open-ended-handoff-improvement-negative",
+      "prompt": "Customer handoffs keep losing important context. Diagnose the workflow and recommend the best intervention before deciding whether we need training, automation, a form, or any kind of prompt aid.",
+      "expected_selection": "improve-whatever",
+      "catalog_neighbors": [
+        "checklist-design",
+        "improve-whatever",
+        "plan"
+      ],
+      "assertions": [
+        "Improve-whatever is selected for diagnosing and improving the workflow before an artifact is chosen.",
+        "Checklist-design is not selected merely because a prompt aid is one possible intervention.",
+        "The request preserves alternatives rather than presupposing a checklist.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 34,
+      "stage": "routing",
+      "routing_partition": "holdout",
+      "trigger_family": "operator-manual-negative",
+      "prompt": "Author a complete operator manual for a fictional batch service, including concepts, decision branches, command examples, failure diagnosis, rollback procedures, and an appendix with a short preflight checklist.",
+      "expected_selection": "author-docs",
+      "catalog_neighbors": [
+        "author-docs",
+        "checklist-design"
+      ],
+      "assertions": [
+        "Author-docs is selected because the requested deliverable is a complete explanatory operator manual.",
+        "Checklist-design is not selected merely because the manual contains a subordinate preflight checklist.",
+        "Decision branches, diagnosis, commands, and recovery procedures keep the primary artifact outside checklist design.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 35,
+      "stage": "execution",
+      "execution_partition": "development",
+      "prompt": "Create one compact checklist that teaches operators every database concept, diagnoses any failure through many branches, chooses the root cause, and provides all recovery commands. Replacing it with a decision tree plus focused runbooks would materially change the deliverable, so leave that choice with me.",
+      "expected_output": "An alternative-recommended artifact-fit decision that compares stable labeled options, recommends once, requests an authorized choice, and stops before downstream design.",
+      "assertions": [
+        "Artifact status is alternative-recommended and the universal checklist is not produced as if fit.",
+        "Viable options are compared neutrally with literal stable labels before one recommendation.",
+        "Exactly one sentence in the Recommendation field names one option; the final request neutrally lists all options without labeling one as recommended.",
+        "The final request permits choosing any listed option, revising, deferring, or requesting evidence.",
+        "The response ends immediately after the choice request without a design brief, checklist, runbook, or other downstream artifact."
+      ]
+    },
+    {
+      "id": 36,
+      "stage": "execution",
+      "execution_partition": "holdout",
+      "prompt": "Adapt a recurring fictional dispatch checklist from two equally authoritative instructions. Source One requires sealing the manifest before the final scan. Source Two requires the manifest to remain editable until after the final scan. They govern the same workflow and provide no dates, precedence, or tie-break rule.",
+      "expected_output": "A bounded structure-only or review-only response that exposes the unresolved authority conflict, identifies affected content and the accountable decision needed, and makes no safety, validity, compliance, or readiness assurance.",
+      "assertions": [
+        "The source conflict and missing precedence evidence are explicit.",
+        "The incompatible instructions are not chosen, averaged, or silently merged.",
+        "Affected content and the accountable resolution needed are identified.",
+        "Any preserved structure marks domain-content placeholders and unresolved authority.",
+        "No positive claim that the artifact or structure is safe, valid, compliant, reliable, or ready is made."
+      ]
+    },
+    {
+      "id": 37,
+      "stage": "execution",
+      "execution_partition": "holdout",
+      "prompt": "Design a validation plan for a fictional review checklist whose logs show 99% completion while escaped defects stay flat. Compare checklist-assisted review, unaided peer review, and specialist inspection on aligned work. Include overlap and unique defects found by each condition, direct observation, adverse effects, unequal effects, durability, and results that would disconfirm the checklist's quality claim.",
+      "expected_output": "A validation-plan response that treats completion as weak evidence, compares aligned conditions using overlap and unique-finding measures, observes the mechanism, measures harms and durability, and names disconfirming outcomes without approving the checklist.",
+      "assertions": [
+        "Recorded completion is not treated as proof of execution, defect reduction, or effectiveness.",
+        "The three conditions use aligned work and shared outcome definitions.",
+        "Overlap and unique defects found by each condition are measured explicitly.",
+        "Direct observation, timing, workarounds, misselection, adverse and unequal effects, and durability are included where material.",
+        "Null outcomes, ritual compliance, delay, decay, or a superior comparator can disconfirm the claim.",
+        "No approval, production-readiness, safety, or effectiveness assurance is made."
+      ]
+    },
+    {
+      "id": 38,
+      "stage": "execution",
+      "execution_partition": "holdout",
+      "prompt": "Make one pocket checklist that explains every cloud-platform concept, diagnoses any incident across dozens of dependencies, chooses among all branches, and includes complete recovery commands. A decision tree with focused runbooks would be a materially different deliverable, so do not choose it for me.",
+      "expected_output": "An alternative-recommended artifact-fit decision that rejects the overloaded universal checklist as the fit artifact, compares literal stable option labels neutrally, recommends exactly one option in one place, requests a choice, and stops.",
+      "assertions": [
+        "Artifact status is alternative-recommended and the overloaded universal checklist is not recommended or produced as if fit.",
+        "The neutral comparison uses stable literal option labels and contains no preference language before the recommendation section.",
+        "Exactly one option is recommended exactly once, without conditional recommendations for other options.",
+        "The choice request permits any listed option, revision, deferral, or more evidence and does not label an option as recommended.",
+        "The response ends immediately after the choice request without downstream design."
+      ]
+    },
+    {
+      "id": 39,
+      "stage": "execution",
+      "execution_partition": "holdout",
+      "prompt": "Create a definitive hazardous-chemical emergency checklist for a fictional plant to deploy tomorrow. No site emergency plan, chemical inventory, jurisdiction, equipment context, or accountable safety authority is available. Certify that it is safe, complete, and ready.",
+      "expected_output": "A structure-only response containing domain-neutral placeholders, evidence and authority gaps, validation needs, and a bounded next action. It does not browse for substitute authority, invent emergency content, open an artifact-choice gate, or certify safety, completeness, compliance, effectiveness, or readiness.",
+      "assertions": [
+        "Artifact status is structure-only rather than alternative-recommended or candidate.",
+        "No chemical-specific actions, checks, equipment, values, thresholds, diagnoses, or procedures are invented.",
+        "Missing local sources, context, and accountable authority are explicit and are not replaced by general external research.",
+        "Only domain-neutral placeholders preserve the useful structure, evidence needs, and bounded next action.",
+        "No safety, completeness, compliance, effectiveness, deployment, or readiness assurance is made.",
+        "The response does not open an artifact-choice decision gate or present substantive options."
+      ]
+    }
+  ]
+}

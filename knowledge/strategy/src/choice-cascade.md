@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: The choice cascade
 description: How the Playing to Win choice cascade connects aspiration, participation, advantage, capabilities, and management systems.
 tags: [playing-to-win, choice-cascade, where-to-play, how-to-win, capabilities]
 status: draft
@@ -10,6 +11,12 @@ sources:
   - id: martin-choice-process
     resource: https://rogermartin.medium.com/the-strategic-choice-structuring-process-5e116b12ae1f
     title: Roger L. Martin — The Strategic Choice Structuring Process
+  - id: strategy-wardley
+    resource: wardley-mapping.md
+    title: Strategy — Wardley Mapping
+generated:
+  by: codex/gpt-5.6
+  at: 2026-08-29T20:34:30Z
 ---
 
 # The choice cascade
@@ -31,6 +38,11 @@ The cascade is a model of strategy's content, not a linear workshop agenda.
 Choices are developed iteratively because a proposed way to win may require
 unavailable capabilities, or a capability insight may reveal a better arena.
 
+A landscape map can inform these choices by exposing users, dependencies,
+evolution, movement, and inertia. It does not supply the aspiration, where to
+play, or how to win; those remain commitments made through the choice
+cascade.[^strategy-wardley]
+
 The first choice is not simply a numerical target. The middle choices establish
 the competitive or comparative logic. The last choices prevent strategy from
 remaining detached from organizational reality.
@@ -38,3 +50,6 @@ remaining detached from organizational reality.
 The framework is broadly applicable, but its language must fit the context.
 “Winning” for a public or social organization may mean achieving its purpose
 under constraints rather than defeating a market competitor.
+
+[^strategy-wardley]: The Wardley Mapping explanation distinguishes landscape
+    assumptions from strategic choices.

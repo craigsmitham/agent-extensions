@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty",
   "keywords": [
     "research",

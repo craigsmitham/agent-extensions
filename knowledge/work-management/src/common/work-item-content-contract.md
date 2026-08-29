@@ -3,17 +3,13 @@ type: Reference
 title: Work-item content contract
 description: Defines the common semantic slots, their conditional applicability, and the composition order for portable work-item templates.
 tags: [work-item, content-contract, template, scope, evidence, completion, verification, next-action]
-sources:
-  - id: gen-stack-work-items
-    resource: https://github.com/craigsmitham/agent-extensions/tree/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items
-    title: Gen Stack software work-item sources
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
 # Work-item content contract
 
 Every portable work item composes four layers adapted from the earlier common
-work-item concerns.[^gen-stack-work-items]
+work-item concerns.
 
 ```text
 common contract → role-specific contract → repository considerations
@@ -59,6 +55,3 @@ when it carries the same semantics; use body content only for residual meaning.
 
 Role templates are complete fallbacks for hosts without suitable structured
 fields. They apply this contract directly and add only role-specific meaning.
-
-[^gen-stack-work-items]: The common contract was adapted from the cited sources
-    and made independent of their former operating model.

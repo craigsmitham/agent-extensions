@@ -3,17 +3,13 @@ type: Guide
 title: Preserving technical context
 description: Use when supplied findings, constraints, designs, implementation ideas, test strategy, or tradeoffs must survive transfer into a work item.
 tags: [work-item, technical-context, findings, constraints, design, implementation, testing, tradeoffs]
-sources:
-  - id: source-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/preserving-technical-context.md
-    title: Preserving technical context in software work items
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
 # Preserving technical context
 
 Technical context is often the most expensive part of a handoff to
-reconstruct.[^source-guide]
+reconstruct.
 Preserve what was actually supplied without silently selecting, approving, or
 completing it.
 
@@ -50,6 +46,3 @@ that planned testing is a result.
 
 Before publishing, compare the work item with the source once more for lost
 constraints, caveats, alternatives, and open questions.
-
-[^source-guide]: Adapted from the cited guide with portable artifact and
-    maturity language.

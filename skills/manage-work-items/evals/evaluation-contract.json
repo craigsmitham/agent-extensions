@@ -70,7 +70,7 @@
       "Repository-specific considerations compose without replacing the portable contract",
       "Native host fields precede residual body fallback",
       "Delivery, verification, and closure remain distinct",
-      "Gen Stack stages and corpus semantics do not leak into portable work items",
+      "Unrelated stage models and corpus semantics do not leak into portable work items",
       "Routing and execution claims remain distinct"
     ],
     "calibration": "Check one known pass, one known failure, and one unknown before relying on a model grader."
@@ -129,7 +129,7 @@
         "assertion": "Mitigation is not presented as permanent correction, verified recovery, or closure."
       },
       {
-        "gate": "Gen Stack stages and corpus semantics do not leak into portable work items",
+        "gate": "Unrelated stage models and corpus semantics do not leak into portable work items",
         "case_id": 5,
         "assertion": "The Change does not require a Pitch, Change Specification, Change Design, focused stage, OKF corpus, or Draft/Ready/Accepted lifecycle."
       },

@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Value creation and capture
 description: How the value stick distinguishes total value created from the portions captured by customers, an organization, and suppliers or employees.
 tags: [value-stick, willingness-to-pay, willingness-to-sell, value-creation, value-capture]
 status: draft

@@ -3,10 +3,6 @@ type: Explanation
 title: Changes as work items
 description: Explains how a Change coordinates one bounded software modification while specifications, designs, implementation, evidence, and planning records retain their own responsibilities.
 tags: [change, software-change, change-request, coordination, scope, delivery, verification]
-sources:
-  - id: source-explanation
-    resource: https://github.com/craigsmitham/agent-extensions/blob/2694027e0364cd444e5447e2e8c896fe3cbd6f4f/knowledge/gen-stack/src/work-items/changes.md
-    title: Changes
 generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 ---
 
@@ -15,7 +11,7 @@ generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 A **Change** is the durable coordination case for one bounded proposed or
 authorized software modification. It preserves identity, motivation, intended
 outcome, scope, classification, relevant sources, relationships, decisions,
-delivery state, verification, residual risk, and next action.[^source-explanation]
+delivery state, verification, residual risk, and next action.
 
 A Change does not become approved merely because it exists. It also does not
 own every artifact used to understand or realize it. Requirements,
@@ -45,6 +41,3 @@ active lifecycle, not the automatic closure of related reports or incidents.
 
 When a Change explicitly remediates an established Defect, classify it as
 Bugfix and preserve links to the originating Defect Reports.
-
-[^source-explanation]: Adapted from the cited Change model while removing its
-    former focused-stage artifacts and lifecycle.

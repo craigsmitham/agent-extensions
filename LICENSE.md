@@ -7,12 +7,9 @@ license-selection policy and package-boundary rules are documented in
 
 - The `docs` knowledge bundle and pack plus `author-docs`, the
   `field-notes` package family, and the `knowledge-management`,
-  `product-management`, `strategy`, and `workflow-automation` knowledge bundles
+  `product-management`, `requirements-engineering`, `software-engineering`,
+  `strategy`, `work-management`, and `workflow-automation` knowledge bundles
   are licensed under `CC-BY-SA-4.0`.
-- The `gen-stack` knowledge package is licensed under `CC-BY-SA-4.0 AND MIT`:
-  its `src/` knowledge corpus preserves the reciprocal license of the
-  consolidated software-architecture and software-engineering packages, while
-  its original `scripts/` tooling uses MIT.
 - `author-okf` is licensed under `MIT AND Apache-2.0`: Craig's original skill,
   templates, and validator use MIT, while the vendored Open Knowledge Format
   specification retains its upstream Apache-2.0 license.
