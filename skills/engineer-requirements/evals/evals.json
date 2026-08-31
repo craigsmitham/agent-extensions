@@ -1,6 +1,6 @@
 {
   "skill_name": "engineer-requirements",
-  "suite_version": "0.1.0",
+  "suite_version": "0.1.1",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -132,7 +132,7 @@
       "stage": "routing",
       "prompt": "Write the test plan for release 8, execute every test, and summarize the failures.",
       "expected_selection": "clarify-or-abstain",
-      "catalog_neighbors": ["engineer-requirements", "audit-docs"],
+      "catalog_neighbors": ["engineer-requirements", "author-docs"],
       "assertions": [
         "Engineer-requirements is not selected for test planning or execution.",
         "No test is executed and no result is invented.",

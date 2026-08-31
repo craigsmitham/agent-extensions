@@ -1,6 +1,6 @@
 {
   "skill_name": "author-okf",
-  "suite_version": "0.1.6",
+  "suite_version": "0.1.7",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
     {
@@ -45,8 +45,7 @@
       "prompt": "Convert these synthetic wiki pages into an OKF v0.2 knowledge bundle with honest provenance and validate it.",
       "expected_selection": "author-okf",
       "catalog_neighbors": [
-        "author-docs",
-        "audit-docs"
+        "author-docs"
       ],
       "assertions": [
         "The selected skill is author-okf.",
@@ -75,8 +74,7 @@
       "prompt": "Review this proposed OKF v0.2 application-profile rule: every collection index.md should also be a typed concept with status and provenance so it can own the collection's durable policy.",
       "expected_selection": "author-okf",
       "catalog_neighbors": [
-        "author-docs",
-        "audit-docs"
+        "author-docs"
       ],
       "assertions": [
         "The selected skill is author-okf.",
@@ -107,8 +105,7 @@
       "prompt": "Reorganize this ordinary documentation folder and improve its README-style index page. The repository does not use OKF or concept frontmatter.",
       "expected_selection": "author-docs",
       "catalog_neighbors": [
-        "author-okf",
-        "audit-docs"
+        "author-okf"
       ],
       "assertions": [
         "The selected skill is author-docs rather than author-okf.",
