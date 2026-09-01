@@ -8,20 +8,6 @@ This repository is the authoritative source for the packages below. Personal,
 machine-specific, and private operational extensions are maintained separately
 and are not published from this repository.
 
-## AgentXM-owned extensions
-
-The reusable AI-agent engineering extensions formerly published here have
-moved to
-[`agentxm/agent-extensions`](https://github.com/agentxm/agent-extensions).
-Install the replacement `@agentxm` identities; the previously published
-`@craigsmitham` identities are deprecated.
-
-| Type | Moved extensions |
-| --- | --- |
-| Packs | `@agentxm/packs/agent-engineering`, `@agentxm/packs/context-engineering`, `@agentxm/packs/harness-engineering`, `@agentxm/packs/skill-engineering` |
-| Knowledge | `@agentxm/knowledge/agent-engineering`, `@agentxm/knowledge/context-engineering`, `@agentxm/knowledge/eval-engineering`, `@agentxm/knowledge/harness-engineering`, `@agentxm/knowledge/prompt-engineering`, `@agentxm/knowledge/skill-engineering` |
-| Skills | `@agentxm/skills/admit-agent-skill`, `@agentxm/skills/audit-agent-skill`, `@agentxm/skills/author-agent-skill`, `@agentxm/skills/evaluate-agent-skill`, `@agentxm/skills/govern-agent-skill-library`, `@agentxm/skills/garden-context`, `@agentxm/skills/improve-instructions` |
-
 ## Packs
 
 | Pack | Purpose | Install |
