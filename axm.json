@@ -58,7 +58,8 @@
     "agent-engineering": "agentxm:@agentxm/packs/agent-engineering",
     "research": "workspace",
     "work-management": "workspace",
-    "requirements-engineering": "workspace"
+    "requirements-engineering": "workspace",
+    "software-engineering": "workspace"
   },
   "owner": "@craigsmitham"
 }

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "publish": {
+    "ignore": []
+  },
+  "owner": "@craigsmitham",
+  "version": "2.0.0",
+  "description": "Evidence-backed codebase review and coherent repository execution-surface craft",
+  "keywords": [
+    "software-engineering",
+    "codebase-review",
+    "software-quality",
+    "code-quality",
+    "testing",
+    "security",
+    "reliability",
+    "maintainability",
+    "command-execution"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "packs/software-engineering"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "type": "pack",
+  "name": "software-engineering",
+  "dependencies": {
+    "@craigsmitham/knowledge/software-engineering": ">=2.2.1"
+  }
+}

@@ -158,6 +158,7 @@ expected=(
   packs/field-notes
   packs/requirements-engineering
   packs/research
+  packs/software-engineering
   packs/work-management
   rules/field-notes
   rules/use-effect-v4

@@ -2,6 +2,9 @@
 
 ## 2026-09-01
 
+- **Packaging**: Added `@craigsmitham/packs/software-engineering` as an
+  optional recommended pack. The pack installs only this standalone knowledge
+  bundle.
 - **Refactor**: Replaced the active topic-based review set with ten product-
   quality criteria lists for Suitability, Correctness, Reliability, Security,
   Safety, Efficiency, Usability, Compatibility, Evolvability, and

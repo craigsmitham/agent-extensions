@@ -16,6 +16,7 @@ and are not published from this repository.
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
+| `software-engineering` | Evidence-backed codebase review and coherent repository execution-surface craft | `axm install @craigsmitham/packs/software-engineering` |
 | `work-management` | Consistent Operational Incident Records, Defect Reports, and Changes across repositories and trackers | `axm install @craigsmitham/packs/work-management` |
 | `requirements-engineering` | Method-neutral requirements elicitation, analysis, specification, review, traceability, and lifecycle | `axm install @craigsmitham/packs/requirements-engineering` |
 

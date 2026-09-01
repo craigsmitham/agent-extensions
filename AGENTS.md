@@ -83,7 +83,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-management](knowledge/product-management/src/index.md) | Portable product management for value and demand, product strategy, outcomes, risks, empowered teams, discovery, delivery, and evidence |
 | [requirements-engineering](knowledge/requirements-engineering/src/index.md) | Portable requirements engineering for elicitation, analysis, specification, review, traceability, lifecycle, and evidence across project methods and tools |
-| [software-engineering](knowledge/software-engineering/src/index.md) | Portable engineering craft for a repository's execution surface: task graphs, script surfaces, caching intent, and invocation contracts for humans, agents, and CI |
+| [software-engineering](knowledge/software-engineering/src/index.md) | Portable engineering craft for evidence-backed codebase review and coherent repository execution surfaces |
 | [strategy](knowledge/strategy/src/index.md) | Strategy as coherent choices about participation, advantage, value, and capabilities, informed by situational awareness and evidence |
 | [work-management](knowledge/work-management/src/index.md) | Portable software work-item taxonomy, content contracts, templates, lifecycle, evidence, and tracker-neutral guidance |
 | [workflow-automation](knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |

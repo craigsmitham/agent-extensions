@@ -30,7 +30,13 @@ execution surfaces; version 2.1.0 added the bounded codebase-review collection;
 version 2.2.0 refactors that collection around product-quality outcomes without
 reclaiming the retired change-method or work-item scope.
 
-Install it with:
+Install the pack with:
+
+```bash
+axm packs install @craigsmitham/packs/software-engineering
+```
+
+Or install the standalone knowledge bundle directly:
 
 ```bash
 axm install @craigsmitham/knowledge/software-engineering
