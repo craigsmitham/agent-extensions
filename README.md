@@ -39,7 +39,7 @@ Install the replacement `@agentxm` identities; the previously published
 | --- | --- | --- |
 | `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
 | `product-management` | Product outcomes, risks, empowered teams, discovery, delivery, evidence, and product strategy | `axm install @craigsmitham/knowledge/product-management` |
-| `software-engineering` | Portable execution-surface craft for task graphs, scripts, caching, and invocation contracts | `axm install @craigsmitham/knowledge/software-engineering` |
+| `software-engineering` | Outcome-centered software-product quality review plus execution-surface craft for task graphs, scripts, caching, and invocation contracts | `axm install @craigsmitham/knowledge/software-engineering` |
 | `strategy` | Coherent choices about participation, advantage, capabilities, evidence, and value creation | `axm install @craigsmitham/knowledge/strategy` |
 | `workflow-automation` | A platform-agnostic workflow model, vendor mappings, structural patterns, and continuous integration and delivery practices | `axm install @craigsmitham/knowledge/workflow-automation` |
 
