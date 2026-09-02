@@ -18,6 +18,6 @@ language and framework reference.
 
 - [Codebase review](codebase-review/) - An outcome-centered review framework with ten product-quality criteria lists, eight typed cross-cutting records, separate supporting-artifact assessments, optional evidence and method aids, and explicit uncertainty and lifecycle guidance.
 
-## Design execution surfaces
+## Design repository task interfaces
 
-- [Command execution strategy](command-execution.md) - Use when a repository's task runner, package-script surface, and wrapper scripts have accreted into competing invocation paths, or when deciding where a new unit of work belongs; establishes a task-graph-canonical layering with deliberate caching and a bounded script surface that humans, agents, and CI can share.
+- [Designing a coherent repository task interface](repository-task-interface.md) - Use when repository tasks, scripts, launchers, wrappers, or CI paths compete, or when placing new repeatable work; design one discoverable resolved task contract that humans, agents, and automation can invoke consistently without forcing every workflow into one tool.

@@ -1,5 +1,23 @@
 # Bundle update log
 
+## 2026-09-02
+
+- **Task interface**: Renamed Command execution strategy to [Designing a
+  coherent repository task interface](/repository-task-interface.md), made its
+  developer, agent, automation, and maintenance outcomes explicit, and recast
+  task graphs and script boundaries as means to discoverable, safe, and
+  trustworthy repository work.
+- **Execution contract**: Added outcome-based target ownership and naming,
+  declared-dependency and single-inventory rules, bounded alias and composite
+  semantics, behavior-based cache guidance, explicit bootstrap boundaries,
+  executable conformance, and a stepwise adoption workflow.
+- **Source review**: Revised the task-interface model against official Nx,
+  Turborepo, Gradle, Bazel, Buck2, Pants, moon, and just guidance plus primary
+  build-systems literature. Replaced graph-target canonicality with one
+  resolved semantic contract, added portable operation and selection terms,
+  typed dependencies, launcher and host boundaries, cache trust and freshness
+  semantics, behavioral conformance, and observable outcome signals.
+
 ## 2026-09-01
 
 - **Packaging**: Added `@craigsmitham/packs/software-engineering` as an
@@ -82,4 +100,5 @@
 - **Creation**: Re-established the bundle at a new scope — portable
   execution-surface engineering craft — after retiring v1.1.0's broader
   design-change and work-item scope. Added
-  [Command execution strategy](/command-execution.md).
+  Command execution strategy, renamed in v2.3.0 to [Designing a coherent
+  repository task interface](/repository-task-interface.md).

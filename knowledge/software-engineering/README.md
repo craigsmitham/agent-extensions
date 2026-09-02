@@ -14,8 +14,10 @@ methods or supporting artifacts into extra pillars. Test-suite quality has a
 separate supporting assessment, and optional review aids hold repository,
 scenario, verification, runtime, and model-assisted inspection guidance.
 
-Use the command execution strategy for task-graph-canonical layering,
-self-sufficient targets, deliberate cache intent, and a bounded script surface.
+Use the repository task-interface guide to make repository work discoverable,
+safe to invoke, and trustworthy to interpret through canonical resolved task
+contracts, explicit execution boundaries, self-sufficient tasks, deliberate
+dependency and cache semantics, and bounded entrypoints.
 This bundle is not a software-change method, requirements or architecture
 lifecycle, work-item guidance, documentation craft, or a language or framework
 reference.
@@ -28,7 +30,9 @@ Earlier versions of this bundle (through 1.1.0) held design-change and
 work-item guidance. Version 2.0.0 re-established the package around repository
 execution surfaces; version 2.1.0 added the bounded codebase-review collection;
 version 2.2.0 refactors that collection around product-quality outcomes without
-reclaiming the retired change-method or work-item scope.
+reclaiming the retired change-method or work-item scope; version 2.3.0 reframes
+command execution as a coherent repository task interface for developers,
+agents, and automation.
 
 Install the pack with:
 
@@ -45,7 +49,7 @@ axm install @craigsmitham/knowledge/software-engineering
 Then browse its discovery index or search installed concepts, for example:
 
 ```bash
-axm knowledge concepts search '"command execution"'
+axm knowledge concepts search '"repository task interface"'
 axm knowledge concepts search '"codebase review"'
 ```
 
