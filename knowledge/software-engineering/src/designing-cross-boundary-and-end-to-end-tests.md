@@ -19,7 +19,7 @@ tags:
     monorepo,
     ci,
   ]
-status: draft
+status: stable
 sources:
   - id: istqb-risk
     resource: https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf
@@ -60,7 +60,7 @@ sources:
   - id: flaky-tests-google
     resource: https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html
     title: Flaky Tests at Google and How We Mitigate Them
-generated: { by: codex/gpt-5.6, at: 2026-09-02T14:30:02Z }
+generated: { by: codex/gpt-5.6, at: 2026-09-02T14:44:42Z }
 ---
 
 # Designing cross-boundary and end-to-end tests

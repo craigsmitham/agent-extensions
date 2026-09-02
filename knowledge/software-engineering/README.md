@@ -42,7 +42,8 @@ version 2.2.0 refactors that collection around product-quality outcomes without
 reclaiming the retired change-method or work-item scope; version 2.3.0 reframes
 command execution as a coherent repository task interface for developers,
 agents, and automation; version 2.4.0 adds portable cross-boundary and
-browser-dependent test architecture.
+browser-dependent test architecture, and version 2.4.1 marks those guides
+stable after source reconciliation.
 
 Install the pack with:
 

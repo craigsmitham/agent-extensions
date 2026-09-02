@@ -2,6 +2,10 @@
 
 ## 2026-09-02
 
+- **Lifecycle**: Marked the cross-boundary and browser-dependent testing guides
+  stable after completing their source reconciliation, so their OKF lifecycle
+  state now identifies them as ready for consumption without claiming a human
+  verification event.
 - **Test architecture**: Added [Designing cross-boundary and end-to-end
   tests](/designing-cross-boundary-and-end-to-end-tests.md), separating claim
   scope, boundary reality, execution distance, and observation technology so

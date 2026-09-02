@@ -20,7 +20,7 @@ tags:
     cypress,
     selenium,
   ]
-status: draft
+status: stable
 sources:
   - id: playwright-best-practices
     resource: https://playwright.dev/docs/best-practices
@@ -64,7 +64,7 @@ sources:
   - id: ui-flaky-tests
     resource: https://arxiv.org/abs/2103.02669
     title: An Empirical Analysis of UI-based Flaky Tests
-generated: { by: codex/gpt-5.6, at: 2026-09-02T14:30:02Z }
+generated: { by: codex/gpt-5.6, at: 2026-09-02T14:44:42Z }
 ---
 
 # Choosing browser-dependent interface tests
