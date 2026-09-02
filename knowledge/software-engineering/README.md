@@ -1,9 +1,10 @@
 # Software engineering knowledge
 
-Portable engineering craft for reviewing codebases and shaping repository
-execution surfaces. It is intended for engineers and agents who need a
-bounded, evidence-backed review of a repository or a coherent invocation
-contract for its build, test, and automation work.
+Portable engineering craft for reviewing codebases, designing test
+architecture, and shaping repository execution surfaces. It is intended for
+engineers and agents who need a bounded, evidence-backed review of a
+repository, representative cross-boundary and browser-dependent test worlds,
+or a coherent invocation contract for build, test, and automation work.
 
 Use the codebase-review collection for ten outcome-centered software-product
 quality lists: Suitability, Correctness, Reliability, Security, Safety,
@@ -18,6 +19,14 @@ Use the repository task-interface guide to make repository work discoverable,
 safe to invoke, and trustworthy to interpret through canonical resolved task
 contracts, explicit execution boundaries, self-sufficient tasks, deliberate
 dependency and cache semantics, and bounded entrypoints.
+
+Use the cross-boundary and end-to-end testing guide to start with a material
+risk and choose the smallest test world that preserves the necessary
+components, processes, services, storage, artifacts, or deployment boundaries.
+Use the complementary browser-dependent interface guide when real rendering,
+interaction, accessibility, or platform behavior determines the observable
+outcome. Together they keep test scope independent from browser use and admit
+expensive evidence only when a cheaper observer would erase the risk.
 This bundle is not a software-change method, requirements or architecture
 lifecycle, work-item guidance, documentation craft, or a language or framework
 reference.
@@ -32,7 +41,8 @@ execution surfaces; version 2.1.0 added the bounded codebase-review collection;
 version 2.2.0 refactors that collection around product-quality outcomes without
 reclaiming the retired change-method or work-item scope; version 2.3.0 reframes
 command execution as a coherent repository task interface for developers,
-agents, and automation.
+agents, and automation; version 2.4.0 adds portable cross-boundary and
+browser-dependent test architecture.
 
 Install the pack with:
 
@@ -51,6 +61,8 @@ Then browse its discovery index or search installed concepts, for example:
 ```bash
 axm knowledge concepts search '"repository task interface"'
 axm knowledge concepts search '"codebase review"'
+axm knowledge concepts search '"cross-boundary"'
+axm knowledge concepts search '"browser-dependent"'
 ```
 
 This knowledge package is licensed under the Creative Commons

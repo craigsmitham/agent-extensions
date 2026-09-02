@@ -2,6 +2,18 @@
 
 ## 2026-09-02
 
+- **Test architecture**: Added [Designing cross-boundary and end-to-end
+  tests](/designing-cross-boundary-and-end-to-end-tests.md), separating claim
+  scope, boundary reality, execution distance, and observation technology so
+  browser use no longer defines end-to-end scope.
+- **Interface testing**: Added [Choosing browser-dependent interface
+  tests](/choosing-browser-dependent-interface-tests.md), with a browser-risk
+  admission gate, focused scope and matrix selection, semantic assertions,
+  visual evidence, bounded accessibility conclusions, and failure diagnostics.
+- **Source review**: Reconciled the guides against current official Nx,
+  Playwright, Cypress, Selenium, Testing Library, Storybook, jsdom, ASP.NET
+  Core, Spring, Rails, W3C WAI, Google, ISTQB, Test Desiderata, and established
+  broad-stack testing guidance, plus empirical UI-flakiness research.
 - **Task interface**: Renamed Command execution strategy to [Designing a
   coherent repository task interface](/repository-task-interface.md), made its
   developer, agent, automation, and maintenance outcomes explicit, and recast

@@ -1,14 +1,15 @@
 # Software engineering
 
-Evidence-backed guidance for reviewing software quality and shaping coherent
-repository execution surfaces. This pack installs one standalone knowledge
-bundle and introduces no rules, skills, subagents, hooks, or MCP servers.
+Evidence-backed guidance for reviewing software quality, designing
+cross-boundary and browser-dependent tests, and shaping coherent repository
+execution surfaces. This pack installs one standalone knowledge bundle and
+introduces no rules, skills, subagents, hooks, or MCP servers.
 
 ## Included extension
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/software-engineering` | Outcome-centered codebase review criteria, cross-cutting quality concerns, test-suite quality guidance, review aids, and execution-surface craft |
+| `@craigsmitham/knowledge/software-engineering` | Outcome-centered codebase review criteria, cross-cutting quality concerns, test-suite quality and architecture guidance, review aids, and execution-surface craft |
 
 ## Install
 
@@ -21,6 +22,10 @@ axm packs install @craigsmitham/packs/software-engineering
 - Reviewing a codebase against ten product-quality pillars and explicit
   cross-cutting concerns.
 - Assessing test-suite quality separately from product testability.
+- Designing the smallest representative cross-boundary or end-to-end test
+  world for a material integration risk.
+- Deciding when interface evidence requires a real browser and choosing a
+  focused scope, matrix, and observation contract.
 - Selecting evidence and investigation aids without turning inspection methods
   into quality outcomes.
 - Designing task graphs, script surfaces, caching intent, and invocation
