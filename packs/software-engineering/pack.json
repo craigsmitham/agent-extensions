@@ -4,7 +4,7 @@
     "ignore": []
   },
   "owner": "@craigsmitham",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Evidence-backed codebase review, test architecture, and coherent repository execution-surface craft",
   "keywords": [
     "software-engineering",
@@ -13,6 +13,9 @@
     "code-quality",
     "testing",
     "test-architecture",
+    "unit-testing",
+    "contract-testing",
+    "test-doubles",
     "end-to-end-testing",
     "browser-testing",
     "interface-testing",
@@ -31,6 +34,6 @@
   "type": "pack",
   "name": "software-engineering",
   "dependencies": {
-    "@craigsmitham/knowledge/software-engineering": ">=2.4.1"
+    "@craigsmitham/knowledge/software-engineering": ">=2.5.0"
   }
 }

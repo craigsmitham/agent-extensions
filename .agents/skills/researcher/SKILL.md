@@ -2,7 +2,7 @@
 name: researcher
 description: Performs one fresh-context, read-only Research Brief framing or evidence-gathering phase
 ---
-<!-- axm:file v=1 ext=@craigsmitham/subagents/researcher src=subagents/researcher/src/researcher.md
+<!-- axm:file v=1 ext=@craigsmitham/subagents/researcher src=subagents/researcher/src/researcher.md gen=014028850776a998604c2340d1978200534a271befb7c453ebf2271f9c3bd33d
      AXM managed projection — do not edit directly.
      Source: subagents/researcher/src/researcher.md
      Change the source, then run `axm sync`.

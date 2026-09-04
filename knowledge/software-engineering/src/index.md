@@ -26,5 +26,6 @@ language and framework reference.
 
 ## Design tests
 
+- [Choosing the narrowest effective test](choosing-the-narrowest-effective-test.md) - Use when a change needs executable evidence and no material risk yet requires a real cross-boundary or browser world; admit the test deliberately, choose the narrowest level that observes the claim, substitute collaborators through explicit seams, and keep repository conventions out of tests.
 - [Designing cross-boundary and end-to-end tests](designing-cross-boundary-and-end-to-end-tests.md) - Use when a material risk spans components, processes, services, storage, artifacts, or deployment configuration; design the smallest representative test world that can provide attributable evidence across the necessary boundaries.
 - [Choosing browser-dependent interface tests](choosing-browser-dependent-interface-tests.md) - Use when an interface claim may depend on real browser rendering, interaction, accessibility, or platform behavior; admit the least costly browser-capable test and evidence matrix that can faithfully reveal the risk.

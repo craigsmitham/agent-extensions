@@ -2,6 +2,14 @@
 
 ## 2026-09-02
 
+- **Narrow tests**: Added [Choosing the narrowest effective
+  test](/choosing-the-narrowest-effective-test.md) as the narrow end of the
+  test-architecture ladder: deliberate admission, one assertion home,
+  explicit-seam substitution, consumer-facing contract suites, and keeping
+  repository conventions out of test runners. The cross-boundary guide already
+  routed to "the narrower test architecture"; this concept is that route. It is
+  a draft generated from repository-local guidance and public sources and has
+  not yet completed source reconciliation.
 - **Lifecycle**: Marked the cross-boundary and browser-dependent testing guides
   stable after completing their source reconciliation, so their OKF lifecycle
   state now identifies them as ready for consumption without claiming a human

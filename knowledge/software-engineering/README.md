@@ -20,13 +20,18 @@ safe to invoke, and trustworthy to interpret through canonical resolved task
 contracts, explicit execution boundaries, self-sufficient tasks, deliberate
 dependency and cache semantics, and bounded entrypoints.
 
-Use the cross-boundary and end-to-end testing guide to start with a material
-risk and choose the smallest test world that preserves the necessary
-components, processes, services, storage, artifacts, or deployment boundaries.
-Use the complementary browser-dependent interface guide when real rendering,
+Use the narrowest-effective-test guide when a change needs executable evidence
+and no material risk yet requires a real cross-boundary or browser world: admit
+the test deliberately, prove each behavior once at the cheapest trustworthy
+level, substitute collaborators through explicit seams, and keep repository
+conventions in lint and build checks rather than test runners. Use the
+cross-boundary and end-to-end testing guide to start with a material risk and
+choose the smallest test world that preserves the necessary components,
+processes, services, storage, artifacts, or deployment boundaries. Use the
+complementary browser-dependent interface guide when real rendering,
 interaction, accessibility, or platform behavior determines the observable
-outcome. Together they keep test scope independent from browser use and admit
-expensive evidence only when a cheaper observer would erase the risk.
+outcome. Together the three keep test scope independent from browser use and
+admit expensive evidence only when a cheaper observer would erase the risk.
 This bundle is not a software-change method, requirements or architecture
 lifecycle, work-item guidance, documentation craft, or a language or framework
 reference.
@@ -42,8 +47,9 @@ version 2.2.0 refactors that collection around product-quality outcomes without
 reclaiming the retired change-method or work-item scope; version 2.3.0 reframes
 command execution as a coherent repository task interface for developers,
 agents, and automation; version 2.4.0 adds portable cross-boundary and
-browser-dependent test architecture, and version 2.4.1 marks those guides
-stable after source reconciliation.
+browser-dependent test architecture; version 2.4.1 marks those guides stable
+after source reconciliation, and version 2.5.0 adds the narrowest-effective-test
+guide as a draft pending its own source reconciliation.
 
 Install the pack with:
 
@@ -62,6 +68,7 @@ Then browse its discovery index or search installed concepts, for example:
 ```bash
 axm knowledge concepts search '"repository task interface"'
 axm knowledge concepts search '"codebase review"'
+axm knowledge concepts search '"narrowest effective test"'
 axm knowledge concepts search '"cross-boundary"'
 axm knowledge concepts search '"browser-dependent"'
 ```

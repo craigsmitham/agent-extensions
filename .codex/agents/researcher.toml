@@ -1,4 +1,4 @@
-# axm:file v=1 ext=@craigsmitham/subagents/researcher src=subagents/researcher/src/researcher.md
+# axm:file v=1 ext=@craigsmitham/subagents/researcher src=subagents/researcher/src/researcher.md gen=5376d930165261e013e5286b66da2fe7e20c23e747f49504b643ce255e095eb5
 # AXM managed projection — do not edit directly.
 # Source: subagents/researcher/src/researcher.md
 # Change the source, then run `axm sync`.

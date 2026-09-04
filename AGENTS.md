@@ -49,7 +49,7 @@ evaluation evidence is not audit or release approval.
 | --- | --- | --- | --- | --- |
 | axm-cli-interactions | survey | Sessions that directly run `axm` to complete work in this workspace or manually validate AXM behavior; automated test invocations excluded | — | Recurring notes support a specific target condition, or two triage reviews find no pattern |
 
-<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery -->
+<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=4cb1e0ec5b17693404a69ae29eb2fb405e492401b3364c1b091a8ae2bf7a33de -->
 ## Knowledge Bundles
 
 Use `axm knowledge concepts --help` to search, read, and explore these bundles.
