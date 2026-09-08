@@ -2,7 +2,169 @@
 
 ## 2026-09-08
 
-- **Migration**: Moved the twenty-eight concepts of the `requirements-engineering`
+- **Recovery**: Carried the decision history of the three bundles retired in
+  this change into this log, one `Migrated history from the ...` section each,
+  matching the sections already kept for `strategy`, `product-management`, and
+  `requirements-engineering`. The three reserved logs were deleted with their
+  bundles in the first pass. A corpus that records why a claim was set aside
+  cannot discard the record of why a bundle was, so the entries return with
+  their original dates and reasoning and with their links repointed at the
+  concepts' new paths.
+- **Correction**: Converted the ten root-absolute links in
+  [Where to play](strategy/) to directory-relative links. The strategy
+  migration entry below recorded that every bundle-root link resolved under
+  `/strategy/`, which held only for a reader who reads a leading slash as this
+  bundle's `src` root. Nothing else asks that: every other link in the bundle
+  is directory-relative, and all ten targets are same-directory siblings. One
+  rule now resolves every link here.
+- **Correction**: [How to build it](engineering/) named the three review
+  criteria its operations boundary is confused with as reliability, operational
+  security, and cost. The criteria are Reliability, Security, and Efficiency,
+  and the cost question sits inside Efficiency's envelope. Both sides of that
+  boundary now use those three names.
+- **Boundary**: How to build it states the engineering half of two divisions
+  its neighbors state from theirs. [What to build](solution/) chooses the
+  interaction and How to build it judges, on available evidence, whether the
+  built result achieves it. The execution surface owns what a task means and
+  who may invoke it; [delivery automation](delivery/automation/) owns when a
+  workflow runs it and what happens to the result.
+- **Discovery**: The [codebase review](engineering/codebase-review/) index now
+  routes through its criteria, supporting, and review-aid indexes rather than
+  only through their leaves. It was the only parent index in the bundle that
+  skipped its child indexes, which left two of them reachable from concept
+  prose alone. The direct links to the ten criteria lists stay, because a
+  reader who already knows which outcome they are judging should not have to
+  pass through a second index.
+- **Routing**: [Quality layers outside the ten
+  pillars](engineering/codebase-review/quality-layer-boundaries.md) sent
+  findings to a contributor-guidance layer, a shared assurance layer, and
+  optional method aids, none of which names a destination in the merged bundle.
+  Method aids are the [review aids](engineering/codebase-review/review-aids/),
+  assurance and evidence are two of the eight cross-cutting records, and the
+  engineering-system capabilities it lists now split across the execution
+  surface, [Automation](delivery/automation/), and
+  [How to run it](operations/). Design principles are recorded as having no
+  destination yet, because Architecture and technical design is still
+  unwritten, rather than being pointed somewhere convenient.
+- **Placement**: The Teams and cadence group in [What to solve](problem/) is
+  marked as an unsettled home rather than quietly justified. Empowered product
+  teams and Discovery and delivery describe who chooses and at what rhythm,
+  which this section's question depends on without owning. No concept moved;
+  relocating one across sections is a larger decision than a correction pass
+  should take on its own.
+- **Rule**: A binding is not a mapping. The overview said anything churning
+  with a vendor lives elsewhere, and the migrated
+  [workflow model](delivery/automation/workflow-model-explainer.md) then
+  restated the object models of several named platforms inside this bundle.
+  The rule now separates a binding, which only works on one platform and stays
+  out, from a dated comparative mapping that exists to make a portable claim
+  checkable, which may stay under a six-condition currency contract. The
+  alternative was deleting the table, which would have left the model's central
+  claim asserted rather than checkable.
+- **Structure**: Flattened `patterns/` and `practices/` in
+  [Automation](delivery/automation/). They were folders named for a knowledge
+  form, which the facet rule forbids. The seven concepts now sit directly in
+  the subtree and the grouping survives as index headings and concept tags,
+  which is what that rule prescribes instead.
+- **Rule**: Recorded the depth rule, sections ask and subtrees hold. Two
+  subtrees are named for artifacts, which reads as artifact partitioning
+  readmitted after the overview rejected it. It is not: artifact type fails as
+  a partition because a reader at the top of the corpus would have to guess the
+  artifact, and a reader who has reached a section has already chosen the
+  question. The rule is stated with the two conditions that stop it becoming a
+  loophole.
+- **Correction**: The claim that knowledge form never earns a folder at any
+  depth was too absolute to survive its own bundle.
+  [Criteria](engineering/codebase-review/criteria/) is uniformly checklists and
+  [Review aids](engineering/codebase-review/review-aids/) uniformly guides. The
+  test is what a folder is named for, not what it turns out to contain, and the
+  signal that form has become the partition is a sibling folder holding the
+  same subject in another form.
+- **Authority**: The definition of design had two identical copies, in the
+  overview and in [What to build](solution/). The overview is now the
+  definition of record because it defines design across all four altitudes;
+  the section cites it. [How to run it](operations/) cited the section rather
+  than the owner and now cites the owner.
+- **Boundary**: The overview listed four things deliberately kept outside and
+  the delivery indexes named a fifth. Agent engineering joins the table, which
+  is the boundary
+  [Agents and agentic workflows](delivery/automation/agents-and-agentic-workflows.md)
+  exists to mark.
+- **Correction**: The section tag rule exempted reserved `index.md` and
+  `log.md` files but not the bundle-root concept that states it. This overview
+  belongs to no section and can carry no section tag, so the exemption now says
+  so wherever the rule is described.
+- **Correction**: Three counting claims contradicted the files. The README said
+  five retired bundles where its own table named six, and said two sections
+  carry more than one source where three do. The discovery map said four
+  sections hold concepts where five do. In this log, the
+  `requirements-engineering` migration was recorded as twenty-eight concepts
+  and holds twenty-five, and the `product-management` migration as nine and
+  holds ten, eight of which went to What to solve. Every count is now taken
+  from the directories.
+- **Migration**: Moved the thirty-eight concepts of the `software-engineering`
+  bundle into [How to build it](engineering/) and retired that bundle. The
+  `codebase-review/` tree moved intact with its criteria, review-aid, and
+  supporting subfolders, and the eleven loose concepts landed at the section's
+  top level, so every relative link still resolves. The section index replaces
+  its planned-scope table with a status table naming Verification, Review and
+  assessment, and Execution surface as populated, and Architecture and
+  technical design and Construction as still unwritten.
+- **Migration**: Moved the twenty-two concepts of the `work-management` bundle
+  into a [work items](delivery/work-items/) subtree under
+  [How to ship it](delivery/) and retired that bundle. The four role folders
+  moved intact beneath the taxonomy, and the bundle index became the subtree
+  index.
+- **Decision**: The operational incident record contract stays with work
+  items; [How to run it](operations/) owns the response. The two are different
+  obligations that happen to share a word. A record contract says what an
+  incident record must contain, who it identifies, and how its identity
+  survives revision, which is the same craft as a Defect Report and belongs
+  beside it. A response regime says what threshold convenes a response, who
+  holds it, how severity escalates, and who may declare it closed, which is
+  production reality and belongs to the section that owns production. The
+  incident concept now delegates the response regime explicitly rather than
+  leaving the split implied.
+- **Migration**: Moved the ten concepts of the `workflow-automation` bundle
+  into an [automation](delivery/automation/) subtree under
+  [How to ship it](delivery/) and retired that bundle. The pattern and practice
+  subfolders moved intact, and a new subtree index states what the subtree
+  owns.
+- **Decision**: Migrated workflow automation whole rather than taking only its
+  continuous integration and delivery practices. Those practices are the part
+  of the field this section reaches for, but they rest on the common workflow
+  model, the vendor mappings, and the structural patterns, and a section that
+  kept the conclusions and discarded their basis would state rules it could not
+  justify. The provisioning, data-processing, operational, and durable
+  application-flow profiles stay in scope for the same reason: they are the
+  field this section borrows from, not stray material. Agents and agentic
+  workflows migrated with them as the boundary marker it was written to be, so
+  the subtree still says plainly where its own field stops and agent
+  engineering begins.
+- **Retirement**: Removed the `learning/` section, leaving six questions rather
+  than seven. The reasoning is recorded in [the overview](overview.md), which
+  now names the owner of every clause of the retired question. In short, the
+  section never found content it could own: two of its planned areas restated
+  the `knowledge-management` bundle, one restated `field-notes`, one was never
+  written, and the single clause that was genuinely product engineering already
+  belonged to [What to solve](problem/). A section that is nothing but routing
+  to other bundles fails this bundle's own placement test.
+- **Convention**: Every concept file now carries one section tag matching its
+  directory: `pe-strategy`, `pe-problem`, `pe-solution`, `pe-engineering`,
+  `pe-delivery`, and `pe-operations`. Reserved `index.md` and `log.md` files
+  carry none.
+- **Decision**: The tag convention exists because bundle is the only retrieval
+  scope a query can name. `axm knowledge concepts query --bundle` filters to a
+  whole bundle and there is no folder filter, so retiring six bundles into this
+  one would have destroyed a scoping level readers were relying on. The tags
+  restore it as a facet rather than as structure, which is the rule this bundle
+  already applies to design.
+- **Release**: Released as 1.0.0 rather than continuing the 0.x line. Pack
+  consumers are being asked to swap a mature `software-engineering` 2.8.1
+  dependency for this bundle, and a 0.x version would understate the stability
+  of what they are receiving. The three packs that pointed at retired bundles
+  now depend on `@craigsmitham/knowledge/product-engineering` at `>=1.0.0`.
+- **Migration**: Moved the twenty-five concepts of the `requirements-engineering`
   bundle into [What to build](solution/) and retired that bundle. The six
   subsections moved intact under a [Requirements](solution/requirements/)
   subtree, so every relative link between them still resolves and no concept
@@ -29,8 +191,8 @@
 - **Correction**: Superseded the earlier Deferred entry, which recorded
   `requirements-engineering` as still supplying this section. Both bundles it
   named have now migrated; only the design areas remain unsourced.
-- **Migration**: Moved the nine concepts of the standalone `product-management`
-  bundle into this one and retired that bundle. Seven went to
+- **Migration**: Moved the ten concepts of the standalone `product-management`
+  bundle into this one and retired that bundle. Eight went to
   [What to solve](problem/), [Product strategy](strategy/product-strategy.md)
   to [Where to play](strategy/), and
   [Product meaning and requirements](solution/product-meaning-and-requirements.md)
@@ -149,8 +311,10 @@
   than becoming a section here. Expressing knowledge for a reader is its own
   discipline, and it applies well beyond product engineering.
 - **Decision**: `knowledge-management` and `field-notes` are not recorded as
-  migration sources for [How to learn](learning/). The section scope stands as
-  intent; sourcing is deferred until those bundles have a clearer purpose.
+  migration sources for How to learn. The section scope stands as intent;
+  sourcing is deferred until those bundles have a clearer purpose.
+  (Superseded: How to learn has since been retired and its `learning/`
+  directory removed, so the deferral no longer has a subject.)
 - **Migration**: Moved the eight concepts of the standalone `strategy` bundle
   into [Where to play](strategy/) and retired that bundle. The section index
   replaces its planned-scope table with the migrated concepts, and every
@@ -221,3 +385,275 @@
 - **2026-08-29 — Creation**: Established a method-neutral requirements
   engineering model covering elicitation, analysis, specification, review,
   traceability, change, and local adaptation.
+
+### Migrated history from the `software-engineering` bundle
+
+- **2026-09-08 — Coverage and time wording corrected**: In [Designing executable
+  specifications](engineering/designing-executable-specifications.md),
+  supporting coverage now checks additional cases and properties rather than
+  establishing correctness, which examples and coverage alike cannot do alone;
+  and the refund example no longer treats time of day and time zone as
+  incidental, since they can determine entitlement until the rule settles
+  whether the window uses elapsed time or calendar days, its governing time
+  zone, and endpoint inclusion.
+- **2026-09-08 — Executable specifications revised**: Reworked [Designing
+  executable specifications](engineering/designing-executable-specifications.md)
+  after external review. Exclusions are now framed around what is incidental to
+  the obligation rather than categories of content, so protocol, storage, and
+  ordering details may be the rule itself; a rule, its examples, and supporting
+  coverage are distinguished by authority; decisive boundary examples stay in
+  the readable text while exhaustive sweeps sit below it; the four layers are
+  presented as separable responsibilities rather than mandatory abstractions;
+  and characterization is defined by inferring intent from behavior, not by when
+  the text was written.
+- **2026-09-08 — Split**: Moved lifecycle guidance into [Keeping specifications
+  authoritative](engineering/keeping-specifications-authoritative.md), which
+  separates acceptance from verification, covers manual, static, and
+  deployment-dependent obligations, failure triage, retirement, and generated
+  change. The split kept the designing guide under the repository's 300-line
+  limit.
+- **2026-09-08 — Lifecycle**: Marked both specification guides stable after
+  review of the revised text, so their OKF lifecycle state identifies them as
+  ready for consumption. As elsewhere in that bundle, no `verified` event is
+  recorded: the guides remain generated content whose consequential claims
+  should be confirmed against their cited sources.
+- **2026-09-08 — Restructure**: Split every concept that exceeded the
+  repository's 300-line limit into reader-recognizable siblings, preserving all
+  content. The cross-cutting model became four concepts ([the model and
+  admission gate](engineering/codebase-review/cross-cutting-concerns.md), [the
+  eight records](engineering/codebase-review/cross-cutting-concern-records.md),
+  [typed pillar
+  relationships](engineering/codebase-review/cross-cutting-pillar-relationships.md),
+  and [model
+  maintenance](engineering/codebase-review/cross-cutting-model-maintenance.md));
+  the pillar taxonomy became three ([the
+  pillars](engineering/codebase-review/software-quality-pillars.md), [layers
+  outside the ten](engineering/codebase-review/quality-layer-boundaries.md), and
+  [the research
+  basis](engineering/codebase-review/quality-pillar-research-basis.md)); criteria
+  maintenance separated from [criteria
+  validation](engineering/codebase-review/validating-codebase-review-criteria.md);
+  the [task interface](engineering/repository-task-interface.md) separated from
+  [resolved contract
+  principles](engineering/resolved-task-contract-principles.md), [invocation and
+  conformance
+  principles](engineering/task-invocation-and-conformance-principles.md), and
+  [adoption](engineering/adopting-a-repository-task-interface.md); and the two
+  test-level guides separated their admission gates from [operating
+  cross-boundary suites](engineering/operating-cross-boundary-test-suites.md)
+  and [writing browser test
+  evidence](engineering/writing-browser-test-evidence.md). Content that
+  originated in the earlier `codex/gpt-5.6` generations was carried over
+  unchanged in substance; the new files record that reorganization under
+  `claude/opus-5`.
+- **2026-09-08 — Discovery**: Regrouped the bundle index around test-level
+  choice, building and operating admitted tests, and specification authority,
+  and regrouped the codebase-review index around running a review, the
+  quality-outcome taxonomy, the cross-cutting model, and collection evolution.
+  Every concept was listed with its exact frontmatter description.
+- **2026-09-08 — References**: Repointed the ten product-quality criteria lists
+  and [Reviewing a
+  codebase](engineering/codebase-review/reviewing-a-codebase.md) at the concepts
+  that now own record definitions and typed pillar relationships.
+- **2026-09-08 — Executable specifications**: Added [Designing executable
+  specifications](engineering/designing-executable-specifications.md), which
+  separates authority and audience from test level: admission gates for which
+  rules earn a specification, BRIEF-derived rules for the specification text, an
+  explicit exclusion table, a worked before-and-after example, four-layer
+  separation of text from automation, notation neutrality with property-based,
+  contract, and formal neighbors, lifecycle guidance, and specification as the
+  acceptance surface for generated change. It was a draft generated from public
+  sources that had not yet completed source reconciliation.
+- **2026-09-08 — Boundaries**: Distinguished an executable specification from a
+  contract suite. Comprehensive coverage of a consumer-facing interface and
+  authority over a decided rule are separate properties; the narrow-test guide
+  keeps "contract suite", and the new guide keeps "specification". Also
+  distinguished specifications from characterization and approval tests, which
+  assert actual rather than intended behavior.
+- **2026-09-08 — Routing**: The three test-level guides began routing by
+  authority as well as by level, and the bundle index stated that levels and
+  authority are separate axes.
+- **2026-09-02 — Narrow tests**: Added [Choosing the narrowest effective
+  test](engineering/choosing-the-narrowest-effective-test.md) as the narrow end
+  of the test-architecture ladder: deliberate admission, one assertion home,
+  explicit-seam substitution, consumer-facing contract suites, and keeping
+  repository conventions out of test runners. The cross-boundary guide already
+  routed to "the narrower test architecture"; this concept is that route. It was
+  a draft generated from repository-local guidance and public sources that had
+  not yet completed source reconciliation.
+- **2026-09-02 — Lifecycle**: Marked the cross-boundary and browser-dependent
+  testing guides stable after completing their source reconciliation, so their
+  OKF lifecycle state identifies them as ready for consumption without claiming
+  a human verification event.
+- **2026-09-02 — Test architecture**: Added [Designing cross-boundary and
+  end-to-end
+  tests](engineering/designing-cross-boundary-and-end-to-end-tests.md),
+  separating claim scope, boundary reality, execution distance, and observation
+  technology so browser use no longer defines end-to-end scope.
+- **2026-09-02 — Interface testing**: Added [Choosing browser-dependent
+  interface tests](engineering/choosing-browser-dependent-interface-tests.md),
+  with a browser-risk admission gate, focused scope and matrix selection,
+  semantic assertions, visual evidence, bounded accessibility conclusions, and
+  failure diagnostics.
+- **2026-09-02 — Source review**: Reconciled the testing guides against current
+  official Nx, Playwright, Cypress, Selenium, Testing Library, Storybook, jsdom,
+  ASP.NET Core, Spring, Rails, W3C WAI, Google, ISTQB, Test Desiderata, and
+  established broad-stack testing guidance, plus empirical UI-flakiness
+  research.
+- **2026-09-02 — Task interface**: Renamed Command execution strategy to
+  [Designing a coherent repository task
+  interface](engineering/repository-task-interface.md), made its developer,
+  agent, automation, and maintenance outcomes explicit, and recast task graphs
+  and script boundaries as means to discoverable, safe, and trustworthy
+  repository work.
+- **2026-09-02 — Execution contract**: Added outcome-based target ownership and
+  naming, declared-dependency and single-inventory rules, bounded alias and
+  composite semantics, behavior-based cache guidance, explicit bootstrap
+  boundaries, executable conformance, and a stepwise adoption workflow.
+- **2026-09-02 — Source review**: Revised the task-interface model against
+  official Nx, Turborepo, Gradle, Bazel, Buck2, Pants, moon, and just guidance
+  plus primary build-systems literature. Replaced graph-target canonicality with
+  one resolved semantic contract, added portable operation and selection terms,
+  typed dependencies, launcher and host boundaries, cache trust and freshness
+  semantics, behavioral conformance, and observable outcome signals.
+- **2026-09-01 — Packaging**: Added `@craigsmitham/packs/software-engineering`
+  as an optional recommended pack, installing only that standalone bundle.
+  (Superseded: the pack now depends on this bundle.)
+- **2026-09-01 — Refactor**: Replaced the active topic-based review set with ten
+  product-quality criteria lists for Suitability, Correctness, Reliability,
+  Security, Safety, Efficiency, Usability, Compatibility, Evolvability, and
+  Intelligibility. Each list contains ten stable-ID outcome questions with
+  rationale, applicability, nearest-neighbor boundaries, sources, and
+  list-level cross-cutting relationships.
+- **2026-09-01 — Separation**: Added [Test-suite quality
+  criteria](engineering/codebase-review/supporting/test-suite-quality.md) as a
+  supporting-artifact assessment. Product testability remains under
+  Evolvability, while Assurance and Evidence retain the evidence-to-product
+  relationship.
+- **2026-09-01 — Review aids**: Added optional repository-evidence,
+  scenario-analysis, verification-evidence, runtime-investigation, and
+  model-assisted-review guides so inspection methods remain discoverable without
+  entering the timeless outcome criteria.
+- **2026-09-01 — Design review**: Added [Codebase-review framework design
+  review](engineering/codebase-review/framework-design-review.md), covering
+  structural checks, six synthetic product forms, seven boundary challenges,
+  design revisions, and unresolved risks. The result supports comparative
+  trials, not a claim of field validation.
+- **2026-09-01 — Replacement**: Removed the former ten topic checklists once the
+  new framework was complete. The collection intentionally carries no redirect,
+  deprecated-stub, legacy-ID, or backward-compatibility layer.
+- **2026-09-01 — Research**: Added [Cross-cutting concerns for software
+  quality](engineering/codebase-review/cross-cutting-concerns.md), a typed model
+  with Claim context and Evidence as assessment envelopes around six singular
+  concern families: Specification, Structure, Lifecycle integrity, Risk,
+  Assurance, and Feedback. It defines a cross-cutting admission gate, explicit
+  relationship types, a concern-by-pillar map, precise placement for testing and
+  testability, and a comparative validation plan.
+- **2026-09-01 — Research**: Added [Software quality
+  pillars](engineering/codebase-review/software-quality-pillars.md), a
+  research-grounded candidate taxonomy of ten singular product-quality outcomes.
+  It defines the assessed entity and outcome layer, records boundary tests and
+  alternatives, and treats the then-current ten topics as migration evidence
+  rather than a preservation constraint.
+- **2026-09-01 — Methodology**: Separated product-quality outcomes from
+  subqualities, design principles, engineering-system enablers, assurance
+  mechanisms, and evidence contracts before refactoring the remaining
+  checklists.
+- **2026-09-01 — Research**: Added Test Desiderata and pstack as practitioner
+  datapoints. Distinguished test-suite quality from product testability and
+  product quality, and classified pstack's principles, review methods, assurance
+  practices, and code-shape heuristics without promoting them into product
+  pillars.
+- **2026-09-01 — Creation**: Added [Maintaining codebase-review
+  criteria](engineering/codebase-review/maintaining-codebase-review-criteria.md)
+  to keep durable quality outcomes separate from optional evidence, perspective,
+  and inspection-method aids as the collection evolves.
+- **2026-09-01 — Pilot**: Converted the then-current Testing and verification
+  quality criteria into ten stable-ID, outcome-centered questions with explicit
+  rationales as the collection's first vertical slice, then design-reviewed it
+  against synthetic library, service, multi-package workspace, and interrupted-
+  review scenarios.
+- **2026-09-01 — Protocol**: Refocused [Reviewing a
+  codebase](engineering/codebase-review/reviewing-a-codebase.md) on reviewer
+  use, added non-lossy assessment states and evidence fields, and routed
+  checklist design, validation, and retirement to the maintenance guide.
+- **2026-08-31 — Expansion**: Broadened the bundle from execution-surface
+  engineering to include [codebase review](engineering/codebase-review/) while
+  preserving the exclusions for change methods, requirements and architecture
+  lifecycle, work items, documentation craft, and language or framework
+  references.
+- **2026-08-31 — Creation**: Added [Reviewing a
+  codebase](engineering/codebase-review/reviewing-a-codebase.md) and ten
+  source-traced, `reporting-review` checklists for correctness, testing, module
+  and API design, workspace configuration, code clarity, data contracts,
+  dependencies, security, reliability, and performance.
+- **2026-08-31 — Lifecycle**: Marked the review collection as source-reviewed
+  candidates, not field-validated controls, and documented comparison,
+  reviewer-agreement, misselection, false-completion, and retirement signals.
+- **2026-08-29 — Creation**: Re-established the bundle at a new scope, portable
+  execution-surface engineering craft, after retiring its v1.1.0 design-change
+  and work-item scope. Added Command execution strategy, renamed in v2.3.0 to
+  [Designing a coherent repository task
+  interface](engineering/repository-task-interface.md).
+
+### Migrated history from the `work-management` bundle
+
+- **2026-09-08 — Update**: Removed dangling conversion references to unnamed
+  "earlier" material from [Software work-item
+  taxonomy](delivery/work-items/software-work-item-taxonomy.md), [Work-item
+  content contract](delivery/work-items/common/work-item-content-contract.md),
+  [Preserving evidence and
+  provenance](delivery/work-items/common/preserving-evidence-and-provenance.md),
+  [Maintaining work-item identity and
+  relationships](delivery/work-items/common/maintaining-identity-and-relationships.md),
+  [Mapping work items to native
+  hosts](delivery/work-items/common/mapping-to-work-item-hosts.md), [Authoring
+  Changes](delivery/work-items/changes/authoring-changes.md), and [Recording
+  Defect Reports](delivery/work-items/defects/recording-defect-reports.md),
+  replacing each with orienting content the reader can act on.
+- **2026-09-08 — Update**: Linked the three role explanations and the content
+  contract to the [Software work-item
+  taxonomy](delivery/work-items/software-work-item-taxonomy.md) so a reader who
+  arrives by search can reach the defining reference.
+- **2026-09-08 — Update**: Normalized Defect and Operational Incident Record as
+  the portable role terms across descriptions, index entries, and the content
+  contract, matching usage already established in the concept bodies.
+- **2026-09-08 — Update**: Sharpened the bundle root index introduction and its
+  common-section entry to state the cross-role grouping principle rather than
+  list concepts. That index is now the [Work items](delivery/work-items/)
+  subtree index.
+- **2026-08-29 — Creation**: Established the portable work-item taxonomy, common
+  content contract, Defect Report, Change, and Operational Incident Record
+  guidance, and tracker-neutral templates. Bodies generated by `codex/gpt-5.6`.
+
+### Migrated history from the `workflow-automation` bundle
+
+- **2026-09-08 — Practice boundaries**: Finished the 2026-08-21 split by
+  removing the deployment, release, and exposure vocabulary and the "not
+  universally preferable" argument duplicated between [Continuous
+  deployment](delivery/automation/continuous-deployment-explainer.md) and
+  [Continuous integration, delivery, and
+  deployment](delivery/automation/continuous-integration-delivery-and-deployment.md).
+  The reference now solely owns the comparative vocabulary, the explainer solely
+  owns adoption rationale, and each links to the other.
+- **2026-09-08 — Discovery**: Added `Related` sections to [Agents and agentic
+  workflows](delivery/automation/agents-and-agentic-workflows.md) and the
+  practice-comparison reference, which were the only concepts offering a search
+  reader no route onward.
+- **2026-09-08 — Index**: Merged the two single-entry groups in the bundle root
+  index into one Patterns and practices group. That index is now the
+  [Automation](delivery/automation/) subtree index.
+- **2026-08-21 — Practice boundaries**: Added [Continuous integration, delivery,
+  and
+  deployment](delivery/automation/continuous-integration-delivery-and-deployment.md)
+  as the comparative authority for the three practices and removed the
+  duplicated delivery-versus-deployment section from the focused delivery
+  explainer.
+- **2026-08-14 — Agent boundary**: Distinguished deterministic automation, LLM
+  workflows, agents, and agents contained within workflows; retained schedules,
+  dependencies, durable progress, retries, cancellation, and compensation in
+  workflow automation.
+- **2026-08-08 — Creation**: Established the workflow automation model, vendor
+  mappings, initial patterns (pipeline, quality gate, build once and promote),
+  and initial practices (continuous integration, continuous delivery, and
+  continuous deployment).

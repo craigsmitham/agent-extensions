@@ -2,7 +2,7 @@
 type: Guide
 title: Applying project-specific requirements policy
 description: Layers local terminology, authority, content obligations, rigor, and lifecycle rules over the portable requirements model. Use when adopting the portable requirements model in a project that has its own instructions, or when local policy and portable guidance appear to conflict.
-tags: [adaptation, policy, local-instructions, authority, rigor]
+tags: [adaptation, policy, local-instructions, authority, rigor, pe-solution]
 sources:
   - id: portable-model
     resource: ../foundations/portable-requirements-engineering.md
@@ -15,6 +15,14 @@ generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 Treat repository and organizational instructions as the authority for local
 domain content and operating policy. Map them onto the portable model rather
 than replacing semantics implicitly.[^portable-model]
+
+This guide covers requirements policy only. Its twin, for the content
+obligations repository instructions add to a work item, is [Applying
+repository-specific work-item
+considerations](../../../delivery/work-items/common/applying-project-specific-considerations.md).
+The two overlay different artifacts and share one rule: place local policy
+inside the portable model rather than beside it, and surface a conflict about
+authority or meaning instead of silently resolving it.
 
 Declare at least:
 

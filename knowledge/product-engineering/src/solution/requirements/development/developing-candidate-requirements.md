@@ -2,7 +2,7 @@
 type: Guide
 title: Developing candidate requirements
 description: Develops sourced observations and needs into bounded requirement candidates without implying acceptance. Use when source material has been gathered and must become analyzed candidates before any acceptance decision.
-tags: [candidate-requirement, analysis, provenance, uncertainty, feasibility]
+tags: [candidate-requirement, analysis, provenance, uncertainty, feasibility, pe-solution]
 generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 

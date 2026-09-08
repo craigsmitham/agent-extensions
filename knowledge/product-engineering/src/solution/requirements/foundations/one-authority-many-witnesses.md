@@ -2,7 +2,7 @@
 type: Principle
 title: One authority, many witnesses
 description: Establishes one authoritative requirement identity with traceable representations and evidence elsewhere.
-tags: [authority, traceability, witness, evidence, requirement-identity]
+tags: [authority, traceability, witness, evidence, requirement-identity, pe-solution]
 generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
 ---
 

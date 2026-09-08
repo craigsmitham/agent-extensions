@@ -2,7 +2,7 @@
 type: Explanation
 title: Strategy overview
 description: What strategy owns, how it connects choices to value and advantage, and what it leaves to planning and execution.
-tags: [strategy, strategic-choice, advantage, value-creation, explanation]
+tags: [strategy, strategic-choice, advantage, value-creation, explanation, pe-strategy]
 status: draft
 sources:
   - id: martin-choice-process
@@ -42,8 +42,8 @@ reveals constraints, while strategy determines which execution is coherent.
 Treating either as a substitute for the other produces activity without
 direction or direction without effect.
 
-Related: [Strategy as choice](/strategy/strategy-as-choice.md) states the test a
-commitment must pass, and [The choice cascade](/strategy/choice-cascade.md)
+Related: [Strategy as choice](strategy-as-choice.md) states the test a
+commitment must pass, and [The choice cascade](choice-cascade.md)
 names the five linked choices this overview summarizes.
 
 [^martin-choice-process]: Martin, The Strategic Choice Structuring Process.

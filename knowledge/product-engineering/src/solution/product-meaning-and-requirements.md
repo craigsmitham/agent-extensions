@@ -2,7 +2,7 @@
 type: Explanation
 title: Product meaning and requirements
 description: Where product meaning ends, requirements begin, and use cases provide a bridge without becoming the sole authority.
-tags: [product-management, requirements, use-cases, traceability, authority]
+tags: [product-management, requirements, use-cases, traceability, authority, pe-solution]
 status: draft
 sources:
   - id: product-value-demand
@@ -69,8 +69,10 @@ assess the value hypothesis and intended outcome rather than assuming they are
 unchanged. Record unresolved conflict instead of forcing artificial
 consistency.[^product-value-demand]
 
-[^requirements-neighbors]: The Requirements Engineering bundle owns the
-    portable boundary between requirements and neighboring artifacts.
+[^requirements-neighbors]: [Requirements and neighboring
+    artifacts](requirements/foundations/requirements-and-neighboring-artifacts.md)
+    owns the portable boundary between a requirement and the goals, designs,
+    plans, tests, evidence, and work items around it.
 [^product-value-demand]: [Value and demand model](../problem/value-and-demand-model.md) —
     product meaning remains evidence-backed and revisable; a normative
     downstream artifact does not prove it true.

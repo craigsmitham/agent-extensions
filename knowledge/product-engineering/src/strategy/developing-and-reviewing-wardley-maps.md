@@ -2,7 +2,7 @@
 type: Guide
 title: Developing and reviewing Wardley maps
 description: Produce and review a Wardley map whose question, evidence, movement, and inertia survive challenge, when a strategic decision turns on a user-anchored dependency chain and how its components may evolve rather than on financial, organizational, or process structure.
-tags: [wardley-mapping, strategy, situational-awareness, evidence, review]
+tags: [wardley-mapping, strategy, situational-awareness, evidence, review, pe-strategy]
 status: draft
 sources:
   - id: strategy-wardley

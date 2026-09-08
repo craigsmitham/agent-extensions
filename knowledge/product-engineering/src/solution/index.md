@@ -15,9 +15,11 @@ around is a guess. Framing the problem the commitment answers belongs to
 
 ## What design means here
 
-Design is choosing the form a solution will take, at a deliberate resolution,
-from alternatives that were genuinely considered. A statement becomes design
-the moment it constrains form; until then it describes a problem.
+[The overview](../overview.md) holds the bundle's definition of design and the
+test that a statement becomes design the moment it constrains form. It also
+states why a requirement is not a rival to design. This section applies both
+rather than restating them, so that there is one account to correct if either
+turns out to be wrong.
 
 The record is not the design. A sketch is disposable and a shaped concept is
 deliberately unfinished; what survives is the choice, not the artifact that
@@ -28,9 +30,15 @@ word. This section owns the solution concept and the interaction a person has
 with it. Technical design belongs to [How to build it](../engineering/), and the
 arrangement of a running system belongs to [How to run it](../operations/).
 
-A requirement is not a rival to design. It is the form a design choice takes
-once it must survive being disputed, traced through change, and bound to
-verification.
+Usability is touched by three sections, and each edge is stated where it is
+crossed. [What to solve](../problem/) carries usability as a risk to be retired
+by evidence, and says the craft of designing for it belongs here. The second
+edge runs to [How to build it](../engineering/): What to build chooses the
+interaction; How to build it judges, on available evidence, whether the built
+result achieves it. Choosing the interaction is choosing a form, which is design
+work at the interaction altitude, and a judgment that the built result misses
+the interaction is a finding about the build rather than a new interaction
+choice.
 
 ## Requirements and product meaning
 

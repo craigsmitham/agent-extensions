@@ -2,7 +2,7 @@
 type: Explanation
 title: Strategy as hypothesis
 description: How explicit assumptions and discriminating evidence allow strategy to adapt without collapsing into reactive tactics.
-tags: [strategy, hypotheses, assumptions, evidence, adaptation]
+tags: [strategy, hypotheses, assumptions, evidence, adaptation, pe-strategy]
 status: draft
 sources:
   - id: martin-choice-process

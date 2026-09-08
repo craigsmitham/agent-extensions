@@ -2,7 +2,7 @@
 type: Explanation
 title: Value creation and capture
 description: How the value stick distinguishes total value created from the portions captured by customers, an organization, and suppliers or employees.
-tags: [value-stick, willingness-to-pay, willingness-to-sell, value-creation, value-capture]
+tags: [value-stick, willingness-to-pay, willingness-to-sell, value-creation, value-capture, pe-strategy]
 status: draft
 sources:
   - id: hbs-value-stick-interview
@@ -46,9 +46,9 @@ The stick is a reasoning model, not a promise that every quantity can be
 measured precisely. Its value lies in exposing whose value changed and whether
 an apparent gain created value or merely moved it.
 
-Related: [Advantage and coherence](/strategy/advantage-and-coherence.md)
+Related: [Advantage and coherence](advantage-and-coherence.md)
 explains why a value position persists, and
-[The choice cascade](/strategy/choice-cascade.md) locates value creation within
+[The choice cascade](choice-cascade.md) locates value creation within
 the how-to-win choice.
 
 [^hbs-strategy-formulation]: Harvard Business School Online, How to Formulate a

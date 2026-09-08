@@ -2,7 +2,7 @@
 type: Explanation
 title: Strategy as choice
 description: Why strategy consists of consequential, mutually reinforcing choices rather than aspirations, priorities, or activities alone.
-tags: [strategy, choices, tradeoffs, planning, strategic-focus]
+tags: [strategy, choices, tradeoffs, planning, strategic-focus, pe-strategy]
 status: draft
 sources:
   - id: martin-integration
@@ -37,9 +37,9 @@ reduced scope.
 Plans sequence actions after choices have been made. Goals state desired
 results. Neither explains why this particular system of action should succeed.
 
-Related: [The choice cascade](/strategy/choice-cascade.md) gives these questions
+Related: [The choice cascade](choice-cascade.md) gives these questions
 their standard form, and
-[Advantage and coherence](/strategy/advantage-and-coherence.md) explains what
+[Advantage and coherence](advantage-and-coherence.md) explains what
 makes the resulting system hard to imitate.
 
 [^martin-integration]: Martin describes fit and mutual reinforcement across the

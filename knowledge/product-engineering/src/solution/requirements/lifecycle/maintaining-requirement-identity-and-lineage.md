@@ -2,7 +2,7 @@
 type: Reference
 title: Maintaining requirement identity and lineage
 description: Preserves requirement identity and evidence meaning through revision, split, merge, supersession, and retirement.
-tags: [identity, lineage, split, merge, supersession, retirement]
+tags: [identity, lineage, split, merge, supersession, retirement, pe-solution]
 generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
 ---
 
@@ -23,3 +23,10 @@ independent decision boundaries materially change.
 Evidence does not transfer automatically. Reassess whether a prior test,
 analysis, or validation result supports each successor and its revision. A link
 preserves lineage; it is not proof of satisfaction.
+
+Work items use the same split, merge, supersession, and retirement vocabulary
+against a different artifact, covered by [Maintaining work-item identity and
+relationships](../../../delivery/work-items/common/maintaining-identity-and-relationships.md).
+Keep the two lineages separate. Merging duplicate work items does not merge the
+requirements they cite, and retiring a requirement does not close the item that
+retired it.

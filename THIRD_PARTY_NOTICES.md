@@ -41,6 +41,11 @@ from public sources identified in each concept's provenance metadata. These
 include the FAIR Guiding Principles, W3C PROV, KCS, public agent-engineering
 guidance from Anthropic and OpenAI, Silicon Valley Product Group's
 product-model writing, Roger L. Martin's Playing to Win writing, and Harvard
-Business School's value-stick materials. The bundles and related rule packages
-contain original summaries and applications; they do not vendor those sources
-or reproduce their proprietary templates.
+Business School's value-stick materials. The `product-engineering` bundle also
+absorbed the retired `software-engineering`, `work-management`, and
+`workflow-automation` bundles, adding sources such as ISO/IEC/IEEE and NIST
+standards, published Google engineering and SRE material, Martin Fowler's and
+Kent Beck's public writing on testing and refactoring, the DORA research
+program, and public build-tool and browser-automation documentation. The
+bundles and related rule packages contain original summaries and applications;
+they do not vendor those sources or reproduce their proprietary templates.

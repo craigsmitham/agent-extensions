@@ -2,7 +2,7 @@
 type: Explanation
 title: Value and demand model
 description: How Offering, Audience, Need, Job to Be Done, and Value Proposition form an evidence-backed graph rather than a hierarchy.
-tags: [product-management, offering, audience, needs, jobs-to-be-done, value-proposition]
+tags: [product-management, offering, audience, needs, jobs-to-be-done, value-proposition, pe-problem]
 status: draft
 sources:
   - id: strategy-value-creation
@@ -65,8 +65,8 @@ applies those choices by forming and testing product meaning.
 service must achieve; [product meaning and
 requirements](../solution/product-meaning-and-requirements.md) explains that
 handoff, and realization choices belong to
-[How to build it](../engineering/). The tracker record used to coordinate a
-change is owned by the `work-management` bundle.
+[How to build it](../engineering/). The record used to coordinate a change is
+owned by [Work items](../delivery/work-items/) in How to ship it.
 
 These boundaries are about authority, not isolation. One initiative may draw
 on all of them, provided links do not silently transfer authority from one

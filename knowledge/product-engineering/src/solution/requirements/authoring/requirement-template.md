@@ -2,7 +2,7 @@
 type: Template
 title: Requirement template
 description: Provides a compact Markdown fallback for requirements when native host fields cannot preserve the content contract.
-tags: [template, requirement, markdown, fallback]
+tags: [template, requirement, markdown, fallback, pe-solution]
 sources:
   - id: content-contract
     resource: requirement-content-contract.md

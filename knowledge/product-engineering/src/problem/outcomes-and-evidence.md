@@ -2,7 +2,7 @@
 type: Explanation
 title: Outcomes and evidence
 description: How product outcomes connect shipped output to changes in customer behavior and business results, and what evidence supports that connection.
-tags: [outcomes, outputs, evidence, product-metrics, customer-value]
+tags: [outcomes, outputs, evidence, product-metrics, customer-value, pe-problem]
 status: draft
 sources:
   - id: svpg-product-model-concepts

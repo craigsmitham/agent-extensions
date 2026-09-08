@@ -2,7 +2,7 @@
 type: Guide
 title: Eliciting and inventorying requirement sources
 description: Guides source discovery and elicitation while preserving provenance, uncertainty, and stakeholder differences. Use when a decision or system boundary is identified but its stakeholders, rules, and existing behavior have not yet been inventoried.
-tags: [elicitation, sources, stakeholders, provenance, uncertainty]
+tags: [elicitation, sources, stakeholders, provenance, uncertainty, pe-solution]
 generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 

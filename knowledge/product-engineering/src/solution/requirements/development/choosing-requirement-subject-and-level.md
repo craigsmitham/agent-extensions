@@ -2,7 +2,7 @@
 type: Guide
 title: Choosing requirement subject and level
 description: Chooses an obligated subject and abstraction level appropriate to the decision without requiring a particular architecture taxonomy. Use when a requirement's obligated subject is unclear, names an undecided implementation element, or is too broad to assess.
-tags: [subject, abstraction, allocation, system-boundary, architecture]
+tags: [subject, abstraction, allocation, system-boundary, architecture, pe-solution]
 generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 

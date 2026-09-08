@@ -42,11 +42,8 @@
   "knowledge": {
     "docs": "workspace",
     "field-notes": "workspace",
-    "workflow-automation": "workspace",
     "effect-v4": "workspace",
     "knowledge-management": "workspace",
-    "work-management": "workspace",
-    "software-engineering": "workspace",
     "product-engineering": "workspace"
   },
   "subagents": {

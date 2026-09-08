@@ -47,6 +47,21 @@ redefining them.
 
 ## Teams and cadence
 
+These two concepts describe who does the choosing and at what rhythm, rather
+than a problem, an outcome, or the evidence for one. They are kept here because
+this section's question has a subject and a tempo: someone must hold the
+authority to decide which problems are worth solving, and evidence that an
+outcome occurred arrives over a cadence rather than at a moment. [Product
+decisions and accountability](overview.md) states that dependency directly.
+
+Their home is unsettled, and this index says so rather than implying otherwise.
+Neither concept answers "which problems are worth solving, and what outcome
+would tell us we succeeded?" on its own terms, and both would read as naturally
+in a section about how a product organization is arranged, which this bundle
+does not have. They stay here until that placement question is settled; read the
+grouping as an open question, not as a claim that team design belongs to the
+problem space.
+
 - [Empowered product teams](empowered-product-teams.md) — Why durable
   cross-functional teams need strategic context, decision authority,
   complementary expertise, and accountability for outcomes.

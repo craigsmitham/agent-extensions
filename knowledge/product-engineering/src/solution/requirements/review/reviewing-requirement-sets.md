@@ -2,7 +2,7 @@
 type: Checklist
 title: Reviewing requirement sets
 description: Reviews a bounded requirement set for consistency, coverage, balance, traceability, and changeability without claiming universal completeness. Use when a baseline, release scope, or feature's requirements are assessed together rather than one at a time.
-tags: [review, requirement-set, consistency, coverage, traceability, completeness]
+tags: [review, requirement-set, consistency, coverage, traceability, completeness, pe-solution]
 generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 

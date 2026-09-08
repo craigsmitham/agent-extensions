@@ -2,7 +2,7 @@
 type: Explanation
 title: Wardley Mapping
 description: How Wardley Mapping combines user needs, dependency, and evolution to make strategic assumptions visible without choosing a strategy by itself.
-tags: [wardley-mapping, situational-awareness, value-chain, user-needs, evolution, movement, inertia]
+tags: [wardley-mapping, situational-awareness, value-chain, user-needs, evolution, movement, inertia, pe-strategy]
 status: draft
 sources:
   - id: wardley-strategy-cycle
@@ -152,7 +152,7 @@ Common misreadings include:
 - replacing domain, process, structural, financial, or risk models; and
 - preserving a workshop snapshot after its evidence expires.
 
-Related: [Developing and reviewing Wardley maps](/strategy/developing-and-reviewing-wardley-maps.md)
+Related: [Developing and reviewing Wardley maps](developing-and-reviewing-wardley-maps.md)
 turns this model into a procedure for building and challenging a specific map.
 
 [^wardley-map-grammar]: Wardley's mapping chapter constructs a value chain from

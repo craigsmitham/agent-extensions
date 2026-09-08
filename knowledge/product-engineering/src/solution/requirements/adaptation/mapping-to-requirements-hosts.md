@@ -2,7 +2,7 @@
 type: Guide
 title: Mapping to requirements hosts
 description: Maps portable requirement semantics into native tool fields while preserving authority, identity, relationships, and read-back accuracy. Use when writing or reading requirements in a tracker, specification repository, or requirements-management platform.
-tags: [requirements-management, host, native-fields, mapping, read-back]
+tags: [requirements-management, host, native-fields, mapping, read-back, pe-solution]
 sources:
   - id: authority-model
     resource: ../foundations/one-authority-many-witnesses.md
@@ -16,6 +16,15 @@ Requirements may live in Markdown, specifications, model repositories, product
 tools, issue trackers, application-lifecycle systems, or specialist
 requirements-management platforms. Select the authoritative host deliberately
 under the one-authority model.[^authority-model]
+
+This guide covers requirement hosts only. The same discipline applied to work
+items, where the fields, labels, and relationship types belong to a tracker
+rather than to a requirements platform, is [Mapping work items to native
+hosts](../../../delivery/work-items/common/mapping-to-work-item-hosts.md). Both
+guides derive from [One authority, many
+witnesses](../foundations/one-authority-many-witnesses.md), which owns the rule
+they share: a host record is a witness unless it has been declared the
+authority. Read that principle once, then the guide for the artifact in hand.
 
 Prefer native structured fields and typed links when they preserve the
 [content contract](../authoring/requirement-content-contract.md) exactly. Use

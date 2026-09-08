@@ -9,7 +9,7 @@
 | --- | --- | --- | --- | --- |
 | axm-cli-interactions | survey | Sessions that directly run `axm` to complete work in this workspace or manually validate AXM behavior; automated test invocations excluded | — | Recurring notes support a specific target condition, or two triage reviews find no pattern |
 
-<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=64e78186d3141a8b5134e4a1198ddea3e65af0652b93cab165fefba0ffb70637 -->
+<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=b010e3da279f04d48c3fa4091599780ed661ada7992e343918ee53b1a069e66c -->
 ## Knowledge Bundles
 
 Use `axm knowledge concepts --help` to search, read, and explore these bundles.
@@ -29,9 +29,6 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/field-notes kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/knowledge-management kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/product-engineering kind=knowledge -->
-<!-- axm:point v=1 ext=@craigsmitham/knowledge/software-engineering kind=knowledge -->
-<!-- axm:point v=1 ext=@craigsmitham/knowledge/work-management kind=knowledge -->
-<!-- axm:point v=1 ext=@craigsmitham/knowledge/workflow-automation kind=knowledge -->
 
 | Bundle | Description |
 | --- | --- |
@@ -39,10 +36,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [effect-v4](knowledge/effect-v4/src/index.md) | Checklists to consult when designing, implementing, maintaining, or reviewing Effect v4 TypeScript |
 | [field-notes](knowledge/field-notes/src/index.md) | Operational field-note practice for factual and diagnostic evidence capture, impact-aware triage, evidence-led findings, and verified corrective action |
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
-| [product-engineering](knowledge/product-engineering/src/index.md) | Portable product-engineering body of knowledge organized as seven practitioner questions from strategy through learning |
-| [software-engineering](knowledge/software-engineering/src/index.md) | Portable engineering craft for evidence-backed codebase review, test architecture, and coherent repository execution surfaces |
-| [work-management](knowledge/work-management/src/index.md) | Portable software work-item taxonomy, content contracts, templates, lifecycle, evidence, and tracker-neutral guidance |
-| [workflow-automation](knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
+| [product-engineering](knowledge/product-engineering/src/index.md) | Portable product-engineering body of knowledge organized as six practitioner questions from strategy through operations |
 <!-- axm:end v=1 region=knowledge -->
 <!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=ec87289ea6ad8b9a6d038b2a6ef32fb60cb98f25a0e647e8ad69b660e76a57cb -->
 <!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.3 kind=rule -->

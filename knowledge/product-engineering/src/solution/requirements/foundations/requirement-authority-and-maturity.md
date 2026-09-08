@@ -2,7 +2,7 @@
 type: Reference
 title: Requirement authority and maturity
 description: Separates candidate and normative requirements from independent decision, persistence, realization, and evidence states.
-tags: [requirement, authority, maturity, candidate, normative, evidence]
+tags: [requirement, authority, maturity, candidate, normative, evidence, pe-solution]
 generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
 ---
 

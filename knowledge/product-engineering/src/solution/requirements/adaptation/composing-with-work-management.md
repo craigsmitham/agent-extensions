@@ -1,23 +1,30 @@
 ---
 type: Explanation
 title: Composing with work management
-description: Defines an optional boundary between authoritative requirements and the work items used to investigate or change them.
-tags: [work-management, change, defect-report, traceability, composition]
+description: Defines the boundary between authoritative requirements and the work items used to investigate or change them.
+tags: [work-management, change, defect-report, traceability, composition, pe-solution]
 sources:
   - id: requirements-boundary
     resource: ../foundations/requirements-and-neighboring-artifacts.md
     title: Requirements and neighboring artifacts
-  - id: work-management
-    resource: https://github.com/craigsmitham/agent-extensions/tree/d2456818304424ab7cfac01305478ae214eaaad5/knowledge/work-management
-    title: Work management knowledge
+  - id: work-item-taxonomy
+    resource: ../../../delivery/work-items/software-work-item-taxonomy.md
+    title: Software work-item taxonomy
 generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
 ---
 
 # Composing with work management
 
-Requirements Engineering and Work Management are independent capabilities that
+Requirements engineering and work management are independent capabilities that
 compose through explicit relationships.[^requirements-boundary] The portable
-work-item meanings are defined by the separate Work Management bundle.[^work-management]
+meanings of the roles named below are owned by [How to ship
+it](../../../delivery/work-items/), which treats Operational Incident Records,
+Defect Reports, and Changes as durable case records.[^work-item-taxonomy]
+
+Holding both capabilities in one body of knowledge does not merge them. A
+requirement keeps its own authority, identity, and decision history whatever
+record coordinates work around it, and a work item keeps its own lifecycle
+whatever obligation it cites.
 
 - A Defect Report may cite the requirement or intended use against which a
   suspected deficiency was observed.
@@ -30,11 +37,12 @@ work-item meanings are defined by the separate Work Management bundle.[^work-man
 
 Do not copy the requirement into a work item as a competing authority. Do not
 infer that reported behavior is a defect, that a proposed change is approved,
-or that delivery changes normative requirement text. When the Work Management
-pack is absent, use the project's native coordination records with the same
-semantic boundary.
+or that delivery changes normative requirement text. A project that coordinates
+work through its own native records rather than these portable roles applies
+the same semantic boundary to whatever records it has.
 
 [^requirements-boundary]: The cited boundary distinguishes an authoritative
-    requirement from the records that coordinate work around it.
-[^work-management]: The cited bundle owns portable meanings for Defect Reports,
-    Changes, and Operational Incident Records.
+    requirement from the records that coordinate work around it, and lists
+    which portable guide owns each concern for each artifact.
+[^work-item-taxonomy]: The cited taxonomy owns portable meanings for Defect
+    Reports, Changes, and Operational Incident Records.

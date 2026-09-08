@@ -2,7 +2,7 @@
 type: Explanation
 title: Product strategy
 description: How product strategy translates broader strategic choices into product problems, differentiated value, constraints, and decision context.
-tags: [product-strategy, strategic-context, product-vision, outcomes, prioritization]
+tags: [product-strategy, strategic-context, product-vision, outcomes, prioritization, pe-strategy]
 status: draft
 sources:
   - id: svpg-product-model-google

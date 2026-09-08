@@ -2,7 +2,7 @@
 type: Guide
 title: Developing value and demand concepts
 description: Use this guide when a team needs to draft, relate, test, or maintain Offering, Audience, Need, Job to Be Done, and Value Proposition concepts without adopting a prescribed artifact system.
-tags: [product-management, offering, audience, needs, jobs-to-be-done, value-proposition]
+tags: [product-management, offering, audience, needs, jobs-to-be-done, value-proposition, pe-problem]
 status: draft
 sources:
   - id: product-value-demand

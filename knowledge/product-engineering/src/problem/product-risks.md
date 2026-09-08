@@ -2,7 +2,7 @@
 type: Explanation
 title: Product risks
 description: How value, usability, feasibility, and viability frame the evidence needed before and after committing to a product solution.
-tags: [product-risks, value, usability, feasibility, viability, discovery]
+tags: [product-risks, value, usability, feasibility, viability, discovery, pe-problem]
 status: draft
 sources:
   - id: svpg-product-management

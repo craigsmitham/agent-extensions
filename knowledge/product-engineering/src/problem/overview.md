@@ -2,7 +2,7 @@
 type: Explanation
 title: Product decisions and accountability
 description: Who decides which problems are worth solving, what accountability that decision carries, and what this section leaves to its neighbors.
-tags: [product-management, product-operating-model, decision-rights, accountability, explanation]
+tags: [product-management, product-operating-model, decision-rights, accountability, explanation, pe-problem]
 status: draft
 sources:
   - id: svpg-product-management

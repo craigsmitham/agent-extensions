@@ -2,7 +2,7 @@
 type: Reference
 title: Requirements and neighboring artifacts
 description: Distinguishes requirements from goals, designs, plans, tests, evidence, and work items.
-tags: [requirement, goal, design, test, evidence, work-item]
+tags: [requirement, goal, design, test, evidence, work-item, pe-solution]
 generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
 ---
 
@@ -25,3 +25,24 @@ implementation preference is not automatically a requirement. A test may
 witness a requirement but does not become its authoritative wording. A work
 item may change a requirement but does not own its durable identity unless the
 project explicitly designates that host as authoritative.
+
+## Where each artifact's portable craft lives
+
+The requirement and the work item are the two artifacts this body of knowledge
+treats portably end to end, and each has its own content contract, identity
+rules, host mapping, and policy overlay. The pairs read alike because the
+underlying craft is the same. They are not interchangeable, because the
+artifacts are not.
+
+| Concern | Requirement | Work item |
+| --- | --- | --- |
+| Content contract | [Requirement content contract](../authoring/requirement-content-contract.md) | [Work-item content contract](../../../delivery/work-items/common/work-item-content-contract.md) |
+| Identity through change | [Maintaining requirement identity and lineage](../lifecycle/maintaining-requirement-identity-and-lineage.md) | [Maintaining work-item identity and relationships](../../../delivery/work-items/common/maintaining-identity-and-relationships.md) |
+| Host mapping | [Mapping to requirements hosts](../adaptation/mapping-to-requirements-hosts.md) | [Mapping work items to native hosts](../../../delivery/work-items/common/mapping-to-work-item-hosts.md) |
+| Local policy overlay | [Applying project-specific requirements policy](../adaptation/applying-project-specific-requirements-policy.md) | [Applying repository-specific work-item considerations](../../../delivery/work-items/common/applying-project-specific-considerations.md) |
+| Verification | [Verification and validation](verification-and-validation.md) | [Defining work-item verification](../../../delivery/work-items/common/defining-verification.md) |
+
+Choose by the artifact in hand. Neither column is a general treatment the other
+specializes, and neither is a summary of the other. How the two artifacts
+relate once both exist is covered by [Composing with work
+management](../adaptation/composing-with-work-management.md).

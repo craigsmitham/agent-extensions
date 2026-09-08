@@ -1,7 +1,8 @@
 # Adapting requirements engineering
 
-These concepts map the portable semantics into local instructions, tools, and
-neighboring work-management practices without imposing them as dependencies.
+These concepts map the portable requirement semantics into local instructions,
+requirement hosts, and the work items that coordinate change around a
+requirement.
 
 - [Applying project-specific requirements policy](applying-project-specific-requirements-policy.md) -
   Layers local terminology, authority, content obligations, rigor, and
@@ -14,5 +15,7 @@ neighboring work-management practices without imposing them as dependencies.
   or reading requirements in a tracker, specification repository, or
   requirements-management platform.
 - [Composing with work management](composing-with-work-management.md) - Defines
-  an optional boundary between authoritative requirements and the work items
-  used to investigate or change them.
+  the boundary between authoritative requirements and the Operational Incident
+  Records, Defect Reports, and Changes used to investigate or change them. Use
+  when a work item and a requirement describe the same obligation and it is
+  unclear which one is authoritative.

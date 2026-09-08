@@ -2,7 +2,7 @@
 type: Reference
 title: Requirement content contract
 description: Defines the minimum semantic content needed for a durable, reviewable, assessable requirement.
-tags: [requirement, content-contract, identity, evidence, traceability]
+tags: [requirement, content-contract, identity, evidence, traceability, pe-solution]
 generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
 ---
 
@@ -30,3 +30,10 @@ native fields, prose, a model, or linked records:
 Not every item must be a heading. Prefer native structured fields when they
 carry the semantics exactly. Omit inapplicable content deliberately; do not
 silently omit information that remains unknown.
+
+This contract governs requirements. The work item that investigates, proposes,
+or coordinates a change to one has its own slots in the [work-item content
+contract](../../../delivery/work-items/common/work-item-content-contract.md).
+The two are often filled at the same time and neither supplies the other's
+semantics: reference the requirement from the work item instead of restating
+it.

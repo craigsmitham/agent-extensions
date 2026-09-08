@@ -2,7 +2,7 @@
 type: Explanation
 title: Jobs to Be Done
 description: How to describe the progress people seek in circumstances without embedding a solution.
-tags: [product-management, jobs-to-be-done, customer-progress, circumstances, evidence]
+tags: [product-management, jobs-to-be-done, customer-progress, circumstances, evidence, pe-problem]
 status: draft
 sources:
   - id: christensen-know-customers-jobs

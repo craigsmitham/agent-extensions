@@ -11,7 +11,12 @@ servers.
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/software-engineering` | Outcome-centered codebase review criteria, cross-cutting quality concerns, test-suite quality and architecture guidance, executable-specification authority and lifecycle, review aids, and execution-surface craft |
+| `@craigsmitham/knowledge/product-engineering` | The How to build it section holds outcome-centered codebase review criteria, cross-cutting quality concerns, test-suite quality and architecture guidance, executable-specification authority and lifecycle, review aids, and execution-surface craft |
+
+The `software-engineering` bundle was retired into `product-engineering`, where
+its concepts live under `src/engineering/` and carry the `pe-engineering` tag.
+Installing this pack therefore brings the whole product-engineering body of
+knowledge, not the engineering section alone.
 
 ## Install
 
@@ -38,7 +43,8 @@ axm packs install @craigsmitham/packs/software-engineering
 - Designing task graphs, script surfaces, caching intent, and invocation
   contracts shared by humans, agents, and CI.
 
-The knowledge bundle remains useful and installable on its own.
+The knowledge bundle remains useful and installable on its own, and it also
+answers the five questions either side of How to build it.
 
 ## License
 

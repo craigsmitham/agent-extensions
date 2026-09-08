@@ -34,5 +34,6 @@ meaning stops and a normative statement begins is covered by
 ## Local use
 
 - [Adaptation](adaptation/) - Fitting the portable model to one project's
-  instructions, requirement hosts, and optional composition with work
-  management.
+  instructions and requirement hosts, and holding the boundary with the
+  [work items](../../delivery/work-items/) that coordinate change around a
+  requirement.

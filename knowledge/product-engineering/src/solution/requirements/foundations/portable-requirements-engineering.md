@@ -2,7 +2,7 @@
 type: Explanation
 title: Portable requirements engineering
 description: Defines a method-neutral model for discovering, analyzing, specifying, reviewing, and maintaining requirements.
-tags: [requirements-engineering, elicitation, analysis, specification, validation, lifecycle]
+tags: [requirements-engineering, elicitation, analysis, specification, validation, lifecycle, pe-solution]
 generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
 ---
 

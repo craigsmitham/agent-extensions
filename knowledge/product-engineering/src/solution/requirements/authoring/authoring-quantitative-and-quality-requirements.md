@@ -2,7 +2,7 @@
 type: Guide
 title: Authoring quantitative and quality requirements
 description: Specifies measurable quality obligations without inventing targets or omitting assessment context. Use when a requirement asserts a quality such as performance, reliability, or availability, or rests on an adjective with no measure, condition, or target.
-tags: [quality, quantitative, measure, threshold, performance, reliability]
+tags: [quality, quantitative, measure, threshold, performance, reliability, pe-solution]
 generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 

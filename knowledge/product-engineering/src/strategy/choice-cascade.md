@@ -2,7 +2,7 @@
 type: Explanation
 title: The choice cascade
 description: How the Playing to Win choice cascade connects aspiration, participation, advantage, capabilities, and management systems.
-tags: [playing-to-win, choice-cascade, where-to-play, how-to-win, capabilities]
+tags: [playing-to-win, choice-cascade, where-to-play, how-to-win, capabilities, pe-strategy]
 status: draft
 sources:
   - id: martin-cascade-origins
@@ -52,7 +52,7 @@ The framework is broadly applicable, but its language must fit the context.
 “Winning” for a public or social organization may mean achieving its purpose
 under constraints rather than defeating a market competitor.
 
-Related: [Advantage and coherence](/strategy/advantage-and-coherence.md)
+Related: [Advantage and coherence](advantage-and-coherence.md)
 examines what makes the assembled choices reinforce one another.
 
 [^martin-cascade-origins]: Martin, Balanced Scorecard and Playing to Win.

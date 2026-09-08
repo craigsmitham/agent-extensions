@@ -148,9 +148,6 @@ expected=(
   knowledge/field-notes
   knowledge/knowledge-management
   knowledge/product-engineering
-  knowledge/software-engineering
-  knowledge/work-management
-  knowledge/workflow-automation
   packs/docs
   packs/effect-v4
   packs/field-notes

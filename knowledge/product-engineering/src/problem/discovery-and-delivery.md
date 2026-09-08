@@ -2,7 +2,7 @@
 type: Explanation
 title: Discovery and delivery
 description: How product discovery reduces uncertainty while product delivery creates and operates a trustworthy solution, with learning continuing across both.
-tags: [product-discovery, product-delivery, prototypes, production, learning]
+tags: [product-discovery, product-delivery, prototypes, production, learning, pe-problem]
 status: draft
 sources:
   - id: svpg-product-model-concepts

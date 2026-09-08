@@ -2,7 +2,7 @@
 type: Reference
 title: Classifying requirements
 description: Uses project taxonomy when available and supplies a non-exclusive fallback lens for requirement analysis.
-tags: [classification, functional, quality, constraint, conformance, human-factors, process]
+tags: [classification, functional, quality, constraint, conformance, human-factors, process, pe-solution]
 generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
 ---
 
