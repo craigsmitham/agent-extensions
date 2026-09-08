@@ -51,3 +51,4 @@ that decision is made and the suite has to be written, owned, and run.
 ## Give behavior an authoritative statement
 
 - [Designing executable specifications](designing-executable-specifications.md) - Use when intended behavior needs an authoritative, human-readable, continuously verified statement that non-authors can dispute; choose which rules earn a specification, keep incidental mechanics out of the specification text, and bind automation below the readable layer.
+- [Keeping specifications authoritative](keeping-specifications-authoritative.md) - Use once an executable specification is accepted and must stay trustworthy; separate acceptance from verification, record evidence for obligations that cannot run on every change, triage a failure before editing either side, retire dead rules, and gate generated change on reviewed intent.

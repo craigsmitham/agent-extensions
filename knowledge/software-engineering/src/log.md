@@ -2,6 +2,28 @@
 
 ## 2026-09-08
 
+- **Executable specifications revised**: Reworked [Designing executable
+  specifications](/designing-executable-specifications.md) after external
+  review. Exclusions are now framed around what is incidental to the
+  obligation rather than categories of content, so protocol, storage, and
+  ordering details may be the rule itself; a rule, its examples, and
+  supporting coverage are distinguished by authority; decisive boundary
+  examples stay in the readable text while exhaustive sweeps sit below it;
+  the four layers are presented as separable responsibilities rather than
+  mandatory abstractions; and characterization is defined by inferring
+  intent from behavior, not by when the text was written.
+- **Split**: Moved lifecycle guidance into [Keeping specifications
+  authoritative](/keeping-specifications-authoritative.md), which separates
+  acceptance from verification, covers manual, static, and
+  deployment-dependent obligations, failure triage, retirement, and generated
+  change. The split keeps the designing guide under the repository's 300-line
+  limit.
+- **Lifecycle**: Marked both specification guides stable after review of the
+  revised text, so their OKF lifecycle state identifies them as ready for
+  consumption. As elsewhere in this bundle, no `verified` event is recorded:
+  the guides remain generated content whose consequential claims should be
+  confirmed against their cited sources.
+
 - **Restructure**: Split every concept that exceeded the repository's 300-line
   limit into reader-recognizable siblings, preserving all content. The
   cross-cutting model became four concepts ([the model and admission

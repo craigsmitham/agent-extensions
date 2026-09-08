@@ -2,15 +2,16 @@
 
 Evidence-backed guidance for reviewing software quality, designing tests at
 the narrowest effective level through cross-boundary and browser-dependent
-worlds, and shaping coherent repository execution surfaces. This pack installs
-one standalone knowledge bundle and introduces no rules, skills, subagents,
-hooks, or MCP servers.
+worlds, giving decided behavior an authoritative specification, and shaping
+coherent repository execution surfaces. This pack installs one standalone
+knowledge bundle and introduces no rules, skills, subagents, hooks, or MCP
+servers.
 
 ## Included extension
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/software-engineering` | Outcome-centered codebase review criteria, cross-cutting quality concerns, test-suite quality and architecture guidance, review aids, and execution-surface craft |
+| `@craigsmitham/knowledge/software-engineering` | Outcome-centered codebase review criteria, cross-cutting quality concerns, test-suite quality and architecture guidance, executable-specification authority and lifecycle, review aids, and execution-surface craft |
 
 ## Install
 
@@ -29,6 +30,9 @@ axm packs install @craigsmitham/packs/software-engineering
   world for a material integration risk.
 - Deciding when interface evidence requires a real browser and choosing a
   focused scope, matrix, and observation contract.
+- Deciding which rules earn an authoritative, human-readable specification,
+  keeping incidental mechanics out of its text, and keeping it trustworthy
+  once accepted.
 - Selecting evidence and investigation aids without turning inspection methods
   into quality outcomes.
 - Designing task graphs, script surfaces, caching intent, and invocation

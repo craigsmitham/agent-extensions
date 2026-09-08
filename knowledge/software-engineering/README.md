@@ -46,7 +46,11 @@ the environment matrix, and bounded visual and accessibility conclusions. Use
 the executable-specifications guide on the separate axis of authority and
 audience: which decided rules earn a human-readable statement of intent that
 non-authors can dispute, what that text may contain, and how to bind automation
-below it so implementation change never edits a specification.
+below it so implementation change never edits a specification. A companion
+guide keeps an accepted specification trustworthy: acceptance and verification
+as separate properties, evidence for obligations that cannot run on every
+change, failure triage before either side is edited, retirement, and generated
+change gated on reviewed intent.
 This bundle is not a software-change method, requirements or architecture
 lifecycle, work-item guidance, documentation craft, or a language or framework
 reference.
@@ -63,8 +67,14 @@ reclaiming the retired change-method or work-item scope; version 2.3.0 reframes
 command execution as a coherent repository task interface for developers,
 agents, and automation; version 2.4.0 adds portable cross-boundary and
 browser-dependent test architecture; version 2.4.1 marks those guides stable
-after source reconciliation, and version 2.5.0 adds the narrowest-effective-test
-guide as a draft pending its own source reconciliation.
+after source reconciliation; version 2.5.0 adds the narrowest-effective-test
+guide as a draft pending its own source reconciliation; version 2.6.0 adds
+executable specifications as an axis of authority separate from test level;
+version 2.7.0 splits every concept over 300 lines into reader-recognizable
+siblings and brings the bundle into OKF conformance; and version 2.8.0 revises
+the executable-specifications guide around what is incidental to the
+obligation, separates its lifecycle guidance into "Keeping specifications
+authoritative", and marks both stable.
 
 Install the pack with:
 
