@@ -1,47 +1,8 @@
 # Public agent extensions
-
-- Treat every artifact and metadata field as public. Do not author, commit, or
-  document personal or private information; use synthetic examples and fixtures.
-- When authoring documentation in a knowledge bundle, follow the
-  [docs knowledge bundle](knowledge/docs/src/index.md).
 - Keep concepts and guidance coherent across extensions. Resolve contradictory
   terminology or claims before publishing.
-- When choosing or changing a package license, apply
-  [Licensing public extensions](docs/licensing.md) and preserve published and
-  third-party obligations explicitly.
+- Keep markdown files under 300 lines
 
-## Extension authoring versus adoption
-
-This repository authors and distributes extension frameworks. The presence of
-a skill, subagent, pack, rule, hook, or knowledge bundle here does not mean the
-repository adopts that extension's operating model.
-
-Treat an extension being discussed or changed as the subject of authoring,
-maintenance, evaluation, or audit, not as an invoked workflow. Use the
-artifact-appropriate authoring and evaluation guidance. Do not require an
-extension's domain artifacts merely because work concerns that extension's
-sources.
-
-Apply an extension's operating model to repository work only when the user
-explicitly asks to execute that workflow or repository instructions separately
-declare its adoption. Its sources may still be consulted as subject-matter
-authority when maintaining the extension.
-
-## Agent Skill evaluation artifacts
-
-For every workspace-authored Agent Skill, keep the versioned evaluation
-contract and cases under `skills/<name>/evals/`.
-Keep fixtures, graders, and harness inputs there only when they are stable
-source. Write routine generated runs under ignored `.work/evals/`; promote only
-the minimal decision evidence that must ship with the package.
-
-Validate all authored suites with
-`node agent_extensions/agentxm/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs validate`.
-Treat routing and activated execution as separate stages, bind evidence to
-exact target, suite, runner, adapter, environment, and provenance identities,
-and preserve `unknown` and `harness-error` rather than converting missing
-evidence into a pass. Version a skill when its evaluation source changes;
-evaluation evidence is not audit or release approval.
 
 ## Field note subjects
 
@@ -88,7 +49,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [work-management](knowledge/work-management/src/index.md) | Portable software work-item taxonomy, content contracts, templates, lifecycle, evidence, and tracker-neutral guidance |
 | [workflow-automation](knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end v=1 region=knowledge -->
-<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions -->
+<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=13f9a5c8cebfaf12084b2a3c55940648fc5518aca247451fdda6c4639e6b3c3e -->
 <!-- axm:point v=1 ext=@craigsmitham/rules/use-effect-v4@0.1.1 kind=rule -->
 
 ## Use Effect v4
