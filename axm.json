@@ -30,7 +30,8 @@
     },
     "checklist-design": "workspace",
     "manage-work-items": "workspace",
-    "engineer-requirements": "workspace"
+    "engineer-requirements": "workspace",
+    "spot-spew": "workspace"
   },
   "rules": {
     "field-notes": "workspace",

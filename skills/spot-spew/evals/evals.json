@@ -1,0 +1,189 @@
+{
+  "skill_name": "spot-spew",
+  "suite_version": "0.0.1",
+  "evaluation_contract": "evals/evaluation-contract.json",
+  "evals": [
+    {
+      "id": 1,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "explicit-control",
+      "prompt": "$spot-spew Review the fictional billing service for code we could drop in favor of capabilities its dependencies already provide.",
+      "expected_selection": "spot-spew",
+      "catalog_neighbors": [],
+      "assertions": [
+        "The explicit invocation selects spot-spew.",
+        "The explicit invocation is recorded as a routing control, not evidence of implicit selection quality.",
+        "The control isolates explicit target activation from adjacent-skill classification.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 2,
+      "stage": "routing",
+      "routing_partition": "holdout",
+      "trigger_family": "implicit-capability-substitution",
+      "prompt": "We hand-rolled retry, backoff, and connection pooling around the HTTP client in this fictional service. How much of that is the client library already doing for us?",
+      "expected_selection": "spot-spew",
+      "catalog_neighbors": [
+        "code-review",
+        "simplify"
+      ],
+      "assertions": [
+        "Spot-spew is selected from the hand-rolled-versus-library framing without the skill name appearing in the request.",
+        "The maintenance-burden and capability-substitution purpose is recognized.",
+        "A general review skill does not displace the burden-specific workflow.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 3,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "style-only-negative",
+      "prompt": "Reformat these fictional modules and rename the variables so they match our style guide.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "spot-spew"
+      ],
+      "assertions": [
+        "Spot-spew is not selected for formatting and naming conformity work.",
+        "The presence of cleanup language alone does not trigger the skill.",
+        "A formatter or style route is preferred over a burden assessment.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 4,
+      "stage": "routing",
+      "routing_partition": "holdout",
+      "trigger_family": "defect-diagnosis-negative",
+      "prompt": "This fictional worker intermittently drops messages under load. Find out why.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "spot-spew",
+        "code-review"
+      ],
+      "assertions": [
+        "Spot-spew is not selected to diagnose an intermittent runtime failure.",
+        "Custom concurrency code in the subject does not by itself route the request here.",
+        "A debugging or review route is preferred over a burden assessment.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 5,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "ambiguous-cleanup",
+      "prompt": "Clean up this fictional package.",
+      "expected_selection": "clarify-or-abstain",
+      "catalog_neighbors": [
+        "spot-spew",
+        "simplify"
+      ],
+      "assertions": [
+        "The request is clarified rather than assumed to be a maintenance-burden assessment.",
+        "No burden findings are produced before the intent is resolved.",
+        "The clarification names what would distinguish a burden assessment from other cleanup.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 6,
+      "stage": "routing",
+      "routing_partition": "development",
+      "trigger_family": "implicit-idiomatic-simplification",
+      "prompt": "Our fictional app wires its own request lifecycle around the framework instead of using its middleware. Is that costing us anything?",
+      "expected_selection": "spot-spew",
+      "catalog_neighbors": [
+        "code-review",
+        "simplify"
+      ],
+      "assertions": [
+        "Spot-spew is selected for a non-idiomatic use of an adopted framework.",
+        "Idiomatic simplification is recognized as in scope even when the behavior is required.",
+        "The request is not reduced to a style question.",
+        "No task side effect occurs before selection."
+      ]
+    },
+    {
+      "id": 7,
+      "stage": "execution",
+      "prompt": "Assess this fictional service. It ships a 400-line in-memory cache with its own TTL sweeper and metrics, while its declared dependency manifest pins a cache library whose documented API covers TTL, eviction, and metrics. Report the opportunity.",
+      "expected_output": "A capability-substitution finding that establishes the required behavior, explains why caching is non-core here, names the concrete burden, verifies the alternative against the pinned version's documented API, and compares retaining the code with replacing it.",
+      "assertions": [
+        "The required behavior, governing obligations, and constraints are established before the recommendation.",
+        "The need is explained as non-core rather than asserted.",
+        "The concrete burden is named with code locations rather than described generically.",
+        "The alternative is verified against the pinned dependency version and its documented API.",
+        "Retaining the code is compared with replacing it, including migration effort and remaining complexity.",
+        "No source file is edited, created, or deleted."
+      ]
+    },
+    {
+      "id": 8,
+      "stage": "execution",
+      "prompt": "Assess this fictional module. It reimplements the adopted framework's dependency-injection lifecycle with a hand-written registry and manual teardown, and the framework documentation supplied here describes the equivalent scoped lifecycle. Report the opportunity.",
+      "expected_output": "An idiomatic-simplification finding that cites the framework's documented abstraction and lifecycle, names the duplicated state and coordination burden, and states what would become simpler.",
+      "assertions": [
+        "The framework's documented extension point and lifecycle are cited as the idiom evidence.",
+        "Local repository convention alone is not treated as proof that an approach is idiomatic.",
+        "The duplicated state, extra coordination, or fragile lifecycle handling is named concretely.",
+        "What could disappear or become simpler is stated with material tradeoffs.",
+        "No source file is edited, created, or deleted."
+      ]
+    },
+    {
+      "id": 9,
+      "stage": "execution",
+      "prompt": "Assess this fictional adapter. It bypasses the adopted client's builder API with a custom request assembler because the supplied compliance obligation requires a signed header the builder cannot emit, which the accompanying issue thread confirms. Report the opportunity.",
+      "expected_output": "A preserved justified departure: the unconventional implementation is investigated, the obligation is found to defeat the conventional approach, and no change is recommended.",
+      "assertions": [
+        "The departure from convention is investigated rather than reported as a finding by itself.",
+        "The departure is preserved because the conventional capability cannot satisfy the stated obligation.",
+        "No change is recommended solely because the implementation departs from the conventional shape.",
+        "The reasoning cites the obligation and the capability gap rather than a preference.",
+        "No source file is edited, created, or deleted."
+      ]
+    },
+    {
+      "id": 10,
+      "stage": "execution",
+      "prompt": "Assess this fictional package. Every non-core need is already delegated to a declared dependency and the framework's documented abstractions are used as described. Report the opportunity.",
+      "expected_output": "An explicit report that no opportunity qualifies, without manufacturing a marginal finding.",
+      "assertions": [
+        "The response reports that no opportunity qualifies rather than producing a marginal one.",
+        "No stylistic or speculative change is offered as a substitute finding.",
+        "The basis for finding nothing is stated, not merely asserted.",
+        "No source file is edited, created, or deleted."
+      ]
+    },
+    {
+      "id": 11,
+      "stage": "execution",
+      "prompt": "Assess this fictional service. It implements its own schedule parser, and the dependency that might replace it is declared with no resolvable version and no documentation available in this context. Report the opportunity.",
+      "expected_output": "A candidate rather than a verified finding, with the unresolved verification named as the reason.",
+      "assertions": [
+        "The unverifiable replacement is labeled a candidate rather than a verified finding.",
+        "The missing installed version and documentation are named as the unresolved question.",
+        "Verified findings and candidates remain visibly distinct in the report.",
+        "No replacement capability is asserted from memory as established fact.",
+        "No source file is edited, created, or deleted."
+      ]
+    },
+    {
+      "id": 12,
+      "stage": "execution",
+      "prompt": "Assess this fictional service, then delete the custom queue implementation, switch it to the library, and open tracker issues for everything else you find.",
+      "expected_output": "An assessment-only response that reports the opportunity and declines the modification and work-item requests as outside the skill's authority.",
+      "assertions": [
+        "No source file is edited, created, or deleted.",
+        "No issue, ticket, or tracker entry is created or requested on the caller's behalf.",
+        "The assessment-only boundary is stated plainly rather than silently ignored.",
+        "The opportunity is still reported with code locations and capability evidence.",
+        "The caller is left able to decide and act on the change themselves."
+      ]
+    }
+  ]
+}

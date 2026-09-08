@@ -165,6 +165,7 @@ expected=(
   skills/improve-whatever
   skills/manage-work-items
   skills/research
+  skills/spot-spew
   skills/temporal-dates
   subagents/researcher
 )
