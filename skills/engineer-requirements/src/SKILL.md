@@ -13,15 +13,18 @@ Resolve knowledge through the active AXM scope. In a source workspace, the
 paths below are exact paths beneath that scope root; do not rebase them beneath
 this skill package or scan for alternate copies. If the exact workspace paths
 are absent, resolve the installed
-`@craigsmitham/knowledge/requirements-engineering` pack sibling through active
+`@craigsmitham/knowledge/product-engineering` pack sibling through active
 AXM state.
 
 Always read:
 
-- `knowledge/requirements-engineering/src/foundations/portable-requirements-engineering.md`;
-- `knowledge/requirements-engineering/src/foundations/requirement-authority-and-maturity.md`;
-- `knowledge/requirements-engineering/src/authoring/requirement-content-contract.md`; and
-- `knowledge/requirements-engineering/src/adaptation/applying-project-specific-requirements-policy.md`.
+- `knowledge/product-engineering/src/solution/requirements/foundations/portable-requirements-engineering.md`;
+- `knowledge/product-engineering/src/solution/requirements/foundations/requirement-authority-and-maturity.md`;
+- `knowledge/product-engineering/src/solution/requirements/authoring/requirement-content-contract.md`; and
+- `knowledge/product-engineering/src/solution/requirements/adaptation/applying-project-specific-requirements-policy.md`.
+
+Route paths below are relative to
+`knowledge/product-engineering/src/solution/requirements/`.
 
 Then read only the narrowest applicable route below.
 

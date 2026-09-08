@@ -3,19 +3,25 @@
 Which solution concept do we commit to, and how do we state that commitment so
 others can dispute it?
 
-Choosing the form a solution will take, and writing that choice down well enough
-that someone who was not in the room can argue with it. This section owns the
-commitment to form, and the requirement as its disputable statement. Framing the
-problem the commitment answers belongs to [What to solve](../problem/);
-constructing and verifying the result belongs to
+Exploring what could be built, choosing the form a solution will take, and
+writing that choice down well enough that someone who was not in the room can
+argue with it. This section owns the search across candidate forms as much as
+the commitment that ends it, and the requirement as that commitment's
+disputable statement. The alternatives set aside are part of what it owns: a
+commitment is the residue of an exploration, and a concept nobody explored
+around is a guess. Framing the problem the commitment answers belongs to
+[What to solve](../problem/); constructing and verifying the result belongs to
 [How to build it](../engineering/).
 
 ## What design means here
 
-Design is choosing the form a solution will take — at a deliberate resolution,
-from alternatives that were genuinely considered — and the record of what was
-chosen. A statement becomes design the moment it constrains form; until then it
-describes a problem.
+Design is choosing the form a solution will take, at a deliberate resolution,
+from alternatives that were genuinely considered. A statement becomes design
+the moment it constrains form; until then it describes a problem.
+
+The record is not the design. A sketch is disposable and a shaped concept is
+deliberately unfinished; what survives is the choice, not the artifact that
+carried it.
 
 Design recurs at several altitudes, and sections own altitudes rather than the
 word. This section owns the solution concept and the interaction a person has
@@ -28,13 +34,17 @@ verification.
 
 ## Requirements and product meaning
 
+- [Requirements](requirements/) — The portable craft of discovering,
+  analyzing, specifying, reviewing, changing, and maintaining requirements:
+  foundations, development, authoring, review, lifecycle, and local
+  adaptation.
 - [Product meaning and requirements](product-meaning-and-requirements.md) —
   Where product meaning ends, requirements begin, and use cases provide a
   bridge without becoming the sole authority.
 
 ## Planned scope
 
-The remaining areas hold no concepts yet.
+The design areas hold no concepts yet.
 
 | Area | Scope |
 | --- | --- |
@@ -42,10 +52,18 @@ The remaining areas hold no concepts yet.
 | Resolution and fidelity | Choosing how finished a representation should be, and what premature fidelity forecloses |
 | Interaction and experience design | What a person encounters, how they operate it, and accessibility |
 | Constraint as design input | Appetite, fixed time with variable scope, and trading scope against a budget |
-| Elicitation | Sources, stakeholders, and observation of behavior that already exists |
-| Analysis and specification | Classification, splitting, merging, and choosing a specification method |
-| Review and traceability | Agreeing a requirement, tracing it, and analyzing the impact of change |
-| Authoritative statements | Which commitments earn a continuously verified statement of intent |
+
+## Where this section would split
+
+The section runs on two epistemologies. The four areas above are
+appetite-bounded exploration: rough, noncommittal, and cheap to discard.
+[Requirements](requirements/) holds statements that must survive being
+disputed, traced, and continuously verified. They belong together because a
+requirement is what a design choice becomes under scrutiny, and the subtree
+keeps the difference visible without making it a boundary between sections.
+If section size ever forces a split, that is the fault line — not design
+against requirements, which would reinstate the handoff the next heading
+denies.
 
 ## Not a handoff
 
@@ -53,3 +71,10 @@ This section does not hand a finished specification to the next one. Technical
 design, construction, and verification routinely reveal that a solution concept
 was wrong or too expensive, and the commitment is expected to change in
 response. The sections divide by question, not by sequence.
+
+Reciprocity is not symmetry. Getting the right solution concept comes before
+getting the concept right: one that answers the wrong problem is not rescued by
+being built well, and the cost of changing it rises with every increase in
+fidelity. That ordering is why this section precedes How to build it in the
+value stream, and why the work here stays cheap and discardable for as long as
+it usefully can.

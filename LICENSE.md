@@ -7,8 +7,8 @@ license-selection policy and package-boundary rules are documented in
 
 - The `docs` knowledge bundle and pack plus `author-docs`, the
   `field-notes` package family, and the `knowledge-management`,
-  `product-engineering`, `requirements-engineering`, `software-engineering`,
-  `work-management`, and `workflow-automation` knowledge bundles are licensed
+  `product-engineering`, `software-engineering`, `work-management`, and
+  `workflow-automation` knowledge bundles are licensed
   under `CC-BY-SA-4.0`.
 - `author-okf` is licensed under `MIT AND Apache-2.0`: Craig's original skill,
   templates, and validator use MIT, while the vendored Open Knowledge Format

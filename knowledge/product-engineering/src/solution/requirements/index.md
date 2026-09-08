@@ -1,12 +1,15 @@
----
-okf_version: "0.2"
----
-# requirements-engineering
+# Requirements
 
-Portable concepts and guides for discovering, analyzing, specifying, reviewing,
-changing, and maintaining requirements. The bundle governs requirement quality
-without prescribing a delivery method, architecture framework, document form,
-or requirements-management tool.
+The requirement is the form a design choice takes once it must survive being
+disputed, traced through change, and bound to verification. This subtree holds
+the portable craft of discovering, analyzing, specifying, reviewing, changing,
+and maintaining requirements, without prescribing a delivery method,
+architecture framework, document form, or requirements-management tool.
+
+Choosing the form itself belongs to [What to build](../); the problem a
+requirement answers belongs to [What to solve](../../problem/). Where product
+meaning stops and a normative statement begins is covered by
+[Product meaning and requirements](../product-meaning-and-requirements.md).
 
 ## Model and development
 

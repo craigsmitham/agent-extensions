@@ -13,7 +13,7 @@ requirements-management tool.
 
 | Extension | Responsibility |
 | --- | --- |
-| `@craigsmitham/knowledge/requirements-engineering` | Portable model and guides for elicitation, analysis, specification, review, traceability, lifecycle, and local adaptation |
+| `@craigsmitham/knowledge/product-engineering` | Portable product-engineering body of knowledge; the requirements model, guides, and local adaptation live under What to build |
 | `@craigsmitham/skills/engineer-requirements` | Safe routing and execution for requirement candidates, authoring, review, impact, lineage, and host mapping |
 
 Members are non-standalone because the skill resolves its knowledge sibling

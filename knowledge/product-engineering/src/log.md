@@ -2,6 +2,33 @@
 
 ## 2026-09-08
 
+- **Migration**: Moved the twenty-eight concepts of the `requirements-engineering`
+  bundle into [What to build](solution/) and retired that bundle. The six
+  subsections moved intact under a [Requirements](solution/requirements/)
+  subtree, so every relative link between them still resolves and no concept
+  was rewritten. The bundle root index became the subtree index, restated as
+  what the subtree owns rather than what a bundle covers.
+- **Decision**: Kept the subsections rather than flattening them into the
+  section. The `product-management` migration flattened `value-and-demand/`
+  because a sub-index competing with the section index split discovery for no
+  gain at that size; twenty-eight concepts invert that judgment, and a flat
+  section would bury the design concepts still to be written among them.
+- **Structure**: The subtree also carries the seam. What to build now holds
+  both epistemologies its planned scope named — appetite-bounded exploration at
+  the section's top level, statements that must survive verification under
+  Requirements — and the folder boundary keeps the difference visible without
+  promoting it to a boundary between sections.
+- **Decision**: Retired `requirements-engineering` rather than keeping it beside
+  this bundle, on the `product-management` precedent: two bundles owning
+  elicitation, specification, review, and traceability is the contradiction
+  this corpus exists to avoid. The cost was known and accepted — that bundle
+  was pack-bound rather than standalone, so
+  `@craigsmitham/packs/requirements-engineering` and the
+  `engineer-requirements` skill were repointed at this bundle as part of the
+  move.
+- **Correction**: Superseded the earlier Deferred entry, which recorded
+  `requirements-engineering` as still supplying this section. Both bundles it
+  named have now migrated; only the design areas remain unsourced.
 - **Migration**: Moved the nine concepts of the standalone `product-management`
   bundle into this one and retired that bundle. Seven went to
   [What to solve](problem/), [Product strategy](strategy/product-strategy.md)
@@ -65,17 +92,45 @@
 - **Decision**: An eight-section scheme giving design its own question was
   considered and set aside. It manufactures a design-then-requirements handoff
   that the sources deny, and forces an arbitrary ruling on concepts that are
-  genuinely both, such as appetite and breadboarding. The seam is documented in
-  What to build if section size later forces the split.
+  genuinely both, such as appetite and breadboarding.
+- **Seam**: Redrawn. The earlier note pointed at a design-against-requirements
+  split, which would have reinstated the handoff the decision above rejects.
+  The real fault line in [What to build](solution/) runs between
+  appetite-bounded exploration — rough, noncommittal, cheap to discard — and
+  statements that must survive being disputed, traced, and continuously
+  verified. The two halves of the section's planned scope already fall on
+  either side of it, four areas each. Nothing forces a split at this size, and
+  the section now documents the seam rather than the log merely promising it.
+- **Amendment**: What to build owns the exploration as well as the commitment.
+  Its opening named only the commitment to form, which reads as the convergent
+  end of a funnel whose value lies in the alternatives generated and set aside.
+  The section now claims the search across candidate forms and the alternatives
+  discarded, on Buxton's account of what a sketch is for.
+- **Amendment**: Added the asymmetry beside the reciprocity claim. "Not a
+  handoff" established that technical design sends a commitment back, which is
+  correct but reads as though the two sections were peers. Getting the right
+  concept precedes getting the concept right, and the cost of change rises with
+  fidelity; that is why What to build precedes How to build it in the value
+  stream rather than merely sitting beside it.
+- **Correction**: Dropped "and the record of what was chosen" from the
+  definition of design in both [the overview](overview.md) and
+  [What to build](solution/). The cited basis does not support it — sketches
+  are disposable and a shaped concept is deliberately unfinished — and the
+  clause let the artifact stand in for the choice. What the clause was doing is
+  carried instead by the requirement paragraph that already follows the
+  definition in both files, and What to build adds the positive claim: what
+  survives is the choice, not the artifact that carried it.
 - **Naming**: "What to build" moved from the problem section to the solution
   section because that is what the phrase means in practice, and the problem
   section became "What to solve". All seven titles now share one grammatical
   form. Judgment lives in the question, not the title, following the precedent
   already set by "Where to play".
 - **Basis**: Ryan Singer on shaping as primarily design work, on requirements
-  as chosen rather than real, and on appetite as a design input; Bill Buxton on
-  getting the right design before getting the design right, on sketches asking
-  rather than telling, and on design preceding engineering; Nielsen Norman
+  as chosen rather than real, on appetite as a design input, and on hill charts
+  placing uphill figuring-out inside every scope rather than in a phase of its
+  own; Bill Buxton on getting the right design before getting the design right,
+  on sketches asking rather than telling, on sketches as plentiful and
+  disposable, and on design preceding engineering; Nielsen Norman
   Group on the problem-space boundary of discovery, and on process frameworks
   as scaffolding for managing risk rather than as stages.
 - **Boundary**: Usability stays in What to solve as a risk that evidence
@@ -85,7 +140,8 @@
 - **Deferred**: No content migrated. `product-management` and
   `requirements-engineering` still supply their sections; the solution concept,
   fidelity, and interaction design areas of What to build have no source bundle
-  and will be written from scratch.
+  and will be written from scratch. (Superseded: both bundles have since
+  migrated and been retired.)
 - **Initialization**: Created the bundle skeleton as seven sections, one per
   practitioner question, with a root discovery map and a section index for
   each. No concepts yet; existing bundles migrate in later changes.
@@ -144,3 +200,24 @@
   realization, and evidence. Tracker form, stage eligibility, controlled
   cross-artifact relationships, and architecture-specific classification stayed
   outside the bundle.
+
+### Migrated history from the `requirements-engineering` bundle
+
+- **2026-09-08 — Update**: Gave every action-oriented concept, the thirteen
+  Guides and two Checklists, a selection condition in its `description`, so a
+  search result or index entry stated both the supported outcome and the
+  observable situation that made the concept relevant. Concept bodies were not
+  changed.
+- **2026-09-08 — Update**: Rewrote each section index entry to match the
+  revised frontmatter descriptions exactly, and clarified the section
+  introductions in Authoring, Review, Lifecycle, and Adaptation to describe
+  their contents rather than call every member a guide.
+- **2026-09-08 — Update**: Regrouped the bundle root index so the first group
+  name covered both the Foundations and Development sections it listed, and
+  made each section entry say how that section differed from its siblings.
+- **2026-09-08 — Correction**: Fixed the `sources` title in Mapping to
+  requirements hosts to match the cited concept's actual title, One authority,
+  many witnesses.
+- **2026-08-29 — Creation**: Established a method-neutral requirements
+  engineering model covering elicitation, analysis, specification, review,
+  traceability, change, and local adaptation.

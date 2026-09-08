@@ -1,7 +1,7 @@
 ---
 type: Guide
 title: Applying project-specific requirements policy
-description: Layers local terminology, authority, content obligations, rigor, and lifecycle rules over the portable requirements model. Use when adopting this bundle in a project that has its own instructions, or when local policy and portable guidance appear to conflict.
+description: Layers local terminology, authority, content obligations, rigor, and lifecycle rules over the portable requirements model. Use when adopting the portable requirements model in a project that has its own instructions, or when local policy and portable guidance appear to conflict.
 tags: [adaptation, policy, local-instructions, authority, rigor]
 sources:
   - id: portable-model
@@ -30,7 +30,8 @@ Declare at least:
 Apply the stricter applicable obligation when portable guidance and local policy
 both govern quality. If they conflict on authority or meaning, surface the
 conflict rather than silently choosing one. Project instructions may add
-content requirements without forcing this bundle to prescribe a universal form.
+content requirements without forcing the portable model to prescribe a universal
+form.
 
 [^portable-model]: This adaptation rule applies the cited portable model while
     leaving project-specific authority with the consuming project.

@@ -9,8 +9,8 @@ sources:
     resource: ../problem/value-and-demand-model.md
     title: What to solve — Value and demand model
   - id: requirements-neighbors
-    resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/requirements-engineering/src/foundations/requirements-and-neighboring-artifacts.md
-    title: Requirements Engineering — Requirements and neighboring artifacts
+    resource: requirements/foundations/requirements-and-neighboring-artifacts.md
+    title: What to build — Requirements and neighboring artifacts
 generated:
   by: claude/opus-5
   at: 2026-09-08T00:00:00Z

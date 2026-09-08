@@ -19,7 +19,7 @@ them, not by the file a claim happens to live in.
 | --- | --- | --- |
 | Where should we participate, and how do we win there? | Where to play | The organization-level choice of arena |
 | Which problems are worth solving, and what outcome would tell us we succeeded? | What to solve | The problem and the outcome |
-| Which solution concept do we commit to, and how do we state that commitment so others can dispute it? | What to build | The commitment to form, stated so it can be disputed |
+| Which solution concept do we commit to, and how do we state that commitment so others can dispute it? | What to build | The search across candidate forms and the commitment that ends it, stated so it can be disputed |
 | How do we construct and verify what we committed to? | How to build it | Technical design, construction, and evidence of behavior |
 | How does a change reach production safely and predictably? | How to ship it | The movement of change toward release |
 | How does the product stay healthy, secure, and affordable in production? | How to run it | Production reality |
@@ -68,11 +68,10 @@ several places, which is how a corpus starts contradicting itself.
 
 ## Where design fits
 
-Design is choosing the form a solution will take — at a deliberate resolution,
-from alternatives that were genuinely considered — and the record of what was
-chosen. A statement becomes design the moment it constrains form; until then it
-describes a problem. That test is what separates What to solve from What to
-build.
+Design is choosing the form a solution will take, at a deliberate resolution,
+from alternatives that were genuinely considered. A statement becomes design
+the moment it constrains form; until then it describes a problem. That test is
+what separates What to solve from What to build.
 
 Design is not a section, because it is an activity that recurs at several
 altitudes. Sections own altitudes; no section owns the word.
