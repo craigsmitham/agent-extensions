@@ -80,7 +80,10 @@ application. A browser-driven journey becomes cross-boundary or end-to-end only
 when its declared claim spans those boundaries. Use [Designing cross-boundary
 and end-to-end tests](designing-cross-boundary-and-end-to-end-tests.md) for the
 system world, ownership, service dependencies, data, and lifecycle of such a
-journey.
+journey. Use [Designing executable
+specifications](designing-executable-specifications.md) when the test must also
+be the authoritative statement of intent that non-authors read and dispute;
+browser mechanics never belong in that text.
 
 ## Desired outcomes
 

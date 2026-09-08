@@ -1,5 +1,26 @@
 # Bundle update log
 
+## 2026-09-08
+
+- **Executable specifications**: Added [Designing executable
+  specifications](/designing-executable-specifications.md), which separates
+  authority and audience from test level: admission gates for which rules earn
+  a specification, BRIEF-derived rules for the specification text, an explicit
+  exclusion table, a worked before-and-after example, four-layer separation of
+  text from automation, notation neutrality with property-based, contract, and
+  formal neighbors, lifecycle guidance, and specification as the acceptance
+  surface for generated change. It is a draft generated from public sources and
+  has not yet completed source reconciliation.
+- **Boundaries**: Distinguished an executable specification from a contract
+  suite. Comprehensive coverage of a consumer-facing interface and authority
+  over a decided rule are separate properties; the narrow-test guide keeps
+  "contract suite", and the new guide keeps "specification". Also distinguished
+  specifications from characterization and approval tests, which assert actual
+  rather than intended behavior.
+- **Routing**: The three test-level guides now route by authority as well as by
+  level, and the bundle index states that levels and authority are separate
+  axes.
+
 ## 2026-09-02
 
 - **Narrow tests**: Added [Choosing the narrowest effective

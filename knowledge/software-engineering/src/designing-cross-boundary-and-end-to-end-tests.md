@@ -70,7 +70,9 @@ boundary: components wired together, a protocol, process lifecycle, persistent
 storage, a queue, an installed artifact, deployment configuration, or more than
 one service. Use [Choosing browser-dependent interface
 tests](choosing-browser-dependent-interface-tests.md) when the unresolved risk
-is specifically browser rendering or interaction.
+is specifically browser rendering or interaction, and [Designing executable
+specifications](designing-executable-specifications.md) when the test must also
+be the authoritative statement of intent that non-authors read and dispute.
 
 The goal is not to maximize realism. It is to create the **smallest test world
 that preserves every distinction material to the claim**, produces a useful

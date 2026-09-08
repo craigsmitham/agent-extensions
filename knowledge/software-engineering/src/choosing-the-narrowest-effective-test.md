@@ -51,7 +51,12 @@ with [Designing cross-boundary and end-to-end
 tests](designing-cross-boundary-and-end-to-end-tests.md). When the unresolved
 risk is browser rendering or interaction, continue with [Choosing
 browser-dependent interface
-tests](choosing-browser-dependent-interface-tests.md).
+tests](choosing-browser-dependent-interface-tests.md). When a test must also be
+the authoritative statement of intent that non-authors read and dispute,
+continue with [Designing executable
+specifications](designing-executable-specifications.md); a contract suite is
+comprehensive coverage of an interface, which is a separate property from
+authority over a rule.
 
 The goal is evidence that a consumer-visible contract holds, obtained at the
 cheapest level that can still contradict the claim. Narrow tests are fast,

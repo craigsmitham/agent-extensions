@@ -31,7 +31,11 @@ processes, services, storage, artifacts, or deployment boundaries. Use the
 complementary browser-dependent interface guide when real rendering,
 interaction, accessibility, or platform behavior determines the observable
 outcome. Together the three keep test scope independent from browser use and
-admit expensive evidence only when a cheaper observer would erase the risk.
+admit expensive evidence only when a cheaper observer would erase the risk. Use
+the executable-specifications guide on the separate axis of authority and
+audience: which decided rules earn a human-readable statement of intent that
+non-authors can dispute, what that text may contain, and how to bind automation
+below it so implementation change never edits a specification.
 This bundle is not a software-change method, requirements or architecture
 lifecycle, work-item guidance, documentation craft, or a language or framework
 reference.
