@@ -3,15 +3,17 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "spot-spew",
-  "version": "0.0.1",
-  "description": "Finds avoidable maintenance burden from custom implementations of non-core needs and non-idiomatic use of adopted software, then evaluates capability substitution and idiomatic simplification",
+  "version": "0.1.0",
+  "description": "Finds avoidable maintenance burden in code, configuration, and delivery machinery, then evaluates elimination, capability substitution, idiomatic simplification, and consolidation against verified alternatives and named burden",
   "keywords": [
     "code review",
     "maintenance burden",
-    "simplification",
+    "dead code",
+    "duplication",
     "idiomatic",
     "dependencies",
     "custom code",
+    "configuration",
     "technical debt"
   ],
   "repository": {
