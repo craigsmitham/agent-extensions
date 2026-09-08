@@ -71,10 +71,12 @@ after source reconciliation; version 2.5.0 adds the narrowest-effective-test
 guide as a draft pending its own source reconciliation; version 2.6.0 adds
 executable specifications as an axis of authority separate from test level;
 version 2.7.0 splits every concept over 300 lines into reader-recognizable
-siblings and brings the bundle into OKF conformance; and version 2.8.0 revises
+siblings and brings the bundle into OKF conformance; version 2.8.0 revises
 the executable-specifications guide around what is incidental to the
 obligation, separates its lifecycle guidance into "Keeping specifications
-authoritative", and marks both stable.
+authoritative", and marks both stable; and version 2.8.1 corrects that guide's
+claims about what supporting coverage establishes and about which refund-window
+details the rule must settle.
 
 Install the pack with:
 

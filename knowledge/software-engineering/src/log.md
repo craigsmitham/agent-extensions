@@ -2,6 +2,14 @@
 
 ## 2026-09-08
 
+- **Coverage and time wording corrected**: In [Designing executable
+  specifications](/designing-executable-specifications.md), supporting coverage
+  now checks additional cases and properties rather than establishing
+  correctness, which examples and coverage alike cannot do alone; and the
+  refund example no longer treats time of day and time zone as incidental,
+  since they can determine entitlement until the rule settles whether the
+  window uses elapsed time or calendar days, its governing time zone, and
+  endpoint inclusion.
 - **Executable specifications revised**: Reworked [Designing executable
   specifications](/designing-executable-specifications.md) after external
   review. Exclusions are now framed around what is incidental to the

@@ -88,15 +88,16 @@ A specification has three parts with different jobs:
 | --- | --- | --- |
 | **Rule** | States the obligation in a sentence a stakeholder can accept or reject | Authoritative; code and examples conform to it |
 | **Examples** | Show the rule with concrete data and settle its material ambiguities | Authoritative where they adjudicate; otherwise illustrative |
-| **Supporting coverage** | Proves the rule across its input space: boundary sweeps, generated cases, matrices | Verifies the rule; never defines it |
+| **Supporting coverage** | Exercises the rule across its input space: boundary sweeps, generated cases, matrices | Checks the rule; never defines it |
 
 Acceptance criteria are abstract rules; examples are concrete cases drawn from
 them. Do not write an example for every criterion — when the examples follow
 from it in seconds of conversation, leave it as a
-criterion.[^keogh-criteria-scenarios] Examples are deliberately incomplete and
-cannot alone establish correctness; coverage does that.[^fowler-spec-by-example]
-Where the audience reads properties or decision tables directly — a pricing
-table finance owns — that form is the authoritative text.
+criterion.[^keogh-criteria-scenarios] Examples are deliberately incomplete;
+supporting coverage checks additional cases and properties without redefining
+the rule.[^fowler-spec-by-example] Where the audience reads properties or
+decision tables directly — a pricing table finance owns — that form is the
+authoritative text.
 
 ## Admit a specification deliberately
 
@@ -210,10 +211,12 @@ Rule: An annual membership is refunded in full if cancelled within 14 days of pu
 
 The examples sit on the boundary rather than either side of it, because
 whether "within 14 days" includes the fourteenth day is part of the
-entitlement, and a reader must be able to settle it from the text. Time of
-day, time zones, and every other cancellation date are supporting coverage
-below the readable layer. Had the rule been an API promise to integrators, the
-response status would have been part of it and stayed.
+entitlement, and a reader must be able to settle it from the text. Additional
+dates and time variations belong in supporting coverage once the rule has
+settled whether the window uses elapsed time or calendar days, its governing
+time zone where applicable, and endpoint inclusion. Had the rule been an API
+promise to integrators, the response status would have been part of it and
+stayed.
 
 ## Separate the specification from its automation
 
