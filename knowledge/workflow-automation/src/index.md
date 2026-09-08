@@ -24,13 +24,10 @@ may be added separately as guides when they are warranted.
   deterministic automation, LLM workflows, agents, and agents contained within
   durable workflows by who controls execution.
 
-## Patterns
+## Patterns and practices
 
 * [Patterns](patterns/) - Recurring arrangements of workflow elements and the
   forces and consequences that make each arrangement useful.
-
-## Practices
-
 * [Practices](practices/) - Established ways of working that workflow
   automation enables, including continuous integration, delivery, and
   deployment.

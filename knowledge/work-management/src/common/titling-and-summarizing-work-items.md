@@ -3,7 +3,7 @@ type: Guide
 title: Titling and summarizing work items
 description: Use when a work item must be recognizable in lists and search without changing its underlying body meaning.
 tags: [work-item, title, summary, brief, search, list-view]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Titling and summarizing work items
@@ -24,7 +24,7 @@ Useful role patterns include:
 
 - Defect Report: `<subject> <observed result> when <condition>`
 - Change: `<verb> <bounded outcome>`
-- Incident Record: `<affected service or capability> <current impact>`
+- Operational Incident Record: `<affected service or capability> <current impact>`
 
 These are prompts, not mandatory grammar.
 

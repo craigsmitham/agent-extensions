@@ -1,9 +1,9 @@
 ---
 type: Guide
 title: Authoring requirements
-description: Provides general guidance for writing singular, bounded, necessary, feasible, and assessable requirements.
+description: Provides general guidance for writing singular, bounded, necessary, feasible, and assessable requirements. Use when drafting or rewriting a requirement that has no special quantitative, constraint, or stateful character.
 tags: [authoring, clarity, singularity, feasibility, assessability]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Authoring requirements

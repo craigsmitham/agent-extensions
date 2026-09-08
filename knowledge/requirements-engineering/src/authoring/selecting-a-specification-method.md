@@ -1,9 +1,9 @@
 ---
 type: Guide
 title: Selecting a requirement specification method
-description: Selects a specification form proportional to ambiguity, consequence, interaction complexity, and assurance need.
+description: Selects a specification form proportional to ambiguity, consequence, interaction complexity, and assurance need. Use when prose is leaving an obligation ambiguous, or when choosing among structured syntax, examples, models, and formal notation.
 tags: [specification-method, prose, ears, examples, model, formal-method]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Selecting a requirement specification method

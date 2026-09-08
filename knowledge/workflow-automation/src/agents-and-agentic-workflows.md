@@ -52,3 +52,9 @@ That agent may still be one bounded participant in a larger durable workflow.
 
 [^anthropic-agents]: Anthropic — Building effective agents
 [^openai-guide]: OpenAI — A practical guide to building agents
+
+## Related
+
+* [Workflow automation](workflow-automation-explainer.md)
+* [Workflow model](workflow-model-explainer.md)
+* [Quality gate](patterns/quality-gate-explainer.md)

@@ -16,16 +16,17 @@ sources:
 # Strategy overview
 
 Strategy is an integrated set of choices about how an organization will create
-and sustain advantage in a chosen context. It connects aspiration, scope,
-distinctive action, enabling capabilities, and the systems that keep those
-choices operating together.
+and sustain advantage in a chosen context.[^martin-choice-process] It connects
+aspiration, scope, distinctive action, enabling capabilities, and the systems
+that keep those choices operating together.
 
 Strategy is responsible for:
 
 - choosing where the organization will and will not participate;
 - choosing how it expects to succeed there;
 - identifying the capabilities and systems those choices require;
-- explaining how value will be created and captured; and
+- explaining how value will be created and captured across customers, the
+  organization, employees, and suppliers;[^hbs-business-strategy] and
 - exposing the assumptions on which the choices depend.
 
 ## Non-responsibilities
@@ -40,3 +41,11 @@ Execution and strategy inform one another. Execution tests assumptions and
 reveals constraints, while strategy determines which execution is coherent.
 Treating either as a substitute for the other produces activity without
 direction or direction without effect.
+
+Related: [Strategy as choice](/strategy-as-choice.md) states the test a
+commitment must pass, and [The choice cascade](/choice-cascade.md) names the
+five linked choices this overview summarizes.
+
+[^martin-choice-process]: Martin, The Strategic Choice Structuring Process.
+[^hbs-business-strategy]: Harvard Business School Online, Business Strategy
+    syllabus — modules on creating value for customers, talent, and suppliers.

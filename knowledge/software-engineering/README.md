@@ -13,12 +13,19 @@ typed cross-cutting records preserve context, specification, structure,
 lifecycle integrity, risk, assurance, feedback, and evidence without turning
 methods or supporting artifacts into extra pillars. Test-suite quality has a
 separate supporting assessment, and optional review aids hold repository,
-scenario, verification, runtime, and model-assisted inspection guidance.
+scenario, verification, runtime, and model-assisted inspection guidance. The
+pillar taxonomy, the layers it deliberately excludes, and its research basis
+are separate concepts, as are the cross-cutting admission gate, the record
+definitions, the typed pillar relationships, and the model's maintenance and
+validation plan.
 
 Use the repository task-interface guide to make repository work discoverable,
-safe to invoke, and trustworthy to interpret through canonical resolved task
-contracts, explicit execution boundaries, self-sufficient tasks, deliberate
-dependency and cache semantics, and bounded entrypoints.
+safe to invoke, and trustworthy to interpret. It frames the competing-semantics
+problem and the portable vocabulary; companion concepts hold the resolved
+contract principles (ownership, self-sufficiency, typed dependencies, cache
+semantics), the invocation and conformance principles (entrypoint roles,
+workflow membership, canonical actor semantics, resolved-behavior checks), and
+the adoption sequence with its local binding and worked example.
 
 Use the narrowest-effective-test guide when a change needs executable evidence
 and no material risk yet requires a real cross-boundary or browser world: admit
@@ -31,7 +38,11 @@ processes, services, storage, artifacts, or deployment boundaries. Use the
 complementary browser-dependent interface guide when real rendering,
 interaction, accessibility, or platform behavior determines the observable
 outcome. Together the three keep test scope independent from browser use and
-admit expensive evidence only when a cheaper observer would erase the risk. Use
+admit expensive evidence only when a cheaper observer would erase the risk.
+Once a test is admitted, separate concepts cover operating a cross-boundary
+suite — harness ownership, state and readiness, decision points, attributable
+failure — and writing browser evidence: locators, synchronization, isolation,
+the environment matrix, and bounded visual and accessibility conclusions. Use
 the executable-specifications guide on the separate axis of authority and
 audience: which decided rules earn a human-readable statement of intent that
 non-authors can dispute, what that text may contain, and how to bind automation
@@ -75,6 +86,7 @@ axm knowledge concepts search '"codebase review"'
 axm knowledge concepts search '"narrowest effective test"'
 axm knowledge concepts search '"cross-boundary"'
 axm knowledge concepts search '"browser-dependent"'
+axm knowledge concepts search '"cross-cutting concern"'
 ```
 
 This knowledge package is licensed under the Creative Commons

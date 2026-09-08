@@ -1,15 +1,17 @@
 ---
 type: Guide
 title: Recording Defect Reports
-description: Use when an observation or concern may indicate a defect and needs an actionable, evidence-preserving work item.
+description: Use when an observation or concern may indicate a Defect and needs an actionable, evidence-preserving work item.
 tags: [defect-report, bug-report, recording, discrepancy, reproduction, impact, workaround]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Recording Defect Reports
 
-This guide adapts the earlier Defect Report authoring workflow to the portable
-taxonomy.
+Record what was observed and under which conditions. Do not assert a cause, a
+correction, or a priority that the available evidence does not support; see
+[Defects and Defect Reports](defects-and-defect-reports.md) for the
+distinctions this workflow preserves.
 
 ## 1. Choose the record and channel
 

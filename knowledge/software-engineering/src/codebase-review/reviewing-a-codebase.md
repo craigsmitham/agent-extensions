@@ -75,8 +75,10 @@ supporting subject for the relevant product verdict.
 
 ## Apply cross-cutting concerns without creating extra pillars
 
-Use [Cross-cutting concerns for software quality](cross-cutting-concerns.md) to
-interpret relationships that matter to a selected pillar:
+Use [Cross-cutting concern records](cross-cutting-concern-records.md) for what
+each record means, and [Cross-cutting relationships to the quality
+pillars](cross-cutting-pillar-relationships.md) for the typed edge a finding
+should carry. Interpret the records that matter to a selected pillar:
 
 | Record | Use in a review |
 | --- | --- |
@@ -210,7 +212,9 @@ context.
 
 Route changes to criteria, cross-cutting records, supporting checklists, or
 aids through [Maintaining codebase-review
-criteria](maintaining-codebase-review-criteria.md).
+criteria](maintaining-codebase-review-criteria.md), and any claim stronger than
+candidate design coherence through [Validating codebase-review
+criteria](validating-codebase-review-criteria.md).
 
 [^iso-evaluation]: ISO, [ISO/IEC 25040:2024 quality evaluation framework](https://www.iso.org/standard/83467.html).
 [^assurance-case]: ISO, [ISO/IEC/IEEE 15026-2:2022 assurance case](https://www.iso.org/standard/80625.html).

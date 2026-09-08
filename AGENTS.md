@@ -49,15 +49,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [work-management](knowledge/work-management/src/index.md) | Portable software work-item taxonomy, content contracts, templates, lifecycle, evidence, and tracker-neutral guidance |
 | [workflow-automation](knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end v=1 region=knowledge -->
-<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=13f9a5c8cebfaf12084b2a3c55940648fc5518aca247451fdda6c4639e6b3c3e -->
-<!-- axm:point v=1 ext=@craigsmitham/rules/use-effect-v4@0.1.1 kind=rule -->
-
-## Use Effect v4
-
-When working with Effect, use Effect v4 APIs and conventions. Do not use Effect
-v3 APIs or carry v3 patterns forward; verify ambiguous guidance against current
-v4 sources.
-
+<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=ec87289ea6ad8b9a6d038b2a6ef32fb60cb98f25a0e647e8ad69b660e76a57cb -->
 <!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.3 kind=rule -->
 
 ## Field notes

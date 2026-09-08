@@ -15,14 +15,14 @@ sources:
     resource: wardley-mapping.md
     title: Strategy — Wardley Mapping
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # The choice cascade
 
 The Playing to Win choice cascade describes strategy through five linked
-choices:
+choices:[^martin-cascade-origins]
 
 1. **Winning aspiration:** the result and meaning of success.
 2. **Where to play:** the customers, needs, channels, geographies, stages, or
@@ -36,7 +36,8 @@ choices:
 
 The cascade is a model of strategy's content, not a linear workshop agenda.
 Choices are developed iteratively because a proposed way to win may require
-unavailable capabilities, or a capability insight may reveal a better arena.
+unavailable capabilities, or a capability insight may reveal a better
+arena.[^martin-choice-process]
 
 A landscape map can inform these choices by exposing users, dependencies,
 evolution, movement, and inertia. It does not supply the aspiration, where to
@@ -51,5 +52,11 @@ The framework is broadly applicable, but its language must fit the context.
 “Winning” for a public or social organization may mean achieving its purpose
 under constraints rather than defeating a market competitor.
 
+Related: [Advantage and coherence](/advantage-and-coherence.md) examines what
+makes the assembled choices reinforce one another.
+
+[^martin-cascade-origins]: Martin, Balanced Scorecard and Playing to Win.
+[^martin-choice-process]: Martin, The Strategic Choice Structuring Process —
+    an iterative process for structuring and testing strategic possibilities.
 [^strategy-wardley]: The Wardley Mapping explanation distinguishes landscape
     assumptions from strategic choices.

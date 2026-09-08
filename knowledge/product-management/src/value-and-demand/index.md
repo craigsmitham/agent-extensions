@@ -5,6 +5,10 @@ progress or problem matters, and why the offering should help. These concepts
 are portable: they do not require a particular tracker, document form, delivery
 method, or stage model.
 
+This section defines the vocabulary. Strategy, outcomes, risk, teams, and
+delivery are covered elsewhere in the [product management bundle](../index.md)
+and use these concepts rather than redefining them.
+
 ## Understand the model
 
 - [Value and demand model](value-and-demand-model.md) — How Offering, Audience,

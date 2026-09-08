@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Lifecycle and subtraction
 description: How durable knowledge is admitted, maintained, deprecated, and removed so the corpus stays trustworthy and small.
 tags: [knowledge-lifecycle, maintenance, deprecation, subtraction, currentness]
 status: draft
@@ -21,7 +22,7 @@ A useful lifecycle has four decisions:
   owner.
 - **Maintain:** use and new evidence improve the canonical source rather than
   creating parallel copies. This reflects the KCS emphasis on reuse as an
-  opportunity to improve knowledge.[^kcs]
+  opportunity to improve knowledge.[^kcs-principles]
 - **Deprecate:** readers still need the old identity, but a successor now owns
   the meaning.
 - **Remove:** the claim is obsolete, mechanically recoverable, too local, or no
@@ -40,5 +41,5 @@ remove the document rather than preserve its shape.
 The objective is not a complete record of everything once known. It is a small,
 current network of claims whose authority remains legible.
 
-[^kcs]: KCS treats knowledge as something reused and improved in the flow of
+[^kcs-principles]: KCS treats knowledge as something reused and improved in the flow of
     work rather than captured once and stored unchanged.

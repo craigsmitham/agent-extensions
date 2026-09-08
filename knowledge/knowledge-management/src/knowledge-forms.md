@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Knowledge forms
 description: How prose, executable contracts, instructions, evidence, and live systems own different kinds of knowledge.
 tags: [knowledge-forms, executable-authority, documentation, evidence, current-state]
 status: draft

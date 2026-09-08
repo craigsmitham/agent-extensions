@@ -1,9 +1,9 @@
 ---
 type: Checklist
 title: Reviewing individual requirements
-description: Provides a risk-sensitive review of one requirement's authority, content, quality, relationships, and assessment basis.
+description: Provides a risk-sensitive review of one requirement's authority, content, quality, relationships, and assessment basis. Use when a single requirement is reviewed before it is accepted, changed, or relied on.
 tags: [review, requirement-quality, verification, validation, checklist]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Reviewing individual requirements

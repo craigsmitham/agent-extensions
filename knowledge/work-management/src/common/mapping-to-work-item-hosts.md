@@ -3,13 +3,14 @@ type: Guide
 title: Mapping work items to native hosts
 description: Use when representing work-item meaning in tracker fields, labels, relationships, and body content without duplicate authority.
 tags: [work-item, tracker, fields, labels, metadata, github, jira, linear, readback, batch]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Mapping work items to native hosts
 
-This guide adapts the earlier tracker metadata and label guidance to the
-portable work-item contract.
+A tracker representation should carry portable work-item meaning without
+becoming a second, competing authority for it. Each fact belongs to exactly one
+affordance: a native field, or the body.
 
 ## Establish meaning before mapping
 

@@ -3,15 +3,15 @@ type: Reference
 title: Software work-item taxonomy
 description: Defines the portable work-item roles, classifications, neighboring activities, and distinctions that every guide and template in this bundle applies.
 tags: [work-item, taxonomy, defect-report, bug-report, change, bugfix, incident-record, investigation, planning]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Software work-item taxonomy
 
-This reference adapts the earlier work-item distinctions while owning the
-portable meanings used throughout this bundle. A host
-may use different issue types, fields, labels, and statuses, but those are
-representations of these meanings rather than alternate definitions.
+This reference owns the portable meanings used by every guide and template in
+this bundle. A host may use different issue types, fields, labels, and
+statuses, but those are representations of these meanings rather than alternate
+definitions.
 
 ## Work item
 

@@ -1,5 +1,22 @@
 # Workflow Automation Update Log
 
+## 2026-09-08
+
+* **Practice boundaries**: Finished the 2026-08-21 split by removing the
+  deployment/release/exposure vocabulary and the "not universally preferable"
+  argument duplicated between [Continuous
+  deployment](practices/continuous-deployment-explainer.md) and [Continuous
+  integration, delivery, and
+  deployment](practices/continuous-integration-delivery-and-deployment.md). The
+  reference now solely owns the comparative vocabulary; the explainer solely
+  owns adoption rationale, and each links to the other.
+* **Discovery**: Added `Related` sections to [Agents and agentic
+  workflows](agents-and-agentic-workflows.md) and the practice-comparison
+  reference, which were the only concepts offering a search reader no route
+  onward.
+* **Index**: Merged the two single-entry groups in the root index into one
+  `Patterns and practices` group.
+
 ## 2026-08-21
 
 * **Practice boundaries**: Added [Continuous integration, delivery, and

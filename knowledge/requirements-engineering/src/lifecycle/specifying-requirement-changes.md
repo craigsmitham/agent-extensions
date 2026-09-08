@@ -1,9 +1,9 @@
 ---
 type: Guide
 title: Specifying requirement changes
-description: Defines exact, reviewable changes to requirement meaning, authority, identity, relationships, and evidence.
+description: Defines exact, reviewable changes to requirement meaning, authority, identity, relationships, and evidence. Use when an assessed change must be written up for decision and edited prose alone would not show what the change does.
 tags: [requirement-change, before-after, decision, transition, evidence]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Specifying requirement changes

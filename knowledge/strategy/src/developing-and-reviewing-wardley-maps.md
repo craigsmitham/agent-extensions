@@ -1,7 +1,7 @@
 ---
 type: Guide
 title: Developing and reviewing Wardley maps
-description: Use this guide when a strategic question depends on a changing landscape, dependency chain, component evolution, or inertia that a map can make discussable.
+description: Produce and review a Wardley map whose question, evidence, movement, and inertia survive challenge, when a strategic decision turns on a user-anchored dependency chain and how its components may evolve rather than on financial, organizational, or process structure.
 tags: [wardley-mapping, strategy, situational-awareness, evidence, review]
 status: draft
 sources:
@@ -12,8 +12,8 @@ sources:
     resource: choice-cascade.md
     title: Strategy — The choice cascade
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # Developing and reviewing Wardley maps

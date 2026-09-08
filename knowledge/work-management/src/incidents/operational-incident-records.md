@@ -3,16 +3,19 @@ type: Explanation
 title: Operational Incident Records
 description: Explains how one living record coordinates impact, response, restoration, recovery, communication, closure, and independently owned follow-up.
 tags: [incident, operational-incident, service-impact, response, restoration, recovery, closure, follow-up]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Operational Incident Records
 
-An **Operational Incident Record** is the durable living work item for one
-current or imminent operational-impact case that meets the consuming
-organization's coordinated-response threshold. It keeps impact, current
-control, objectives, responsibilities, decisions, actions, communications,
-chronology, handoffs, exit conditions, and follow-up recoverable.
+An **Operational Incident Record** is one of the three portable work-item
+roles defined in the
+[Software work-item taxonomy](../software-work-item-taxonomy.md): the durable
+living work item for one current or imminent operational-impact case that meets
+the consuming organization's coordinated-response threshold. It keeps impact,
+current control, objectives, responsibilities, decisions, actions,
+communications, chronology, handoffs, exit conditions, and follow-up
+recoverable.
 
 ## One incident, several states
 

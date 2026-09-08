@@ -1,8 +1,8 @@
 ---
 type: Explainer
 title: Cross-cutting concerns for software quality
-description: Research-grounded model of eight typed cross-cutting concern records and their conditional relationships to the ten software-product quality pillars.
-tags: [codebase-review, software-quality, cross-cutting-concerns, taxonomy, assurance, evidence, research, maintenance]
+description: Defines what makes a concern cross-cutting rather than an eleventh quality pillar, names the eight canonical records and their three presentation roles, and supplies the subject, role, and admission tests every candidate record must pass.
+tags: [codebase-review, software-quality, cross-cutting-concerns, taxonomy, classification, admission-gate, research]
 status: draft
 sources:
   - id: iso-25010
@@ -29,52 +29,13 @@ sources:
   - id: iso-15026-2
     resource: https://www.iso.org/standard/80625.html
     title: ISO/IEC/IEEE 15026-2:2022 Systems and software assurance — Assurance case
-  - id: sacm
-    resource: https://www.omg.org/spec/SACM/2.3/About-SACM
-    title: OMG Structured Assurance Case Metamodel 2.3
   - id: kiczales
     resource: https://www.cs.ubc.ca/~gregor/papers/kiczales-icse05-aopmr.pdf
     title: Aspect-Oriented Programming and Modular Reasoning
-  - id: parnas
-    resource: https://www.cs.lafayette.edu/~gexia/cs301/resources/parnas.html
-    title: On the Criteria To Be Used in Decomposing Systems into Modules
-  - id: atam
-    resource: https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/
-    title: Architecture Tradeoff Analysis Method collection
   - id: dependability
     resource: https://www.landwehr.org/2004-aviz-laprie-randell.pdf
     title: Basic Concepts and Taxonomy of Dependable and Secure Computing
-  - id: swebok
-    resource: https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf
-    title: Guide to the Software Engineering Body of Knowledge, Version 4.0
-  - id: nist-ssdf
-    resource: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf
-    title: NIST SP 800-218 Secure Software Development Framework 1.1
-  - id: slsa
-    resource: https://slsa.dev/spec/v1.2/verifying-artifacts
-    title: SLSA 1.2 — Verifying artifacts
-  - id: nasa-assurance
-    resource: https://standards.nasa.gov/sites/default/files/standards/NASA/B/0/NASA-STD-87398RevB.pdf
-    title: NASA-STD-8739.8B Software Assurance and Software Safety Standard
-  - id: ieee-1012
-    resource: https://standards.ieee.org/ieee/1012/7324/
-    title: IEEE 1012-2024 Standard for System, Software, and Hardware Verification and Validation
-  - id: opentelemetry
-    resource: https://opentelemetry.io/docs/concepts/signals/
-    title: OpenTelemetry signals
-  - id: google-sre
-    resource: https://sre.google/sre-book/monitoring-distributed-systems/
-    title: Google SRE — Monitoring Distributed Systems
-  - id: test-desiderata
-    resource: https://testdesiderata.com/
-    title: Test Desiderata
-  - id: pstack
-    resource: https://github.com/cursor/plugins/tree/main/pstack
-    title: Cursor plugins — pstack
-  - id: nist-ai-rmf
-    resource: https://airc.nist.gov/airmf-resources/airmf/5-sec-core/
-    title: NIST AI Risk Management Framework — Core
-generated: { by: codex/gpt-5.6, at: 2026-09-01T17:48:27Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Cross-cutting concerns for software quality
@@ -98,6 +59,19 @@ remaining a different kind of thing from those pillars. This use extends the
 software-design idea that cross-cutting depends on the chosen decomposition:
 a concern cuts across one primary organization while retaining its own
 coherent identity.[^kiczales]
+
+The model is published as four concepts. This one owns the rule, the roster,
+and the classification and admission tests. The others own the record
+definitions, the typed pillar relationships, and the maintenance and
+validation plan:
+
+- [Cross-cutting concern records](cross-cutting-concern-records.md) defines
+  each of the eight records with its inclusions, exclusions, and pillar reach.
+- [Cross-cutting relationships to the quality pillars](cross-cutting-pillar-relationships.md)
+  supplies the relationship vocabulary, the concern-by-pillar matrix, and the
+  placement of testing and testability.
+- [Maintaining the cross-cutting concern model](cross-cutting-model-maintenance.md)
+  covers knowledge organization, validation trials, and research limits.
 
 ## Decision in brief
 
@@ -216,337 +190,6 @@ belong under a pillar or one typed record. Named practices such as TDD, SOLID,
 DRY, static analysis, logging, automation, and code review are mechanisms,
 principles, or heuristics until a more precise outcome and subject are stated.
 
-## Define the eight records
-
-### `XC-01` — Claim context
-
-**Definition:** the declared conditions that give a quality claim its subject,
-meaning, applicability, required confidence, and limits.
-
-It includes the target entity and version; stakeholders and intended uses;
-operating and integration environments; lifecycle stage; workloads and
-scenarios; consequence and criticality; risk tolerance; assumptions;
-exclusions; and the distinction among `Not applicable`, `Not assessed`, and
-insufficient evidence. It excludes the content of the specification, the
-method of review, and the evidence used to justify the verdict.
-
-Claim context constrains every pillar. A codebase cannot by itself establish
-whether a capability addresses the right stakeholder need, whether a workload
-is representative, or how much assurance a safety-relevant decision requires.
-Quality-requirements guidance is explicitly stakeholder- and purpose-aware and
-does not prescribe one quality measure or development process.[^iso-25030]
-
-### `XC-02` — Specification
-
-**Definition:** the quality of the explicit intent, requirements, contracts,
-invariants, bounds, and trace relationships that govern product judgments.
-
-It includes functional and quality requirements; acceptance conditions;
-interface and protocol contracts; data meaning; legal states; error and
-recovery semantics; compatibility commitments; security and safety
-constraints; and bidirectional traceability through changes and evidence. It
-excludes whether the implemented product conforms, whether the requirement is
-socially or commercially valuable, and any one notation or documentation
-format.
-
-Specification enables and can be evidence for every pillar, but only when the
-specified claim is itself accepted and applicable. It is especially important
-to preserve the difference between verifying conformance and validating
-fitness for intended use. Current V&V guidance treats both as distinct reasons
-for assessment and permits analysis, review, inspection, testing, and other
-means.[^ieee-1012]
-
-### `XC-03` — Structure
-
-**Definition:** the discipline with which the product localizes changeable
-decisions, responsibility, authority, state, dependency, and complexity into
-coherent boundaries.
-
-It includes information hiding; modular and package boundaries; cohesion and
-coupling; dependency direction; interface size and stability; ownership of
-state and effects; representation choices; concurrency boundaries; and
-justified complexity. It excludes the product-level outcomes of
-intelligibility and evolvability, prescriptive pattern catalogs, and
-uncalibrated proxies such as file length or number of abstractions.
-
-Structure can contribute to every pillar, but its effects are conditional and
-tradeoff-bearing. A boundary that aids change can increase latency; isolation
-that improves fault containment can complicate usability or deployment.
-Parnas grounds modularity in hiding changeable design decisions, while ATAM
-uses concrete scenarios to expose quality interactions and architectural
-tradeoffs rather than assuming one structure is universally best.[^parnas][^atam]
-
-### `XC-04` — Lifecycle integrity
-
-**Definition:** the engineering system's ability to preserve the identity,
-control, reproducibility, provenance, and recoverability of product states and
-changes over time.
-
-It includes configuration identification; dependency and toolchain
-resolution; change control and status; reproducible construction; generated
-artifact ownership; build and release lineage; source and artifact provenance;
-migration, compatibility, and rollback paths; retirement; and recovery from a
-partial lifecycle operation. It excludes the throughput of a delivery team,
-the security or correctness of the resulting product, and a mandate for one
-branching, packaging, or deployment method.
-
-Configuration management is treated as a lifecycle knowledge area in SWEBOK,
-while secure-development and supply-chain frameworks connect controlled
-changes, protected artifacts, and verified provenance to security claims.[^swebok][^nist-ssdf][^slsa]
-Those controls enable evidence and reduce threats; their presence does not
-prove that a build is correct, safe, or suitable.
-
-### `XC-05` — Risk
-
-**Definition:** the explicit reasoning that connects uncertain faults,
-threats, hazards, misuse, interactions, and tradeoffs to consequences and
-declared tolerances.
-
-It includes relevant failure and attack scenarios; hazard and abuse analysis;
-fault propagation; exposure and consequence; uncertainty and sensitivity;
-quality-attribute conflicts; risk acceptance; compensating controls; and
-residual risk. It excludes the product-quality outcomes themselves, a generic
-governance program, and a universal severity or probability scale.
-
-Risk constrains and can threaten every pillar. It also prevents a review from
-assuming that all desirable properties can be maximized at once. Assurance and
-safety standards tailor rigor to consequence and integrity needs, and ATAM
-elicits scenario-specific risks, sensitivity points, and tradeoffs.[^nasa-assurance][^ieee-1012][^atam]
-
-### `XC-06` — Assurance
-
-**Definition:** the proportionate portfolio of verification and validation
-mechanisms used to produce grounds for believing applicable quality claims.
-
-It includes tests, proofs, reviews, inspections, static and dynamic analysis,
-benchmarks, simulations, security testing, safety analysis, operational
-monitoring, audits, attestations, and appropriate independence or diversity.
-It excludes the product quality being claimed, the intrinsic quality of each
-supporting artifact, and the assumption that activity volume equals
-confidence.
-
-Assurance enables and produces potential evidence for every pillar. The
-portfolio should respond to claim type, context, consequence, uncertainty, and
-the failure modes of its own methods. Assurance-case standards make the
-relationship explicit by connecting claims through argument and assumptions
-to evidence, while SACM provides a shared model for representing those
-relationships.[^iso-15026-1][^iso-15026-2][^sacm]
-
-### `XC-07` — Feedback
-
-**Definition:** the engineering system's ability to detect and interpret
-product behavior and effects, connect them to decisions, and support timely
-correction or learning.
-
-It includes runtime observability and diagnosability; traces, metrics, logs,
-profiles, and health signals; user and operator feedback; incident and defect
-learning; change-impact feedback; escalation; and the latency and reach of
-feedback loops. It excludes reliability itself, telemetry volume as a proxy
-for insight, and a requirement that every product use production monitoring.
-
-Feedback provides operational evidence across the pillars and especially
-enables reliability, security, safety, evolvability, and intelligibility when
-runtime behavior matters. OpenTelemetry distinguishes signals and their
-correlation, while SRE guidance emphasizes actionable, symptom-oriented
-monitoring and the cost of noisy signals.[^opentelemetry][^google-sre]
-
-### `XC-08` — Evidence
-
-**Definition:** the fitness of information to support a specific quality claim
-and decision within a declared context.
-
-It includes claim binding; relevance; construct validity; representativeness;
-measurement reliability; provenance and integrity; scope and version
-identity; freshness; independence; completeness; uncertainty; contradictory
-results; and limitations. It excludes the assurance activity that generated
-the information, the verdict it informs, and any assumption that a metric or
-majority opinion is intrinsically authoritative.
-
-Evidence governs judgments across every pillar. Measurement frameworks require
-measures to answer stated information needs and explicitly address validity
-and reliability.[^iso-15939][^iso-25020] Quality evaluation is a process for
-declared target entities and does not supply a universal test method.[^iso-25040]
-Therefore evidence can be strong, weak, conflicting, insufficient, or
-inapplicable without silently changing the quality outcome being assessed.
-
-## Type the relationships to the pillars
-
-Use these directed relationship types. Do not write a bare “relates to” edge.
-
-| Code | Relationship | Meaning |
-| --- | --- | --- |
-| `CON` | Constitutes | The source is part of the definition of the target outcome; use rarely because most cross-cutting records should not constitute a pillar. |
-| `CTR` | Contributes | The source can causally help or impair the target without being necessary or sufficient. |
-| `EN` | Enables | The source makes achievement or assessment of the target feasible or materially easier. |
-| `EV` | Evidences | The source can provide grounds for a judgment about the target. |
-| `CS` | Constrains | The source sets scope, bounds, obligations, or decision conditions for the target. |
-| `TH` | Threatens | The source describes a way the target can be impaired. |
-| `TR` | Trades off | A decision involving the source may improve one target while impairing another. |
-
-Every maintained edge should record its direction, mechanism, applicability,
-evidence basis, limitation or counterexample, and lifecycle scope. The matrix
-below is a compact discovery view, not a proof or an instruction to force a
-finding into every cell. Parentheses mean the relationship is especially
-context-dependent. An enabling edge refers to the record's desired state; a
-threatening edge can refer to a deficiency in that state or to an adverse
-element represented by the record.
-
-| Record | Suitability | Correctness | Reliability | Security | Safety | Efficiency | Usability | Compatibility | Evolvability | Intelligibility |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Claim context | `CS` | `CS` | `CS` | `CS` | `CS` | `CS` | `CS` | `CS` | `CS` | `CS` |
-| Specification | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `(EN·EV)` | `(EN·EV)` |
-| Structure | `(CTR·TR)` | `CTR·EV` | `CTR` | `CTR·TR` | `CTR·TR` | `CTR·TR` | `(CTR·TR)` | `CTR·TR` | `CTR` | `CTR` |
-| Lifecycle integrity | `(EN·TH)` | `EN·EV·TH` | `EN·EV·TH` | `EN·EV·TH` | `EN·EV·TH` | `(EN·EV)` | `(EN·TH)` | `EN·EV·TH` | `EN` | `EN·EV` |
-| Risk | `TH·CS·TR` | `TH·CS·TR` | `TH·CS·TR` | `TH·CS·TR` | `TH·CS·TR` | `TH·CS·TR` | `TH·CS·TR` | `TH·CS·TR` | `TH·CS·TR` | `TH·CS·TR` |
-| Assurance | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` | `EN·EV` |
-| Feedback | `EV` | `EV` | `EN·EV` | `EN·EV·TH` | `EN·EV·TH` | `EV·TR` | `(EV·TR)` | `(EV)` | `EN·EV` | `EN·EV` |
-| Evidence | `EV·CS·TR` | `EV·CS·TR` | `EV·CS·TR` | `EV·CS·TR` | `EV·CS·TR` | `EV·CS·TR` | `EV·CS·TR` | `EV·CS·TR` | `EV·CS·TR` | `EV·CS·TR` |
-
-The matrix deliberately contains no `CON` edges. If a proposed cross-cutting
-record routinely constitutes only one pillar, it is probably a subquality of
-that pillar. If it appears to constitute many pillars, it is probably a broad
-synonym for product quality rather than a useful cross-cutting record.
-
-## Place testing and testability precisely
-
-Testing occupies several positions because the word can name different
-subjects and roles.
-
-| Term | Subject and role | Placement |
-| --- | --- | --- |
-| Product testability | Product; subquality | Primarily a subquality of Evolvability in this taxonomy whose presence affords assurance across any pillar whose behavior must be investigated |
-| Testing | Review or lifecycle activity; assurance mechanism | `XC-06` Assurance; one member of a portfolio, not the product-quality outcome |
-| Test-suite quality | Supporting-artifact quality | Assessed within Assurance and governed by `XC-08` Evidence; it asks whether tests are valuable and sustainable as grounds for claims |
-| Test result | Evidence item | `XC-08` Evidence; its relevance, validity, provenance, representativeness, freshness, and limits determine what it can support |
-| Test process | Review protocol or engineering-system practice | Method guidance outside the product pillars and outside the stable concern definitions |
-| Passing tests | Observation | Evidence for only the claims, versions, conditions, and oracles the tests actually cover; never a synonym for product quality |
-
-Test Desiderata is therefore a valuable model for the **quality of tests**,
-not a rival product-quality taxonomy. Its properties include isolation,
-composability, determinism, speed, writability, readability, behavioral
-sensitivity, structure insensitivity, automation, specificity, predictive
-power, and confidence—and explicitly recognize interactions and
-tradeoffs.[^test-desiderata] Those properties should inform Assurance and
-Evidence criteria without being collapsed into product testability or treated
-as independently maximizable scores.
-
-The pstack plugin supplies a complementary practitioner datapoint. It combines
-product goals, design principles, verification practices, model-coordination
-protocols, and code-shape heuristics in one operating system.[^pstack] The
-typed model preserves that useful material while routing it to Structure,
-Assurance, Feedback, Evidence, or an optional method aid instead of treating
-the entire operating system as a timeless quality category.
-
-## Organize the knowledge as a lightweight hybrid
-
-Use one canonical typed record for each concern, then derive or maintain
-purpose-specific views:
-
-```text
-canonical typed records
-    -> three-role orientation: context / six concern families / evidence
-    -> concern-by-pillar relationship matrix
-    -> pillar review criteria and cross-cutting review aids
-    -> migration and validation reports
-```
-
-This combines the strengths of four organization forms:
-
-| Form | Keep | Avoid |
-| --- | --- | --- |
-| Layered hierarchy | Fast orientation and clear distinction from product pillars | Pretending a concern has only one parent |
-| Faceted classification | Independent subject and role axes | Uncontrolled tags with no definitions |
-| Concern-by-pillar matrix | Visible gaps, overlaps, and conditional reach | Treating eighty cells as eighty mandatory checks |
-| Typed relationship graph | Explicit direction and mechanism | Requiring graph tooling before the model proves useful |
-
-Do not build a schema, generator, or scoring tool yet. The stable IDs,
-definitions, typed tables, and links in this concept are the canonical source
-for the draft. Introduce a machine-readable registry only if comparative use
-shows that projections drift or that tools materially improve retrieval and
-classification.
-
-When a record becomes machine-readable, preserve at least:
-
-- stable ID, label, aliases, definition, inclusion, and exclusion;
-- one primary assessment subject and conceptual role;
-- applicability by entity, stakeholder, environment, lifecycle, criticality,
-  prerequisites, and explicit non-applicability;
-- typed pillar edges with direction, mechanism, conditions, and limitations;
-- the assurance claim or review question separately from supporting evidence;
-- evidence sources and their validity, representativeness, freshness,
-  sufficiency, provenance, and uncertainty limits;
-- metrics with construct, unit, method, threshold basis, and uncertainty;
-- heuristics marked as defeasible, including overrides and false positives;
-- review procedures as separate aids;
-- threats, tradeoffs, authority, provenance, version, review date, and known
-  disagreement; and
-- distinct states for unknown, not assessed, not applicable, and insufficient
-  evidence.
-
-## Keep the implementation outcome-first
-
-The implemented criteria start from a pillar outcome and identify which
-cross-cutting records materially affect its assessment. The framework does not
-create eight additional ten-item checklists. A cross-cutting concept deserves a
-separate checklist only when its own subject has a distinct review job and
-verdict.
-
-## Validate before treating the model as stable
-
-This synthesis resolves the research alternatives, but it has not yet been
-validated in representative reviews. Use four forms of validation:
-
-1. **Classification trials:** have independent reviewers classify a held-out
-   sample of criteria and findings by subject, role, canonical record, and
-   relationship type. Analyze disagreements by field instead of collapsing
-   them into one agreement score.
-2. **Task trials:** test whether users can find a concern, explain why it is
-   not a pillar, distinguish it from its nearest neighbor, and state when a
-   pillar edge does not apply.
-3. **Portability trials:** use libraries, interactive applications, services,
-   data systems, embedded or safety-relevant systems, and multi-package
-   repositories across different technology stacks.
-4. **Review-performance trials:** compare the model with an unconstrained
-   review, credible alternative quality models, and alternative layer
-   presentations on material coverage, overlap, unsupported claims, false
-   assurance, evidence quality, uncertainty preservation, time, and cost.
-
-For frontier-model use, bind every result to the exact model, version,
-configuration, prompt, tool access, repository revision, record version, and
-case set. Test ID, subject, role, edge, applicability, abstention, and citation
-accuracy separately. Include overlapping terms, paraphrases, reordered
-material, missing context, contradictory evidence, irrelevant signals, and
-unknown cases. NIST's AI RMF similarly connects evaluation to declared context,
-representative conditions, documented measures, uncertainty, and continuing
-assessment of the measurement process itself.[^nist-ai-rmf]
-
-Do not use majority model agreement as ground truth. Predeclare acceptance
-thresholds by the consequence of each error class, preserve harness errors and
-unknowns, and rerun the same cases after a taxonomy, prompt, model, or tool
-change.
-
-## Research limits and lifecycle
-
-The eight records are a design synthesis, not categories asserted verbatim by
-one authority. The research compared product-quality, requirements,
-architecture, measurement, assurance, V&V, configuration, secure-development,
-supply-chain, observability, testing, and model-evaluation sources. No located
-source establishes a natural number of cross-cutting concerns, a universal
-breadth threshold, or a context-free relationship matrix.
-
-The candidate rejects a flat list because product outcomes, supporting
-artifacts, engineering-system capabilities, methods, and evidence have
-different subjects and verdicts. It also rejects an immediately implemented
-knowledge graph because the maintenance cost is unjustified before
-classification and task trials. The hybrid is intended to be the smallest
-structure that preserves subject, role, conditionality, and evidence limits.
-
-Review the model when the product-pillar taxonomy changes, classification
-trials show persistent overlap or gaps, a record loses independent
-assessability, or a new concern passes the admission gate more cleanly than an
-existing one. Merge, split, demote, or retire records based on observed use;
-do not preserve eight as an editorial quota.
-
 [^iso-25010]: ISO, [ISO/IEC 25010:2023 product quality model](https://www.iso.org/standard/78176.html).
 [^iso-25030]: ISO, [ISO/IEC 25030:2019 quality requirements framework](https://www.iso.org/standard/72116.html).
 [^iso-25040]: ISO, [ISO/IEC 25040:2024 quality evaluation framework](https://www.iso.org/standard/83467.html).
@@ -555,18 +198,5 @@ do not preserve eight as an editorial quota.
 [^iso-42010]: ISO, [ISO/IEC/IEEE 42010:2022 architecture description](https://www.iso.org/standard/74393.html).
 [^iso-15026-1]: ISO, [ISO/IEC/IEEE 15026-1:2019 assurance concepts and vocabulary](https://www.iso.org/standard/73567.html).
 [^iso-15026-2]: ISO, [ISO/IEC/IEEE 15026-2:2022 assurance case](https://www.iso.org/standard/80625.html).
-[^sacm]: OMG, [Structured Assurance Case Metamodel 2.3](https://www.omg.org/spec/SACM/2.3/About-SACM).
 [^kiczales]: Kiczales and Mezini, [Aspect-Oriented Programming and Modular Reasoning](https://www.cs.ubc.ca/~gregor/papers/kiczales-icse05-aopmr.pdf).
-[^parnas]: Parnas, [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.cs.lafayette.edu/~gexia/cs301/resources/parnas.html).
-[^atam]: Software Engineering Institute, [Architecture Tradeoff Analysis Method collection](https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/).
 [^dependability]: Avizienis, Laprie, Randell, and Landwehr, [Basic Concepts and Taxonomy of Dependable and Secure Computing](https://www.landwehr.org/2004-aviz-laprie-randell.pdf).
-[^swebok]: IEEE Computer Society, [Guide to the Software Engineering Body of Knowledge, Version 4.0](https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf).
-[^nist-ssdf]: NIST, [Secure Software Development Framework 1.1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf).
-[^slsa]: SLSA, [Verifying artifacts](https://slsa.dev/spec/v1.2/verifying-artifacts).
-[^nasa-assurance]: NASA, [Software Assurance and Software Safety Standard](https://standards.nasa.gov/sites/default/files/standards/NASA/B/0/NASA-STD-87398RevB.pdf).
-[^ieee-1012]: IEEE, [IEEE 1012-2024 Standard for System, Software, and Hardware Verification and Validation](https://standards.ieee.org/ieee/1012/7324/).
-[^opentelemetry]: OpenTelemetry, [Signals](https://opentelemetry.io/docs/concepts/signals/).
-[^google-sre]: Google, [Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/).
-[^test-desiderata]: Beck and Sutton, [Test Desiderata](https://testdesiderata.com/).
-[^pstack]: Cursor, [pstack](https://github.com/cursor/plugins/tree/main/pstack).
-[^nist-ai-rmf]: NIST, [AI Risk Management Framework core](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/).

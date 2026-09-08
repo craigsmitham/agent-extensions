@@ -37,5 +37,9 @@ reduced scope.
 Plans sequence actions after choices have been made. Goals state desired
 results. Neither explains why this particular system of action should succeed.
 
+Related: [The choice cascade](/choice-cascade.md) gives these questions their
+standard form, and [Advantage and coherence](/advantage-and-coherence.md)
+explains what makes the resulting system hard to imitate.
+
 [^martin-integration]: Martin describes fit and mutual reinforcement across the
     cascade as the central integrative challenge.

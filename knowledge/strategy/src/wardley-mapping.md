@@ -21,8 +21,8 @@ sources:
     resource: https://www.dannybuerkli.com/2025/02/02/where-the-map-ends
     title: Danny Buerkli — Where the map ends
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # Wardley Mapping
@@ -151,6 +151,9 @@ Common misreadings include:
 - treating coordinates as measurements or predictions;
 - replacing domain, process, structural, financial, or risk models; and
 - preserving a workshop snapshot after its evidence expires.
+
+Related: [Developing and reviewing Wardley maps](/developing-and-reviewing-wardley-maps.md)
+turns this model into a procedure for building and challenging a specific map.
 
 [^wardley-map-grammar]: Wardley's mapping chapter constructs a value chain from
     user needs and dependencies, then positions components by evolution.

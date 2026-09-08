@@ -15,7 +15,8 @@ sources:
 
 # Product risks
 
-Four questions organize the risk that a proposed product solution will fail:
+Four questions organize the risk that a proposed product solution will
+fail:[^svpg-product-management]
 
 - **Value:** Will customers choose it, use it, or pay for it enough to matter?
 - **Usability:** Can the intended users understand and use it?
@@ -38,6 +39,8 @@ commercial viability, and stakeholder approval does not establish customer
 value. Production evidence remains necessary because discovery reduces
 uncertainty; it does not eliminate it.
 
+[^svpg-product-management]: SVPG — Product Management, An Introduction, which
+    organizes product risk as value, usability, feasibility, and viability.
 [^svpg-discovery-planning]: SVPG recommends focusing discovery effort where
     risk is significant or team members disagree rather than validating every
     assumption uniformly.

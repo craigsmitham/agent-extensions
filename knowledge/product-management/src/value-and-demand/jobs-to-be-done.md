@@ -9,8 +9,8 @@ sources:
     resource: https://hbr.org/2016/09/know-your-customers-jobs-to-be-done
     title: Harvard Business Review — Know Your Customers' Jobs to Be Done
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # Jobs to Be Done
@@ -42,7 +42,8 @@ non-consumption, workarounds, and alternatives visible.
 Jobs are also not interchangeable with Needs. A Need describes a desired state
 or problem; a Job frames progress in circumstances. They often illuminate one
 another, but forcing every Need into a Job statement—or the reverse—can erase
-useful evidence.
+useful evidence. The [value and demand model](value-and-demand-model.md) keeps
+both concepts distinct alongside Offering, Audience, and Value Proposition.
 
 ## Evidence and forces
 
@@ -65,7 +66,8 @@ A job map decomposes progress into outcome-oriented steps without committing
 to a solution. A journey describes an experience over time with a current or
 proposed process. A use case describes interactions and outcomes at a system
 boundary. These views can complement a Job to Be Done, but none is a lossless
-substitute for the others.
+substitute for the others. [Product meaning and requirements](product-meaning-and-requirements.md)
+covers how a use case bridges to requirements without becoming their authority.
 
 [^christensen-know-customers-jobs]: Christensen and coauthors frame jobs around
     the progress customers seek in particular circumstances.

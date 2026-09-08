@@ -1,9 +1,9 @@
 ---
 type: Guide
 title: Linking Defects to corrective Changes
-description: Use when established defects and an authorized remedial purpose must remain traceable to a separate Change classified as Bugfix.
+description: Use when established Defects and an authorized remedial purpose must remain traceable to a separate Change classified as Bugfix.
 tags: [defect, defect-report, change, bugfix, remediation, correction, regression]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Linking Defects to corrective Changes

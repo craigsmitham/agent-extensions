@@ -1,9 +1,9 @@
 ---
 type: Guide
 title: Authoring invariants and stateful behavior
-description: Specifies rules that must hold across states, transitions, concurrency, and failure conditions.
+description: Specifies rules that must hold across states, transitions, concurrency, and failure conditions. Use when an obligation must hold continuously rather than at a single trigger, or when retry, ordering, rollback, or partial failure could falsify it.
 tags: [invariant, state, transition, concurrency, failure]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Authoring invariants and stateful behavior

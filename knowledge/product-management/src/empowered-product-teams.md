@@ -15,7 +15,7 @@ sources:
 An empowered product team is given a problem, desired outcome, and strategic
 context, then trusted to discover and deliver an effective solution. It is not
 merely a delivery team allowed to choose implementation details for a solution
-already selected elsewhere.
+already selected elsewhere.[^svpg-product-model]
 
 Empowerment requires four conditions:
 
@@ -36,3 +36,7 @@ coaching, and constraints that cross teams. Teams remain responsible for
 working within legal, ethical, financial, security, and architectural
 boundaries. Clear constraints make authority usable; hidden approvals make it
 nominal.
+
+[^svpg-product-model]: SVPG — The Product Operating Model, An Introduction,
+    which characterizes empowered teams as receiving problems to solve rather
+    than features to build.

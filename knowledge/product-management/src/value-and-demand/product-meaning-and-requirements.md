@@ -12,8 +12,8 @@ sources:
     resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/requirements-engineering/src/foundations/requirements-and-neighboring-artifacts.md
     title: Requirements Engineering — Requirements and neighboring artifacts
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # Product meaning and requirements
@@ -33,7 +33,7 @@ A useful flow is:
 4. An authorized requirements process accepts, changes, or rejects normative
    requirements.
 5. Architecture and design choose a realization.
-6. verification and product evidence test conformance and value respectively.
+6. Verification and product evidence test conformance and value respectively.
 
 This is a relationship model, not a mandatory sequence or document set.
 Iteration may revise an earlier concept, and teams may represent several views
@@ -71,5 +71,6 @@ consistency.[^product-value-demand]
 
 [^requirements-neighbors]: The Requirements Engineering bundle owns the
     portable boundary between requirements and neighboring artifacts.
-[^product-value-demand]: Product meaning remains evidence-backed and revisable;
-    a normative downstream artifact does not prove it true.
+[^product-value-demand]: [Value and demand model](value-and-demand-model.md) —
+    product meaning remains evidence-backed and revisable; a normative
+    downstream artifact does not prove it true.

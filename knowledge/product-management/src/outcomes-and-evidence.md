@@ -12,8 +12,8 @@ sources:
     resource: value-and-demand/value-and-demand-model.md
     title: Product Management — Value and Demand Model
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # Outcomes and evidence
@@ -21,7 +21,8 @@ generated:
 An output is something the team produces: a release, feature, experiment, or
 document. An outcome is a consequential change in customer behavior, customer
 condition, or organizational result. Product work uses outputs to pursue
-outcomes, but shipping does not prove the outcome occurred.
+outcomes, but shipping does not prove the outcome
+occurred.[^svpg-product-model-concepts]
 
 A useful outcome is:
 
@@ -51,5 +52,8 @@ An outcome focus does not mean teams ignore delivery. Reliable output is
 necessary to create value; it is simply insufficient evidence that value was
 created.
 
-[^product-value-demand]: The value and demand model distinguishes product
-    meaning from the outcomes used to test it.
+[^svpg-product-model-concepts]: SVPG — Product Model Concepts, which treats
+    working to outcomes rather than output as a defining concept of the product
+    model.
+[^product-value-demand]: [Value and demand model](value-and-demand/value-and-demand-model.md)
+    distinguishes product meaning from the outcomes used to test it.

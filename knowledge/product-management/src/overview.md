@@ -15,8 +15,8 @@ sources:
     resource: value-and-demand/value-and-demand-model.md
     title: Product Management — Value and demand model
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # Product management overview
@@ -28,9 +28,10 @@ evidence, and the work of a cross-functional team.
 
 Its central responsibility is not producing requirements or maximizing feature
 throughput. It is enabling sound decisions about which problems matter and
-whether proposed and delivered solutions achieve the intended outcomes.
+whether proposed and delivered solutions achieve the intended
+outcomes.[^svpg-product-management]
 
-Product work forms a connected system:
+Product work forms a connected system:[^svpg-product-model]
 
 1. Strategy supplies consequential choices and constraints.
 2. Evidence about offerings, audiences, needs, jobs, and value propositions
@@ -52,5 +53,12 @@ The discipline is also not a universal organizational prescription. Titles and
 structures vary; the enduring questions are where product decisions are made,
 which evidence informs them, and who is accountable for the resulting value.
 
-[^product-value-demand]: The value and demand model explains these concepts as
-    an evidence-backed graph rather than a prescribed artifact hierarchy.
+[^svpg-product-management]: SVPG — Product Management, An Introduction, which
+    frames the discipline around deciding what is worth building rather than
+    documenting or scheduling it.
+[^svpg-product-model]: SVPG — The Product Operating Model, An Introduction,
+    which describes product work as a connected model of principles rather than
+    a process or a set of ceremonies.
+[^product-value-demand]: [Value and demand model](value-and-demand/value-and-demand-model.md)
+    explains these concepts as an evidence-backed graph rather than a
+    prescribed artifact hierarchy.

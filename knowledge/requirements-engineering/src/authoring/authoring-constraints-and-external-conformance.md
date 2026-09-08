@@ -1,9 +1,9 @@
 ---
 type: Guide
 title: Authoring constraints and external conformance requirements
-description: States genuine restrictions and applicable external obligations with explicit scope, version, and evidence.
+description: States genuine restrictions and applicable external obligations with explicit scope, version, and evidence. Use when a requirement restricts the solution space or invokes a law, standard, contract, or interface obligation.
 tags: [constraint, conformance, standard, regulation, contract, interface]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Authoring constraints and external conformance requirements

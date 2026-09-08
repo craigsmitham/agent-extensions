@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Discovery and structure
 description: How routing layers, stable concepts, and search metadata make knowledge findable without duplicating it at every entry point.
 tags: [discovery, progressive-disclosure, information-architecture, indexes, findability]
 status: draft
@@ -16,7 +17,7 @@ sources:
 
 Knowledge is useful only when a reader can reach the right source at the moment
 of need. Findability therefore belongs to the knowledge itself, not merely to a
-separate search tool.[^fair]
+separate search tool.[^fair-principles]
 
 Progressive disclosure separates routing from explanation:
 
@@ -28,7 +29,9 @@ Progressive disclosure separates routing from explanation:
 Each layer should contain only enough information to make the next decision.
 Putting explanations into an index makes the route slower and creates a second
 place to maintain the meaning. An overview is a concept, not an oversized
-index.
+index. Knowledge formats encode the same separation: an index enumerates a
+directory and reuses each concept's own description, while the concept keeps
+the substance.[^okf-spec]
 
 Structure should follow distinctions readers actually use. Begin flat. Add a
 section only when several independently useful concepts share a coherent
@@ -40,6 +43,8 @@ Descriptions and tags should distinguish neighboring concepts using vocabulary
 readers are likely to search. Links express navigation and relationships;
 metadata should add retrieval value rather than repeat titles mechanically.
 
-[^fair]: The FAIR principles identify findability and rich metadata as
-    prerequisites for reuse. Their original domain is research data; the
+[^fair-principles]: The FAIR principles identify findability and rich metadata
+    as prerequisites for reuse. Their original domain is research data; the
     discovery concern generalizes to durable digital knowledge.
+
+[^okf-spec]: Open Knowledge Format specification, §8 (index files).

@@ -3,13 +3,14 @@ type: Guide
 title: Preserving evidence and provenance
 description: Use when creating or substantively revising a work item so sources, uncertainty, attribution, and decision authority survive synthesis.
 tags: [work-item, evidence, provenance, attribution, uncertainty, authority, source-inventory]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Preserving evidence and provenance
 
-Use this adapted guide for every new work item and substantive body
-revision.
+Apply this guide to every new work item and every substantive body revision.
+Synthesis is where sources, uncertainty, attribution, and decision authority are
+most easily lost.
 
 ## 1. Inventory before synthesis
 

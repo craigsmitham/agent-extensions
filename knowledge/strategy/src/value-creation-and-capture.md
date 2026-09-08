@@ -15,7 +15,8 @@ sources:
 
 # Value creation and capture
 
-The value stick separates four quantities in an exchange:
+The value stick separates four quantities in an
+exchange:[^hbs-strategy-formulation]
 
 1. **Willingness to pay (WTP):** the most a customer would pay.
 2. **Price:** what the customer actually pays.
@@ -23,7 +24,8 @@ The value stick separates four quantities in an exchange:
 4. **Willingness to sell (WTS):** the least compensation a supplier or employee
    would accept to contribute.
 
-Their differences distinguish created value from captured value:
+Their differences distinguish created value from captured
+value:[^hbs-value-stick-interview]
 
 - Customer value is WTP minus price.
 - Organizational margin is price minus cost.
@@ -43,3 +45,12 @@ suppliers have sufficient reason to continue participating.
 The stick is a reasoning model, not a promise that every quantity can be
 measured precisely. Its value lies in exposing whose value changed and whether
 an apparent gain created value or merely moved it.
+
+Related: [Advantage and coherence](/advantage-and-coherence.md) explains why a
+value position persists, and [The choice cascade](/choice-cascade.md) locates
+value creation within the how-to-win choice.
+
+[^hbs-strategy-formulation]: Harvard Business School Online, How to Formulate a
+    Successful Business Strategy — "The Value Stick and Value-Based Pricing".
+[^hbs-value-stick-interview]: Harvard Business School Online, Felix
+    Oberholzer-Gee on the Frameworks of Business Strategy.

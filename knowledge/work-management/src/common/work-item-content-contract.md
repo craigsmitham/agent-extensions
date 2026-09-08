@@ -3,13 +3,13 @@ type: Reference
 title: Work-item content contract
 description: Defines the common semantic slots, their conditional applicability, and the composition order for portable work-item templates.
 tags: [work-item, content-contract, template, scope, evidence, completion, verification, next-action]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Work-item content contract
 
-Every portable work item composes four layers adapted from the earlier common
-work-item concerns.
+Every portable work item composes four layers over the roles defined in the
+[Software work-item taxonomy](../software-work-item-taxonomy.md).
 
 ```text
 common contract → role-specific contract → repository considerations
@@ -23,7 +23,7 @@ when it carries the same semantics; use body content only for residual meaning.
 
 | Slot | Include when | Content |
 | --- | --- | --- |
-| Identity and role | Always | Stable host identity when persisted; Incident Record, Defect Report, or Change role |
+| Identity and role | Always | Stable host identity when persisted; Operational Incident Record, Defect Report, or Change role |
 | Classification | Established and decision-relevant | Such as Bugfix, maintenance, migration, or another local classification; never infer from a label alone |
 | Title and summary | Always for a persisted item | A derived brief of the current body, written last |
 | Sources and evidence | Material input exists | Originating occurrences, requests, observations, findings, links, conditions, availability, and limitations |
@@ -49,9 +49,9 @@ when it carries the same semantics; use body content only for residual meaning.
   accepted or selected.
 - Do not infer priority, assignment, approval, verification, or closure from a
   host status, label, implementation, or absence of objections.
-- Put the current reader's most time-sensitive information first. Incident
-  Records therefore lead with current state; other roles usually lead with the
-  derived brief and case meaning.
+- Put the current reader's most time-sensitive information first. Operational
+  Incident Records therefore lead with current state; other roles usually lead
+  with the derived brief and case meaning.
 
 Role templates are complete fallbacks for hosts without suitable structured
 fields. They apply this contract directly and add only role-specific meaning.

@@ -41,7 +41,7 @@ sources:
   - id: verification
     resource: https://doi.org/10.1007/s10515-026-00638-5
     title: Are We Asking the Right Questions? Counterfactual Verification for Reliable LLM Code Review
-generated: { by: codex/gpt-5.6, at: 2026-09-01T17:48:27Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Maintaining codebase-review criteria
@@ -51,7 +51,10 @@ the codebase-review collection. It keeps the desired qualities being assessed
 separate from the ways a reviewer may gather evidence about them.
 
 Use [Software quality pillars](software-quality-pillars.md) as the candidate
-foundation for deciding which product outcome owns a criterion. Treat the
+foundation for deciding which product outcome owns a criterion, and
+[Quality layers outside the ten pillars](quality-layer-boundaries.md) when the
+candidate looks like a principle, capability, mechanism, or evidence property
+rather than an outcome. Treat the
 current criteria as subordinate expressions of those pillars; do not let a
 supporting artifact, review method, tool, or convenient proxy silently redefine
 the foundation.
@@ -59,9 +62,11 @@ the foundation.
 Use [Cross-cutting concerns for software quality](cross-cutting-concerns.md)
 when a criterion concerns context, specification, structure, lifecycle
 integrity, risk, assurance, feedback, or evidence across several pillars. That
-model owns subject and role classification, the admission gate for canonical
-cross-cutting records, and typed pillar relationships. This guide continues to
-own how criteria and optional review aids evolve.
+model owns subject and role classification and the admission gate for canonical
+records; its [record definitions](cross-cutting-concern-records.md) and
+[typed pillar relationships](cross-cutting-pillar-relationships.md) are
+separate concepts. This guide continues to own how criteria and optional review
+aids evolve.
 
 The collection is a source-reviewed `reporting-review` candidate, not a
 field-validated control. This guide governs its design and evolution; it does
@@ -234,71 +239,13 @@ failure. Keep criterion state separate from finding severity, remediation
 priority, and any contextual risk decision. Do not publish an aggregate quality
 score without an externally justified weighting and missing-data model.
 
-## Validate the design comparatively
+## Validate, and retire, at the claimed level
 
-Compare the complete [product-quality criteria](criteria/) and any selected
-[supporting checklist](supporting/) with an unconstrained review, credible
-alternative quality models, and—when useful—variants that expose evidence or
-method aids differently. Do not treat the synthetic [framework design
-review](framework-design-review.md) as observed effectiveness evidence.
-
-Bind every comparison to the repository revision, review scope, reviewer or
-exact model and configuration, tool access, prompt, and criterion version.
-Use representative libraries, applications, services, and multi-package
-repositories, including intentional exceptions and previously adjudicated or
-seeded defects.
-
-Measure:
-
-- valid material findings, omissions, overlap, and unique findings;
-- unsupported findings, false acceptance, and false rejection;
-- criterion-level agreement and incompatible interpretations;
-- evidence quality and diagnostic-cause accuracy separately from verdicts;
-- review coverage, time, and token or tool cost;
-- use of `Indeterminate`, `Not applicable`, and `Not assessed`; and
-- material findings discovered beyond the criteria.
-
-Evidence against the design includes reduced material-issue coverage,
-increased unsupported conclusions, persistent ambiguity, ritual completion,
-important issues missed across reviewers, or a feasible alternative that
-performs the intended job more reliably. Do not reinterpret adverse or null
-results as success by narrowing the original claim after the fact.
-
-## Current design-review evidence
-
-The 2026-09-01 [Codebase-review framework design
-review](framework-design-review.md) challenged all ten pillars, the supporting
-test-suite assessment, cross-cutting relationships, and method separation
-against six synthetic product forms and seven boundary cases. It caused
-material revisions: binary checkbox presentation was removed, several
-contributor-shaped or umbrella criteria were replaced, compound questions were
-narrowed, and source scope was corrected.
-
-That record supports only candidate design coherence. No actual repository or
-reviewer comparison has yet established material-issue coverage,
-unsupported-finding rate, agreement, decision validity, or cost.
-
-## Lifecycle
-
-The package's declared owner controls publication and versioning. An
-accountable field-validation owner, representative repository population, and
-acceptance thresholds are not yet declared, so the collection remains
-`status: draft`.
-
-Review affected criteria or aids when:
-
-- their sources, supported software practices, or terminology change;
-- recurring reviews produce disagreements, false findings, or escaped issues;
-- repository structures, tools, model capabilities, or available evidence
-  change materially;
-- `Not applicable`, `Indeterminate`, or `Not assessed` results become
-  disproportionate; or
-- an automated control, narrower checklist, rubric, or other aid performs the
-  job with less omission or false assurance.
-
-Replace, merge, or retire a criterion when it no longer represents a material
-distinct outcome, cannot be assessed consistently, or displaces a stronger
-control. Preserve the revision rationale and inbound discovery when doing so.
+Structural and source review can support a candidate; representative
+comparative use is required before claiming review effectiveness. The trial
+design, the current design-review evidence, and the criteria retirement rules
+are in
+[Validating codebase-review criteria](validating-codebase-review-criteria.md).
 
 [^iso-quality]: ISO, [ISO/IEC 25010:2023](https://www.iso.org/standard/78176.html).
 [^iso-review]: ISO, [ISO/IEC 20246:2017](https://www.iso.org/standard/67407.html).

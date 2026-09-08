@@ -7,6 +7,10 @@ Portable principles for managing products through outcomes, evidence, empowered
 teams, discovery, delivery, product strategy, and a coherent account of value
 and demand.
 
+The bundle deliberately prescribes no tracker, document hierarchy, stage model,
+or organizational structure. It also leaves general strategy theory,
+requirements authority, and realization choices to their own disciplines.
+
 ## Start here
 
 - [Product management overview](overview.md) — What product management is
@@ -15,16 +19,10 @@ and demand.
 
 ## Value and demand
 
-- [Value and demand](value-and-demand/index.md) — Portable concepts and
-  authoring guidance for offerings, audiences, needs, jobs, value
-  propositions, and their relationship to requirements.
-- [Value and demand model](value-and-demand/value-and-demand-model.md) — How
-  Offering, Audience, Need, Job to Be Done, and Value Proposition form an
-  evidence-backed graph rather than a hierarchy.
-- [Jobs to Be Done](value-and-demand/jobs-to-be-done.md) — How to describe the
-  progress people seek in circumstances without embedding a solution.
-- [Developing value and demand concepts](value-and-demand/developing-value-and-demand-concepts.md) — Use this guide when a team needs to draft, relate, test, or maintain Offering, Audience, Need, Job to Be Done, and Value Proposition concepts without adopting a prescribed artifact system.
-- [Product meaning and requirements](value-and-demand/product-meaning-and-requirements.md) — Where product meaning ends, requirements begin, and use cases provide a bridge without becoming the sole authority.
+- [Value and demand](value-and-demand/index.md) — The vocabulary of Offering,
+  Audience, Need, Job to Be Done, and Value Proposition: what each concept
+  means, how to develop and test them, and where product meaning hands off to
+  requirements. The other sections use this vocabulary rather than defining it.
 
 ## Direction and accountability
 

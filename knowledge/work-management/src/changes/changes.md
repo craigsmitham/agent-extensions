@@ -3,15 +3,17 @@ type: Explanation
 title: Changes as work items
 description: Explains how a Change coordinates one bounded software modification while specifications, designs, implementation, evidence, and planning records retain their own responsibilities.
 tags: [change, software-change, change-request, coordination, scope, delivery, verification]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Changes as work items
 
-A **Change** is the durable coordination case for one bounded proposed or
-authorized software modification. It preserves identity, motivation, intended
-outcome, scope, classification, relevant sources, relationships, decisions,
-delivery state, verification, residual risk, and next action.
+A **Change** is one of the three portable work-item roles defined in the
+[Software work-item taxonomy](../software-work-item-taxonomy.md): the durable
+coordination case for one bounded proposed or authorized software
+modification. It preserves identity, motivation, intended outcome, scope,
+classification, relevant sources, relationships, decisions, delivery state,
+verification, residual risk, and next action.
 
 A Change does not become approved merely because it exists. It also does not
 own every artifact used to understand or realize it. Requirements,

@@ -1,13 +1,13 @@
 ---
 type: Guide
 title: Mapping to requirements hosts
-description: Maps portable requirement semantics into native tool fields while preserving authority, identity, relationships, and read-back accuracy.
+description: Maps portable requirement semantics into native tool fields while preserving authority, identity, relationships, and read-back accuracy. Use when writing or reading requirements in a tracker, specification repository, or requirements-management platform.
 tags: [requirements-management, host, native-fields, mapping, read-back]
 sources:
   - id: authority-model
     resource: ../foundations/one-authority-many-witnesses.md
-    title: One authority many witnesses
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+    title: One authority, many witnesses
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Mapping to requirements hosts

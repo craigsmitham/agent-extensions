@@ -34,7 +34,10 @@
   },
   "rules": {
     "field-notes": "workspace",
-    "use-effect-v4": "workspace"
+    "use-effect-v4": {
+      "source": "workspace",
+      "enabled": false
+    }
   },
   "knowledge": {
     "docs": "workspace",

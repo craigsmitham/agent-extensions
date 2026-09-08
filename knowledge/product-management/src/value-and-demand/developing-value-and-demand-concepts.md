@@ -12,8 +12,8 @@ sources:
     resource: jobs-to-be-done.md
     title: Product Management — Jobs to Be Done
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # Developing value and demand concepts
@@ -102,7 +102,8 @@ Before relying on the result, check that:
 - terms are understandable outside the authoring team; and
 - downstream commitments are governed by their own authority and lifecycle.
 
-[^product-value-demand]: The value and demand model explains why these concepts
-    form an evidence-backed graph rather than a document hierarchy.
-[^product-jtbd]: The Jobs to Be Done explanation covers circumstance, progress,
-    behavior, and forces around change.
+[^product-value-demand]: [Value and demand model](value-and-demand-model.md)
+    explains why these concepts form an evidence-backed graph rather than a
+    document hierarchy.
+[^product-jtbd]: [Jobs to Be Done](jobs-to-be-done.md) covers circumstance,
+    progress, behavior, and forces around change.

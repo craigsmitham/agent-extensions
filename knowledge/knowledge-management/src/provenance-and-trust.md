@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Provenance and trust
 description: How source, transformation, evidence, currency, and review determine what confidence a knowledge consumer should place in a claim.
 tags: [provenance, trust, evidence, verification, knowledge-quality]
 status: draft
@@ -16,7 +17,7 @@ sources:
 
 Provenance explains where knowledge came from and what happened to it before a
 reader encountered it. The W3C PROV model distinguishes entities, activities,
-and agents so a result can be traced to its inputs and production.[^prov]
+and agents so a result can be traced to its inputs and production.[^w3c-prov-overview]
 
 Useful provenance answers the questions that change reliance:
 
@@ -25,6 +26,10 @@ Useful provenance answers the questions that change reliance:
 - What evidence supports a current-state claim?
 - Has the subject changed since the evidence was gathered?
 - What license or use conditions apply?
+
+Reuse standards treat these answers as a requirement rather than optional
+decoration: FAIR asks that metadata carry detailed provenance so a later
+consumer can judge whether reuse is warranted.[^fair-principles]
 
 Metadata cannot certify truth. A citation may be irrelevant, a review may be
 shallow, and recent content may still be wrong. Provenance makes judgment
@@ -39,5 +44,8 @@ as decorative fields.
 Public visibility is also not a trust level. Publication describes access;
 authority and evidence describe warranted reliance.
 
-[^prov]: W3C PROV provides a general model for representing the origins and
-    transformations of digital information.
+[^w3c-prov-overview]: W3C PROV provides a general model for representing the
+    origins and transformations of digital information.
+
+[^fair-principles]: The FAIR principles require detailed provenance metadata as
+    a condition of reuse (principle R1.2).

@@ -15,8 +15,8 @@ sources:
     resource: https://dora.dev/capabilities/continuous-delivery/
     title: DORA — Continuous delivery
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-21T22:05:43Z
+  by: claude/opus-5
+  at: 2026-09-08T12:14:18Z
 ---
 
 # Continuous deployment
@@ -39,19 +39,20 @@ deployment](continuous-integration-delivery-and-deployment.md).
 [^delivery-vs-deployment]: Continuous Delivery vs Continuous Deployment
 [^fowler-cd]: Martin Fowler — Continuous Delivery
 
-## Deployment, release, and exposure
+## The declared production effect
 
-Platforms use *deployment* differently, so evaluate the effect rather than the
-label. Placing code in a production environment, activating it, and exposing it
-to users may be one action or several. Feature flags, staged rollout, traffic
-shifts, and tenant controls can separate technical deployment from user
-release.
+The practice is defined against a specific production effect, so a team adopting
+it has to declare which effect its policy carries automatically. Deployment,
+release, and exposure are distinct; [Deployment, release, and
+exposure](continuous-integration-delivery-and-deployment.md#deployment-release-and-exposure)
+defines that vocabulary and the rule for classifying a workflow against it.
 
-A workflow practices continuous deployment when its normal policy
-automatically carries every qualifying change to the defined production
-effect. If automation merely uploads an artifact while activation routinely
-waits for a person, the practice is continuous delivery to that boundary, not
-continuous deployment of the user-visible change.
+Declaring the effect is what makes the practice assessable. It fixes what
+"qualifying" has to be sufficient for, which post-deployment evidence is
+relevant, and which controls — feature flags, staged rollout, traffic shifts,
+tenant scoping — are actually in the automated path. A team that never names
+the effect cannot tell an automated path that reaches users from one that
+quietly stops short of them.
 
 ## Workflow expression
 

@@ -3,14 +3,15 @@ type: Guide
 title: Authoring Changes
 description: Use when a bounded proposed or authorized software modification needs consistent motivation, outcome, scope, constraints, completion, verification, risks, and next action.
 tags: [change, authoring, outcome, scope, acceptance-criteria, verification, rollout, rollback]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Authoring Changes
 
-The workflow retains portable Change coordination from the earlier model while
-folding useful why-and-what content into one process-agnostic work item instead
-of requiring separate stages.
+This workflow keeps motivation, outcome, constraints, and delivery context in
+one process-agnostic [Change](changes.md) rather than requiring separate
+specification, design, and delivery records. Apply it once the item's role and
+boundary are settled.
 
 ## 1. Bind one Change
 

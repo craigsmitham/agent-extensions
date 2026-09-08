@@ -1,9 +1,9 @@
 ---
 type: Guide
 title: Analyzing requirement impact
-description: Traces a proposed requirement change through sources, dependents, realization, verification, validation, and operations.
+description: Traces a proposed requirement change through sources, dependents, realization, verification, validation, and operations. Use when a requirement change is proposed and its reach across dependents and existing evidence is not yet known.
 tags: [impact-analysis, change, traceability, evidence, dependency]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Analyzing requirement impact

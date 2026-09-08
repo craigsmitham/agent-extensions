@@ -42,7 +42,8 @@ test plan. Apply the shared assessment states and evidence rules in
 [Reviewing a codebase](../reviewing-a-codebase.md). The pillar definition and
 neighbor boundaries are in [Software quality
 pillars](../software-quality-pillars.md); the typed relationships below use
-[Cross-cutting concerns for software quality](../cross-cutting-concerns.md).
+[Cross-cutting relationships to the quality
+pillars](../cross-cutting-pillar-relationships.md).
 
 ## Default cross-cutting relationships
 

@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Knowledge management overview
 description: What knowledge management is responsible for and how authority, discovery, trust, and lifecycle form one system.
 tags: [knowledge-management, governance, authority, lifecycle, explanation]
 status: draft

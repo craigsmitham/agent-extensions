@@ -1,9 +1,9 @@
 ---
 type: Guide
 title: Resolving conflicts and open decisions
-description: Preserves requirement conflicts, options, authority, and decision evidence instead of hiding uncertainty in wording.
+description: Preserves requirement conflicts, options, authority, and decision evidence instead of hiding uncertainty in wording. Use when sources disagree, a needed decision is unmade, or wording is being smoothed over an unresolved question.
 tags: [conflict, decision, uncertainty, stakeholder, tradeoff]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Resolving conflicts and open decisions

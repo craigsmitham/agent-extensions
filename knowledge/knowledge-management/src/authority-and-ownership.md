@@ -1,5 +1,6 @@
 ---
 type: Explanation
+title: Authority and ownership
 description: Why a durable claim needs one canonical owner and how summaries, pointers, and local applications avoid competing definitions.
 tags: [authority, ownership, source-of-truth, canonical-source, knowledge-governance]
 status: draft

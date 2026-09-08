@@ -10,12 +10,33 @@ The collection is a source-reviewed and design-reviewed candidate. It supports
 bounded assessment and reporting; it does not certify product quality, release
 readiness, security, safety, compliance, or fitness.
 
-## Framework and use
+## Run a review
 
 - [Reviewing a codebase](reviewing-a-codebase.md) - Use when a repository needs a bounded quality review; frame product claims, assess applicable pillar criteria, apply relevant cross-cutting concerns, and preserve evidence and uncertainty without treating checklist completion as assurance.
+
+## The quality-outcome taxonomy
+
+Read the pillar definitions first; the boundary and research concepts explain
+what the ten deliberately exclude and why the set looks the way it does.
+
+- [Software quality pillars](software-quality-pillars.md) - Defines the ten candidate product-quality outcomes used by codebase review — suitability through intelligibility — with each pillar's desired outcome, inclusions, exclusions, nearest-neighbor boundary tests, and applicability rules.
+- [Quality layers outside the ten pillars](quality-layer-boundaries.md) - Explains where subqualities, supporting-artifact qualities, design principles, engineering-system capabilities, assurance mechanisms, and evidence properties belong once they are excluded from the ten product-quality pillars, using testing, reproducibility, delivery, observability, and a practitioner review system as worked routings.
+- [Research basis for the quality pillars](quality-pillar-research-basis.md) - Records why the ten pillars depart from ISO/IEC 25010 and its predecessors, which alternative quality models were considered and rejected, what the synthetic design review settled, and which claims about the taxonomy remain unvalidated.
+
+## The cross-cutting concern model
+
+Four concepts, read in order: what qualifies as cross-cutting, what the eight
+records mean, how they touch the pillars, and how the model itself is kept.
+
+- [Cross-cutting concerns for software quality](cross-cutting-concerns.md) - Defines what makes a concern cross-cutting rather than an eleventh quality pillar, names the eight canonical records and their three presentation roles, and supplies the subject, role, and admission tests every candidate record must pass.
+- [Cross-cutting concern records](cross-cutting-concern-records.md) - Definitions of the eight canonical cross-cutting records — claim context, specification, structure, lifecycle integrity, risk, assurance, feedback, and evidence — each with what it includes, what it excludes, and why it reaches across several quality pillars.
+- [Cross-cutting relationships to the quality pillars](cross-cutting-pillar-relationships.md) - Supplies the seven directed relationship types that replace a bare "relates to" edge, the compact concern-by-pillar discovery matrix, and the placement of testing, testability, and test-suite quality across those edges.
+- [Maintaining the cross-cutting concern model](cross-cutting-model-maintenance.md) - How the eight cross-cutting records should be stored, projected into views, trialled through classification, task, portability, and review-performance validation, and merged, split, or retired once observed use contradicts the current synthesis.
+
+## Evolve and validate the collection
+
 - [Maintaining codebase-review criteria](maintaining-codebase-review-criteria.md) - Use when adding, revising, evaluating, or retiring codebase-review criteria; preserve stable quality outcomes while evolving evidence aids, perspectives, and inspection methods independently.
-- [Software quality pillars](software-quality-pillars.md) - Research-grounded candidate taxonomy of ten singular software-product quality outcomes for codebase review, with explicit boundaries from design principles, engineering-system capabilities, assurance mechanisms, and evidence.
-- [Cross-cutting concerns for software quality](cross-cutting-concerns.md) - Research-grounded model of eight typed cross-cutting concern records and their conditional relationships to the ten software-product quality pillars.
+- [Validating codebase-review criteria](validating-codebase-review-criteria.md) - Use when deciding whether the review criteria may carry stronger claims than candidate design coherence; design comparative trials, measure coverage and false assurance against bound conditions, read the existing design-review evidence for what it does not establish, and retire criteria that fail.
 - [Codebase-review framework design review](framework-design-review.md) - Synthetic scenario and structural review of the ten-pillar outcome framework, its cross-cutting relationships, supporting test-suite assessment, and separation of criteria from review methods.
 
 ## Product-quality criteria

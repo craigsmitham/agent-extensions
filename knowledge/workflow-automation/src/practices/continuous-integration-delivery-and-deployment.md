@@ -20,7 +20,7 @@ sources:
   - id: delivery-vs-deployment
     resource: https://continuousdelivery.com/2010/08/continuous-delivery-vs-continuous-deployment/
     title: Continuous Delivery vs Continuous Deployment
-generated: { by: codex/gpt-5.6, at: 2026-08-21T22:05:43Z }
+generated: { by: claude/opus-5, at: 2026-09-08T12:14:18Z }
 ---
 
 # Continuous integration, delivery, and deployment
@@ -83,14 +83,21 @@ user-visible change.[^delivery-vs-deployment]
   workflow when the concern is the automation structure rather than the
   practice enacted over time.
 
-Continuous deployment is not universally preferable. Regulation, irreversible
-effects, coordinated physical events, contractual windows, or product strategy
-may require a deliberate release decision. Continuous delivery still improves
-those systems by making release timing the decision instead of whether the
-release process can be made to work.
+Continuous deployment is not universally preferable, and stopping at continuous
+delivery is a legitimate choice rather than an unfinished one. The constraints
+that make it the right stopping point are set out in [When not to adopt
+it](continuous-deployment-explainer.md#when-not-to-adopt-it).
 
 [^fowler-ci]: Martin Fowler — Continuous Integration
 [^dora-ci]: DORA — Continuous integration
 [^dora-cd]: DORA — Continuous delivery
 [^continuous-delivery-foundation]: Continuous Delivery
 [^delivery-vs-deployment]: Continuous Delivery vs Continuous Deployment
+
+## Related
+
+* [Continuous integration](continuous-integration-explainer.md)
+* [Continuous delivery](continuous-delivery-explainer.md)
+* [Continuous deployment](continuous-deployment-explainer.md)
+* [Workflow automation](../workflow-automation-explainer.md)
+* [Patterns](../patterns/)

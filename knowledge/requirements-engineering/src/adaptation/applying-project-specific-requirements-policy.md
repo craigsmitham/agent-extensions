@@ -1,13 +1,13 @@
 ---
 type: Guide
 title: Applying project-specific requirements policy
-description: Layers local terminology, authority, content obligations, rigor, and lifecycle rules over the portable requirements model.
+description: Layers local terminology, authority, content obligations, rigor, and lifecycle rules over the portable requirements model. Use when adopting this bundle in a project that has its own instructions, or when local policy and portable guidance appear to conflict.
 tags: [adaptation, policy, local-instructions, authority, rigor]
 sources:
   - id: portable-model
     resource: ../foundations/portable-requirements-engineering.md
     title: Portable requirements engineering
-generated: { by: codex/gpt-5.6, at: 2026-08-29T20:06:39Z }
+generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
 # Applying project-specific requirements policy

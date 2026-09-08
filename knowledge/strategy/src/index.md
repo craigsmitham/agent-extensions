@@ -28,7 +28,11 @@ capabilities, and value, informed by situational awareness and evidence.
 - [Wardley Mapping](wardley-mapping.md) — How Wardley Mapping combines user
   needs, dependency, and evolution to make strategic assumptions visible
   without choosing a strategy by itself.
-- [Developing and reviewing Wardley maps](developing-and-reviewing-wardley-maps.md) — Use this guide when a strategic question depends on a changing landscape, dependency chain, component evolution, or inertia that a map can make discussable.
+- [Developing and reviewing Wardley maps](developing-and-reviewing-wardley-maps.md) — Produce
+  and review a Wardley map whose question, evidence, movement, and inertia
+  survive challenge, when a strategic decision turns on a user-anchored
+  dependency chain and how its components may evolve rather than on
+  financial, organizational, or process structure.
 
 ## Value and learning
 

@@ -15,6 +15,6 @@ used by every development, authoring, review, and lifecycle guide.
 - [Verification and validation](verification-and-validation.md) - Distinguishes
   specification-quality and realization checks from validation of stakeholder
   need and intended use.
-- [One authority, many witnesses](one-authority-many-witnesses.md) - Establishes
-  one authoritative requirement identity with traceable representations and
-  evidence elsewhere.
+- [One authority, many witnesses](one-authority-many-witnesses.md) -
+  Establishes one authoritative requirement identity with traceable
+  representations and evidence elsewhere.

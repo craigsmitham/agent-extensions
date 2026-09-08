@@ -16,10 +16,13 @@ guide when the reader needs an authoring process.
 
 Documentation supports participation and judgment but does not contain the
 whole reality of a practice or make a standard authoritative merely by stating
-it.
+it. Read [Standard](standard.md) for what a standard is and [Standard
+authority and conformance](standard-authority-and-conformance.md) for whether
+one should govern a case and what satisfying it establishes.
 
 * [Practice](practice.md) - What a practice is — a socially sustained, purposive, normatively ordered, embodied, equipped, and historically transmitted structure that makes skilled action intelligible.
-* [Standard](standard.md) - What a standard is — a recognized, reusable basis for judging, specifying, or coordinating what is acceptable, fitting, or excellent within a defined field.
+* [Standard](standard.md) - What a standard is — a recognized, reusable basis for judging, specifying, or coordinating within a defined field, the kinds and levels of expectation standards carry, and how standards documents relate to practices and reader needs.
+* [Standard authority and conformance](standard-authority-and-conformance.md) - Where a standard's authority comes from and what conformance to it proves — warrant, standing, and application; criteria, evidence, and measurement; and the bounded claim a conformance statement can honestly make.
 
 ## Reader-need forms
 

@@ -12,8 +12,8 @@ sources:
     resource: wardley-mapping.md
     title: Strategy — Wardley Mapping
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # Strategy as hypothesis
@@ -26,8 +26,8 @@ experimental language.
 
 Make the consequential assumptions explicit. For each serious alternative,
 ask what would have to be true for it to work and what evidence would
-distinguish it from the others. Evidence is most useful when competing choices
-predict different observations.
+distinguish it from the others.[^martin-choice-process] Evidence is most useful
+when competing choices predict different observations.
 
 Strategic evidence may include customer behavior, economics, capability
 performance, competitor response, regulation, partner participation, or other
@@ -49,5 +49,6 @@ The purpose of treating strategy as hypothesis is disciplined learning, not
 false certainty or endless experimentation. Choices remain commitments until
 evidence justifies reconsidering them.
 
+[^martin-choice-process]: Martin, The Strategic Choice Structuring Process.
 [^strategy-wardley]: Wardley maps externalize time-sensitive landscape
     hypotheses; they do not turn estimates into facts.

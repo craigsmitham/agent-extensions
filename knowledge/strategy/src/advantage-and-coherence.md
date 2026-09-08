@@ -26,7 +26,8 @@ different; it must change behavior or economics that matter.
 Coherence makes advantage systemic. Where-to-play choices focus capability
 investment, capabilities enable the chosen way to win, and management systems
 reinforce those capabilities. Competitors may copy an isolated feature or
-practice more easily than an integrated set of mutually reinforcing choices.
+practice more easily than an integrated set of mutually reinforcing
+choices.[^martin-integration]
 
 Coherence does not mean permanence. A tightly fitted strategy can become
 brittle when its environment changes. The organization should know which
@@ -35,3 +36,9 @@ of choices.
 
 Evaluating one strategic choice in isolation misses the main question: whether
 the complete system creates distinctive value in the context actually chosen.
+
+Related: [The choice cascade](/choice-cascade.md) supplies the choices that must
+cohere, and [Value creation and capture](/value-creation-and-capture.md)
+distinguishes the value an advantage creates from the value it retains.
+
+[^martin-integration]: Martin, Overcoming the Integrative Strategy Challenge.

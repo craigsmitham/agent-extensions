@@ -1,5 +1,19 @@
 # Documentation craft update log
 
+## 2026-09-08
+
+- **Split**: Divided the oversized [Standard](explainers/standard.md) explainer
+  in two. The anchor concept keeps the definition, purposes, the norm/document
+  senses, what standards standardize, levels of expectation, standards within
+  practices, reader-need presentation, neighboring concepts, and failure modes.
+- **Creation**: Added [Standard authority and
+  conformance](explainers/standard-authority-and-conformance.md) carrying the
+  goods-to-judgment chain, warrant / standing / application, sources and degrees
+  of authority, criteria and evidence, and the limits of a conformance claim.
+- **Discovery**: Narrowed the Standard description to its retained scope, added
+  the new concept to the explainers index with a routing note, and cross-linked
+  the two concepts in both directions. No content was dropped in the split.
+
 ## 2026-08-26
 
 - **Action-document discovery**: Required Guide descriptions and other

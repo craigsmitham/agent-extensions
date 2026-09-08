@@ -9,8 +9,8 @@ sources:
     resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/strategy/src/value-creation-and-capture.md
     title: Strategy — Value creation
 generated:
-  by: codex/gpt-5.6
-  at: 2026-08-29T20:34:30Z
+  by: claude/opus-5
+  at: 2026-09-08T00:00:00Z
 ---
 
 # Value and demand model
@@ -61,9 +61,10 @@ model when actual choice or outcomes differ from expectations.
 General strategy owns choices about participation, advantage, capabilities,
 and value creation.[^strategy-value-creation] Product management applies those
 choices by forming and testing product meaning. Requirements engineering owns
-normative statements about what a system or service must achieve. Architecture
-and design own realization choices. Work management owns the tracker record
-used to coordinate a change.
+normative statements about what a system or service must achieve; [product
+meaning and requirements](product-meaning-and-requirements.md) explains that
+handoff. Architecture and design own realization choices. Work management owns
+the tracker record used to coordinate a change.
 
 These boundaries are about authority, not isolation. One initiative may draw
 on all of them, provided links do not silently transfer authority from one

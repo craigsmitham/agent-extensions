@@ -2,6 +2,36 @@
 
 ## 2026-09-08
 
+- **Restructure**: Split every concept that exceeded the repository's 300-line
+  limit into reader-recognizable siblings, preserving all content. The
+  cross-cutting model became four concepts ([the model and admission
+  gate](/codebase-review/cross-cutting-concerns.md), [the eight
+  records](/codebase-review/cross-cutting-concern-records.md), [typed pillar
+  relationships](/codebase-review/cross-cutting-pillar-relationships.md), and
+  [model maintenance](/codebase-review/cross-cutting-model-maintenance.md));
+  the pillar taxonomy became three ([the pillars](/codebase-review/software-quality-pillars.md),
+  [layers outside the ten](/codebase-review/quality-layer-boundaries.md), and
+  [the research basis](/codebase-review/quality-pillar-research-basis.md));
+  criteria maintenance separated from [criteria
+  validation](/codebase-review/validating-codebase-review-criteria.md); the
+  [task interface](/repository-task-interface.md) separated from [resolved
+  contract principles](/resolved-task-contract-principles.md), [invocation and
+  conformance principles](/task-invocation-and-conformance-principles.md), and
+  [adoption](/adopting-a-repository-task-interface.md); and the two test-level
+  guides separated their admission gates from [operating cross-boundary
+  suites](/operating-cross-boundary-test-suites.md) and [writing browser test
+  evidence](/writing-browser-test-evidence.md). Content that originated in the
+  earlier `codex/gpt-5.6` generations was carried over unchanged in substance;
+  the new files record this reorganization under `claude/opus-5`.
+- **Discovery**: Regrouped the bundle index around test-level choice, building
+  and operating admitted tests, and specification authority, and regrouped the
+  codebase-review index around running a review, the quality-outcome taxonomy,
+  the cross-cutting model, and collection evolution. Every concept is now
+  listed with its exact frontmatter description.
+- **References**: Repointed the ten product-quality criteria lists and
+  [Reviewing a codebase](/codebase-review/reviewing-a-codebase.md) at the
+  concepts that now own record definitions and typed pillar relationships.
+
 - **Executable specifications**: Added [Designing executable
   specifications](/designing-executable-specifications.md), which separates
   authority and audience from test level: admission gates for which rules earn
