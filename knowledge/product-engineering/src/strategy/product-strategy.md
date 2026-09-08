@@ -9,8 +9,8 @@ sources:
     resource: https://www.svpg.com/the-product-model-at-google/
     title: SVPG — The Product Model at Google
   - id: strategy-wardley-mapping
-    resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/product-engineering/src/strategy/wardley-mapping.md
-    title: Product engineering — Where to play — Wardley Mapping
+    resource: wardley-mapping.md
+    title: Where to play — Wardley Mapping
 generated:
   by: codex/gpt-5.6
   at: 2026-08-29T20:34:30Z
@@ -35,9 +35,9 @@ Product strategy is not a feature list, roadmap, release plan, slogan, or
 collection of unconstrained goals. Those artifacts may express consequences of
 the strategy, but they do not replace its choices.
 
-General strategy determines broader choices about participation, advantage,
-capabilities, and value creation. Product management owns how those choices
-become product context and product decisions. It does not need to redefine the
+The rest of this section determines the broader choices about participation,
+advantage, capabilities, and value creation. Product strategy is how those
+choices become product context and product decisions; it does not restate the
 general discipline in order to apply it.
 
 A Wardley map can make the surrounding landscape, dependency chain, component
@@ -50,6 +50,6 @@ meaningful results. Discovery and production evidence may challenge its
 assumptions; changing it deliberately is learning, while allowing unrelated
 local decisions to erode it is drift.
 
-[^strategy-wardley-mapping]: The product-engineering bundle's Where to play
-    section owns the portable explanation of Wardley Mapping and its
-    relationship to strategic choices.
+[^strategy-wardley-mapping]: [Wardley Mapping](wardley-mapping.md) explains
+    the technique and its relationship to strategic choices, and why a map
+    informs a choice without making it.

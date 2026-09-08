@@ -66,7 +66,7 @@ A job map decomposes progress into outcome-oriented steps without committing
 to a solution. A journey describes an experience over time with a current or
 proposed process. A use case describes interactions and outcomes at a system
 boundary. These views can complement a Job to Be Done, but none is a lossless
-substitute for the others. [Product meaning and requirements](product-meaning-and-requirements.md)
+substitute for the others. [Product meaning and requirements](../solution/product-meaning-and-requirements.md)
 covers how a use case bridges to requirements without becoming their authority.
 
 [^christensen-know-customers-jobs]: Christensen and coauthors frame jobs around

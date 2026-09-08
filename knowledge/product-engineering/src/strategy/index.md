@@ -2,10 +2,11 @@
 
 Where should we participate, and how do we win there?
 
-This section owns the organization-level choice of arena: where to participate,
-how advantage is won and sustained there, how the resulting value is created and
-captured, and what evidence keeps those choices honest. Choosing which problems
-to solve inside a chosen arena belongs to [What to solve](../problem/).
+This section owns the choice of arena: where to participate, how advantage is
+won and sustained there, how the resulting value is created and captured, what
+evidence keeps those choices honest, and how they become direction for a
+specific product. Which problems a team then pursues inside that direction, and
+what outcome would show it worked, belongs to [What to solve](../problem/).
 
 ## Start here
 
@@ -20,6 +21,9 @@ to solve inside a chosen arena belongs to [What to solve](../problem/).
 - [The choice cascade](choice-cascade.md) — How the Playing to Win choice
   cascade connects aspiration, participation, advantage, capabilities, and
   management systems.
+- [Product strategy](product-strategy.md) — How product strategy translates
+  broader strategic choices into product problems, differentiated value,
+  constraints, and decision context.
 - [Advantage and coherence](advantage-and-coherence.md) — How strategic
   advantage arises from a reinforcing system of choices that creates
   distinctive value and resists imitation.

@@ -10,7 +10,7 @@ sources:
     title: Roger L. Martin — The Strategic Choice Structuring Process
   - id: strategy-wardley
     resource: wardley-mapping.md
-    title: Strategy — Wardley Mapping
+    title: Where to play — Wardley Mapping
 generated:
   by: claude/opus-5
   at: 2026-09-08T00:00:00Z

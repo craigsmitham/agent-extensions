@@ -7,10 +7,10 @@ status: draft
 sources:
   - id: strategy-wardley
     resource: wardley-mapping.md
-    title: Strategy — Wardley Mapping
+    title: Where to play — Wardley Mapping
   - id: strategy-choice
     resource: choice-cascade.md
-    title: Strategy — The choice cascade
+    title: Where to play — The choice cascade
 generated:
   by: claude/opus-5
   at: 2026-09-08T00:00:00Z

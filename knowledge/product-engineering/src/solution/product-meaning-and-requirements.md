@@ -6,8 +6,8 @@ tags: [product-management, requirements, use-cases, traceability, authority]
 status: draft
 sources:
   - id: product-value-demand
-    resource: value-and-demand-model.md
-    title: Product Management — Value and Demand Model
+    resource: ../problem/value-and-demand-model.md
+    title: What to solve — Value and demand model
   - id: requirements-neighbors
     resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/requirements-engineering/src/foundations/requirements-and-neighboring-artifacts.md
     title: Requirements Engineering — Requirements and neighboring artifacts
@@ -71,6 +71,6 @@ consistency.[^product-value-demand]
 
 [^requirements-neighbors]: The Requirements Engineering bundle owns the
     portable boundary between requirements and neighboring artifacts.
-[^product-value-demand]: [Value and demand model](value-and-demand-model.md) —
+[^product-value-demand]: [Value and demand model](../problem/value-and-demand-model.md) —
     product meaning remains evidence-backed and revisable; a normative
     downstream artifact does not prove it true.

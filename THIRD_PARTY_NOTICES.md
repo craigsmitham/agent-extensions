@@ -36,12 +36,11 @@ or MDN documentation.
 
 ## Knowledge and management sources
 
-The `knowledge-management`, `product-management`, and `strategy` bundles
-synthesize ideas from public
-sources identified in each concept's provenance metadata. These include the
-FAIR Guiding Principles, W3C PROV, KCS, public agent-engineering guidance from
-Anthropic and OpenAI, Silicon Valley Product Group's product-model writing,
-Roger L. Martin's Playing to Win writing, and Harvard Business School's
-value-stick materials. The
-bundles and related rule packages contain original summaries and applications;
-they do not vendor those sources or reproduce their proprietary templates.
+The `knowledge-management` and `product-engineering` bundles synthesize ideas
+from public sources identified in each concept's provenance metadata. These
+include the FAIR Guiding Principles, W3C PROV, KCS, public agent-engineering
+guidance from Anthropic and OpenAI, Silicon Valley Product Group's
+product-model writing, Roger L. Martin's Playing to Win writing, and Harvard
+Business School's value-stick materials. The bundles and related rule packages
+contain original summaries and applications; they do not vendor those sources
+or reproduce their proprietary templates.

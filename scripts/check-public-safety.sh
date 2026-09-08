@@ -148,7 +148,6 @@ expected=(
   knowledge/field-notes
   knowledge/knowledge-management
   knowledge/product-engineering
-  knowledge/product-management
   knowledge/requirements-engineering
   knowledge/software-engineering
   knowledge/work-management

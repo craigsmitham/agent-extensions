@@ -28,22 +28,33 @@ beyond product engineering.
 
 ## Status
 
-Version 0.2.0 holds the first migrated section. [Where to play](src/strategy/)
-carries the eight concepts of the retired standalone `strategy` bundle; the
-remaining six sections carry their question, scope, and boundaries and hold no
-concepts yet.
+Version 0.3.0 holds two migrated sections and part of a third.
+[Where to play](src/strategy/) carries the eight concepts of the retired
+standalone `strategy` bundle plus product strategy, and
+[What to solve](src/problem/) carries the rest of the retired
+`product-management` bundle. The remaining sections carry their question,
+scope, and boundaries and hold no concepts yet, except for the single
+requirements concept now in [What to build](src/solution/).
 
 | Section | Source | State |
 | --- | --- | --- |
-| Where to play | `strategy` | migrated; that bundle is retired |
-| What to solve | `product-management` | pending |
-| What to build | `requirements-engineering`; design material is new | pending |
+| Where to play | `strategy`, `product-management` | migrated; both bundles are retired |
+| What to solve | `product-management` | migrated; that bundle is retired |
+| What to build | `requirements-engineering`; design material is new | partial |
 | How to build it | `software-engineering` | pending |
 | How to ship it | `work-management`, `workflow-automation` | pending |
 | How to run it | none; new material | pending |
 | How to learn | none committed; see below | pending |
 
-"What to build" carries a second, unsourced half. `requirements-engineering`
+"What to build" holds one migrated concept,
+[Product meaning and requirements](src/solution/product-meaning-and-requirements.md),
+which arrived with `product-management` because it explains where product
+meaning stops and a requirement begins. Reconcile it with
+`requirements-engineering` when that bundle migrates: that bundle still owns
+the portable boundary between requirements and neighboring artifacts, and the
+two accounts should not diverge.
+
+"What to build" also carries a second, unsourced half. `requirements-engineering`
 supplies elicitation, specification, review, and traceability, but the solution
 concept, fidelity, and interaction design areas have no existing bundle behind
 them and will be written from scratch. Architecture and technical design under

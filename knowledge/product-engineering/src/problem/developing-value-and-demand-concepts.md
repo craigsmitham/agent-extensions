@@ -7,10 +7,10 @@ status: draft
 sources:
   - id: product-value-demand
     resource: value-and-demand-model.md
-    title: Product Management — Value and Demand Model
+    title: What to solve — Value and demand model
   - id: product-jtbd
     resource: jobs-to-be-done.md
-    title: Product Management — Jobs to Be Done
+    title: What to solve — Jobs to Be Done
 generated:
   by: claude/opus-5
   at: 2026-09-08T00:00:00Z

@@ -12,8 +12,8 @@ sources:
     resource: https://www.svpg.com/build-to-learn-faq/
     title: SVPG — Build To Learn FAQ
   - id: product-value-demand
-    resource: value-and-demand/value-and-demand-model.md
-    title: Product Management — Value and Demand Model
+    resource: value-and-demand-model.md
+    title: What to solve — Value and demand model
 generated:
   by: claude/opus-5
   at: 2026-09-08T00:00:00Z
@@ -56,6 +56,6 @@ responsible for joining both.
 [^svpg-build-to-learn]: SVPG — Build To Learn FAQ, which distinguishes building
     to learn from building to earn and explains why a prototype need not carry
     production qualities.
-[^product-value-demand]: [Value and demand model](value-and-demand/value-and-demand-model.md)
+[^product-value-demand]: [Value and demand model](value-and-demand-model.md)
     requires evidence and explicit maturity for these concepts and their
     relationships.

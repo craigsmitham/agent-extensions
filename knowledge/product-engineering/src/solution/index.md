@@ -26,7 +26,15 @@ A requirement is not a rival to design. It is the form a design choice takes
 once it must survive being disputed, traced through change, and bound to
 verification.
 
+## Requirements and product meaning
+
+- [Product meaning and requirements](product-meaning-and-requirements.md) —
+  Where product meaning ends, requirements begin, and use cases provide a
+  bridge without becoming the sole authority.
+
 ## Planned scope
+
+The remaining areas hold no concepts yet.
 
 | Area | Scope |
 | --- | --- |

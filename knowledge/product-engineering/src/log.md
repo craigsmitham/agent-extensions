@@ -2,6 +2,44 @@
 
 ## 2026-09-08
 
+- **Migration**: Moved the nine concepts of the standalone `product-management`
+  bundle into this one and retired that bundle. Seven went to
+  [What to solve](problem/), [Product strategy](strategy/product-strategy.md)
+  to [Where to play](strategy/), and
+  [Product meaning and requirements](solution/product-meaning-and-requirements.md)
+  to [What to build](solution/). The problem section index replaces its
+  planned-scope table with the migrated concepts.
+- **Decision**: Retired `product-management` rather than keeping it beside this
+  bundle. Its four content areas were the four planned areas of What to solve,
+  so keeping both would have left two bundles owning outcomes, risk, and
+  discovery, which is the contradiction this corpus is meant to avoid. The
+  discipline survives as a topic, not as a section identity; sections are named
+  for questions, not for the people who answer them.
+- **Decision**: Product strategy sits in Where to play, not What to solve. It
+  is the rung of the choice cascade that turns an arena choice into product
+  direction, and it reads as strategy work rather than problem selection. The
+  section intro now says it owns that translation, and What to solve begins
+  where a team picks problems inside the resulting direction.
+- **Decision**: Product meaning and requirements moved to What to build,
+  because its subject is where product meaning stops and a normative statement
+  begins, and this bundle gives the requirement to the section that owns the
+  commitment to form. What to solve links to it rather than holding it.
+- **Structure**: Flattened the `value-and-demand/` subfolder into
+  [What to solve](problem/). A sub-index competing with the section index
+  splits discovery for no gain at this size; the subfolder's framing paragraph
+  became the section's Value and demand heading.
+- **Rename**: "Product management overview" became
+  [Product decisions and accountability](problem/overview.md). Its list of how
+  product work connects was a second telling of the seven questions, so it now
+  describes the loop this section holds and names the neighbors that own the
+  rest.
+- **Attribution**: Rewrote the source entries that pointed at
+  `product-management` paths or at this bundle by URL, so in-bundle references
+  are relative, and normalized the "Strategy — ..." reference titles left from
+  the strategy migration to "Where to play — ...".
+- **Boundary**: Discovery and delivery stays in What to solve as the pair of
+  work a product team joins. The mechanics of release belong to How to ship it
+  and production health to How to run it; the problem section index says so.
 - **Restructure**: Split the problem and solution questions apart and gave
   design a home. `product/` became `problem/` ("What to solve") and
   `requirements/` became `solution/` ("What to build"). No concepts moved;
@@ -87,3 +125,22 @@
 - **2026-08-20 — Strategic mapping**: Added a Wardley mapping draft connecting
   user need, value-chain visibility, evolution, movement, inertia, action, and
   explicit review of strategic hypotheses.
+
+### Migrated history from the `product-management` bundle
+
+- **2026-09-08 — Discovery**: The bundle root routed to the Value and demand
+  section instead of flattening its four concepts alongside it, and stated the
+  bundle's boundaries. That section index said what it owned and what the rest
+  of the bundle covered.
+- **2026-09-08 — Attribution**: Cited the previously declared but unreferenced
+  SVPG sources in the product management overview, Outcomes and evidence,
+  Discovery and delivery, Product risks, and Empowered product teams.
+- **2026-09-08 — Navigation**: In-bundle footnote references gained linked
+  titles, and Jobs to Be Done and Value and demand model linked to their
+  neighbors so a concept reached by search could reach the rest.
+- **2026-08-29 — Value and demand model**: Added portable Offering, Audience,
+  Need, Job to Be Done, and Value Proposition concepts, with authoring guidance
+  and a boundary between product meaning, behavioral views, requirements,
+  realization, and evidence. Tracker form, stage eligibility, controlled
+  cross-artifact relationships, and architecture-specific classification stayed
+  outside the bundle.

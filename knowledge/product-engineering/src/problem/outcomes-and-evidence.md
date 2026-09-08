@@ -9,8 +9,8 @@ sources:
     resource: https://www.svpg.com/product-model-concepts/
     title: SVPG — Product Model Concepts
   - id: product-value-demand
-    resource: value-and-demand/value-and-demand-model.md
-    title: Product Management — Value and Demand Model
+    resource: value-and-demand-model.md
+    title: What to solve — Value and demand model
 generated:
   by: claude/opus-5
   at: 2026-09-08T00:00:00Z
@@ -55,5 +55,5 @@ created.
 [^svpg-product-model-concepts]: SVPG — Product Model Concepts, which treats
     working to outcomes rather than output as a defining concept of the product
     model.
-[^product-value-demand]: [Value and demand model](value-and-demand/value-and-demand-model.md)
+[^product-value-demand]: [Value and demand model](value-and-demand-model.md)
     distinguishes product meaning from the outcomes used to test it.
