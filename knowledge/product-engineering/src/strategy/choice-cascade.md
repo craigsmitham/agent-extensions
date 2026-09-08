@@ -52,8 +52,8 @@ The framework is broadly applicable, but its language must fit the context.
 “Winning” for a public or social organization may mean achieving its purpose
 under constraints rather than defeating a market competitor.
 
-Related: [Advantage and coherence](/advantage-and-coherence.md) examines what
-makes the assembled choices reinforce one another.
+Related: [Advantage and coherence](/strategy/advantage-and-coherence.md)
+examines what makes the assembled choices reinforce one another.
 
 [^martin-cascade-origins]: Martin, Balanced Scorecard and Playing to Win.
 [^martin-choice-process]: Martin, The Strategic Choice Structuring Process —

@@ -37,8 +37,9 @@ of choices.
 Evaluating one strategic choice in isolation misses the main question: whether
 the complete system creates distinctive value in the context actually chosen.
 
-Related: [The choice cascade](/choice-cascade.md) supplies the choices that must
-cohere, and [Value creation and capture](/value-creation-and-capture.md)
+Related: [The choice cascade](/strategy/choice-cascade.md) supplies the choices
+that must cohere, and
+[Value creation and capture](/strategy/value-creation-and-capture.md)
 distinguishes the value an advantage creates from the value it retains.
 
 [^martin-integration]: Martin, Overcoming the Integrative Strategy Challenge.

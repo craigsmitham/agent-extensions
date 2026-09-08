@@ -147,10 +147,10 @@ expected=(
   knowledge/effect-v4
   knowledge/field-notes
   knowledge/knowledge-management
+  knowledge/product-engineering
   knowledge/product-management
   knowledge/requirements-engineering
   knowledge/software-engineering
-  knowledge/strategy
   knowledge/work-management
   knowledge/workflow-automation
   packs/docs

@@ -6,8 +6,8 @@ tags: [product-management, offering, audience, needs, jobs-to-be-done, value-pro
 status: draft
 sources:
   - id: strategy-value-creation
-    resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/strategy/src/value-creation-and-capture.md
-    title: Strategy — Value creation
+    resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/product-engineering/src/strategy/value-creation-and-capture.md
+    title: Product engineering — Where to play — Value creation
 generated:
   by: claude/opus-5
   at: 2026-09-08T00:00:00Z
@@ -70,5 +70,6 @@ These boundaries are about authority, not isolation. One initiative may draw
 on all of them, provided links do not silently transfer authority from one
 artifact to another.
 
-[^strategy-value-creation]: The Strategy bundle explains the broader value
-    creation system in which product offerings participate.
+[^strategy-value-creation]: The product-engineering bundle's Where to play
+    section explains the broader value creation system in which product
+    offerings participate.

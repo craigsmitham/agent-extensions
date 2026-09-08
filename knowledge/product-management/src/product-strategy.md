@@ -9,8 +9,8 @@ sources:
     resource: https://www.svpg.com/the-product-model-at-google/
     title: SVPG — The Product Model at Google
   - id: strategy-wardley-mapping
-    resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/strategy/src/wardley-mapping.md
-    title: Strategy — Wardley Mapping
+    resource: https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/product-engineering/src/strategy/wardley-mapping.md
+    title: Product engineering — Where to play — Wardley Mapping
 generated:
   by: codex/gpt-5.6
   at: 2026-08-29T20:34:30Z
@@ -50,5 +50,6 @@ meaningful results. Discovery and production evidence may challenge its
 assumptions; changing it deliberately is learning, while allowing unrelated
 local decisions to erode it is drift.
 
-[^strategy-wardley-mapping]: The Strategy bundle owns the portable explanation
-    of Wardley Mapping and its relationship to strategic choices.
+[^strategy-wardley-mapping]: The product-engineering bundle's Where to play
+    section owns the portable explanation of Wardley Mapping and its
+    relationship to strategic choices.

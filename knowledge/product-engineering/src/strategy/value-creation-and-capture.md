@@ -46,9 +46,10 @@ The stick is a reasoning model, not a promise that every quantity can be
 measured precisely. Its value lies in exposing whose value changed and whether
 an apparent gain created value or merely moved it.
 
-Related: [Advantage and coherence](/advantage-and-coherence.md) explains why a
-value position persists, and [The choice cascade](/choice-cascade.md) locates
-value creation within the how-to-win choice.
+Related: [Advantage and coherence](/strategy/advantage-and-coherence.md)
+explains why a value position persists, and
+[The choice cascade](/strategy/choice-cascade.md) locates value creation within
+the how-to-win choice.
 
 [^hbs-strategy-formulation]: Harvard Business School Online, How to Formulate a
     Successful Business Strategy — "The Value Stick and Value-Based Pricing".

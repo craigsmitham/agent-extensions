@@ -42,9 +42,9 @@ reveals constraints, while strategy determines which execution is coherent.
 Treating either as a substitute for the other produces activity without
 direction or direction without effect.
 
-Related: [Strategy as choice](/strategy-as-choice.md) states the test a
-commitment must pass, and [The choice cascade](/choice-cascade.md) names the
-five linked choices this overview summarizes.
+Related: [Strategy as choice](/strategy/strategy-as-choice.md) states the test a
+commitment must pass, and [The choice cascade](/strategy/choice-cascade.md)
+names the five linked choices this overview summarizes.
 
 [^martin-choice-process]: Martin, The Strategic Choice Structuring Process.
 [^hbs-business-strategy]: Harvard Business School Online, Business Strategy

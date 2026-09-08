@@ -152,7 +152,7 @@ Common misreadings include:
 - replacing domain, process, structural, financial, or risk models; and
 - preserving a workshop snapshot after its evidence expires.
 
-Related: [Developing and reviewing Wardley maps](/developing-and-reviewing-wardley-maps.md)
+Related: [Developing and reviewing Wardley maps](/strategy/developing-and-reviewing-wardley-maps.md)
 turns this model into a procedure for building and challenging a specific map.
 
 [^wardley-map-grammar]: Wardley's mapping chapter constructs a value chain from

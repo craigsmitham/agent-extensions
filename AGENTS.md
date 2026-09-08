@@ -1,7 +1,6 @@
 # Public agent extensions
 - Keep concepts and guidance coherent across extensions. Resolve contradictory
   terminology or claims before publishing.
-- Keep markdown files under 300 lines
 
 
 ## Field note subjects
@@ -10,7 +9,7 @@
 | --- | --- | --- | --- | --- |
 | axm-cli-interactions | survey | Sessions that directly run `axm` to complete work in this workspace or manually validate AXM behavior; automated test invocations excluded | — | Recurring notes support a specific target condition, or two triage reviews find no pattern |
 
-<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=4cb1e0ec5b17693404a69ae29eb2fb405e492401b3364c1b091a8ae2bf7a33de -->
+<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=8dc3eb0ac525668069de0e53232861507956d456dc5dd1f32c6e5d79d23b94fc -->
 ## Knowledge Bundles
 
 Use `axm knowledge concepts --help` to search, read, and explore these bundles.
@@ -29,10 +28,10 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/effect-v4 kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/field-notes kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/knowledge-management kind=knowledge -->
+<!-- axm:point v=1 ext=@craigsmitham/knowledge/product-engineering kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/product-management kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/requirements-engineering kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/software-engineering kind=knowledge -->
-<!-- axm:point v=1 ext=@craigsmitham/knowledge/strategy kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/work-management kind=knowledge -->
 <!-- axm:point v=1 ext=@craigsmitham/knowledge/workflow-automation kind=knowledge -->
 
@@ -42,10 +41,10 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [effect-v4](knowledge/effect-v4/src/index.md) | Checklists to consult when designing, implementing, maintaining, or reviewing Effect v4 TypeScript |
 | [field-notes](knowledge/field-notes/src/index.md) | Operational field-note practice for factual and diagnostic evidence capture, impact-aware triage, evidence-led findings, and verified corrective action |
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
+| [product-engineering](knowledge/product-engineering/src/index.md) | Portable product-engineering body of knowledge organized as seven practitioner questions from strategy through learning |
 | [product-management](knowledge/product-management/src/index.md) | Portable product management for value and demand, product strategy, outcomes, risks, empowered teams, discovery, delivery, and evidence |
 | [requirements-engineering](knowledge/requirements-engineering/src/index.md) | Portable requirements engineering for elicitation, analysis, specification, review, traceability, lifecycle, and evidence across project methods and tools |
 | [software-engineering](knowledge/software-engineering/src/index.md) | Portable engineering craft for evidence-backed codebase review, test architecture, and coherent repository execution surfaces |
-| [strategy](knowledge/strategy/src/index.md) | Strategy as coherent choices about participation, advantage, value, and capabilities, informed by situational awareness and evidence |
 | [work-management](knowledge/work-management/src/index.md) | Portable software work-item taxonomy, content contracts, templates, lifecycle, evidence, and tracker-neutral guidance |
 | [workflow-automation](knowledge/workflow-automation/src/index.md) | Platform-agnostic understanding of workflow automation through a common model, vendor mappings, recurring patterns, and established integration and delivery practices |
 <!-- axm:end v=1 region=knowledge -->
