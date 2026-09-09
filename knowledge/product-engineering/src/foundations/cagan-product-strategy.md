@@ -23,9 +23,7 @@ sources:
   - id: management
     resource: https://www.svpg.com/product-strategy-management/
     title: Marty Cagan — Product Strategy – Management
-generated:
-  by: codex/gpt-6
-  at: 2026-09-09T15:36:38Z
+generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
 ---
 
 # Marty Cagan's product strategy
@@ -41,6 +39,10 @@ connection. It follows Cagan's January–February 2020 SVPG articles. They state
 his advocated approach; they do not independently establish that it produces
 better results in every organization. The example below is fictional, and the
 connections to this bundle are an editorial interpretation.
+
+If the relationship to business strategy is unclear, read
+[Strategy perspectives and their relationships](strategy-perspectives.md#strategic-context-and-team-problems).
+It connects team problems to choices about advantage without requiring a handoff.
 
 ## Strategy connects a future to present choices
 
@@ -78,7 +80,8 @@ also consumes leadership attention, decisions, and coordination. Saying no to
 some work is insufficient if the remaining commitments still overwhelm the
 organization.[^focus]
 
-Consider a fictional equipment-rental service. Its vision is to let small
+Consider [Northbank Equipment](../northbank-equipment.md), the fictional rental
+service. Its vision is to let small
 contractors obtain the equipment they need without disrupting a job. Its current
 business objective is to increase repeat rentals. Leaders could distribute
 capacity across loyalty rewards, fleet expansion, account dashboards, and
@@ -177,24 +180,45 @@ it spans concerns this bundle separates into [How to build it](../engineering/)
 and [How to ship it](../delivery/). These are different organizing schemes,
 not a requirement for sequential handoffs.
 
-The account supports this bundle's connection between strategic direction,
-problem selection, solution exploration, and outcome evidence. It does not make
-OKRs or Cagan's coaching cadence mandatory, or by itself establish the business's
-competitive advantage. [Playing to Win: Lafley and Martin's approach to strategy](playing-to-win.md)
-develops the relationship among participation, advantage, capabilities, and
-management systems, including an editorial comparison with Cagan's account.
-[Value-based strategy](value-based-strategy.md) develops the economics of value
-creation and capture behind a proposed product improvement.
-[Jobs to Be Done](jobs-to-be-done.md) develops customer
-progress and unmet needs; [Wardley mapping](wardley-mapping/wardley-mapping.md)
-develops landscape and evolution; [Outcomes and evidence](../problem/outcomes-and-evidence.md)
-develops the relationship between shipped work and observed results.
+The account supports the connection between strategic direction, problem
+selection, solution exploration, and outcome evidence. It does not make OKRs or
+Cagan's coaching cadence mandatory, or by itself establish competitive
+advantage. [Strategy perspectives and their relationships](strategy-perspectives.md)
+compares its contribution with coherent strategic choices, value economics,
+landscape, and renewal, including how learning can reopen those questions.
 
 For the original argument, start with Cagan's overview. The focus and insights
 articles develop why particular problems deserve attention; actions and
 management explain how that reasoning reaches teams and stays connected to
 their work. Strategic Context locates strategy among the other information
 teams need to make decisions.
+
+## Engineering discoveries can change the problem investment
+
+Northbank's integration improvements make reliable confirmation plausible,
+but the later experiment finds that fresh reads do not prevent competing
+allocations. That distinction is consistent with an initial insight followed
+by new evidence. The [project scenario](alleman-performance-based-project-management.md#a-worked-example-reliable-rental-confirmation)
+examines the resulting scope and forecast decision; the [allocation episode](../engineering/northbank-allocation-change.md)
+shows a later bounded design.
+
+Platform work can be necessary to progress on the product problem. It still
+needs a reason and an owner: [unifying validation](../engineering/northbank-engineering-system.md)
+addresses omitted evidence, while replacing runtime plumbing addresses a
+specific maintenance burden. Neither should become an unlimited platform
+rewrite under the label of product strategy.
+
+## Continue exploring
+
+- [Shape Up: Ryan Singer's approach to shaping, betting, and building](shape-up.md#how-shape-up-fits-product-engineering)
+  examines the boundary between assigning a team a problem and assigning a
+  shaped solution concept, then connects investment to completion.
+- [Jobs to Be Done](jobs-to-be-done.md) deepens the customer-progress inquiry
+  behind a proposed team problem.
+- [Outcomes and evidence](../problem/outcomes-and-evidence.md) examines whether
+  delivered work produces the expected result.
+- The [strategic choices route](../reading-product-engineering.md#strategic-choices)
+  connects team focus back to advantage and landscape.
 
 [^overview]: Marty Cagan, [Product Strategy – Overview](https://www.svpg.com/product-strategy-overview/), February 17, 2020.
 [^context]: Marty Cagan, [Coaching – Strategic Context](https://www.svpg.com/coaching-strategic-context/), January 9, 2020.

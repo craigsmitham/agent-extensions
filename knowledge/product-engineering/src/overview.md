@@ -4,9 +4,7 @@ title: Product engineering overview
 description: How the seven lifecycle sections express an opinionated product-development practice, how Foundations supplies shared conceptual context, where concepts belong, and what stays outside the bundle.
 tags: [product-engineering, body-of-knowledge, information-architecture, organizing-scheme, design, explanation]
 status: draft
-generated:
-  by: codex/gpt-6
-  at: 2026-09-09T15:36:38Z
+generated: { by: codex/gpt-6, at: 2026-09-09T15:48:35Z }
 sources:
   - id: anthropic-agents
     resource: https://www.anthropic.com/engineering/building-effective-agents
@@ -64,6 +62,13 @@ Foundations is a companion collection for shared conceptual context. A reader
 can enter through a lifecycle question or through a concept they need to
 understand. Foundations is not an additional lifecycle stage or a prerequisite
 reading sequence.
+
+For optional sequences across these boundaries, use
+[Reading product engineering](reading-product-engineering.md). Its routes start
+with a reader's question and connect shared explanations to practical guidance.
+[Strategy perspectives and their relationships](foundations/strategy-perspectives.md)
+owns the comparative account of the strategy foundations; individual explainers
+retain their definitions and source interpretations.
 
 Use this placement rule:
 

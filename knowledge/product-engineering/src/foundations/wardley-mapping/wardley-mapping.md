@@ -38,9 +38,7 @@ sources:
   - id: book
     resource: https://learnwardleymapping.com/book/
     title: Wardley Maps — ebook and chapter directory, Learn Wardley Mapping
-generated:
-  by: codex/gpt-6
-  at: 2026-09-09T14:54:54Z
+generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
 ---
 
 # Wardley mapping
@@ -112,9 +110,9 @@ information flow alone does not establish evolution.[^map][^flow]
 
 ### An equipment-rental example
 
-The company in [Domain-driven design](../domain-driven-design.md#running-example-equipment-rental)
-competes on fulfilling bookings despite breakdowns or demand changes. This map
-scopes digital coordination of replacement equipment to keep work going.
+[Northbank Equipment](../../northbank-equipment.md) competes on fulfilling
+bookings despite breakdowns or demand changes. This map scopes digital
+coordination of replacement equipment to keep work going.
 
 ![Rental coordination map: fulfillment depends on substitution and allocation plus dispatch scheduling. Both use fleet records, which depend on compute. An automatic matching experiment could support fulfillment and depends on allocation.](assets/wardley-rental-map.svg)
 
@@ -433,19 +431,31 @@ and desired intervention. Fleet integration tests may expose missing allocation
 evidence; matching experiments may reveal transport constraints. Return those
 findings to the map and strategy cycle.[^practice]
 
+## A second view: the engineering system
+
+Northbank's delivery team needs to change and release dependable behavior.
+That user and need anchor a different map from the contractor view. Domain
+verification, build, package enforcement, artifact storage, deployment,
+telemetry, and recovery form dependencies of that engineering capability.
+
+![Northbank engineering map: dependable change depends on custom domain evidence and product delivery capabilities, which depend on product build and dependency tooling and utility artifact storage and compute.](assets/wardley-northbank-engineering.svg)
+
+Positions are fictional hypotheses about the selected components. The dashed
+scenario-generation experiment has unproven usefulness; it is not required
+Northbank functionality. Existing
+custom boundary code may recreate an established product capability; its
+implementation language or location does not make the underlying need novel.
+Conversely, a tool's existence does not establish coverage of Northbank's rules.
+The [worked engineering change](../../engineering/northbank-engineering-system.md)
+compares mechanisms, demonstrates their obligations, and retains uncovered
+custom behavior before retiring obsolete machinery. Its module, task, and
+deployment views have different meanings from this landscape.
+
 ## Relationships to product engineering
 
-Mapping supplies context while lifecycle sections own decisions:
-
-| Section | Contribution | What remains to establish |
-| --- | --- | --- |
-| [Where to play](../../strategy/) | Positions and possible advantage | Participation, value creation and capture |
-| [What to solve](../../problem/) | Needs and their supporting landscape | Problem, demand, and outcome evidence |
-| [What to build](../../solution/) | Boundaries and sourcing alternatives | Solution validation, constraints, requirements |
-| [How to build it](../../engineering/) | Differences in uncertainty | Architecture, feasibility, verification |
-| [How to ship it](../../delivery/) | Dependencies and stages of a move | Release sequence and workable transition |
-| [How to run it](../../operations/) | Critical dependencies and flows | Reliability, capacity, cost, security, responsibility |
-| [How to maintain it](../../maintenance/) | Evolution and inertia affecting investment | Existing-product knowledge and intervention consequences |
+For the connection to value, advantage, and team focus, read [Strategy perspectives and their relationships](../strategy-perspectives.md).
+The [lifecycle map](../../index.md#the-seven-lifecycle-sections) locates the
+practical decisions; mapping supplies context and does not settle their evidence.
 
 [Jobs to Be Done](../jobs-to-be-done.md) can correct the need anchoring a map.
 A functional-job map decomposes what someone seeks to accomplish; a Wardley
@@ -486,6 +496,16 @@ method suitability is a textual interpretation. Source color marking prior
 chapter coverage is omitted. Prose, arrangement, and the rental example are
 adaptations. Citations identify the corresponding public originals, not a
 claim to have reviewed every later revision.
+
+## Continue exploring
+
+- [Playing to Win](../playing-to-win.md) examines whether the arena, advantage,
+  capabilities, and systems behind a proposed move reinforce one another.
+- [Maintenance](../../maintenance/maintenance-and-the-life-of-software-products.md)
+  adds existing-product knowledge and the responsibilities of intervention.
+- The [strategic choices](../../reading-product-engineering.md#strategic-choices)
+  and [continuity and change](../../reading-product-engineering.md#continuity-and-change)
+  routes connect this landscape perspective to practical decisions.
 
 [^cycle]: Simon Wardley, *Wardley Maps*, chapter 1, On being lost.
 [^map]: Simon Wardley, *Wardley Maps*, chapter 2, Finding a path; component types and stages in figure 10.

@@ -32,9 +32,7 @@ sources:
   - id: cagan
     resource: cagan-product-strategy.md
     title: Marty Cagan's product strategy
-generated:
-  by: codex/gpt-6
-  at: 2026-09-09T15:36:38Z
+generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
 ---
 
 # Playing to Win: Lafley and Martin's approach to strategy
@@ -55,6 +53,10 @@ chapter-by-chapter account of the book. Their accounts establish what they
 advocate; the fictional rental-service example illustrates the reasoning rather
 than demonstrating the method's effectiveness.
 
+For how these choices relate to value creation, landscape, and team problems,
+read [Strategy perspectives and their relationships](strategy-perspectives.md).
+This explanation develops the choice cascade and the authors' choice-making process.
+
 ## Strategy as consequential choice
 
 For Lafley, winning connects superior value for a chosen customer with enough
@@ -63,8 +65,8 @@ choices about customers, location, distribution, offerings, and position in the
 value chain determine the business being pursued. Choosing where to stop
 participating is part of that reasoning.[^where]
 
-Consider the equipment-rental service from the [Cagan
-explainer](cagan-product-strategy.md). “Increase repeat rentals” names an outcome,
+Consider [Northbank Equipment](../northbank-equipment.md), also used in the
+[Cagan explainer](cagan-product-strategy.md). “Increase repeat rentals” names an outcome,
 but leaves several possible businesses open. The service could become the
 dependable choice for contractors whose crews cannot afford a missed delivery.
 It could instead become the economical choice for customers able to vary their
@@ -245,37 +247,16 @@ and outcomes change.[^evolution]
 
 ## Connections to product strategy
 
-The connection to [Marty Cagan's product strategy](cagan-product-strategy.md) is
-an editorial synthesis. Playing to Win makes the proposed arena, advantage,
-capabilities, and systems explicit. Cagan explains how product leaders use
-focus and insights to establish team problems and support their solution through
-active management.[^cagan]
+Playing to Win makes the proposed arena, advantage, capabilities, and systems
+explicit. [Cagan's product strategy](cagan-product-strategy.md) connects direction
+to focused team problems and active management.[^cagan] The comparison in
+[Strategy perspectives and their relationships](strategy-perspectives.md#strategic-context-and-team-problems)
+explains their overlap and how team learning can reopen the strategic choices.
 
-For the dependable rental strategy, reducing failed first reservations could be
-a strategically significant product problem. Under the economical strategy,
-filling otherwise idle rental slots might deserve more attention. Both services
-could report a goal of increased repeat use, but that shared metric would not
-make their strategic reasoning interchangeable.
-
-Learning also travels back. If the booking team discovers that availability
-cannot be made dependable within viable economics, that evidence can challenge
-the chosen advantage or arena. It is more than a request to reprioritize the
-roadmap. Conversely, a promising customer segment discovered in product work
-could suggest a new combination of scope and advantage.
-
-The approaches therefore overlap in choice, evidence, and management. This
-mapping does not require a rigid handoff from business strategists to product
-leaders, or claim that either framework supplies the other's complete method.
-The bundle's [Where to play](../strategy/) section owns participation,
-advantage, and value-capture decisions; [What to solve](../problem/) owns
-problem and outcome evidence. [Wardley mapping](wardley-mapping/wardley-mapping.md)
-adds landscape and evolution, while [Jobs to Be Done](jobs-to-be-done.md) adds
-customer progress and needs. These can inform choices without determining them.
-
-[Value-based strategy](value-based-strategy.md) examines the economics of value
-creation and capture and develops Oberholzer-Gee's different emphasis on
-reinforcing advantages and operational effectiveness. Its comparison with this
-account preserves those differences.
+The same comparison preserves the [different emphases on value creation and
+advantage](strategy-perspectives.md#value-creation-and-coherent-advantage) in
+Oberholzer-Gee's account. The bundle's [Where to play](../strategy/) section
+owns participation, advantage, and value-capture decisions.
 
 For further reading, Lafley's *Where to Play* and *How to Win* develop the
 customer and advantage choices. Martin's *Decoding the Strategy Choice Cascade*
@@ -283,6 +264,29 @@ explains why all five belong together; *Overcoming the Integrative Strategy
 Challenge* examines how to reason across them. Read his 2024 process account
 with the 2025 evolution article to distinguish the enduring logic from revised
 process steps.
+
+## Capabilities reach beyond application features
+
+For Northbank, the dependable-service choice reaches depot reserves, supplier
+relationships, substitution authority, allocation rules, and recovery. It also
+requires an engineering system capable of changing those rules without losing
+existing commitments. The [allocation change](../engineering/northbank-allocation-change.md)
+and [engineering-system change](../engineering/northbank-engineering-system.md)
+show those consequences at different resolutions.
+
+The strategy does not select a database or prescribe dependency tiers. Those
+choices need local evidence about obligations, integration, cost, and operation.
+If that evidence defeats the proposed promise, the paired where-to-play and
+how-to-win choices may need reconsideration.
+
+## Continue exploring
+
+- [Wardley mapping](wardley-mapping/wardley-mapping.md) exposes dependencies and
+  evolving conditions that can support or challenge a strategic possibility.
+- [Marty Cagan's product strategy](cagan-product-strategy.md) develops how
+  strategic direction informs focused team problems and ongoing management.
+- The [strategic choices route](../reading-product-engineering.md#strategic-choices)
+  connects these readings and branches into value and renewal.
 
 [^cascade]: Roger Martin, [Decoding the Strategy Choice Cascade](https://rogermartin.medium.com/decoding-the-strategy-choice-cascade-475d40555eb1), February 20, 2023.
 [^where]: A.G. Lafley, [Where to Play](https://medium.com/@leadingtowin/where-to-play-e84d7b7348cd), May 3, 2021.

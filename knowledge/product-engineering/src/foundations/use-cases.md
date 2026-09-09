@@ -14,9 +14,7 @@ sources:
   - id: slice-grow
     resource: "Alistair Cockburn, Slice the Problem, Grow the Solution, v0.95b, EPUB, Humans and Technology Press, 2026"
     title: Alistair Cockburn — Slice the Problem, Grow the Solution, v0.95b
-generated:
-  by: codex/gpt-6
-  at: 2026-09-09T15:23:02Z
+generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
 ---
 
 # Use cases: goals, behavior, and incremental delivery
@@ -33,6 +31,10 @@ recent books, with an original equipment-rental example. Connections to this
 bundle's requirements and product practices are identified separately from
 his account. The approach is available to the lifecycle; it is not a required
 method for every project.
+
+If the actor's goal is still an assumption, [Jobs to Be Done](jobs-to-be-done.md)
+helps investigate why it matters and which alternatives people consider. The
+use case develops behavior within a selected system boundary.
 
 ## What a use case explains, and why it matters
 
@@ -58,8 +60,8 @@ unknown business rules, or demonstrate that the resulting service is valuable.
 
 ### Running example: reserving rental equipment
 
-Consider the fictional rental company used in the
-[DDD explanation](domain-driven-design.md#running-example-equipment-rental).
+Consider [Northbank Equipment](../northbank-equipment.md), the fictional rental
+company also used in the [DDD explanation](domain-driven-design.md#running-example-equipment-rental).
 Customers want suitable equipment when their work requires it; the company
 must make promises it can fulfill, sometimes through substitutes. Assume it is
 considering a reservation application with an external payment service.
@@ -234,6 +236,11 @@ the following day is a new goal with its own entry conditions, refund policy,
 and possible failures. It can become another sea-level use case connected by
 the kite-level rental process. Treating all later events as extensions to the
 original attempt would obscure where that attempt ends.
+
+When a scenario leaves several plausible experiences open,
+[Buxton's design account](buxton-design.md#elaboration-and-reduction-developing-alternatives-and-making-choices)
+explains how sketching and comparing alternatives can inform the choice.
+A use case exposes behavior to consider; it does not uniquely specify an interface.
 
 ## Precision, readability, and progressive elaboration
 
@@ -432,6 +439,30 @@ These are Cockburn's explanations and practitioner accounts, not independent
 comparative evidence that the method improves every team's results. The
 mini-book points to *Writing Effective Use Cases* for fuller treatment; that
 earlier book was not part of the reviewed source set.
+
+## From an unfinished account to accepted behavior
+
+Northbank's reservation account deliberately leaves uncertain payment and
+post-authorization failure unresolved. The simpler staff-confirmation pilot
+and the later automatic allocation change are different scopes; this narrative
+does not promise both in one investment.
+
+The [commitment specimens](../solution/requirements/authoring/northbank-commitment-requirements.md)
+show competing stakeholder accounts, a fictional acceptance decision, and
+bounded replacement rules. The [allocation change](../engineering/northbank-allocation-change.md)
+then chooses code responsibilities and evidence. A customer's goal exposes a
+rule question; accepting the rule and choosing its transaction boundary are
+further decisions. If the provider cannot secure capacity, return to the
+solution and operating scope rather than silently weakening “confirmed.”
+
+## Continue exploring
+
+- [Requirements and neighboring artifacts](../solution/requirements/foundations/requirements-and-neighboring-artifacts.md)
+  explains when a behavioral account carries an accepted obligation.
+- [Domain-driven design](domain-driven-design.md) develops the language and
+  models that a scenario can help uncover.
+- The [behavior and commitment route](../reading-product-engineering.md#behavior-and-commitment)
+  continues from these distinctions into specifications and verification.
 
 [^mini-use-cases]: Alistair Cockburn, *The Mini-Book on Use Cases*, v1.1b, EPUB,
     Humans and Technology Press, 2025. Parts 1–4.

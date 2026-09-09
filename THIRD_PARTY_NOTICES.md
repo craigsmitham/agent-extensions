@@ -51,6 +51,12 @@ program, and public build-tool and browser-automation documentation. The
 bundles and related rule packages contain original summaries and applications;
 they do not vendor those sources or reproduce their proprietary templates.
 
+The product-engineering foundations also cite Google SRE material, NASA and
+DOE maintenance guidance, Parnas's software-aging work, Bill Buxton's design
+work, Fred Brooks's essays, Ryan Singer's Shape Up, Glen Alleman's project
+management writing, and Peter Drucker's business and renewal writing. Each
+concept records its specific sources and distinguishes original applications
+from the source authors' claims.
+
 Every name above is credited because a file that survives in the repository
-today cites it. Sources that reached this list through concepts since retired,
-including published Google SRE material, are not credited here.
+today cites it. Sources cited only by retired concepts are omitted.

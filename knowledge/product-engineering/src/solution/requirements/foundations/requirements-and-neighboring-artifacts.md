@@ -3,7 +3,7 @@ type: Reference
 title: Requirements and neighboring artifacts
 description: Distinguishes requirements from goals, designs, plans, tests, evidence, and work items.
 tags: [requirement, goal, design, use-case, test, evidence, work-item, pe-solution]
-generated: { by: codex/gpt-6, at: 2026-09-09T15:23:02Z }
+generated: { by: codex/gpt-6, at: 2026-09-09T15:53:30Z }
 ---
 
 # Requirements and neighboring artifacts
@@ -68,3 +68,13 @@ Choose by the artifact in hand. Neither column is a general treatment the other
 specializes, and neither is a summary of the other. How the two artifacts
 relate once both exist is covered by [Composing with work
 management](../adaptation/composing-with-work-management.md).
+
+## Continue exploring
+
+- [Domain-driven design](../../../foundations/domain-driven-design.md) develops
+  the language and models through which domain behavior is understood; the
+  model does not confer requirement authority by itself.
+- [Designing executable specifications](../../../engineering/designing-executable-specifications.md)
+  explains how selected obligations gain readable examples and executable evidence.
+- The [behavior and commitment route](../../../reading-product-engineering.md#behavior-and-commitment)
+  connects these distinctions to actor goals, construction, and validation.

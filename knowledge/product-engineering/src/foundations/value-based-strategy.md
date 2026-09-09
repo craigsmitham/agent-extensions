@@ -29,9 +29,7 @@ sources:
   - id: cagan
     resource: cagan-product-strategy.md
     title: Marty Cagan's product strategy
-generated:
-  by: codex/gpt-6
-  at: 2026-09-09T15:36:38Z
+generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
 ---
 
 # Value-based strategy: Oberholzer-Gee's approach to creating and sharing value
@@ -50,9 +48,14 @@ attributed perspectives, not a guarantee of performance. The rental examples,
 numbers, and comparisons with this bundle's other approaches are illustrative
 editorial reasoning.
 
+For the customer, offering, and need behind a value claim, begin with the
+[Value and demand model](../problem/value-and-demand-model.md). The account here
+adds the economics of creating and sharing value.
+
 ## Strategy begins with value creation
 
-An equipment-rental service could increase prices, improve reservation
+[Northbank Equipment](../northbank-equipment.md), the fictional rental service,
+could increase prices, improve reservation
 reliability, introduce predictable shifts, or coordinate maintenance with its
 suppliers. All might affect financial results, but through different mechanisms.
 A higher price may transfer more of an existing transaction's value to the
@@ -302,26 +305,12 @@ can support better service and higher customer WTP. He also assigns strategic
 importance to operational effectiveness, arguing that valuable management
 practices can diffuse slowly enough to support lasting advantage.[^interview]
 
-That emphasis should remain visible alongside [Playing to
-Win](playing-to-win.md), whose account develops a paired choice of arena and
-advantage, supported by capabilities and systems. The frameworks overlap, but
-their emphases are not identical.[^playing-to-win] The editorial connection is
-that the value stick helps examine the economics of a proposed advantage; it
-does not replace the work of making the five choices coherent. Equally, labeling
-a strategy *differentiation* does not establish how much value it creates.
-
-[Cagan's product strategy](cagan-product-strategy.md) connects focus and insights
-to team problems and active management.[^cagan] In the rental example, customer
-research might identify reliability as a value driver, strategic reasoning might
-select it as a basis for advantage, and a product team might investigate failed
-reservations. What that team learns can reopen the value hypothesis. This is a
-connection among perspectives, not a mandatory sequence of handoffs.
-
-This bundle's [Where to play](../strategy/) section owns participation,
-advantage, and value-capture decisions. [Jobs to Be Done](jobs-to-be-done.md)
-develops customer progress and needs; [Outcomes and evidence](../problem/outcomes-and-evidence.md)
-develops the connection between delivered work and observed results. This
-explainer supplies the shared account of the value stick and its limits.
+[Strategy perspectives and their relationships](strategy-perspectives.md#value-creation-and-coherent-advantage)
+compares this emphasis with Playing to Win's coherent choices and Cagan's
+focused team problems.[^playing-to-win][^cagan] It owns the comparative account;
+this explanation owns the value stick, its mechanisms, and its limits.
+The bundle's [Where to play](../strategy/) section owns the resulting
+participation, advantage, and value-capture decisions.
 
 For the author's rationale, start with the 2021 Working Knowledge interview.
 The Parlor Room transcript explains participation thresholds and job quality;
@@ -330,6 +319,29 @@ Value* develops value drivers and comparative maps. The HBS Online articles
 supply worked explanations of the stick, WTP/WTS, and complements. Their
 occasional pricing-oriented framing is narrower than the strategy discussion
 developed here.
+
+## Follow the economics into engineering choices
+
+Northbank might replace duplicated CI configuration or obsolete telemetry
+plumbing to release engineering capacity for fulfillment work. That is a
+hypothesis about the cost and opportunity of an intervention. Deleted lines
+are not customer surplus, and a faster pipeline is not proof that the service
+became more valuable. The [engineering-system case](../engineering/northbank-engineering-system.md)
+keeps replacement evidence and observed maintenance effort separate from
+Northbank's economic and demand claims.
+
+The dollar amounts above are independent numerical exhibits under their stated
+assumptions. They are not Northbank financial results or inputs to the project
+budget and KPI examples elsewhere in the case.
+
+## Continue exploring
+
+- [Jobs to Be Done](jobs-to-be-done.md) investigates customer circumstances
+  and alternatives behind a proposed value driver.
+- [Outcomes and evidence](../problem/outcomes-and-evidence.md) examines the
+  observed results and causal assumptions of a value hypothesis.
+- The [value and evidence route](../reading-product-engineering.md#value-and-evidence)
+  connects economic reasoning to product meaning and strategic choice.
 
 [^interview]: Felix Oberholzer-Gee interviewed by Danielle Kost, [A Simple Question That Can Guide Companies to Epic Success](https://www.library.hbs.edu/working-knowledge/a-simple-question-that-can-guide-companies-to-epic-success), April 20, 2021.
 [^frameworks]: Felix Oberholzer-Gee, [The Frameworks of Business Strategy](https://online.hbs.edu/podcast/felix-oberholzer-gee-on-the-frameworks-of-business-strategy), Parlor Room, December 2, 2024; HBS-provided machine-generated transcript.
