@@ -16,6 +16,10 @@ Deciding which of them is worth solving is a loop rather than a sequence.
 Evidence from real use returns to this section and can reopen a problem the
 shipped solution was meant to close.
 
+## Strategic direction
+
+- [Marty Cagan's product strategy](../foundations/cagan-product-strategy.md) — How Marty Cagan connects product vision and business objectives to team problems through focus, insights, actions, and active management, with discovery and delivery feeding learning back into strategy.
+
 ## Value and demand
 
 A product decision needs a shared account of what is offered, for whom, what

@@ -7,8 +7,9 @@ that practice.
 
 Start at the [discovery map](src/index.md). Open
 [Foundations](src/foundations/) for shared explanations of Jobs to Be Done,
-use cases, domain-driven design, Wardley mapping, and Drucker's organizational
-renewal, or enter through a lifecycle question below.
+value-based strategy, Playing to Win, Cagan's product strategy, use cases, domain-driven design,
+Wardley mapping, and Drucker's organizational renewal, or enter through a
+lifecycle question below.
 
 | Section | Question |
 | --- | --- |
@@ -61,8 +62,8 @@ went.
 
 | Section | Source | State |
 | --- | --- | --- |
-| Foundations | `product-management`; Cockburn's use-case and incremental-development books; primary DDD sources; Simon Wardley's book; Drucker's writings and Drucker Institute material | Jobs to Be Done, use cases, domain-driven design, Wardley mapping, and organizational renewal explanations |
-| Where to play | `strategy`, `product-management` | Both bundles retired, and the migrated concepts have since been retired too, leaving scope, boundaries, and the value stick |
+| Foundations | `product-management`; Oberholzer-Gee's interviews and HBS value-strategy explanations; Lafley and Martin's strategy articles; Cagan's SVPG strategy articles; Cockburn's use-case and incremental-development books; primary DDD sources; Simon Wardley's book; Drucker's writings and Drucker Institute material | Jobs to Be Done, value-based strategy, Playing to Win, Cagan's product strategy, use cases, domain-driven design, Wardley mapping, and organizational renewal explanations |
+| Where to play | `strategy`, `product-management` | Both bundles retired, and the migrated concepts have since been retired too; scope, boundaries, and routes to shared foundations remain |
 | What to solve | `product-management` | Migrated; that bundle retired. Two concepts; Jobs to Be Done now lives in Foundations |
 | What to build | `requirements-engineering`, `product-management` | Requirements migrated and that bundle retired; the design half is unwritten |
 | How to build it | `software-engineering` | Migrated and that bundle retired; two of five areas are unwritten |
@@ -98,9 +99,10 @@ attempted.
 Two more gaps of the same kind sit outside that table. The design half of
 "What to build" — solution concept, resolution and fidelity, interaction
 design, and constraint as design input — has no existing bundle behind it and
-will be written from scratch. "Where to play" holds the value stick, its
-non-responsibilities, and routes to the Wardley mapping foundation and public
-strategy sources; decision guides remain unwritten.
+will be written from scratch. "Where to play" holds its scope,
+non-responsibilities, and routes to value-based strategy, Playing to Win, Cagan,
+and Wardley mapping foundations and public strategy sources; decision guides
+remain unwritten.
 
 A section with no concepts still states its question, its scope, and its
 boundaries. That is enough to place a concept and to keep neighboring sections

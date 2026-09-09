@@ -9,6 +9,9 @@ relationship between shared explanations and lifecycle guidance.
 
 ## Concepts
 
+- [Value-based strategy: Oberholzer-Gee's approach to creating and sharing value](value-based-strategy.md) — How Felix Oberholzer-Gee's value-based strategy connects customer, employee, and supplier value through the value stick, value drivers, and competitive choices, distinguishing value creation from capture.
+- [Playing to Win: Lafley and Martin's approach to strategy](playing-to-win.md) — How Lafley and Martin's Playing to Win connects five strategic choices into a coherent approach to advantage, and how possibilities, assumptions, tests, and learning support commitment and revision.
+- [Marty Cagan's product strategy](cagan-product-strategy.md) — How Marty Cagan connects product vision and business objectives to team problems through focus, insights, actions, and active management, with discovery and delivery feeding learning back into strategy.
 - [Drucker's four disciplines of organizational renewal](drucker-organizational-renewal.md) — How organized abandonment, continuous improvement, exploiting success, and systematic innovation work together to sustain present performance and create tomorrow, with piloting to test proposed changes.
 - [Jobs to Be Done](jobs-to-be-done.md) — How Jobs to Be Done connects customer progress, functional objectives, switching, and unmet needs; how to frame jobs, distinguish interpretations, and connect research evidence to product decisions.
 - [Use cases: goals, behavior, and incremental delivery](use-cases.md) — How Cockburn's approach to use cases connects actor goals, system boundaries, success and failure scenarios, organizational alignment, and incremental delivery through user stories and story maps.
