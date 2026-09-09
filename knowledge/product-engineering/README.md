@@ -6,8 +6,9 @@ operations and maintenance. Foundations supplies the shared concepts that inform
 that practice.
 
 Start at the [discovery map](src/index.md). Open
-[Foundations](src/foundations/) for shared explanations of Jobs to Be Done and
-domain-driven design, or enter through a lifecycle question below.
+[Foundations](src/foundations/) for shared explanations of Jobs to Be Done,
+domain-driven design, and Drucker's organizational renewal, or enter through a
+lifecycle question below.
 
 | Section | Question |
 | --- | --- |
@@ -60,7 +61,7 @@ went.
 
 | Section | Source | State |
 | --- | --- | --- |
-| Foundations | `product-management`; primary DDD sources | Jobs to Be Done, moved from What to solve; a new domain-driven design explanation |
+| Foundations | `product-management`; primary DDD sources; Drucker's writings and Drucker Institute material | Jobs to Be Done, domain-driven design, and organizational renewal explanations |
 | Where to play | `strategy`, `product-management` | Both bundles retired, and the migrated concepts have since been retired too, leaving scope, boundaries, and the value stick |
 | What to solve | `product-management` | Migrated; that bundle retired. Two concepts; Jobs to Be Done now lives in Foundations |
 | What to build | `requirements-engineering`, `product-management` | Requirements migrated and that bundle retired; the design half is unwritten |

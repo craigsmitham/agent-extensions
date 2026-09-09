@@ -2,6 +2,8 @@
 
 ## 2026-09-09
 
+- **Draft**: Added [Drucker's four disciplines of organizational renewal](foundations/drucker-organizational-renewal.md), a short explanation of abandonment, improvement, exploiting success, and innovation as parallel responsibilities. Included an illustrative library example, piloting as a method for testing changes, source attribution, and routes to product-engineering decisions. Updated Foundations and bundle discovery.
+
 - **Rewrite**: Renamed the maintenance introduction to [Maintenance and the life of software products](maintenance/maintenance-and-the-life-of-software-products.md). Grounded the explanation in care, continuity, skilled attention, intervention, sustaining labor, and endings; connected those perspectives to software through attributed sources and a recurring illustrative invoice service. Updated discovery and inbound links.
 
 ## 2026-09-08
