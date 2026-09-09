@@ -11,6 +11,7 @@ relationship between shared explanations and lifecycle guidance.
 
 - [Drucker's four disciplines of organizational renewal](drucker-organizational-renewal.md) — How organized abandonment, continuous improvement, exploiting success, and systematic innovation work together to sustain present performance and create tomorrow, with piloting to test proposed changes.
 - [Jobs to Be Done](jobs-to-be-done.md) — How Jobs to Be Done connects customer progress, functional objectives, switching, and unmet needs; how to frame jobs, distinguish interpretations, and connect research evidence to product decisions.
+- [Use cases: goals, behavior, and incremental delivery](use-cases.md) — How Cockburn's approach to use cases connects actor goals, system boundaries, success and failure scenarios, organizational alignment, and incremental delivery through user stories and story maps.
 - [Domain-driven design](domain-driven-design.md) — How domain-driven design connects domain knowledge, models, and software through shared language, subdomain classification, bounded contexts, tactical patterns, and continuing model refinement.
 - [Wardley mapping](wardley-mapping/) — Needs, dependencies, evolution, and strategic action, including key terms, climatic patterns, doctrine, and situational-awareness reflection.
 

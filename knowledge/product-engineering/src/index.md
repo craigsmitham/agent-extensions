@@ -39,15 +39,15 @@ yet, and no section is finished. Depth follows where the material came from, not
 where it matters most: the two questions a practitioner reaches first are the
 two with the least written, since Where to play holds no concepts at all and
 What to solve holds two. Foundations holds shared explanations of Jobs to Be
-Done, domain-driven design, Wardley mapping, and Drucker's organizational renewal.
-A section with no concepts still
-carries its question, its scope, and the boundaries that keep its neighbors
+Done, use cases, domain-driven design, Wardley mapping, and Drucker's
+organizational renewal. A section with no concepts still carries its question,
+its scope, and the boundaries that keep its neighbors
 honest, so it is worth reading to find out where something belongs, not to find
 out how to do it.
 
 | Section | What it holds today |
 | --- | --- |
-| [Foundations](foundations/) | Jobs to Be Done, domain-driven design, Wardley mapping, and Drucker's organizational renewal; shared conceptual context for the lifecycle |
+| [Foundations](foundations/) | Jobs to Be Done, use cases, domain-driven design, Wardley mapping, and Drucker's organizational renewal; shared conceptual context for the lifecycle |
 | [Where to play](strategy/) | No concepts. Scope, non-responsibilities, and the value stick, with routes to the Wardley mapping foundation and public strategy sources |
 | [What to solve](problem/) | Two concepts: the value and demand model, and outcomes and evidence. The four product risks are stated in the section index; Jobs to Be Done is linked from Foundations |
 | [What to build](solution/) | Requirements craft in depth under [Requirements](solution/requirements/); the design half of the section is not yet written |

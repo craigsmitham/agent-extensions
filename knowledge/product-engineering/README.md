@@ -7,8 +7,8 @@ that practice.
 
 Start at the [discovery map](src/index.md). Open
 [Foundations](src/foundations/) for shared explanations of Jobs to Be Done,
-domain-driven design, Wardley mapping, and Drucker's organizational renewal, or
-enter through a lifecycle question below.
+use cases, domain-driven design, Wardley mapping, and Drucker's organizational
+renewal, or enter through a lifecycle question below.
 
 | Section | Question |
 | --- | --- |
@@ -61,7 +61,7 @@ went.
 
 | Section | Source | State |
 | --- | --- | --- |
-| Foundations | `product-management`; primary DDD sources; Simon Wardley's book; Drucker's writings and Drucker Institute material | Jobs to Be Done, domain-driven design, Wardley mapping, and organizational renewal explanations |
+| Foundations | `product-management`; Cockburn's use-case and incremental-development books; primary DDD sources; Simon Wardley's book; Drucker's writings and Drucker Institute material | Jobs to Be Done, use cases, domain-driven design, Wardley mapping, and organizational renewal explanations |
 | Where to play | `strategy`, `product-management` | Both bundles retired, and the migrated concepts have since been retired too, leaving scope, boundaries, and the value stick |
 | What to solve | `product-management` | Migrated; that bundle retired. Two concepts; Jobs to Be Done now lives in Foundations |
 | What to build | `requirements-engineering`, `product-management` | Requirements migrated and that bundle retired; the design half is unwritten |

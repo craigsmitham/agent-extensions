@@ -54,6 +54,10 @@ artifacts](requirements/foundations/requirements-and-neighboring-artifacts.md).
 is answered: an offering, an audience, a need, a job, and a value proposition
 carry no obligation until one is written as a requirement someone can dispute.
 
+## Shared foundations
+
+- [Use cases: goals, behavior, and incremental delivery](../foundations/use-cases.md) — How Cockburn's approach to use cases connects actor goals, system boundaries, success and failure scenarios, organizational alignment, and incremental delivery through user stories and story maps.
+
 ## Planned scope
 
 The design areas hold no concepts yet.

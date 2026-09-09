@@ -2,6 +2,8 @@
 
 ## 2026-09-09
 
+- **Draft**: Added [Use cases: goals, behavior, and incremental delivery](foundations/use-cases.md), grounded in Cockburn's *The Mini-Book on Use Cases* v1.1b, *Unifying User Stories, Use Cases, and Story Maps* second edition, and *Slice the Problem, Grow the Solution* v0.95b. Developed actors, boundaries, goal levels, scenarios, extensions, precision, and incremental growth through an original rental example. Connected stories, maps, requirements, DDD, and verification; clarified that accepted use cases may express normative behavioral requirements. Updated Foundations, What to build, and bundle discovery.
+
 - **Draft**: Added [Drucker's four disciplines of organizational renewal](foundations/drucker-organizational-renewal.md), a short explanation of abandonment, improvement, exploiting success, and innovation as parallel responsibilities. Included an illustrative library example, piloting as a method for testing changes, source attribution, and routes to product-engineering decisions. Updated Foundations and bundle discovery.
 
 - **Integrate concepts**: Used the EPUB's surrounding discussions to integrate the seven tables into [Wardley mapping](foundations/wardley-mapping/wardley-mapping.md): key terms, component evolution, climatic patterns and method suitability, doctrine, learning recap, and situational-awareness reflection. Removed the separate book-figure reference and its discovery entry. Kept full source entries and qualifications, explained the climate/doctrine distinction, and omitted source highlighting that marked chapter coverage rather than priority. The integrated explainer meets the 500-line limit.
