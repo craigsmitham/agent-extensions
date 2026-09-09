@@ -2,6 +2,19 @@
 
 ## 2026-09-08
 
+- **Explanation craft**: Expanded [Explanation explainer](explainers/explanation.md)
+  with principles for conceptual structure, consequential distinctions,
+  classification judgment, examples that develop reasoning, fair treatment of
+  perspectives, implications and limits, and assessable understanding outcomes.
+  These are practical lessons from the DDD and JTBD authoring cases, not a
+  universal outline or a claim of evaluated reader comprehension.
+- **Authoring**: Revised [Explanation guide](guides/explanation.md) to apply the
+  principles through outcome definition, concept mapping, source comparison,
+  outline design, example development, and review. Clarified that practical
+  criteria and structured comparisons can serve explanation; refreshed both
+  index previews and qualified the matching rule of thumb in
+  [Reference explainer](explainers/reference.md).
+
 - **Split**: Divided the oversized [Standard](explainers/standard.md) explainer
   in two. The anchor concept keeps the definition, purposes, the norm/document
   senses, what standards standardize, levels of expectation, standards within

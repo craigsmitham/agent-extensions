@@ -1,9 +1,12 @@
 ---
 type: Explanation
 title: Product engineering overview
-description: How this body of knowledge is organized as six practitioner questions, why that scheme was chosen over lifecycle or artifact schemes, how deep the scheme runs and what a subtree may be named for, which seventh question was tried and retired, where design fits, and what stays outside it.
+description: How the seven lifecycle sections express an opinionated product-development practice, how Foundations supplies shared conceptual context, where concepts belong, and what stays outside the bundle.
 tags: [product-engineering, body-of-knowledge, information-architecture, organizing-scheme, design, explanation]
 status: draft
+generated:
+  by: codex/gpt-6
+  at: 2026-09-09T01:56:21Z
 sources:
   - id: anthropic-agents
     resource: https://www.anthropic.com/engineering/building-effective-agents
@@ -15,12 +18,13 @@ sources:
 
 # Product engineering overview
 
-This bundle collects the portable craft of building software products. It is
-organized around the questions a practitioner is actually facing, because that
-is how both people and agents reach for knowledge: by the problem in front of
-them, not by the file a claim happens to live in.
+This bundle collects the portable craft of building software products. Its seven
+lifecycle sections express an opinionated development practice, from strategy
+through operations and maintenance. Each section is named for the question a
+practitioner is facing. [Foundations](foundations/) supplies the shared concepts that help
+readers understand and apply that practice across the lifecycle.
 
-## The six questions
+## The seven lifecycle sections
 
 | Question | Section | What it owns |
 | --- | --- | --- |
@@ -30,39 +34,62 @@ them, not by the file a claim happens to live in.
 | How do we construct and verify what we committed to? | How to build it | Technical design, construction, and evidence of behavior |
 | How does a change reach production safely and predictably? | How to ship it | The movement of change toward release |
 | How does the product stay healthy, secure, and affordable in production? | How to run it | Production reality, including incident response and what an incident teaches |
+| What does caring for an existing product involve as its circumstances change? | How to maintain it | Care, understanding, intervention, and responsibility for existing products |
 
 The order is a value stream, but retrieval does not depend on it. Each section
 index stands alone for a reader who arrives through search, and each names the
 neighbor that owns the adjacent concern.
 
+[How to maintain it](maintenance/) applies throughout a product's working life;
+its position in this map is not a final handoff. It owns the reasoning specific
+to evolving existing software. Technical construction and verification remain
+in How to build it, release in How to ship it, and production health and live
+decommissioning in How to run it. The
+[maintenance introduction](maintenance/maintenance-and-the-life-of-software-products.md#reading-further-and-connections-within-product-engineering)
+explains the boundary.
+
 Sections are not equally developed. The map in [the discovery
 index](index.md) says which ones hold concepts today and which hold only their
 question, scope, and boundaries.
 
-## Why questions rather than stages or artifacts
+## Lifecycle and shared foundations
 
-Several schemes could organize this material. Each was considered and set aside.
+The seven sections organize the decisions, practices, and evidence of this
+product-development lifecycle. Their question-shaped names make those decisions
+easy to find. The lifecycle is iterative: production evidence can reopen the
+problem, and engineering discoveries can change the solution. Its order does
+not require sequential approval gates or completed handoffs.
 
-- **Lifecycle or activity**, in the manner of requirements, design, construction,
-  testing, and maintenance. Familiar, but cross-cutting concerns such as
-  security and evidence then repeat inside every stage, and the sequence reads
-  as though the phases were separable in time.
-- **Quality outcomes**, such as correctness, reliability, and evolvability.
-  These make an excellent review rubric and a poor partition, because a single
-  practice usually serves several outcomes at once.
-- **Artifact type**, such as code, tests, specifications, and work items. Every
-  item gets one obvious home, but practices that span artifacts have none, and
-  the result drifts toward tool documentation.
-- **Scale**, from statement through module to organization. Useful for design
-  material, weak for everything about process and people.
-- **Feedback loop**, such as sense, decide, act, verify, and learn. Elegant and
-  stable, but almost all content lands under a single node.
+Foundations is a companion collection for shared conceptual context. A reader
+can enter through a lifecycle question or through a concept they need to
+understand. Foundations is not an additional lifecycle stage or a prerequisite
+reading sequence.
 
-Question-shaped sections avoid these failures. A concept belongs where a reader
-would go looking for it, and the boundary between two sections is a difference
-the reader already recognizes.
+Use this placement rule:
 
-## The seventh question, tried and retired
+- Put a shared explanation in Foundations when it informs several lifecycle
+  decisions and is useful to understand independently of any one section.
+- Put guidance for a particular lifecycle decision in the section that owns
+  that decision, and link to the shared explanation.
+- Keep an explanation with its lifecycle section when its scope is local to
+  that section. A concept does not move merely because another section cites it.
+
+[Jobs to Be Done](foundations/jobs-to-be-done.md) is the first shared foundation.
+Its explanation supplies vocabulary for problem framing, solution comparison,
+and outcome evaluation. Guidance on how to make each decision belongs with
+that decision's lifecycle section.
+
+Explaining an approach does not prescribe adopting it in full. A foundation
+should state where it informs this practice, which elements are adopted, and
+which remain optional or contextual. Concepts earn a place by supporting the
+development approach; Foundations is not a general encyclopedia of methods.
+
+Every explanation has one canonical home. Indexes and links expose it from
+other sections without copying its definition. Quality outcomes, artifacts,
+and knowledge forms remain useful discovery facets rather than competing
+lifecycle partitions.
+
+## How to learn, tried and retired
 
 An earlier shape had a seventh section, How to learn: how do we notice what
 happened, keep what we learned, and retire what is stale? It has been retired,
@@ -94,33 +121,29 @@ Every clause of the retired question now has an owner.
 | Noticing friction in how work actually goes | The `field-notes` bundle |
 | Keeping a claim trustworthy and retiring it when stale | The `knowledge-management` bundle |
 
-There is an irony worth stating. The feedback loop was rejected above as an
-organizing scheme because almost all content would land under a single node. As
-a section rather than a scheme, the inverse happened: almost none did. The test
-this overview sets under [What stays outside](#what-stays-outside) settles it. A
-section that cannot be read without another bundle installed means a concept has
-been placed in the wrong section, and a section that is nothing but routing to
-other bundles fails that test in its entirety.
+The retired section had no distinct body of product-engineering craft left to
+own. Foundations serves a different reader need: it holds shared explanations
+within this bundle, with links from the lifecycle decisions they inform.
 
 ## Facets, not folders
 
-Some distinctions are real but must not become sections, because a concept can
-carry several of them at once. These belong in concept metadata and in section
-prose:
+Some distinctions can apply to several concepts and locations at once. Use
+concept metadata and index prose to expose them across the lifecycle and
+Foundations:
 
 - the quality outcome a practice serves;
 - the artifact it touches;
 - its knowledge form, such as principle, pattern, practice, or reference; and
 - whether it is portable craft or a technology binding.
 
-Promoting any of these to a folder would force the same concept to exist in
-several places, which is how a corpus starts contradicting itself.
+These facets do not determine canonical placement. A concept can serve several
+quality outcomes or touch several artifacts while retaining one home.
 
 ## Depth: sections ask, subtrees hold
 
-Sections are named for questions. Within a section, a subtree may be named for
-the artifact whose craft it holds, as [Requirements](solution/requirements/) and
-[Work items](delivery/work-items/) are.
+Lifecycle sections are named for questions. Within a section, a subtree may be
+named for the artifact whose craft it holds, as
+[Requirements](solution/requirements/) and [Work items](delivery/work-items/) are.
 
 That is not artifact type readmitted as an organizing scheme. Artifact type
 fails as a partition because a reader arriving at the top of the corpus would
@@ -144,6 +167,10 @@ that is both a pattern and a practice to exist twice. Where a subtree wants to
 group its concepts as patterns, practices, or principles, it does so with
 headings in its index and tags on its concepts, the same mechanism
 [Work items](delivery/work-items/) uses to group its roles.
+
+Foundations groups shared concepts by subject. Start with individual concept
+files; add a subject subtree when its depth warrants a separate browsing route.
+Document form remains metadata, as it does in the lifecycle sections.
 
 The same rule governs a subtree's own children. [Requirements](solution/requirements/)
 divides into folders named for the activity a reader is engaged in — foundations,
@@ -171,19 +198,23 @@ directory it sits in.
 
 | Directory | Section tag |
 | --- | --- |
+| `src/foundations/` | `pe-foundations` |
 | `src/strategy/` | `pe-strategy` |
 | `src/problem/` | `pe-problem` |
 | `src/solution/` | `pe-solution` |
 | `src/engineering/` | `pe-engineering` |
 | `src/delivery/` | `pe-delivery` |
 | `src/operations/` | `pe-operations` |
+| `src/maintenance/` | `pe-maintenance` |
 
 Two kinds of file carry no section tag. Reserved `index.md` and `log.md` files
 carry none because they are navigation and history rather than a section's
 retrievable claims. Concepts at the bundle root carry none because they belong
 to no section: this overview is one, and a query that wants it is asking about
 the bundle rather than about a question. Every other concept file carries
-exactly one. The tag is derived from the path and adds no meaning of its own;
+exactly one. The tag records canonical placement, not every place the concept
+applies; Foundations concepts carry `pe-foundations` even when several lifecycle
+sections use them. The tag is derived from the path and adds no meaning of its own;
 when a concept moves between sections, its tag moves with it. Treat a section
 tag that disagrees with the directory as a defect in the file, not as a second
 opinion about where the concept belongs.

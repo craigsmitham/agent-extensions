@@ -151,7 +151,6 @@ expected=(
   packs/docs
   packs/effect-v4
   packs/field-notes
-  packs/requirements-engineering
   packs/research
   packs/software-engineering
   packs/work-management
@@ -160,7 +159,6 @@ expected=(
   skills/author-docs
   skills/author-okf
   skills/checklist-design
-  skills/engineer-requirements
   skills/field-notes
   skills/improve-whatever
   skills/manage-work-items

@@ -22,14 +22,14 @@ A product decision needs a shared account of what is offered, for whom, what
 progress or problem matters, and why the offering should help. These concepts
 are portable: they assume no particular tracker, document form, delivery
 method, or stage model, and the rest of this section uses them rather than
-redefining them.
+redefining them. Jobs to Be Done has its canonical explanation in
+[Foundations](../foundations/).
 
 - [Value and demand model](value-and-demand-model.md) — How Offering, Audience,
   Need, Job to Be Done, and Value Proposition form an evidence-backed graph
   rather than a hierarchy, and the failure that most often spoils each of the
   five.
-- [Jobs to Be Done](jobs-to-be-done.md) — How to describe the progress people
-  seek in circumstances without embedding a solution.
+- [Jobs to Be Done](../foundations/jobs-to-be-done.md) — How Jobs to Be Done connects customer progress, functional objectives, switching, and unmet needs; how to frame jobs, distinguish interpretations, and connect research evidence to product decisions.
 
 ## Outcomes and risk
 

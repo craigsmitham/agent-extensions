@@ -4,8 +4,11 @@ How does the product stay healthy, secure, and affordable in production?
 
 Sustaining a running system, responding when it misbehaves, and turning what an
 incident taught into a change someone actually makes. This section owns
-production reality. Getting a change to production belongs to
-[How to ship it](../delivery/); whether the change produced the outcome anyone
+production reality. Understanding an existing system and choosing a path for
+its evolution belongs to [How to maintain it](../maintenance/). That section
+covers replacement and consumer migration reasoning; this one retains live
+decommissioning and recovery arrangements. Getting a change to production
+belongs to [How to ship it](../delivery/); whether the change produced the outcome anyone
 wanted belongs to [What to solve](../problem/).
 
 How a running system is arranged so it can be observed, degraded, and recovered

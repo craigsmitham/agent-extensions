@@ -18,14 +18,13 @@ and are not published from this repository.
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
 | `software-engineering` | Evidence-backed codebase review and coherent repository execution-surface craft, sourced from the `product-engineering` bundle | `axm install @craigsmitham/packs/software-engineering` |
 | `work-management` | Consistent Operational Incident Records, Defect Reports, and Changes across repositories and trackers, sourced from the `product-engineering` bundle | `axm install @craigsmitham/packs/work-management` |
-| `requirements-engineering` | Method-neutral requirements elicitation, analysis, specification, review, traceability, and lifecycle, sourced from the `product-engineering` bundle | `axm install @craigsmitham/packs/requirements-engineering` |
 
 ## Standalone knowledge
 
 | Bundle | Purpose | Install |
 | --- | --- | --- |
 | `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
-| `product-engineering` | A body of knowledge organized as six practitioner questions, from where to play through how to run it | `axm install @craigsmitham/knowledge/product-engineering` |
+| `product-engineering` | An opinionated product-development lifecycle from strategy through operations and maintenance, with shared conceptual foundations | `axm install @craigsmitham/knowledge/product-engineering` |
 
 The `strategy`, `product-management`, `requirements-engineering`,
 `software-engineering`, `work-management`, and `workflow-automation` bundles

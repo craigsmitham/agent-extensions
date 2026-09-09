@@ -9,7 +9,7 @@
 | --- | --- | --- | --- | --- |
 | axm-cli-interactions | survey | Sessions that directly run `axm` to complete work in this workspace or manually validate AXM behavior; automated test invocations excluded | — | Recurring notes support a specific target condition, or two triage reviews find no pattern |
 
-<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=b010e3da279f04d48c3fa4091599780ed661ada7992e343918ee53b1a069e66c -->
+<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=7cffea455ac5178d84ce39d24a7af48468b650ab8dd725273aefea0bcf548dbe -->
 ## Knowledge Bundles
 
 Use `axm knowledge concepts --help` to search, read, and explore these bundles.
@@ -36,7 +36,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [effect-v4](knowledge/effect-v4/src/index.md) | Checklists to consult when designing, implementing, maintaining, or reviewing Effect v4 TypeScript |
 | [field-notes](knowledge/field-notes/src/index.md) | Operational field-note practice for factual and diagnostic evidence capture, impact-aware triage, evidence-led findings, and verified corrective action |
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
-| [product-engineering](knowledge/product-engineering/src/index.md) | Portable product-engineering body of knowledge organized as six practitioner questions from strategy through operations |
+| [product-engineering](knowledge/product-engineering/src/index.md) | Opinionated product-development lifecycle from strategy through operations and maintenance, with shared conceptual foundations |
 <!-- axm:end v=1 region=knowledge -->
 <!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=ec87289ea6ad8b9a6d038b2a6ef32fb60cb98f25a0e647e8ad69b660e76a57cb -->
 <!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.3 kind=rule -->

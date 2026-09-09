@@ -9,7 +9,7 @@
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "Portable product-engineering body of knowledge organized as six practitioner questions from strategy through operations",
+  "description": "Opinionated product-development lifecycle from strategy through operations and maintenance, with shared conceptual foundations",
   "license": "CC-BY-SA-4.0",
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "defect-report",
     "change",
     "operations",
+    "software-maintenance",
     "portable-practice"
   ]
 }

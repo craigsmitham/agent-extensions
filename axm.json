@@ -30,7 +30,6 @@
     },
     "checklist-design": "workspace",
     "manage-work-items": "workspace",
-    "engineer-requirements": "workspace",
     "spot-spew": "workspace"
   },
   "rules": {
@@ -57,7 +56,6 @@
     "agent-engineering": "agentxm:@agentxm/packs/agent-engineering",
     "research": "workspace",
     "work-management": "workspace",
-    "requirements-engineering": "workspace",
     "software-engineering": "workspace"
   },
   "owner": "@craigsmitham"

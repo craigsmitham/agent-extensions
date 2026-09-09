@@ -32,7 +32,7 @@ bundle's top-level organization.
 * [Tutorial explainer](tutorial.md) - What a tutorial is — a learning-oriented lesson under tutor responsibility, with a safe success path, and what it deliberately leaves out.
 * [How-to explainer](how-to.md) - What a how-to guide is — goal-oriented directions for real work, written from the user's problem not the machinery, without becoming a lesson or a catalog.
 * [Reference explainer](reference.md) - What reference documentation is — austere, authoritative technical description for lookup at work, not teaching, instructing, or discursive why.
-* [Explanation explainer](explanation.md) - What explanation documentation is — discursive, understanding-oriented discussion that joins context, perspectives, and why, without becoming a runbook or reference.
+* [Explanation explainer](explanation.md) - How explanation documentation builds understanding through conceptual structure, distinctions, judgment, examples, and evidence while keeping a bounded reader purpose.
 
 ## Reusable guidance forms
 

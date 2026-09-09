@@ -1,10 +1,13 @@
 # Product engineering knowledge
 
-A portable body of knowledge for building software products, organized as the
-six questions a practitioner works through, from deciding where to compete to
-keeping the result healthy in production.
+A portable body of knowledge for building software products. Seven lifecycle
+sections express an opinionated development practice, from strategy through
+operations and maintenance. Foundations supplies the shared concepts that inform
+that practice.
 
-Start at the [discovery map](src/index.md).
+Start at the [discovery map](src/index.md). Open
+[Foundations](src/foundations/) for shared explanations of Jobs to Be Done and
+domain-driven design, or enter through a lifecycle question below.
 
 | Section | Question |
 | --- | --- |
@@ -14,6 +17,7 @@ Start at the [discovery map](src/index.md).
 | [How to build it](src/engineering/) | How do we construct and verify what we committed to? |
 | [How to ship it](src/delivery/) | How does a change reach production safely and predictably? |
 | [How to run it](src/operations/) | How does the product stay healthy, secure, and affordable in production? |
+| [How to maintain it](src/maintenance/) | What does caring for an existing product involve as its circumstances change? |
 
 The guidance here is technology-agnostic. Anything that churns with a specific
 language, framework, or vendor stays in its own bundle, such as `effect-v4`,
@@ -24,9 +28,9 @@ else is deliberately left outside, and why.
 
 Every concept file carries a section tag matching its directory, because
 `axm knowledge concepts query` can scope a search to a bundle but not to a
-folder. The tags are `pe-strategy`, `pe-problem`, `pe-solution`,
-`pe-engineering`, `pe-delivery`, and `pe-operations`. Reserved `index.md` and
-`log.md` files carry none, and neither do concepts at the bundle root, such as
+folder. The tags are `pe-foundations`, `pe-strategy`, `pe-problem`, `pe-solution`,
+`pe-engineering`, `pe-delivery`, `pe-operations`, and `pe-maintenance`. Reserved
+`index.md` and `log.md` files carry none, and neither do concepts at the bundle root, such as
 the [overview](src/overview.md), which belong to no section.
 
 ## Boundaries
@@ -46,22 +50,24 @@ reasoning and shows where each clause of its question now lives.
 
 ## Status
 
-Four of the six sections hold concepts. The material arrived from six standalone
-bundles that have been retired into this one, so it is migrated rather than
-newly written, and its depth varies by where it came from. Some of it has since
-been retired again: a migrated concept that only summarized a public source, or
+Five of the seven lifecycle sections hold concepts. Much of the material arrived
+from six standalone bundles that have been retired into this one; newer
+explanations introduce maintenance and shared foundations. Depth varies by where
+the material came from. Some of it has since been retired again: a migrated concept that only summarized a public source, or
 only restated a sibling, was removed rather than kept for volume. The
 [update log](src/log.md) names every retired file and where its surviving claim
 went.
 
 | Section | Source | State |
 | --- | --- | --- |
+| Foundations | `product-management`; primary DDD sources | Jobs to Be Done, moved from What to solve; a new domain-driven design explanation |
 | Where to play | `strategy`, `product-management` | Both bundles retired, and the migrated concepts have since been retired too, leaving scope, boundaries, and the value stick |
-| What to solve | `product-management` | Migrated; that bundle retired. Three concepts |
+| What to solve | `product-management` | Migrated; that bundle retired. Two concepts; Jobs to Be Done now lives in Foundations |
 | What to build | `requirements-engineering`, `product-management` | Requirements migrated and that bundle retired; the design half is unwritten |
 | How to build it | `software-engineering` | Migrated and that bundle retired; two of five areas are unwritten |
 | How to ship it | `work-management`, `workflow-automation` | Both migrated and retired; the `workflow-automation` concepts have since been retired, so only work items remain and flow, build and release, and delivery automation are unwritten |
 | How to run it | None | No concepts; scope and boundaries only |
+| How to maintain it | Care and maintenance scholarship, software literature, and practitioner accounts | A new introductory explanation; detailed maintenance guides are unwritten |
 
 Three sections carry more than one source. In "Where to play" the question no
 longer arises, because neither source left a concept behind. The other two

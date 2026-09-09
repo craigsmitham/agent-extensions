@@ -34,6 +34,11 @@ own bundles. Neither exists yet. Nothing here should be read as covering them:
 the quality pillars judge an existing structure, they do not tell you how to
 choose one.
 
+For conceptual grounding in domain modeling, read
+[Domain-driven design](../foundations/domain-driven-design.md) in Foundations.
+It explains subdomains, bounded contexts, aggregates, and their relationships;
+the architecture and construction guidance described above remains unwritten.
+
 ## Review and assess a codebase
 
 - [Codebase review](codebase-review/) - An outcome-centered review framework with ten product-quality pillars, eight typed cross-cutting records, a separate supporting-artifact assessment for test suites, and explicit uncertainty rules.
@@ -75,17 +80,20 @@ concepts and the adoption guide assume it.
 
 The concepts here are technology-agnostic. Language, framework, and vendor
 specifics live in their own bundles and are referenced rather than restated.
-This section is not a software-change method.
+The craft of understanding and intervening in existing systems belongs to
+[How to maintain it](../maintenance/); this section supplies technical design,
+construction, and verification for those interventions.
 
 | Adjacent concern | Owner |
 | --- | --- |
 | Requirements: specifying, reviewing, and changing an obligation | [What to build](../solution/requirements/) |
+| Existing-system understanding, impact analysis, and maintenance intervention choices | [How to maintain it](../maintenance/) |
 | Work items: the record that carries a change or a defect | [How to ship it](../delivery/work-items/) |
 | Reliability, security, and efficiency of a system already running | [How to run it](../operations/) |
 | Documentation craft | The `docs` bundle, outside this one |
 
-The third row is easy to misread, because three review pillars carry those same
-names: Reliability, Security, and Efficiency. The pillars judge a product at a
+The reliability, security, and efficiency row is easy to misread, because three
+review pillars carry those same names: Reliability, Security, and Efficiency. The pillars judge a product at a
 stated revision on available evidence. Sustaining the same properties in a live
 system is a different question with a different owner, and [Software quality
 pillars](codebase-review/software-quality-pillars.md) states the split in full.

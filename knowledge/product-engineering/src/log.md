@@ -1,6 +1,48 @@
 # Product engineering update log
 
+## 2026-09-09
+
+- **Rewrite**: Renamed the maintenance introduction to [Maintenance and the life of software products](maintenance/maintenance-and-the-life-of-software-products.md). Grounded the explanation in care, continuity, skilled attention, intervention, sustaining labor, and endings; connected those perspectives to software through attributed sources and a recurring illustrative invoice service. Updated discovery and inbound links.
+
 ## 2026-09-08
+
+- **Draft**: Expanded [Jobs to Be Done](foundations/jobs-to-be-done.md) into a
+  concept-led explanation with job-framing criteria, participant and scope
+  distinctions, switching forces and timelines, job maps, desired outcomes,
+  segmentation, research limits, and connections to product decisions. Wove the
+  illustrative incident-coordination scenario throughout, retained the
+  differences between traditions, and refreshed primary-source reading routes
+  and the Foundations and What to solve previews.
+
+- **Draft**: Added [How to maintain it](maintenance/) as the seventh lifecycle
+  section, with [Maintenance and the life of software products](maintenance/maintenance-and-the-life-of-software-products.md) (originally titled Software maintenance as a craft).
+  The introduction connects aging, comprehension, safe change, investment,
+  modernization, compatibility, deprecation, and sustaining labor, with source
+  attribution and an illustrative invoice-service scenario. Updated discovery,
+  section tags, and the Engineering and Operations boundaries; detailed
+  maintenance guides remain unwritten.
+
+- **Draft**: Added [Domain-driven design](foundations/domain-driven-design.md)
+  from primary online sources, covering shared language, subdomain
+  classification criteria, bounded contexts and context mapping, tactical
+  patterns, architecture relationships, and model evolution. Includes an
+  illustrative rental scenario, two diagrams, explicit distinctions between
+  contested interpretations, and reading routes. Linked it from Foundations
+  and How to build it and refreshed the bundle's discovery summaries.
+
+- **Draft**: Reworked [Jobs to Be Done](foundations/jobs-to-be-done.md) from
+  primary online sources as a neutral comparison of progress and functional-job
+  traditions, their research methods, the compatibility debate, and job stories.
+  Added an illustrative software scenario and reading routes. Removed the prior
+  adoption stance; this draft explains approaches without prescribing one.
+
+- **Organization**: Added [Foundations](foundations/) as shared conceptual context
+  alongside the six opinionated lifecycle sections. Moved
+  `problem/jobs-to-be-done.md` to
+  [Jobs to Be Done](foundations/jobs-to-be-done.md), updated its relative links
+  and placement tag to `pe-foundations`, and linked it from What to solve.
+  Updated the overview, discovery map, READMEs, and package description to
+  distinguish shared explanations from guidance for lifecycle decisions.
 
 - **Retirement**: Removed fifty-six files, roughly half the bundle: fifty-three
   concepts and three reserved subtree indexes. The decision followed an evidence
@@ -40,7 +82,7 @@
   model](problem/value-and-demand-model.md). Teams and cadence leave the bundle
   rather than move: the Placement entry below recorded that home as unsettled,
   and it is settled now by removal. [Jobs to Be
-  Done](problem/jobs-to-be-done.md) was proposed for merge and deliberately
+  Done](foundations/jobs-to-be-done.md) was proposed for merge and deliberately
   kept as its own concept.
 - **Retirement**: [What to build](solution/) lost
   `solution/product-meaning-and-requirements.md`,
