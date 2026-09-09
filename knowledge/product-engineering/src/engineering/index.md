@@ -39,6 +39,10 @@ For conceptual grounding in domain modeling, read
 It explains subdomains, bounded contexts, aggregates, and their relationships;
 the architecture and construction guidance described above remains unwritten.
 
+For the relationship between component evolution, sourcing, and appropriate
+methods, read [Wardley mapping](../foundations/wardley-mapping/wardley-mapping.md). Its landscape
+perspective helps distinguish uncertain exploration from standardized provision.
+
 ## Review and assess a codebase
 
 - [Codebase review](codebase-review/) - An outcome-centered review framework with ten product-quality pillars, eight typed cross-cutting records, a separate supporting-artifact assessment for test suites, and explicit uncertainty rules.

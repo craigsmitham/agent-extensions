@@ -4,6 +4,20 @@
 
 - **Draft**: Added [Drucker's four disciplines of organizational renewal](foundations/drucker-organizational-renewal.md), a short explanation of abandonment, improvement, exploiting success, and innovation as parallel responsibilities. Included an illustrative library example, piloting as a method for testing changes, source attribution, and routes to product-engineering decisions. Updated Foundations and bundle discovery.
 
+- **Integrate concepts**: Used the EPUB's surrounding discussions to integrate the seven tables into [Wardley mapping](foundations/wardley-mapping/wardley-mapping.md): key terms, component evolution, climatic patterns and method suitability, doctrine, learning recap, and situational-awareness reflection. Removed the separate book-figure reference and its discovery entry. Kept full source entries and qualifications, explained the climate/doctrine distinction, and omitted source highlighting that marked chapter coverage rather than priority. The integrated explainer meets the 500-line limit.
+
+- **Markdown reference**: Replaced the seven book JPEGs in `foundations/wardley-mapping/wardley-book-figures.md` with a self-contained Markdown reference: six complete table transcriptions and a textual comparison of Figure 22's axes, gradients, and method suitability. Preserved qualifications, highlighted entries, and source attribution; updated the explainer and index previews.
+
+- **Condense and organize**: Shortened [Wardley mapping](foundations/wardley-mapping/wardley-mapping.md) and grouped it with `foundations/wardley-mapping/wardley-book-figures.md` in a subject folder. Captured figures 10, 22, 27, 44, 60, 64, and 66 in full as original EPUB images and searchable tables, preserving source attribution, highlights, and the method gradients. Updated incoming links and added a local discovery index.
+
+- **Draft**: Added [Wardley mapping](foundations/wardley-mapping/wardley-mapping.md), grounded in
+  the December 2020 compilation of Simon Wardley's book. Developed map grammar,
+  evolution, climate, doctrine, gameplay, and continuous learning through an
+  illustrative rental scenario and an annotated map. Distinguished evolution
+  from DDD strategic importance and model boundaries, connected the explanation
+  to lifecycle decisions and JTBD, and updated Foundations, strategy, and bundle
+  discovery. Preserved source attribution and the CC-BY-SA-4.0 license.
+
 - **Rewrite**: Renamed the maintenance introduction to [Maintenance and the life of software products](maintenance/maintenance-and-the-life-of-software-products.md). Grounded the explanation in care, continuity, skilled attention, intervention, sustaining labor, and endings; connected those perspectives to software through attributed sources and a recurring illustrative invoice service. Updated discovery and inbound links.
 
 ## 2026-09-08

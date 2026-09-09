@@ -43,12 +43,20 @@ it. Raising WTP or lowering WTS widens the span; moving price only moves the
 line inside it. This is why “value” cannot mean revenue alone: a gain that only
 moved the line created nothing.[^hbs-value-stick]
 
+## Shared foundations
+
+- [Wardley mapping](../foundations/wardley-mapping/wardley-mapping.md) — How Wardley mapping connects user needs, dependencies, and evolution to situational awareness, strategic choices, appropriate methods, and continuous learning across product engineering.
+
+The shared explanation develops the conceptual context for reading a landscape
+and reasoning about possible moves. This section owns the resulting choices
+about participation, advantage, and value capture.
+
 ## Where the canon lives
 
-The portable strategy canon this section would otherwise restate — strategic
-choice, the choice cascade, advantage and coherence, strategy as hypothesis, and
-Wardley mapping — is read better at its sources than in a summary, and the
-sources are public:
+The public strategy sources below develop strategic choice, the choice cascade,
+advantage and coherence, value creation, and Wardley's account of mapping.
+Foundations supplies the shared Wardley mapping explanation above; these sources
+provide the original arguments and further reading:
 
 * [The Strategic Choice Structuring Process](https://rogermartin.medium.com/the-strategic-choice-structuring-process-5e116b12ae1f) — Roger L. Martin on the Playing to Win choice cascade: aspiration, where to play, how to win, capabilities, and management systems.
 * [Overcoming the Integrative Strategy Challenge](https://rogermartin.medium.com/overcoming-the-integrative-strategy-challenge-9af0d670d083) — Roger L. Martin on why the cascade is hard: the choices must reinforce one another, not merely fill five boxes.
