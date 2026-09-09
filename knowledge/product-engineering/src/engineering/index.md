@@ -24,19 +24,19 @@ statement, and shaping the repository surface those tasks run through.
 | Architecture and technical design | Not yet written |
 | Construction | Not yet written |
 | Verification | Populated: test levels, test worlds, and specification authority |
-| Review and assessment | Populated: the codebase-review framework |
+| Review and assessment | Populated: ten quality pillars, eight cross-cutting records, and test-suite quality |
 | Execution surface | Populated: task interfaces, contracts, and conformance |
 
 Architecture and technical design would own boundaries, seams, scale, and
-evolvability as design choices rather than as review criteria. Construction
+evolvability as design choices rather than as review judgments. Construction
 would own portable construction craft, with technology bindings kept in their
 own bundles. Neither exists yet. Nothing here should be read as covering them:
-the review criteria judge an existing structure, they do not tell you how to
+the quality pillars judge an existing structure, they do not tell you how to
 choose one.
 
 ## Review and assess a codebase
 
-- [Codebase review](codebase-review/) - An outcome-centered review framework with ten product-quality criteria lists, eight typed cross-cutting records, separate supporting-artifact assessments, optional evidence and method aids, and explicit uncertainty and lifecycle guidance.
+- [Codebase review](codebase-review/) - An outcome-centered review framework with ten product-quality pillars, eight typed cross-cutting records, a separate supporting-artifact assessment for test suites, and explicit uncertainty rules.
 
 ## Choose a test level
 
@@ -84,27 +84,26 @@ This section is not a software-change method.
 | Reliability, security, and efficiency of a system already running | [How to run it](../operations/) |
 | Documentation craft | The `docs` bundle, outside this one |
 
-The third row is easy to misread, because three review criteria carry those same
-names: Reliability, Security, and Efficiency. The criteria judge a product at a
+The third row is easy to misread, because three review pillars carry those same
+names: Reliability, Security, and Efficiency. The pillars judge a product at a
 stated revision on available evidence. Sustaining the same properties in a live
-system is a different question with a different owner, and [the criteria
-index](codebase-review/criteria/) states the split in full. Efficiency is where
-the cost question sits on this side: the criteria ask whether required behavior
-meets a declared time, capacity, resource, and cost envelope, while How to run
-it owns what a running system actually costs to keep.
+system is a different question with a different owner, and [Software quality
+pillars](codebase-review/software-quality-pillars.md) states the split in full.
+Efficiency is where the cost question sits on this side: `SQ-06` asks whether
+required behavior meets a declared time, capacity, resource, and cost envelope,
+while How to run it owns what a running system actually costs to keep.
 
 Two further boundaries are worth stating plainly, because both look like they
 could belong here and only half of each does.
 
 Usability is divided by question rather than by subject. [What to
 build](../solution/) chooses the interaction; How to build it judges, on
-available evidence, whether the built result achieves it. The [usability
-criteria](codebase-review/criteria/usability.md) are that judgment, not a design
-method.
+available evidence, whether the built result achieves it. [`SQ-07`
+Usability](codebase-review/software-quality-pillars.md) is that judgment, not a
+design method.
 
 The execution surface is divided from delivery automation the same way. The
-execution surface owns what a task means and who may invoke it; [delivery
-automation](../delivery/automation/) owns when a workflow runs it and what
-happens to the result. A task interface that is honest about its contract is
-what makes a pipeline able to call it, which is why the two must not restate
-each other.
+execution surface owns what a task means and who may invoke it; [How to ship
+it](../delivery/) owns when a workflow runs it and what happens to the result.
+A task interface that is honest about its contract is what makes a pipeline
+able to call it, which is why the two must not restate each other.

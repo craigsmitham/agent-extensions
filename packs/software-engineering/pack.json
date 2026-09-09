@@ -38,6 +38,6 @@
   "type": "pack",
   "name": "software-engineering",
   "dependencies": {
-    "@craigsmitham/knowledge/product-engineering": ">=1.0.0"
+    "@craigsmitham/knowledge/product-engineering": ">=2.0.0"
   }
 }

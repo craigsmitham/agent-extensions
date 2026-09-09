@@ -46,6 +46,6 @@ conditions, accepted risk, out of scope, or remediated; those dispositions have
 different meanings and evidence needs.
 
 When correction is authorized, preserve the Defect Report and create or link a
-separate [Change](../changes/changes.md) classified as Bugfix. This keeps the
-observation history intact while the Change coordinates the intended
+separate [Change](../software-work-item-taxonomy.md) classified as Bugfix. This
+keeps the observation history intact while the Change coordinates the intended
 modification.

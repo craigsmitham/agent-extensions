@@ -71,9 +71,9 @@ little evidence about consequential behavior or change risk.
 intended to inform. Missing claim context makes the artifact judgment
 `Indeterminate`, not the product automatically defective.
 
-**Boundary:** this criterion owns evidentiary relevance of the suite. Product
-criteria own whether the product meets the claims; `EVO-05` owns the product's
-testability.
+**Boundary:** this criterion owns evidentiary relevance of the suite. The
+product-quality pillars own whether the product meets the claims; `SQ-09`
+Evolvability owns the product's testability.
 
 ### TSQ-02 — Risk coverage
 
@@ -105,7 +105,8 @@ and which differences are accepted. Full production identity is neither
 necessary nor always safe.
 
 **Boundary:** this criterion owns fidelity of the evidence world.
-Compatibility and other product criteria own the real relationship itself.
+Compatibility and the other product-quality pillars own the real relationship
+itself.
 
 ### TSQ-04 — Outcome discrimination
 

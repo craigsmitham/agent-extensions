@@ -30,20 +30,20 @@ sections can point here honestly.
 
 ## Sustaining a system, not judging a codebase
 
-Three areas above answer to codebase-review criteria carrying the same subject:
-Reliability, Security, and Efficiency. Only Reliability shares the name exactly.
-Operational security here is what the Security criteria judge once the system is
-running, and Cost and sustainment is the part of Efficiency that continues after
-release: the criteria ask whether required behavior meets a declared time,
-capacity, resource, and cost envelope, while this section owns what a running
-system actually costs to keep.
+Three areas above answer to codebase-review pillars carrying the same subject:
+`SQ-03` Reliability, `SQ-04` Security, and `SQ-06` Efficiency. Only Reliability
+shares the name exactly. Operational security here is what `SQ-04` judges once
+the system is running, and Cost and sustainment is the part of Efficiency that
+continues after release: `SQ-06` asks whether required behavior meets a declared
+time, capacity, resource, and cost envelope, while this section owns what a
+running system actually costs to keep.
 
-The claims are not the same claim.
-[Codebase review](../engineering/codebase-review/criteria/) judges a product at a
-stated revision on the evidence a repository and its surroundings can supply, and
-its output is a bounded verdict with its uncertainty attached. This section owns
-the same properties in a system that is already running, where the evidence is
-live and the response is operational rather than editorial.
+The claims are not the same claim. [Codebase
+review](../engineering/codebase-review/software-quality-pillars.md) judges a
+product at a stated revision on the evidence a repository and its surroundings
+can supply, and its output is a bounded verdict with its uncertainty attached.
+This section owns the same properties in a system that is already running, where
+the evidence is live and the response is operational rather than editorial.
 
 Neither result substitutes for the other. A passing review does not establish
 that the running system is reliable, secure, or affordable, and an incident does

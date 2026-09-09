@@ -18,7 +18,6 @@ AXM state.
 
 Always read:
 
-- `knowledge/product-engineering/src/solution/requirements/foundations/portable-requirements-engineering.md`;
 - `knowledge/product-engineering/src/solution/requirements/foundations/requirement-authority-and-maturity.md`;
 - `knowledge/product-engineering/src/solution/requirements/authoring/requirement-content-contract.md`; and
 - `knowledge/product-engineering/src/solution/requirements/adaptation/applying-project-specific-requirements-policy.md`.
@@ -45,10 +44,9 @@ normative requirements without applicable acceptance evidence.
 
 ### Requirement authoring or revision
 
-Read `authoring/authoring-requirements.md`. Add:
+Read `authoring/authoring-requirements.md`, which also covers the obligated
+subject, allocation, and abstraction level. Add:
 
-- `development/choosing-requirement-subject-and-level.md` when the obligated
-  subject, allocation, or abstraction level is unclear;
 - `authoring/classifying-requirements.md` for classification, using a declared
   local taxonomy before the portable fallback lens;
 - `authoring/selecting-a-specification-method.md` when choosing between prose,
@@ -85,10 +83,10 @@ requirement unless the request grants the applicable authority and target.
 
 ### Impact, change, identity, and lineage
 
-Read `lifecycle/analyzing-requirement-impact.md` for impact analysis and
-`lifecycle/specifying-requirement-changes.md` when defining exact before/after
-meaning. Add `lifecycle/maintaining-requirement-identity-and-lineage.md` for
-revision, split, merge, supersession, or retirement.
+Read `lifecycle/analyzing-requirement-impact.md` for impact analysis and for
+defining the exact before/after meaning of a change. Add
+`lifecycle/maintaining-requirement-identity-and-lineage.md` for revision,
+split, merge, supersession, or retirement.
 
 Keep prior evidence bound to the exact requirement identity and revision. A
 split, merge, or semantic change does not automatically transfer satisfaction.

@@ -3,9 +3,6 @@
 The concepts in this section define the authority, scope, and evidence model
 used by every development, authoring, review, and lifecycle guide.
 
-- [Portable requirements engineering](portable-requirements-engineering.md) -
-  Defines a method-neutral model for discovering, analyzing, specifying,
-  reviewing, and maintaining requirements.
 - [Requirement authority and maturity](requirement-authority-and-maturity.md) -
   Separates candidate and normative requirements from independent decision,
   persistence, realization, and evidence states.

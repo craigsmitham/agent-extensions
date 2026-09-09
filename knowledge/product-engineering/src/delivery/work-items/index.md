@@ -33,8 +33,7 @@ review.
 - [Defect Reports](defects/) - Concepts, authoring, triage, corrective-change
   relationships, and a portable template for observations that may indicate a
   Defect.
-- [Changes](changes/) - Concepts, classification, authoring, and a portable
-  template for bounded proposed or authorized software modifications.
-- [Operational Incident Records](incidents/) - Concepts, live-record guidance,
-  and a portable template for coordinating current or imminent operational
-  impact.
+- [Changes](changes/) - Classification, authoring, and a portable template for
+  bounded proposed or authorized software modifications.
+- [Operational Incident Records](incidents/) - Live-record guidance and a
+  portable template for coordinating current or imminent operational impact.

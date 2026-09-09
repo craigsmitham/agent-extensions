@@ -4,6 +4,13 @@ title: Product engineering overview
 description: How this body of knowledge is organized as six practitioner questions, why that scheme was chosen over lifecycle or artifact schemes, how deep the scheme runs and what a subtree may be named for, which seventh question was tried and retired, where design fits, and what stays outside it.
 tags: [product-engineering, body-of-knowledge, information-architecture, organizing-scheme, design, explanation]
 status: draft
+sources:
+  - id: anthropic-agents
+    resource: https://www.anthropic.com/engineering/building-effective-agents
+    title: Anthropic — Building effective agents
+  - id: openai-guide
+    resource: https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/
+    title: OpenAI — A practical guide to building agents
 ---
 
 # Product engineering overview
@@ -130,22 +137,29 @@ concept that spans artifacts stays at the section's top level, because copying
 it into each subtree is exactly the failure the facet rule above forbids.
 
 A subtree may equally be named for the body of craft it holds rather than for an
-artifact, as [Codebase review](engineering/codebase-review/) and
-[Automation](delivery/automation/) are. What a subtree may never be named for is
-knowledge form. Form is a facet of every concept rather than a body of craft, so
-naming a folder for it would force a concept that is both a pattern and a
-practice to exist twice. Where a subtree wants to group its concepts as
-patterns, practices, or principles, it does so with headings in its index and
-tags on its concepts, which is what [Automation](delivery/automation/) does.
+artifact, as [Codebase review](engineering/codebase-review/) is. What a subtree
+may never be named for is knowledge form. Form is a facet of every concept
+rather than a body of craft, so naming a folder for it would force a concept
+that is both a pattern and a practice to exist twice. Where a subtree wants to
+group its concepts as patterns, practices, or principles, it does so with
+headings in its index and tags on its concepts, the same mechanism
+[Work items](delivery/work-items/) uses to group its roles.
+
+The same rule governs a subtree's own children. [Requirements](solution/requirements/)
+divides into folders named for the activity a reader is engaged in — foundations,
+development, authoring, review, lifecycle, adaptation — and
+[Work items](delivery/work-items/) into folders named for the role a record
+plays. Neither divides by form, and form varies freely inside both:
+[Authoring](solution/requirements/authoring/) holds five guides, two references,
+and a template, and [Defect Reports](delivery/work-items/defects/) holds an
+explanation, three guides, and a reference.
 
 The test is what the folder is named for, not what it happens to contain. A
-subtree named for a body of craft may turn out to be uniform in form without
-being partitioned by it: every list under
-[Criteria](engineering/codebase-review/criteria/) is a checklist and every
-concept under [Review aids](engineering/codebase-review/review-aids/) is a
-guide, because that craft happens to be expressed one way, not because form
-drew the boundary. The signal that form has become the partition is a sibling
-folder that holds the same subject in a different form.
+subtree may turn out uniform in form without being partitioned by it, because
+that craft happens to be expressed one way rather than because form drew the
+boundary. Uniformity is therefore not the signal. The signal that form has
+become the partition is a sibling folder that holds the same subject in a
+different form.
 
 The same reasoning runs the other way for section membership, which is a folder
 already. Retrieval does not see folders: `axm knowledge concepts query` filters
@@ -165,14 +179,28 @@ directory it sits in.
 | `src/operations/` | `pe-operations` |
 
 Two kinds of file carry no section tag. Reserved `index.md` and `log.md` files
-carry none because they are navigation and history rather than retrievable
-claims. Concepts at the bundle root carry none because they belong to no
-section: this overview is one, and a query that wants it is asking about the
-bundle rather than about a question. Every other concept file carries exactly
-one. The tag is derived from
-the path and adds no meaning of its own; when a concept moves between sections,
-its tag moves with it. Treat a section tag that disagrees with the directory as
-a defect in the file, not as a second opinion about where the concept belongs.
+carry none because they are navigation and history rather than a section's
+retrievable claims. Concepts at the bundle root carry none because they belong
+to no section: this overview is one, and a query that wants it is asking about
+the bundle rather than about a question. Every other concept file carries
+exactly one. The tag is derived from the path and adds no meaning of its own;
+when a concept moves between sections, its tag moves with it. Treat a section
+tag that disagrees with the directory as a defect in the file, not as a second
+opinion about where the concept belongs.
+
+An index carries claims all the same, and after the 2026-09-08 retirement some
+of them are stated nowhere else. Where a section was reduced to scope and
+boundaries, the few claims worth keeping stayed in its index: the value stick in
+[Where to play](strategy/), the four product risks in [What to solve](problem/),
+and the two owners of incident thresholds and severity in [Operational Incident
+Records](delivery/work-items/incidents/). Those claims are authoritative and
+untagged, so a tag-scoped query will not return them, and a reader who reaches
+the bundle only through `axm knowledge concepts query` will not see them. That
+is the accepted cost of not writing a concept to house one paragraph, and it is
+bounded by one rule: an index may state a claim of its own, including what a
+subtree's records must show, but never one a tagged concept has to cite as its
+authority. A claim a concept must lean on is promoted into a tagged concept of
+its own, so that nothing retrievable rests on something unretrievable.
 
 ## Where design fits
 
@@ -224,56 +252,32 @@ by a product-engineering question.
 | Field-note practice | It is the concept layer of a mechanism this repository runs, coupled to a rule, a skill, and a pack, rather than portable craft that travels alone |
 | Agent engineering | The design of goal-directed model-driven systems is its own discipline, owned by the separate `agent-engineering` bundle; this bundle owns the workflow that surrounds an agent step, not the model-directed choice inside it |
 
-The last row is the youngest and the least obvious, so the sections that touch
-it say where the line falls rather than leaving it to this table. [How to ship
-it](delivery/) and its [automation](delivery/automation/) subtree both name the
-boundary, and [Agents and agentic
-workflows](delivery/automation/agents-and-agentic-workflows.md) exists to mark
-it, stating for each form of system which concerns delivery automation owns and
-which it does not.
+The first row rules out technology bindings, and the rule is narrower than it
+reads. A binding is guidance that only works on one platform: how to configure
+this runner, which flag this framework wants, what this vendor calls its own
+feature. It ages with the product, it is useless to a reader on a different
+platform, and it stays out. Naming a platform is not what makes a binding.
+Citing a tool's documentation as evidence for a portable claim, as the execution
+surface concepts do, is evidence; teaching a reader to operate that tool is a
+binding.
 
-### A binding is not a mapping
+The last row is the youngest and the least obvious, so it is stated here rather
+than left to the table. Classify a system by who controls its meaningful next
+steps — not by whether it uses a model, a tool, a graph, or a product that calls
+itself an agent.[^anthropic-agents]
 
-The first row rules out technology bindings, and one concept in this bundle
-looks like a violation of it. The rule is narrower than it reads, and this is
-where it is stated exactly.
+| Form | Control path | What agent engineering owns |
+| --- | --- | --- |
+| Deterministic automation | Code or rules choose every step | Nothing |
+| LLM workflow | A predefined graph invokes models at known steps | Only local model behavior, where a step has bounded dynamic choice |
+| Agent | A model-directed loop chooses meaningful next steps | Goal, planning, capability choice, recovery, delegation, and stopping |
+| Agentic workflow | A durable workflow surrounds one or more bounded agent steps | The dynamic decisions inside each agent step and between delegated actors |
 
-A **binding** is guidance that only works on one platform: how to configure this
-runner, which flag this framework wants, what this vendor calls its own feature.
-It ages with the product, it is useless to a reader on a different platform, and
-it stays out.
-
-A **mapping** is a dated, comparative statement of how several named platforms
-line up against a portable model. It teaches nobody how to operate a platform.
-It exists so that the portable model can be checked rather than taken on faith.
-[Workflow model](delivery/automation/workflow-model-explainer.md) is the only
-one here: its claim is that vendor nouns such as pipeline, job, and step do not
-form one hierarchy, and a reader cannot test that claim without seeing the
-platforms disagree.
-
-A mapping may stay only under a currency contract, and every condition has to
-hold.
-
-| Condition | What it requires |
-| --- | --- |
-| It serves a portable claim | The mapping makes a portable model checkable, rather than telling a reader how to use a platform |
-| It is severable | Removing the mapping leaves the portable model standing and the concept still readable |
-| It is dated | The concept carries a `stale_after` date and cites the platform documentation each row rests on |
-| It is findable | The concept carries the `vendor-mapping` tag, so every dated mapping in the bundle can be listed in one query |
-| It is announced | The owning subtree index names the dated concept and says what a maintainer should do when the date arrives |
-| It is rare | A second mapping in one subtree is a sign the bundle is drifting toward vendor documentation, not a precedent |
-
-A mapping past its date is worse than no mapping, because it invites a reader to
-trust a hierarchy that has since moved. On the date, refresh the table against
-the cited documentation and move the date forward, or delete the table and keep
-the model.
-
-A `stale_after` date is not exclusive to mappings. Any concept resting on
-material that moves faster than the craft around it may carry one, and
-[Agents and agentic workflows](delivery/automation/agents-and-agentic-workflows.md)
-does without being a mapping. The contract above adds its remaining conditions
-only when the dated material is a vendor mapping. The subtree that holds a dated
-concept states what a maintainer does when the date arrives.
+The first two rows are workflow automation, which [How to ship it](delivery/)
+claims as scope and has not yet written. The last two are the discipline this
+bundle does not own: the surrounding trigger, dependencies, durable progress,
+approvals, retries, cancellation, and compensation would belong here, and the
+model-directed choice inside the agent step never does.[^openai-guide]
 
 Because knowledge bundles cannot declare dependencies on one another, a concept
 here must be readable by someone who installed only this bundle. Where a section
@@ -281,3 +285,9 @@ borrows a term another bundle owns, it gives the term a short working definition
 and names the owner, rather than relying on a link that may not resolve. A
 section that cannot be read without another bundle installed is a sign that a
 concept has been placed in the wrong section.
+
+[^anthropic-agents]: Anthropic — Building effective agents, which separates
+    workflows whose steps are orchestrated through predefined code paths from
+    agents that direct their own process and tool use.
+[^openai-guide]: OpenAI — A practical guide to building agents, on what an
+    agent independently decides and where a surrounding system keeps control.

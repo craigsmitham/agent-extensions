@@ -9,9 +9,9 @@ generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 # Authoring Changes
 
 This workflow keeps motivation, outcome, constraints, and delivery context in
-one process-agnostic [Change](changes.md) rather than requiring separate
-specification, design, and delivery records. Apply it once the item's role and
-boundary are settled.
+one process-agnostic [Change](../software-work-item-taxonomy.md) rather than
+requiring separate specification, design, and delivery records. Apply it once
+the item's role and boundary are settled.
 
 ## 1. Bind one Change
 

@@ -2,6 +2,200 @@
 
 ## 2026-09-08
 
+- **Retirement**: Removed fifty-six files, roughly half the bundle: fifty-three
+  concepts and three reserved subtree indexes. The decision followed an evidence
+  review that scanned every repository on the maintainer's machine, this
+  repository's own skills, packs, and rules, the bundle's link graph, and the
+  session record. Nothing went for being wrong. What went was material that
+  summarized a public source read better at the source, restated a sibling
+  concept, or asserted a body of craft this bundle does not exercise. Sixty
+  concepts remain across four sections. The five groups are recorded below with
+  their file names, so a reader holding a link to a retired concept can find out
+  where its claim went.
+- **Convention**: A retired path is named in this log as a code span, never as a
+  link. A link here resolves or it is not a link. The rule is retroactive: every
+  historical entry that pointed at a path this change removed now names it in
+  backticks, which keeps the record readable without handing a reader a route
+  that 404s.
+- **Retirement**: [Where to play](strategy/) lost all nine of its concepts and
+  is now a scope-only index on the [How to run it](operations/) pattern. Gone
+  are `strategy/strategy-as-choice.md`, `strategy/choice-cascade.md`,
+  `strategy/advantage-and-coherence.md`, `strategy/strategy-as-hypothesis.md`,
+  `strategy/value-creation-and-capture.md`, `strategy/wardley-mapping.md`,
+  `strategy/developing-and-reviewing-wardley-maps.md`,
+  `strategy/product-strategy.md`, and `strategy/overview.md`. Three claims were
+  kept in the section index: the non-responsibilities list, the line that focus
+  without an account of advantage is reduced scope, and the value stick with its
+  Harvard Business School citation. The index now sends a reader to Martin,
+  Wardley, and Harvard Business School directly, and states the admission test a
+  future concept must pass — it must make an arena, advantage, or value-capture
+  choice decidable in a way those sources leave open.
+- **Retirement**: [What to solve](problem/) lost `problem/overview.md`,
+  `problem/product-risks.md`,
+  `problem/developing-value-and-demand-concepts.md`,
+  `problem/empowered-product-teams.md`, and `problem/discovery-and-delivery.md`.
+  The four product-risk questions and the claim that deciding what to solve is a
+  loop rather than a sequence moved into the section index; the "Common failure"
+  column of the authoring guide moved into [Value and demand
+  model](problem/value-and-demand-model.md). Teams and cadence leave the bundle
+  rather than move: the Placement entry below recorded that home as unsettled,
+  and it is settled now by removal. [Jobs to Be
+  Done](problem/jobs-to-be-done.md) was proposed for merge and deliberately
+  kept as its own concept.
+- **Retirement**: [What to build](solution/) lost
+  `solution/product-meaning-and-requirements.md`,
+  `solution/requirements/foundations/portable-requirements-engineering.md`,
+  `solution/requirements/development/choosing-requirement-subject-and-level.md`,
+  and `solution/requirements/lifecycle/specifying-requirement-changes.md`. The
+  use-case bridge moved into [Requirements and neighboring
+  artifacts](solution/requirements/foundations/requirements-and-neighboring-artifacts.md),
+  the allocation ladder into [Authoring
+  requirements](solution/requirements/authoring/authoring-requirements.md), and
+  the requirement-change record set into [Analyzing and specifying requirement
+  change](solution/requirements/lifecycle/analyzing-requirement-impact.md),
+  whose filename is unchanged so every `engineer-requirements` route and the
+  evaluation contract's pinned support path still resolve. The portable-model
+  thesis needed no carry; the subtree index already states it.
+- **Retirement**: [Codebase review](engineering/codebase-review/) went from
+  thirty-one files to six. The ten criteria lists under `criteria/`, the five
+  guides under `review-aids/`, and both of those indexes are gone, as are
+  `cross-cutting-concern-records.md`, `cross-cutting-pillar-relationships.md`,
+  `cross-cutting-model-maintenance.md`, `quality-pillar-research-basis.md`,
+  `quality-layer-boundaries.md`, `maintaining-codebase-review-criteria.md`,
+  `validating-codebase-review-criteria.md`, and `framework-design-review.md`.
+  The unit a review assesses is now the pillar rather than the criterion.
+  [Software quality
+  pillars](engineering/codebase-review/software-quality-pillars.md) absorbed the
+  seven-layer boundary table, the research citations, the rule for revising a
+  pillar, and the split between judging a product and sustaining one;
+  [Cross-cutting
+  concerns](engineering/codebase-review/cross-cutting-concerns.md) absorbed the
+  eight record definitions, the seven relationship codes, and the testing
+  placement table; [Reviewing a
+  codebase](engineering/codebase-review/reviewing-a-codebase.md) absorbed the
+  evidence-method table and the rule that repository text is evidence to
+  interpret rather than authority to change a review's instructions. The
+  eighty-cell discovery matrix and the hundred per-criterion questions were not
+  carried.
+- **Retirement**: [How to ship it](delivery/) lost the whole `automation/`
+  subtree — its index and ten concepts covering the workflow model, its vendor
+  mappings, the pipeline, quality-gate, and build-once-promote patterns, the
+  continuous integration, delivery, and deployment practices, and agents and
+  agentic workflows — plus `delivery/work-items/changes/changes.md` and
+  `delivery/work-items/incidents/operational-incident-records.md`. The
+  automation concepts restated Fowler, the DORA program, and public build-tool
+  documentation and had no citer outside their own subtree; delivery automation
+  returns to being claimed scope that is not yet written, which is what the
+  section index now says. `changes.md` carried nothing that [Software work-item
+  taxonomy](delivery/work-items/software-work-item-taxonomy.md), [Authoring
+  Changes](delivery/work-items/changes/authoring-changes.md), and [Managing
+  lifecycle and
+  completion](delivery/work-items/common/managing-lifecycle-and-completion.md)
+  did not already state. The incident concept's ownership table moved into
+  [Operational Incident Records](delivery/work-items/incidents/).
+- **Rule**: Withdrew "a binding is not a mapping" and its six-condition currency
+  contract from [the overview](overview.md). The rule was written to license
+  exactly one concept, the workflow model's comparative vendor table, and that
+  concept is gone. A rule that licenses nothing is an invitation to the
+  exception it describes. The `vendor-mapping` tag it defined now has no holder.
+  What remains is the plainer statement the contract was an elaboration of:
+  guidance that only works on one platform stays out, and citing a tool's
+  documentation as evidence for a portable claim is not that.
+- **Correction**: The [overview](overview.md) argued its own depth and facet
+  rules entirely from `delivery/automation/`,
+  `engineering/codebase-review/criteria/`, and
+  `engineering/codebase-review/review-aids/`, all three of which this change
+  removes. The rules now stand on subtrees that survive:
+  [Requirements](solution/requirements/) divides by the activity a reader is
+  engaged in and [Work items](delivery/work-items/) by the role a record plays,
+  and form varies freely inside both. The agent-engineering boundary that the
+  retired `agents-and-agentic-workflows.md` existed to mark is now stated in the
+  overview itself, as a four-form table of who controls the meaningful next
+  steps.
+- **Correction**: The discovery map called Where to play and What to solve
+  "complete for their scope". Those were the bundle's two least-used sections
+  and carried its two most confident fullness claims. The map now says what each
+  section holds rather than grading it, and states the pattern plainly: depth
+  follows where material came from, not where it matters most.
+- **Attribution**: Withdrew the credit to published Google SRE material, which
+  no surviving concept cites. The Anthropic and OpenAI agent-engineering
+  citations moved with the four-form table into [the overview](overview.md) and
+  stay warranted, as do the DORA, ISO/IEC/IEEE, NIST, and build-tool citations,
+  which all still have citing concepts. Roger L. Martin and Harvard Business
+  School are now cited from a section index rather than from concept
+  frontmatter, because OKF reserves `index.md` and `log.md`, and only the
+  bundle-root `index.md` carries frontmatter; a section index cannot hold a
+  `sources` entry. The notices say so rather than claiming every source is in
+  provenance metadata.
+- **Release**: Released as 2.0.0, one day after 1.0.0. Removing fifty-three
+  concepts deletes public path space an installer may already link, so the major
+  is not a courtesy. `axm knowledge concepts query --tag pe-strategy` now
+  returns nothing where it returned eight concepts, which is a contract change
+  even though no surviving claim changed meaning. The three packs that depend on this
+  bundle raise their floor to `>=2.0.0`, because a pack resolving 1.0.0 would
+  route a reader at files this version does not have.
+- **Manifest**: Dropped the `workflow-automation`, `continuous-delivery`,
+  `solution-concept`, and `interaction-design` keywords. No concept answers to
+  any of them. `strategy` stays: the section still owns its question and its
+  index still carries the value stick, and the bundle description still runs
+  "from strategy through operations".
+- **References**: Repointed the five surviving links that still named a removed
+  file. Two Change references now cite [Software work-item
+  taxonomy](delivery/work-items/software-work-item-taxonomy.md), which is where
+  the role and the Bugfix classification are defined; the review-evidence row of
+  [Preserving evidence and
+  provenance](delivery/work-items/common/preserving-evidence-and-provenance.md)
+  and the boundary sentences in [How to run it](operations/) and [Supporting
+  quality criteria](engineering/codebase-review/supporting/) now cite the
+  concepts that absorbed the material. Three of the five sit in files this
+  change otherwise left alone; a link target is not a claim, and a protected
+  file that routes to nothing is not protected.
+- **Vocabulary**: The unit a review assesses is the pillar, and every section
+  that names it now says so. [How to run it](operations/) named
+  "codebase-review criteria" for the properties it sustains and now names
+  `SQ-03`, `SQ-04`, and `SQ-06`; [How to build it](engineering/) and [Reviewing
+  a codebase](engineering/codebase-review/reviewing-a-codebase.md) drop
+  "criterion" where they meant a pillar. `TSQ-01` cited `EVO-05`, an identifier
+  the criteria lists carried and nothing now defines, and cites `SQ-09`
+  Evolvability instead. The `TSQ` identifiers keep the word `criterion` for
+  themselves, because a supporting checklist item is not a pillar.
+- **Attribution**: A carried claim keeps the citation that made it checkable,
+  and a citation names an authority rather than a route. [Software quality
+  pillars](engineering/codebase-review/software-quality-pillars.md) now cites in
+  its body the ten research sources it inherited, in a synthesis paragraph that
+  states which lesson came from which model instead of pointing at its own
+  frontmatter. [Reviewing a
+  codebase](engineering/codebase-review/reviewing-a-codebase.md) regained the
+  NIST AI Risk Management Framework citation for the rule that model-assisted
+  review rests on documented context, roles, limits, and measurement. [Value and
+  demand model](problem/value-and-demand-model.md) dropped a `sources` entry
+  that had been repointed at a section index: its neighboring-concerns sentence
+  is a boundary claim and needed no authority. [Applying project-specific
+  requirements
+  policy](solution/requirements/adaptation/applying-project-specific-requirements-policy.md)
+  cites [Requirement authority and
+  maturity](solution/requirements/foundations/requirement-authority-and-maturity.md),
+  the concept that states the model it layers over, in place of the subtree
+  index.
+- **Rule**: The section-tag rule said reserved indexes hold navigation rather
+  than retrievable claims, which this change made false: the value stick, the
+  four product risks, and the two owners of incident thresholds now live only in
+  an index. [The overview](overview.md) admits it and bounds it. An index may
+  state a claim; it may not state an obligation another file has to apply, and a
+  claim a concept must cite as its authority is promoted into a tagged concept,
+  so that nothing retrievable rests on something unretrievable.
+- **Boundary**: [How to ship it](delivery/) regained the row its Boundaries
+  table lost with the automation subtree: How to build it owns what a repository
+  task means and who may invoke it, this section owns when a workflow runs it
+  and what happens to the result. How to build it had been stating that split
+  alone. The row's old second clause, which sent a reader to the automation
+  subtree for the full statement, did not come back.
+- **Routing**: Three surviving files send the product-meaning-to-requirement
+  boundary to [What to build](solution/), which never named where the answer
+  is. Its Requirements heading now names [Requirements and neighboring
+  artifacts](solution/requirements/foundations/requirements-and-neighboring-artifacts.md),
+  which is where the deleted `solution/product-meaning-and-requirements.md`
+  landed.
 - **Recovery**: Carried the decision history of the three bundles retired in
   this change into this log, one `Migrated history from the ...` section each,
   matching the sections already kept for `strategy`, `product-management`, and
@@ -26,7 +220,7 @@
   its neighbors state from theirs. [What to build](solution/) chooses the
   interaction and How to build it judges, on available evidence, whether the
   built result achieves it. The execution surface owns what a task means and
-  who may invoke it; [delivery automation](delivery/automation/) owns when a
+  who may invoke it; `delivery/automation/` owns when a
   workflow runs it and what happens to the result.
 - **Discovery**: The [codebase review](engineering/codebase-review/) index now
   routes through its criteria, supporting, and review-aid indexes rather than
@@ -35,14 +229,13 @@
   prose alone. The direct links to the ten criteria lists stay, because a
   reader who already knows which outcome they are judging should not have to
   pass through a second index.
-- **Routing**: [Quality layers outside the ten
-  pillars](engineering/codebase-review/quality-layer-boundaries.md) sent
+- **Routing**: `engineering/codebase-review/quality-layer-boundaries.md` sent
   findings to a contributor-guidance layer, a shared assurance layer, and
   optional method aids, none of which names a destination in the merged bundle.
-  Method aids are the [review aids](engineering/codebase-review/review-aids/),
+  Method aids are the `engineering/codebase-review/review-aids/`,
   assurance and evidence are two of the eight cross-cutting records, and the
   engineering-system capabilities it lists now split across the execution
-  surface, [Automation](delivery/automation/), and
+  surface, `delivery/automation/`, and
   [How to run it](operations/). Design principles are recorded as having no
   destination yet, because Architecture and technical design is still
   unwritten, rather than being pointed somewhere convenient.
@@ -54,7 +247,7 @@
   should take on its own.
 - **Rule**: A binding is not a mapping. The overview said anything churning
   with a vendor lives elsewhere, and the migrated
-  [workflow model](delivery/automation/workflow-model-explainer.md) then
+  `delivery/automation/workflow-model-explainer.md` then
   restated the object models of several named platforms inside this bundle.
   The rule now separates a binding, which only works on one platform and stays
   out, from a dated comparative mapping that exists to make a portable claim
@@ -62,7 +255,7 @@
   alternative was deleting the table, which would have left the model's central
   claim asserted rather than checkable.
 - **Structure**: Flattened `patterns/` and `practices/` in
-  [Automation](delivery/automation/). They were folders named for a knowledge
+  `delivery/automation/`. They were folders named for a knowledge
   form, which the facet rule forbids. The seven concepts now sit directly in
   the subtree and the grouping survives as index headings and concept tags,
   which is what that rule prescribes instead.
@@ -75,8 +268,8 @@
   loophole.
 - **Correction**: The claim that knowledge form never earns a folder at any
   depth was too absolute to survive its own bundle.
-  [Criteria](engineering/codebase-review/criteria/) is uniformly checklists and
-  [Review aids](engineering/codebase-review/review-aids/) uniformly guides. The
+  `engineering/codebase-review/criteria/` is uniformly checklists and
+  `engineering/codebase-review/review-aids/` uniformly guides. The
   test is what a folder is named for, not what it turns out to contain, and the
   signal that form has become the partition is a sibling folder holding the
   same subject in another form.
@@ -88,7 +281,7 @@
 - **Boundary**: The overview listed four things deliberately kept outside and
   the delivery indexes named a fifth. Agent engineering joins the table, which
   is the boundary
-  [Agents and agentic workflows](delivery/automation/agents-and-agentic-workflows.md)
+  `delivery/automation/agents-and-agentic-workflows.md`
   exists to mark.
 - **Correction**: The section tag rule exempted reserved `index.md` and
   `log.md` files but not the bundle-root concept that states it. This overview
@@ -126,7 +319,7 @@
   incident concept now delegates the response regime explicitly rather than
   leaving the split implied.
 - **Migration**: Moved the ten concepts of the `workflow-automation` bundle
-  into an [automation](delivery/automation/) subtree under
+  into an `delivery/automation/` subtree under
   [How to ship it](delivery/) and retired that bundle. The pattern and practice
   subfolders moved intact, and a new subtree index states what the subtree
   owns.
@@ -193,11 +386,10 @@
   named have now migrated; only the design areas remain unsourced.
 - **Migration**: Moved the ten concepts of the standalone `product-management`
   bundle into this one and retired that bundle. Eight went to
-  [What to solve](problem/), [Product strategy](strategy/product-strategy.md)
-  to [Where to play](strategy/), and
-  [Product meaning and requirements](solution/product-meaning-and-requirements.md)
-  to [What to build](solution/). The problem section index replaces its
-  planned-scope table with the migrated concepts.
+  [What to solve](problem/), Product strategy to [Where to play](strategy/),
+  and Product meaning and requirements to [What to build](solution/). The
+  problem section index replaces its planned-scope table with the migrated
+  concepts.
 - **Decision**: Retired `product-management` rather than keeping it beside this
   bundle. Its four content areas were the four planned areas of What to solve,
   so keeping both would have left two bundles owning outcomes, risk, and
@@ -217,8 +409,8 @@
   [What to solve](problem/). A sub-index competing with the section index
   splits discovery for no gain at this size; the subfolder's framing paragraph
   became the section's Value and demand heading.
-- **Rename**: "Product management overview" became
-  [Product decisions and accountability](problem/overview.md). Its list of how
+- **Rename**: "Product management overview" became Product decisions and
+  accountability. Its list of how
   product work connects was a second telling of the seven questions, so it now
   describes the loop this section holds and names the neighbors that own the
   rest.
@@ -320,9 +512,9 @@
   replaces its planned-scope table with the migrated concepts, and every
   bundle-root link now resolves under `/strategy/`.
 - **Decision**: Widened the section's first area from "Participation and
-  advantage" to "Participation, advantage, and value" so
-  [Value creation and capture](strategy/value-creation-and-capture.md) has a
-  home. Value capture is part of how an arena is won, not a separate question.
+  advantage" to "Participation, advantage, and value" so Value creation and
+  capture has a home. Value capture is part of how an arena is won, not a
+  separate question.
 - **Attribution**: Repointed the two `product-management` source entries that
   cited the retired bundle at their new location, and corrected the footnote
   text that named the Strategy bundle as owner.
@@ -420,19 +612,16 @@
 - **2026-09-08 — Restructure**: Split every concept that exceeded the
   repository's 300-line limit into reader-recognizable siblings, preserving all
   content. The cross-cutting model became four concepts ([the model and
-  admission gate](engineering/codebase-review/cross-cutting-concerns.md), [the
-  eight records](engineering/codebase-review/cross-cutting-concern-records.md),
-  [typed pillar
-  relationships](engineering/codebase-review/cross-cutting-pillar-relationships.md),
-  and [model
-  maintenance](engineering/codebase-review/cross-cutting-model-maintenance.md));
-  the pillar taxonomy became three ([the
-  pillars](engineering/codebase-review/software-quality-pillars.md), [layers
-  outside the ten](engineering/codebase-review/quality-layer-boundaries.md), and
-  [the research
-  basis](engineering/codebase-review/quality-pillar-research-basis.md)); criteria
-  maintenance separated from [criteria
-  validation](engineering/codebase-review/validating-codebase-review-criteria.md);
+  admission gate](engineering/codebase-review/cross-cutting-concerns.md),
+  `engineering/codebase-review/cross-cutting-concern-records.md`,
+  `engineering/codebase-review/cross-cutting-pillar-relationships.md`, and
+  `engineering/codebase-review/cross-cutting-model-maintenance.md`); the pillar
+  taxonomy became three ([the
+  pillars](engineering/codebase-review/software-quality-pillars.md),
+  `engineering/codebase-review/quality-layer-boundaries.md`, and
+  `engineering/codebase-review/quality-pillar-research-basis.md`); criteria
+  maintenance separated from
+  `engineering/codebase-review/validating-codebase-review-criteria.md`;
   the [task interface](engineering/repository-task-interface.md) separated from
   [resolved contract
   principles](engineering/resolved-task-contract-principles.md), [invocation and
@@ -534,11 +723,11 @@
   scenario-analysis, verification-evidence, runtime-investigation, and
   model-assisted-review guides so inspection methods remain discoverable without
   entering the timeless outcome criteria.
-- **2026-09-01 — Design review**: Added [Codebase-review framework design
-  review](engineering/codebase-review/framework-design-review.md), covering
-  structural checks, six synthetic product forms, seven boundary challenges,
-  design revisions, and unresolved risks. The result supports comparative
-  trials, not a claim of field validation.
+- **2026-09-01 — Design review**: Added
+  `engineering/codebase-review/framework-design-review.md`, covering structural
+  checks, six synthetic product forms, seven boundary challenges, design
+  revisions, and unresolved risks. The result supports comparative trials, not
+  a claim of field validation.
 - **2026-09-01 — Replacement**: Removed the former ten topic checklists once the
   new framework was complete. The collection intentionally carries no redirect,
   deprecated-stub, legacy-ID, or backward-compatibility layer.
@@ -564,10 +753,10 @@
   product quality, and classified pstack's principles, review methods, assurance
   practices, and code-shape heuristics without promoting them into product
   pillars.
-- **2026-09-01 — Creation**: Added [Maintaining codebase-review
-  criteria](engineering/codebase-review/maintaining-codebase-review-criteria.md)
-  to keep durable quality outcomes separate from optional evidence, perspective,
-  and inspection-method aids as the collection evolves.
+- **2026-09-01 — Creation**: Added
+  `engineering/codebase-review/maintaining-codebase-review-criteria.md` to keep
+  durable quality outcomes separate from optional evidence, perspective, and
+  inspection-method aids as the collection evolves.
 - **2026-09-01 — Pilot**: Converted the then-current Testing and verification
   quality criteria into ten stable-ID, outcome-centered questions with explicit
   rationales as the collection's first vertical slice, then design-reviewed it
@@ -630,25 +819,22 @@
 
 - **2026-09-08 — Practice boundaries**: Finished the 2026-08-21 split by
   removing the deployment, release, and exposure vocabulary and the "not
-  universally preferable" argument duplicated between [Continuous
-  deployment](delivery/automation/continuous-deployment-explainer.md) and
-  [Continuous integration, delivery, and
-  deployment](delivery/automation/continuous-integration-delivery-and-deployment.md).
+  universally preferable" argument duplicated between
+  `delivery/automation/continuous-deployment-explainer.md` and
+  `delivery/automation/continuous-integration-delivery-and-deployment.md`.
   The reference now solely owns the comparative vocabulary, the explainer solely
   owns adoption rationale, and each links to the other.
-- **2026-09-08 — Discovery**: Added `Related` sections to [Agents and agentic
-  workflows](delivery/automation/agents-and-agentic-workflows.md) and the
+- **2026-09-08 — Discovery**: Added `Related` sections to
+  `delivery/automation/agents-and-agentic-workflows.md` and the
   practice-comparison reference, which were the only concepts offering a search
   reader no route onward.
 - **2026-09-08 — Index**: Merged the two single-entry groups in the bundle root
   index into one Patterns and practices group. That index is now the
-  [Automation](delivery/automation/) subtree index.
-- **2026-08-21 — Practice boundaries**: Added [Continuous integration, delivery,
-  and
-  deployment](delivery/automation/continuous-integration-delivery-and-deployment.md)
-  as the comparative authority for the three practices and removed the
-  duplicated delivery-versus-deployment section from the focused delivery
-  explainer.
+  `delivery/automation/` subtree index.
+- **2026-08-21 — Practice boundaries**: Added
+  `delivery/automation/continuous-integration-delivery-and-deployment.md` as the
+  comparative authority for the three practices and removed the duplicated
+  delivery-versus-deployment section from the focused delivery explainer.
 - **2026-08-14 — Agent boundary**: Distinguished deterministic automation, LLM
   workflows, agents, and agents contained within workflows; retained schedules,
   dependencies, durable progress, retries, cancellation, and compensation in

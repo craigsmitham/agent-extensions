@@ -2,48 +2,63 @@
 
 Where should we participate, and how do we win there?
 
-This section owns the choice of arena: where to participate, how advantage is
-won and sustained there, how the resulting value is created and captured, what
-evidence keeps those choices honest, and how they become direction for a
-specific product. Which problems a team then pursues inside that direction, and
-what outcome would show it worked, belongs to [What to solve](../problem/).
+The choice of arena: where an organization will and will not participate, how
+advantage is won and sustained there, how the resulting value is created and
+captured, what evidence keeps those choices honest, and how they become
+direction for a specific product. This section owns those choices and the
+boundary around them. Which problems a team then pursues inside that direction,
+and what outcome would show it worked, belongs to
+[What to solve](../problem/).
 
-## Start here
+This section holds no concepts. Its question is real and its boundaries are
+load-bearing, so it is worth reading to find out where something belongs, not to
+find out how to do it.
 
-- [Strategy overview](overview.md) — What strategy owns, how it connects choices
-  to value and advantage, and what it leaves to planning and execution.
+## Non-responsibilities
 
-## Participation, advantage, and value
+Strategy is not a mission statement, a list of goals, an annual budget, a
+roadmap, or a plan of activities. Those may express or implement strategy, but
+none supplies the missing choices. Strategy also does not prescribe the
+discipline-specific decisions of product, marketing, operations, finance, or
+technology; it provides the context that constrains and aligns them.
 
-- [Strategy as choice](strategy-as-choice.md) — Why strategy consists of
-  consequential, mutually reinforcing choices rather than aspirations,
-  priorities, or activities alone.
-- [The choice cascade](choice-cascade.md) — How the Playing to Win choice
-  cascade connects aspiration, participation, advantage, capabilities, and
-  management systems.
-- [Product strategy](product-strategy.md) — How product strategy translates
-  broader strategic choices into product problems, differentiated value,
-  constraints, and decision context.
-- [Advantage and coherence](advantage-and-coherence.md) — How strategic
-  advantage arises from a reinforcing system of choices that creates
-  distinctive value and resists imitation.
-- [Value creation and capture](value-creation-and-capture.md) — How the value
-  stick distinguishes total value created from the portions captured by
-  customers, an organization, and suppliers or employees.
+Nor is a narrowed scope a strategy on its own. “Focus” without an account of how
+the focus creates advantage is not a strategy; it is reduced scope.
 
-## Situational awareness
+## Created value and captured value
 
-- [Wardley Mapping](wardley-mapping.md) — How Wardley Mapping combines user
-  needs, dependency, and evolution to make strategic assumptions visible
-  without choosing a strategy by itself.
-- [Developing and reviewing Wardley maps](developing-and-reviewing-wardley-maps.md) — Produce
-  and review a Wardley map whose question, evidence, movement, and inertia
-  survive challenge, when a strategic decision turns on a user-anchored
-  dependency chain and how its components may evolve rather than on
-  financial, organizational, or process structure.
+One model earns its place here, because neighboring sections reason with it. The
+value stick separates four quantities in an exchange:
 
-## Strategic evidence
+| Quantity | Meaning |
+| --- | --- |
+| Willingness to pay (WTP) | The most a customer would pay |
+| Price | What the customer actually pays |
+| Cost | What the organization incurs to provide the offering |
+| Willingness to sell (WTS) | The least compensation a supplier or employee would accept to contribute |
 
-- [Strategy as hypothesis](strategy-as-hypothesis.md) — How explicit
-  assumptions and discriminating evidence allow strategy to adapt without
-  collapsing into reactive tactics.
+Total value created is WTP minus WTS. Price sits inside that span and
+redistributes value between the customer and the organization without adding to
+it. Raising WTP or lowering WTS widens the span; moving price only moves the
+line inside it. This is why “value” cannot mean revenue alone: a gain that only
+moved the line created nothing.[^hbs-value-stick]
+
+## Where the canon lives
+
+The portable strategy canon this section would otherwise restate — strategic
+choice, the choice cascade, advantage and coherence, strategy as hypothesis, and
+Wardley mapping — is read better at its sources than in a summary, and the
+sources are public:
+
+* [The Strategic Choice Structuring Process](https://rogermartin.medium.com/the-strategic-choice-structuring-process-5e116b12ae1f) — Roger L. Martin on the Playing to Win choice cascade: aspiration, where to play, how to win, capabilities, and management systems.
+* [Overcoming the Integrative Strategy Challenge](https://rogermartin.medium.com/overcoming-the-integrative-strategy-challenge-9af0d670d083) — Roger L. Martin on why the cascade is hard: the choices must reinforce one another, not merely fill five boxes.
+* [How to Formulate a Successful Business Strategy](https://online.hbs.edu/documents/how-to-formulate-successful-business-strategy.pdf) — Harvard Business School Online, source of the value stick above.
+* [On being lost](https://medium.com/wardleymaps/on-being-lost-2ef5f05eb1ec) — Simon Wardley on the strategy cycle of purpose, landscape, climate, doctrine, and leadership that Wardley mapping sits inside.
+* [Finding a path](https://medium.com/wardleymaps/finding-a-path-cdb1249078c0) — Simon Wardley on map grammar: a user need, a dependency chain, and components positioned by evolution.
+
+A concept belongs here when it makes an arena, advantage, or value-capture
+choice decidable in a way those sources leave open. A summary of what they
+already say does not.
+
+[^hbs-value-stick]: Harvard Business School Online, How to Formulate a
+    Successful Business Strategy — "The Value Stick and Value-Based Pricing".

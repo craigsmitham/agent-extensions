@@ -40,15 +40,19 @@ work at the interaction altitude, and a judgment that the built result misses
 the interaction is a finding about the build rather than a new interaction
 choice.
 
-## Requirements and product meaning
+## Requirements
 
 - [Requirements](requirements/) — The portable craft of discovering,
   analyzing, specifying, reviewing, changing, and maintaining requirements:
   foundations, development, authoring, review, lifecycle, and local
   adaptation.
-- [Product meaning and requirements](product-meaning-and-requirements.md) —
-  Where product meaning ends, requirements begin, and use cases provide a
-  bridge without becoming the sole authority.
+
+Where product meaning stops and a normative obligation begins is stated in
+[Requirements and neighboring
+artifacts](requirements/foundations/requirements-and-neighboring-artifacts.md).
+[What to solve](../problem/) sends that boundary here, and that file is where it
+is answered: an offering, an audience, a need, a job, and a value proposition
+carry no obligation until one is written as a requirement someone can dispute.
 
 ## Planned scope
 

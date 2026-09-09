@@ -1,8 +1,8 @@
 ---
 type: Explainer
 title: Cross-cutting concerns for software quality
-description: Defines what makes a concern cross-cutting rather than an eleventh quality pillar, names the eight canonical records and their three presentation roles, and supplies the subject, role, and admission tests every candidate record must pass.
-tags: [codebase-review, software-quality, cross-cutting-concerns, taxonomy, classification, admission-gate, research, pe-engineering]
+description: Defines what makes a concern cross-cutting rather than an eleventh quality pillar, defines the eight canonical records with their inclusions and exclusions, supplies the seven typed edges that reach the quality pillars, and gives the subject, role, and admission tests every candidate record must pass.
+tags: [codebase-review, software-quality, cross-cutting-concerns, taxonomy, classification, relationship-types, admission-gate, pe-engineering]
 status: draft
 sources:
   - id: iso-25010
@@ -60,19 +60,6 @@ software-design idea that cross-cutting depends on the chosen decomposition:
 a concern cuts across one primary organization while retaining its own
 coherent identity.[^kiczales]
 
-The model is published as four concepts. This one owns the rule, the roster,
-and the classification and admission tests. The others own the record
-definitions, the typed pillar relationships, and the maintenance and
-validation plan:
-
-- [Cross-cutting concern records](cross-cutting-concern-records.md) defines
-  each of the eight records with its inclusions, exclusions, and pillar reach.
-- [Cross-cutting relationships to the quality pillars](cross-cutting-pillar-relationships.md)
-  supplies the relationship vocabulary, the concern-by-pillar matrix, and the
-  placement of testing and testability.
-- [Maintaining the cross-cutting concern model](cross-cutting-model-maintenance.md)
-  covers knowledge organization, validation trials, and research limits.
-
 ## Decision in brief
 
 Keep eight canonical records with singular semantic heads. Present them in
@@ -101,6 +88,159 @@ frameworks connect needs to quality requirements; evaluation and measurement
 frameworks govern how target entities are assessed; architecture-description
 standards distinguish the entity from its representation; and assurance
 standards connect claims to arguments and evidence.[^iso-25010][^iso-25030][^iso-25040][^iso-25020][^iso-42010][^iso-15026-1][^iso-15026-2]
+
+## Define the eight records
+
+Each record has one semantic head, a bounded set of inclusions, and explicit
+exclusions. None receives a product-quality verdict.
+
+### `XC-01` — Claim context
+
+**Definition:** the declared conditions that give a quality claim its subject,
+meaning, applicability, required confidence, and limits.
+
+**Includes:** target entity and version; stakeholders and intended uses;
+operating and integration environments; lifecycle stage; workloads and
+scenarios; consequence and criticality; risk tolerance; assumptions;
+exclusions; and the distinction among `Not applicable`, `Not assessed`, and
+insufficient evidence.
+
+**Excludes:** the content of the specification, the method of review, and the
+evidence used to justify the verdict.
+
+### `XC-02` — Specification
+
+**Definition:** the quality of the explicit intent, requirements, contracts,
+invariants, bounds, and trace relationships that govern product judgments.
+
+**Includes:** functional and quality requirements; acceptance conditions;
+interface and protocol contracts; data meaning; legal states; error and
+recovery semantics; compatibility commitments; security and safety
+constraints; and bidirectional traceability through changes and evidence.
+
+**Excludes:** whether the implemented product conforms, whether the requirement
+is socially or commercially valuable, and any one notation or format.
+
+### `XC-03` — Structure
+
+**Definition:** the discipline with which the product localizes changeable
+decisions, responsibility, authority, state, dependency, and complexity into
+coherent boundaries.
+
+**Includes:** information hiding; modular and package boundaries; cohesion and
+coupling; dependency direction; interface size and stability; ownership of
+state and effects; representation choices; concurrency boundaries; and
+justified complexity.
+
+**Excludes:** the product-level outcomes of intelligibility and evolvability,
+prescriptive pattern catalogs, and uncalibrated proxies such as file length or
+number of abstractions.
+
+### `XC-04` — Lifecycle integrity
+
+**Definition:** the engineering system's ability to preserve the identity,
+control, reproducibility, provenance, and recoverability of product states and
+changes over time.
+
+**Includes:** configuration identification; dependency and toolchain
+resolution; change control and status; reproducible construction; generated
+artifact ownership; build and release lineage; source and artifact provenance;
+migration, compatibility, and rollback paths; retirement; and recovery from a
+partial lifecycle operation.
+
+**Excludes:** the throughput of a delivery team, the security or correctness of
+the resulting product, and a mandate for one branching, packaging, or
+deployment method.
+
+### `XC-05` — Risk
+
+**Definition:** the explicit reasoning that connects uncertain faults, threats,
+hazards, misuse, interactions, and tradeoffs to consequences and declared
+tolerances.
+
+**Includes:** relevant failure and attack scenarios; hazard and abuse analysis;
+fault propagation; exposure and consequence; uncertainty and sensitivity;
+quality-attribute conflicts; risk acceptance; compensating controls; and
+residual risk.
+
+**Excludes:** the product-quality outcomes themselves, a generic governance
+program, and a universal severity or probability scale.
+
+### `XC-06` — Assurance
+
+**Definition:** the proportionate portfolio of verification and validation
+mechanisms used to produce grounds for believing applicable quality claims.
+
+**Includes:** tests, proofs, reviews, inspections, static and dynamic analysis,
+benchmarks, simulations, security testing, safety analysis, operational
+monitoring, audits, attestations, and appropriate independence or diversity.
+
+**Excludes:** the product quality being claimed, the intrinsic quality of each
+supporting artifact, and the assumption that activity volume equals confidence.
+
+### `XC-07` — Feedback
+
+**Definition:** the engineering system's ability to detect and interpret
+product behavior and effects, connect them to decisions, and support timely
+correction or learning.
+
+**Includes:** runtime observability and diagnosability; traces, metrics, logs,
+profiles, and health signals; user and operator feedback; incident and defect
+learning; change-impact feedback; escalation; and the latency and reach of
+feedback loops.
+
+**Excludes:** reliability itself, telemetry volume as a proxy for insight, and
+a requirement that every product use production monitoring.
+
+### `XC-08` — Evidence
+
+**Definition:** the fitness of information to support a specific quality claim
+and decision within a declared context.
+
+**Includes:** claim binding; relevance; construct validity; representativeness;
+measurement reliability; provenance and integrity; scope and version identity;
+freshness; independence; completeness; uncertainty; contradictory results; and
+limitations.
+
+**Excludes:** the assurance activity that generated the information, the
+verdict it informs, and any assumption that a metric or majority opinion is
+intrinsically authoritative.
+
+## Type the relationships to the pillars
+
+Each record reaches a pillar through directed, conditional edges. Use these
+types; do not write a bare “relates to” edge.
+
+| Code | Relationship | Meaning |
+| --- | --- | --- |
+| `CON` | Constitutes | The source is part of the definition of the target outcome; use rarely because most cross-cutting records should not constitute a pillar. |
+| `CTR` | Contributes | The source can causally help or impair the target without being necessary or sufficient. |
+| `EN` | Enables | The source makes achievement or assessment of the target feasible or materially easier. |
+| `EV` | Evidences | The source can provide grounds for a judgment about the target. |
+| `CS` | Constrains | The source sets scope, bounds, obligations, or decision conditions for the target. |
+| `TH` | Threatens | The source describes a way the target can be impaired. |
+| `TR` | Trades off | A decision involving the source may improve one target while impairing another. |
+
+Every maintained edge records its direction, mechanism, applicability, evidence
+basis, limitation or counterexample, and lifecycle scope. `CON` should stay
+almost unused: a record that routinely constitutes one pillar is probably a
+subquality of that pillar, and one that appears to constitute many is probably
+a broad synonym for product quality. Claim context and Evidence constrain and
+qualify every pillar; the other six apply conditionally.
+
+## Place testing precisely
+
+Testing occupies several positions because the word can name different subjects
+and roles. Keep them apart.
+
+| Term | Subject and role | Placement |
+| --- | --- | --- |
+| Product testability | Product; subquality | Primarily a subquality of Evolvability, whose presence affords assurance across any pillar whose behavior must be investigated |
+| Testing | Review or lifecycle activity; assurance mechanism | `XC-06` Assurance; one member of a portfolio, not the product-quality outcome |
+| Test-suite quality | Supporting-artifact quality | Assessed within Assurance and governed by `XC-08` Evidence; it asks whether tests are valuable and sustainable as grounds for claims |
+| Test result | Evidence item | `XC-08` Evidence; its relevance, validity, provenance, representativeness, freshness, and limits determine what it can support |
+| Test process | Review protocol or engineering-system practice | Method guidance outside the product pillars and outside these record definitions |
+| Passing tests | Observation | Evidence for only the claims, versions, conditions, and oracles the tests actually cover; never a synonym for product quality |
 
 ## Classify by subject and role
 

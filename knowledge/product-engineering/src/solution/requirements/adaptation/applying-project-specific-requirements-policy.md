@@ -5,8 +5,8 @@ description: Layers local terminology, authority, content obligations, rigor, an
 tags: [adaptation, policy, local-instructions, authority, rigor, pe-solution]
 sources:
   - id: portable-model
-    resource: ../foundations/portable-requirements-engineering.md
-    title: Portable requirements engineering
+    resource: ../foundations/requirement-authority-and-maturity.md
+    title: Requirement authority and maturity
 generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
@@ -41,5 +41,7 @@ conflict rather than silently choosing one. Project instructions may add
 content requirements without forcing the portable model to prescribe a universal
 form.
 
-[^portable-model]: This adaptation rule applies the cited portable model while
+[^portable-model]: [Requirement authority and
+    maturity](../foundations/requirement-authority-and-maturity.md) states the
+    portable candidate-and-normative model this rule layers local policy over,
     leaving project-specific authority with the consuming project.

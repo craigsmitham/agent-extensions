@@ -12,11 +12,6 @@ while preserving uncertainty and project decision authority.
   Develops sourced observations and needs into bounded requirement candidates
   without implying acceptance. Use when source material has been gathered and
   must become analyzed candidates before any acceptance decision.
-- [Choosing requirement subject and level](choosing-requirement-subject-and-level.md) -
-  Chooses an obligated subject and abstraction level appropriate to the
-  decision without requiring a particular architecture taxonomy. Use when a
-  requirement's obligated subject is unclear, names an undecided implementation
-  element, or is too broad to assess.
 - [Resolving conflicts and open decisions](resolving-conflicts-and-open-decisions.md) -
   Preserves requirement conflicts, options, authority, and decision evidence
   instead of hiding uncertainty in wording. Use when sources disagree, a needed

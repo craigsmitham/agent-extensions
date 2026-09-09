@@ -17,11 +17,10 @@ Start at the [discovery map](src/index.md).
 
 The guidance here is technology-agnostic. Anything that churns with a specific
 language, framework, or vendor stays in its own bundle, such as `effect-v4`,
-and is referenced rather than restated. One bounded exception is stated in the
-[overview](src/overview.md): a dated comparative mapping of named platforms onto
-a portable model may stay when the model would otherwise be uncheckable.
-[Workflow model](src/delivery/automation/workflow-model-explainer.md) is the
-only one, and it lives under the currency contract the overview sets.
+and is referenced rather than restated. Citing a tool's documentation as
+evidence for a portable claim is not a binding; teaching a reader to operate
+that tool is, and it stays out. The [overview](src/overview.md) states what
+else is deliberately left outside, and why.
 
 Every concept file carries a section tag matching its directory, because
 `axm knowledge concepts query` can scope a search to a bundle but not to a
@@ -47,55 +46,53 @@ reasoning and shows where each clause of its question now lives.
 
 ## Status
 
-Five of the six sections hold concepts. They arrived from six standalone bundles
-that have been retired into this one, so the material is migrated rather than
-newly written, and its depth varies by where it came from.
+Four of the six sections hold concepts. The material arrived from six standalone
+bundles that have been retired into this one, so it is migrated rather than
+newly written, and its depth varies by where it came from. Some of it has since
+been retired again: a migrated concept that only summarized a public source, or
+only restated a sibling, was removed rather than kept for volume. The
+[update log](src/log.md) names every retired file and where its surviving claim
+went.
 
 | Section | Source | State |
 | --- | --- | --- |
-| Where to play | `strategy`, `product-management` | Migrated; both bundles retired |
-| What to solve | `product-management` | Migrated; that bundle retired |
+| Where to play | `strategy`, `product-management` | Both bundles retired, and the migrated concepts have since been retired too, leaving scope, boundaries, and the value stick |
+| What to solve | `product-management` | Migrated; that bundle retired. Three concepts |
 | What to build | `requirements-engineering`, `product-management` | Requirements migrated and that bundle retired; the design half is unwritten |
 | How to build it | `software-engineering` | Migrated and that bundle retired; two of five areas are unwritten |
-| How to ship it | `work-management`, `workflow-automation` | Both migrated and retired; delivery flow is unwritten |
+| How to ship it | `work-management`, `workflow-automation` | Both migrated and retired; the `workflow-automation` concepts have since been retired, so only work items remain and flow, build and release, and delivery automation are unwritten |
 | How to run it | None | No concepts; scope and boundaries only |
 
-Three sections carry more than one source, and each resolved it differently. In
-"Where to play", the eight concepts of the `strategy` bundle and
-[Product strategy](src/strategy/product-strategy.md) from `product-management`
-sit together at the section's top level, because product strategy is the rung of
-the choice cascade that turns an arena choice into product direction rather than
-a separate body of craft. In "What to build", the requirements concepts sit in a
+Three sections carry more than one source. In "Where to play" the question no
+longer arises, because neither source left a concept behind. The other two
+resolved it differently. In "What to build", the requirements concepts sit in a
 [Requirements](src/solution/requirements/) subtree, keeping the section's own
-top level for design concepts.
-[Product meaning and requirements](src/solution/product-meaning-and-requirements.md)
-arrived separately with `product-management` because it explains where product
-meaning stops and a requirement begins; it cites
-[Requirements and neighboring artifacts](src/solution/requirements/foundations/requirements-and-neighboring-artifacts.md)
-directly rather than by URL, and the two accounts must not diverge. In "How to
-ship it", [work items](src/delivery/work-items/) and
-[automation](src/delivery/automation/) arrived as separate bundles and remain
-separate subtrees, because one is a record contract and the other is a field of
-systems.
+top level for the design concepts still to be written. In "How to ship it",
+[work items](src/delivery/work-items/) kept its own subtree because it is a
+record contract rather than a field of systems; the field of systems that
+arrived beside it has since been retired.
 
 ### What is still unsourced
 
-No bundle exists behind any of the following, and none of it has been written.
+No bundle supplies any of the following today, and none of it is written.
+Delivery automation is on the list because the bundle that supplied it was
+absorbed and its concepts then retired, not because the area was never
+attempted.
 
 | Unsourced area | Section |
 | --- | --- |
 | Architecture and technical design | How to build it |
 | Construction | How to build it |
 | Delivery flow: batch size, branching, review gates, and cadence | How to ship it |
+| Build and release: versioning and artifact identity, environment topology, and rollout strategy | How to ship it |
+| Delivery automation: workflow definition and execution, pipelines, quality gates, artifact promotion, and the continuous practices | How to ship it |
 | Everything: observability, reliability, incident practice, operational security, and sustainment | How to run it |
 
-The design half of "What to build" is a fifth gap of the same kind. Solution
-concept, resolution and fidelity, interaction design, and constraint as design
-input have no existing bundle behind them and will be written from scratch.
-Build and release in "How to ship it" is a partial gap rather than a whole one:
-pipelines, quality gates, and artifact promotion arrived with
-[automation](src/delivery/automation/), while versioning, environment topology,
-and rollout strategy did not.
+Two more gaps of the same kind sit outside that table. The design half of
+"What to build" — solution concept, resolution and fidelity, interaction
+design, and constraint as design input — has no existing bundle behind it and
+will be written from scratch. "Where to play" holds the value stick, its
+non-responsibilities, and links to the public canon, and nothing more.
 
 A section with no concepts still states its question, its scope, and its
 boundaries. That is enough to place a concept and to keep neighboring sections

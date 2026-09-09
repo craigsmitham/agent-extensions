@@ -37,15 +37,20 @@ or MDN documentation.
 ## Knowledge and management sources
 
 The `knowledge-management` and `product-engineering` bundles synthesize ideas
-from public sources identified in each concept's provenance metadata. These
-include the FAIR Guiding Principles, W3C PROV, KCS, public agent-engineering
-guidance from Anthropic and OpenAI, Silicon Valley Product Group's
-product-model writing, Roger L. Martin's Playing to Win writing, and Harvard
-Business School's value-stick materials. The `product-engineering` bundle also
-absorbed the retired `software-engineering`, `work-management`, and
-`workflow-automation` bundles, adding sources such as ISO/IEC/IEEE and NIST
-standards, published Google engineering and SRE material, Martin Fowler's and
-Kent Beck's public writing on testing and refactoring, the DORA research
+from public sources identified in each concept's provenance metadata, or, where
+a claim is held by a reserved section index that the Open Knowledge Format does
+not permit to carry frontmatter, in that index itself. These include the FAIR
+Guiding Principles, W3C PROV, KCS, public agent-engineering guidance from
+Anthropic and OpenAI, Silicon Valley Product Group's product-model writing,
+Roger L. Martin's Playing to Win writing, and Harvard Business School's
+value-stick materials. The `product-engineering` bundle also absorbed the
+retired `software-engineering` and `work-management` bundles, adding sources
+such as ISO/IEC/IEEE and NIST standards, published Google engineering material,
+Martin Fowler's and Kent Beck's public writing on testing, the DORA research
 program, and public build-tool and browser-automation documentation. The
 bundles and related rule packages contain original summaries and applications;
 they do not vendor those sources or reproduce their proprietary templates.
+
+Every name above is credited because a file that survives in the repository
+today cites it. Sources that reached this list through concepts since retired,
+including published Google SRE material, are not credited here.

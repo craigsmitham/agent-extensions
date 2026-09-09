@@ -1,8 +1,8 @@
 ---
 type: Explainer
 title: Software quality pillars
-description: Defines the ten candidate product-quality outcomes used by codebase review — suitability through intelligibility — with each pillar's desired outcome, inclusions, exclusions, nearest-neighbor boundary tests, and applicability rules.
-tags: [codebase-review, software-quality, quality-model, taxonomy, outcomes, pillar-boundaries, applicability, pe-engineering]
+description: Defines the ten candidate product-quality outcomes used by codebase review — suitability through intelligibility — with each pillar's desired outcome, inclusions, exclusions, nearest-neighbor boundary tests, the supporting layers deliberately kept outside the ten, and the split between judging a product and sustaining one.
+tags: [codebase-review, software-quality, quality-model, taxonomy, outcomes, pillar-boundaries, quality-layers, applicability, pe-engineering]
 status: draft
 sources:
   - id: dijkstra
@@ -29,6 +29,36 @@ sources:
   - id: nist-ssdf
     resource: https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-218.pdf
     title: NIST SP 800-218 Secure Software Development Framework 1.1
+  - id: iso-25010
+    resource: https://www.iso.org/standard/78176.html
+    title: ISO/IEC 25010:2023 Systems and software Quality Requirements and Evaluation — Product quality model
+  - id: iso-25010-preview
+    resource: https://www.en-standard.eu/publicdoc/iec_previews/3440529.pdf
+    title: ISO/IEC 25010:2023 public preview
+  - id: iso-9126
+    resource: https://www.iso.org/standard/22749.html
+    title: ISO/IEC 9126-1:2001 Software engineering — Product quality — Part 1, Quality model
+  - id: mccall
+    resource: https://www.scribd.com/document/418348872/Factors-in-Software-Quality-Concept-and-Definitions-of-Software-Quality-Jim-A-McCall-Paul-K-Richard-Gene-F-Walters
+    title: Factors in Software Quality — Volume I, Concept and Definitions of Software Quality
+  - id: boehm
+    resource: https://citeseerx.ist.psu.edu/document?doi=b79adbdb51a0be5f9d9fdbf731bc31d1ff43747d&repid=rep1&type=pdf
+    title: Quantitative Evaluation of Software Quality
+  - id: furps
+    resource: https://public.dhe.ibm.com/software/rational/docs/v2003/unix_solutions/pdf/reqpro/reqpro_user.pdf
+    title: IBM Rational RequisitePro User's Guide
+  - id: dromey
+    resource: https://research-repository.griffith.edu.au/bitstream/10072/15682/1/3476.pdf
+    title: A Model for Software Product Quality
+  - id: brooks
+    resource: https://soloway.pbworks.com/f/The.Mythical.Man.Month.F.Brooks.pdf
+    title: The Mythical Man-Month — Essays on Software Engineering, Anniversary Edition
+  - id: lehman
+    resource: https://users.ece.utexas.edu/~perry/education/SE-Intro/lehman.pdf
+    title: Programs, Life Cycles, and Laws of Software Evolution
+  - id: dora
+    resource: https://dora.dev/guides/dora-metrics/
+    title: DORA software delivery performance metrics
 generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
 ---
 
@@ -41,13 +71,30 @@ or claim that software quality naturally has ten dimensions.
 The design prioritizes conceptual coherence, peer-level boundaries, durable
 meaning, and source support over familiar repository-review groupings.
 
-Two companion concepts carry the rest of the argument.
-[Quality layers outside the ten pillars](quality-layer-boundaries.md) explains
-where testing, build reproducibility, delivery performance, observability, and
-practitioner review systems belong instead.
-[Research basis for the quality pillars](quality-pillar-research-basis.md)
-records which historical models informed the synthesis, which alternatives were
-rejected, and what remains unvalidated.
+The set is a synthesis over historical and current quality models rather than a
+list any one of them asserts. It starts from the product-quality scope of
+ISO/IEC 25010:2023[^iso-25010][^iso-25010-preview] and its 9126
+predecessor,[^iso-9126] and takes its category lessons from the models that came
+before: a lifecycle grouping does not make every named factor an independent
+peer,[^mccall] a hierarchy relates qualities without validating weights or an
+aggregate score,[^boehm] required behavior and imposed constraints must not be
+flattened into one quality list,[^furps] and reviewable product properties
+should be related to outcomes rather than mistaken for them.[^dromey]
+
+Three departures from 25010 are deliberate. Suitability is separated from
+correctness, because a product can implement a stated contract correctly while
+the contract is incomplete for the need. Maintainability and flexibility sit
+under one Evolvability pillar, because continuing change is intrinsic to
+software coupled to a changing environment.[^lehman] Intelligibility is a pillar
+rather than a proxy for the cost of a future edit.[^brooks]
+
+One familiar candidate is refused. Delivery capability is a quality of the
+delivery system rather than of the product, and it mixes throughput with
+instability unless carefully decomposed, so it stays outside the ten.[^dora]
+
+No located source establishes that these ten are independent, collectively
+exhaustive, or optimal for repository review, and the cardinality of ten is an
+editorial constraint.
 
 ## Decision in brief
 
@@ -231,8 +278,58 @@ canonical owner.
 The pillars are related rather than statistically independent. Record
 `contributes-to`, `evidences`, `threatens`, and `trades-off-with` relationships
 instead of forcing every observation into a single causal story;
-[Cross-cutting relationships to the quality pillars](cross-cutting-pillar-relationships.md)
+[Cross-cutting concerns for software quality](cross-cutting-concerns.md)
 defines those edge types.
+
+## Keep supporting layers outside the ten
+
+Most of what a review looks at is not a pillar. Organize the rest by role
+rather than promoting every useful topic to a quality outcome.
+
+| Layer | Question answered | Examples |
+| --- | --- | --- |
+| Quality outcome | What desirable state should the product possess? | The ten pillars |
+| Subquality | Which narrower dimension constitutes an outcome? | Availability, recoverability, authenticity, learnability, modifiability |
+| Supporting-artifact quality | What desirable state should a specification, test suite, model, or other supporting artifact possess? | Test-suite value, specification clarity, model consistency |
+| Design principle | What rule tends to create or preserve qualities? | Abstraction, information hiding, behavioral substitutability, least privilege |
+| Engineering-system capability | What durable ability helps construct, change, deliver, operate, or learn from the product? | Dependency control, deterministic builds, task graphs, delivery automation, telemetry instrumentation |
+| Assurance mechanism | What produces grounds for believing a quality claim? | Tests, proofs, reviews, static analysis, benchmarks, monitoring, attestations |
+| Evidence property | What makes those grounds usable for this judgment? | Relevance, validity, provenance, freshness, scope binding, integrity, sufficient completeness |
+
+The engineering-system capability row is the one whose members are owned
+outside this framework, and each has a named home.
+
+| Capability | Owner |
+| --- | --- |
+| Task graphs, dependency control, and the repository surface those run through | [Designing a coherent repository task interface](../repository-task-interface.md) |
+| Delivery automation and the pipelines that run a task | [How to ship it](../../delivery/) |
+| Telemetry instrumentation and the operational signals it produces | [How to run it](../../operations/) |
+| Deterministic and reproducible construction | No owner in this bundle yet; the Construction area of [How to build it](../) is unwritten |
+
+This separation is not a demotion of testing, modular design, build coherence,
+or observability. It lets each support every quality it actually informs
+without pretending to be the quality outcome itself. Product testability is how
+readily product qualities can be investigated; test-suite quality is how
+valuable and sustainable the tests are as evidence, and the separate
+[Test-suite quality criteria](supporting/test-suite-quality.md) records that
+verdict; product quality is what the resulting evidence is intended to justify.
+
+## Judging a product, not sustaining one
+
+These pillars judge a codebase against a declared claim on the evidence
+available at a stated revision. Three of them name outcomes that a running
+system must also be sustained against, and [How to run it](../../operations/)
+owns that side. The split is by question, not by subject.
+
+| Outcome | Judged here as | Sustained there as |
+| --- | --- | --- |
+| Reliability | Whether the product supports a stated dependability claim on available evidence | Capacity, resilience, graceful degradation, and recovery under live demand |
+| Security | Whether the product preserves authorized protection against declared threats | Access, secrets, patching, and audit for a running system |
+| Efficiency | Whether required behavior meets its declared time, capacity, resource, and cost envelope | Ownership, on-call load, and retiring systems that still run |
+
+A verdict here is a bounded judgment at a revision, not a statement about
+production. A healthy production record is not a passing review, and a passing
+review is not evidence that the live system holds.
 
 ## Applicability and use
 
@@ -247,6 +344,14 @@ weights, can conflict, and can have veto-like importance in particular
 contexts. Record scope, stakeholder, scenario, evidence, uncertainty, and
 cross-pillar tradeoffs with each judgment.
 
+The pillars change slowly, and the ways a reviewer gathers evidence about them
+change quickly. Revise a pillar only when the desired property, scope, or
+consequence changed — not because a new tool, metric, or model offers another
+way to inspect it, and not to preserve a count. When observed use contradicts
+the synthesis, merge, split, or retire a pillar deliberately and record why;
+structural and source review can support this candidate, but representative
+comparative use is required before claiming review effectiveness.
+
 [^dijkstra]: Dijkstra, [Notes on Structured Programming](https://www.cs.utexas.edu/~EWD/transcriptions/EWD02xx/EWD249/EWD249.html).
 [^hoare]: Hoare, [An Axiomatic Basis for Computer Programming](https://sites.cs.ucsb.edu/~kemm/courses/cs266/acmhoare69.pdf).
 [^parnas]: Parnas, [On the Criteria To Be Used in Decomposing Systems into Modules](https://www.cs.lafayette.edu/~gexia/cs301/resources/parnas.html).
@@ -255,3 +360,13 @@ cross-pillar tradeoffs with each judgment.
 [^protection]: Saltzer and Schroeder, [The Protection of Information in Computer Systems](https://web.cs.wpi.edu/~cs557/f14/papers/saltzer1975_alt.html).
 [^slsa]: SLSA, [Specification 1.2](https://slsa.dev/spec/v1.2/).
 [^nist-ssdf]: NIST, [Secure Software Development Framework 1.1](https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-218.pdf).
+[^iso-25010]: ISO, [ISO/IEC 25010:2023 product quality model](https://www.iso.org/standard/78176.html).
+[^iso-25010-preview]: ISO/IEC, [ISO/IEC 25010:2023 public preview](https://www.en-standard.eu/publicdoc/iec_previews/3440529.pdf).
+[^iso-9126]: ISO, [ISO/IEC 9126-1:2001 lifecycle page](https://www.iso.org/standard/22749.html).
+[^mccall]: McCall, Richards, and Walters, [Factors in Software Quality, Volume I](https://www.scribd.com/document/418348872/Factors-in-Software-Quality-Concept-and-Definitions-of-Software-Quality-Jim-A-McCall-Paul-K-Richard-Gene-F-Walters).
+[^boehm]: Boehm, Brown, and Lipow, [Quantitative Evaluation of Software Quality](https://citeseerx.ist.psu.edu/document?doi=b79adbdb51a0be5f9d9fdbf731bc31d1ff43747d&repid=rep1&type=pdf).
+[^furps]: IBM Rational, [RequisitePro User's Guide](https://public.dhe.ibm.com/software/rational/docs/v2003/unix_solutions/pdf/reqpro/reqpro_user.pdf).
+[^dromey]: Dromey, [A Model for Software Product Quality](https://research-repository.griffith.edu.au/bitstream/10072/15682/1/3476.pdf).
+[^lehman]: Lehman, [Programs, Life Cycles, and Laws of Software Evolution](https://users.ece.utexas.edu/~perry/education/SE-Intro/lehman.pdf).
+[^brooks]: Brooks, [The Mythical Man-Month, anniversary edition](https://soloway.pbworks.com/f/The.Mythical.Man.Month.F.Brooks.pdf).
+[^dora]: DORA, [Software delivery performance metrics](https://dora.dev/guides/dora-metrics/).

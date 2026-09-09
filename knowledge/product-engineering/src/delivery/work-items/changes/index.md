@@ -1,11 +1,13 @@
 # Changes
 
-Concepts, classification guidance, authoring guidance, and a portable fallback
-template for bounded proposed or authorized software modifications.
+Classification guidance, authoring guidance, and a portable fallback template
+for bounded proposed or authorized software modifications.
 
-- [Changes as work items](changes.md) - Explains how a Change coordinates one
-  bounded software modification while specifications, designs, implementation,
-  evidence, and planning records retain their own responsibilities.
+A Change is one of the three portable work-item roles defined in the
+[Software work-item taxonomy](../software-work-item-taxonomy.md). Start there
+when the role or its boundary is unsettled, and come back here once both are
+settled.
+
 - [Classifying Changes](classifying-changes.md) - Use when a Change needs a
   truthful purpose classification without treating labels as diagnosis,
   priority, or authorization.

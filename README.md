@@ -29,9 +29,14 @@ and are not published from this repository.
 
 The `strategy`, `product-management`, `requirements-engineering`,
 `software-engineering`, `work-management`, and `workflow-automation` bundles
-were retired into `product-engineering`. Their concepts live under the section
-that owns the question they answer, and each carries a `pe-` section tag,
-because a query can be scoped to a bundle but not to a folder.
+were retired into `product-engineering`. Surviving concepts live under the
+section that owns the question they answer, and each carries a `pe-` section
+tag, because a query can be scoped to a bundle but not to a folder. Not all of
+them survived. The `workflow-automation` and `strategy` concepts have since
+been dropped rather than absorbed, because they summarized public sources that
+are better read at the source: "Where to play" now holds its question, its
+scope, and its boundaries and nothing else, and delivery automation is once
+again claimed scope that has not been written.
 
 ## Standalone skills
 

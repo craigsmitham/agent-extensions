@@ -25,7 +25,7 @@
   "type": "pack",
   "name": "work-management",
   "dependencies": {
-    "@craigsmitham/knowledge/product-engineering": ">=1.0.0",
+    "@craigsmitham/knowledge/product-engineering": ">=2.0.0",
     "@craigsmitham/skills/manage-work-items": ">=0.2.0"
   }
 }

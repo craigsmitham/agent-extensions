@@ -24,7 +24,7 @@ found unavailable, together with the provenance that keeps it attributable.
 | Record evidence | What a work item preserves about an occurrence, and the provenance that makes it attributable | This guide, for every work-item role |
 | Outcome evidence | What would tell a team that an intended outcome actually occurred | [What to solve](../../../problem/outcomes-and-evidence.md) |
 | Assessment evidence | What establishes that a stated condition holds, in verification and validation | [What to build](../../../solution/requirements/foundations/verification-and-validation.md) |
-| Review evidence | What a repository and its surroundings can supply to a bounded codebase verdict | [How to build it](../../../engineering/codebase-review/review-aids/) |
+| Review evidence | What a repository and its surroundings can supply to a bounded codebase verdict | [How to build it](../../../engineering/codebase-review/reviewing-a-codebase.md) |
 
 Record evidence is not a verdict. Preserving it establishes nothing about
 whether a condition holds, whether an outcome occurred, or whether a codebase is
