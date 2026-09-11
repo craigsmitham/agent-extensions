@@ -18,13 +18,13 @@ $devops-docs setup providers
 $devops-docs setup tools
 $devops-docs maintain providers
 $devops-docs maintain github.md
-$devops-docs discover who owns the package registry
-$devops-docs discover how local development and CI environments differ
-$devops-docs discover where the repository's build and test conventions are documented
+$devops-docs who owns the package registry
+$devops-docs how local development and CI environments differ
+$devops-docs where the repository's build and test conventions are documented
 $devops-docs author — implement the accepted provider changes
 ```
 
-Choose setup, discover, author, or maintain explicitly, or describe the work
+Choose setup, author, or maintain explicitly, or describe the work
 naturally. Scope can name document types, files, directories, or subjects.
 
 Setup and maintain analyze the selected scope and present one final proposal
@@ -33,9 +33,10 @@ changes by type, and ends with the overall recommendation. It lives only in the
 conversation; neither task changes files. Related impacts outside the selected
 scope are identified separately.
 
-Discover answers from existing docs with sources and uncertainty. Author creates
-or revises records within the requested authority, including implementing an
-accepted proposal. An inline draft stays in the conversation.
+For other requests, the skill starts at the corpus root's `index.md` (default:
+`devops/index.md`) and follows relevant links to find the documentation needed.
+Author creates or revises records within the requested authority, including
+implementing an accepted proposal. An inline draft stays in the conversation.
 
 ## Standard structure
 
@@ -73,7 +74,7 @@ and verifies effective discovery and link resolution.
 | [Agent-instructions template](src/templates/agent-instructions.md) | Discovery-pointer wording, inspection, proposal, and verification |
 | [Connected example](src/references/example.md) | A fictional draft Service, Measure, and Runbook |
 
-The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.4.0.
+The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.4.1.
 `src/` is the portable runtime payload. README is package documentation.
 This package has no executable helpers or mandatory runtime sibling dependencies.
 When available, `author-docs` contributes documentation craft and `author-okf`
@@ -90,6 +91,17 @@ or successful exercise.
 The profile is an application convention over OKF v0.2, not an OKF extension
 standard. Profile review is manual. Base validation, profile consistency,
 source support, and actual use evidence are distinct results.
+
+## Changes in 0.4.1
+
+Documentation lookup is the default fallback in `SKILL.md`, starting at the
+corpus root's index and following relevant links. The separate Discover task
+and its answer-format requirements are removed. Setup, author, maintain, and
+their authority boundaries are unchanged. Profile 0.4.0 still applies; no corpus
+migration is required. Version 0.4.0 remains available for rollback.
+
+Package and manual routing checks cover this simplification; the behavioral
+evaluation suite remains deferred during design.
 
 ## Changes in 0.4.0
 
