@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "devops-docs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Set up, author, consult, and maintain connected operational documentation for software products",
   "keywords": [
     "devops",

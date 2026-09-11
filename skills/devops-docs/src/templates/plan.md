@@ -24,6 +24,13 @@ conversation. Do not save a plan or change documentation during either task.
   declaration. Explain retained meaning, remaining reader needs, and reference
   repairs; a retirement may have no successor. Keep proposed declarations to
   repository-specific decisions and links to shared guidance.
+- State the proposed root and standard type-folder structure. Show migration
+  paths for relevant existing content; do not offer alternative layouts or
+  initially offer another root. Honor an explicit or declared root override.
+- Always report the agent discovery-pointer check under Related changes using
+  [its template](agent-instructions.md). Name the canonical target, action,
+  exact proposed text for an addition or revision, and reason. Keep adequate
+  equivalent guidance. Mark dependent instruction edits outside a narrow scope.
 - Put the overall recommendation and feedback invitation last. Do not append
   another summary or an implementation log. Scale the number of rows and their
   detail, not the presentation structure.
@@ -32,8 +39,8 @@ conversation. Do not save a plan or change documentation during either task.
 
 Everything below illustrates one maintenance proposal for Providers and
 Runbooks. Setup uses the same shape, with proposed adoption and navigation
-under Related changes. The two type-summary slots are the only unfilled parts
-of this example; populate them from the profile before displaying a real plan.
+under Related changes. Populate type-summary slots from the profile and render
+the pointer slot from its template before displaying a real plan.
 
 ---
 
@@ -44,9 +51,12 @@ of this example; populate them from the profile before displaying a real plan.
 Review Provider and Runbook records under `/devops/` so maintainers can find the
 current provider account and its applicable operating procedure.
 
+**Structure:** `/devops/` with the standard type folders, root adoption README,
+and root/type indexes. Only populated folders are needed.
+
 **Reviewed:** The Nimbus provider record, two supplier notes, the account
-inspection runbook, local provider-authoring guide, adoption declaration, and
-their incoming links.
+inspection runbook, local provider-authoring guide, adoption declaration, root
+`AGENTS.md`, and their incoming links.
 
 **Coverage limit:** Documentation and the supplied account-transfer notice;
 live account access and procedure execution were not checked.
@@ -92,6 +102,18 @@ and host-rule decisions; do not copy the retired guide into it.
 This is a dependent follow-up discovered through a link, not a review of all
 Environment records.
 
+**Agent discovery:** Propose adding the pointer to the canonical root `AGENTS.md`;
+inspection found no equivalent route to the existing `/devops/index.md`. This
+instruction edit is a dependent change outside the Provider/Runbook record scope.
+
+**Proposed text:**
+
+{{agent_discovery_pointer}}
+
+Render this slot from [Pointer text](agent-instructions.md#pointer-text), with
+`{{index_link}}` set to `[devops/index.md](devops/index.md)` for this example.
+Omit these rendering instructions from the final proposal.
+
 ## Decision: include the Environment follow-up?
 
 **Criteria:** Keep the requested scope bounded while avoiding a misleading
@@ -111,6 +133,8 @@ traced links from the selected records. Identified the unique facts to preserve.
 update affected links and indexes, and check record metadata and relationship
 targets. Confirm retirement loses no local meaning or human access to needed
 guidance. Keep procedure exercise status unchanged unless new evidence is supplied.
+If the instruction edit is included, verify the effective pointer, its index
+link, and the absence of duplicate guidance.
 
 ## Overall recommendation
 
@@ -120,6 +144,8 @@ guide without replacement, and repair their discovery links.
 I recommend **Option A**: include the one identified Environment correction so
 the known account references agree. This makes account and recovery information
 easier to find while preserving retention constraints and verification gaps.
+Include the proposed discovery pointer so ordinary repository work can find
+this operational context.
 
 **Status:** Proposed only; no files have been changed.
 

@@ -2,7 +2,7 @@
 
 Use for a quantitative definition and its interpretation, including service,
 cost, product, or delivery measures. Apply the [common profile](../references/profile.md).
-The Type contract is normative for profile 0.2.0; other sections guide authoring.
+The Type contract is normative for profile 0.3.0; other sections guide authoring.
 
 ## Type contract
 

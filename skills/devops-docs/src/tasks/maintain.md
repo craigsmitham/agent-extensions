@@ -10,6 +10,9 @@ Do not modify records, save a plan, or implement recommended changes.
    than guessing or reviewing them all as the requested target.
 2. Read [the profile](../references/profile.md) and relevant type templates.
    Start from a supplied change, known difficulty, or the selected records.
+   Check placement against the standard root/type structure, honoring only an
+   explicitly requested or declared root override. Propose necessary migration
+   rather than preserving a different layout; keep unrelated records out of scope.
    Compare consequential claims with applicable source authorities; preserve
    intended state, observed state, acceptance, and exercise as separate facts.
 3. Inspect typed relationships in both directions, ordinary links, textual
@@ -24,7 +27,13 @@ Do not modify records, save a plan, or implement recommended changes.
    Explain affected reference repairs and any declaration changes needed to
    keep local decisions separate from shared guidance.
    An elapsed review date prompts inspection; it does not prove a claim false.
-5. Present the [conversational proposal](../templates/plan.md), including actual
+5. Check agent discovery using the
+   [instruction-pointer template](../templates/agent-instructions.md), even for
+   a narrow record review. Suggest additions or revisions for a missing,
+   incomplete, or stale pointer; report an adequate equivalent as retained.
+   Put the canonical target, exact proposed text, and reason under Related
+   changes, marking edits outside the requested scope as dependent work.
+6. Present the [conversational proposal](../templates/plan.md), including actual
    coverage, evidence, and remaining gaps. Complete discoverable analysis in
    one pass; collect unresolved choices in the final proposal for feedback.
 

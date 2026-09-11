@@ -1,6 +1,6 @@
 # DevOps Docs profile
 
-Version **0.2.0** · Base **OKF v0.2** · Maintainer **@craigsmitham**.
+Version **0.3.0** · Base **OKF v0.2** · Maintainer **@craigsmitham**.
 Adoption by a repository is a separate scoped act.
 
 This profile describes operational knowledge for people developing, operating,
@@ -13,8 +13,8 @@ recorded reason for departures; MAY denotes an option.
 ## Adoption and placement
 
 An adoption MUST state this exact version, covered record scope, responsible
-maintainer, placement convention, and composition with host rules in a
-non-reserved document. The root index MUST link to that declaration and the
+maintainer, root location, and composition with host rules in `<root>/README.md`.
+The root index MUST link to that declaration and the
 versioned profile reference. Resolve conflicts before claiming conformance.
 No `okf_profile` field is introduced: profile declarations are producer
 conventions beyond OKF v0.2.
@@ -27,8 +27,12 @@ SHOULD be served through accessible references or a separate document with a
 distinct reader purpose. Installing a skill does not establish human access.
 
 Default to **`<repository-root>/devops/`**, abbreviated `/devops/`. This is
-repository-relative, never the filesystem root. Preserve an existing coherent
-layout unless migration is selected. The fallback structure is:
+repository-relative, never the filesystem root. Setup MUST propose this root
+and the standard structure below, including in an established repository.
+Only the root's name or location MAY vary, through an explicit user request or
+an existing adoption declaration. Do not initially offer root alternatives;
+an incidental existing folder arrangement is not an adoption decision.
+The internal structure MUST remain the same under any adopted root:
 
 ```text
 devops/
@@ -38,9 +42,12 @@ devops/
   organizations/ repositories/   playbooks/    runbooks/    measures/
 ```
 
-Create only directories with records; each populated record directory SHOULD
-have an `index.md`. Subject-first organization MAY replace these type folders
-when explicitly declared and better suited to shared maintenance. Filenames
+The root MUST contain `README.md` and `index.md`. Each scoped record MUST live
+in its corresponding plural type folder shown above. Create only type folders
+with records; every populated type folder MUST have an `index.md`. Setup MUST
+propose migrating relevant existing content into this structure, preserving
+applicable unique meaning and repairing affected references. Rewriting a record
+in its old location does not adopt the structure. Filenames
 SHOULD be stable, descriptive kebab-case subjects or actions.
 
 The adoption README is outside the ten-type record scope but MUST satisfy
@@ -54,6 +61,17 @@ At every level, `index.md` and `log.md` are reserved, untyped navigation/history
 files. They MUST NOT own subject meaning or concept metadata. Only a bundle-root
 index MAY have frontmatter, limited to `okf_version: "0.2"`. Logs, if used,
 have ISO `YYYY-MM-DD` date headings, newest first; version control MAY suffice.
+
+## Agent discovery
+
+Setup and maintain MUST check the repository's effective agent instructions for
+a discovery pointer to the adopted root index. Use the
+[agent-instructions template](../templates/agent-instructions.md) to assess
+equivalent guidance and propose missing or stale content. The proposal MUST
+identify the canonical instruction source, exact proposed text, and reason.
+Instruction edits remain subject to the accepted scope; finding a missing
+pointer does not itself authorize a write. The pointer routes operational
+context; shared documentation rules remain in this profile and skill.
 
 ## Types and boundaries
 
@@ -184,6 +202,15 @@ This package's maintainer owns profile revisions; adopters own their declaration
 and records. Version the profile and type contracts together. Changes to
 meaning, required content, endpoints, or cardinality MUST state migration impact
 before existing records claim the new version.
+
+V0.3.0 requires the standard structure and discovery-pointer checks. To migrate
+from v0.2.0, retain only an explicitly selected root override, move scoped
+records into their type folders, establish the adoption README and root/type
+indexes, and repair references. Inspect the agent instructions and propose the
+pointer addition or revision where needed. Do not claim v0.3.0 until its
+required structure is in place and its checks are complete; upgrading the skill
+does not authorize or perform a repository migration. Record types, fields, and
+relationships are unchanged.
 
 V0.2.0 limits adoption declarations to repository-specific decisions and
 references. When migrating from v0.1.0, review the declaration for copied shared

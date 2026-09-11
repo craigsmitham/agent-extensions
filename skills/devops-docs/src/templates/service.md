@@ -2,7 +2,7 @@
 
 Use for a software responsibility with consumers, accountability, and lifecycle.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.2.0; the remaining sections guide authoring.
+normative for profile 0.3.0; the remaining sections guide authoring.
 
 ## Type contract
 

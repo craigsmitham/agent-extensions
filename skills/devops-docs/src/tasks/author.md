@@ -8,8 +8,12 @@ before resuming work; preserve unrelated changes.
 ## Establish the content
 
 Read local instructions, the adoption declaration, [the profile](../references/profile.md),
-and only the relevant type templates. Preserve existing placement; default new
-adoption to `<repository-root>/devops/`. Available `author-docs` and `author-okf`
+and only the relevant type templates. Use the standard type-folder structure
+under `<repository-root>/devops/`, honoring an explicitly requested or declared
+root override. Implement accepted migrations into that structure; an existing
+layout alone is not an override. Identify migration outside the authorized scope
+as remaining work rather than silently moving unrelated records.
+Available `author-docs` and `author-okf`
 skills can contribute craft and base validation; otherwise use the templates
 and manual checks without installing dependencies.
 
@@ -30,6 +34,10 @@ and manual checks without installing dependencies.
 
 For accepted setup, create the scoped adoption declaration and navigation,
 keeping the declaration to local decisions and references to shared guidance.
+Create only populated type folders, with their indexes. Apply accepted discovery
+pointer changes through the
+[instruction-pointer template](../templates/agent-instructions.md), then verify
+the effective instruction and its index link.
 For moves or consolidation, establish destinations, preserve unique meaning
 and old-to-new identities, update incoming references and indexes, then retire
 superseded copies. For retirement without a successor, verify that no applicable
