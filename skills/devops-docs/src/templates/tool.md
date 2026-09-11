@@ -2,7 +2,7 @@
 
 Use for an engineering instrument as locally adopted and supported.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.3.0; the remaining sections guide authoring.
+normative for profile 0.4.0; the remaining sections guide authoring.
 
 ## Type contract
 

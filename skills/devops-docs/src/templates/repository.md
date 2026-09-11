@@ -2,7 +2,7 @@
 
 Use for a source-control repository with its own identity and lifecycle.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.3.0; the remaining sections guide authoring.
+normative for profile 0.4.0; the remaining sections guide authoring.
 
 ## Type contract
 

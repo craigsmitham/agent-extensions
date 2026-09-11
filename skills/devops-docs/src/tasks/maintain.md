@@ -1,6 +1,7 @@
 # Maintain
 
-Assess existing documentation and present one complete proposal for feedback.
+Assess existing engineering and operations documentation and present one
+complete proposal for feedback.
 Do not modify records, save a plan, or implement recommended changes.
 
 1. Resolve the requested scope using local instructions, adoption guidance, and
@@ -30,7 +31,8 @@ Do not modify records, save a plan, or implement recommended changes.
 5. Check agent discovery using the
    [instruction-pointer template](../templates/agent-instructions.md), even for
    a narrow record review. Suggest additions or revisions for a missing,
-   incomplete, or stale pointer; report an adequate equivalent as retained.
+   incomplete, stale, operations-only, or unnecessarily prescriptive pointer;
+   report an adequate equivalent as retained.
    Put the canonical target, exact proposed text, and reason under Related
    changes, marking edits outside the requested scope as dependent work.
 6. Present the [conversational proposal](../templates/plan.md), including actual

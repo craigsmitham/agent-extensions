@@ -2,7 +2,7 @@
 
 Use for an organizational entity with purpose and an authority boundary.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.3.0; the remaining sections guide authoring.
+normative for profile 0.4.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -12,7 +12,7 @@ An Organization MUST identify:
 - Responsibilities and decision authority held at this level, with their sources.
 - How to discover constituent teams and directly accountable subjects.
 - Authoritative directories/contact routes, shared policies, and agreements
-  relevant to engineering and operation.
+  relevant to engineering and operations.
 - Maintenance triggers, identity changes, and material gaps.
 
 Organizational containment MUST NOT imply every accountability or permission.
@@ -58,4 +58,4 @@ lists are derived from their canonical relationships.
 Can an engineer determine which decisions this organization owns and how to
 reach the responsible people? Review reorganizations, authority transfers,
 directory changes, and policy/agreement changes. Preserve effective context
-where older operational evidence names a previous organizational arrangement.
+where earlier evidence names a previous organizational arrangement.

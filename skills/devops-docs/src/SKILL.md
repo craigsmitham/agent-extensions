@@ -1,19 +1,25 @@
 ---
 name: devops-docs
 description: >-
-  Setup, discover, author, and maintain operational documentation for software
-  products: providers, services, teams, tools, environments, organizations,
-  repositories, playbooks, runbooks, and measures. Use for scoped setup or
-  maintenance proposals, finding documented owners or operating guidance, and
-  writing or updating these records. Accept type, file, directory, or subject
-  scopes. Not for executing operations or generic product documentation.
+  Set up, discover, author, and maintain engineering and operations documentation
+  for software products: providers, services, teams, tools, environments,
+  organizations, repositories, playbooks, runbooks, and measures. Use for scoped setup or
+  maintenance proposals, finding documented ownership, development workflows,
+  tooling, environments, or operating guidance, and writing or updating these
+  records. Accept type, file, directory, or subject scopes. Not for implementing
+  software, executing procedures, or general product documentation outside
+  these records.
 license: CC-BY-SA-4.0
 ---
 
 # DevOps docs
 
-Make the knowledge needed to develop, operate, and change a software product
-available to the people responsible for it. Load only the task needed:
+Make engineering and operations documentation available to the people who
+design, develop, deliver, operate, and maintain a software product. The corpus
+covers development workflows, tooling, repository conventions, environments,
+ownership, and operating guidance through the ten record types. Link to
+authoritative designs, specifications, and implementation documentation where
+they already live. Load only the task needed:
 
 | Task | Purpose |
 | --- | --- |
@@ -24,7 +30,8 @@ available to the people responsible for it. Load only the task needed:
 
 Accept explicit tasks (`$devops-docs setup providers`, `$devops-docs maintain
 github.md`) or infer them from the request. Scope can name types, files,
-directories, or subjects; without one, use the repository's operational-docs corpus.
+directories, or subjects; without one, use the repository's engineering and
+operations documentation corpus.
 
 During adoption, migration, and maintenance, reassess whether existing local
 guidance still serves a distinct reader need once this skill supplies shared

@@ -1,9 +1,13 @@
 # Setup
 
-Analyze the selected scope and present one complete adoption proposal for
-feedback. Do not create or modify files, save a plan, or start implementation.
+Analyze the selected engineering and operations documentation scope and present
+one complete adoption proposal for feedback. Do not create or modify files,
+save a plan, or start implementation.
 
 1. Inspect local instructions, existing documentation, and source authorities.
+   Include relevant development workflows, tooling, repository conventions,
+   environments, and operating guidance; keep designs and specifications linked
+   to their existing authorities.
    Resolve a supplied type, path, or subject to the relevant corpus; do not
    expand `providers` into setup for every type. An ambiguous target remains a
    named scope decision in the proposal; analyze what can be resolved.

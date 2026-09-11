@@ -2,7 +2,7 @@
 
 Use for a local, CI, deployed, shared, or ephemeral execution context.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.3.0; the remaining sections guide authoring.
+normative for profile 0.4.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -14,7 +14,7 @@ An Environment MUST identify:
   including deliberate differences from other contexts.
 - Permissible data, fixtures, persistence/retention, and reset rules where
   applicable, grounded in their authorities.
-- Accountability, access and change expectations, operational procedures,
+- Accountability, access and change expectations, development and operating procedures,
   readiness criteria, and creation/reset/retirement lifecycle.
 - Verification limitations, gaps, and maintenance triggers.
 

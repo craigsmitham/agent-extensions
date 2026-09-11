@@ -1,8 +1,8 @@
 # Author
 
-Create or revise the requested records, or implement an accepted setup or
-maintenance proposal. Follow the requested output surface: an inline draft
-does not authorize file edits. Resolve the current tree and accepted scope
+Create or revise the requested engineering and operations records, or implement
+an accepted setup or maintenance proposal. Follow the requested output surface:
+an inline draft does not authorize file edits. Resolve the current tree and accepted scope
 before resuming work; preserve unrelated changes.
 
 ## Establish the content

@@ -2,7 +2,7 @@
 
 Use for our relationship with a supplier, adopted offerings, and accounts.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.3.0; the remaining sections guide authoring.
+normative for profile 0.4.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -17,7 +17,7 @@ A Provider MUST identify:
 - Applicable commercial plan, billing/budget authority, renewal/cancellation
   conditions, and agreement/SLA references, or justified non-applicability.
 - Material constraints and consumers affected by replacement or cancellation,
-  operational guidance, dated verification/gaps, and maintenance triggers.
+  engineering and operations guidance, dated verification/gaps, and maintenance triggers.
 
 Account details MUST NOT imply that a brand is a single legal entity or account.
 Separate records when administration, ownership, or maintenance is independent.
@@ -48,7 +48,7 @@ status: draft
 ## Accountability, access, and recovery
 ## Commercial arrangements and authorities
 ## Relationships
-## Constraints and operational guidance
+## Constraints and usage guidance
 ## Verification, gaps, and maintenance
 ```
 

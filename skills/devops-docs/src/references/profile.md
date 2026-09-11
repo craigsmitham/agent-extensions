@@ -1,10 +1,13 @@
 # DevOps Docs profile
 
-Version **0.3.0** · Base **OKF v0.2** · Maintainer **@craigsmitham**.
+Version **0.4.0** · Base **OKF v0.2** · Maintainer **@craigsmitham**.
 Adoption by a repository is a separate scoped act.
 
-This profile describes operational knowledge for people developing, operating,
-and changing software products. Its normative contract comprises this file
+This profile describes engineering and operations documentation for people
+designing, developing, delivering, operating, and maintaining software products.
+It covers development workflows, build and test tooling, repository conventions,
+and execution environments alongside deployment, service operation, and response.
+Its normative contract comprises this file
 and the **Type contract** sections in the ten linked templates, versioned
 together. Other template sections are authoring guidance, not required layout.
 MUST/MUST NOT are requirements; SHOULD/SHOULD NOT are recommendations with a
@@ -70,8 +73,10 @@ a discovery pointer to the adopted root index. Use the
 equivalent guidance and propose missing or stale content. The proposal MUST
 identify the canonical instruction source, exact proposed text, and reason.
 Instruction edits remain subject to the accepted scope; finding a missing
-pointer does not itself authorize a write. The pointer routes operational
-context; shared documentation rules remain in this profile and skill.
+pointer does not itself authorize a write. The pointer identifies the location
+and contents of engineering and operations documentation so the agent can judge
+relevance. It does not prescribe when or how to consult the corpus; shared
+documentation rules remain in this profile and skill.
 
 ## Types and boundaries
 
@@ -100,8 +105,10 @@ Group provider offerings/accounts only when their administration, accountability
 and maintenance belong together, making the grouping explicit. Organization
 does not automatically mean a vendor's tenant named "organization."
 
-Do not invent types or records for graph completeness. Schemas, infrastructure
-resources, dashboards, policies, and decisions MAY remain external authorities.
+Do not invent types or records for graph completeness. Designs, specifications,
+implementation documentation, schemas, infrastructure resources, dashboards,
+policies, and decisions MAY remain external authorities. Records MUST link to
+those sources where relevant rather than absorb or duplicate their meaning.
 
 ## Common record contract
 
@@ -184,7 +191,7 @@ bundle-relative link for a repository-root link.
 A move changes identity. Update inbound links and discovery in the same change;
 preserve history or a declared mapping needed to interpret earlier evidence.
 Do not retain independently maintained duplicate authority. Records SHOULD
-link to relevant operating guidance, and alerts SHOULD link to applicable
+link to relevant engineering and operations guidance, and alerts SHOULD link to applicable
 playbooks/runbooks where that external change is separately authorized.
 
 ## Review and versioning
@@ -202,6 +209,14 @@ This package's maintainer owns profile revisions; adopters own their declaration
 and records. Version the profile and type contracts together. Changes to
 meaning, required content, endpoints, or cardinality MUST state migration impact
 before existing records claim the new version.
+
+V0.4.0 makes the engineering and operations scope explicit and simplifies the
+discovery pointer to documentation location and contents. When adopting this
+version, review descriptions and pointers that imply an operations-only corpus
+or prescribe consultation throughout the work lifecycle. Propose revisions
+through normal maintenance; preserve independently justified workflow-specific
+consultation requirements. The root convention, type folders, record types,
+fields, and relationships are unchanged; no record relocation is required.
 
 V0.3.0 requires the standard structure and discovery-pointer checks. To migrate
 from v0.2.0, retain only an explicitly selected root override, move scoped

@@ -1,18 +1,26 @@
 # DevOps docs
 
-Set up, author, consult, and maintain connected operational documentation for
-software products. The skill helps product engineers make necessary knowledge
-available to collaborators and future maintainers, with explicit accountability,
-authoritative references, and maintenance triggers.
+Set up, discover, author, and maintain engineering and operations documentation
+for software products. The skill helps engineers and operators make necessary
+knowledge available to collaborators and future maintainers, with explicit
+accountability, authoritative references, and maintenance triggers.
+
+The corpus covers development workflows, build and test tooling, repository
+conventions, and execution environments alongside deployment, service operation,
+and incident response. Its ten record types link to authoritative designs,
+specifications, and implementation documentation where those already live.
 
 ## Use
 
 ```text
 $devops-docs setup
 $devops-docs setup providers
+$devops-docs setup tools
 $devops-docs maintain providers
 $devops-docs maintain github.md
 $devops-docs discover who owns the package registry
+$devops-docs discover how local development and CI environments differ
+$devops-docs discover where the repository's build and test conventions are documented
 $devops-docs author — implement the accepted provider changes
 ```
 
@@ -50,9 +58,10 @@ shared guidance.
 Setup and maintain also inspect the repository's canonical agent instructions
 for a discovery pointer. Their proposals name the instruction source, exact
 text to add or revise, and reason; equivalent adequate guidance is retained.
-The pointer names the work lifecycle and all ten supported record types, with
-a link to the adopted index. Author applies accepted instruction changes and
-verifies effective discovery and link resolution.
+The pointer identifies engineering and operations documentation, all ten
+supported record types, and the adopted index. It establishes awareness and
+lets the agent judge relevance. Author applies accepted instruction changes
+and verifies effective discovery and link resolution.
 
 ## Package map
 
@@ -64,7 +73,7 @@ verifies effective discovery and link resolution.
 | [Agent-instructions template](src/templates/agent-instructions.md) | Discovery-pointer wording, inspection, proposal, and verification |
 | [Connected example](src/references/example.md) | A fictional draft Service, Measure, and Runbook |
 
-The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.3.0.
+The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.4.0.
 `src/` is the portable runtime payload. README is package documentation.
 This package has no executable helpers or mandatory runtime sibling dependencies.
 When available, `author-docs` contributes documentation craft and `author-okf`
@@ -81,6 +90,27 @@ or successful exercise.
 The profile is an application convention over OKF v0.2, not an OKF extension
 standard. Profile review is manual. Base validation, profile consistency,
 source support, and actual use evidence are distinct results.
+
+## Changes in 0.4.0
+
+Descriptions, discovery metadata, workflows, profile guidance, and examples now
+consistently describe engineering and operations documentation. Engineering
+workflows, tooling, repository conventions, and development environments are
+explicitly in scope. The ten record types continue to link to existing design,
+specification, and implementation authorities.
+
+The discovery pointer now names documentation location and contents. It no
+longer prescribes consultation across a lifecycle list; setup and maintenance
+propose simplifying overly prescriptive pointers while retaining independent
+workflow-specific requirements. The pointer still lists all ten supported types.
+
+Profile 0.4.0 requires no record relocation, new fields, or relationship changes.
+Review operations-only descriptions and older pointers during normal maintenance.
+The `/devops/` root convention and fixed type folders are unchanged. Documentation
+work does not authorize software implementation or procedure execution. The
+previous 0.3.0 release remains available if adoption of this revision is deferred.
+Package, link, and manual consistency checks do not establish behavioral proof;
+the evaluation suite remains deferred during design.
 
 ## Changes in 0.3.0
 

@@ -1,8 +1,10 @@
 # Runbook record
 
 Use for an established procedure with a bounded trigger and verifiable outcome.
+Tasks can concern engineering or operations, such as reproducing a build,
+resetting a development environment, deploying a service, or restoring service.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.3.0; the remaining sections guide authoring.
+normative for profile 0.4.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -29,19 +31,19 @@ Common draft-gap allowances apply.
 Inspect established commands and automation statically, their invocation
 contracts, supported-context documentation, and retained exercise/use records.
 Distinguish author review from successful execution by another person. Do not
-execute operational steps just to write or check the documentation.
+execute procedure steps just to write or check the documentation.
 
 ## Suggested record
 
 ```markdown
 ---
 type: Runbook
-title: <Perform a bounded operational task>
+title: <Perform a bounded engineering or operations task>
 description: <Recognized trigger or task and verifiable outcome>
 status: draft
 ---
 
-# <Perform a bounded operational task>
+# <Perform a bounded engineering or operations task>
 
 ## Trigger, outcome, and supported context
 ## Prerequisites and inputs
@@ -59,7 +61,7 @@ and `calls-procedure` as applicable; procedure calls must not form a cycle.
 
 ## Check and maintain
 
-Could an appropriately authorized operator establish applicability and judge
+Could an appropriately authorized practitioner establish applicability and judge
 success or safe abort without improvising? Review after procedure, version,
 environment, permission, automation, or failure-handling changes. A rehearsal
 requires its own execution scope and authority; retain who/what/when/context

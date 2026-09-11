@@ -145,7 +145,7 @@ I recommend **Option A**: include the one identified Environment correction so
 the known account references agree. This makes account and recovery information
 easier to find while preserving retention constraints and verification gaps.
 Include the proposed discovery pointer so ordinary repository work can find
-this operational context.
+this engineering and operations documentation.
 
 **Status:** Proposed only; no files have been changed.
 

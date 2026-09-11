@@ -1,10 +1,14 @@
 # Discover
 
-Answer the operational question from the existing corpus without changing it.
+Answer the engineering or operations question from the existing corpus without
+changing it. This includes development workflows, tooling, repository conventions,
+environment differences, ownership, and operating guidance.
 
 Start with local discovery and canonical records relevant to the requested
 type, file, or subject. Follow links as needed; load [the profile](../references/profile.md)
 only to resolve meaning, and avoid an unrelated corpus review.
+Follow references to authoritative designs, specifications, and implementation
+documentation when needed to answer the question; keep their ownership intact.
 
 Cite the documents supporting the answer and distinguish documented intent,
 dated observations, and present uncertainty. Report consequential conflicts

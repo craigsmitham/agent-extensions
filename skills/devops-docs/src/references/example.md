@@ -1,7 +1,8 @@
 # Connected draft example
 
-This fictional miniature illustrates profile 0.3.0. Names, role assignments,
-and targets are synthetic, not operational guidance. Each named file below is
+This fictional miniature illustrates profile 0.4.0. Names, role assignments,
+and targets are synthetic, not instructions for a real engineering or operations
+task. Each named file below is
 complete as a draft record; explicit required-information gaps are permitted
 for drafts. Copy neither facts nor proposed targets into a real corpus.
 The [profile](profile.md) and type contracts remain authoritative.
