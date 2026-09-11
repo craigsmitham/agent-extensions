@@ -30,7 +30,8 @@
     },
     "checklist-design": "workspace",
     "manage-work-items": "workspace",
-    "spot-spew": "workspace"
+    "spot-spew": "workspace",
+    "devops-docs": "workspace"
   },
   "rules": {
     "field-notes": "workspace",

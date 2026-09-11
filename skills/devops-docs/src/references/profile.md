@@ -1,0 +1,181 @@
+# DevOps Docs profile
+
+Version **0.1.0** · Base **OKF v0.2** · Maintainer **@craigsmitham**.
+Initial authored version; adoption by a repository is a separate scoped act.
+
+This profile describes operational knowledge for people developing, operating,
+and changing software products. Its normative contract comprises this file
+and the **Type contract** sections in the ten linked templates, versioned
+together. Other template sections are authoring guidance, not required layout.
+MUST/MUST NOT are requirements; SHOULD/SHOULD NOT are recommendations with a
+recorded reason for departures; MAY denotes an option.
+
+## Adoption and placement
+
+An adoption MUST state this exact version, covered record scope, responsible
+maintainer, placement convention, and composition with host rules in a
+non-reserved document. The root index MUST link to that declaration and the
+versioned profile reference. Resolve conflicts before claiming conformance.
+No `okf_profile` field is introduced: profile declarations are producer
+conventions beyond OKF v0.2.
+
+Default to **`<repository-root>/devops/`**, abbreviated `/devops/`. This is
+repository-relative, never the filesystem root. Preserve an existing coherent
+layout unless migration is selected. The fallback structure is:
+
+```text
+devops/
+  README.md       # Adoption, scope, placement, and maintenance authority
+  index.md        # Navigation
+  providers/     services/       teams/        tools/       environments/
+  organizations/ repositories/   playbooks/    runbooks/    measures/
+```
+
+Create only directories with records; each populated record directory SHOULD
+have an `index.md`. Subject-first organization MAY replace these type folders
+when explicitly declared and better suited to shared maintenance. Filenames
+SHOULD be stable, descriptive kebab-case subjects or actions.
+
+The adoption README is outside the ten-type record scope but MUST satisfy
+base OKF; use a host type when defined, otherwise `Reference`. Setup and
+maintenance proposals are conversational presentations, not bundle artifacts.
+Other host documents MAY coexist outside the declared record scope. Every
+non-reserved Markdown file in an OKF bundle requires parseable YAML frontmatter
+with non-empty `type`.
+
+At every level, `index.md` and `log.md` are reserved, untyped navigation/history
+files. They MUST NOT own subject meaning or concept metadata. Only a bundle-root
+index MAY have frontmatter, limited to `okf_version: "0.2"`. Logs, if used,
+have ISO `YYYY-MM-DD` date headings, newest first; version control MAY suffice.
+
+## Types and boundaries
+
+Use exactly one exact type per scoped record. The seven subject types are
+Provider, Service, Team, Tool, Environment, Organization, and Repository.
+
+| Type and template | Identity and purpose |
+| --- | --- |
+| [Provider](../templates/provider.md) | Our relationship with a supplier, its adopted offerings and accounts |
+| [Service](../templates/service.md) | Software with a coherent responsibility, consumers, accountability, and lifecycle |
+| [Team](../templates/team.md) | A group with collective responsibility and a collaboration interface |
+| [Tool](../templates/tool.md) | An engineering instrument as locally adopted and supported |
+| [Environment](../templates/environment.md) | An execution context with defined purpose, boundaries, and rules |
+| [Organization](../templates/organization.md) | An organizational entity with purpose and an authority boundary |
+| [Repository](../templates/repository.md) | A source-control repository with canonical remote and its own lifecycle |
+| [Playbook](../templates/playbook.md) | Assessment and judgment in selecting, combining, and adapting responses |
+| [Runbook](../templates/runbook.md) | An established procedure for a bounded trigger and verifiable outcome |
+| [Measure](../templates/measure.md) | A quantity's definition, implementation reference, and interpretation |
+
+A Service is independent of repository and environment instances; map it to
+existing architecture when ambiguity matters. It is not automatically a C4
+Component, package, deployment, or framework service. A hosted Tool MAY have a
+separate Provider relationship record. Separate records require distinct
+information to own; one canonical record suffices when roles overlap.
+Group provider offerings/accounts only when their administration, accountability,
+and maintenance belong together, making the grouping explicit. Organization
+does not automatically mean a vendor's tenant named "organization."
+
+Do not invent types or records for graph completeness. Schemas, infrastructure
+resources, dashboards, policies, and decisions MAY remain external authorities.
+
+## Common record contract
+
+Every scoped record MUST have `type`, a standalone non-empty `title`, a
+distinguishing `description`, and `status: draft | stable | deprecated`. H1 MUST
+match `title`. Action descriptions MUST name the selecting situation or intent
+and supported outcome. Other OKF metadata MAY be used when truthful and useful.
+
+Every record MUST identify purpose, scope, accountability, material
+relationships, authoritative references or their gaps, and maintenance triggers.
+Use one primary `owned-by` target when represented; otherwise name a responsible
+role/person and its directory/contact authority in the body. Record secondary
+roles separately; do not fabricate a team or self-ownership edge. Identify a
+different document maintainer when needed without changing subject ownership.
+
+`status` describes adoption of the document. Subject lifecycle, tool adoption,
+live health, objective acceptance, and exercise evidence MUST remain separate.
+Generation is not acceptance or verification. Drafts MAY carry explicit gaps;
+stable records MUST resolve required information or explain conditional
+non-applicability and MUST have established accountability. Unknown is neither
+an empty placeholder nor proof of non-applicability. Deprecated records MUST
+explain their replacement or retirement and any remaining applicable history.
+
+Records MUST link to the authorities for configuration, agreements, directories,
+requirements, measurements, and execution evidence rather than replace them.
+Never embed credentials. Respect the intended audience's access boundary;
+reference restricted systems without copying restricted content into a broader
+corpus. Consequential snapshots MUST identify source, scope, observation time,
+and limitations. Provenance and verification MUST describe actual events.
+
+## Relationships
+
+Material relationships among represented records MUST appear in the source
+record's `Relationships` table: `Relationship`, `Target`, `Scope / notes`.
+Each row has one identifier and one Markdown link to a non-reserved record.
+Qualify environment, account/offering, repository subpath, or dependency kind
+where relevant; otherwise the source's stated scope applies. Omit empty tables.
+
+| Identifier | Allowed source → target | Targets per source |
+| --- | --- | --- |
+| `owned-by` | Any record → Team or Organization | 0..1 |
+| `part-of` | Team → Organization; Organization → Organization | 0..1 |
+| `provided-by` | Service or Tool → Provider | 0..many |
+| `source-in` | Service or Tool → Repository | 0..many |
+| `hosted-by` | Repository → Provider | 0..1 |
+| `depends-on` | Service or Tool → Service or Tool | 0..many |
+| `uses-provider` | Service, Tool, or Environment → Provider | 0..many |
+| `runs-in` | Service or Tool → Environment | 0..many |
+| `measures` | Measure → any subject type | 0..many |
+| `applies-to` | Playbook or Runbook → any subject type | 0..many |
+| `uses-tool` | Playbook or Runbook → Tool | 0..many |
+| `selects-procedure` | Playbook → Runbook | 0..many |
+| `calls-procedure` | Runbook → Runbook | 0..many |
+
+`owned-by` is primary accountability, not access authorization. `part-of` is
+organizational placement, not collaboration. `provided-by` identifies who
+supplies the represented capability; `uses-provider` identifies reliance on an
+offering/account. `depends-on` identifies a functional, build, or operational
+dependency. `runs-in` is intended placement, not observed deployment or health.
+Procedure relations distinguish selection from execution within a procedure.
+
+Author each edge once at its specified source. Inverse views MUST be marked as
+derived with a source/generation reference. Stable targets MUST resolve to the
+allowed types; draft unresolved targets MUST be named gaps. Cross-bundle links
+MUST identify their bundle or canonical URI unambiguously. Cardinalities count
+distinct represented targets; absent edges do not establish absent real-world
+dependencies, populations, or scope. State those boundaries in the body.
+`part-of` and `calls-procedure` MUST be acyclic. Explain material dependency
+cycles rather than rejecting every cycle. Ordinary links to other authorities
+are not automatically typed edges.
+
+## Identity, discovery, and change
+
+A record's concept identity is its bundle-relative path without `.md`; it MUST
+have one canonical home and be reachable through root index routes. Index
+entries MUST use its exact title and description. Use repository-facing relative
+Markdown links, or explicit cross-bundle references; do not mistake a
+bundle-relative link for a repository-root link.
+
+A move changes identity. Update inbound links and discovery in the same change;
+preserve history or a declared mapping needed to interpret earlier evidence.
+Do not retain independently maintained duplicate authority. Records SHOULD
+link to relevant operating guidance, and alerts SHOULD link to applicable
+playbooks/runbooks where that external change is separately authorized.
+
+## Review and versioning
+
+See the [connected draft example](example.md) for a Service objective, shared
+Measure, and read-only Runbook with explicit gaps.
+
+Report separately: base OKF conformance; manual profile/type-contract review;
+source support; and actual use/exercise evidence. Name checked scope/version,
+failed MUST rules, SHOULD departures, unresolved gaps, and limitations. There
+is no profile-specific executable validator. A base validator or link check
+does not establish the remaining results or operational readiness.
+
+This package's maintainer owns profile revisions; adopters own their declarations
+and records. Version the profile and type contracts together. Changes to
+meaning, required content, endpoints, or cardinality MUST state migration impact
+before existing records claim the new version. V0.1.0 is the initial contract,
+derived from the commissioned ten-type design; it extends the proposal's
+dependencies to include Tool sources.
