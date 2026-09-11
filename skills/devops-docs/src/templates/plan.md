@@ -31,6 +31,9 @@ conversation. Do not save a plan or change documentation during either task.
   [its template](agent-instructions.md). Name the canonical target, action,
   exact proposed text for an addition or revision, and reason. Keep adequate
   equivalent guidance. Mark dependent instruction edits outside a narrow scope.
+- Under Verification, include the concise Skill freshness result from the
+  [shared preflight](../references/skill-freshness.md). Include an applicable
+  update recommendation under Related changes; keep it advisory.
 - Put the overall recommendation and feedback invitation last. Do not append
   another summary or an implementation log. Scale the number of rows and their
   detail, not the presentation structure.

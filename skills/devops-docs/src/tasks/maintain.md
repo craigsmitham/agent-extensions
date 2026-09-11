@@ -4,6 +4,8 @@ Assess existing engineering and operations documentation and present one
 complete proposal for feedback.
 Do not modify records, save a plan, or implement recommended changes.
 
+First run the advisory [skill freshness check](../references/skill-freshness.md).
+
 1. Resolve the requested scope using local instructions, adoption guidance, and
    discovery. A type selects its records, a path selects that file/directory,
    and a basename such as `github.md` selects a unique matching record. If

@@ -74,7 +74,7 @@ and verifies effective discovery and link resolution.
 | [Agent-instructions template](src/templates/agent-instructions.md) | Discovery-pointer wording, inspection, proposal, and verification |
 | [Connected example](src/references/example.md) | A fictional draft Service, Measure, and Runbook |
 
-The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.5.0.
+The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.5.1.
 `src/` is the portable runtime payload. README is package documentation.
 This package has no executable helpers or mandatory runtime sibling dependencies.
 When available, `author-docs` contributes documentation craft and `author-okf`
@@ -91,6 +91,14 @@ or successful exercise.
 The profile is an application convention over OKF v0.2, not an OKF extension
 standard. Profile review is manual. Base validation, profile consistency,
 source support, and actual use evidence are distinct results.
+
+## Changes in 0.5.1
+
+Setup and maintain run an advisory [skill freshness check](src/references/skill-freshness.md)
+and include its result in the proposal. The check respects installation source,
+pins, update policy, and compatibility; an unavailable check does not block the
+analysis. Updates remain separately authorized. Profile 0.5.0 still applies;
+no corpus migration is required.
 
 ## Changes in 0.5.0
 

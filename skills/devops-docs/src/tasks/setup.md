@@ -4,6 +4,8 @@ Analyze the selected engineering and operations documentation scope and present
 one complete adoption proposal for feedback. Do not create or modify files,
 save a plan, or start implementation.
 
+First run the advisory [skill freshness check](../references/skill-freshness.md).
+
 1. Inspect local instructions, existing documentation, and source authorities.
    Include relevant development workflows, tooling, repository conventions,
    environments, and operating guidance; keep designs and specifications linked
