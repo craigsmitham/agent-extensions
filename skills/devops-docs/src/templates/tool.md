@@ -2,7 +2,7 @@
 
 Use for an engineering instrument as locally adopted and supported.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.4.0; the remaining sections guide authoring.
+normative for profile 0.5.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -31,6 +31,10 @@ to a Provider record owning account, billing, and recovery arrangements.
 
 ## Suggested record
 
+Add supported top-level relationship fields to the frontmatter using the
+[relationship forms](../references/profile.md#relationships). Omit unknown
+targets and name their gaps in the body.
+
 ```markdown
 ---
 type: Tool
@@ -45,7 +49,6 @@ status: draft
 ## Distribution, setup, and access
 ## Supported usage
 ## Inputs, outputs, and connections
-## Relationships
 ## Limitations, support, and recovery
 ## Gaps and maintenance
 ```

@@ -2,7 +2,7 @@
 
 Use for our relationship with a supplier, adopted offerings, and accounts.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.4.0; the remaining sections guide authoring.
+normative for profile 0.5.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -33,6 +33,10 @@ missing source when those facts cannot be established.
 
 ## Suggested record
 
+Add supported top-level relationship fields to the frontmatter using the
+[relationship forms](../references/profile.md#relationships). Omit unknown
+targets and name their gaps in the body.
+
 ```markdown
 ---
 type: Provider
@@ -47,7 +51,6 @@ status: draft
 ## Accounts and operating contexts
 ## Accountability, access, and recovery
 ## Commercial arrangements and authorities
-## Relationships
 ## Constraints and usage guidance
 ## Verification, gaps, and maintenance
 ```

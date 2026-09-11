@@ -44,7 +44,8 @@ superseded copies. For retirement without a successor, verify that no applicable
 unique meaning or reader need is lost, then remove or redirect affected
 references according to their purpose. Do not invent a replacement merely to
 complete a path mapping. Keep retirement within the authorized scope.
-Check typed edges, ordinary links, and textual references;
+Check top-level relationship field forms, typed edges, ordinary links, and
+textual references;
 identify necessary work outside the accepted scope without silently adding it.
 
 Check representation, profile/type contracts, source support, and representative

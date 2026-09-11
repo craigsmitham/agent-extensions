@@ -74,7 +74,7 @@ and verifies effective discovery and link resolution.
 | [Agent-instructions template](src/templates/agent-instructions.md) | Discovery-pointer wording, inspection, proposal, and verification |
 | [Connected example](src/references/example.md) | A fictional draft Service, Measure, and Runbook |
 
-The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.4.1.
+The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.5.0.
 `src/` is the portable runtime payload. README is package documentation.
 This package has no executable helpers or mandatory runtime sibling dependencies.
 When available, `author-docs` contributes documentation craft and `author-okf`
@@ -91,6 +91,27 @@ or successful exercise.
 The profile is an application convention over OKF v0.2, not an OKF extension
 standard. Profile review is manual. Base validation, profile consistency,
 source support, and actual use evidence are distinct results.
+
+## Changes in 0.5.0
+
+Profile 0.5.0 stores canonical typed relationships as top-level YAML fields such
+as `owned-by`, `source-in`, and `depends-on`. Single-target fields accept a plain
+target or qualified mapping; multi-target fields use lists of either form.
+Optional `scope` and `notes` preserve per-target qualifications. Body links
+remain useful for readers; relationship tables, if displayed, are derived.
+
+This is an incompatible representation change during pre-1.0 development.
+Relationship identifiers, meanings, endpoint types, and cardinalities are
+unchanged. Follow the [profile migration](src/references/profile.md#review-and-versioning)
+to move table rows into frontmatter, preserve qualifications, update local
+consumers, and revise the adoption declaration. Installing the skill does not
+migrate existing records. Keep skill 0.4.1 with profile 0.4.0 when deferring;
+rollback of migrated records also restores their tables and prior declaration.
+
+Templates and the connected example use the new representation. Routing and
+authority boundaries are unchanged. Package, YAML/example, link, and manual
+profile checks cover the representation; the behavioral evaluation suite
+remains deferred during design.
 
 ## Changes in 0.4.1
 

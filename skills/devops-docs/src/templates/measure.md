@@ -2,7 +2,7 @@
 
 Use for a quantitative definition and its interpretation, including service,
 cost, product, or delivery measures. Apply the [common profile](../references/profile.md).
-The Type contract is normative for profile 0.4.0; other sections guide authoring.
+The Type contract is normative for profile 0.5.0; other sections guide authoring.
 
 ## Type contract
 
@@ -38,6 +38,10 @@ Do not invent data access or execute a query merely to document it.
 
 ## Suggested record
 
+Add supported top-level relationship fields to the frontmatter using the
+[relationship forms](../references/profile.md#relationships). Omit unknown
+targets and name their gaps in the body.
+
 ```markdown
 ---
 type: Measure
@@ -53,7 +57,6 @@ status: draft
 ## Definition and time semantics
 ## Implementation and coverage
 ## Interpretation and limitations
-## Relationships
 ## Consumers, history, gaps, and maintenance
 ```
 

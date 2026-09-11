@@ -2,7 +2,7 @@
 
 Use for a group with collective responsibility and a collaboration interface.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.4.0; the remaining sections guide authoring.
+normative for profile 0.5.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -30,6 +30,10 @@ Keep changing membership and work queues linked to their owning systems.
 
 ## Suggested record
 
+Add supported top-level relationship fields to the frontmatter using the
+[relationship forms](../references/profile.md#relationships). Omit unknown
+targets and name their gaps in the body.
+
 ```markdown
 ---
 type: Team
@@ -44,7 +48,6 @@ status: draft
 ## Accountability and organizational placement
 ## Working with this team
 ## Support and escalation
-## Relationships
 ## Authoritative directories, gaps, and maintenance
 ```
 

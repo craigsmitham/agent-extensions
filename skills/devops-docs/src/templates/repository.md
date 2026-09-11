@@ -2,7 +2,7 @@
 
 Use for a source-control repository with its own identity and lifecycle.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.4.0; the remaining sections guide authoring.
+normative for profile 0.5.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -29,6 +29,10 @@ operation when they belong to different groups.
 
 ## Suggested record
 
+Add supported top-level relationship fields to the frontmatter using the
+[relationship forms](../references/profile.md#relationships). Omit unknown
+targets and name their gaps in the body.
+
 ```markdown
 ---
 type: Repository
@@ -43,7 +47,6 @@ status: draft
 ## Accountability and structure
 ## Development interface
 ## Delivery and consumers
-## Relationships
 ## Lifecycle, gaps, and maintenance
 ```
 

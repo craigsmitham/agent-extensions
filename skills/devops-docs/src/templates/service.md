@@ -2,7 +2,7 @@
 
 Use for a software responsibility with consumers, accountability, and lifecycle.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.4.0; the remaining sections guide authoring.
+normative for profile 0.5.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -43,6 +43,10 @@ Common draft-gap allowances apply; do not invent numeric targets to fill a form.
 
 ## Suggested record
 
+Add supported top-level relationship fields to the frontmatter using the
+[relationship forms](../references/profile.md#relationships). Omit unknown
+targets and name their gaps in the body.
+
 ```markdown
 ---
 type: Service
@@ -56,7 +60,6 @@ status: draft
 ## Purpose and boundary
 ## Accountability and authoritative references
 ## Interfaces and dependencies
-## Relationships
 ## Service levels
 ## Operation and response
 ## Lifecycle, gaps, and maintenance

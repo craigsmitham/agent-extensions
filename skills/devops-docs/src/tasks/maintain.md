@@ -16,8 +16,9 @@ Do not modify records, save a plan, or implement recommended changes.
    rather than preserving a different layout; keep unrelated records out of scope.
    Compare consequential claims with applicable source authorities; preserve
    intended state, observed state, acceptance, and exercise as separate facts.
-3. Inspect typed relationships in both directions, ordinary links, textual
-   references, and discovery for affected knowledge. Read related records as
+3. Inspect top-level relationship fields and derived inverse views, ordinary
+   links, textual references, and discovery for affected knowledge. For a profile upgrade,
+   include the documented relationship-table migration. Read related records as
    needed to assess impact; distinguish dependent follow-ups outside the
    requested scope from primary changes. The graph is not a complete inventory.
 4. Prioritize misleading claims, action-blocking gaps, duplication, and broken

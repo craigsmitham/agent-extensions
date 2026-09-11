@@ -1,6 +1,6 @@
 # DevOps Docs profile
 
-Version **0.4.0** · Base **OKF v0.2** · Maintainer **@craigsmitham**.
+Version **0.5.0** · Base **OKF v0.2** · Maintainer **@craigsmitham**.
 Adoption by a repository is a separate scoped act.
 
 This profile describes engineering and operations documentation for people
@@ -141,11 +141,65 @@ and limitations. Provenance and verification MUST describe actual events.
 
 ## Relationships
 
-Material relationships among represented records MUST appear in the source
-record's `Relationships` table: `Relationship`, `Target`, `Scope / notes`.
-Each row has one identifier and one Markdown link to a non-reserved record.
-Qualify environment, account/offering, repository subpath, or dependency kind
-where relevant; otherwise the source's stated scope applies. Omit empty tables.
+Material relationships among represented records MUST appear as top-level YAML
+frontmatter fields in the source record, using the identifiers below as keys.
+These fields are DevOps profile conventions, not standard OKF metadata. Do not
+nest them under a `relationships` wrapper or use a body table as their authority.
+
+- A **0..1** field MUST contain one target, either a plain string or a qualified
+  mapping. Do not use a list for these fields.
+- A **0..many** field MUST contain a non-empty list, even for one target. Each
+  item MAY be a plain string or a qualified mapping; both forms MAY coexist.
+- A **plain target** is a non-empty path or canonical URI string, not a Markdown
+  link. A local path MUST identify a non-reserved concept document including
+  `.md`, resolved relative to the containing document. Cross-bundle targets
+  MUST identify their bundle or canonical URI unambiguously.
+- A **qualified mapping** MUST contain `target` in that same string form and MAY
+  contain non-empty string fields `scope` and `notes`. No other mapping keys
+  are defined by this profile. Use `scope` to narrow applicability by environment,
+  account/offering, repository subpath, or dependency kind; otherwise the
+  source's stated scope applies. Use `notes` for a short explanation and keep
+  longer discussion in the body.
+- Omit fields with no documented targets; do not use nulls, empty strings,
+  empty lists, or placeholder targets. Name unknown targets as gaps in the body.
+  A known target awaiting a record MAY use an unresolved path in a draft,
+  provided the missing record is explicitly identified as a gap.
+
+For example, these fictional Service frontmatter fields show single-target,
+plain-list, and qualified-list forms:
+
+```yaml
+owned-by: ../teams/platform.md
+
+provided-by:
+  - ../providers/hosting.md
+
+source-in:
+  - target: ../repositories/backend.md
+    scope: packages/api
+
+depends-on:
+  - ../services/identity.md
+  - target: ../services/postgres.md
+    scope: Production
+    notes: Required for account writes.
+```
+
+A single-target field can also carry qualifications:
+
+```yaml
+owned-by:
+  target: ../teams/platform.md
+  notes: Primary accountability; the service desk handles initial triage.
+```
+
+Use one YAML key per relationship identifier. For multi-target fields, add list
+items rather than repeating the key. Body prose MAY link to the same records
+where readers need context, but MUST NOT maintain a second canonical inventory.
+A displayed relationship table or inverse view MUST be marked as derived and
+identify its source or generation reference. Generic OKF consumers may discover
+body links without interpreting these profile-specific fields; typed-graph
+consumers must read the frontmatter.
 
 | Identifier | Allowed source → target | Targets per source |
 | --- | --- | --- |
@@ -170,10 +224,8 @@ offering/account. `depends-on` identifies a functional, build, or operational
 dependency. `runs-in` is intended placement, not observed deployment or health.
 Procedure relations distinguish selection from execution within a procedure.
 
-Author each edge once at its specified source. Inverse views MUST be marked as
-derived with a source/generation reference. Stable targets MUST resolve to the
-allowed types; draft unresolved targets MUST be named gaps. Cross-bundle links
-MUST identify their bundle or canonical URI unambiguously. Cardinalities count
+Author each edge once at its specified source. Stable targets MUST resolve to the
+allowed types; draft unresolved targets MUST be named gaps. Cardinalities count
 distinct represented targets; absent edges do not establish absent real-world
 dependencies, populations, or scope. State those boundaries in the body.
 `part-of` and `calls-procedure` MUST be acyclic. Explain material dependency
@@ -209,6 +261,26 @@ This package's maintainer owns profile revisions; adopters own their declaration
 and records. Version the profile and type contracts together. Changes to
 meaning, required content, endpoints, or cardinality MUST state migration impact
 before existing records claim the new version.
+
+V0.5.0 moves canonical typed relationships from body tables to top-level YAML
+frontmatter. The identifiers, meanings, allowed endpoint types, and target
+cardinalities are unchanged. To migrate from v0.4.0:
+
+1. Move each table row to the field named by its relationship identifier. Use
+   one value for 0..1 fields and list items for 0..many fields.
+2. Extract the Markdown link destination as the target string, preserving its
+   document-relative resolution. Preserve all qualifications: split `Scope /
+   notes` into `scope` and `notes` only when their meanings are clear; otherwise
+   retain the original text in `notes` without guessing.
+3. Remove the former canonical table. Retain useful contextual prose and links;
+   label any retained generated table as derived from the frontmatter.
+4. Check YAML field forms, target resolution/types, distinct-target cardinality,
+   scope preservation, and the existing cycle rules. Update any local consumer
+   that extracted typed relationships from body tables.
+5. Update the scoped adoption declaration after migration and review. A skill
+   upgrade does not migrate adopting repositories. Keep skill v0.4.1 and profile
+   v0.4.0 if migration is deferred; reverting a migrated corpus also requires
+   restoring its relationship tables and prior declaration.
 
 V0.4.0 makes the engineering and operations scope explicit and simplifies the
 discovery pointer to documentation location and contents. When adopting this

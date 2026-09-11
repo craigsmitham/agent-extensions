@@ -1,6 +1,6 @@
 # Connected draft example
 
-This fictional miniature illustrates profile 0.4.0. Names, role assignments,
+This fictional miniature illustrates profile 0.5.0. Names, role assignments,
 and targets are synthetic, not instructions for a real engineering or operations
 task. Each named file below is
 complete as a draft record; explicit required-information gaps are permitted
@@ -55,22 +55,19 @@ type: Measure
 title: Successful download ratio
 description: Fraction of instrumented production downloads completed within two seconds.
 status: draft
+measures:
+  - target: ../services/package-registry.md
+    scope: Supported production client attempts
 ---
 
 # Successful download ratio
 
 ## Meaning, scope, and accountability
 
-Support the package registry's proposed reliability objective. The platform
-lead owns this definition; contact-directory authority remains unresolved.
+Support the [package registry's](../services/package-registry.md) proposed
+reliability objective. The platform lead owns this definition; contact-directory authority remains unresolved.
 Scope is supported production clients with an instrumented download-start
 event; test traffic is excluded. No additional dimensions are defined.
-
-## Relationships
-
-| Relationship | Target | Scope / notes |
-| --- | --- | --- |
-| measures | [Package registry](../services/package-registry.md) | Supported production client attempts |
 
 ## Definition and interpretation
 
@@ -104,23 +101,21 @@ type: Runbook
 title: Review the download objective
 description: When reviewing a completed observation window, record an objective assessment or measurement gap.
 status: draft
+applies-to:
+  - target: ../services/package-registry.md
+    scope: Proposed production objective
 ---
 
 # Review the download objective
 
 ## Trigger, outcome, and prerequisites
 
-Use when asked to assess the proposed registry objective for a completed
-window. Produce an attributable assessment or an explicit measurement gap.
+Use when asked to assess the [package registry's](../services/package-registry.md)
+proposed objective for a completed window. Produce an attributable assessment
+or an explicit measurement gap.
 The platform lead owns the procedure; its contact directory and assessment
 destination are unresolved. The reviewer needs authorized read access to the
 service, measure, and eventual reporting source. No runtime changes are authorized.
-
-## Relationships
-
-| Relationship | Target | Scope / notes |
-| --- | --- | --- |
-| applies-to | [Package registry](../services/package-registry.md) | Proposed production objective |
 
 ## Procedure
 

@@ -2,7 +2,7 @@
 
 Use for an organizational entity with purpose and an authority boundary.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.4.0; the remaining sections guide authoring.
+normative for profile 0.5.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -30,6 +30,10 @@ rosters to their owning directory instead of reproducing them unnecessarily.
 
 ## Suggested record
 
+Add supported top-level relationship fields to the frontmatter using the
+[relationship forms](../references/profile.md#relationships). Omit unknown
+targets and name their gaps in the body.
+
 ```markdown
 ---
 type: Organization
@@ -44,7 +48,6 @@ status: draft
 ## Responsibilities and decision authority
 ## Structure and discovery
 ## Directories, policies, and agreements
-## Relationships
 ## History, gaps, and maintenance
 ```
 

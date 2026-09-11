@@ -4,7 +4,7 @@ Use for an established procedure with a bounded trigger and verifiable outcome.
 Tasks can concern engineering or operations, such as reproducing a build,
 resetting a development environment, deploying a service, or restoring service.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.4.0; the remaining sections guide authoring.
+normative for profile 0.5.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -35,6 +35,10 @@ execute procedure steps just to write or check the documentation.
 
 ## Suggested record
 
+Add supported top-level relationship fields to the frontmatter using the
+[relationship forms](../references/profile.md#relationships). Omit unknown
+targets and name their gaps in the body.
+
 ```markdown
 ---
 type: Runbook
@@ -49,7 +53,6 @@ status: draft
 ## Prerequisites and inputs
 ## Procedure
 ## Stop, escalation, and recovery
-## Relationships
 ## Completion evidence
 ## Exercise history, gaps, and maintenance
 ```

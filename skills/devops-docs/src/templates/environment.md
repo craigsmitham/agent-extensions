@@ -2,7 +2,7 @@
 
 Use for a local, CI, deployed, shared, or ephemeral execution context.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.4.0; the remaining sections guide authoring.
+normative for profile 0.5.0; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -32,6 +32,10 @@ bundle of settings when the implementation manages them independently.
 
 ## Suggested record
 
+Add supported top-level relationship fields to the frontmatter using the
+[relationship forms](../references/profile.md#relationships). Omit unknown
+targets and name their gaps in the body.
+
 ```markdown
 ---
 type: Environment
@@ -46,7 +50,6 @@ status: draft
 ## Configuration and intended participants
 ## Data and lifecycle rules
 ## Access, change, and procedures
-## Relationships
 ## Readiness evidence, gaps, and maintenance
 ```
 
