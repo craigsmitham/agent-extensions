@@ -26,6 +26,14 @@ Accept explicit tasks (`$devops-docs setup providers`, `$devops-docs maintain
 github.md`) or infer them from the request. Scope can name types, files,
 directories, or subjects; without one, use the repository's operational-docs corpus.
 
+During adoption, migration, and maintenance, reassess whether existing local
+guidance still serves a distinct reader need once this skill supplies shared
+guidance. Preserve applicable unique meaning, including local decisions,
+constraints, rationale, and history; do not automatically preserve the document
+or create a successor. Retirement without replacement is valid when no unique
+meaning or reader need remains. Check human access to the shared guidance;
+agent availability alone does not meet a human reader's need.
+
 Setup and maintain are one-pass, read-only analyses ending in a conversational
 proposal; discover is read-only, and author edits only within the request's
 authority. Documentation work never authorizes executing procedures, changing

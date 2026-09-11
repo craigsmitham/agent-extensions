@@ -20,6 +20,10 @@ conversation. Do not save a plan or change documentation during either task.
   Include Related changes and Decision only when applicable. For multiple
   decisions, repeat the Decision block with stable titles and Option A/B/etc.
   labels; keep comparisons and feedback in the same conversational surface.
+- Under Related changes, include any reassessed local guidance or adoption
+  declaration. Explain retained meaning, remaining reader needs, and reference
+  repairs; a retirement may have no successor. Keep proposed declarations to
+  repository-specific decisions and links to shared guidance.
 - Put the overall recommendation and feedback invitation last. Do not append
   another summary or an implementation log. Scale the number of rows and their
   detail, not the presentation structure.
@@ -41,7 +45,8 @@ Review Provider and Runbook records under `/devops/` so maintainers can find the
 current provider account and its applicable operating procedure.
 
 **Reviewed:** The Nimbus provider record, two supplier notes, the account
-inspection runbook, and their incoming links.
+inspection runbook, local provider-authoring guide, adoption declaration, and
+their incoming links.
 
 **Coverage limit:** Documentation and the supplied account-transfer notice;
 live account access and procedure execution were not checked.
@@ -75,7 +80,13 @@ provider record while keeping its unverified execution status visible.
 ## Related changes
 
 **Within scope:** Update Provider and Runbook indexes and incoming links after
-consolidation. Preserve the old-to-new path mapping in the implementation handoff.
+consolidation. Preserve the old-to-new path mapping for consolidated records.
+Retire `/devops/writing-provider-records.md` without a successor: inspection
+found only guidance now supplied by the skill, no unique local decisions, and
+no separate reader need. Human maintainers can access the versioned guidance
+linked from the adoption declaration. Remove its index entry and redirect its
+authoring links there. Keep the declaration's local scope, placement, maintainer,
+and host-rule decisions; do not copy the retired guide into it.
 
 **Outside scope:** `/devops/environments/production.md` also names the old account.
 This is a dependent follow-up discovered through a link, not a review of all
@@ -98,12 +109,14 @@ traced links from the selected records. Identified the unique facts to preserve.
 
 **Check during implementation:** Confirm those facts survive consolidation,
 update affected links and indexes, and check record metadata and relationship
-targets. Keep procedure exercise status unchanged unless new evidence is supplied.
+targets. Confirm retirement loses no local meaning or human access to needed
+guidance. Keep procedure exercise status unchanged unless new evidence is supplied.
 
 ## Overall recommendation
 
 Consolidate the two supplier notes into the existing Provider record, update
-that record and the account inspection Runbook, and repair their discovery links.
+that record and the account inspection Runbook, retire the redundant authoring
+guide without replacement, and repair their discovery links.
 I recommend **Option A**: include the one identified Environment correction so
 the known account references agree. This makes account and recovery information
 easier to find while preserving retention constraints and verification gaps.

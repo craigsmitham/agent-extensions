@@ -37,6 +37,12 @@ providers, services, teams, tools, environments, organizations, repositories,
 playbooks, runbooks, and measures. The adoption README owns scope and maintenance;
 reserved indexes own navigation. Setup proposes the convention and any moves; author applies accepted changes.
 
+Adoption, migration, and maintenance reassess whether local guidance still
+needs a document once the skill supplies it. Preserve applicable unique meaning
+and human reader needs; redundant guidance may be retired without a successor.
+Adoption declarations contain repository-specific decisions and references to
+shared guidance.
+
 ## Package map
 
 | Read | For |
@@ -46,7 +52,7 @@ reserved indexes own navigation. Setup proposes the convention and any moves; au
 | [Proposal template](src/templates/plan.md) | Conversational orientation and proposed changes grouped by type |
 | [Connected example](src/references/example.md) | A fictional draft Service, Measure, and Runbook |
 
-The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.1.0.
+The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.2.0.
 `src/` is the portable runtime payload. README is package documentation.
 This package has no executable helpers or mandatory runtime sibling dependencies.
 When available, `author-docs` contributes documentation craft and `author-okf`
@@ -63,5 +69,22 @@ or successful exercise.
 The profile is an application convention over OKF v0.2, not an OKF extension
 standard. Profile review is manual. Base validation, profile consistency,
 source support, and actual use evidence are distinct results.
+
+## Changes in 0.2.0
+
+Setup, maintenance, and authoring now explicitly support retirement without a
+successor after checking unique meaning, human access, and affected references.
+The proposal example demonstrates this alongside consolidation.
+
+Profile 0.2.0 limits adoption declarations to local decisions and references.
+Before migrating an existing declaration from 0.1.0, remove copied shared
+guidance while preserving applicable local meaning and access to needed
+instruction. Record types, metadata, and relationships are unchanged. A skill
+upgrade does not itself migrate an adopting repository. Keep the prior skill
+and declared profile at 0.1.0 if that review is deferred.
+
+Routing and authority are unchanged: setup and maintain propose; author applies
+authorized changes. Validation covers package structure and manual consistency;
+the package's behavioral evaluation suite remains deferred during design.
 
 License: CC-BY-SA-4.0. Examples are fictional.

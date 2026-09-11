@@ -1,7 +1,7 @@
 # DevOps Docs profile
 
-Version **0.1.0** · Base **OKF v0.2** · Maintainer **@craigsmitham**.
-Initial authored version; adoption by a repository is a separate scoped act.
+Version **0.2.0** · Base **OKF v0.2** · Maintainer **@craigsmitham**.
+Adoption by a repository is a separate scoped act.
 
 This profile describes operational knowledge for people developing, operating,
 and changing software products. Its normative contract comprises this file
@@ -18,6 +18,13 @@ non-reserved document. The root index MUST link to that declaration and the
 versioned profile reference. Resolve conflicts before claiming conformance.
 No `okf_profile` field is introduced: profile declarations are producer
 conventions beyond OKF v0.2.
+
+The declaration MUST be limited to repository-specific adoption decisions:
+the fields above, local exceptions, and rationale needed to interpret them.
+It MUST reference shared definitions, type contracts, and authoring guidance
+rather than reproduce them. Any continuing need for human-facing instruction
+SHOULD be served through accessible references or a separate document with a
+distinct reader purpose. Installing a skill does not establish human access.
 
 Default to **`<repository-root>/devops/`**, abbreviated `/devops/`. This is
 repository-relative, never the filesystem root. Preserve an existing coherent
@@ -176,6 +183,12 @@ does not establish the remaining results or operational readiness.
 This package's maintainer owns profile revisions; adopters own their declarations
 and records. Version the profile and type contracts together. Changes to
 meaning, required content, endpoints, or cardinality MUST state migration impact
-before existing records claim the new version. V0.1.0 is the initial contract,
-derived from the commissioned ten-type design; it extends the proposal's
-dependencies to include Tool sources.
+before existing records claim the new version.
+
+V0.2.0 limits adoption declarations to repository-specific decisions and
+references. When migrating from v0.1.0, review the declaration for copied shared
+guidance, preserve applicable local meaning, and repair references before
+claiming v0.2.0. Reassess whether superseded local guidance needs a successor;
+retirement without one is valid when no unique meaning or reader need remains.
+Record types, fields, and relationships are unchanged. Existing v0.1.0 adoption
+does not change merely because the skill is upgraded.

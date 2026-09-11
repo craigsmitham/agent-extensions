@@ -14,8 +14,9 @@ skills can contribute craft and base validation; otherwise use the templates
 and manual checks without installing dependencies.
 
 - Identify the reader's responsibility, the needed knowledge, and its canonical
-  home. Split records only for meaningful differences in identity, ownership,
-  lifecycle, reuse, or maintenance.
+  home. When adopting or migrating guidance, reassess whether a local document
+  still needs to exist. Split records only for meaningful differences in
+  identity, ownership, lifecycle, reuse, or maintenance.
 - Establish claims from applicable sources: configuration for intent,
   directories for assignments, agreements for commitments, and observations
   for dated state. Code presence alone does not establish adoption. Resolve
@@ -27,10 +28,15 @@ and manual checks without installing dependencies.
 
 ## Apply and verify
 
-For accepted setup, create the scoped adoption declaration and navigation.
+For accepted setup, create the scoped adoption declaration and navigation,
+keeping the declaration to local decisions and references to shared guidance.
 For moves or consolidation, establish destinations, preserve unique meaning
 and old-to-new identities, update incoming references and indexes, then retire
-superseded copies. Check typed edges, ordinary links, and textual references;
+superseded copies. For retirement without a successor, verify that no applicable
+unique meaning or reader need is lost, then remove or redirect affected
+references according to their purpose. Do not invent a replacement merely to
+complete a path mapping. Keep retirement within the authorized scope.
+Check typed edges, ordinary links, and textual references;
 identify necessary work outside the accepted scope without silently adding it.
 
 Check representation, profile/type contracts, source support, and representative

@@ -17,8 +17,12 @@ Do not modify records, save a plan, or implement recommended changes.
    needed to assess impact; distinguish dependent follow-ups outside the
    requested scope from primary changes. The graph is not a complete inventory.
 4. Prioritize misleading claims, action-blocking gaps, duplication, and broken
-   references. Recommend updates, moves, consolidation, splits, or retirement
-   with canonical destinations and preservation of unique facts and history.
+   references. Reassess local guidance and adoption declarations against what
+   the skill supplies. Recommend updates, moves, consolidation, splits, or
+   retirement, preserving applicable unique meaning and human reader needs.
+   Name destinations for retained meaning; retirement may need no successor.
+   Explain affected reference repairs and any declaration changes needed to
+   keep local decisions separate from shared guidance.
    An elapsed review date prompts inspection; it does not prove a claim false.
 5. Present the [conversational proposal](../templates/plan.md), including actual
    coverage, evidence, and remaining gaps. Complete discoverable analysis in

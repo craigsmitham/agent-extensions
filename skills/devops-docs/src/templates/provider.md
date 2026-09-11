@@ -2,7 +2,7 @@
 
 Use for our relationship with a supplier, adopted offerings, and accounts.
 Apply the [common profile](../references/profile.md). The Type contract is
-normative for profile 0.1.0; the remaining sections guide authoring.
+normative for profile 0.2.0; the remaining sections guide authoring.
 
 ## Type contract
 
