@@ -45,7 +45,7 @@
       "prompt": "Review JavaScript date and timezone code for DST bugs and choose the correct Temporal types.",
       "expected_selection": "temporal-dates",
       "catalog_neighbors": [
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "The selected skill is temporal-dates.",
@@ -60,7 +60,7 @@
       "prompt": "Replace Date.now and real-time sleeps in this Effect v4 service with Effect DateTime, Duration, Clock, and TestClock patterns.",
       "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "No Agent Skill is selected solely for Effect-specific DateTime and Clock work.",
@@ -76,7 +76,7 @@
       "prompt": "Our plain TypeScript scheduler uses new Date, timezone offsets, and date-fns. Review it and choose the right JavaScript Temporal types.",
       "expected_selection": "temporal-dates",
       "catalog_neighbors": [
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "The paraphrased plain-TypeScript date request selects temporal-dates.",
@@ -103,7 +103,7 @@
       "prompt": "This Effect v4 billing module is covered by a scoped AGENTS.md instruction that requires JavaScript Temporal for its domain dates. Implement its PlainDate billing cycle while keeping the surrounding Effect service patterns.",
       "expected_selection": "temporal-dates",
       "catalog_neighbors": [
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "The explicit scoped Temporal instruction selects temporal-dates even though the module uses Effect.",
@@ -118,7 +118,7 @@
       "prompt": "Review parsing in this TypeScript adapter. Its module instructions deliberately retain native JavaScript Date objects and do not authorize a Temporal migration.",
       "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "The explicit native Date authority prevents temporal-dates selection.",
@@ -145,7 +145,7 @@
       "prompt": "Review this existing Temporal.ZonedDateTime scheduling code for DST disambiguation and offset-conflict bugs.",
       "expected_selection": "temporal-dates",
       "catalog_neighbors": [
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "Existing JavaScript Temporal code selects temporal-dates.",
@@ -160,7 +160,7 @@
       "prompt": "We need to improve date handling in a plain TypeScript module and are considering Date, date-fns, or another library, but no date/time model has been selected. Review the local logic without choosing a migration for us.",
       "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "An unresolved date-library choice does not select temporal-dates merely because the skill is installed.",

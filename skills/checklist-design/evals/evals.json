@@ -26,7 +26,7 @@
       "prompt": "Design a reusable do-confirm checklist for teams to verify a fictional documentation release before publishing it.",
       "expected_selection": "checklist-design",
       "catalog_neighbors": [
-        "author-docs",
+        "docs",
         "plan"
       ],
       "assertions": [
@@ -94,9 +94,9 @@
       "routing_partition": "development",
       "trigger_family": "runbook-negative",
       "prompt": "Write a complete incident-response runbook with explanations, diagnostic branches, command references, and recovery procedures.",
-      "expected_selection": "author-docs",
+      "expected_selection": "docs",
       "catalog_neighbors": [
-        "author-docs",
+        "docs",
         "checklist-design"
       ],
       "assertions": [
@@ -232,7 +232,7 @@
       "prompt": "Release coordinators keep forgetting rollback identifiers and sign-off evidence. Design a reusable pre-publication verification aid with explicit stop conditions, role ownership, and a way to test whether it reduces omissions.",
       "expected_selection": "checklist-design",
       "catalog_neighbors": [
-        "author-docs",
+        "docs",
         "plan"
       ],
       "assertions": [
@@ -250,7 +250,7 @@
       "prompt": "New analysts can follow coached steps today but cannot explain or handle novel examples two weeks later. Design a reusable practice aid that fades prompts and tests delayed unassisted transfer.",
       "expected_selection": "checklist-design",
       "catalog_neighbors": [
-        "author-docs",
+        "docs",
         "research"
       ],
       "assertions": [
@@ -287,7 +287,7 @@
       "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
         "research",
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "The unprefixed mixed request clarifies or abstains because research is explicit-only and checklist-design excludes conducting domain research.",
@@ -321,9 +321,9 @@
       "routing_partition": "development",
       "trigger_family": "sop-authoring-negative",
       "prompt": "Turn this short checklist into a complete incident-response SOP with explanations, diagnostic branches, commands, recovery procedures, and reference material.",
-      "expected_selection": "author-docs",
+      "expected_selection": "docs",
       "catalog_neighbors": [
-        "author-docs",
+        "docs",
         "checklist-design"
       ],
       "assertions": [
@@ -396,7 +396,7 @@
       "expected_selection": "checklist-design",
       "catalog_neighbors": [
         "review",
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "Checklist-design is selected for review of a reusable readiness gate without requiring the word checklist.",
@@ -504,7 +504,7 @@
       "expected_selection": "checklist-design",
       "catalog_neighbors": [
         "plan",
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "Checklist-design is selected from the recurring verification, shared-confirmation, and stop-rule purpose without requiring the checklist keyword.",
@@ -572,9 +572,9 @@
       "routing_partition": "holdout",
       "trigger_family": "operator-manual-negative",
       "prompt": "Author a complete operator manual for a fictional batch service, including concepts, decision branches, command examples, failure diagnosis, rollback procedures, and an appendix with a short preflight checklist.",
-      "expected_selection": "author-docs",
+      "expected_selection": "docs",
       "catalog_neighbors": [
-        "author-docs",
+        "docs",
         "checklist-design"
       ],
       "assertions": [

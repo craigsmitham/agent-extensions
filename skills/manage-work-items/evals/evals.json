@@ -106,7 +106,7 @@
       "stage": "routing",
       "prompt": "Turn these observations into a tracker-ready bug report and preserve the reproduction uncertainty.",
       "expected_selection": "manage-work-items",
-      "catalog_neighbors": ["research", "author-docs"],
+      "catalog_neighbors": ["research", "docs"],
       "assertions": [
         "The selected skill is manage-work-items.",
         "The request is recognized as Defect Report authoring rather than diagnosis, implementation, or general documentation.",
@@ -145,7 +145,7 @@
       "stage": "routing",
       "prompt": "Rewrite issue 44's title and two-sentence summary without changing its body or fields.",
       "expected_selection": "manage-work-items",
-      "catalog_neighbors": ["author-docs", "checklist-design"],
+      "catalog_neighbors": ["docs", "checklist-design"],
       "assertions": [
         "The selected skill is manage-work-items.",
         "The title-and-summary-only operation is recognized.",

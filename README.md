@@ -42,7 +42,7 @@ again claimed scope that has not been written.
 | Skill | Purpose | Install |
 | --- | --- | --- |
 | `temporal-dates` | JavaScript Temporal type selection, API usage, interoperability, and pitfalls | `axm install @craigsmitham/skills/temporal-dates` |
-| `author-okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/author-okf` |
+| `okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/okf` |
 | `devops-docs` | Set up, discover, author, and maintain engineering and operations documentation | `axm install @craigsmitham/skills/devops-docs` |
 | `improve-whatever` | Evidence-based evaluation through the lens of Philippians 4:8–9 | `axm install @craigsmitham/skills/improve-whatever` |
 | `spot-spew` | Spot avoidable maintenance burden from custom or non-idiomatic code and weigh replacing it with adopted capabilities | `axm install @craigsmitham/skills/spot-spew` |

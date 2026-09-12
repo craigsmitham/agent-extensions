@@ -21,8 +21,8 @@
     "temporal-dates": "workspace",
     "improve-whatever": "workspace",
     "field-notes": "workspace",
-    "author-docs": "workspace",
-    "author-okf": "workspace",
+    "docs": "workspace",
+    "okf": "workspace",
     "research": "workspace",
     "axm": {
       "source": "workspace",

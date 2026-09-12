@@ -77,7 +77,7 @@ and verifies effective discovery and link resolution.
 The canonical AXM package is `@craigsmitham/skills/devops-docs`, version 0.5.1.
 `src/` is the portable runtime payload. README is package documentation.
 This package has no executable helpers or mandatory runtime sibling dependencies.
-When available, `author-docs` contributes documentation craft and `author-okf`
+When available, `docs` contributes documentation craft and `okf`
 contributes OKF authoring and base validation. Their absence leaves manual checks
 available and automated-check limitations explicit.
 

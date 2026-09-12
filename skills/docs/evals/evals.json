@@ -1,5 +1,5 @@
 {
-  "skill_name": "author-docs",
+  "skill_name": "docs",
   "suite_version": "0.4.0",
   "evaluation_contract": "evals/evaluation-contract.json",
   "evals": [
@@ -45,13 +45,13 @@
       "id": 4,
       "stage": "routing",
       "prompt": "Rewrite this README so a new contributor can complete setup and verify success.",
-      "expected_selection": "author-docs",
+      "expected_selection": "docs",
       "catalog_neighbors": [
         "author-agent-instructions",
         "audit-agent-skill"
       ],
       "assertions": [
-        "The selected skill is author-docs.",
+        "The selected skill is docs.",
         "No neighboring skill is selected for a job it does not own.",
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."
@@ -74,13 +74,13 @@
       "id": 6,
       "stage": "routing",
       "prompt": "Audit the documentation set under docs/ for discovery, accuracy, coverage, and maintenance risks. Do not change it.",
-      "expected_selection": "author-docs",
+      "expected_selection": "docs",
       "catalog_neighbors": [
         "audit-agent-skill",
         "research"
       ],
       "assertions": [
-        "The selected skill is author-docs.",
+        "The selected skill is docs.",
         "The request is recognized as a documentation-corpus audit rather than a skill audit or general research task.",
         "Routing uses only catalog names and descriptions.",
         "No task side effect occurs before selection."

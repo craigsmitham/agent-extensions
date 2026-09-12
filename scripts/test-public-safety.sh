@@ -118,23 +118,23 @@ expect_failure "untracked secret in workspace mode" \
   _ "$untracked_fixture" "$(dirname "$real_axm")"
 
 eval_result_fixture="$(make_fixture)"
-mkdir -p "$eval_result_fixture/skills/author-docs/evals/results"
+mkdir -p "$eval_result_fixture/skills/docs/evals/results"
 printf '{"evidence_class":"authoring-smoke"}\n' \
-  >"$eval_result_fixture/skills/author-docs/evals/results/smoke.json"
+  >"$eval_result_fixture/skills/docs/evals/results/smoke.json"
 expect_failure "routine evaluation result stored in extension source" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
   _ "$eval_result_fixture" "$(dirname "$real_axm")"
 
 eval_runs_fixture="$(make_fixture)"
-mkdir -p "$eval_runs_fixture/skills/author-docs/evals/runs"
+mkdir -p "$eval_runs_fixture/skills/docs/evals/runs"
 printf '{"evidence_class":"authoring-smoke"}\n' \
-  >"$eval_runs_fixture/skills/author-docs/evals/runs/smoke.json"
+  >"$eval_runs_fixture/skills/docs/evals/runs/smoke.json"
 expect_failure "routine evaluation run stored under an alternative source path" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
   _ "$eval_runs_fixture" "$(dirname "$real_axm")"
 
 malformed_suite_fixture="$(make_fixture)"
-malformed_suite="skills/author-docs/evals/evals.json"
+malformed_suite="skills/docs/evals/evals.json"
 jq 'del(.suite_version)' "$malformed_suite_fixture/$malformed_suite" \
   >"$malformed_suite_fixture/$malformed_suite.next"
 mv "$malformed_suite_fixture/$malformed_suite.next" "$malformed_suite_fixture/$malformed_suite"
@@ -162,9 +162,9 @@ expect_failure "public subagent missing from workspace source authority" \
   _ "$subagent_source_fixture" "$(dirname "$real_axm")"
 
 eval_symlink_fixture="$(make_fixture)"
-mkdir -p "$eval_symlink_fixture/skills/author-docs/evals/files"
+mkdir -p "$eval_symlink_fixture/skills/docs/evals/files"
 ln -s ../../src/SKILL.md \
-  "$eval_symlink_fixture/skills/author-docs/evals/files/escaped-source.md"
+  "$eval_symlink_fixture/skills/docs/evals/files/escaped-source.md"
 expect_failure "evaluation source symlink into runtime payload" \
   env TMPDIR="$test_root" bash -c 'cd "$1" && PATH="$2:$PATH" scripts/check-public-safety.sh' \
   _ "$eval_symlink_fixture" "$(dirname "$real_axm")"

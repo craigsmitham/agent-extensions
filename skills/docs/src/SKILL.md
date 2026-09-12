@@ -1,5 +1,5 @@
 ---
-name: author-docs
+name: docs
 description: >
   Creates, reviews, organizes, audits, and remediates repository documentation
   using portable documentation craft. Use for writing or improving READMEs,

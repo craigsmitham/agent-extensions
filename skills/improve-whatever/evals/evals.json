@@ -45,7 +45,7 @@
       "prompt": "$improve-whatever Evaluate this product proposal through what is true, honorable, just, pure, lovely, commendable, excellent, and praiseworthy, then recommend improvements.",
       "expected_selection": "improve-whatever",
       "catalog_neighbors": [
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "The user's explicit skill invocation selects improve-whatever.",
@@ -60,7 +60,7 @@
       "prompt": "Evaluate this product proposal through what is true, honorable, just, pure, lovely, commendable, excellent, and praiseworthy, then recommend improvements.",
       "expected_selection": "clarify-or-abstain",
       "catalog_neighbors": [
-        "author-docs"
+        "docs"
       ],
       "assertions": [
         "Improve-whatever is not selected because the host requires explicit invocation.",

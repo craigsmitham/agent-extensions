@@ -156,13 +156,13 @@ expected=(
   packs/work-management
   rules/field-notes
   rules/use-effect-v4
-  skills/author-docs
-  skills/author-okf
   skills/checklist-design
   skills/devops-docs
+  skills/docs
   skills/field-notes
   skills/improve-whatever
   skills/manage-work-items
+  skills/okf
   skills/research
   skills/spot-spew
   skills/temporal-dates
