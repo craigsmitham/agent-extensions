@@ -38,56 +38,32 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-engineering](knowledge/product-engineering/src/index.md) | Opinionated product-development lifecycle from strategy through operations and maintenance, with shared conceptual foundations |
 <!-- axm:end v=1 region=knowledge -->
-<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=ec87289ea6ad8b9a6d038b2a6ef32fb60cb98f25a0e647e8ad69b660e76a57cb -->
-<!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.3 kind=rule -->
+<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=56b79c4851319fe8a9b006aff016de418e238a3725f88b3e25c09df5ea6cd24f -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@0.2.4 kind=rule -->
 
 ## Field notes
 
-Record how work actually goes, so recurring obstacles become durable
-improvements instead of repeated friction.
+Capture useful feedback from ordinary work within declared subjects, so
+experience informs improvements to tools, guidance, and workflows. Preserve
+meaningful observations—including differences between expected and actual
+behavior, even when a later attempt succeeds—with enough evidence to understand
+what happened and its outcome. Keep observations factual, protect sensitive
+information, and continue the task.
 
 Subjects under observation are declared in the `## Field note subjects` table in
-this file. **If that section is missing or has no rows, this rule is inactive —
-do nothing.**
+this file. If that section is missing or has no rows, this rule is inactive.
+Respect each subject's scope and target condition.
 
-### When to record
+Use `capture.md` alongside the installed field-notes rule source for the record
+format and evidence requirements. Capture each occurrence once; exclude routine
+successes, your own typos, and speculation without an observed occurrence.
+Preserve useful diagnostic evidence before reducing output; never rerun a
+mutation merely to recover evidence.
 
-While doing ordinary work within a declared subject, record one note when:
+Recording observations does not authorize investigation, remediation, or issue
+creation beyond the current task. Report capture in at most one short line at
+the end of your response. Raise live correctness, data-loss, or security problems
+immediately.
 
-- reality differs from instructions, documentation, or command output;
-- you retry, guess, search, or improvise an undocumented workaround; or
-- a `target`-mode subject is blocked from its target condition.
-
-Do not record your own typo, the same incident twice in one session, or
-speculation without an observed incident.
-
-### Preserve diagnostic evidence
-
-While working within a declared subject, do not discard safe structured failure
-details before deciding whether an interaction qualifies for capture. Inspect
-the complete result, preserve the process exit status, and keep result output
-separate from diagnostic output. If output must be reduced, retain materially
-useful error, request, response, retry, recovery, and affected-artifact fields.
-Never retain credentials, authorization material, opaque response bodies, or
-other sensitive values. Do not rerun a mutation merely to recover evidence.
-
-### How to record
-
-On the first qualifying incident in a session, read `capture.md` alongside the
-installed field-notes rule source.
-Append one note for each qualifying incident. Recording it is expected behavior,
-not an admission of failure.
-
-### Stay in the work
-
-Log and continue. Do not investigate the note, fix what it describes, open an
-issue, or discuss it beyond one short line at the end of your response.
-
-Raise a live correctness, data-loss, or security problem immediately instead of
-filing it. Stop to ask only when genuinely blocked on ambiguous architecture,
-data model, or destructive scope; name the ambiguity in one sentence with two or
-three options.
-
-To declare subjects, triage notes, or promote them into findings, use the
-`field-notes` skill. Never do that work inline.
+Use the `field-notes` skill to declare subjects, triage notes, or promote findings.
 <!-- axm:end v=1 region=rules -->
