@@ -27,6 +27,10 @@ known exclusions before making a set-level claim.
 and review date. Report unknown or unavailable evidence instead of turning it
 into a pass.
 
+ISO/IEC/IEEE 29148 applies a stricter completeness test and adds
+comprehensibility and validation feasibility; see
+[set characteristics under 29148](../../../foundations/iso-iec-ieee-29148-requirement-quality.md#characteristics-of-a-set-of-requirements).
+
 ## Worked continuation
 
 The [Northbank specimen set](../authoring/northbank-commitment-requirements.md)

@@ -170,7 +170,10 @@ problem ownership, read [How Shape Up fits product engineering](foundations/shap
 
 When ready to state or revise obligations, the [Requirements](solution/requirements/)
 index branches into development, authoring, review, lifecycle, and local
-adaptation. For the distinction between conforming behavior and a useful
+adaptation. To judge whether those obligations and their sets are well formed
+against an international baseline, read
+[ISO/IEC/IEEE 29148: requirement and requirement-set quality](foundations/iso-iec-ieee-29148-requirement-quality.md).
+For the distinction between conforming behavior and a useful
 solution, read [Verification and validation](solution/requirements/foundations/verification-and-validation.md),
 then return to [Outcomes and evidence](problem/outcomes-and-evidence.md).
 

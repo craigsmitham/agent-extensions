@@ -28,6 +28,10 @@ Record findings with severity, location, evidence, and the decision needed.
 Review does not itself accept a candidate or approve a change unless the local
 policy grants the reviewer that authority.
 
+For the ISO/IEC/IEEE 29148 characteristics behind several of these checks, and
+the correctness and conformity questions they add, read
+[requirement quality under 29148](../../../foundations/iso-iec-ieee-29148-requirement-quality.md#characteristics-of-an-individual-requirement).
+
 ## Worked continuation
 
 Use [Northbank's requirement specimens](../authoring/northbank-commitment-requirements.md)

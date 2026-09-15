@@ -101,7 +101,7 @@ went.
 
 | Section | Source | State |
 | --- | --- | --- |
-| Foundations | `product-management`; Oberholzer-Gee's interviews and HBS value-strategy explanations; Lafley and Martin's strategy articles; Cagan's SVPG strategy articles; Singer's Shape Up; Cockburn's use-case and incremental-development books; primary DDD sources; Brooks's essays and design interview; Simon Wardley's book; Drucker's writings and Drucker Institute material; NASA and DOE maintenance guidance; Parnas and software-aging research | Shared conceptual explanations and comparisons; the [foundation catalog](src/foundations/) groups the current material by reader question |
+| Foundations | `product-management`; Oberholzer-Gee's interviews and HBS value-strategy explanations; Lafley and Martin's strategy articles; Cagan's SVPG strategy articles; Singer's Shape Up; Cockburn's use-case and incremental-development books; primary DDD sources; Brooks's essays and design interview; Simon Wardley's book; Drucker's writings and Drucker Institute material; NASA and DOE maintenance guidance; Parnas and software-aging research; ISO/IEC/IEEE 29148:2018; Mavin et al.'s EARS paper and guide | Shared conceptual explanations and comparisons; the [foundation catalog](src/foundations/) groups the current material by reader question |
 | Where to play | `strategy`, `product-management` | Both bundles retired, and the migrated concepts have since been retired too; scope, boundaries, and routes to shared foundations remain |
 | What to solve | `product-management` | Migrated; that bundle retired. Two concepts; Jobs to Be Done now lives in Foundations |
 | What to build | `requirements-engineering`, `product-management` | Requirements migrated and that bundle retired; the design half is unwritten |

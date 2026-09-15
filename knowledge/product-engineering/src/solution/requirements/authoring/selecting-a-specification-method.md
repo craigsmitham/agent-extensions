@@ -14,7 +14,7 @@ consequence and uncertainty.
 | Need | Useful forms |
 | --- | --- |
 | Simple observable obligation | Controlled natural language or structured prose |
-| Conditional or unwanted behavior | EARS-like condition-response syntax |
+| Conditional or unwanted behavior | [EARS](../../../foundations/easy-approach-to-requirements-syntax.md)-like condition-response syntax |
 | Many rule combinations | Decision table or example table |
 | User interaction and alternatives | Scenario, use case, journey, or prototype |
 | Stateful or temporal behavior | State model, sequence, temporal rule, or invariant |

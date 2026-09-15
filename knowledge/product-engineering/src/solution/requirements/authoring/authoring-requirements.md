@@ -23,6 +23,9 @@ A good requirement is necessary, appropriate, unambiguous for its audience,
 complete within its boundary, singular enough to decide and assess, feasible,
 and verifiable. A good set is also consistent, sufficiently complete for its
 declared scope, traceable, modifiable, and balanced across relevant concerns.
+[ISO/IEC/IEEE 29148 requirement quality](../../../foundations/iso-iec-ieee-29148-requirement-quality.md#how-this-bundle-relates-to-the-standard)
+compares these qualities with the standard's characteristics, including the
+ones this list does not name.
 
 Avoid “and” when it joins independently decidable behavior, vague qualifiers
 such as *fast* or *user-friendly*, passive voice that hides the subject, and

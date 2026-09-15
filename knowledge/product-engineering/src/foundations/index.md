@@ -13,6 +13,7 @@ relationship between shared explanations and lifecycle guidance.
 | --- | --- |
 | Why does an offering matter, and where should we invest? | [Customer progress](#understand-customer-progress-behavior-and-models), [strategic choice](#understand-value-and-strategic-choice), and [business assumptions](#understand-assumptions-and-renewal) |
 | How do we explore experiences and make behavior coherent? | [Candidate experiences](#explore-candidate-experiences), [goals and models](#understand-customer-progress-behavior-and-models), and [architectural responsibility](#understand-architectural-responsibility) |
+| How do we judge whether a requirement or a set of requirements is well formed? | [Requirement quality](#understand-requirement-quality) |
 | How is the service delivered, and which parts does the customer see? | [Service delivery and visibility](#understand-service-delivery-and-visibility) |
 | What can we commit to, and does the evidence still support it? | [Shaping and project commitment](#understand-shaping-and-project-commitment) |
 | Which measures inform decisions and service promises? | [Measures and service commitments](#understand-measures-and-service-commitments) |
@@ -49,6 +50,11 @@ alternative scopes and numerical exhibits remain explicit.
 - [Jobs to Be Done](jobs-to-be-done.md) — How Jobs to Be Done connects customer progress, functional objectives, switching, and unmet needs; how to frame jobs, distinguish interpretations, and connect research evidence to product decisions.
 - [Use cases: goals, behavior, and incremental delivery](use-cases.md) — How Cockburn's approach to use cases connects actor goals, system boundaries, success and failure scenarios, organizational alignment, and incremental delivery through user stories and story maps.
 - [Domain-driven design](domain-driven-design.md) — How domain-driven design connects domain knowledge, models, and software through shared language, subdomain classification, bounded contexts, tactical patterns, and continuing model refinement.
+
+## Understand requirement quality
+
+- [ISO/IEC/IEEE 29148: requirement and requirement-set quality](iso-iec-ieee-29148-requirement-quality.md) — How ISO/IEC/IEEE 29148:2018 characterizes well-formed requirements and requirement sets through its construct, quality characteristics, language criteria, attributes, and conformance claims, and where this bundle's requirements practice follows, extends, or departs from it.
+- [EARS: preconditions, triggers, and system responses](easy-approach-to-requirements-syntax.md) — How the Easy Approach to Requirements Syntax constrains textual requirements through a temporally ordered clause structure and five keyword patterns, what its original case study did and did not show, where the syntax fits poorly, and how it relates to ISO/IEC/IEEE 29148, executable examples, and this bundle's requirement practice.
 
 ## Explore candidate experiences
 
