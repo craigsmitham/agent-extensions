@@ -1,17 +1,10 @@
 # Feature template
 
-Use for one coherent unit of capability that the system or a subsystem
-provides to its users, such as equipment reservations or late returns. Apply
+Use for one coherent unit of capability that the system provides to its users, such as equipment reservations or late returns. Apply
 the [Spec profile](../references/profile.md). The Type contract is normative;
 the remaining sections guide authoring.
 
 ## Type contract
-
-A Feature document is placed as the profile's
-[fixed locations](../references/profile.md#fixed-locations) rules state, and
-within a subsystem as the
-[Decomposition module](../references/modules/decomposition.md#fixed-locations)
-states.
 
 - **FEA-1** The title MUST name the capability as a noun phrase, such as
   "Equipment reservations".
@@ -51,14 +44,13 @@ and `business.md#objective-1`.
 **Coverage** summarizes what the capability covers and names exclusions a
 reader might otherwise assume. An exclusion that the system must enforce is a
 Requirement, not coverage. The folder index lists the feature's use cases,
-requirements, and feature components; when how they fit together is not
-obvious from the index, follow
-[Not yet defined](../references/profile.md#not-yet-defined).
+requirements, and any placement levels below it; when how they fit together
+is not obvious from the index, explain it in **Purpose**.
 
 When the feature is present only in some editions, configurations, or
-locations, follow [Not yet defined](../references/profile.md#not-yet-defined).
-For example, Site delivery covers delivery only from depots that offer
-delivery.
+locations, state the condition in **Coverage**, as
+[P-CON-5](../references/profile.md#concerns-not-yet-defined) describes. For
+example, Site delivery covers delivery only from depots that offer delivery.
 
 ### Illustrations
 
@@ -74,9 +66,9 @@ it helps readers understand the behavior, even when the feature is a user
 interface.
 
 Use cases do not name user interface elements. When readers need to know what
-a screen presents to follow the behavior, sketch it here, or in the feature
-component whose use cases it serves, and let the use case steps stay
-technology-neutral. For example, Equipment search presents available
+a screen presents to follow the behavior, sketch it under the
+**Illustrations** of the narrowest placement level whose use cases it serves,
+and let the use case steps stay technology-neutral. For example, Equipment search presents available
 equipment by type, depot, and rental period, and each result leads to
 [Reserve equipment](<link>).
 
@@ -85,15 +77,11 @@ equipment by type, depot, and rental period, and each result leads to
 A feature is large enough to hold several use cases or a set of requirements.
 Capability with a single use case and nothing around it usually belongs to an
 existing feature. The feature's use cases and requirements sit in its
-`use-cases/` and `requirements/` folders. A feature's use cases and
-requirements share its subject: those of a system-level feature describe the
-system's boundary, and content whose subject is a subsystem is placed as the Decomposition module's
-[placement levels](../references/modules/decomposition.md#placement-levels)
-describe.
+`use-cases/` and `requirements/` folders, and share its subject.
 
 ### Related
 
-Link the business rules, entity types, value types, external interfaces, and
-quality characteristics the feature is about, rather than restating use case
-steps, requirements, rules, or data details. Undecided coverage or user
+Link the concepts the feature is about, such as external interfaces, rules,
+and data, rather than restating use case steps, requirements, rules, or data
+details. Undecided coverage or user
 interface goes under **Open questions**.

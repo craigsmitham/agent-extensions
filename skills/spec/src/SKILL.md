@@ -81,4 +81,4 @@ Adopt a module when the system needs its types:
    inbound links when moving or renaming.
 
 When content concerns something the profile or a module has not yet defined,
-follow the interim practice in its **Not yet defined** section.
+follow [P-CON-5](references/profile.md#concerns-not-yet-defined).

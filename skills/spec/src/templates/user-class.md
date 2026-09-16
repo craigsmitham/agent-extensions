@@ -68,13 +68,9 @@ concrete. It illustrates a class; it does not define it.
 
 A user class is made of people who use the system or its outputs directly,
 including those who operate it. In the running example,
-[Technician](<link>) is a user class of fleet maintenance because technicians
-record inspections and repairs in it. The [Equipment insurer](<link>) has an
+[Depot staff](<link>) is a user class because depot staff record handovers in
+the system. The [Equipment insurer](<link>) has an
 interest in the system but does not use it, so it is a stakeholder in the
 Business Requirements, not a user class. An organization is described through
 the user classes of the people, or the external interfaces of the systems,
 through which it acts.
-
-A user class specific to one subsystem, such as Technician, still lives in the
-system's `users/` folder and links [Fleet maintenance](<link>) under
-**Related**.

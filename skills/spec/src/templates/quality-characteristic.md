@@ -89,8 +89,7 @@ Some parts of a quality model are placed elsewhere:
   belong in engineering records, unless a stakeholder requires them of the
   delivered product.
 
-Characteristics all live at the system level; for nesting one within
-another, follow [Not yet defined](../references/modules/quality.md#not-yet-defined).
+Characteristics all live at the system level, and each is defined on its own.
 A characteristic that only one subsystem needs links that subsystem under
 **Related**, and one whose meaning differs for a subsystem takes a distinct
 name. Where stakeholders reason about a group, such as security, create
@@ -114,9 +113,8 @@ time during which contractor customers can reserve equipment", rather than
 "the degree to which a system is operational and accessible when required for
 use".
 
-The characteristic's **Definition** is the only definition of its name. A
-glossary entry for the name, when readers look for it there, has a
-**Defined by** line that links here.
+The **Definition** is the only definition of the characteristic's name, as
+[defined names](../references/profile.md#defined-names) requires.
 
 ### Measures
 

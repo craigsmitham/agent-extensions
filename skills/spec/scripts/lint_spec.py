@@ -3,7 +3,7 @@
 
 Enforces the maintainer conventions in skills/spec/README.md: rule
 identifiers, retired identifiers, template anatomy, contract field and section
-lists, vocabulary, relationships, links, and example names. Exits 1 when any error is found unless --warn-only is given.
+lists, vocabulary, named links, links, and example names. Exits 1 when any error is found unless --warn-only is given.
 """
 
 from __future__ import annotations
@@ -39,13 +39,7 @@ TYPES = {
     "entity-type": ("Entity Type", "ET"),
     "value-type": ("Value Type", "VT"),
 }
-PARALLELS = {
-    "subsystem": "system",
-    "quality-requirement": "requirement",
-    "business-rule": "requirement",
-    "value-type": "entity-type",
-}
-PROFILE_AREAS = {"TYP", "MOD", "STR", "PLC", "OWN", "REL", "STA", "CON", "BIN", "DOC"}
+PROFILE_AREAS = {"TYP", "STR", "PLC", "OWN", "LNK", "STA", "CON", "DOC"}
 SUPPORTING_SECTIONS = ["Illustrations", "Rationale", "Verification", "Open questions", "Related"]
 README = ROOT / "README.md"
 PURPOSE_END = (
@@ -65,6 +59,9 @@ BANNED = [
     (re.compile(r"[Qq]uality [Aa]ttribute"), "use 'quality characteristic'"),
     (re.compile(r"\bsuccess measures?\b|Success measures"), "use 'success indicator'"),
     (re.compile(r"\bservice level agreements?\b"), "use 'operations concerns'"),
+    (re.compile(r"\b[Oo]wner\b"), "use 'home' for a concept's location or 'owning type'"),
+    (re.compile(r"[Rr]elationships tables?"), "use 'named links table'"),
+    (re.compile(r"^### Differences from the "), "say how a type differs in a short topic subsection"),
 ]
 
 
@@ -227,20 +224,13 @@ class Linter:
             self.error(path, 0, f"title must be '# {type_name} template'")
         paras = [b for b in self.items(doc, (h1[0][0] + 1) if h1 else 0, doc.headings(2)[0][0] if doc.headings(2) else len(doc.lines))]
         flat = [" ".join(x.strip() for x in p[2].splitlines()) for p in paras]
-        want_count = 2 if stem in PARALLELS else 1
         if not flat:
             self.error(path, 0, "needs a purpose paragraph")
         else:
             if not flat[0].startswith("Use for") or not flat[0].endswith(PURPOSE_END):
                 self.error(path, paras[0][0], "purpose paragraph must begin 'Use for' and end with the standard sentence")
-            if stem in PARALLELS:
-                other = PARALLELS[stem]
-                oname = TYPES[other][0]
-                want = f"It parallels the [{oname} template]({other}.md), with the [differences](#differences-from-the-{oname.lower().replace(' ', '-')}-template) recorded below."
-                if len(flat) < 2 or flat[1] != want:
-                    self.error(path, paras[0][0], f"parallels paragraph must be: {want}")
-            if len(flat) > want_count:
-                self.error(path, paras[want_count][0], "only the purpose paragraph, and for a parallel type the parallels paragraph, precede the Type contract; lineage belongs in the README's Template sources")
+            if len(flat) > 1:
+                self.error(path, paras[1][0], "only the purpose paragraph precedes the Type contract; lineage belongs in the README's Template sources")
         h2 = [t for _, t in doc.headings(2)]
         if h2 != ["Type contract", "Suggested document", "Writing guidance"]:
             self.error(path, 0, f"H2 sections must be Type contract, Suggested document, Writing guidance; found {h2}")
@@ -248,8 +238,10 @@ class Linter:
         rules: list[Rule] = []
         identifies = False
         lists: dict[int, list[str]] = {}
+        requires_sources = False
         sec = doc.section(2, "Type contract")
         if sec:
+            requires_sources = "`sources` frontmatter" in "\n".join(doc.lines[sec[0]:sec[1]])
             for i, t in doc.headings(3):
                 if sec[0] <= i < sec[1]:
                     self.error(path, i, "the Type contract has no subsections")
@@ -313,9 +305,12 @@ class Linter:
                 if not re.search(rf"^{key}: ", text, re.M):
                     self.error(path, sec[0], f"suggested frontmatter needs '{key}:'")
             front = text.split("\n---", 1)[0] if text.startswith("---") else ""
-            extra = sorted(set(re.findall(r"^([a-z_]+):", front, re.M)) - {"type", "title", "description", "status"})
+            allowed = {"type", "title", "description", "status"} | ({"sources"} if requires_sources else set())
+            extra = sorted(set(re.findall(r"^([a-z_]+):", front, re.M)) - allowed)
             if extra:
-                self.error(path, sec[0], f"suggested frontmatter carries only type, title, description, and status; found {extra}")
+                self.error(path, sec[0], f"suggested frontmatter carries only type, title, description, status, and sources when the contract requires it; found {extra}")
+            if requires_sources and "sources" not in extra and not re.search(r"^sources:", front, re.M):
+                self.error(path, sec[0], "the contract requires `sources`, so the suggested frontmatter carries it")
             has_context = "| Context | Value |" in text
             if has_context != identifies:
                 self.error(path, sec[0], "a Context table is present exactly when the contract identifies fields")
@@ -347,10 +342,6 @@ class Linter:
         if sec:
             h3 = [(i, t) for i, t in doc.headings(3) if sec[0] <= i < sec[1]]
             names = [t for _, t in h3]
-            if stem in PARALLELS:
-                want = f"Differences from the {TYPES[PARALLELS[stem]][0]} template"
-                if not names or names[0] != want:
-                    self.error(path, sec[0], f"Writing guidance begins with '### {want}'")
             for banned in ("Context", "Sections"):
                 if banned in names:
                     self.error(path, sec[0], f"'### {banned}' restates the contract; move any extra guidance into a topic subsection")
@@ -383,21 +374,25 @@ class Linter:
                     elif anchor and tp in anchors and anchor not in anchors[tp]:
                         self.error(d.path, i, f"broken anchor {target}")
 
-    def relationships(self, profile: Doc, modules: list[Doc], templates: list[Doc]) -> None:
+    def named_links(self, profile: Doc, modules: list[Doc], templates: list[Doc]) -> None:
         names: set[str] = set()
         for src in [profile] + modules:
-            sec = src.section(2, "Relationships")
+            sec = src.section(2, "Named links")
             if not sec:
                 continue
             for i in range(sec[0], sec[1]):
                 line = src.lines[i]
-                if line.startswith("|") and not line.startswith("| ---") and not line.startswith("| Relationship |"):
-                    name = re.sub(r"\s*\(symmetric\)", "", line.split("|")[1].strip())
-                    if name in names:
-                        self.error(src.path, i, f"relationship '{name}' is defined in more than one table")
+                if line.startswith("|") and not line.startswith("| ---") and not line.startswith("| Named link |"):
+                    cells = line.split("|")
+                    name = cells[1].strip()
+                    extends = cells[2].strip().startswith("Also:")
+                    if extends and (src is profile or name not in names):
+                        self.error(src.path, i, f"named link '{name}' extends no profile named link")
+                    elif not extends and name in names:
+                        self.error(src.path, i, f"named link '{name}' is defined in more than one table; a module row that extends it begins 'Also:'")
                     names.add(name)
         if not names:
-            self.error(profile.path, 0, "no Relationships table found")
+            self.error(profile.path, 0, "no Named links table found")
             return
         first_h2 = profile.headings(2)[0][0] if profile.headings(2) else 0
         for d in templates + [profile] + modules:
@@ -406,7 +401,7 @@ class Linter:
                     continue
                 for m in re.finditer(r"\*\*([a-z][a-z ]*[a-z])\*\*", line):
                     if m.group(1) not in names:
-                        self.warn(d.path, i, f"bold lowercase '{m.group(1)}' is not a relationship in the profile's table")
+                        self.warn(d.path, i, f"bold lowercase '{m.group(1)}' is not a named link")
 
     def retired(self) -> set[str]:
         doc = Doc.load(README)
@@ -527,7 +522,7 @@ def main() -> int:
     lint.links(docs)
     lint.vocabulary([d for d in docs if d.path.name != "README.md" or d.path.parent != ROOT])
     lint.examples([Doc.load(p) for p in template_paths])
-    lint.relationships(profile, modules, [Doc.load(p) for p in template_paths])
+    lint.named_links(profile, modules, [Doc.load(p) for p in template_paths])
     lint.references([d for d in docs if d.path.name != "README.md"], retired)
 
     findings = lint.findings

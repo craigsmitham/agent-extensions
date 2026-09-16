@@ -16,7 +16,16 @@ extend the profile's tables of the same name.
 
 | Term | Meaning |
 | --- | --- |
+| System-level feature | A feature placed directly under the system. |
 | Subsystem-level feature | A feature placed under a subsystem. |
+
+A subsystem is specified as a system is, at its own boundary:
+
+- **P-DEC-1** Wherever the profile, a module, or a template describes the
+  system as a boundary, a subject, or the other end of an External Interface,
+  or places features, use cases, or requirements under the system, the same
+  MUST apply to a subsystem at its own boundary, except where this module
+  states otherwise.
 
 A Use Case or Requirement placed within a subsystem has that Subsystem as its
 subject.
@@ -70,20 +79,21 @@ system, and its subject is the System.
 | `Feature Component` | `components/<component>/` within its feature |
 | `Feature` | Also `features/<feature>/` within a subsystem |
 
-User classes, external interfaces, and the types of other modules live at the
-system level even when they are specific to one subsystem.
+Every type other than those placed within a subsystem lives at the system
+level, even when it is specific to one subsystem, such as a user class, an
+external interface, or a glossary term.
 
-- **P-DEC-1** A User Class, External Interface, Quality Characteristic,
-  Business Rule, Entity Type, or Value Type that is specific to one subsystem
-  SHOULD link that subsystem under **Related**.
-- **P-DEC-2** A meaning specific to one subsystem MUST take a name distinct
+- **P-DEC-2** A concept that lives at the system level but is specific to one
+  subsystem SHOULD link that subsystem under **Related**.
+- **P-DEC-3** A meaning specific to one subsystem MUST take a name distinct
   from the system's other names.
+- **P-DEC-4** The **Scope** of the Business Requirements MUST link each
+  subsystem it includes.
 
 ## Not yet defined
 
 | Topic | Interim practice |
 | --- | --- |
-| Folders for concepts specific to one subsystem, such as a subsystem glossary or subsystem quality characteristics | Place them at the system level, as the profile's [Fixed locations](../profile.md#fixed-locations) requires, and give a subsystem-specific meaning a distinct name. |
 | Operating environment conditions and quality priorities specific to one subsystem | State them in the System's **Operating environment** or **Quality priorities**, naming and linking the subsystem. |
 | Connections between subsystems of the same system | Describe what passes between them in each Subsystem's **Boundary and context**, linking the sibling Subsystem. |
 | Use cases and requirements whose subject is a subsystem but that belong to a system-level feature | Place them within the subsystem, at the subsystem or in a subsystem-level feature, and link the system-level feature under **Related**. |

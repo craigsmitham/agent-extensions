@@ -72,9 +72,9 @@ status: draft
 
 ### Definition
 
-The entity type's **Definition** is the only definition of its name, a phrase
-that could replace the name; a glossary entry for the name states
-**Defined by** and links here. Link the terms the definition uses:
+The **Definition** is the only definition of the entity type's name, as
+[defined names](../references/profile.md#defined-names) requires. Link the
+terms it uses:
 
 ~~~markdown
 ## Definition
@@ -105,10 +105,9 @@ described by a [Value Type](value-type.md), not instances.
 | Required | Yes, No, or the condition under which a value is required. |
 
 For a customer, the email address is an [Email address](<link>), and the
-date of birth is kept for a person to apply [Minimum renter age](<link>). For
+date of birth is kept for a person to apply [Minimum renter age](<link>). Link
 where an attribute's value comes from, such as the condition that
-[Equipment telematics](<link>) reports, follow
-[Not yet defined](../references/modules/data.md#not-yet-defined).
+[Equipment telematics](<link>) reports, under **Related**.
 
 A length or format belongs in the representation only as
 [work management and design](../references/profile.md#work-management-and-design)
@@ -173,9 +172,8 @@ define the data. Draw relationship diagrams as Mermaid `erDiagram`.
 
 Link the value types, business rules, and external interfaces the entity type
 is about, and the use cases that cause its lifecycle transitions, beyond those
-linked in its sections, including the rules that set
-how long its data is kept and who may see them, such as
-[Customer data retention](<link>). Use cases and requirements that create,
+linked in its sections, including the rules that set how long its data is kept
+and who may see them, such as [Customer data retention](<link>). Use cases and requirements that create,
 read, change, or end instances link here from their own **Related**. Record
 undecided attributes, identity, relationships, or transitions under
 **Open questions**.

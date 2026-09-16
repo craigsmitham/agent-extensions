@@ -8,8 +8,8 @@ those levels use. Its tables extend the profile's tables of the same name.
 
 | Type | Description |
 | --- | --- |
-| [`Quality Characteristic`](../../templates/quality-characteristic.md) | A property of how well the system or a subsystem works, such as availability or response time. |
-| [`Quality Requirement`](../../templates/quality-requirement.md) | A required level of a quality characteristic for the system or a subsystem, under stated conditions. |
+| [`Quality Characteristic`](../../templates/quality-characteristic.md) | A property of how well the system works, such as availability or response time. |
+| [`Quality Requirement`](../../templates/quality-requirement.md) | A required level of a quality characteristic for the system, under stated conditions. |
 
 ## Vocabulary
 
@@ -17,8 +17,8 @@ those levels use. Its tables extend the profile's tables of the same name.
 | --- | --- |
 | Measure | A quantity on which a Quality Requirement states a level, defined under a Quality Characteristic's **Measures**. |
 
-A Quality Requirement's subject is the Subsystem its statement names, or
-otherwise the System.
+A Quality Requirement's folder does not show its subject, so its statement
+names the subject.
 
 ## Structure
 
@@ -54,12 +54,6 @@ requires, because those quality requirements are placed beside it.
 
 ## Ownership tests
 
-### Where content goes
-
-| Concern | Owning type |
-| --- | --- |
-| What a quality characteristic is | That Quality Characteristic, whose **Definition** is the only definition. A glossary entry for its name has no definition and a **Defined by** line. |
-
 ### Quality requirement or requirement
 
 - **P-QUA-1** An obligation that could be a Requirement or a Quality
@@ -79,10 +73,15 @@ requires, because those quality requirements are placed beside it.
 An obligation for which no question is answered yes is recorded under
 **Open questions** until it is restated.
 
+## Named links
+
+| Named link | Meaning | Stated in | Links to |
+| --- | --- | --- | --- |
+| serves | Also: the quality characteristic a requirement helps achieve, and what a quality characteristic matters to | Requirement; Quality Characteristic | From a Requirement, a Quality Characteristic; from a Quality Characteristic, a User Class or business objective |
+
 ## Not yet defined
 
 | Topic | Interim practice |
 | --- | --- |
 | Correspondence between quality characteristics and a quality model, such as ISO/IEC 25010 | Give the model's name for a characteristic on the **Also called** line of the glossary entry for the characteristic's name. |
 | Baselines of quality requirements | State the current or previous level, with its source, period, and population, under **Rationale**. |
-| Quality characteristics nested within other quality characteristics | Define each characteristic on its own. |

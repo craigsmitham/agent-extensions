@@ -21,7 +21,7 @@ remaining sections guide authoring.
   - **Scope**: what is in scope and what is explicitly out of scope.
 - **BIZ-3** Each success indicator MUST name, with a link, the objective it
   indicates.
-- **BIZ-4** **Scope** MUST link each feature or subsystem it includes.
+- **BIZ-4** **Scope** MUST link each feature it includes.
 
 ## Suggested document
 
@@ -83,10 +83,9 @@ target that is not agreed is an open question, not a plausible number:
 
 ### Scope and stakeholders
 
-- **Scope** links the major capabilities, as features and subsystems, and
-  names exclusions a reader might otherwise assume are included. It links
-  features, subsystems, user classes, and quality characteristics rather than
-  describing them.
+- **Scope** links the major capabilities and names exclusions a reader might
+  otherwise assume are included. It links the concepts it includes, such as
+  features and user classes, rather than describing them.
 - **Stakeholders** are people or groups with an interest in the system who do
   not use it or its outputs, such as sponsors, insurers, or regulators. People
   who use or operate the system are user classes, linked rather than

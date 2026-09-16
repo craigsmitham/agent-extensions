@@ -25,12 +25,18 @@ system needs, with everything that exists only for them.
 - A module file has the sections it needs from **Concept types**,
   **Vocabulary**, **Structure** (with **Folders**), **Placement** (with
   **Placement levels** and **Fixed locations**), **Ownership tests** (with
-  **Where content goes**), **Relationships**, and **Not yet defined**, in that
-  order. Each table extends the profile's table of the same name, whose rule
+  **Where content goes** and **Shared definitions**), **Named links**, and
+  **Not yet defined**, in that order. Each table extends the profile's table of the same name, whose rule
   names module tables as extension points.
-- A rule, term, relationship, or interim practice that exists only for a
-  module's types lives in that module. The core may name a module's types in
-  a rule that holds whether or not the module is adopted.
+- A rule, term, named link, or interim practice that exists only for a
+  module's types lives in that module, including guidance that only matters
+  when the module is adopted.
+- Core templates and the profile speak only of the system and the core types.
+  The profile names a module's types only in its **Modules** table. A module
+  names another module's types only conditionally, such as "in a corpus
+  without the Rules module".
+- The Decomposition module makes a subsystem equivalent to a system at its own
+  boundary, so no other file restates how a rule applies to subsystems.
 - The profile's **Modules** table gives, for each module, how content is
   written without it.
 - A module takes a type from the core only when the core rules no longer need
@@ -49,8 +55,9 @@ system needs, with everything that exists only for them.
   appear only in normative statements.
 - Terms are used as a **Vocabulary** table defines them. Add or change a row
   there before giving a term a new meaning.
-- Relationships between documents are named and assigned to one side in a
-  **Relationships** table. Templates use those names in bold.
+- Named links between documents are defined and assigned to one side in a
+  **Named links** table. Templates use those names in bold. A module row that
+  extends a profile named link begins its meaning with "Also:".
 
 ### Rule identifiers
 
@@ -79,7 +86,7 @@ contract.
 | UC | Use Case | BR | Business Rule |
 | REQ | Requirement | | |
 
-Profile areas are TYP, MOD, STR, PLC, OWN, REL, STA, CON, BIN, and DOC. Each
+Profile areas are TYP, STR, PLC, OWN, LNK, STA, CON, and DOC. Each
 module has one area: DEC for Decomposition, RUL for Rules, QUA for Quality,
 and DAT for Data.
 
@@ -90,15 +97,16 @@ None. The list starts when version 1.0 is published.
 ### Deferring a concern
 
 To keep a version small, defer a concern rather than half-specify it: remove
-its rules, relationships, and sections, and add a row to the
-**Not yet defined** table of the profile or of the module whose types it
-concerns, giving the interim practice. When the concern is taken up, it
-returns under new identifiers. A concern that needs no interim practice goes
-in the [Roadmap](#roadmap) instead.
+its rules, named links, and sections. The profile's general practice for
+undefined concerns, P-CON-5, then applies: state it in prose in the nearest
+section, link records under **Related**, and record what is undecided under
+**Open questions**. Add a row to the **Not yet defined** table of the profile
+or of the module whose types it concerns only when its interim practice is
+more specific than that; otherwise list it in the [Roadmap](#roadmap). When
+the concern is taken up, it returns under new identifiers.
 
-Links are plain unless a relationship in a relationships table applies; a
-relationship is added to a table only when readers need its meaning and a
-plain link's place does not show it.
+Links are plain unless a named link applies; a named link is added to a table
+only when readers need its meaning and a plain link's place does not show it.
 
 Rules that apply to every type, such as the optional **Open questions**,
 **Related**, and **Illustrations** sections and the meaning of *(optional)*
@@ -108,9 +116,22 @@ are not repeated in each Type contract.
 ### Roadmap
 
 This version also leaves these concerns undefined, with no interim practice
-beyond base OKF v0.2:
+beyond base OKF v0.2 and P-CON-5:
 
 - frontmatter keys beyond base OKF v0.2;
+- who may accept each type, and review dates such as `stale_after`;
+- how the parts of a system or feature fit together beyond folder indexes;
+- optional features, and features that require or exclude each other;
+- requirement classifications, such as functional, conformance, human
+  factors, and process;
+- kinds of external interface counterpart;
+- obligations that cannot both be fully met;
+- folders for concepts specific to one subsystem;
+- quality characteristics nested within other quality characteristics;
+- business rule volatility, enforcement levels, and relationships between
+  business rules;
+- where a data attribute's value comes from, and the sensitivity and purpose
+  of personal data;
 - specialization or inheritance between entity types or value types; and
 - an overall data model or diagram spanning entity types.
 
@@ -121,9 +142,7 @@ Every template has this shape, in this order:
 1. `# <Type> template`.
 2. A purpose paragraph beginning "Use for" and ending
    `Apply the [Spec profile](../references/profile.md). The Type contract is normative; the remaining sections guide authoring.`
-3. For a template that parallels another, the paragraph
-   `It parallels the [<X> template](<x>.md), with the [differences](#differences-from-the-<x>-template) recorded below.`
-4. `## Type contract`, containing, in this order:
+3. `## Type contract`, containing, in this order:
    1. when the profile's or a module's **Fixed locations** table does not
       settle placement alone, an untagged placement paragraph beginning
       "A <Type> document is placed as", linking the placement rules or
@@ -143,17 +162,16 @@ Every template has this shape, in this order:
    [binding and illustrative content](src/references/profile.md#binding-and-illustrative-content)
    states, so the contract does not declare it. Untagged paragraphs in the
    contract explain; they contain no uppercase keyword.
-5. `## Suggested document`: one fenced Markdown block, with frontmatter
-   carrying only `type`, `title`, `description`, and `status: draft`; a Context
+4. `## Suggested document`: one fenced Markdown block, with frontmatter
+   carrying only `type`, `title`, `description`, `status: draft`, and
+   `sources` when the contract requires it; a Context
    table exactly when the contract identifies fields; and supporting sections last
    in the profile's order. Nothing follows the block.
-6. `## Writing guidance`, containing, in this order:
-   1. `### Differences from the <X> template`, when the type parallels
-      another: a `Difference | Reason` table;
-   2. topic subsections that add what the contract does not say, such as how
-      to write one section, or worked examples; no subsection restates the
-      contract's fields or sections as a table, or relists the profile
-      sections that the contract already links.
+5. `## Writing guidance`: topic subsections that add what the contract does
+   not say, such as how to write one section, how the type differs from a
+   type it resembles, or worked examples; no subsection restates the
+   contract's fields or sections as a table, or relists the profile sections
+   that the contract already links.
 
 Templates carry what an author needs. Where a template's structure comes
 from is recorded in [Template sources](#template-sources), not in the
@@ -178,19 +196,12 @@ template.
 | Entity Type | The business data model and data dictionary of the Volere template and of Karl Wiegers and Joy Beatty, and the domain-driven design distinction between entities and values. It describes business data, not a database design. |
 | Value Type | The data dictionary practice of the Volere template and of Karl Wiegers and Joy Beatty, and the domain-driven design account of value objects. |
 
-### Parallel types
+### Types that resemble each other
 
-| Pair | Where the differences are recorded |
-| --- | --- |
-| System and Subsystem | [Subsystem template](src/templates/subsystem.md#differences-from-the-system-template) |
-| Requirement and Quality Requirement | [Quality Requirement template](src/templates/quality-requirement.md#differences-from-the-requirement-template) |
-| Requirement and Business Rule | [Business Rule template](src/templates/business-rule.md#differences-from-the-requirement-template) |
-| Entity Type and Value Type | [Value Type template](src/templates/value-type.md#differences-from-the-entity-type-template) |
-
-Record a difference in its table only when it changes what an author writes
-and its reason is not obvious from the profile or the two contracts. A
-difference that the contracts already show, or that only adds or removes a
-rule whose purpose the rule itself makes plain, needs no row.
+When a type is written like another, such as a Quality Requirement like a
+Requirement, its Writing guidance says so in a short subsection that names
+only what an author writes differently and why. It does not restate the other
+contract.
 
 ### Examples
 

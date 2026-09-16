@@ -1,8 +1,6 @@
 # Requirement template
 
-Use for one obligation that the system or a subsystem must satisfy, other than
-a required level of quality, which is a
-[Quality Requirement](quality-requirement.md). Apply the
+Use for one obligation that the system must satisfy. Apply the
 [Spec profile](../references/profile.md). The Type contract is normative; the
 remaining sections guide authoring.
 
@@ -10,7 +8,7 @@ remaining sections guide authoring.
 
 A Requirement document is placed as the profile's
 [rule-placed types](../references/profile.md#rule-placed-types) rules state,
-at its owner, which also sets its subject.
+at its home, which also sets its subject.
 
 - **REQ-1** The title MUST name the obligation briefly as a declarative
   phrase, such as "Reservations of unavailable equipment are rejected".
@@ -51,17 +49,15 @@ status: draft
 
 ### Subject and sections
 
-The document's location shows its owner, which can be a feature or feature
-component, and its subject: the subsystem it is placed within, or otherwise
-the system. Name that subject in the statement.
+The document's location shows its home and its subject. Name that subject in
+the statement.
 
 Keep the binding obligation, with its exceptions, in **Requirement**, and
 keep rationale out of the statement. **Illustrations** can hold acceptance
 examples; they support **Verification**, which assesses satisfaction by test,
 analysis, inspection, or demonstration, but they do not replace the
 requirement. Record unresolved meaning, feasibility, or targets under
-**Open questions**, and handle obligations that cannot both be fully met as
-[Not yet defined](../references/profile.md#not-yet-defined) describes.
+**Open questions**, including obligations that cannot both be fully met.
 
 Record where the obligation came from, such as a stakeholder decision,
 regulation, incident, or research, in the `sources` frontmatter.
@@ -78,12 +74,10 @@ requirement.
 - Write in the active voice, naming the subject after any condition. Use
   *shall* for the obligation. Avoid *shall be able to*, and prefer a positive
   statement to *shall not* where one reads as clearly.
-- Replace vague qualifiers such as *fast*, *secure*, or *user-friendly* with a
-  link to the Quality Requirement that states the required level, or, without
-  the Quality module, with the level itself, as the profile's
-  [modules](../references/profile.md#modules) table describes.
-- Use each term as the glossary defines it, and link to the entry, the value
-  type, or the named condition the statement uses.
+- Replace vague qualifiers such as *fast*, *secure*, or *user-friendly* with
+  the required level, or a link to the concept that states it.
+- Use each term as the glossary defines it, and link to the entry, shared
+  definition, or named condition the statement uses.
 
 EARS patterns keep conditions and responses distinct:
 
@@ -110,13 +104,8 @@ binding content rather than a supplement to a vaguer statement.
 | Sequence or flow diagram | A required order of observable interactions | The <subject> shall exchange messages in the order the following diagram shows. |
 | Formula or limit table | Calculations, thresholds, or values that vary by condition | The <subject> shall compute <value> as the following formula states. |
 
-A requirement that responds to lifecycle transitions links to the Entity
-Type's **Lifecycle** for the states and transitions, as
-[Where content goes](../references/modules/data.md#where-content-goes) assigns. A
-deadline for each notice sent is a Requirement rather than a Quality
-Requirement, as
-[Quality requirement or requirement](../references/modules/quality.md#quality-requirement-or-requirement)
-decides:
+A decision table states which notice is sent for each change of a
+reservation's state, linking the states it uses rather than defining them:
 
 ~~~markdown
 ## Requirement
@@ -152,17 +141,11 @@ activity in the statement or rationale, such as
 
 ### Related
 
-State each relationship once, in bold, as the relationships tables of the
-[profile](../references/profile.md#relationships) and the
-[Rules module](../references/modules/rules.md#relationships) assign to a
-Requirement:
+State each named link once, in bold, as the
+[named links](../references/profile.md#named-links) tables of the profile and
+adopted modules assign to a Requirement, such as **serves** for the business
+objective or user class that justifies the obligation, and **replaces** for
+the deprecated requirement this one supersedes.
 
-- **serves**: the business objective, user class, or quality characteristic
-  that justifies the obligation;
-- **enforces**: the business rule the requirement makes the system respect,
-  such as [Underage rentals are rejected](<link>) enforcing
-  [Minimum renter age](<link>); and
-- **replaces**: the deprecated requirement this one supersedes.
-
-Link the entity types, value types, and external interfaces the obligation is
-about under **Related**.
+Link the other concepts the obligation is about under **Related**, such as
+the external interfaces and data it concerns.

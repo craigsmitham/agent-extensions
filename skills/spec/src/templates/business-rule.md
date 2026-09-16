@@ -5,9 +5,6 @@ requires an action, infers a fact, or computes a value, and that the system
 must respect. Apply the [Spec profile](../references/profile.md). The Type
 contract is normative; the remaining sections guide authoring.
 
-It parallels the [Requirement template](requirement.md), with the
-[differences](#differences-from-the-requirement-template) recorded below.
-
 ## Type contract
 
 A Business Rule document is placed as the Rules module's
@@ -18,15 +15,15 @@ test makes the content a Business Rule.
 
 - **BR-1** The title MUST name the rule briefly as a noun phrase, such as
   "Minimum renter age" or "Late return fee".
-- **BR-2** A Business Rule document MUST identify these fields:
-  - **Source**: the policy, regulation, contract, standard, or expert whose
-    authority the rule has, linked where possible.
-- **BR-3** A Business Rule document MUST include these sections:
+- **BR-2** A Business Rule document MUST include these sections:
   - **Rule**: the rule, in the form that states it most clearly, such as a
     statement, a decision table, or a formula, declarative, in terms of the
     business, and complete with its conditions and any exceptions.
   - **Rationale** *(optional)*: the business goal or risk the rule answers.
-- **BR-4** A Business Rule document MUST state exactly one rule.
+- **BR-3** A Business Rule document MUST state exactly one rule.
+- **BR-4** A Business Rule document MUST record in its `sources` frontmatter
+  the policy, regulation, contract, standard, or expert whose authority the
+  rule has.
 - **BR-5** A rule MUST NOT describe the steps of a process or procedure.
 
 ## Suggested document
@@ -37,13 +34,13 @@ type: Business Rule
 title: <Short name of the rule>
 description: <The rule statement, or a one-sentence summary of it>
 status: draft
+sources:
+  - id: <source-id>
+    resource: <Link to the policy, regulation, contract, standard, or expert>
+    title: <Name of the source>
 ---
 
 # <Short name of the rule>
-
-| Context | Value |
-| --- | --- |
-| Source | [<Policy, regulation, contract, standard, or expert>](<link>) |
 
 ## Rule
 
@@ -57,30 +54,26 @@ status: draft
 
 ## Writing guidance
 
-### Differences from the Requirement template
+### Business rules and requirements
 
-A business rule governs the business; a requirement obligates the system.
-Rules drive requirements, but rarely one to one: one rule may need several
-requirements, and several rules may shape one requirement. "Equipment may be
-rented to a customer only if the customer is at least 18 years old." is
+A business rule governs the business, its people, and the things it deals
+with; a [Requirement](requirement.md) obligates the system. Rules drive
+requirements, but rarely one to one: one rule may need several requirements,
+and several rules may shape one requirement. "Equipment may be rented to a
+customer only if the customer is at least 18 years old." is
 [Minimum renter age](<link>). "When depot staff record a rental for a customer
 who is under 18, the rental system shall reject the rental." is
-[Underage rentals are rejected](<link>), which **enforces** it.
-
-| Difference | Reason |
-| --- | --- |
-| Governs the business, its people, and the things it deals with, rather than the system | A rule would still apply if the business worked without the system, as [Business rule or requirement](../references/modules/rules.md#business-rule-or-requirement) decides. |
-| Uses *must*, *must not*, or *may … only if*, or states a fact, rather than *shall* | Readers can tell a rule from a requirement at a glance. |
-| States the business term first, never a condition, rather than a condition first as EARS orders it | A rule states a fact about business terms; a requirement states a response to a trigger. |
+[Underage rentals are rejected](<link>), which **enforces** it. A rule uses
+*must*, *must not*, or *may … only if*, or states a fact, rather than *shall*,
+and puts the business term first rather than a condition, so that readers can
+tell a rule from a requirement at a glance.
 
 ### Source
 
 Give the policy, regulation, contract, industry standard, or recognized expert
-that gives the rule its authority, with a stable link or citation. **Source**
-is the rule's provenance, so the rule needs no `sources` frontmatter for it.
-An unknown source is kept in its row and recorded under **Open questions**.
-For whether the rule's values are expected to change, follow
-[Not yet defined](../references/modules/rules.md#not-yet-defined).
+that gives the rule its authority in `sources`, with a stable link or
+citation. An unknown source is recorded under **Open questions**. Whether the
+rule's values are expected to change can be noted under **Rationale**.
 
 ### Statement
 
@@ -112,7 +105,7 @@ the amount the following table gives." Name the table's result precisely.
 State an exception in the rule, such as with *only if* or *unless*, as
 [Exceptions](../references/profile.md#exceptions) requires. For an exception
 with its own source or rationale, follow
-[Not yet defined](../references/modules/rules.md#not-yet-defined).
+[Not yet defined](../references/profile.md#not-yet-defined).
 
 ### Related
 

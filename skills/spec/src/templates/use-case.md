@@ -8,7 +8,7 @@ contract is normative; the remaining sections guide authoring.
 
 A Use Case document is placed as the profile's
 [rule-placed types](../references/profile.md#rule-placed-types) rules state,
-at its owner, which also sets its subject.
+at its home, which also sets its subject.
 
 - **UC-1** The title MUST name the primary actor's goal as an active verb
   phrase in the present tense, such as "Reserve equipment".
@@ -27,7 +27,7 @@ at its owner, which also sets its subject.
   - **Extensions**: each known condition that makes a step fail or vary,
     labeled by the step where it is detected, and its handling once decided.
 - **UC-4** Steps and extensions MUST name data at low precision and link to
-  the Entity Type or Value Type that owns its detail.
+  the concept that owns its detail.
 - **UC-5** Steps and extensions MUST NOT name user interface elements or
   input and output technology.
 
@@ -54,7 +54,7 @@ status: draft
 ## Main success scenario
 
 1. <Actor> <verb> <object>.
-2. <System or subsystem> <verb> <object>.
+2. <System> <verb> <object>.
 
 ## Extensions
 
@@ -77,11 +77,8 @@ status: draft
 ### Context fields
 
 - The subject is the boundary that determines what is visible: everything
-  inside it is hidden, and everything outside it is an actor. It is the
-  subsystem the use case is placed within, or otherwise the system, as the
-  Decomposition module's
-  [placement levels](../references/modules/decomposition.md#placement-levels)
-  describe; name it in the steps.
+  inside it is hidden, and everything outside it is an actor. The use case's
+  placement sets it; name it in the steps.
 - **Secondary actors** are parties the subject calls on for a service or
   notifies, such as the payment service or depot staff.
 - Include a **Trigger** when the start is not obvious, such as a time-based
@@ -97,8 +94,7 @@ status: draft
 supports, at the precision they state it. Undecided handling, unknown steps,
 and terms whose meaning is not agreed go under **Open questions**. Worked
 walk-throughs with sample data go under **Illustrations**; they add no steps or
-conditions. **Related** links the entity types, value types, external
-interfaces, business rules, and requirements the use case is about, beyond
+conditions. **Related** links the concepts the use case is about, beyond
 those already linked in its Context table, steps, and extensions.
 
 ### Goal
@@ -123,8 +119,9 @@ goal that only serves a larger goal in the same sitting is a step.
 - When a step uses an external service, name the service as a secondary
   actor: "Rental system has the payment service authorize the deposit."
 - When readers need to know what a screen presents to follow the behavior,
-  sketch it under the feature or feature component's **Illustrations** and
-  keep the steps technology-neutral.
+  sketch it as the profile's
+  [where content goes](../references/profile.md#where-content-goes) assigns,
+  and keep the steps technology-neutral.
 
 ### Extensions
 

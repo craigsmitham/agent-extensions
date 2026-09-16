@@ -5,9 +5,6 @@ money, a rental period, or an email address. Apply the
 [Spec profile](../references/profile.md). The Type contract is normative; the
 remaining sections guide authoring.
 
-It parallels the [Entity Type template](entity-type.md), with the
-[differences](#differences-from-the-entity-type-template) recorded below.
-
 ## Type contract
 
 A Value Type document is placed as the Data module's
@@ -20,7 +17,7 @@ test makes the content a Value Type.
 - **VT-2** A Value Type document MUST include these sections:
   - **Definition**: what a value of this type is, following the profile's
     [definition rules](../references/profile.md#definitions).
-  - **Structure**: either the data attributes that make up a value, each with
+  - **Composition**: either the data attributes that make up a value, each with
     its definition, representation, and whether it is required; or the value's
     domain: its kind and its allowed values, range, units, precision, or
     pattern.
@@ -44,7 +41,7 @@ status: draft
 
 <A phrase naming the broader kind of value and what distinguishes it.>
 
-## Structure
+## Composition
 
 | Attribute | Definition | Representation | Required |
 | --- | --- | --- | --- |
@@ -60,19 +57,20 @@ status: draft
 
 ## Writing guidance
 
-### Differences from the Entity Type template
+### Values and entities
 
-| Difference | Reason |
-| --- | --- |
-| No **Identity**, **Relationships**, or **Lifecycle** | A value is interchangeable with an equal value, so there are no instances to tell apart, relate, or track; a kind of thing that has them is an Entity Type, as [entity type, value type, or data attribute](../references/modules/data.md#entity-type-value-type-or-data-attribute) decides. |
+A value type is described like an [Entity Type](entity-type.md), without
+**Identity**, **Relationships**, or **Lifecycle**: a value is interchangeable
+with an equal value, so there are no instances to tell apart, relate, or
+track.
 
 ### Definition
 
-The value type's **Definition** says what a value of this type is, as a phrase
-that could replace the value type's name, and is the only definition of that
-name.
+The **Definition** says what a value of this type is, and is the only
+definition of the value type's name, as
+[defined names](../references/profile.md#defined-names) requires.
 
-### Structure
+### Composition
 
 A value made of parts lists each data attribute. *Money* has an amount, a
 decimal to the precision of the currency's minor unit, and a currency, an
@@ -88,7 +86,7 @@ A value with no parts states its domain:
 
 Two values are equal when all their attributes are equal or, for a value with
 a domain, when they are the same allowed value. When the business treats
-values as equal on another basis, state that equality in **Structure**.
+values as equal on another basis, state that equality in **Composition**.
 
 A format, length, or limit belongs here only as
 [work management and design](../references/profile.md#work-management-and-design)
@@ -97,8 +95,8 @@ allows, as ISO 4217 sets currency codes.
 ### When to create one
 
 A value that more than one entity type, value type, or external interface uses
-is a Value Type, as
-[P-DAT-3](../references/modules/data.md#entity-type-value-type-or-data-attribute) requires. A
+is a Value Type, as the Data module's
+[shared definitions](../references/modules/data.md#shared-definitions) give. A
 value used in one place can have one too, or be defined where it is used: fuel
 level, which only the equipment telematics interface carries, is defined
 there.
@@ -116,6 +114,6 @@ it is an invariant because it follows from what money means.
 
 Illustrate valid values and, where the edge of the allowed values is not
 obvious, invalid values with the reason each is invalid. Under **Related**,
-link the value types this one is made of beyond those linked in **Structure**.
+link the value types this one is made of beyond those linked in **Composition**.
 Record undecided parts, allowed values, or invariants under
 **Open questions**.

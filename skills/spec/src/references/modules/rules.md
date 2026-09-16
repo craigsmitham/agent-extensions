@@ -43,17 +43,19 @@ spec/
 ### Business rule or requirement
 
 - **P-RUL-1** Content that could be a Business Rule or a Requirement MUST be
-  placed as the following question decides.
+  placed by the first of these questions answered yes.
 
-Would it still apply if the business worked without the system? If so, it is a
-Business Rule, whether the business chose it or an outside authority, such as
-a law, regulation, standard, or contract, imposes it. If not, it is a
-Requirement. How the system detects, prevents, permits an override of, or
-reports a violation of a rule is a Requirement that **enforces** the rule.
+1. Would it still apply if the business worked without the system, whether
+   the business chose it or an outside authority, such as a law, regulation,
+   standard, or contract, imposes it? It is a Business Rule.
+2. Otherwise, it is a Requirement.
 
-## Relationships
+How the system detects, prevents, permits an override of, or reports a
+violation of a rule is a Requirement that **enforces** the rule.
 
-| Relationship | Meaning | Stated in | Links to |
+## Named links
+
+| Named link | Meaning | Stated in | Links to |
 | --- | --- | --- | --- |
 | enforces | How the system respects a rule | Requirement | Business Rule |
 
@@ -62,6 +64,3 @@ reports a violation of a rule is a Requirement that **enforces** the rule.
 | Topic | Interim practice |
 | --- | --- |
 | Business rule categories, such as computation, inference, action enabler, and constraint, and wording that shows them | Write a rule that people could break with *must*, *must not*, or *may … only if*, and a rule that defines, infers, or computes as a plain statement of fact. |
-| Business rule volatility | State under the rule's **Rationale** whether its values are expected to change, and how often. |
-| Relationships between business rules, such as one rule using another's result | Link the rule whose result is used under **Related**. |
-| Business rule enforcement levels, and rules that permit an actor to break another rule | State the exception in the rule, as the profile's [Exceptions](../profile.md#exceptions) requires, and give its source or rationale under **Rationale**. |

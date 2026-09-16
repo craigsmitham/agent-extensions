@@ -14,8 +14,8 @@ remaining sections guide authoring.
     it, naming each party the system interacts with.
   - **Operating environment** *(optional)*: conditions the system must work
     in.
-  - **Quality priorities** *(optional)*: which quality characteristics matter
-    most, and what gives way when they conflict.
+  - **Quality priorities** *(optional)*: which qualities matter most, and
+    what gives way when they conflict.
 - **SYS-3** **Boundary and context** MUST link each party to its User Class or
   External Interface.
 
@@ -45,8 +45,8 @@ status: draft
 
 State what the system is and does in a paragraph, and whether it is new, a
 replacement, or part of a larger family of products. Do not summarize the
-business case; `business.md` holds it. Link subsystems and features rather
-than describing them; each folder's `index.md` lists them.
+business case; `business.md` holds it. Link features rather than
+describing them; each folder's `index.md` lists them.
 
 ### Boundary and context
 
@@ -59,9 +59,6 @@ parties. When it is used with the party list, it shows exactly the parties the
 list names, as the profile's
 [binding and illustrative content](../references/profile.md#binding-and-illustrative-content)
 rules require. Do not draw the system's internal structure.
-
-Parties of a subsystem, such as a technician or equipment telematics for
-Fleet maintenance, are also outside the system, so they appear here too.
 
 ~~~markdown
 ```mermaid
@@ -84,14 +81,11 @@ flowchart LR
 
 Describe the conditions the system must work in, such as platforms, runtimes,
 network conditions, deployment contexts, and named load conditions: the
-conditions, not design choices or deployed instances. Conditions specific to
-a subsystem are stated here too, as the Decomposition module's
-[Not yet defined](../references/modules/decomposition.md#not-yet-defined)
-describes.
+conditions, not design choices or deployed instances.
 
 A condition that several requirements use is named here, once, as the
 profile's [shared definitions](../references/profile.md#shared-definitions)
-rules require. Define it with quantities, so that a tester could reproduce it:
+rule requires. Define it with quantities, so that a tester could reproduce it:
 
 ```markdown
 **Peak load**: 2,000 concurrent customers, 80% of them searching.
@@ -99,14 +93,11 @@ rules require. Define it with quantities, so that a tester could reproduce it:
 
 ### Quality priorities
 
-State which quality characteristics matter most and what gives way when they
-conflict, linking each one, such as "[Confidentiality](<link>) over
+State which qualities matter most and what gives way when they conflict,
+linking the concept that defines each one, such as "[Confidentiality](<link>) over
 [availability](<link>): a reservation is refused rather than taken without an
 authorized deposit."
 
-Characteristics of a quality model that were considered and deliberately left
-out can be listed with the reason, so that readers can tell an exclusion from
-an oversight.
-
-For technical and operational assumptions and dependencies, follow
-[Not yet defined](../references/profile.md#not-yet-defined).
+Qualities of a quality model that were considered and deliberately left out
+can be listed with the reason, so that readers can tell an exclusion from an
+oversight.

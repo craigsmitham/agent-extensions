@@ -5,9 +5,6 @@ subsystem, under stated conditions, such as a response time at peak load.
 Apply the [Spec profile](../references/profile.md). The Type contract is
 normative; the remaining sections guide authoring.
 
-It parallels the [Requirement template](requirement.md), with the
-[differences](#differences-from-the-requirement-template) recorded below.
-
 ## Type contract
 
 - **QR-1** The title MUST name the obligation briefly as a declarative
@@ -57,18 +54,16 @@ While <condition>, the <subject> shall keep [<measure>](<link>) for <feature, co
 
 ## Writing guidance
 
-### Differences from the Requirement template
+### Quality requirements and requirements
 
-| Difference | Reason |
-| --- | --- |
-| Links its measure rather than defining it | Every measure lives under the characteristic's **Measures**, as the [Quality Characteristic contract](quality-characteristic.md#type-contract) requires, so that levels on it can be compared. |
-| Names *any conditions* rather than *any conditions or trigger* | Compliance is decided over many occurrences, so a stimulus in a scenario is stated as a condition of the level rather than a trigger of one response. |
-| Does not state **enforces** or **serves** | Its folder already shows the characteristic it concerns, and rules and objectives are served through the Requirements for functions, which state those relationships. |
-
-The title style, *shall*, exceptions, forms, **replaces**, and provenance in
-`sources` are the same as in the Requirement template. Because its folder is
-at the system level, placement does not show its subject: the statement names
-a Subsystem that must reach the level, as the
+A quality requirement is written like a [Requirement](requirement.md): the
+same title style, *shall*, exceptions, forms, **replaces**, and provenance in
+`sources`. It differs in three ways. It links its measure rather than defining
+it, so that levels on one measure can be compared. It names conditions rather
+than a trigger, because compliance is decided over many occurrences, so a
+stimulus is a condition of the level. And it states no **serves**, because
+its folder shows the characteristic it concerns. Its folder does not show its
+subject, so the statement names the subject, as the
 [Quality module](../references/modules/quality.md#vocabulary) describes.
 
 ### Kind of level
@@ -111,5 +106,5 @@ requirement uses it.
   plausible number.
 - [Payment details stay private](<link>) states a criterion for
   Confidentiality and is placed in its folder.
-- For two levels that cannot both be fully met, follow
-  [Not yet defined](../references/profile.md#not-yet-defined).
+- Record two levels that cannot both be fully met under **Open questions** in
+  each document.
