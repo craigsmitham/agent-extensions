@@ -1,0 +1,20 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "spec",
+  "version": "0.1.0",
+  "description": "Creates and manages specifications for a software system",
+  "keywords": [
+    "specification",
+    "requirements",
+    "software-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/spec"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT"
+}

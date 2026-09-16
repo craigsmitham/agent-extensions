@@ -1,0 +1,97 @@
+# Business Requirements template
+
+Use for the business case of the system: the problem or opportunity it
+addresses, the outcomes it must bring about, and its scope. Apply the
+[Spec profile](../references/profile.md). The Type contract is normative; the
+remaining sections guide authoring.
+
+## Type contract
+
+- **BIZ-1** The title MUST be "<System> business requirements".
+- **BIZ-2** A Business Requirements document MUST include these sections:
+  - **Problem or opportunity**: whose need is unmet, the current gap, and the
+    evidence for it, without selecting a solution.
+  - **Business objectives**: the business outcomes the system must bring
+    about, stated as outcomes rather than outputs, each under its own heading
+    `Objective <n>`.
+  - **Success indicators** *(optional)*: how the achievement of each
+    objective will be recognized, with its target and timeframe.
+  - **Stakeholders** *(optional)*: the stakeholders, what they value, and the
+    authority they hold.
+  - **Scope**: what is in scope and what is explicitly out of scope.
+- **BIZ-3** Each success indicator MUST name, with a link, the objective it
+  indicates.
+- **BIZ-4** **Scope** MUST link each feature or subsystem it includes.
+
+## Suggested document
+
+```markdown
+---
+type: Business Requirements
+title: <System> business requirements
+description: <The opportunity, objectives, and scope that justify the system, in one sentence>
+status: draft
+---
+
+# <System> business requirements
+
+## Problem or opportunity
+## Business objectives
+### Objective 1
+## Success indicators
+## Stakeholders
+## Scope
+### In scope
+### Out of scope
+## Open questions
+## Related
+```
+
+## Writing guidance
+
+### Problem or opportunity
+
+Give the background and why now, the audience and the need or job that is
+unmet, the current gap, and evidence of demand.
+
+### Business objectives
+
+Head each objective with its number alone, so that its anchor stays stable
+when the wording changes, and state the outcome below the heading. Other
+documents link to it by anchor, such as `business.md#objective-1`, so its
+number stays with the objective.
+
+```markdown
+### Objective 1
+
+Contractor customers reserve equipment without calling a depot.
+```
+
+### Success indicators
+
+For each objective, state the success indicator, its target, and timeframe,
+and link to indicator or KPI definitions where they exist. Outcomes of use,
+such as user effectiveness or satisfaction, are success indicators too. A
+target that is not agreed is an open question, not a plausible number:
+
+```markdown
+- [Objective 1](#objective-1): at least 60% of reservations are made online
+  within 12 months of launch.
+- [Objective 2](#objective-2): the share of rentals returned late; the target
+  is an open question.
+```
+
+### Scope and stakeholders
+
+- **Scope** links the major capabilities, as features and subsystems, and
+  names exclusions a reader might otherwise assume are included. It links
+  features, subsystems, user classes, and quality characteristics rather than
+  describing them.
+- **Stakeholders** are people or groups with an interest in the system who do
+  not use it or its outputs, such as sponsors, insurers, or regulators. People
+  who use or operate the system are user classes, linked rather than
+  described.
+- **Related** links records such as business strategy, product vision,
+  roadmaps, and research, when readers need them. For initiative constraints,
+  assumptions and dependencies, and risks, follow
+  [Not yet defined](../references/profile.md#not-yet-defined).

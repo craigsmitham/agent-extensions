@@ -164,6 +164,7 @@ expected=(
   skills/manage-work-items
   skills/okf
   skills/research
+  skills/spec
   skills/spot-spew
   skills/temporal-dates
   subagents/researcher
@@ -184,10 +185,8 @@ fi
 
 while IFS= read -r -d '' manifest; do
   package_root="$(dirname "$manifest")"
-  # Evaluation source for devops-docs is deliberately deferred during design.
-  # Resume validation automatically when its evals directory is restored.
-  if [[ "${package_root#"$validation_root/"}" == "skills/devops-docs" &&
-        ! -e "$package_root/evals" ]]; then
+  # Evaluation source is optional; validate it only when a skill provides it.
+  if [[ ! -e "$package_root/evals" ]]; then
     continue
   fi
   if ! node "$trusted_eval_validator" validate \
