@@ -47,7 +47,7 @@ Add the others when the system has their content:
 - [Job to Be Done](templates/job-to-be-done.md), for the progress people seek
   that the system helps them make, apart from any solution, when the user,
   research, or another source states them.
-- [Stakeholders](templates/stakeholders.md), for those with an interest in
+- [Stakeholder](templates/stakeholder.md), for those with an interest in
   the system who do not use it.
 - [Subsystem](templates/subsystem.md) and
   [Feature Component](templates/feature-component.md), when part of the

@@ -31,7 +31,7 @@ introduced. Examples in the templates use the [running example](example.md).
 | [`Principles`](../templates/principles.md) | The guidance by which the business or product decides between reasonable options that conflict, and what each option prevails over. |
 | [`Opportunity`](../templates/opportunity.md) | What the system is built or changed to make possible: the need that is unmet, the current gap, and why now. |
 | [`Job to Be Done`](../templates/job-to-be-done.md) | The progress that a group of people seek in their circumstances, whatever product, service, or system helps them make it. |
-| [`Stakeholders`](../templates/stakeholders.md) | The people and groups with an interest in the system who do not use it, what each values, and any authority each holds over it. |
+| [`Stakeholder`](../templates/stakeholder.md) | A person or group with an interest in the system who does not use it, what they value, and any authority they hold over it. |
 | [`Objectives`](../templates/objectives.md) | The results that the system must bring about, each with the indicators by which its achievement is recognized. |
 | [`Scope`](../templates/scope.md) | The business area under consideration, and what the system includes and excludes within it. |
 | [`System`](../templates/system.md) | The software system being specified, and the boundary that its other concepts describe. |
@@ -120,10 +120,10 @@ spec/
     vision.md                      # Vision
     principles.md                  # Principles
     opportunity.md                 # Opportunity
-    stakeholders.md                # Stakeholders
     objectives.md                  # Objectives
     scope.md                       # Scope
     jobs/                          # Job to Be Done documents
+    stakeholders/                  # Stakeholder documents
   system.md                        # System
   glossary.md                      # Glossary
   users/                           # User Class documents
@@ -186,8 +186,8 @@ concern without a document is stated in a paragraph rather than as an entry.
   uses, state "<Type>: not defined." in a paragraph:
   - **Why we exist**: Mission, Vision, and Principles.
   - **Opportunity**: Opportunity.
-  - **Whom we serve**: the `jobs/` folder, Stakeholders, and the corpus's
-    `users/` folder.
+  - **Whom we serve**: the `jobs/` folder, the `stakeholders/` folder, and
+    the corpus's `users/` folder.
   - **Results we seek**: Objectives.
   - **What we will and won't do**: Scope.
 
@@ -280,7 +280,7 @@ rather than restating them.
 | Who makes that progress, and the circumstances in which they seek it | The Job to Be Done, not a User Class |
 | The future that the business or product pursues, without an indicator or target | Vision |
 | How to decide between reasonable options that conflict, such as which user class or quality prevails | Principles |
-| The interest in the system of a person or group who does not use it, what they value, and any authority they hold over it | Stakeholders, not a User Class |
+| The interest in the system of a person or group who does not use it, what they value, and any authority they hold over it | Stakeholder, not a User Class |
 | Guidance for design decisions, such as visual style or interaction patterns | Not Principles; design records, as [P-CON-8](#work-management-and-design) requires |
 | A value of the business's culture, or guidance for how work on the system is done | Not Principles; work-management records, as [P-CON-7](#work-management-and-design) requires, or no document |
 | A stand taken to overcome a current challenge, such as where to focus next | Not Principles; strategy, which this profile does not yet define, as [Not yet defined](#not-yet-defined) lists |

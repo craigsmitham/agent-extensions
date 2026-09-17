@@ -25,7 +25,7 @@ and each links Fleet maintenance.
 | Principle | Safe equipment over availability; Contractors' time over depot convenience, in the Rental business principles |
 | Opportunity | Rental system opportunity |
 | Job to Be Done | Get equipment on site when the work needs it |
-| Stakeholders | Rental system stakeholders, with the entry Equipment insurer |
+| Stakeholder | Equipment insurer |
 | Objectives | Rental system objectives, with the entries Objective 1 and Objective 2 |
 | Scope | Rental system scope |
 | Subsystem | Fleet maintenance |

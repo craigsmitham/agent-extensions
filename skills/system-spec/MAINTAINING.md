@@ -44,7 +44,7 @@ account, across changes, of what the system does and whom and what it serves.
 
 | Step | What the skill provides | Gap |
 | --- | --- | --- |
-| Define | Mission, Vision, Principles, Opportunity, Job to Be Done, Stakeholders, Objectives, Scope, System; `business/index.md` shows which are not defined | Strong. |
+| Define | Mission, Vision, Principles, Opportunity, Job to Be Done, Stakeholder, Objectives, Scope, System; `business/index.md` shows which are not defined | Strong. |
 | Locate | Finding the corpus; `sources` frontmatter | Thin: no model of sources, or of recovering a specification from behavior. |
 | Prepare | Ownership tests, Glossary, Structure, Placement | Strong. |
 | Confirm | Open questions; P-CON-4 | Weak: lifecycle, status, acceptance, and obligations that cannot both be met are not yet defined. |
@@ -154,7 +154,7 @@ contract.
 | UC | Use Case | BR | Business Rule |
 | REQ | Requirement | MIS | Mission |
 | VIS | Vision | PRI | Principles |
-| JOB | Job to Be Done | STK | Stakeholders |
+| JOB | Job to Be Done | STK | Stakeholder |
 | OBJ | Objectives | SCP | Scope |
 
 BIZ, the code of the retired Business Requirements type, is not reused.
@@ -239,7 +239,7 @@ template.
 | System | The system overview of ISO/IEC/IEEE 29148, and the product perspective and operating environment of Karl Wiegers and Joy Beatty's software requirements specification. |
 | Subsystem | The same sources as the System template. |
 | Opportunity | The business purpose (§9.3.2) and the definition of the problem or opportunity space (§6.2.3.3) of ISO/IEC/IEEE 29148, framed as an opportunity after Peter Drucker's *Managing for Results*. |
-| Stakeholders | The major stakeholders of the business requirements specification in ISO/IEC/IEEE 29148 (§9.3.5), and the supporting customers of Peter Drucker's *The Five Most Important Questions*. |
+| Stakeholder | The major stakeholders of the business requirements specification in ISO/IEC/IEEE 29148 (§9.3.5), and the supporting customers of Peter Drucker's *The Five Most Important Questions*. |
 | Objectives | The mission, goals, and objectives of ISO/IEC/IEEE 29148 (§9.3.7), whose measures of effectiveness (§6.2.3.3) indicators follow; the business objectives and success metrics of Karl Wiegers and Joy Beatty; and the results, measured qualitatively and quantitatively, of Peter Drucker's *The Five Most Important Questions*. |
 | Scope | The business scope (§9.3.3) and system scope (§9.5.3) of ISO/IEC/IEEE 29148, the separation of the scope of the work from the scope of the product in the Volere template, the solution scope of the BABOK Guide, Alistair Cockburn's in/out list, and the scope, limitations, and exclusions of Karl Wiegers and Joy Beatty. |
 | User Class | Karl Wiegers and Joy Beatty's user classes. |
