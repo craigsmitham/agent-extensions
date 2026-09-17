@@ -9,7 +9,7 @@ extend the profile's tables of the same name.
 
 | Type | Description |
 | --- | --- |
-| [`Subsystem`](../../templates/subsystem.md) | A part of the system with its own boundary, because it has its own user classes, external interfaces, quality characteristics, or delivery or operation. |
+| [`Subsystem`](../../templates/subsystem.md) | A part of the system with its own boundary, because it has its own user classes, external interfaces, required levels of quality, or delivery or operation. |
 | [`Feature Component`](../../templates/feature-component.md) | A distinct part of a feature's behavior, such as a command, workflow, or screen, that has its own use cases or requirements. |
 
 ## Vocabulary

@@ -409,7 +409,7 @@ of the type they concern gives a more specific practice.
 
 - frontmatter keys beyond base OKF v0.2;
 - who may accept each type, and review dates such as `stale_after`;
-- stable identifiers for linked headings, such as business objective numbers;
+- stable identifiers for linked headings other than business objectives;
 - a product vision, initiative priorities and constraints, assumptions and
   dependencies, and risks;
 - use case goal levels, such as summary and subfunction use cases;
@@ -418,9 +418,9 @@ of the type they concern gives a more specific practice.
 - requirement classifications, such as functional, conformance, human
   factors, and process;
 - kinds of external interface counterpart;
-- obligations that cannot both be fully met;
-- in the Decomposition module: operating conditions and quality priorities
-  specific to one subsystem, connections between sibling subsystems, folders
+- quality priorities, and obligations that cannot both be fully met;
+- in the Decomposition module: operating conditions specific to one
+  subsystem, connections between sibling subsystems, folders
   for concepts specific to one subsystem, and use cases and requirements whose
   subject is a subsystem but that belong to a system-level feature;
 - in the Rules module: business rule categories, volatility, enforcement

@@ -11,10 +11,9 @@ Create and manage specifications for a software system.
 
 Represent specs as an OKF v0.2 bundle that follows the
 [Spec profile](references/profile.md) and the modules the corpus adopts. The
-profile, each adopted module, and each template's **Type contract** are
-normative, and the other template sections guide authoring. The numbered
-rules are the checklist for writing and reviewing a document. Examples follow
-the [running example](references/example.md).
+profile states which parts are normative, and its numbered rules are the
+checklist for writing and reviewing a document. Examples follow the
+[running example](references/example.md).
 
 ## Concept types
 

@@ -12,8 +12,8 @@ Use for a part of the system with its own boundary.
   - **Boundary and context**: what is inside the subsystem and what is outside
     it, naming each party the subsystem interacts with.
 - **SUB-3** A subsystem MUST be defined only when part of the system has at
-  least one of: quality characteristics specific to it; user classes specific
-  to it; external interfaces specific to it; or separate delivery or
+  least one of: required levels of quality specific to it; user classes
+  specific to it; external interfaces specific to it; or separate delivery or
   operation.
 - **SUB-4** When a subsystem needs subsystems of its own, it MUST be
   specified as a separate system in its own corpus, and the two corpora
@@ -53,8 +53,8 @@ Fleet maintenance is a subsystem because it has its own user class,
 hours, which the rest of the rental system uses to decide what can be rented.
 ```
 
-A quality requirement that applies to one feature does not make the feature a
-subsystem, and a service, container, or module does not by itself make a
+A required level of quality that applies to one feature does not make the
+feature a subsystem, and a service, container, or module does not by itself make a
 subsystem.
 
 A subsystem is specified as the system is, at its own boundary, as
@@ -67,9 +67,8 @@ them. Concepts specific to it that live at the system level, such as
 Some subsystem concerns are
 [not yet defined](../references/profile.md#not-yet-defined). Until they are:
 
-- state operating conditions and quality priorities specific to the subsystem
-  in the System's **Operating environment** or **Quality priorities**, naming
-  and linking the subsystem; and
+- state operating conditions specific to the subsystem in the System's
+  **Operating environment**, naming and linking the subsystem; and
 - place a use case or requirement whose subject is the subsystem, but that
   belongs to a system-level feature, within the subsystem, and link the
   system-level feature under **Related**.

@@ -64,8 +64,7 @@ concrete. It illustrates a class; it does not define it.
 
 ### Users and stakeholders
 
-A user class is made of people who use the system or its outputs directly,
-including those who operate it. In the running example,
+In the running example,
 [Depot staff](<link>) is a user class because depot staff record handovers in
 the system. The [Equipment insurer](<link>) has an
 interest in the system but does not use it, so it is a stakeholder in the

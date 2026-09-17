@@ -94,8 +94,7 @@ status: draft
 supports, at the precision they state it. Undecided handling, unknown steps,
 and terms whose meaning is not agreed go under **Open questions**. Worked
 walk-throughs with sample data go under **Illustrations**; they add no steps or
-conditions. **Related** links the concepts the use case is about, beyond
-those already linked in its Context table, steps, and extensions.
+conditions.
 
 ### Goal
 
@@ -120,10 +119,6 @@ goal that only serves a larger goal in the same sitting is a step.
   information", and link to the [Customer](<link>) entity type for its detail.
 - When a step uses an external service, name the service as a secondary
   actor: "Rental system has the payment service authorize the deposit."
-- When readers need to know what a screen presents to follow the behavior,
-  sketch it as the profile's
-  [where content goes](../references/profile.md#where-content-goes) assigns,
-  and keep the steps technology-neutral.
 
 ### Extensions
 

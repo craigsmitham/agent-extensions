@@ -52,10 +52,6 @@ and Cancellation ending a confirmed reservation. **Purpose** has no
 from its siblings is the coverage a reader needs, and the component serves
 the user classes and business objectives its feature serves.
 
-**Related** links the business rules, entity types, value types, external
-interfaces, and quality characteristics the component is about, and
-**Open questions** holds undecided parts of its behavior or user interface.
-
 ### Illustrations
 
 A user interface sketch of a component is rough and linked to the use case

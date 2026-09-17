@@ -59,13 +59,20 @@ than into a definition, as
 requires. **Related** links records that readers use alongside the glossary,
 such as a business vocabulary or a style guide.
 
-### Kinds of entry
+### Entries
 
-| Kind | Entry |
+An entry has a definition, then any entry lines, unless another concept's
+**Definition** defines its name; then it has no definition and a
+**Defined by** line, as
+[defined names](../references/profile.md#defined-names) requires.
+
+| Line | Content |
 | --- | --- |
-| A term the glossary defines | A definition, then any entry lines. |
-| A name that another concept's **Definition** defines | No definition, and a **Defined by** line, as [defined names](../references/profile.md#defined-names) requires. |
-| A classification that a rule decides | A definition of what the classification means, and a **Decided by** line linking to the rule. |
+| Also called | Accepted synonyms. The specification uses the entry's term. |
+| Defined by | For a name that another concept's **Definition** defines: that concept. |
+| Decided by | For a classification: the rule that decides whether something belongs to it. The definition says what the classification means; the rule owns the criteria. |
+| Example | An illustration of the term. |
+| Note | A clarification that is not part of the meaning, such as a name readers should avoid, or a similar term with a different meaning, with a link. |
 
 ~~~markdown
 ### depot
@@ -109,15 +116,7 @@ definition:
   than states, how data is represented, the criteria or calculations a rule
   owns, and the obligations a requirement owns.
 
-### Entry lines
-
-| Line | Content |
-| --- | --- |
-| Also called | Accepted synonyms. The specification uses the entry's term. |
-| Defined by | For a name that another concept's **Definition** defines: that concept. |
-| Decided by | For a classification: the rule that decides whether something belongs to it. The definition says what the classification means; the rule owns the criteria. |
-| Example | An illustration of the term. |
-| Note | A clarification that is not part of the meaning, such as a name readers should avoid, or a similar term with a different meaning, with a link. |
+### Anchors
 
 Other documents link to an entry by its heading anchor, such as
 `glossary.md#rental-period`, so a renamed entry changes its inbound links.

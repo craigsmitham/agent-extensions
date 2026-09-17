@@ -108,10 +108,7 @@ having the one currency of the amounts added, is placed by
 [invariant, business rule, or requirement](../references/modules/data.md#invariant-business-rule-or-requirement):
 it is an invariant because it follows from what money means.
 
-### Illustrations and related
+### Illustrations
 
 Illustrate valid values and, where the edge of the allowed values is not
-obvious, invalid values with the reason each is invalid. Under **Related**,
-link the value types this one is made of beyond those linked in **Composition**.
-Record undecided parts, allowed values, or invariants under
-**Open questions**.
+obvious, invalid values with the reason each is invalid.

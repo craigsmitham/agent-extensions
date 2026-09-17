@@ -17,7 +17,7 @@ availability or response time.
   - **Measures** *(when a quality requirement states a level on a measure)*:
     each such measure.
 - **QC-3** A quality characteristic SHOULD be created only when it has
-  quality requirements or ranks among the quality priorities.
+  quality requirements.
 - **QC-4** Each measure on which a quality requirement states a level MUST be
   defined under its own heading in **Measures**, precisely enough that two
   readers would compute the same value for the same population and period.
@@ -153,8 +153,6 @@ concerns, which belong in operations records.
 
 ### Related
 
-List records behind the characteristic's importance, such as research or
-incident reports. Quality requirements lie in the characteristic's folder,
-requirements that help achieve the characteristic state **serves**, and
-conflicts with other characteristics are resolved in the System's quality
-priorities.
+Link records behind the characteristic's importance, such as research or
+incident reports. Requirements that help achieve the characteristic state
+**serves** from their own side.

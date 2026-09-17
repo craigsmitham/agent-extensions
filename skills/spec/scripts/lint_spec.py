@@ -3,7 +3,8 @@
 
 Enforces the maintainer conventions in skills/spec/README.md: rule
 identifiers, retired identifiers, template anatomy, contract field and section
-lists, vocabulary, named links, links, and example names. Exits 1 when any error is found unless --warn-only is given.
+lists, vocabulary, named links, links, and example names. Exits 1 when any
+error is found unless --warn-only is given.
 """
 
 from __future__ import annotations
@@ -48,8 +49,7 @@ KEYWORD = re.compile(r"\b(MUST NOT|MUST|SHOULD NOT|SHOULD|MAY)\b")
 TAG_ITEM = re.compile(r"^- \*\*((?:P-[A-Z]{3})|[A-Z]{2,3})-(\d+)\*\*")
 TAG_REF = re.compile(r"\b((?:P-[A-Z]{3})|[A-Z]{2,3})-(\d+)\b")
 
-# Vocabulary guards: (pattern, message). Removed fields, relationships, and
-# anchors are caught by the relationship, link, and anatomy checks instead.
+# Vocabulary guards against common synonyms of Vocabulary terms: (pattern, message).
 BANNED = [
     (re.compile(r"\btop-level\b"), "use 'system-level' or 'subsystem-level'"),
     (re.compile(r"^## Sources\b"), "provenance belongs in OKF `sources` frontmatter"),
@@ -57,10 +57,6 @@ BANNED = [
     (re.compile(r"\bsuccess measures?\b|Success measures"), "use 'success indicator'"),
     (re.compile(r"\bservice level agreements?\b"), "use 'operations concerns'"),
     (re.compile(r"\b[Oo]wner\b"), "use 'home' for a concept's location or 'owning type'"),
-    (re.compile(r"[Rr]elationships tables?"), "use 'named links table'"),
-    (re.compile(r"^### Differences from the "), "say how a type differs in a short topic subsection"),
-    (re.compile(r"^### (Folders|Shared definitions)$"), "folders live in the Structure tree and shared homes in Where content goes"),
-    (re.compile(r"modules/[a-z]+\.md#not-yet-defined"), "deferred concerns are listed once, in the profile's Not yet defined"),
 ]
 
 
@@ -228,8 +224,6 @@ class Linter:
         else:
             if not flat[0].startswith("Use for"):
                 self.error(path, paras[0][0], "purpose paragraph must begin 'Use for'")
-            if "Type contract is normative" in flat[0]:
-                self.error(path, paras[0][0], "SKILL.md states once that the Type contract is normative")
             if len(flat) > 1:
                 self.error(path, paras[1][0], "only the purpose paragraph precedes the Type contract; lineage belongs in the README's Template sources")
         h2 = [t for _, t in doc.headings(2)]
@@ -260,16 +254,11 @@ class Linter:
                 if n == 0 and not TAG_ITEM.match(text):
                     continue
                 if not TAG_ITEM.match(text):
-                    if "binding and illustrative content" in flat_text:
-                        self.error(path, s, "binding content is defined once in the profile, not in the contract")
                     continue
                 else:
                     head = text.splitlines()[0]
                     if re.search(r"\btitle (MUST|SHOULD)", flat_text):
                         rank = 1
-                    elif re.search(r"\b(MUST|SHOULD|MAY)( NOT)? identify\b", head):
-                        self.error(path, s, f"use a type-specific rule headed '… {CONTEXT_HEAD} …' instead of identified fields")
-                        rank = 5
                     elif re.search(r"\b(MUST|SHOULD|MAY)( NOT)? include\b", head):
                         rank = 3
                     elif re.search(r"\b(MUST NOT|SHOULD NOT)\b", flat_text) and not re.search(r"\b(MUST|SHOULD)\b(?! NOT)", flat_text):
@@ -348,8 +337,6 @@ class Linter:
             for banned in ("Context", "Sections"):
                 if banned in names:
                     self.error(path, sec[0], f"'### {banned}' restates the contract; move any extra guidance into a topic subsection")
-            if "Neighboring concepts" in names:
-                self.error(path, sec[0], "'### Neighboring concepts' relists profile links; link from the contract or guidance instead")
             self.keywords_forbidden(doc, sec[0], sec[1], "Writing guidance")
         return rules
 
@@ -440,7 +427,7 @@ class Linter:
         for d in docs:
             for i, line in enumerate(d.lines):
                 for pattern, msg in BANNED:
-                    if msg and pattern.search(line):
+                    if pattern.search(line):
                         self.error(d.path, i, f"vocabulary: {msg}")
 
     def concept_types(self, profile: Doc, modules: list[Doc]) -> None:

@@ -85,10 +85,10 @@ target that is not agreed is an open question, not a plausible number:
 - **Scope** links the major capabilities and names exclusions a reader might
   otherwise assume are included. It links the concepts it includes, such as
   features and user classes, rather than describing them.
-- **Stakeholders** are people or groups with an interest in the system who do
-  not use it or its outputs, such as sponsors, insurers, or regulators. People
-  who use or operate the system are user classes, linked rather than
-  described.
+- **Stakeholders** names sponsors, insurers, regulators, and others with an
+  interest in the system, as
+  [users and stakeholders](user-class.md#users-and-stakeholders) tells them
+  apart from user classes.
 - **Related** links records such as business strategy, product vision,
   roadmaps, and research, when readers need them, and the records that hold
   initiative priorities and constraints, assumptions and dependencies, and

@@ -12,8 +12,6 @@ the conditions it must work in.
     it, naming each party the system interacts with.
   - **Operating environment** *(optional)*: conditions the system must work
     in.
-  - **Quality priorities** *(optional)*: which qualities matter most, and
-    what gives way when they conflict.
 - **SYS-3** **Boundary and context** MUST link each party to its User Class or
   External Interface.
 
@@ -32,7 +30,6 @@ status: draft
 ## Purpose
 ## Boundary and context
 ## Operating environment
-## Quality priorities
 ## Open questions
 ## Related
 ```
@@ -88,14 +85,3 @@ table requires. Define it with quantities, so that a tester could reproduce it:
 ```markdown
 **Peak load**: 2,000 concurrent customers, 80% of them searching.
 ```
-
-### Quality priorities
-
-State which qualities matter most and what gives way when they conflict,
-linking the concept that defines each one, such as "[Confidentiality](<link>) over
-[availability](<link>): a reservation is refused rather than taken without an
-authorized deposit."
-
-Qualities of a quality model that were considered and deliberately left out
-can be listed with the reason, so that readers can tell an exclusion from an
-oversight.

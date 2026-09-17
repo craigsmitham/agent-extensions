@@ -120,7 +120,7 @@ Every template has this shape, in this order:
 
 1. `# <Type> template`.
 2. A purpose paragraph beginning "Use for". That the Type contract is
-   normative and the rest guides authoring is stated once, in `SKILL.md`.
+   normative and the rest guides authoring is stated once, in the profile.
 3. `## Type contract`, containing, in this order:
    1. when the profile's or a module's **Fixed locations** table does not
       settle placement alone, an untagged placement paragraph beginning

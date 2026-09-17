@@ -9,8 +9,8 @@ subsystem, under stated conditions, such as a response time at peak load.
   phrase, such as "Search responds within limit at peak load".
 - **QR-2** A Quality Requirement document MUST include these sections:
   - **Requirement**: the required level, naming the subject, any conditions
-    under which the level applies, the one feature, feature component, or
-    external interface it is limited to, if any, any exceptions, and either a
+    under which the level applies, the one placement level below the subject
+    or external interface it is limited to, if any, any exceptions, and either a
     linked measure with its required limit or range or the criterion by which
     satisfaction is decided, with *shall* for the obligation.
   - **Rationale** *(optional)*: why this level is required.
@@ -20,7 +20,7 @@ subsystem, under stated conditions, such as a response time at peak load.
   level of one quality characteristic.
 - **QR-4** A Quality Requirement MUST be placed in the folder of the quality
   characteristic whose property it states, even when the level is limited to
-  one feature, feature component, or external interface.
+  one placement level below its subject or one external interface.
 - **QR-5** A level that is desired but not required MUST NOT be stated as the
   required level.
 
@@ -41,7 +41,7 @@ status: draft
 
 ## Requirement
 
-While <condition>, the <subject> shall keep [<measure>](<link>) for <feature, component, or interface> at or below <limit>.
+While <condition>, the <subject> shall keep [<measure>](<link>) for <placement level or interface> at or below <limit>.
 
 ## Illustrations
 ## Rationale
@@ -76,7 +76,8 @@ quality requirement states one of these kinds of level:
 
 State a measured level as a limit, such as "at or below 2 seconds", or as a
 target with an acceptable range. When the level is limited to one feature,
-feature component, or external interface, name and link it in the statement,
+another placement level, or an external interface, name and link it in the
+statement,
 such as search response time for [Equipment search](<link>); otherwise the
 level applies to the whole subject.
 
@@ -104,5 +105,3 @@ requirement uses it.
   plausible number.
 - [Payment details stay private](<link>) states a criterion for
   Confidentiality and is placed in its folder.
-- Record two levels that cannot both be fully met under **Open questions** in
-  each document.

@@ -6,6 +6,11 @@ equipment item.
 
 ## Type contract
 
+An Entity Type document is placed as the Data module's
+[fixed locations](../references/modules/data.md#fixed-locations) state, when its
+[entity type, value type, or data attribute](../references/modules/data.md#entity-type-value-type-or-data-attribute)
+test makes the content an Entity Type.
+
 - **ET-1** The title MUST name the kind of thing as a singular noun phrase,
   such as "Reservation" or "Equipment item".
 - **ET-2** An Entity Type document MUST include these sections:
@@ -128,9 +133,9 @@ placed by
 
 ### Lifecycle
 
-**Lifecycle** holds the states of an instance, its permitted transitions,
-what creates an instance, and whether an ended instance is removed, retained,
-or anonymized. A state diagram is often the clearest form. Label each
+What **Lifecycle** holds is set by the Data module's
+[where content goes](../references/modules/data.md#where-content-goes). A
+state diagram is often the clearest form. Label each
 transition with the event that causes it, in business terms, and link the use
 cases and business rules that cause transitions under **Related**.
 
@@ -168,10 +173,7 @@ define the data. Draw relationship diagrams as Mermaid `erDiagram`.
 
 ### Related
 
-Link the value types, business rules, and external interfaces the entity type
-is about, and the use cases that cause its lifecycle transitions, beyond those
-linked in its sections, including the rules that set how long its data is kept
-and who may see them, such as [Customer data retention](<link>). Use cases and requirements that create,
-read, change, or end instances link here from their own **Related**. Record
-undecided attributes, identity, relationships, or transitions under
-**Open questions**.
+Link the rules that set how long the entity type's data is kept and who may
+see it, such as [Customer data retention](<link>), since the entity type does
+not state them. Use cases and requirements that create, read, change, or end
+instances link here from their own **Related**.

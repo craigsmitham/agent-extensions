@@ -57,9 +57,6 @@ analysis, inspection, or demonstration, but they do not replace the
 requirement. Record unresolved meaning, feasibility, or targets under
 **Open questions**, including obligations that cannot both be fully met.
 
-Record where the obligation came from, such as a stakeholder decision,
-regulation, incident, or research, in the `sources` frontmatter.
-
 ### Statement
 
 A well-formed requirement is necessary, appropriate to its subject,

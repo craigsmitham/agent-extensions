@@ -157,5 +157,3 @@ and each links Fleet maintenance.
   customers can reserve equipment. Reservations are available at least 99.5%
   of each calendar month, excluding maintenance announced 48 hours ahead.
 - No customer's payment details are revealed to another customer.
-- Confidentiality matters more than availability: a reservation is refused
-  rather than taken without an authorized deposit.
