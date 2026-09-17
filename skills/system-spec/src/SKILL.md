@@ -1,11 +1,11 @@
 ---
-name: spec
+name: system-spec
 description: >
   Creates and manages specifications for a software system. Use when asked to
   create, revise, organize, or maintain a system's specs.
 ---
 
-# Spec
+# System Spec
 
 Create and manage specifications for a software system.
 

@@ -164,8 +164,8 @@ expected=(
   skills/manage-work-items
   skills/okf
   skills/research
-  skills/spec
   skills/spot-spew
+  skills/system-spec
   skills/temporal-dates
   subagents/researcher
 )

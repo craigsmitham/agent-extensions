@@ -1,4 +1,4 @@
-# Spec
+# System Spec
 
 Create and manage the specification of a software system as an OKF v0.2
 bundle that follows the [Spec profile](src/references/profile.md) and its
@@ -12,7 +12,7 @@ changing a template, and run the lint from the repository root before
 committing:
 
 ```sh
-scripts/lint-spec.py
+scripts/lint-system-spec.py
 ```
 
 The lint checks what breaks silently: links and anchors, rule identifiers and

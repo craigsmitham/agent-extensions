@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Lint the Spec skill's profile, modules, templates, and running example.
+"""Lint the System Spec skill's profile, modules, templates, and running example.
 
 Checks what breaks silently when these files change: links and anchors, rule
 identifiers and references to them, where normative keywords appear, and
 agreement between each template's Type contract and Suggested document. The
-other conventions in skills/spec/README.md are left to review. Exits 1 when
-any finding is reported.
+other conventions in skills/system-spec/README.md are left to review. Exits 1
+when any finding is reported.
 """
 
 from __future__ import annotations
@@ -14,7 +14,7 @@ import re
 import sys
 from pathlib import Path
 
-SPEC = Path(__file__).resolve().parent.parent / "skills" / "spec"
+SPEC = Path(__file__).resolve().parent.parent / "skills" / "system-spec"
 SRC = SPEC / "src"
 SUPPORTING = {"Illustrations", "Rationale", "Verification", "Open questions", "Related"}
 
