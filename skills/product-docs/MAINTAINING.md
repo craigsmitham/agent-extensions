@@ -1,4 +1,4 @@
-# Maintaining System Spec
+# Maintaining Product Docs
 
 Conventions for changing this skill. For what the skill does, see the
 [README](README.md).
@@ -97,7 +97,7 @@ changing a template, and run the lint from the repository root before
 committing:
 
 ```sh
-scripts/lint-system-spec.py
+scripts/lint-product-docs.py
 ```
 
 The lint checks what breaks silently: links and anchors, rule identifiers and
@@ -107,8 +107,8 @@ any finding. The other conventions here are kept by review.
 
 ### The business folder
 
-`business/` holds what justifies and directs the system, and the rest of the
-corpus specifies the system. Its index follows Peter Drucker's five questions
+`business/` holds what justifies and directs the system, and `spec/`
+specifies the system; the glossary sits beside both because both use its terms. Its index follows Peter Drucker's five questions
 (mission, customer, what the customer values, results, and plan), so that a
 reader sees what the business cares about and which of those concerns the
 corpus leaves unanswered. Drucker's plan also holds goals, action steps, and

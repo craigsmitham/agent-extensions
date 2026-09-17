@@ -1,14 +1,15 @@
-# Spec profile
+# Product docs profile
 
-Version **0.1.0** · Base **OKF v0.2** · Maintainer **@craigsmitham** · Status
+Version **0.2.0** · Base **OKF v0.2** · Maintainer **@craigsmitham** · Status
 **draft**.
 
-This profile describes the specification of a software system as an OKF v0.2
-bundle. It defines the concept types, the corpus structure, where each concept
-lives, which type owns content that two types border, how concepts link, how
-they change, and the rules every document follows. The normative
-contract comprises this file and the **Type contract** section of each
-template. Other template sections are authoring guidance.
+This profile describes a product's documentation as an OKF v0.2 bundle: the
+direction of the business it serves and the specification of its system. It
+defines the concept types, the corpus structure, where each concept lives,
+which type owns content that two types border, how concepts link, how they
+change, and the rules every document follows. The normative contract comprises
+this file and the **Type contract** section of each template. Other template
+sections are authoring guidance.
 
 MUST and MUST NOT are requirements; SHOULD and SHOULD NOT are recommendations;
 MAY denotes an option. Each normative statement is a list item that begins
@@ -66,7 +67,8 @@ Each term below has one meaning throughout this profile and its templates.
 
 | Term | Meaning |
 | --- | --- |
-| Specification | The agreed account of what a software system does, whom and what it serves, and why, in whatever form holds it. A corpus is the form this profile gives it. |
+| Product | The system as delivered to those it serves. The corpus is named for the product; its documents use *System*. |
+| Specification | The agreed account of what a software system does, whom and what it serves, and why, in whatever form holds it. A corpus is the form this profile gives it: `spec/` specifies the system, and `business/` holds the direction and intent that the specification serves. |
 | Boundary | What separates the system from the parties it interacts with. |
 | Subject | The System or Subsystem whose boundary a Use Case or Requirement describes. It is never a feature, a feature component, or an external interface. |
 | Placement level | The system, a subsystem, a feature, or a feature component, as a place where Use Cases and Requirements live. |
@@ -111,13 +113,14 @@ subject.
 ## Structure
 
 - **P-STR-1** An adopting repository MUST place the corpus in
-  `<repository-root>/spec/`, abbreviated `/spec/`. The corpus specifies one
-  system.
+  `<repository-root>/product/`, abbreviated `/product/`. The corpus documents
+  one product, whose system its `spec/` folder specifies.
 
 ```text
-spec/
+product/
   README.md                        # Adoption declaration
   index.md                         # Navigation; carries okf_version: "0.2"
+  glossary.md                      # Glossary
   business/                        # Why the system exists, whom it serves, what it must achieve, and where it focuses
     index.md                       # Entry point, arranged as P-STR-9 requires
     mission.md                     # Mission
@@ -129,38 +132,40 @@ spec/
     scope.md                       # Scope
     jobs/                          # Job to Be Done documents
     stakeholders/                  # Stakeholder documents
-  system.md                        # System
-  glossary.md                      # Glossary
-  users/                           # User Class documents
-  interfaces/                      # External Interface documents
-  rules/                           # Business Rule documents
-  entities/                        # Entity Type documents
-  values/                          # Value Type documents
-  quality/                         # A folder for each Quality Characteristic
-    <characteristic>/
-      <characteristic>.md          # Quality Characteristic
-      <quality-requirement>.md     # Quality Requirement
-  use-cases/                       # Use Cases placed at the system
-  requirements/                    # Requirements placed at the system
-  features/                        # A folder for each Feature
-    <feature>/
-      <feature>.md                 # Feature
-      use-cases/                   # Use Cases placed at the feature
-      requirements/                # Requirements placed at the feature
-      components/                  # A folder for each Feature Component
-        <component>/
-          <component>.md           # Feature Component
-          use-cases/
-          requirements/
-  subsystems/                      # A folder for each Subsystem
-    <subsystem>/
-      <subsystem>.md               # Subsystem
-      use-cases/                   # Placed at the subsystem
-      requirements/
-      features/                    # Same structure as spec/features/
+  spec/                            # The specification of the system
+    index.md                       # Entry point to the specification
+    system.md                      # System
+    users/                         # User Class documents
+    interfaces/                    # External Interface documents
+    rules/                         # Business Rule documents
+    entities/                      # Entity Type documents
+    values/                        # Value Type documents
+    quality/                       # A folder for each Quality Characteristic
+      <characteristic>/
+        <characteristic>.md        # Quality Characteristic
+        <quality-requirement>.md   # Quality Requirement
+    use-cases/                     # Use Cases placed at the system
+    requirements/                  # Requirements placed at the system
+    features/                      # A folder for each Feature
+      <feature>/
+        <feature>.md               # Feature
+        use-cases/                 # Use Cases placed at the feature
+        requirements/              # Requirements placed at the feature
+        components/                # A folder for each Feature Component
+          <component>/
+            <component>.md         # Feature Component
+            use-cases/
+            requirements/
+    subsystems/                    # A folder for each Subsystem
+      <subsystem>/
+        <subsystem>.md             # Subsystem
+        use-cases/                 # Placed at the subsystem
+        requirements/
+        features/                  # Same structure as spec/features/
 ```
 
-- **P-STR-2** `spec/` MUST contain `README.md`, `index.md`, and `system.md`.
+- **P-STR-2** `product/` MUST contain `README.md`, `index.md`, and
+  `spec/system.md`.
 - **P-STR-3** `README.md` MUST satisfy base OKF, use `Reference` as its type,
   and declare the adopted profile version and any local exceptions.
 - **P-STR-4** Files and folders MUST be named and placed as this structure
@@ -177,8 +182,8 @@ spec/
 - **P-STR-8** Concept filenames and concept folder names SHOULD be the
   kebab-case form of the concept's title.
 
-`business/` holds what justifies and directs the system; the rest of the
-corpus specifies the system. Its index is where a reader starts to learn what
+`business/` holds what justifies and directs the system, and `spec/` specifies
+the system. The glossary serves both, so it sits beside them. Its index is where a reader starts to learn what
 the business cares about, so its headings follow Peter Drucker's questions of
 mission, customer and value, results, and plan, where a plan's concentration
 and abandonment are the strategy and the scope, and it shows each of those
@@ -193,7 +198,7 @@ concern without a document is stated in a paragraph rather than as an entry.
   - **Why we exist**: Mission, Vision, and Principles.
   - **Opportunity**: Opportunity.
   - **Whom we serve**: the `jobs/` folder, the `stakeholders/` folder, and
-    the corpus's `users/` folder.
+    the `spec/users/` folder.
   - **Results we seek**: Objectives.
   - **Where we focus and what we won't do**: Strategy and Scope.
 

@@ -32,7 +32,7 @@
     "manage-work-items": "workspace",
     "spot-spew": "workspace",
     "devops-docs": "workspace",
-    "system-spec": "workspace"
+    "product-docs": "workspace"
   },
   "rules": {
     "field-notes": "workspace",

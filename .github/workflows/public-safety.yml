@@ -37,8 +37,8 @@ jobs:
       - name: Test the installed Agent Skill evaluator
         run: node .axm/extensions/@agentxm/skills/agent-skill-evaluator/src/scripts/test-runner.mjs
 
-      - name: Lint the System Spec skill profile and templates
-        run: scripts/lint-system-spec.py
+      - name: Lint the Product Docs skill profile and templates
+        run: scripts/lint-product-docs.py
 
       - name: Validate the proposed commit
         run: scripts/check-public-safety.sh --view git-index

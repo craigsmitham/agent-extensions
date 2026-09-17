@@ -1,16 +1,20 @@
 ---
-name: system-spec
+name: product-docs
 description: >
-  Creates and manages specifications for a software system. Use when asked to
-  create, revise, organize, or maintain a system's specs.
+  Creates and maintains a product's documentation: the direction of the
+  business it serves and the specification of its system. Use when asked to
+  create, revise, organize, or maintain a product's specs, requirements,
+  features, use cases, or business direction.
 ---
 
-# System Spec
+# Product Docs
 
-Create and manage specifications for a software system.
+Create and maintain a product's documentation: the direction of the business
+it serves and the specification of its system. The product is the system as
+delivered; documents call it the System.
 
-Represent specs as an OKF v0.2 bundle that follows the
-[Spec profile](references/profile.md). The profile states which parts are
+Represent them as an OKF v0.2 bundle that follows the
+[Product docs profile](references/profile.md). The profile states which parts are
 normative, and its numbered rules are the checklist for writing and reviewing
 a document. Examples follow the [running example](references/example.md).
 
@@ -66,9 +70,9 @@ Add the others when the system has their content:
 
 ## Workflow
 
-1. **Find the corpus.** Look for `spec/` at the repository root. When it is
-   absent and the user wants a spec, create `spec/README.md`, `spec/index.md`,
-   and `spec/system.md` as
+1. **Find the corpus.** Look for `product/` at the repository root. When it
+   is absent and the user wants a spec, create `product/README.md`,
+   `product/index.md`, `product/spec/index.md`, and `product/spec/system.md` as
    [Structure](references/profile.md#structure) requires. The README declares
    the profile version and any local exceptions.
 2. **Load the rules.** Read the profile.
