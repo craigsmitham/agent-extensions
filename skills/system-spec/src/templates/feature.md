@@ -55,13 +55,15 @@ example, Site delivery covers delivery only from depots that offer delivery.
 
 ### Illustrations
 
-When readers need to know what a user interface presents to follow the
-behavior, sketch it under the **Illustrations** that the profile's
-[where content goes](../references/profile.md#where-content-goes) assigns: the
-information it presents, the actions it offers, and where those actions lead,
-linked to the use case steps they serve. Keep it rough but accurate, as
+When readers cannot follow the behavior without seeing a user interface,
+sketch it under **Illustrations**: the information it presents, the actions it
+offers, and where those actions lead, linked to the use case steps they serve.
+The use case steps own what the interface presents, as
+[where content goes](../references/profile.md#where-content-goes) states; the
+sketch only makes them concrete. Keep it rough but accurate, as
 [binding and illustrative content](../references/profile.md#binding-and-illustrative-content)
-describes, so that use case steps stay technology-neutral. For example,
+describes, so that use case steps stay technology-neutral and detailed design
+stays in design records. For example,
 Equipment search presents available equipment by type, depot, and rental
 period, and each result leads to [Reserve equipment](<link>).
 

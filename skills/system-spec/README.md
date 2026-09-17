@@ -101,9 +101,10 @@ Rules that apply to every type, such as the optional **Open questions**,
 **Related**, and **Illustrations** sections and the meaning of *(optional)*
 and conditional markers, live in the profile's **Document conventions** and
 are not repeated in each Type contract. Every Suggested document lists
-**Illustrations**, **Open questions**, and **Related**, except the Glossary
-and Principles, whose entries carry an **Example** line instead of
-**Illustrations**.
+**Open questions** and **Related**. It lists **Illustrations** only when the
+template's Writing guidance says what that type's illustrations hold, so that
+an empty heading does not invite filler. The Glossary and Principles carry an
+**Example** line on each entry instead.
 
 ### Template anatomy
 

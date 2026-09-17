@@ -40,7 +40,6 @@ status: draft
 ## Scope
 ### In scope
 ### Out of scope
-## Illustrations
 ## Open questions
 ## Related
 ```

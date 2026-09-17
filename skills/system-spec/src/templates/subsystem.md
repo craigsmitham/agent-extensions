@@ -38,7 +38,6 @@ status: draft
 ## Purpose
 ## Boundary and context
 ## Operating environment
-## Illustrations
 ## Open questions
 ## Related
 ```

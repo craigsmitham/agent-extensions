@@ -28,7 +28,6 @@ status: draft
 
 <For whom>, <what is true in the future pursued>.
 
-## Illustrations
 ## Open questions
 ## Related
 ```
@@ -58,7 +57,7 @@ equipment.
 - State an approximate horizon, such as five years, when the business has
   agreed one; release timing belongs to work-management records.
 - Give the narrative, storyboard, or prototype that conveys the vision in
-  `sources`, when the statement comes from it, or under **Illustrations**. A
+  `sources`, when the statement comes from it. A
   positioning statement, such as "For <customer> who <need>, …", is a prompt
   for writing a vision, not the vision.
 - Record only a vision that the business has agreed. A vision that is not

@@ -253,7 +253,7 @@ rather than restating them.
 | What a term means to the business | Glossary |
 | How the business decides whether something belongs to a classification, such as *high-risk customer* | Business Rule. The classification's meaning is a glossary entry with a **Decided by** line. |
 | The formats and protocols that a counterpart or a named standard requires at a connection | External Interface |
-| What a user interface presents and offers | The **Illustrations** of the narrowest placement level whose use cases it serves |
+| What a user interface presents and offers | The use case steps it serves, stated without user interface design, which belongs to design records, as [P-CON-8](#work-management-and-design) requires. A rough sketch can illustrate those steps. |
 | A binding obligation on a user interface, such as accessibility | Requirement |
 | The conditions the system must work in | The System's **Operating environment**, where a condition that more than one requirement uses is named |
 | The states of an entity type's instances, the permitted transitions, what creates an instance, and whether an ended instance is removed, retained, or anonymized | The Entity Type's **Lifecycle** |
@@ -548,6 +548,9 @@ sketch in an illustrative section can take any form, including an image.
 - **P-DOC-5** The provenance of a document's content, such as the stakeholder
   decisions, regulations, incidents, or research it came from, SHOULD be
   recorded in OKF `sources` frontmatter rather than in a body section.
+- **P-DOC-6** **Illustrations** SHOULD be included only when a reader could
+  not readily follow the binding content without them, and SHOULD NOT restate
+  it.
 
 ## Not yet defined
 

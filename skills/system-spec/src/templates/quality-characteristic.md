@@ -49,7 +49,6 @@ status: draft
 | Aggregation and window | <Such as the 95th percentile over each hour> |
 | Method | <Where and how the quantity is observed> |
 
-## Illustrations
 ## Open questions
 ## Related
 ```

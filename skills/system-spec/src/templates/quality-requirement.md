@@ -43,7 +43,6 @@ status: draft
 
 While <condition>, the <subject> shall keep [<measure>](<link>) for <placement level or interface> at or below <limit>.
 
-## Illustrations
 ## Rationale
 ## Verification
 ## Open questions

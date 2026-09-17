@@ -43,7 +43,6 @@ status: draft
 ## Circumstances
 ## Progress sought
 ## Alternatives
-## Illustrations
 ## Open questions
 ## Related
 ```

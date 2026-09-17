@@ -28,7 +28,6 @@ status: draft
 
 <Business or product> <does what> for <whom>.
 
-## Illustrations
 ## Open questions
 ## Related
 ```
