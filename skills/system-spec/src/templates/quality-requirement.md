@@ -61,8 +61,7 @@ it, so that levels on one measure can be compared. It names conditions rather
 than a trigger, because compliance is decided over many occurrences, so a
 stimulus is a condition of the level. And it states no **serves**, because
 its folder shows the characteristic it concerns. Its folder does not show its
-subject, so the statement names the subject, as the
-[Quality module](../references/modules/quality.md#vocabulary) describes.
+subject, so the statement names the subject.
 
 ### Kind of level
 

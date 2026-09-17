@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lint the System Spec skill's profile, modules, templates, and running example.
+"""Lint the System Spec skill's profile, templates, and running example.
 
 Checks what breaks silently when these files change: links and anchors, rule
 identifiers and references to them, where normative keywords appear, and
@@ -108,7 +108,7 @@ def collect_rules(doc: Doc, lines: range, rules: dict[str, Path]) -> list[str]:
 def no_keywords(doc: Doc, lines: range) -> None:
     for i in lines:
         if not doc.code[i] and KEYWORD.search(doc.lines[i]):
-            report(doc.path, i, "normative keyword outside the profile, a module, or a Type contract")
+            report(doc.path, i, "normative keyword outside the profile or a Type contract")
 
 
 def check_template(doc: Doc, rules: dict[str, Path]) -> None:
@@ -181,19 +181,16 @@ def check_references(docs: list[Doc], rules: dict[str, Path]) -> None:
 def main() -> int:
     rules: dict[str, Path] = {}
     profile = Doc((SRC / "references" / "profile.md").resolve())
-    modules = [Doc(p.resolve()) for p in sorted((SRC / "references" / "modules").glob("*.md"))]
     templates = [Doc(p.resolve()) for p in sorted((SRC / "templates").glob("*.md"))]
     example = Doc((SRC / "references" / "example.md").resolve())
     others = [Doc((SRC / "SKILL.md").resolve()), Doc((SPEC / "README.md").resolve())]
 
-    for doc in [profile] + modules:
-        start = doc.headings(2)[0][0] if doc.headings(2) else 0
-        collect_rules(doc, range(start, len(doc.lines)), rules)
+    collect_rules(profile, range(profile.headings(2)[0][0], len(profile.lines)), rules)
     for doc in templates:
         check_template(doc, rules)
     no_keywords(example, range(len(example.lines)))
 
-    docs = [profile, example] + modules + templates + others
+    docs = [profile, example] + templates + others
     check_links(docs)
     check_references(docs, rules)
 

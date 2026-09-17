@@ -1,13 +1,12 @@
 # System Spec
 
 Create and manage the specification of a software system as an OKF v0.2
-bundle that follows the [Spec profile](src/references/profile.md) and its
-modules.
+bundle that follows the [Spec profile](src/references/profile.md).
 
 ## Maintaining the templates
 
-The profile, its modules, and each template's **Type contract** are the
-normative contract. Keep them coherent with these conventions when adding or
+The profile and each template's **Type contract** are the normative
+contract. Keep them coherent with these conventions when adding or
 changing a template, and run the lint from the repository root before
 committing:
 
@@ -20,36 +19,24 @@ references to them, where uppercase keywords appear, and agreement between
 each template's Type contract and Suggested document. It exits non-zero on
 any finding. The other conventions here are kept by review.
 
-### Core and modules
+### One profile
 
-The core profile holds what most systems need: the core types and the rules
-that apply to every document. A module holds a group of types that not every
-system needs, with everything that exists only for them.
+The profile holds the rules for every type. Only the System is required, and
+the profile marks no type as core; SKILL.md groups the types most systems
+start with, for navigation only.
 
-- A module file has the sections it needs from **Concept types**,
-  **Vocabulary**, **Structure**, **Placement** (with **Placement levels** and
-  **Fixed locations**), **Ownership tests** (with **Where content goes**), and
-  **Named links**, in that order. Each table extends the profile's table of
-  the same name, whose rule names module tables as extension points. The
-  directory tree in **Structure** is the folder contract, with a comment on
-  each folder that holds concepts.
-- A rule, term, named link, or interim practice that exists only for a
-  module's types lives in that module, including guidance that only matters
-  when the module is adopted.
-- Core rules never depend on a module's types. Core examples, glossary entry
-  lines, and named link rows may mention them, because they add nothing a
-  corpus without the module must do. A module rule names another module's
-  types only conditionally, such as "in a corpus without the Rules module".
-- The Decomposition module makes a subsystem equivalent to a system at its own
-  boundary, so no other file restates how a rule applies to subsystems.
-- The profile's **Modules** table gives, for each module, how content is
-  written without it.
-- A module takes a type from the core only when the core rules no longer need
-  that type.
+- The directory tree in the profile's **Structure** is the file and folder
+  contract, and so the only statement of where a type with one location lives,
+  with a comment on each folder that holds concepts.
+- Rules state what a document of a type must do when it exists. No rule
+  requires a corpus to hold a document of another type, or gives a second way
+  to write content whose owning type the corpus does not use.
+- P-DEC-1 makes a subsystem equivalent to a system at its own boundary, so no
+  other file restates how a rule applies to subsystems.
 
 ### One home for each rule
 
-- A rule that applies to more than one type lives in the profile or a module.
+- A rule that applies to more than one type lives in the profile.
   A rule for one type lives in that type's contract, including when to create
   a concept of that type.
 - A deferred concern is listed once, in the profile's **Not yet defined**.
@@ -61,13 +48,14 @@ system needs, with everything that exists only for them.
   appear only in normative statements.
 - Terms are used as a **Vocabulary** table defines them. Add or change a row
   there before giving a term a new meaning.
-- Named links between documents are defined and assigned to one side in one
-  row of one **Named links** table. Templates use those names in bold.
+- Named links between documents, including glossary entry lines that link a
+  concept, are defined and assigned to one side in one row of one
+  **Named links** table. Templates use those names in bold.
 
 ### Rule identifiers
 
 Every normative statement is a list item that begins with a bold identifier:
-`**P-<AREA>-<n>**` in the profile or a module, or `**<CODE>-<n>**` in a Type
+`**P-<AREA>-<n>**` in the profile, or `**<CODE>-<n>**` in a Type
 contract.
 
 - A tagged item states rules of one strength only: MUST and MUST NOT, SHOULD
@@ -88,21 +76,21 @@ contract.
 | FEA | Feature | ET | Entity Type |
 | CMP | Feature Component | VT | Value Type |
 | UC | Use Case | BR | Business Rule |
-| REQ | Requirement | | |
+| REQ | Requirement | MIS | Mission |
+| VIS | Vision | PRI | Principles |
 
-Profile areas are TYP, STR, PLC, OWN, LNK, STA, CON, and DOC. Each
-module has one area: DEC for Decomposition, RUL for Rules, QUA for Quality,
-and DAT for Data.
+Profile areas are TYP, STR, PLC, OWN, LNK, STA, CON, and DOC, and, for rules
+that concern particular types, DIR for direction, DEC for subsystems and
+feature components, RUL for business rules, QUA for quality, and DAT for
+data.
 
 ### Deferring a concern
 
 To keep a version small, defer a concern rather than half-specify it: remove
 its rules, named links, and sections, and list it in the profile's
-**Not yet defined**. The profile's general practice for undefined concerns,
-P-CON-5, then applies: state it in prose in the nearest section, link records
-under **Related**, and record what is undecided under **Open questions**. Add
-an interim practice to the Writing guidance of the type it concerns only when
-it is more specific than that. When the concern is taken up, it returns under
+**Not yet defined**, where P-CON-5 applies. Add an interim practice to the
+Writing guidance of the type it concerns only when it is more specific than
+P-CON-5. When the concern is taken up, it returns under
 new identifiers.
 
 Links are plain unless a named link applies; a named link is added to a table
@@ -111,7 +99,10 @@ only when readers need its meaning and a plain link's place does not show it.
 Rules that apply to every type, such as the optional **Open questions**,
 **Related**, and **Illustrations** sections and the meaning of *(optional)*
 and conditional markers, live in the profile's **Document conventions** and
-are not repeated in each Type contract.
+are not repeated in each Type contract. Every Suggested document lists
+**Illustrations**, **Open questions**, and **Related**, except the Glossary
+and Principles, whose entries carry an **Example** line instead of
+**Illustrations**.
 
 ### Template anatomy
 
@@ -121,16 +112,16 @@ Every template has this shape, in this order:
 2. A purpose paragraph beginning "Use for". That the Type contract is
    normative and the rest guides authoring is stated once, in the profile.
 3. `## Type contract`, containing, in this order:
-   1. when the profile's or a module's **Fixed locations** table does not
-      settle placement alone, an untagged placement paragraph beginning
-      "A <Type> document is placed as", linking the placement rules or
-      creation test that apply;
+   1. for a type placed by rule rather than by **Structure**, an untagged
+      placement paragraph beginning "A <Type> document is placed as",
+      linking the placement rules that apply;
    2. the tagged title rule;
    3. the tagged "MUST include these sections:" rule, listing every section
       of the type's own in document order, each marked *(optional)* or with a
       condition, such as *(when …)*, unless it is always required, and
       described in a few words;
-   4. tagged type-specific rules;
+   4. tagged type-specific rules, with any creation test phrased
+      "A <type> MUST be created only when";
    5. tagged MUST NOT and SHOULD NOT rules.
 
    There are no "MAY include" rules. Binding content is
@@ -158,6 +149,9 @@ template.
 
 | Template | Follows |
 | --- | --- |
+| Mission | The mission of the Object Management Group's Business Motivation Model, as what the business does for whom, apart from any system. |
+| Vision | The vision of the Business Motivation Model, and the product vision of Marty Cagan's *Inspired* and *Empowered*, as the future pursued rather than a specification. |
+| Principles | The product principles of Marty Cagan's *Inspired*, Amazon's tenets, and the business policy of the Business Motivation Model: guidance for decisions, ranked to settle conflicts, rather than obligations. |
 | System | The system overview of ISO/IEC/IEEE 29148, and the product perspective and operating environment of Karl Wiegers and Joy Beatty's software requirements specification. |
 | Subsystem | The same sources as the System template. |
 | Business Requirements | The vision and scope document of Karl Wiegers and Joy Beatty, and the business requirements of ISO/IEC/IEEE 29148. |

@@ -10,15 +10,17 @@ description: >
 Create and manage specifications for a software system.
 
 Represent specs as an OKF v0.2 bundle that follows the
-[Spec profile](references/profile.md) and the modules the corpus adopts. The
-profile states which parts are normative, and its numbered rules are the
-checklist for writing and reviewing a document. Examples follow the
-[running example](references/example.md).
+[Spec profile](references/profile.md). The profile states which parts are
+normative, and its numbered rules are the checklist for writing and reviewing
+a document. Examples follow the [running example](references/example.md).
 
 ## Concept types
 
-The core types specify most systems. Only `system.md` is required at the
-start; write `business.md` and `glossary.md` once their content is known.
+Only `system.md` is required. Write a document of another type when there is
+content for it and its Type contract's creation test, if any, is met.
+
+Most systems start with these, writing `business.md` and `glossary.md` once
+their content is known:
 
 - [System](templates/system.md)
 - [Business Requirements](templates/business-requirements.md)
@@ -29,21 +31,21 @@ start; write `business.md` and `glossary.md` once their content is known.
 - [Requirement](templates/requirement.md)
 - [Glossary](templates/glossary.md)
 
-Adopt a module when the system needs its types:
+Add the others when the system has their content:
 
-- [Decomposition](references/modules/decomposition.md):
-  [Subsystem](templates/subsystem.md) and
+- [Mission](templates/mission.md), [Vision](templates/vision.md), and
+  [Principles](templates/principles.md), for the lasting purpose, pursued
+  future, and decision guidance of the business or product the system serves.
+- [Subsystem](templates/subsystem.md) and
   [Feature Component](templates/feature-component.md), when part of the
   system or of a feature meets the creation condition in its Type contract.
-- [Rules](references/modules/rules.md):
-  [Business Rule](templates/business-rule.md), for rules the business would
+- [Business Rule](templates/business-rule.md), for rules the business would
   keep without the system.
-- [Quality](references/modules/quality.md):
-  [Quality Characteristic](templates/quality-characteristic.md) and
+- [Quality Characteristic](templates/quality-characteristic.md) and
   [Quality Requirement](templates/quality-requirement.md), for required levels
   of quality.
-- [Data](references/modules/data.md): [Entity Type](templates/entity-type.md)
-  and [Value Type](templates/value-type.md), for the data the system keeps.
+- [Entity Type](templates/entity-type.md) and
+  [Value Type](templates/value-type.md), for the data the system keeps.
 
 ## Workflow
 
@@ -51,18 +53,15 @@ Adopt a module when the system needs its types:
    absent and the user wants a spec, create `spec/README.md`, `spec/index.md`,
    and `spec/system.md` as
    [Structure](references/profile.md#structure) requires. The README declares
-   the profile version, the adopted modules, and any local exceptions.
-2. **Load the rules.** Read the profile and each module the README declares.
-   Adopt a module, and declare it, before writing the first document of its
-   types.
+   the profile version and any local exceptions.
+2. **Load the rules.** Read the profile.
 3. **Choose the type.** Pick the type whose description fits the content.
-   When content borders two types, apply the ownership tests of the profile
-   and adopted modules before writing. When the owning type belongs to a
-   module the corpus has not adopted, follow the profile's
-   [modules](references/profile.md#modules) table or adopt the module.
+   When content borders two types, apply the profile's
+   [ownership tests](references/profile.md#ownership-tests) before writing.
 4. **Place the document.** Put it where the profile's
-   [Placement](references/profile.md#placement) rules and adopted modules
-   state, and update each affected `index.md`.
+   [Structure](references/profile.md#structure) and
+   [Placement](references/profile.md#placement) rules state, and update each
+   affected `index.md`.
 5. **Write from the template.** Start from the template's **Suggested
    document**, satisfy its Type contract and the profile's
    [content rules](references/profile.md#content-rules), and link to what
@@ -72,7 +71,7 @@ Adopt a module when the system needs its types:
    [Record gaps instead of inventing](references/profile.md#record-gaps-instead-of-inventing)
    requires, and keep the document `status: draft`.
 7. **Review.** Check the document against each numbered rule in its Type
-   contract and the profile and module rules it touches, and cite rule
+   contract and the profile rules it touches, and cite rule
    identifiers in findings.
 8. **Change status deliberately.** Only a person with authority to accept a
    document makes it `stable`, as
@@ -80,5 +79,5 @@ Adopt a module when the system needs its types:
    Deprecate rather than delete a concept that others link to, and update
    inbound links when moving or renaming.
 
-When content concerns something the profile or a module has not yet defined,
+When content concerns something the profile has not yet defined,
 follow [P-CON-5](references/profile.md#concerns-not-yet-defined).

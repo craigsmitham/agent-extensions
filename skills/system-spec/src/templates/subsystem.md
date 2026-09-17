@@ -6,12 +6,14 @@ Use for a part of the system with its own boundary.
 
 - **SUB-1** The title MUST be the subsystem's name.
 - **SUB-2** A Subsystem document MUST include these sections:
-  - **Purpose**: what the subsystem is and does within the system.
-  - **Relationship to the system**: which condition in SUB-3 it meets, and
-    what it provides to or needs from the rest of the system.
+  - **Purpose**: what the subsystem is and does within the system, which
+    condition in SUB-3 it meets, and what it provides to or needs from the
+    rest of the system.
   - **Boundary and context**: what is inside the subsystem and what is outside
     it, naming each party the subsystem interacts with.
-- **SUB-3** A subsystem MUST be defined only when part of the system has at
+  - **Operating environment** *(optional)*: conditions specific to the
+    subsystem that it must work in.
+- **SUB-3** A subsystem MUST be created only when part of the system has at
   least one of: required levels of quality specific to it; user classes
   specific to it; external interfaces specific to it; or separate delivery or
   operation.
@@ -34,17 +36,19 @@ status: draft
 # <Subsystem name>
 
 ## Purpose
-## Relationship to the system
 ## Boundary and context
+## Operating environment
+## Illustrations
 ## Open questions
 ## Related
 ```
 
 ## Writing guidance
 
-### Relationship to the system
+### Purpose
 
-Name the condition and the fact that meets it:
+Name the condition that makes the part a subsystem, and the fact that meets
+it:
 
 ```markdown
 Fleet maintenance is a subsystem because it has its own user class,
@@ -54,36 +58,39 @@ hours, which the rest of the rental system uses to decide what can be rented.
 ```
 
 A required level of quality that applies to one feature does not make the
-feature a subsystem, and a service, container, or module does not by itself make a
-subsystem.
+feature a subsystem, and a service, container, or module does not by itself
+make a subsystem.
+
+### Specified as a system
 
 A subsystem is specified as the system is, at its own boundary, as
-[P-DEC-1](../references/modules/decomposition.md#vocabulary) requires. Its
+[P-DEC-1](../references/profile.md#vocabulary) requires. Its
 own folder holds its use cases, requirements, and features, whose subject is
-the subsystem, and the subsystem document links them rather than describing
-them. Concepts specific to it that live at the system level, such as
-[Technician](<link>), link it under **Related**.
+the subsystem; the folder indexes list them, and the subsystem document does
+not describe them. Concepts specific to it that live at the system level,
+such as [Technician](<link>), link it under **Related**.
 
-Some subsystem concerns are
-[not yet defined](../references/profile.md#not-yet-defined). Until they are:
-
-- state operating conditions specific to the subsystem in the System's
-  **Operating environment**, naming and linking the subsystem; and
-- place a use case or requirement whose subject is the subsystem, but that
-  belongs to a system-level feature, within the subsystem, and link the
-  system-level feature under **Related**.
-
-Parties of the subsystem, such as technicians and equipment telematics for
-Fleet maintenance, are also outside the system, so they appear in the
-System's **Boundary and context** too.
+Use cases and requirements whose subject is the subsystem but that belong to
+a system-level feature are
+[not yet defined](../references/profile.md#not-yet-defined). Until they are,
+place such a concept within the subsystem, and link the system-level feature
+under **Related**.
 
 ### Boundary and context
 
 Apply the System's
 [boundary and context guidance](system.md#boundary-and-context) at the
-subsystem's boundary. Describe what passes between sibling subsystems there,
-linking the sibling Subsystem; the subsystem document does not otherwise
-describe the sibling.
+subsystem's boundary. Parties of the subsystem, such as technicians and
+equipment telematics for Fleet maintenance, are also outside the system, so
+they appear in the System's **Boundary and context** too. Describe what passes
+between sibling subsystems here, linking the sibling Subsystem; the subsystem
+document does not otherwise describe the sibling.
 
 **Related** links records that describe how the subsystem is realized, such
 as services or repositories.
+
+### Operating environment
+
+State only conditions specific to the subsystem, as the System's
+[operating environment guidance](system.md#operating-environment) describes;
+conditions of the whole system stay in the System.

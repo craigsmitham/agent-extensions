@@ -63,8 +63,11 @@ such as a business vocabulary or a style guide.
 
 An entry has a definition, then any entry lines, unless another concept's
 **Definition** defines its name; then it has no definition and a
-**Defined by** line, as
-[defined names](../references/profile.md#defined-names) requires.
+**Defined by** line, because
+[P-CON-2](../references/profile.md#one-home) allows one definition of each
+meaning. Such an entry is present when readers look for the name in the
+glossary. **Defined by** and **Decided by** are
+[named links](../references/profile.md#named-links).
 
 | Line | Content |
 | --- | --- |

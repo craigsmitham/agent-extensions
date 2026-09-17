@@ -16,7 +16,7 @@ availability or response time.
     makes it matter.
   - **Measures** *(when a quality requirement states a level on a measure)*:
     each such measure.
-- **QC-3** A quality characteristic SHOULD be created only when it has
+- **QC-3** A quality characteristic MUST be created only when it has
   quality requirements.
 - **QC-4** Each measure on which a quality requirement states a level MUST be
   defined under its own heading in **Measures**, precisely enough that two
@@ -113,7 +113,7 @@ time during which contractor customers can reserve equipment", rather than
 use".
 
 The **Definition** is the only definition of the characteristic's name, as
-[defined names](../references/profile.md#defined-names) requires.
+[P-CON-2](../references/profile.md#one-home) requires.
 
 ### Measures
 

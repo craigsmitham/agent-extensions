@@ -30,6 +30,7 @@ status: draft
 ## Purpose
 ## Boundary and context
 ## Operating environment
+## Illustrations
 ## Open questions
 ## Related
 ```
@@ -40,8 +41,8 @@ status: draft
 
 State what the system is and does in a paragraph, and whether it is new, a
 replacement, or part of a larger family of products. Do not summarize the
-business case; `business.md` holds it. Link features rather than
-describing them; each folder's `index.md` lists them.
+business case; `business.md` holds it. Do not list or describe
+features; the folder indexes list them.
 
 ### Boundary and context
 

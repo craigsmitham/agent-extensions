@@ -19,7 +19,6 @@ addresses, the outcomes it must bring about, and its scope.
   - **Scope**: what is in scope and what is explicitly out of scope.
 - **BIZ-3** Each success indicator MUST name, with a link, the objective it
   indicates.
-- **BIZ-4** **Scope** MUST link each feature it includes.
 
 ## Suggested document
 
@@ -41,6 +40,7 @@ status: draft
 ## Scope
 ### In scope
 ### Out of scope
+## Illustrations
 ## Open questions
 ## Related
 ```
@@ -50,7 +50,11 @@ status: draft
 ### Problem or opportunity
 
 Give the background and why now, the audience and the need or job that is
-unmet, the current gap, and evidence of demand.
+unmet, the current gap, and evidence of demand. This is the need that the
+system addresses now; why the business exists is its [mission](mission.md),
+as the profile's
+[ownership tests](../references/profile.md#direction-or-business-requirements)
+decide.
 
 ### Business objectives
 
@@ -89,7 +93,7 @@ target that is not agreed is an open question, not a plausible number:
   interest in the system, as
   [users and stakeholders](user-class.md#users-and-stakeholders) tells them
   apart from user classes.
-- **Related** links records such as business strategy, product vision,
-  roadmaps, and research, when readers need them, and the records that hold
+- **Related** links records such as business strategy, roadmaps, and
+  research when readers need them, and the records that hold
   initiative priorities and constraints, assumptions and dependencies, and
   risks, which this version does not define.

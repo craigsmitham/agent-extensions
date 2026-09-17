@@ -5,11 +5,6 @@ money, a rental period, or an email address.
 
 ## Type contract
 
-A Value Type document is placed as the Data module's
-[fixed locations](../references/modules/data.md#fixed-locations) state, when its
-[entity type, value type, or data attribute](../references/modules/data.md#entity-type-value-type-or-data-attribute)
-test makes the content a Value Type.
-
 - **VT-1** The title MUST name the kind of value as a singular noun phrase,
   such as "Money" or "Email address".
 - **VT-2** A Value Type document MUST include these sections:
@@ -66,7 +61,7 @@ track.
 
 The **Definition** says what a value of this type is, and is the only
 definition of the value type's name, as
-[defined names](../references/profile.md#defined-names) requires.
+[P-CON-2](../references/profile.md#one-home) requires.
 
 ### Composition
 
@@ -93,8 +88,8 @@ allows, as ISO 4217 sets currency codes.
 ### When to create one
 
 A value that more than one entity type, value type, or external interface uses
-is a Value Type, as the Data module's
-[where content goes](../references/modules/data.md#where-content-goes) gives. A
+is a Value Type, as the profile's
+[where content goes](../references/profile.md#where-content-goes) gives. A
 value used in one place can have one too, or be defined where it is used: fuel
 level, which only the equipment telematics interface carries, is defined
 there.
@@ -105,7 +100,7 @@ State conditions every value satisfies across its attributes because of what
 it means, such as "A rental period's last day is not earlier than its first
 day". A condition on values made by combining others, such as a sum of money
 having the one currency of the amounts added, is placed by
-[invariant, business rule, or requirement](../references/modules/data.md#invariant-business-rule-or-requirement):
+[invariant, business rule, or requirement](../references/profile.md#invariant-business-rule-or-requirement):
 it is an invariant because it follows from what money means.
 
 ### Illustrations

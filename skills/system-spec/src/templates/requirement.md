@@ -137,8 +137,7 @@ activity in the statement or rationale, such as
 ### Related
 
 State each named link once, in bold, as the
-[named links](../references/profile.md#named-links) tables of the profile and
-adopted modules assign to a Requirement, such as **serves** for the business
+[named links](../references/profile.md#named-links) table assigns to a Requirement, such as **serves** for the business
 objective or user class that justifies the obligation, and **replaces** for
 the deprecated requirement this one supersedes.
 

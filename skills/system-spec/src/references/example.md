@@ -1,8 +1,8 @@
 # Running example
 
 Every example in the templates describes the same fictional equipment rental
-business, so that examples agree with each other. Its corpus adopts every
-[module](profile.md#modules). This page fixes the names
+business, so that examples agree with each other. Its corpus has documents of
+every [concept type](profile.md#concept-types). This page fixes the names
 and facts they use. It is illustrative: the [profile](profile.md) and type
 contracts remain authoritative, and none of these facts belong in a real
 corpus.
@@ -20,6 +20,9 @@ and each links Fleet maintenance.
 | Type | Names |
 | --- | --- |
 | System | Rental system |
+| Mission | Rental business mission |
+| Vision | Rental business vision |
+| Principle | Safe equipment over availability; Contractors' time over depot convenience, in the Rental business principles |
 | Business Requirements | Rental system business requirements |
 | Subsystem | Fleet maintenance |
 | Stakeholder | Equipment insurer |
@@ -40,6 +43,22 @@ and each links Fleet maintenance.
 | Value Type | Email address; Equipment condition; Money; Operating hours; Rental period |
 
 ## Facts
+
+### Direction
+
+- The **rental business** is the business that the rental system serves. Its
+  mission is that it keeps contractors working by getting them the equipment a
+  job needs, where and when the job needs it.
+- Its vision is that contractors have what each job needs on site when the job
+  needs it, and never lose a working day to finding, collecting, or returning
+  equipment. Business objective 1 is a step toward it.
+- Its principles, in order of precedence, are *Safe equipment over
+  availability*: it rents only equipment it knows to be safe, even when a
+  contractor goes without, from which the Overdue inspection withdrawal rule
+  follows; and *Contractors' time over depot convenience*: when a choice saves
+  contractors time at the cost of more work for depot staff, it chooses
+  contractors' time, which is why customers reserve equipment online at any
+  hour.
 
 ### Business
 

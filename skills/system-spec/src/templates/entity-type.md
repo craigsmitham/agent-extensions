@@ -6,11 +6,6 @@ equipment item.
 
 ## Type contract
 
-An Entity Type document is placed as the Data module's
-[fixed locations](../references/modules/data.md#fixed-locations) state, when its
-[entity type, value type, or data attribute](../references/modules/data.md#entity-type-value-type-or-data-attribute)
-test makes the content an Entity Type.
-
 - **ET-1** The title MUST name the kind of thing as a singular noun phrase,
   such as "Reservation" or "Equipment item".
 - **ET-2** An Entity Type document MUST include these sections:
@@ -77,7 +72,7 @@ status: draft
 ### Definition
 
 The **Definition** is the only definition of the entity type's name, as
-[defined names](../references/profile.md#defined-names) requires. Link the
+[P-CON-2](../references/profile.md#one-home) requires. Link the
 terms it uses:
 
 ~~~markdown
@@ -129,12 +124,12 @@ does not repeat it.
 
 Cardinality states what the data allows. A policy that limits it further is
 placed by
-[invariant, business rule, or requirement](../references/modules/data.md#invariant-business-rule-or-requirement).
+[invariant, business rule, or requirement](../references/profile.md#invariant-business-rule-or-requirement).
 
 ### Lifecycle
 
-What **Lifecycle** holds is set by the Data module's
-[where content goes](../references/modules/data.md#where-content-goes). A
+What **Lifecycle** holds is set by the profile's
+[where content goes](../references/profile.md#where-content-goes). A
 state diagram is often the clearest form. Label each
 transition with the event that causes it, in business terms, and link the use
 cases and business rules that cause transitions under **Related**.
@@ -158,7 +153,7 @@ stateDiagram-v2
 
 What the system does when a transition occurs, or is attempted without being
 permitted, is placed by
-[where content goes](../references/modules/data.md#where-content-goes).
+[where content goes](../references/profile.md#where-content-goes).
 
 ### Invariants
 

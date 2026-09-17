@@ -4,19 +4,17 @@ Version **0.1.0** · Base **OKF v0.2** · Maintainer **@craigsmitham** · Status
 **draft**.
 
 This profile describes the specification of a software system as an OKF v0.2
-bundle. It defines the core concept types, the corpus structure, where each
-concept lives, which type owns content that two types border, how concepts
-link, how their status changes, and the rules every document follows.
-[Modules](#modules) add concept types that not every system needs. The
-normative contract comprises this file, each adopted module, and the
-**Type contract** section of each template the corpus uses. Other template
-sections are authoring guidance.
+bundle. It defines the concept types, the corpus structure, where each concept
+lives, which type owns content that two types border, how concepts link, how
+their status changes, and the rules every document follows. The normative
+contract comprises this file and the **Type contract** section of each
+template. Other template sections are authoring guidance.
 
 MUST and MUST NOT are requirements; SHOULD and SHOULD NOT are recommendations;
 MAY denotes an option. Each normative statement is a list item that begins
-with a rule identifier, such as **P-STR-1** in this profile, **P-DAT-1** in a
-module, or **UC-3** in a Type contract, so that reviews can cite it. Text
-without an identifier defines or explains; it adds no requirement.
+with a rule identifier, such as **P-STR-1** in this profile or **UC-3** in a
+Type contract, so that reviews can cite it. Text without an identifier defines
+or explains; it adds no requirement.
 
 Profiles are a producer convention beyond OKF v0.2. No `okf_profile` field is
 introduced. Examples in the templates use the [running example](example.md).
@@ -24,66 +22,78 @@ introduced. Examples in the templates use the [running example](example.md).
 ## Concept types
 
 - **P-TYP-1** Each concept document in the corpus MUST use one of the `type`
-  values in this table or in the **Concept types** table of an adopted module.
+  values in this table.
 
 | Type | Description |
 | --- | --- |
+| [`Mission`](../templates/mission.md) | Why the business or product exists: whom it serves and what it does for them. |
+| [`Vision`](../templates/vision.md) | The future that the business or product pursues, beyond the horizon of the business objectives. |
+| [`Principles`](../templates/principles.md) | The guidance by which the business or product decides between reasonable options that conflict, in order of precedence. |
 | [`System`](../templates/system.md) | The software system being specified, and the boundary that its other concepts describe. |
 | [`Business Requirements`](../templates/business-requirements.md) | The business objectives, expected outcomes, and scope that justify building or changing the system. |
+| [`Subsystem`](../templates/subsystem.md) | A part of the system with its own boundary, because it has its own user classes, external interfaces, required levels of quality, or delivery or operation. |
 | [`User Class`](../templates/user-class.md) | A distinct group of the system's users, identified by how they use the system and what they need from it. |
 | [`External Interface`](../templates/external-interface.md) | A connection across the system's boundary to an external system or a device, and what passes across it. |
 | [`Feature`](../templates/feature.md) | A coherent unit of capability that the system provides to its users. |
+| [`Feature Component`](../templates/feature-component.md) | A distinct part of a feature's behavior, such as a command, workflow, or screen, that has its own use cases or requirements. |
 | [`Use Case`](../templates/use-case.md) | How an actor pursues a goal at a boundary, through success and failure paths. |
 | [`Requirement`](../templates/requirement.md) | An obligation that the system must satisfy under identified conditions. |
+| [`Business Rule`](../templates/business-rule.md) | A rule under the business's jurisdiction that restricts conduct, requires an action, infers a fact, or computes a value, and that the system must respect. |
+| [`Quality Characteristic`](../templates/quality-characteristic.md) | A property of how well the system works, such as availability or response time. |
+| [`Quality Requirement`](../templates/quality-requirement.md) | A required level of a quality characteristic for the system, under stated conditions. |
 | [`Glossary`](../templates/glossary.md) | The agreed terms of the system, and what each one means. |
+| [`Entity Type`](../templates/entity-type.md) | A kind of thing in the business domain that has identity and about which the system keeps data. |
+| [`Value Type`](../templates/value-type.md) | A kind of value in the business domain that has no identity and is defined by its meaning, attributes or domain, and allowed values. |
 
-This profile does not describe the system's architecture. A feature, or a
-placement level that a module adds, is a specification boundary or placement
+Only the System document is required. A document of another type is written
+when there is content for it, and only when its Type contract's creation test,
+where it has one, is met; a corpus has no documents of the types it does not
+need.
+
+This profile does not describe the system's architecture. A subsystem, a
+feature, or a feature component is a specification boundary or placement
 level, not an architecture element; design and implementation structure
 belong to records.
 
-## Modules
-
-A module adds concept types, with the structure, placement, ownership tests,
-named links, vocabulary, and interim practices they need. Its tables extend
-the tables of the same name in this profile. Adopt a module when the system
-needs its types.
-
-| Module | Types | Without the module |
-| --- | --- | --- |
-| [Decomposition](modules/decomposition.md) | `Subsystem`, `Feature Component` | Use cases and requirements are placed at the system or at a feature. |
-| [Rules](modules/rules.md) | `Business Rule` | A rule that the business would keep without the system is stated through the Requirements that enforce it, with the rule's source under **Rationale**. |
-| [Quality](modules/quality.md) | `Quality Characteristic`, `Quality Requirement` | A required level of quality is a Requirement that states its measure in the statement. |
-| [Data](modules/data.md) | `Entity Type`, `Value Type` | The meaning of data is a glossary entry, and its detail is stated where it is used. |
-
-- **P-TYP-2** A corpus MUST NOT contain a document of a type from a module it
-  has not adopted.
-- **P-TYP-3** A corpus that adopts a module MUST apply the module's rules as
-  part of this profile.
-- **P-TYP-4** Content whose owning type belongs to a module the corpus has not
-  adopted MUST be written as the **Without the module** column gives.
-
 ## Vocabulary
 
-Each term below has one meaning throughout this profile, its modules, and its
-templates.
+Each term below has one meaning throughout this profile and its templates.
 
 | Term | Meaning |
 | --- | --- |
 | Boundary | What separates the system from the parties it interacts with. |
-| Subject | The System whose boundary a Use Case or Requirement describes. It is never a feature or an external interface. |
-| Placement level | The system or a feature, or a level that an adopted module adds, as a place where Use Cases and Requirements live. |
+| Subject | The System or Subsystem whose boundary a Use Case or Requirement describes. It is never a feature, a feature component, or an external interface. |
+| Placement level | The system, a subsystem, a feature, or a feature component, as a place where Use Cases and Requirements live. |
 | Home | The one location of a concept. The home of a Use Case or Requirement is the placement level at which it is placed, as [Rule-placed types](#rule-placed-types) decides. |
 | Owning type | The type that the [Ownership tests](#ownership-tests) assign content to. |
-| Named link | A link whose meaning a [Named links](#named-links) table gives, stated in bold with its name. |
+| Named link | A link whose meaning the [Named links](#named-links) table gives, stated in bold with its name. |
+| Direction | The mission, vision, and principles of a business or product, which hold whichever system serves it. Direction is intent and guidance, not obligation. |
+| Principle | A statement of how to decide between reasonable options that conflict, as an entry of a Principles document. |
 | Scope | What the system includes and excludes, as the Business Requirements document states it. What a feature includes is its *coverage*. |
+| System-level feature | A feature placed directly under the system. |
+| Subsystem-level feature | A feature placed under a subsystem. |
 | Design constraint | A Requirement whose obligation is to use, or not use, a specific technology, platform, or design. |
+| Measure | A quantity on which a Quality Requirement states a level, defined under a Quality Characteristic's **Measures**. |
 | Stakeholder | A person or group with an interest in the system who does not use it or its outputs directly. People who use the system, including those who operate it, belong to a User Class. |
 | User interface | What the system presents to people and the actions it offers them. *Interface* alone means an External Interface. |
 | Counterpart | The external system or device at the other end of an External Interface. |
+| Attribute | A data attribute: an item of data kept about an Entity Type's instance or making up a Value Type's value. |
+| Instance | An item of the data that an Entity Type describes. |
+| Invariant | A condition that every instance of an Entity Type, or every value of a Value Type, satisfies because of what the data means. |
 | Supporting sections | **Illustrations**, **Rationale**, **Verification**, **Open questions**, and **Related**, which several types share and which hold no binding content. |
 | Operations concerns | Instrumentation, service level objectives and agreements, alerting, and operational responses. They belong to operations records. |
 | Record | Material maintained outside the corpus, such as architecture, operations, engineering, or work-management records. |
+
+A subsystem is specified as a system is, at its own boundary:
+
+- **P-DEC-1** Wherever this profile or a template describes the system as a
+  boundary or the other end of an External Interface, or places
+  features, use cases, or requirements under the system, the same MUST apply
+  to a subsystem at its own boundary, except where this profile states
+  otherwise.
+
+A Use Case or Requirement placed within a subsystem has that Subsystem as its
+subject.
 
 ## Structure
 
@@ -95,11 +105,21 @@ templates.
 spec/
   README.md                        # Adoption declaration
   index.md                         # Navigation; carries okf_version: "0.2"
+  mission.md                       # Mission
+  vision.md                        # Vision
+  principles.md                    # Principles
   system.md                        # System
   business.md                      # Business Requirements
   glossary.md                      # Glossary
   users/                           # User Class documents
   interfaces/                      # External Interface documents
+  rules/                           # Business Rule documents
+  entities/                        # Entity Type documents
+  values/                          # Value Type documents
+  quality/                         # A folder for each Quality Characteristic
+    <characteristic>/
+      <characteristic>.md          # Quality Characteristic
+      <quality-requirement>.md     # Quality Requirement
   use-cases/                       # Use Cases placed at the system
   requirements/                    # Requirements placed at the system
   features/                        # A folder for each Feature
@@ -107,20 +127,29 @@ spec/
       <feature>.md                 # Feature
       use-cases/                   # Use Cases placed at the feature
       requirements/                # Requirements placed at the feature
+      components/                  # A folder for each Feature Component
+        <component>/
+          <component>.md           # Feature Component
+          use-cases/
+          requirements/
+  subsystems/                      # A folder for each Subsystem
+    <subsystem>/
+      <subsystem>.md               # Subsystem
+      use-cases/                   # Placed at the subsystem
+      requirements/
+      features/                    # Same structure as spec/features/
 ```
 
 - **P-STR-2** `spec/` MUST contain `README.md`, `index.md`, and `system.md`.
 - **P-STR-3** `README.md` MUST satisfy base OKF, use `Reference` as its type,
-  and declare the adopted profile version, each adopted module, and any local
-  exceptions.
-- **P-STR-4** Folders MUST be named as this structure or an adopted module's
-  **Structure** shows, and each folder MUST hold only its reserved `index.md`
-  and `log.md` and what the structure shows in it.
-
-- **P-STR-5** Each Feature, and each type that a module makes a folder, MUST
-  be a folder containing a concept document with the same name as the folder,
-  whether or not the folder holds other concepts, and every other concept
-  MUST be a single file.
+  and declare the adopted profile version and any local exceptions.
+- **P-STR-4** Files and folders MUST be named and placed as this structure
+  shows, and each folder MUST hold only its reserved `index.md` and `log.md`
+  and what the structure shows in it.
+- **P-STR-5** Each Subsystem, Feature, Feature Component, and Quality
+  Characteristic MUST be a folder containing a concept document with the same
+  name as the folder, whether or not the folder holds other concepts, and every
+  other concept MUST be a single file.
 - **P-STR-6** A folder that holds documents of a type, such as `users/` or
   `use-cases/`, MUST NOT exist without a concept document in it.
 - **P-STR-7** Every populated folder MUST contain an `index.md`, except a
@@ -132,38 +161,53 @@ Every placement level has the same shape: its concept document, which for the
 system is `system.md`; `use-cases/` and `requirements/` for the documents
 placed at it; and a folder for the placement levels below it. A concept's
 shape follows its type, not its contents: a feature with no use cases yet is
-still a folder, so that adding one never moves the feature.
+still a folder, so that adding one never moves the feature. Features do not
+contain the documents the structure places outside them, such as user classes,
+external interfaces, and entity types; they link to them. A data attribute
+that only one feature needs still belongs to its entity type.
+
+A Quality Requirement is placed in the folder of the characteristic that the
+[Quality Requirement contract](../templates/quality-requirement.md#type-contract)
+chooses. A measure has one home however many quality requirements use it, as
+the
+[Quality Characteristic contract](../templates/quality-characteristic.md#type-contract)
+requires, because those quality requirements are placed beside it.
+
+A business or product that several systems serve has one direction, held by
+one corpus and used by the others.
+
+- **P-DIR-1** A corpus that uses a Mission, Vision, or Principles document held
+  by another corpus MUST NOT hold its own document of that type, and its
+  `README.md` MUST link each document it uses.
 
 ## Placement
 
-- **P-PLC-1** Each concept MUST have exactly one home and MUST NOT be copied
-  to another location; other documents link to it.
-
-Placement expresses ownership and, for a Use Case or Requirement, its subject.
-It does not make a concept conditional on the feature it is placed under;
-every other connection between concepts is a link, as
-[Named links](#named-links) states.
+Each type other than Use Case and Requirement has the one location that
+[Structure](#structure) shows. Placement expresses ownership and, for a Use
+Case or Requirement, its subject. It does not make a concept conditional on the
+feature it is placed under; every other connection between concepts is a link,
+as [Named links](#named-links) states. Each concept has one home, as
+[One home](#one-home) requires.
 
 ### Placement levels
 
-Features belong to the system. A Use Case or Requirement is placed at the
-system or at a feature. An adopted module can add placement levels.
+Features belong to the system or to one subsystem, and feature components
+belong to one feature. A Use Case or Requirement is placed at the system, a
+subsystem, a feature, or a feature component. One whose subject is a
+Subsystem is placed within that subsystem: at the subsystem, or at one of its
+features or feature components. A concept shared by two subsystems is placed
+at the system, and its subject is the System.
 
-### Fixed locations
+Every type other than those placed within a subsystem lives at the system
+level, even when it is specific to one subsystem, such as a user class, an
+external interface, or a glossary term.
 
-- **P-PLC-2** These types, and the types in an adopted module's
-  **Fixed locations** table, MUST live at the locations given.
-
-| Type | Location |
-| --- | --- |
-| `System` | `system.md` |
-| `Business Requirements` | `business.md` |
-| `Glossary` | `glossary.md` |
-| `User Class` | `users/` |
-| `External Interface` | `interfaces/` |
-| `Feature` | `features/<feature>/` |
-
-Features do not contain the types in this table; they link to them.
+- **P-DEC-2** A concept that lives at the system level but is specific to one
+  subsystem SHOULD link that subsystem under **Related**.
+- **P-DEC-3** A meaning specific to one subsystem MUST take a name distinct
+  from the system's other names.
+- **P-DEC-4** The **Scope** of the Business Requirements MUST link each
+  subsystem it includes.
 
 ### Rule-placed types
 
@@ -176,33 +220,35 @@ Features do not contain the types in this table; they link to them.
 A concept used by two features has their nearest common placement level as
 its home.
 
-### Names and meanings
-
-- **P-PLC-5** Each meaning MUST be defined exactly once in the corpus, and each
-  defined name MUST have one meaning.
-
 ## Ownership tests
 
-When content could belong to more than one type, this section and the
-**Ownership tests** of adopted modules decide its owning type. Each test is a
-list of questions, and the first answered yes decides. Templates link to these
-tests rather than restating them.
+When content could belong to more than one type, this section decides its
+owning type. After the **Where content goes** table, each test is a list of
+questions, and the first answered yes decides. Templates link to these tests
+rather than restating them.
 
 ### Where content goes
 
-- **P-OWN-1** Content MUST be placed with the owning type that this table or
-  an adopted module's **Where content goes** table gives, and content that
-  more than one row could describe MUST be placed as the ownership tests
-  decide.
+- **P-OWN-1** Content MUST be placed with the owning type that this table
+  gives, and content that more than one row could describe MUST be placed as
+  the ownership tests decide.
 
 | Concern | Owning type |
 | --- | --- |
+| Why the business or product exists, whatever system serves it | Mission |
+| The future that the business or product pursues, without a measure or target | Vision |
+| How to decide between reasonable options that conflict, such as which user class or quality prevails | Principles |
+| Guidance for design decisions, such as visual style or interaction patterns | Not Principles; design records, as [P-CON-8](#work-management-and-design) requires |
 | What a term means to the business | Glossary |
+| How the business decides whether something belongs to a classification, such as *high-risk customer* | Business Rule. The classification's meaning is a glossary entry with a **Decided by** line. |
 | The formats and protocols that a counterpart or a named standard requires at a connection | External Interface |
 | What a user interface presents and offers | The **Illustrations** of the narrowest placement level whose use cases it serves |
 | A binding obligation on a user interface, such as accessibility | Requirement |
-| The conditions the system must work in | System operating environment |
-| A condition that more than one requirement uses | A named condition in the System's **Operating environment** |
+| The conditions the system must work in | The System's **Operating environment**, where a condition that more than one requirement uses is named |
+| The states of an entity type's instances, the permitted transitions, what creates an instance, and whether an ended instance is removed, retained, or anonymized | The Entity Type's **Lifecycle** |
+| What the system must do when a transition occurs, or when a transition that the lifecycle does not permit is attempted | Requirement, linking to the lifecycle |
+| How long instances or their data are kept, and who may see them | Not the Entity Type; the rule or obligation that sets it, placed by the other ownership tests |
+| A value that more than one entity type, value type, or external interface uses | A Value Type |
 
 A row for a definition that more than one document uses, such as a named
 condition, gives its shared home. A definition that one document alone uses
@@ -210,15 +256,88 @@ can be stated where it is used or in its shared home; one stated in place
 moves to its shared home when its second use appears. Documents link to the
 shared definition.
 
-### Defined names
+### Direction or business requirements
 
-- **P-OWN-2** A concept document with a **Definition** section MUST be the
-  only definition of its title's name, and a glossary entry for that name
-  MUST have no definition and a **Defined by** line that links to the
-  concept.
+- **P-DIR-2** Content that could be direction or Business Requirements MUST be
+  placed by the first of these questions answered yes.
 
-A glossary entry for such a name is present when readers look for the name in
-the glossary.
+1. Does it state, or need, a measure or target? It is a business objective or
+   a success indicator.
+2. Would it still hold if a different system served the business or product?
+   It is direction, and [where content goes](#where-content-goes) decides its
+   type.
+3. Otherwise, it is Business Requirements content, such as the
+   **Problem or opportunity** or **Scope**.
+
+### Principle or obligation
+
+- **P-DIR-3** Content that could be a principle or an obligation MUST be
+  placed by the first of these questions answered yes.
+
+1. Could two readers decide whether a single case complies without weighing
+   one option against another? It is an obligation or rule, placed by the
+   other ownership tests, and it can link the principle it follows under
+   **Rationale**.
+2. Otherwise, it guides a decision, and it is a principle.
+
+### Business rule or requirement
+
+- **P-RUL-1** Content that could be a Business Rule or a Requirement MUST be
+  placed by the first of these questions answered yes.
+
+1. Would it still apply if the business worked without the system, whether
+   the business chose it or an outside authority, such as a law, regulation,
+   standard, or contract, imposes it? It is a Business Rule.
+2. Otherwise, it is a Requirement.
+
+How the system detects, prevents, permits an override of, or reports a
+violation of a rule is a Requirement that **enforces** the rule.
+
+### Quality requirement or requirement
+
+- **P-QUA-1** An obligation that could be a Requirement or a Quality
+  Requirement MUST be placed by the first of these questions answered yes.
+
+1. Can it be satisfied only by providing a specific function, or by using a
+   specific technology, platform, or design? It is a Requirement, a design
+   constraint when it names a technology, platform, or design, and it
+   **serves** the quality characteristic it helps achieve.
+2. Is compliance decided on each occurrence of a single response, such as a
+   deadline or value for each notice sent? It is a Requirement.
+3. Is compliance decided on a measure taken over a population of occurrences
+   or a period, such as a percentile or a proportion of time, or on a
+   criterion that holds across the subject's functions? It is a Quality
+   Requirement.
+
+An obligation for which no question is answered yes is recorded under
+**Open questions** until it is restated.
+
+### Invariant, business rule, or requirement
+
+- **P-DAT-1** A condition on data MUST be placed by the first of these
+  questions answered yes.
+
+1. Would changing the condition change what the data means? It is an
+   invariant of the Entity Type or Value Type.
+2. Did the business choose the condition, or does an outside authority impose
+   it, such as a policy that limits a relationship's cardinality further than
+   the data allows? It is a Business Rule.
+3. Otherwise, the solution imposes it, and it is a Requirement that is a
+   design constraint.
+
+What the system must do to keep an invariant or rule true, across
+transitions, concurrency, retries, and failures, is a Requirement.
+
+### Entity type, value type, or data attribute
+
+- **P-DAT-2** A kind of thing or value in the business data MUST be placed by
+  the first of these questions answered yes.
+
+1. Must its instances be told apart even when all their data is equal? It is
+   an Entity Type.
+2. Otherwise, its equal values are interchangeable, and it is a Value Type,
+   or a data attribute defined where it is used when
+   [where content goes](#where-content-goes) allows.
 
 ### Use case extension or requirement
 
@@ -237,24 +356,29 @@ A link from one document to another is plain unless a named link applies. A
 plain link sits in the place its type contract gives it, such as a use case's
 **Primary actor**; links to a glossary entry or named condition that the
 document uses; or sits under **Related** for a concept the document is about.
-A link whose meaning this table or an adopted module's **Named links** table
-gives is stated in bold with that name, such as
-"**specified by** [Reservations of unavailable equipment are rejected](<link>)".
+A link whose meaning this table gives is stated in bold with that name, such
+as "**specified by** [Reservations of unavailable equipment are rejected](<link>)".
 
 - **P-LNK-1** A document MUST link to each concept it depends on, summarizes,
-  belongs to, is about, or uses, and MUST state the link as a named link when
-  one applies.
+  is about, or uses, and MUST state the link as a named link when one
+  applies.
 - **P-LNK-2** Each named link MUST be stated only in the document that the
   table's **Stated in** column names.
 - **P-LNK-3** A document SHOULD NOT list the concepts that link to it or that
   its folder contains; each folder's `index.md` lists what the folder
   contains.
 
+A document's own folder shows what it belongs to, so a use case placed at a
+feature does not link the feature for that reason.
+
 | Named link | Meaning | Stated in | Links to |
 | --- | --- | --- | --- |
 | specified by | The requirement that states a step's or extension's binding detail | Use Case step or extension | Requirement |
-| serves | What a concept exists to support or help achieve | Feature, Requirement, Quality Characteristic | User Class, business objective, or, from a Requirement, Quality Characteristic |
+| serves | What a concept exists to support or help achieve | Feature, Requirement, Quality Characteristic | User Class, business objective, or Quality Characteristic |
+| enforces | How the system respects a rule | Requirement | Business Rule |
 | replaces | A concept that supersedes a deprecated one | The replacing concept | The deprecated concept |
+| Defined by | The concept whose **Definition** defines the entry's name | Glossary entry | Concept with a **Definition** section |
+| Decided by | The rule that decides whether something belongs to the entry's classification | Glossary entry | Business Rule |
 
 ## Status and change
 
@@ -289,13 +413,16 @@ and renames.
 
 These rules apply to every concept document.
 
-### Link instead of restating
+### One home
 
-- **P-CON-1** A document MUST NOT restate content that another concept owns;
-  it summarizes only what the reader needs in place and links to the owning
-  document.
-- **P-CON-2** A document MUST use each term as the glossary defines it, and
-  link to the entry rather than redefine the term.
+- **P-CON-1** Each concept MUST have exactly one home and MUST NOT be copied
+  to another location, and a document MUST NOT restate content that another
+  concept owns; it summarizes only what the reader needs in place and links to
+  the owning document.
+- **P-CON-2** Each meaning MUST be defined exactly once in the corpus, by a
+  glossary entry or by a concept's **Definition** section; each defined name
+  MUST have one meaning; and a document MUST use each term as its definition
+  gives, linking to it rather than redefining the term.
 - **P-CON-3** A term that readers could interpret differently SHOULD have a
   glossary entry once its meaning is agreed.
 
@@ -309,11 +436,11 @@ These rules apply to every concept document.
 
 ### Concerns not yet defined
 
-- **P-CON-5** Content about a concern that this profile and the adopted
-  modules do not define SHOULD follow the practice that the Writing guidance
-  of the document's type gives for it, and otherwise be stated in prose in the section
-  nearest to it, with the records that hold it linked under **Related** and
-  what is undecided recorded under **Open questions**.
+- **P-CON-5** Content about a concern that this profile does not define SHOULD
+  follow the practice that the Writing guidance of the document's type gives
+  for it, and otherwise be stated in prose in the section nearest to it, with
+  the records that hold it linked under **Related** and what is undecided
+  recorded under **Open questions**.
 
 [Not yet defined](#not-yet-defined) lists the concerns this version leaves
 undefined.
@@ -356,14 +483,15 @@ to write a definition well.
 
 ### Binding and illustrative content
 
-Binding content establishes the obligations, rules, or definitions that a
-document exists to state. It is everything in a concept document except its
-supporting sections and, in the Glossary, the lines of each entry after its
-definition. It takes the form that states it most clearly: prose, a list, a
-table, a diagram, a formula, or a combination. Illustrative content, such as
-examples, scenarios, sample data, user interface sketches, and explanatory
-diagrams, helps a reader understand it, and lives under **Illustrations** or
-on a glossary entry's **Example** line.
+Binding content establishes the obligations, rules, definitions, or direction
+that a document exists to state. It is everything in a concept document except
+its supporting sections and the entry lines of a document made of entries,
+such as the lines of each Glossary entry after its definition. It takes the
+form that states it most clearly: prose, a list, a table, a diagram, a
+formula, or a combination. Illustrative content, such as examples, scenarios,
+sample data, user interface sketches, and explanatory diagrams, helps a reader
+understand it, and lives under **Illustrations** or on an entry's **Example**
+line.
 
 - **P-CON-10** When binding content uses more than one form, the forms MUST
   agree.
@@ -387,10 +515,6 @@ sketch in an illustrative section can take any form, including an image.
 
 - **P-DOC-1** Optional Context rows, entry lines, and sections that have no
   content SHOULD be omitted.
-- **P-DOC-2** The section for unresolved matters MUST be named
-  **Open questions**, the section for links to neighboring concepts and records
-  **Related**, and the section for illustrative content **Illustrations**,
-  except for the **Example** line of a glossary entry.
 - **P-DOC-3** Supporting sections SHOULD come last, in this order:
   **Illustrations**, **Rationale**, **Verification**, **Open questions**,
   **Related**.
@@ -402,32 +526,30 @@ sketch in an illustrative section can take any form, including an image.
 
 ## Not yet defined
 
-This version leaves these concerns undefined. Content about them follows base
-OKF v0.2, the conventions already present in the bundle, and
-[P-CON-5](#concerns-not-yet-defined). For some of them, the Writing guidance
-of the type they concern gives a more specific practice.
+This version leaves these concerns undefined. Content about them follows
+[P-CON-5](#concerns-not-yet-defined).
 
 - frontmatter keys beyond base OKF v0.2;
 - who may accept each type, and review dates such as `stale_after`;
 - stable identifiers for linked headings other than business objectives;
-- a product vision, initiative priorities and constraints, assumptions and
+- product strategy, initiative priorities and constraints, assumptions and
   dependencies, and risks;
+- principles for one system that add to the principles another corpus holds;
 - use case goal levels, such as summary and subfunction use cases;
 - how the parts of a system or feature fit together beyond folder indexes;
 - optional features, and features that require or exclude each other;
 - requirement classifications, such as functional, conformance, human
   factors, and process;
 - kinds of external interface counterpart;
-- quality priorities, and obligations that cannot both be fully met;
-- in the Decomposition module: operating conditions specific to one
-  subsystem, connections between sibling subsystems, folders
-  for concepts specific to one subsystem, and use cases and requirements whose
-  subject is a subsystem but that belong to a system-level feature;
-- in the Rules module: business rule categories, volatility, enforcement
-  levels, and relationships between business rules;
-- in the Quality module: correspondence with a quality model, baselines, and
-  quality characteristics nested within other quality characteristics; and
-- in the Data module: what causes each lifecycle transition, where a data
-  attribute's value comes from, the sensitivity and purpose of personal data,
+- obligations that cannot both be fully met;
+- for subsystems: connections between sibling subsystems, folders for concepts
+  specific to one subsystem, and use cases and requirements whose subject is a
+  subsystem but that belong to a system-level feature;
+- for business rules: rule categories, volatility, enforcement levels, and
+  relationships between business rules;
+- for quality: correspondence with a quality model, baselines, and quality
+  characteristics nested within other quality characteristics; and
+- for data: what causes each lifecycle transition, where a data attribute's
+  value comes from, the sensitivity and purpose of personal data,
   specialization between entity types or value types, and an overall data
   model spanning entity types.

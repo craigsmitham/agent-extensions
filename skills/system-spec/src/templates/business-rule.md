@@ -6,12 +6,6 @@ must respect.
 
 ## Type contract
 
-A Business Rule document is placed as the Rules module's
-[fixed locations](../references/modules/rules.md#fixed-locations) state, when
-its
-[business rule or requirement](../references/modules/rules.md#business-rule-or-requirement)
-test makes the content a Business Rule.
-
 - **BR-1** The title MUST name the rule briefly as a noun phrase, such as
   "Minimum renter age" or "Late return fee".
 - **BR-2** A Business Rule document MUST include these sections:
