@@ -105,7 +105,7 @@ not the business helps. The [Opportunity](opportunity.md) links the jobs that
 are unmet rather than restating them, and a target for how well performers
 make the progress is an indicator of an [objective](objectives.md), as the
 profile's
-[ownership tests](../references/profile.md#direction-job-opportunity-objectives-or-scope)
+[ownership tests](../references/profile.md#direction-job-opportunity-objectives-strategy-or-scope)
 decide.
 
 ### Shared jobs

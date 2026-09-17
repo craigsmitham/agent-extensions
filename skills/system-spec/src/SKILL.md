@@ -44,11 +44,15 @@ Add the others when the system has their content:
   future, and decision guidance of the system's business, whether a whole
   enterprise or product or a part of a larger one, when the user or a source
   states them. Do not compose them from a system request.
+- [Strategy](templates/strategy.md), for the challenge that most limits
+  progress toward the objectives now, where effort concentrates, and what is
+  set aside, when the user or a source states it. Do not compose it from
+  planned work.
 - [Job to Be Done](templates/job-to-be-done.md), for the progress people seek
   that the system helps them make, apart from any solution, when the user,
   research, or another source states them.
-- [Stakeholder](templates/stakeholder.md), for those with an interest in
-  the system who do not use it.
+- [Stakeholder](templates/stakeholder.md), for those who must be satisfied,
+  or can withhold consent, for the system to achieve its results.
 - [Subsystem](templates/subsystem.md) and
   [Feature Component](templates/feature-component.md), when part of the
   system or of a feature meets the creation condition in its Type contract.

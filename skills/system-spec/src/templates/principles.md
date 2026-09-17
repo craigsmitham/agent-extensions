@@ -70,10 +70,9 @@ elsewhere:
   to design or work-management records, as the profile's
   [P-CON-7 and P-CON-8](../references/profile.md#work-management-and-design)
   require.
-- A stand taken to overcome a current challenge, such as "win depots in the
-  north before expanding south", is strategy, which changes when the challenge
-  does. The profile does not yet define strategy, as
-  [Not yet defined](../references/profile.md#not-yet-defined) lists.
+- A stand taken to overcome a current challenge, such as concentrating on
+  dependable reservation confirmations before delivery from more depots, is
+  [strategy](strategy.md), which changes when the challenge does.
 
 ### Writing a principle
 

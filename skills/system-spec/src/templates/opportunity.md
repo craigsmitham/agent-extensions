@@ -1,8 +1,8 @@
 # Opportunity template
 
 Use for what the system is built or changed to make possible: the need that
-is unmet, how it is met today, and why the system is worth building or
-changing now.
+is unmet, how it is met today, why the system is worth building or changing
+now, and what must hold for it to stay worth pursuing.
 
 ## Type contract
 
@@ -14,6 +14,8 @@ changing now.
     short, with any known evidence.
   - **Why now** *(optional)*: what makes the system worth building or
     changing now.
+  - **Assumptions** *(optional)*: what must hold for the opportunity to stay
+    worth pursuing, each with what would show that it no longer holds.
 - **OPP-3** **Current situation** MUST link each Job to Be Done whose progress
   is unmet, rather than restating it.
 - **OPP-4** An Opportunity MUST NOT select a solution, name features, or state
@@ -33,6 +35,7 @@ description: <What becomes possible, and for whom, in one sentence>
 ## Opportunity
 ## Current situation
 ## Why now
+## Assumptions
 ## Open questions
 ## Related
 ```
@@ -50,7 +53,7 @@ the choice of solution to the rest of the specification.
 The [mission](mission.md) says why the business exists whatever system serves
 it; the opportunity says why this system is built or changed now. A statement
 that gains a target is an [objective](objectives.md), as the profile's
-[ownership tests](../references/profile.md#direction-job-opportunity-objectives-or-scope)
+[ownership tests](../references/profile.md#direction-job-opportunity-objectives-strategy-or-scope)
 decide.
 
 ### Current situation
@@ -81,3 +84,30 @@ waiting for a depot to confirm equipment for
 
 The previous system is being replaced.
 ~~~
+
+### Why now
+
+Name what has already happened that makes the opportunity real now, such as a
+change among those served, in the market, in the business, or in technology,
+or the end of what serves the need today. A hope that something will happen is
+an assumption, not a reason.
+
+### Assumptions
+
+An opportunity rests on beliefs about those served, the business, and the
+world that may stop being true, so a reason to build that was sound can
+quietly become obsolete. State the few assumptions whose failure would change
+whether the opportunity is worth pursuing, and for each, what would show that
+it no longer holds, so that the steward can notice:
+
+~~~markdown
+## Assumptions
+
+- Contractors will plan crews around an online confirmation without calling a
+  depot. It no longer holds if most online reservations are still followed by
+  a call to the depot.
+~~~
+
+An assumption already known to be false is not an assumption; it changes the
+opportunity. Assumptions about how the system is built or operated belong to
+design and operations records.

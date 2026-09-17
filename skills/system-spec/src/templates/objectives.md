@@ -9,8 +9,9 @@ which each is recognized.
 - **OBJ-2** An Objectives document MUST include these sections:
   - **Objectives**: one entry for each objective, headed `Objective <n>`.
 - **OBJ-3** An entry's objective MUST be the first paragraph below its
-  heading, stated as an outcome for the business or those it serves rather
-  than as an output, and the rest of the entry MUST be entry lines.
+  heading, stated as a change outside the system, in the progress of those the
+  business serves or in the business's own results, rather than as an output,
+  and the rest of the entry MUST be entry lines.
 - **OBJ-4** Each **Indicator** line MUST state one indicator, with its target
   and timeframe when it is quantitative or the evidence observed when it is
   qualitative, and is binding content.
@@ -46,9 +47,14 @@ description: The results <system> must bring about, and how each is recognized
 
 ### Results, not outputs
 
-An objective is a change for the business or the people it serves, recognized
-outside the system: "contractor customers reserve equipment without calling a
-depot", not "launch online reservations". Keep the objectives few, so that
+Results exist only outside the system; inside it there is only work. An
+objective is a change that the system's work brings about there: in the
+progress of the people the business serves, as "contractor customers reserve
+equipment without calling a depot" is, or in the business's own results, as
+"fewer rentals are returned late" is. It is not an output, such as "launch
+online reservations". When the change is in the progress a
+[job to be done](job-to-be-done.md) describes, link the job in the
+objective. Keep the objectives few, so that
 each one steers decisions. What the [vision](vision.md) pursues without a
 target, and what the [opportunity](opportunity.md) says is possible, become
 objectives here once someone commits to recognizing them.
@@ -68,6 +74,8 @@ it.
   as what customers report in interviews. An objective often needs both.
 - A target that is not decided is an open question, not a plausible number.
 - An indicator can be a leading sign of a result that takes longer to show.
+- An indicator need not be a change in how people behave; a business result,
+  such as the share of rentals returned late, is observed directly.
 - How well the system itself performs, such as response time, is a measure of
   a [quality characteristic](quality-characteristic.md), not an indicator.
 - A key result committed for a planning period belongs to planning records,

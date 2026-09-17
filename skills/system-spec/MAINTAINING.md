@@ -21,6 +21,25 @@ Use the job to improve the skill:
 - An observed shortfall in use is attributed to the step at which it
   occurred.
 
+### Sources of the job
+
+The job's account of a specification as the conditions that every decision
+about the system must satisfy follows Peter Drucker's *The Effective Decision*
+(*Harvard Business Review*, 1967, and *The Effective Executive*), which calls a
+decision's boundary conditions its specifications. The same essay shapes the
+job map: telling a generic problem from a unique one at Define; hearing
+disagreement and deciding what is right before what is acceptable at Confirm;
+building the action into the decision at Conclude; and testing the decision by
+going to look at Monitor. The events in **When to look again** are the warning
+signs of Drucker's "The Theory of the Business" (*Harvard Business Review*,
+1994), and asking whether content would be stated today, and the same way, is
+his organized abandonment, from *Management Challenges for the 21st Century*.
+Drucker applies abandonment to everything on a regular cycle; the job applies
+the question whenever a pass touches content and leaves what follows to the
+circumstances. Recording what is decided rather than what is being tried
+follows Marty Cagan's distinction between product discovery and delivery, in
+*Inspired* and *Empowered*.
+
 ### Alternatives
 
 Stewards make the same progress today by other means, each of which falls
@@ -44,14 +63,14 @@ account, across changes, of what the system does and whom and what it serves.
 
 | Step | What the skill provides | Gap |
 | --- | --- | --- |
-| Define | Mission, Vision, Principles, Opportunity, Job to Be Done, Stakeholder, Objectives, Scope, System; `business/index.md` shows which are not defined | Strong. |
+| Define | Mission, Vision, Principles, Opportunity, Job to Be Done, Stakeholder, Objectives, Strategy, Scope, System; `business/index.md` shows which are not defined | Strong. |
 | Locate | Finding the corpus; `sources` frontmatter | Thin: no model of sources, or of recovering a specification from behavior. |
 | Prepare | Ownership tests, Glossary, Structure, Placement | Strong. |
 | Confirm | Open questions; P-CON-4 | Weak: lifecycle, status, acceptance, and obligations that cannot both be met are not yet defined. |
 | Execute | Templates and Type contracts | Strongest. |
-| Monitor | Review against the rules | Weak: no check against behavior; stable identifiers are not yet defined. |
+| Monitor | Review against the rules; the events in the job's **When to look again**; Opportunity **Assumptions** and Strategy **Revisit** | Partial: no practice for checking behavior; stable identifiers are not yet defined. |
 | Modify | P-CHG-1, P-CHG-2, and version control | Thin: no impact analysis. |
-| Conclude | P-CHG-2 and index updates | Partial. |
+| Conclude | P-CHG-2 and the Change section's account of what is no longer current; index updates | Partial: no practice for telling those who must act. |
 
 The workflow in SKILL.md has no step for Define, and nothing in it checks the
 corpus against the system's behavior. Update this table when a change closes
@@ -67,6 +86,8 @@ or opens a gap.
   should Job to Be Done or User Class join the types most systems start with?
 - Should the job cite Genesis 2:15, "to work it and keep it", as the source of
   "grow and maintain"?
+- Should a strategy shared by several systems be held by one corpus, as
+  direction is, or is strategy always the system's own?
 
 ## Maintaining the templates
 
@@ -90,7 +111,10 @@ any finding. The other conventions here are kept by review.
 corpus specifies the system. Its index follows Peter Drucker's five questions
 (mission, customer, what the customer values, results, and plan), so that a
 reader sees what the business cares about and which of those concerns the
-corpus leaves unanswered. A new type belongs in `business/` only when it
+corpus leaves unanswered. Drucker's plan also holds goals, action steps, and
+a budget, which belong to work-management records; the index keeps the parts
+that direct the system, concentration as the Strategy and what the system
+will not do as the Scope. A new type belongs in `business/` only when it
 answers one of those questions for the system rather than specifying the
 system. Business rules stay outside it: they would hold if another system
 served the business, but they bind the system.
@@ -163,6 +187,7 @@ contract.
 | VIS | Vision | PRI | Principles |
 | JOB | Job to Be Done | STK | Stakeholder |
 | OBJ | Objectives | SCP | Scope |
+| STG | Strategy | | |
 
 BIZ, the code of the retired Business Requirements type, is not reused.
 
@@ -240,14 +265,15 @@ template.
 | Template | Follows |
 | --- | --- |
 | Mission | The mission of the Object Management Group's Business Motivation Model, as what the business does for whom, apart from any system. |
-| Vision | The vision of the Business Motivation Model, and the product vision of Marty Cagan's *Inspired* and *Empowered*, as the future pursued rather than a specification. |
+| Vision | The vision of the Business Motivation Model, and the product vision of Marty Cagan's *Inspired* and *Empowered*, as the future pursued rather than a specification. Its creation test follows Cagan's advice that a vision apply to as much of the organization as it meaningfully can, rather than being split among parts of one product ("Product Vision FAQ", SVPG, 2020). |
 | Principles | The product principles of Marty Cagan's *Inspired*, Amazon's tenets, and the business policy of the Business Motivation Model: guidance for decisions rather than obligations, ranked only where the ranking is agreed. Richard Rumelt's guiding policy, from *Good Strategy Bad Strategy* and *The Crux*, supplies the test that a principle rules out options and answers a stated conflict, and the line between a lasting principle and strategy for a current challenge. |
 | Job to Be Done | Clayton Christensen's account of a job as progress sought in circumstances, with functional, emotional, and social dimensions, and Tony Ulwick's job performer and solution-independent job statement, as the [Jobs to Be Done](../../knowledge/product-engineering/src/foundations/jobs-to-be-done.md) foundation of the product-engineering bundle explains them. |
 | System | The system overview of ISO/IEC/IEEE 29148, and the product perspective and operating environment of Karl Wiegers and Joy Beatty's software requirements specification. |
 | Subsystem | The same sources as the System template. |
-| Opportunity | The business purpose (§9.3.2) and the definition of the problem or opportunity space (§6.2.3.3) of ISO/IEC/IEEE 29148, framed as an opportunity after Peter Drucker's *Managing for Results*. |
-| Stakeholder | The major stakeholders of the business requirements specification in ISO/IEC/IEEE 29148 (§9.3.5), and the supporting customers of Peter Drucker's *The Five Most Important Questions*. |
-| Objectives | The mission, goals, and objectives of ISO/IEC/IEEE 29148 (§9.3.7), whose measures of effectiveness (§6.2.3.3) indicators follow; the business objectives and success metrics of Karl Wiegers and Joy Beatty; and the results, measured qualitatively and quantitatively, of Peter Drucker's *The Five Most Important Questions*. |
+| Opportunity | The business purpose (§9.3.2) and the definition of the problem or opportunity space (§6.2.3.3) of ISO/IEC/IEEE 29148, framed as an opportunity rather than a problem after Peter Drucker's *Managing for Results*: results come from exploiting opportunities, while solving a problem only restores normality. **Why now** follows the facts that have already happened of Drucker's *The Five Most Important Questions*, and **Assumptions** follows his "The Theory of the Business", which treats the assumptions behind a business as a hypothesis to be tested. Cagan's opportunity assessment in *Inspired* asks the same questions of one piece of discovery work. |
+| Stakeholder | The major stakeholders of the business requirements specification in ISO/IEC/IEEE 29148 (§9.3.5), and the supporting customers of Peter Drucker's *The Five Most Important Questions*, who must be satisfied and can say no, whether or not they use what the organization offers. **Authority** follows Marty Cagan's account of stakeholders as holders of business constraints rather than choosers of solutions ("Stakeholders and the Product Model", SVPG). Drucker's primary customer, whose life the work changes, is the job performer of a Job to Be Done. |
+| Objectives | The mission, goals, and objectives of ISO/IEC/IEEE 29148 (§9.3.7), whose measures of effectiveness (§6.2.3.3) indicators follow; the business objectives and success metrics of Karl Wiegers and Joy Beatty; and the results, measured qualitatively and quantitatively, of Peter Drucker's *The Five Most Important Questions*. That results exist only outside, in those served and in the business's results that they create, follows Drucker's *Management: Tasks, Responsibilities, Practices*; that an indicator need not be a change in behavior follows Marty Cagan and Christian Castro's "Outcomes Are Hard" (SVPG, 2025). |
+| Strategy | The kernel of Richard Rumelt's *Good Strategy Bad Strategy*, diagnosis and guiding policy, without its coherent actions, which belong to work-management records; the focus and insights of Marty Cagan's product strategy (SVPG, 2020), including his advice to choose two or three things rather than twenty; and the concentration, abandonment, and appraisal of the plan in Peter Drucker's *The Five Most Important Questions*. **Revisit** follows Drucker's advice, in "What Makes an Effective Executive" (*Harvard Business Review*, 2004), to review decisions at a time agreed in advance. |
 | Scope | The business scope (§9.3.3) and system scope (§9.5.3) of ISO/IEC/IEEE 29148, the separation of the scope of the work from the scope of the product in the Volere template, the solution scope of the BABOK Guide, Alistair Cockburn's in/out list, and the scope, limitations, and exclusions of Karl Wiegers and Joy Beatty. |
 | User Class | Karl Wiegers and Joy Beatty's user classes. |
 | External Interface | The external interface requirements of ISO/IEC/IEEE 29148 and of Karl Wiegers and Joy Beatty's software requirements specification. |

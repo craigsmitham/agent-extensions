@@ -18,6 +18,13 @@ software system does, whom and what it serves, and why. The job is the same
 whatever holds it: documents, tickets, tests, or people's memory. A corpus is
 the form this profile gives it.
 
+A specification states the conditions that every decision about the system
+must satisfy: what the system must do, for whom, and to what end. Each change
+is a decision, and it is sound when it meets those conditions or knowingly
+changes them. Stating the conditions clearly is what lets a person or an agent
+tell a sound change from a plausible one, and notice when a condition no
+longer fits the world it was written for.
+
 The job serves a broader one, growing and maintaining the software system
 itself. The specification is what tells everyone doing that work what the
 system must do and for whom, which is what makes each requirement meaningful.
@@ -87,14 +94,29 @@ outcomes say what doing a step well means.
 
 | Step | What must be accomplished | Outcomes |
 | --- | --- | --- |
-| Define | Determine whether a change affects what the system does or whom it serves, why, and whose decision governs it | Minimize the likelihood that a change to how the system works that affects those it serves goes unrecognized · Minimize the likelihood of acting on a change that nobody with authority decided |
+| Define | Determine whether a change affects what the system does or whom it serves, why, whose decision governs it, and whether it settles a lasting condition or a single case | Minimize the likelihood that a change to how the system works that affects those it serves goes unrecognized · Minimize the likelihood of acting on a change that nobody with authority decided · Minimize the likelihood of recording a single case as a lasting condition, or of treating a recurring case as one-off |
 | Locate | Find what the specification already says about the affected area, and the sources of what it should say: people, research, business rules, counterpart systems, and current behavior | Minimize the likelihood of missing an existing commitment that the change touches · Minimize the time to recover what an unspecified part of the system does |
 | Prepare | Sort each piece of content by kind and home, and agree on terms | Minimize the likelihood of the same content being stated in two places · Minimize the likelihood of one term carrying two meanings |
-| Confirm | Establish that the content is ready to rely on: conflicts settled or visible, the right people in agreement, and unknowns recorded rather than filled | Minimize the likelihood of invented detail passing as agreed · Minimize the time to see what is still undecided |
+| Confirm | Establish that the content is ready to rely on: conflicts settled or visible, disagreement heard, the right people in agreement, compromises recorded against what was needed, and unknowns and untested ideas recorded rather than filled | Minimize the likelihood of invented detail passing as agreed · Minimize the time to see what is still undecided · Minimize the likelihood that a disagreement goes unheard before content is relied on |
 | Execute | State the change so that it is unambiguous, verifiable, and connected to whom and what it serves | Minimize the likelihood that two readers disagree on what is required · Minimize the likelihood of an obligation recorded without whom it serves |
-| Monitor | Check that the specification still holds: consistent with itself, matched by the system's behavior, and still what those it serves need | Minimize the time between drift and its discovery · Minimize the likelihood that a later change contradicts an earlier decision unnoticed |
+| Monitor | Check that the specification still holds: consistent with itself, matched by the system's behavior in use, and still what those it serves need, looking at the system and its use rather than only at reports | Minimize the time between drift and its discovery · Minimize the likelihood that a later change contradicts an earlier decision unnoticed · Minimize the time between an assumption failing and its discovery |
 | Modify | Resolve a divergence by revising the specification or by identifying the behavior as a defect | Minimize the likelihood of revising the specification to match a defect · Minimize the effort to find everything that a revision affects |
-| Conclude | Retire superseded content, leave open questions visible, and make the current specification findable for the next person or session | Minimize the likelihood that stale content remains discoverable · Minimize the time for a new session to recover the current state |
+| Conclude | Retire content that would not be stated today, leave open questions visible, tell whoever must act on the change, and make the current specification findable for the next person or session | Minimize the likelihood that stale content remains discoverable · Minimize the likelihood that content is kept only because it exists · Minimize the time for a new session to recover the current state |
+
+## When to look again
+
+Monitor needs no schedule; certain events call for it. Treat each as a reason
+to check whether the affected part of the specification still holds:
+
+- an objective is achieved, which ends the reason it gave for what serves it;
+- rapid growth in those served, in use, or in scope;
+- an unexpected success or failure, such as a feature used in a way no use
+  case describes, a feature nobody uses, or an incident;
+- an assumption of the opportunity showing signs that it no longer holds; and
+- the strategy's revisit point.
+
+Most passes need none of this. When a pass touches content, it is enough to
+ask whether that content would still be stated today.
 
 ## Using the job where the rules are silent
 
@@ -113,6 +135,20 @@ outcomes say what doing a step well means.
   not inventing detail or with who decides, record the gap under **Open
   questions**, as [P-CON-4](profile.md#record-gaps-instead-of-inventing)
   requires, and ask the steward.
+- **Record what is decided, not what is being tried.** An idea about what the
+  system should do that is still being tested with those it serves, such as
+  in a prototype or experiment, is an open question until someone with
+  authority decides it. The specification states what is decided and what the
+  system does, so that an untested idea never reads as an obligation.
+- **Ask whether content would be stated today.** When a pass touches content,
+  ask whether, knowing what is now known, it would be stated today, and
+  stated the same way. A no calls for revising or retiring it, as
+  [P-CHG-2](profile.md#change) requires, or, when the steward must decide, for
+  an open question that names who decides. It never calls for keeping content
+  because it exists or deferring the decision to a further study. When the
+  system still behaves as the content states, retiring the content leaves
+  that behavior unspecified, so ask the steward whether the behavior changes
+  first.
 - **Do not settle a divergence alone.** When behavior and the specification
   disagree, neither is presumed right. If reservations were held for 60
   minutes while the specification states a 30-minute

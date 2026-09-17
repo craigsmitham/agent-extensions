@@ -17,8 +17,8 @@ your design and operations records; the specification links to them.
   requirements, business rules, required levels of quality, or the data it
   keeps.
 - Recording whom the system serves: its users, the jobs it helps with, the
-  opportunity and objectives behind it, and the mission, vision, and
-  principles it follows.
+  opportunity and objectives behind it, where it focuses now, and the
+  mission, vision, and principles it follows.
 - Checking whether a change, including design, dependency, or operations work,
   affects what the specification binds.
 - Reviewing specification documents against the profile's rules.

@@ -11,6 +11,12 @@ sources:
   - id: managing-for-results
     resource: https://archive.org/details/managingforresul00pete
     title: Peter F. Drucker — Managing for Results, 1964
+  - id: results
+    resource: https://drucker.institute/wp-content/uploads/2018/08/Reading-Drucker-on-Results.pdf
+    title: Drucker Institute — Reading Drucker on Results, adapted from The Five Most Important Questions You Will Ever Ask About Your Organization and Management, revised edition
+  - id: customer-centric
+    resource: https://drucker.institute/wp-content/uploads/2018/08/Reading_Drucker-on-Being-Customer-Centric.pdf
+    title: Drucker Institute — Reading Drucker on Being Customer-Centric
 generated: { by: claude-code/claude-opus-5, at: 2026-09-17T03:01:33Z }
 ---
 
@@ -36,7 +42,7 @@ this bundle's interpretation, illustrated with
 | What is our mission? | Why the organization does what it does, not how, matched to its opportunities, competencies, and commitment | Keep contractors' crews working through dependable equipment access |
 | Who is our customer? | One primary customer whose life the work changes, and the supporting customers who must also be satisfied | Small contractors coordinating equipment with a job start; depot staff, repair suppliers, and partner depots as supporting customers |
 | What does the customer value? | What satisfies customers' needs, wants, and aspirations, as customers themselves say | A trustworthy promise that the equipment will be there when the crew starts |
-| What are our results? | The changes the work brings about, recognized by qualitative and quantitative measures together | Fewer lost crew days, and what contractors report about relying on a confirmation |
+| What are our results? | The changes the work brings about outside the organization, recognized by qualitative and quantitative measures together | Fewer lost crew days, and what contractors report about relying on a confirmation |
 | What is our plan? | Mission, vision, goals, objectives, action steps, budget, and appraisal, beginning with what to abandon | Which service commitments to make, which to stop, and how progress will be appraised |
 
 ### Mission starts outside
@@ -55,13 +61,17 @@ way to make it.
 
 ### Primary and supporting customers
 
-The primary customer is the person whose life is changed by the work. The
-primary customer is never the only customer: supporting customers, such as
-partners, funders, and employees, can say no, and satisfying one customer
-without the others is no performance.[^five-questions]
+The primary customer is the person whose life is changed by the work, and
+Drucker asks for one primary customer rather than several. The primary
+customer is never the only customer: supporting customers, such as
+volunteers, members, partners, funders, referral sources, and employees, must
+also be satisfied.[^customer-centric] They can say no, and satisfying one
+customer without the others is no performance.[^five-questions] The
+distinction is whose life changes and who must be satisfied, not who uses
+what the organization offers.
 
 In a product this separates people the product serves from people it must
-satisfy. A contractor's supervisor is served by a dependable confirmation. A
+satisfy, whether or not either group uses the product. A contractor's supervisor is served by a dependable confirmation. A
 repair supplier who never uses the portal is still a supporting customer,
 because Northbank cannot keep its promise if the supplier rejects the
 arrangement.
@@ -77,10 +87,18 @@ established by evidence, not by the offering's description of itself.
 
 ### Results are qualitative and quantitative
 
-In a business, results include sales, profit, and market share; in the social
-sector they are changes in people's behavior, circumstances, health, hopes, and
-competence. Qualitative measures show how deep and broad a change is, and
-quantitative measures give definite standards; both are needed.[^five-questions]
+Drucker locates results outside the organization: "results exist only on the
+outside," and inside there are only costs. The result of a business is a
+satisfied customer, and "it is the customer who creates a 'profit'"; for the
+social sector, results are changed lives and conditions, in people's
+behavior, circumstances, health, hopes, and competence and
+capacity.[^results] He adds that a business cannot last without profit,
+though whether profit alone is an adequate measure can be debated. The
+published summary's list of sales, profit, and market share as business
+results comes from a co-author's essay, not from Drucker's
+chapter.[^five-questions] Qualitative measures show how deep and broad a change
+is, and quantitative measures give definite standards; both are
+needed.[^results]
 
 A software objective therefore needs more than a count of its outputs. "At
 least 60% of reservations are made online" is quantitative; "contractors
@@ -111,12 +129,15 @@ answered. In this bundle's interpretation:
 | Question | Product intent it organizes |
 | --- | --- |
 | What is our mission? | Mission, vision, and principles; the opportunity that makes the product worth building now |
-| Who is our customer? | The jobs of the people served, the product's users, and the stakeholders who must be satisfied without using it |
+| Who is our customer? | The jobs of the people served, the product's users, and the stakeholders who must be satisfied or can say no |
 | What does the customer value? | Evidence for those jobs and needs, and what each stakeholder values |
-| What are our results? | Objectives, each with quantitative and qualitative indicators |
-| What is our plan? | Scope: what the product takes on and what it deliberately leaves out |
+| What are our results? | Objectives, each a change outside the product with quantitative and qualitative indicators |
+| What is our plan? | Strategy, the few things concentrated on now and what is set aside; and Scope, what the product takes on and what it deliberately leaves out |
 
-Action steps, budgets, and release plans remain planning records rather than
+The mapping of the plan is an interpretation: Drucker's plan holds no scope,
+but its concentration, its abandonment, and his question of what the business
+should not be come closest. Goals, action steps, budgets, and release plans
+remain planning records rather than
 product intent; the questions show where they connect without making them part
 of a specification.
 
@@ -136,3 +157,5 @@ no evidence of customer value may be measuring the wrong change.
 
 [^five-questions]: [Audio-Tech Business Book Summaries, The Five Most Important Questions You Will Ever Ask About Your Organization](https://www.shared-impact.com/wp-content/uploads/2020/09/5.-Most-Important-Questions-You-will-ever-ask-about-your-organization.pdf), summarized by arrangement with Jossey-Bass from Peter F. Drucker et al., 2008.
 [^managing-for-results]: [Peter F. Drucker, Managing for Results](https://archive.org/details/managingforresul00pete), 1964.
+[^results]: [Drucker Institute, Reading Drucker on Results](https://drucker.institute/wp-content/uploads/2018/08/Reading-Drucker-on-Results.pdf), adapted from *The Five Most Important Questions* and *Management*, revised edition.
+[^customer-centric]: [Drucker Institute, Reading Drucker on Being Customer-Centric](https://drucker.institute/wp-content/uploads/2018/08/Reading_Drucker-on-Being-Customer-Centric.pdf).

@@ -10,6 +10,8 @@ product or sits within an enclosing business.
 - **VIS-2** A Vision document MUST include these sections:
   - **Vision**: the future that the business pursues, for whom,
     and what will be different for them, in one short paragraph.
+- **VIS-4** A vision MUST be created only when the business pursues
+  a future that no enclosing business's vision states for it.
 - **VIS-3** A Vision MUST NOT state indicators, targets, release timing,
   features, or the design of an experience.
 
@@ -40,7 +42,7 @@ A vision describes where the business is going;
 [objectives](objectives.md) are the results one system must bring about on the
 way, with indicators that recognize them. A statement that gains an indicator
 or target is an objective, as the profile's
-[ownership tests](../references/profile.md#direction-job-opportunity-objectives-or-scope)
+[ownership tests](../references/profile.md#direction-job-opportunity-objectives-strategy-or-scope)
 decide. Objective 1 of the rental system, that contractor customers reserve
 equipment without calling a depot, is a step toward this vision:
 
@@ -65,8 +67,16 @@ equipment.
 
 ### Shared and enclosing visions
 
-When several systems serve one business, one corpus holds the vision and the
-others link it. A business within an enclosing business links the enclosing
-vision and can state its own: the future it pursues for those it serves,
-without restating or contradicting the enclosing vision, as the profile's
-[Structure](../references/profile.md#structure) requires.
+A vision guides best when as much of the business as possible shares it, so
+write it at the widest business for which it still means something. When
+several systems serve one business, one corpus holds the vision and the
+others link it. A business within an enclosing business, such as a product
+area or an internal platform, normally links the enclosing vision rather than
+writing its own; separate visions for parts of one product, such as its buyers
+and its sellers, pull the parts apart. Write one only when the business
+pursues a future of its own that the enclosing vision does not state, such as
+a division of a large enterprise, without restating or contradicting the
+enclosing vision, as the profile's
+[Structure](../references/profile.md#structure) requires. Its own mission,
+principles, objectives, and strategy can still add to those of the enclosing
+business.

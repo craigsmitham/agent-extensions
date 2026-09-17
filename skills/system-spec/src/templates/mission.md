@@ -40,7 +40,7 @@ The mission says why the business exists now, the
 [vision](vision.md) says the future it pursues, and a System's **Purpose**
 says what one system is and does. A mission stays true when a different system
 serves the business, as the profile's
-[ownership tests](../references/profile.md#direction-job-opportunity-objectives-or-scope)
+[ownership tests](../references/profile.md#direction-job-opportunity-objectives-strategy-or-scope)
 decide:
 
 ```markdown

@@ -1,7 +1,8 @@
 # Stakeholder template
 
-Use for a person, group, or class of them with an interest in the system who
-does not use it, what they value, and any authority they hold over it.
+Use for a person, group, or class of them who must be satisfied, or can
+withhold consent, for the system to achieve its results: their interest, what
+they value, and any authority they hold over it.
 
 ## Type contract
 
@@ -11,9 +12,11 @@ does not use it, what they value, and any authority they hold over it.
   - **Interest**: the stakeholder's interest in the system.
   - **Values**: what the stakeholder values from the system.
   - **Authority** *(optional)*: what the stakeholder decides, approves, or can
-    veto about the system.
-- **STK-3** A stakeholder MUST NOT be a person or group that uses the system
-  or its outputs directly.
+    veto about the system, such as acceptance, funding, or a constraint.
+- **STK-4** A stakeholder MUST be created only when the system cannot
+  achieve its results without the stakeholder's satisfaction or consent.
+- **STK-5** A Stakeholder document MUST NOT describe how the stakeholder uses
+  the system or what they need from it in that use.
 
 ## Suggested document
 
@@ -37,13 +40,14 @@ description: <Who they are>, with an interest in <what about the system>
 
 ### Stakeholders, users, and job performers
 
-A stakeholder is someone the system must satisfy without serving them
-directly: a sponsor, insurer, regulator, partner, or funder. People who use
-the system, including those who operate it, are
-[user classes](user-class.md#users-and-stakeholders), and people whose
-progress a [job to be done](job-to-be-done.md) describes are its job
-performers. One organization can be all three through different people, and
-each is described where its type belongs.
+The people whose progress a [job to be done](job-to-be-done.md) describes are
+those the system is for. A stakeholder is someone else the system must
+satisfy, because they can say no: a sponsor, insurer, regulator, partner,
+funder, or the staff whose work it changes. How people use the system is
+described by [user classes](user-class.md#users-and-stakeholders), so a group
+can be a user class for its use and a stakeholder for an interest apart from
+it, such as a staff group whose agreement a change of working hours needs.
+Each is described where its type belongs.
 
 Write one document for each stakeholder whose interest, values, or authority
 differ from the others'. Stakeholders who share all three, such as several
@@ -58,6 +62,10 @@ funders with the same terms, are one class of stakeholders.
   something about the system, such as acceptance, funding, or compliance, so
   that a reader knows whose decision governs a change. Omit it when they hold
   none.
+- State authority as the constraints a stakeholder sets and the decisions they
+  approve. A stakeholder's preferred solution is not authority over the
+  specification; the constraint behind it is, and the choice of solution
+  stays with those accountable for the system.
 - A value that becomes an obligation on the system, such as a condition of
   insurance cover, is a Requirement or Business Rule, and the stakeholder
   links it rather than restating it.

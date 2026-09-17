@@ -27,6 +27,7 @@ and each links Fleet maintenance.
 | Job to Be Done | Get equipment on site when the work needs it |
 | Stakeholder | Equipment insurer |
 | Objectives | Rental system objectives, with the entries Objective 1 and Objective 2 |
+| Strategy | Rental system strategy |
 | Scope | Rental system scope |
 | Subsystem | Fleet maintenance |
 | User Class | Contractor customer; Depot staff; Technician (Fleet maintenance) |
@@ -82,19 +83,32 @@ and each links Fleet maintenance.
   because the previous system is used only by depot staff. Depot call logs
   show that most reservations are made by phone, and contractors report
   working days lost waiting for a depot to confirm equipment. The previous
-  system is being replaced.
+  system is being replaced. The opportunity assumes that contractors will plan
+  crews around an online confirmation without calling a depot; that no longer
+  holds if most online reservations are still followed by a call to the depot.
 - Objective 1 is that contractor customers reserve equipment without calling
   a depot. Its indicator is that at least 60% of reservations are made online
   within 12 months of launch.
 - Objective 2 is that fewer rentals are returned late. Its indicator is the
   share of rentals returned late, whose target is not yet agreed, which is an
   open question.
+- The rental system strategy's challenge is that contractor customers who
+  reserve online still call a depot to confirm that the equipment will be
+  ready, because they do not trust an online confirmation enough to plan a
+  crew around it; depot call logs show that most calls about online
+  reservations ask for this. It limits Objective 1 and progress on the job.
+  The approach concentrates on making a confirmed reservation dependable
+  enough to plan a crew around without calling a depot. Getting equipment
+  to sites near depots that do not offer delivery is set aside for now. The strategy
+  is revisited when Objective 1's indicator is first reported, or sooner if
+  the share of reservations made online falls.
 - The business area is renting construction equipment from depots to
   contractors: finding, reserving, handing over, returning, and charging for
   equipment, and maintaining the fleet. Buying and selling equipment are
   outside it. The rental system takes on all of the business area except
   processing card payments, which the payment service handles.
-- The equipment insurer does not use the system; it has an interest in
+- The equipment insurer does not use the system, but the business cannot rent
+  equipment without its cover, so it is a stakeholder; it has an interest in
   equipment with an overdue inspection being withdrawn from rental.
 
 ### Terms and data

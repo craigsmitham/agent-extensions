@@ -29,10 +29,11 @@ introduced. Examples in the templates use the [running example](example.md).
 | [`Mission`](../templates/mission.md) | Why the system's business exists: whom it serves and what it does for them. |
 | [`Vision`](../templates/vision.md) | The future that the system's business pursues, beyond the horizon of the system's objectives. |
 | [`Principles`](../templates/principles.md) | The guidance by which the system's business decides between reasonable options that conflict, and what each option prevails over. |
-| [`Opportunity`](../templates/opportunity.md) | What the system is built or changed to make possible: the need that is unmet, the current gap, and why now. |
+| [`Opportunity`](../templates/opportunity.md) | What the system is built or changed to make possible: the need that is unmet, the current gap, why now, and what must hold for it to stay worth pursuing. |
 | [`Job to Be Done`](../templates/job-to-be-done.md) | The progress that a group of people seek in their circumstances, whatever product, service, or system helps them make it. |
-| [`Stakeholder`](../templates/stakeholder.md) | A person or group with an interest in the system who does not use it, what they value, and any authority they hold over it. |
+| [`Stakeholder`](../templates/stakeholder.md) | A person or group who must be satisfied, or can withhold consent, for the system to achieve its results, apart from any use they make of it: their interest, what they value, and any authority they hold over it. |
 | [`Objectives`](../templates/objectives.md) | The results that the system must bring about, each with the indicators by which its achievement is recognized. |
+| [`Strategy`](../templates/strategy.md) | The challenge that most limits progress toward the system's objectives now, where effort concentrates to overcome it, what is set aside, and when the strategy is revisited. |
 | [`Scope`](../templates/scope.md) | The business area under consideration, and what the system includes and excludes within it. |
 | [`System`](../templates/system.md) | The software system being specified, and the boundary that its other concepts describe. |
 | [`Subsystem`](../templates/subsystem.md) | A part of the system with its own boundary, because it has its own user classes, external interfaces, required levels of quality, or delivery or operation. |
@@ -79,13 +80,14 @@ Each term below has one meaning throughout this profile and its templates.
 | Job performer | The person or group whose progress a Job to Be Done describes, as the job itself describes them. A job performer need not use the system, and is described in the job rather than as a User Class or stakeholder. |
 | Business area | The business activities and parties under consideration, whether or not the system supports them, as the Scope document states it. |
 | Scope | What the system includes and excludes, as the Scope document states it. What a feature includes is its *coverage*. |
-| Objective | A result that the system must bring about, stated as an outcome for the business or those it serves rather than as an output, as an entry of the Objectives document. |
+| Objective | A result that the system must bring about, stated as a change outside the system, in the progress of those the business serves or in the business's own results, rather than as an output, as an entry of the Objectives document. |
+| Strategy | The stand taken to overcome a current challenge to the objectives: where to concentrate and what to set aside, as the Strategy document states it. It changes when the challenge does; direction holds. It excludes the actions that carry it out. |
 | Indicator | An observable sign by which an objective's achievement is recognized: quantitative, with a target and timeframe, or qualitative, naming the evidence observed. It is neither a Measure nor a key result of a plan. |
 | System-level feature | A feature placed directly under the system. |
 | Subsystem-level feature | A feature placed under a subsystem. |
 | Design constraint | A Requirement whose obligation is to use, or not use, a specific technology, platform, or design. |
 | Measure | A quantity on which a Quality Requirement states a level, defined under a Quality Characteristic's **Measures**. |
-| Stakeholder | A person or group with an interest in the system who does not use it or its outputs directly. People who use the system, including those who operate it, belong to a User Class. |
+| Stakeholder | A person or group who must be satisfied, or can withhold consent, for the system to achieve its results, as a Stakeholder document describes them. How people use the system belongs to a User Class, so a group that uses the system can also be a stakeholder for an interest apart from that use. |
 | User interface | What the system presents to people and the actions it offers them. *Interface* alone means an External Interface. |
 | Counterpart | The external system or device at the other end of an External Interface. |
 | Attribute | A data attribute: an item of data kept about an Entity Type's instance or making up a Value Type's value. |
@@ -116,13 +118,14 @@ subject.
 spec/
   README.md                        # Adoption declaration
   index.md                         # Navigation; carries okf_version: "0.2"
-  business/                        # Why the system exists, whom it serves, and what it must achieve
+  business/                        # Why the system exists, whom it serves, what it must achieve, and where it focuses
     index.md                       # Entry point, arranged as P-STR-9 requires
     mission.md                     # Mission
     vision.md                      # Vision
     principles.md                  # Principles
     opportunity.md                 # Opportunity
     objectives.md                  # Objectives
+    strategy.md                    # Strategy
     scope.md                       # Scope
     jobs/                          # Job to Be Done documents
     stakeholders/                  # Stakeholder documents
@@ -177,7 +180,8 @@ spec/
 `business/` holds what justifies and directs the system; the rest of the
 corpus specifies the system. Its index is where a reader starts to learn what
 the business cares about, so its headings follow Peter Drucker's questions of
-mission, customer and value, results, and plan, and it shows each of those
+mission, customer and value, results, and plan, where a plan's concentration
+and abandonment are the strategy and the scope, and it shows each of those
 concerns that the corpus leaves unanswered. OKF index entries are links, so a
 concern without a document is stated in a paragraph rather than as an entry.
 
@@ -191,7 +195,7 @@ concern without a document is stated in a paragraph rather than as an entry.
   - **Whom we serve**: the `jobs/` folder, the `stakeholders/` folder, and
     the corpus's `users/` folder.
   - **Results we seek**: Objectives.
-  - **What we will and won't do**: Scope.
+  - **Where we focus and what we won't do**: Strategy and Scope.
 
 Every placement level has the same shape: its concept document, which for the
 system is `system.md`; `use-cases/` and `requirements/` for the documents
@@ -296,10 +300,12 @@ rather than restating them.
 | Who makes that progress, and the circumstances in which they seek it | The Job to Be Done, not a User Class |
 | The future that a business pursues, without an indicator or target | Vision |
 | How to decide between reasonable options that conflict, such as which user class or quality prevails | Principles |
-| The interest in the system of a person or group who does not use it, what they value, and any authority they hold over it | Stakeholder, not a User Class |
+| The interest in the system of a person or group who must be satisfied or can withhold consent, apart from any use they make of it, what they value, and any authority they hold over it | Stakeholder |
+| How people use the system and what they need from it in that use | User Class, not a Stakeholder |
 | Guidance for design decisions, such as visual style or interaction patterns | Not Principles; design records, as [P-CON-8](#work-management-and-design) requires |
 | A value of the business's culture, or guidance for how work on the system is done | Not Principles; work-management records, as [P-CON-7](#work-management-and-design) requires, or no document |
-| A stand taken to overcome a current challenge, such as where to focus next | Not Principles; strategy, which this profile does not yet define, as [Not yet defined](#not-yet-defined) lists |
+| A stand taken to overcome a current challenge, such as where to focus next or what to set aside for now | Strategy, not Principles |
+| The actions, initiatives, and key results that carry out a strategy | Not Strategy; work-management records, as [P-CON-7](#work-management-and-design) requires |
 | What a term means to the business | Glossary |
 | How the business decides whether something belongs to a classification, such as *high-risk customer* | Business Rule. The classification's meaning is a glossary entry with a **Decided by** line. |
 | The formats and protocols that a counterpart or a named standard requires at a connection | External Interface |
@@ -317,25 +323,30 @@ can be stated where it is used or in its shared home; one stated in place
 moves to its shared home when its second use appears. Documents link to the
 shared definition.
 
-### Direction, job, opportunity, objectives, or scope
+### Direction, job, opportunity, objectives, strategy, or scope
 
 - **P-DIR-2** Content that could be direction, a Job to Be Done, the
-  Opportunity, Objectives, or Scope MUST be placed by the first of these
-  questions answered yes.
+  Opportunity, Objectives, Strategy, or Scope MUST be placed by the first of
+  these questions answered yes.
 
 1. Does it state, or need, an indicator or target? It is an objective or one
    of its indicators.
 2. Does it describe progress that people seek for themselves, whether or not
    the business helps them make it, rather than what the business does,
    pursues, or decides? It is a Job to Be Done.
-3. Does it say why the business exists, what future it pursues, or
+3. Does it take a stand for overcoming a current challenge, such as where to
+   concentrate or what to set aside for now, that would change when the
+   challenge does? It is Strategy.
+4. Does it say why the business exists, what future it pursues, or
    how it decides between options, whatever system serves it? It is
    direction, and [where content goes](#where-content-goes) decides its type.
-4. Does it say what need is unmet, what gap exists today, or why the system
-   is built or changed now? It is the Opportunity.
-5. Does it say which business activities and parties are under consideration,
-   or what the system includes or excludes? It is Scope.
-6. Otherwise, it belongs to none of these types, and the other ownership
+5. Does it say what need is unmet, what gap exists today, why the system is
+   built or changed now, or what must hold for that to stay worth pursuing?
+   It is the Opportunity.
+6. Does it say which business activities and parties are under consideration,
+   or what the system includes or excludes, whatever it is working on now? It
+   is Scope.
+7. Otherwise, it belongs to none of these types, and the other ownership
    tests decide.
 
 ### Job to be done or use case
@@ -465,6 +476,11 @@ Version control holds the history of changes, moves, renames, and deletions,
 and the repository's own review decides what the corpus contains. This version
 defines no lifecycle for documents, as [Not yet defined](#not-yet-defined)
 lists.
+
+A concept is no longer current when, knowing what is now known, it would not
+be stated today. A concept that would still be stated, but not in the same
+way, is revised rather than deleted. That a concept already exists, or that
+work went into it, does not keep it current.
 
 - **P-CHG-1** A move or rename MUST update every inbound link.
 - **P-CHG-2** A concept that is no longer current MUST be deleted, and every
@@ -610,9 +626,9 @@ This version leaves these concerns undefined. Content about them follows
 - a lifecycle for the specification and its documents, such as review,
   acceptance, status, and review dates;
 - stable identifiers for linked headings other than objectives;
-- product strategy and goals between the vision and the objectives,
-  initiative priorities and constraints, assumptions and dependencies, and
-  risks;
+- long-range goals between the vision and the objectives; initiatives and
+  their priorities, which belong to work-management records; assumptions
+  other than an opportunity's; dependencies; and risks;
 - for jobs to be done: desired outcome statements, job maps and job steps,
   relationships between jobs, the forces that drive or resist a change of
   solution, and jobs of buying or supporting a solution;

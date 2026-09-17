@@ -2,6 +2,7 @@
 
 ## 2026-09-16
 
+- **Correction**: Revised [Drucker's five most important questions](foundations/drucker-five-questions.md) after checking it against Drucker Institute readings. Replaced the business results of sales, profit, and market share, which the Audio-Tech summary takes from a co-author's essay, with Drucker's own account of results as existing only outside the organization. Added his insistence on one primary customer and the full list of supporting customers, made clear that the customer distinction does not depend on use, and mapped the plan question to strategy as well as scope, marking that mapping as an interpretation, as the system-spec skill's `business/` folder now uses it.
 - **Draft**: Added [Drucker's five most important questions](foundations/drucker-five-questions.md), grounded in a published summary of the 2008 edition and in *Managing for Results*. Explained mission from the outside, primary and supporting customers, value as customers state it, qualitative and quantitative results, and a plan that begins with abandonment, illustrated with Northbank Equipment. Mapped the questions to the intent behind a software product, as the system-spec skill's `business/` folder uses them, and linked the theory of the business, renewal disciplines, KPIs, and outcomes and evidence.
 
 ## 2026-09-15

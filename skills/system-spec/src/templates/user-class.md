@@ -65,9 +65,11 @@ concrete. It illustrates a class; it does not define it.
 
 In the running example,
 [Depot staff](<link>) is a user class because depot staff record handovers in
-the system. The [Equipment insurer](<link>) has an
-interest in the system but does not use it, so it is a
-[stakeholder](stakeholder.md), not a user class. The people whose progress a [job to be done](job-to-be-done.md) describes are
+the system. The [Equipment insurer](<link>) does not use the system, but the
+business cannot rent equipment without its cover, so it is a
+[stakeholder](stakeholder.md). A group that uses the system is also a
+stakeholder when its satisfaction or consent is needed apart from that use;
+its use and needs stay in the user class. The people whose progress a [job to be done](job-to-be-done.md) describes are
 its job performer, described in the job, whether or not they use the system.
 An organization is described through
 the user classes of the people, or the external interfaces of the systems,
