@@ -23,10 +23,12 @@ and each links Fleet maintenance.
 | Mission | Rental business mission |
 | Vision | Rental business vision |
 | Principle | Safe equipment over availability; Contractors' time over depot convenience, in the Rental business principles |
+| Opportunity | Rental system opportunity |
 | Job to Be Done | Get equipment on site when the work needs it |
-| Business Requirements | Rental system business requirements |
+| Stakeholders | Rental system stakeholders, with the entry Equipment insurer |
+| Objectives | Rental system objectives, with the entries Objective 1 and Objective 2 |
+| Scope | Rental system scope |
 | Subsystem | Fleet maintenance |
-| Stakeholder | Equipment insurer |
 | User Class | Contractor customer; Depot staff; Technician (Fleet maintenance) |
 | External Interface | Payment service; Equipment telematics (Fleet maintenance) |
 | Feature | Equipment search; Equipment reservations; Late returns; Site delivery |
@@ -38,7 +40,6 @@ and each links Fleet maintenance.
 | Quality Requirement | Search responds within limit at peak load; Search withstands a depot outage; Reservations are available; Payment details stay private |
 | Measure | Search response time, under Response time; Reservation availability, under Availability |
 | Named condition | Peak load, in the rental system's operating environment |
-| Business objective | Objective 1; Objective 2 |
 | Glossary term | deposit; depot; high-risk customer; hold period; late return; plus entries whose **Defined by** line links the entity and value types below |
 | Entity Type | Customer; Equipment item; Rental; Reservation |
 | Value Type | Email address; Equipment condition; Money; Operating hours; Rental period |
@@ -52,7 +53,7 @@ and each links Fleet maintenance.
   their work needs, where and when the work needs it.
 - Its vision is that contractors have the equipment their work needs on site
   when the work needs it, and never lose a working day to finding, collecting,
-  or returning equipment. Business objective 1 is a step toward it.
+  or returning equipment. Objective 1 is a step toward it.
 - Its principles, in order of precedence, are *Safe equipment over
   availability*: it rents only equipment it knows to be safe, even when a
   contractor goes without, from which the Overdue inspection withdrawal rule
@@ -71,15 +72,28 @@ and each links Fleet maintenance.
   ends, with confidence that the start will not slip. Today they call depots,
   borrow from other contractors, buy equipment, or reschedule the work.
 - Equipment search, Equipment reservations, and Site delivery serve it, and
-  the Problem or opportunity of the business requirements links it.
+  the rental system's opportunity links it.
 
 ### Business
 
-- Business objective 1 is that contractor customers reserve equipment without
-  calling a depot. Its success indicator is that at least 60% of reservations
-  are made online within 12 months of launch.
-- Business objective 2 is that fewer rentals are returned late. Its success
-  indicator has no agreed target yet, which is an open question.
+- The rental system's opportunity is that contractors can reserve equipment
+  when their work is planned, at any hour, without waiting for a depot to
+  answer. Today customers reserve by calling a depot during opening hours,
+  because the previous system is used only by depot staff. Depot call logs
+  show that most reservations are made by phone, and contractors report
+  working days lost waiting for a depot to confirm equipment. The previous
+  system is being replaced.
+- Objective 1 is that contractor customers reserve equipment without calling
+  a depot. Its indicator is that at least 60% of reservations are made online
+  within 12 months of launch.
+- Objective 2 is that fewer rentals are returned late. Its indicator is the
+  share of rentals returned late, whose target is not yet agreed, which is an
+  open question.
+- The business area is renting construction equipment from depots to
+  contractors: finding, reserving, handing over, returning, and charging for
+  equipment, and maintaining the fleet. Buying and selling equipment are
+  outside it. The rental system takes on all of the business area except
+  processing card payments, which the payment service handles.
 - The equipment insurer does not use the system; it has an interest in
   equipment with an overdue inspection being withdrawn from rental.
 

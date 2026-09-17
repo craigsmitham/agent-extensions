@@ -25,7 +25,7 @@ whatever product, service, or system helps them make it.
 - **JOB-4** A Job to Be Done MUST NOT name the system, its features, user
   interfaces, or technology, or any other solution, except under
   **Alternatives**.
-- **JOB-5** A Job to Be Done MUST NOT state measures or targets.
+- **JOB-5** A Job to Be Done MUST NOT state indicators or targets.
 
 ## Suggested document
 
@@ -97,15 +97,15 @@ solution. Write the job at the level at which performers would choose between
 alternatives. Job maps, job steps, and relationships between jobs are
 [not yet defined](../references/profile.md#not-yet-defined).
 
-### Jobs, direction, and business requirements
+### Jobs, direction, and objectives
 
 The [mission](mission.md) and [vision](vision.md) say what the business does
 and pursues; a job says what the people it serves are trying to do, whether or
-not the business helps. The **Problem or opportunity** of the
-[Business Requirements](business-requirements.md) links the jobs that are
-unmet rather than restating them, and a target for how well performers make
-the progress is a success indicator, as the profile's
-[ownership tests](../references/profile.md#direction-job-or-business-requirements)
+not the business helps. The [Opportunity](opportunity.md) links the jobs that
+are unmet rather than restating them, and a target for how well performers
+make the progress is an indicator of an [objective](objectives.md), as the
+profile's
+[ownership tests](../references/profile.md#direction-job-opportunity-objectives-or-scope)
 decide.
 
 ### Shared jobs

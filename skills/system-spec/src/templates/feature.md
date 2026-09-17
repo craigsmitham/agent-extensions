@@ -9,7 +9,7 @@ such as equipment reservations or late returns.
   "Equipment reservations".
 - **FEA-2** A Feature document MUST include these sections:
   - **Purpose**: what capability the feature provides, stating **serves** for
-    each user class, job to be done, and business objective it serves.
+    each user class, job to be done, and objective it serves.
   - **Coverage**: what the capability covers, and what it does not cover where
     a reader might assume it does.
 
@@ -36,10 +36,10 @@ description: <What the feature provides, and to whom, in one sentence>
 ### Purpose and coverage
 
 **Purpose** describes the capability in a paragraph and links the user
-classes, jobs to be done, and business objectives it **serves**, such as
+classes, jobs to be done, and objectives it **serves**, such as
 [Contractor customer](<link>),
 [Get equipment on site when the work needs it](<link>), and
-`business.md#objective-1`.
+`business/objectives.md#objective-1`.
 
 **Coverage** summarizes what the capability covers and names exclusions a
 reader might otherwise assume. An exclusion that the system must enforce is a

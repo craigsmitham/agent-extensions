@@ -1,5 +1,9 @@
 # Product engineering update log
 
+## 2026-09-16
+
+- **Draft**: Added [Drucker's five most important questions](foundations/drucker-five-questions.md), grounded in a published summary of the 2008 edition and in *Managing for Results*. Explained mission from the outside, primary and supporting customers, value as customers state it, qualitative and quantitative results, and a plan that begins with abandonment, illustrated with Northbank Equipment. Mapped the questions to the intent behind a software product, as the system-spec skill's `business/` folder uses them, and linked the theory of the business, renewal disciplines, KPIs, and outcomes and evidence.
+
 ## 2026-09-15
 
 - **Draft**: Added [EARS: preconditions, triggers, and system responses](foundations/easy-approach-to-requirements-syntax.md), grounded in the full RE'09 paper and Mavin's current EARS guide, with the EARS-CTRL summary and Kiro's documentation for tool relationships. Explained the eight targeted natural-language problems, the temporally ordered generic form and ruleset, the five patterns and keyword combinations, and the changes between the 2009 templates and the current guide. Mapped EARS terms to 29148 and the requirement template; rewrote Northbank specimens in each pattern as illustrations while keeping the specimen table authoritative. Showed that splitting `NB-REPLACE-01` into trigger–response pairs loses its atomic rule and that a state can restate `NB-MIGRATE-01`'s ordering. Reported the case study's 36-to-47 requirement and word-count results with the authors' own limitations, separated adoption claims from evidence, and listed the unread 2010, 2016, and 2019 experience reports. Linked the specification-method guide, the 29148 explanation, and the Foundations requirement-quality group.

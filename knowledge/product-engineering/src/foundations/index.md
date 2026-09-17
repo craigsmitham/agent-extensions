@@ -43,6 +43,8 @@ alternative scopes and numerical exhibits remain explicit.
 
 - [Drucker's theory of the business](drucker-theory-of-the-business.md) — How Peter Drucker's theory of the business connects assumptions about environment, mission, and core competencies, why successful organizations can outgrow those assumptions, and how continuing examination supports strategic renewal.
 
+- [Drucker's five most important questions](drucker-five-questions.md) — How Peter Drucker's self-assessment questions of mission, customer, customer value, results, and plan connect why an organization exists to whom it serves, how it recognizes results, and what it commits to, and how they can organize the intent behind a software product.
+
 - [Drucker's four disciplines of organizational renewal](drucker-organizational-renewal.md) — How organized abandonment, continuous improvement, exploiting success, and systematic innovation work together to sustain present performance and create tomorrow, with piloting to test proposed changes.
 
 ## Understand customer progress, behavior, and models

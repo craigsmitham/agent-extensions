@@ -24,11 +24,12 @@ first.
 Only `system.md` is required. Write a document of another type when there is
 content for it and its Type contract's creation test, if any, is met.
 
-Most systems start with these, writing `business.md` and `glossary.md` once
-their content is known:
+Most systems start with these, writing the `business/` documents and
+`glossary.md` once their content is known:
 
 - [System](templates/system.md)
-- [Business Requirements](templates/business-requirements.md)
+- [Opportunity](templates/opportunity.md),
+  [Objectives](templates/objectives.md), and [Scope](templates/scope.md)
 - [User Class](templates/user-class.md)
 - [External Interface](templates/external-interface.md)
 - [Feature](templates/feature.md)
@@ -46,6 +47,8 @@ Add the others when the system has their content:
 - [Job to Be Done](templates/job-to-be-done.md), for the progress people seek
   that the system helps them make, apart from any solution, when the user,
   research, or another source states them.
+- [Stakeholders](templates/stakeholders.md), for those with an interest in
+  the system who do not use it.
 - [Subsystem](templates/subsystem.md) and
   [Feature Component](templates/feature-component.md), when part of the
   system or of a feature meets the creation condition in its Type contract.
@@ -71,7 +74,8 @@ Add the others when the system has their content:
 4. **Place the document.** Put it where the profile's
    [Structure](references/profile.md#structure) and
    [Placement](references/profile.md#placement) rules state, and update each
-   affected `index.md`.
+   affected `index.md`, including `business/index.md` as
+   [P-STR-9](references/profile.md#structure) requires.
 5. **Write from the template.** Start from the template's **Suggested
    document**, satisfy its Type contract and the profile's
    [content rules](references/profile.md#content-rules), and link to what

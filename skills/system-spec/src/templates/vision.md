@@ -1,7 +1,7 @@
 # Vision template
 
 Use for the future that the business or product that the system serves
-pursues, beyond the horizon of its business objectives.
+pursues, beyond the horizon of the system's objectives.
 
 ## Type contract
 
@@ -9,7 +9,7 @@ pursues, beyond the horizon of its business objectives.
 - **VIS-2** A Vision document MUST include these sections:
   - **Vision**: the future that the business or product pursues, for whom,
     and what will be different for them, in one short paragraph.
-- **VIS-3** A Vision MUST NOT state measures, targets, release timing,
+- **VIS-3** A Vision MUST NOT state indicators, targets, release timing,
   features, or the design of an experience.
 
 ## Suggested document
@@ -33,13 +33,13 @@ description: <The future pursued, in one sentence>
 
 ## Writing guidance
 
-### Vision and business objectives
+### Vision and objectives
 
-A vision describes where the business or product is going; business
-objectives are the outcomes one system must bring about on the way, with
-success indicators that recognize them. A statement that gains a measure or
-target is an objective, as the profile's
-[ownership tests](../references/profile.md#direction-job-or-business-requirements)
+A vision describes where the business or product is going;
+[objectives](objectives.md) are the results one system must bring about on the
+way, with indicators that recognize them. A statement that gains an indicator
+or target is an objective, as the profile's
+[ownership tests](../references/profile.md#direction-job-opportunity-objectives-or-scope)
 decide. Objective 1 of the rental system, that contractor customers reserve
 equipment without calling a depot, is a step toward this vision:
 

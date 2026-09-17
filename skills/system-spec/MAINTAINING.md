@@ -44,7 +44,7 @@ account, across changes, of what the system does and whom and what it serves.
 
 | Step | What the skill provides | Gap |
 | --- | --- | --- |
-| Define | Mission, Vision, Principles, Job to Be Done, Business Requirements, System | Strong. |
+| Define | Mission, Vision, Principles, Opportunity, Job to Be Done, Stakeholders, Objectives, Scope, System; `business/index.md` shows which are not defined | Strong. |
 | Locate | Finding the corpus; `sources` frontmatter | Thin: no model of sources, or of recovering a specification from behavior. |
 | Prepare | Ownership tests, Glossary, Structure, Placement | Strong. |
 | Confirm | Open questions; P-CON-4 | Weak: lifecycle, status, acceptance, and obligations that cannot both be met are not yet defined. |
@@ -83,6 +83,17 @@ The lint checks what breaks silently: links and anchors, rule identifiers and
 references to them, where uppercase keywords appear, and agreement between
 each template's Type contract and Suggested document. It exits non-zero on
 any finding. The other conventions here are kept by review.
+
+### The business folder
+
+`business/` holds what justifies and directs the system, and the rest of the
+corpus specifies the system. Its index follows Peter Drucker's five questions
+(mission, customer, what the customer values, results, and plan), so that a
+reader sees what the business cares about and which of those concerns the
+corpus leaves unanswered. A new type belongs in `business/` only when it
+answers one of those questions for the system rather than specifying the
+system. Business rules stay outside it: they would hold if another system
+served the business, but they bind the system.
 
 ### One profile
 
@@ -136,14 +147,17 @@ contract.
 | --- | --- | --- | --- |
 | SYS | System | QC | Quality Characteristic |
 | SUB | Subsystem | QR | Quality Requirement |
-| BIZ | Business Requirements | EI | External Interface |
+| OPP | Opportunity | EI | External Interface |
 | USR | User Class | GLO | Glossary |
 | FEA | Feature | ET | Entity Type |
 | CMP | Feature Component | VT | Value Type |
 | UC | Use Case | BR | Business Rule |
 | REQ | Requirement | MIS | Mission |
 | VIS | Vision | PRI | Principles |
-| JOB | Job to Be Done | | |
+| JOB | Job to Be Done | STK | Stakeholders |
+| OBJ | Objectives | SCP | Scope |
+
+BIZ, the code of the retired Business Requirements type, is not reused.
 
 Profile areas are TYP, STR, PLC, OWN, LNK, CHG, CON, and DOC, and, for rules
 that concern particular types, DIR for direction, JOB for jobs to be done, DEC for subsystems and
@@ -224,7 +238,10 @@ template.
 | Job to Be Done | Clayton Christensen's account of a job as progress sought in circumstances, with functional, emotional, and social dimensions, and Tony Ulwick's job performer and solution-independent job statement, as the [Jobs to Be Done](../../knowledge/product-engineering/src/foundations/jobs-to-be-done.md) foundation of the product-engineering bundle explains them. |
 | System | The system overview of ISO/IEC/IEEE 29148, and the product perspective and operating environment of Karl Wiegers and Joy Beatty's software requirements specification. |
 | Subsystem | The same sources as the System template. |
-| Business Requirements | The vision and scope document of Karl Wiegers and Joy Beatty, and the business requirements of ISO/IEC/IEEE 29148. |
+| Opportunity | The business purpose (§9.3.2) and the definition of the problem or opportunity space (§6.2.3.3) of ISO/IEC/IEEE 29148, framed as an opportunity after Peter Drucker's *Managing for Results*. |
+| Stakeholders | The major stakeholders of the business requirements specification in ISO/IEC/IEEE 29148 (§9.3.5), and the supporting customers of Peter Drucker's *The Five Most Important Questions*. |
+| Objectives | The mission, goals, and objectives of ISO/IEC/IEEE 29148 (§9.3.7), whose measures of effectiveness (§6.2.3.3) indicators follow; the business objectives and success metrics of Karl Wiegers and Joy Beatty; and the results, measured qualitatively and quantitatively, of Peter Drucker's *The Five Most Important Questions*. |
+| Scope | The business scope (§9.3.3) and system scope (§9.5.3) of ISO/IEC/IEEE 29148, the separation of the scope of the work from the scope of the product in the Volere template, the solution scope of the BABOK Guide, Alistair Cockburn's in/out list, and the scope, limitations, and exclusions of Karl Wiegers and Joy Beatty. |
 | User Class | Karl Wiegers and Joy Beatty's user classes. |
 | External Interface | The external interface requirements of ISO/IEC/IEEE 29148 and of Karl Wiegers and Joy Beatty's software requirements specification. |
 | Feature, Feature Component | The features of Karl Wiegers and Joy Beatty. |

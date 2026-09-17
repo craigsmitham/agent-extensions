@@ -27,11 +27,14 @@ introduced. Examples in the templates use the [running example](example.md).
 | Type | Description |
 | --- | --- |
 | [`Mission`](../templates/mission.md) | Why the business or product exists: whom it serves and what it does for them. |
-| [`Vision`](../templates/vision.md) | The future that the business or product pursues, beyond the horizon of the business objectives. |
+| [`Vision`](../templates/vision.md) | The future that the business or product pursues, beyond the horizon of the system's objectives. |
 | [`Principles`](../templates/principles.md) | The guidance by which the business or product decides between reasonable options that conflict, in order of precedence. |
+| [`Opportunity`](../templates/opportunity.md) | What the system is built or changed to make possible: the need that is unmet, the current gap, and why now. |
 | [`Job to Be Done`](../templates/job-to-be-done.md) | The progress that a group of people seek in their circumstances, whatever product, service, or system helps them make it. |
+| [`Stakeholders`](../templates/stakeholders.md) | The people and groups with an interest in the system who do not use it, what each values, and any authority each holds over it. |
+| [`Objectives`](../templates/objectives.md) | The results that the system must bring about, each with the indicators by which its achievement is recognized. |
+| [`Scope`](../templates/scope.md) | The business area under consideration, and what the system includes and excludes within it. |
 | [`System`](../templates/system.md) | The software system being specified, and the boundary that its other concepts describe. |
-| [`Business Requirements`](../templates/business-requirements.md) | The business objectives, expected outcomes, and scope that justify building or changing the system. |
 | [`Subsystem`](../templates/subsystem.md) | A part of the system with its own boundary, because it has its own user classes, external interfaces, required levels of quality, or delivery or operation. |
 | [`User Class`](../templates/user-class.md) | A distinct group of the system's users, identified by how they use the system and what they need from it. |
 | [`External Interface`](../templates/external-interface.md) | A connection across the system's boundary to an external system or a device, and what passes across it. |
@@ -72,7 +75,10 @@ Each term below has one meaning throughout this profile and its templates.
 | Direction | The mission, vision, and principles of a business or product, which hold whichever system serves it. Direction is intent and guidance, not obligation. |
 | Principle | A statement of how to decide between reasonable options that conflict, as an entry of a Principles document. |
 | Job performer | The person or group whose progress a Job to Be Done describes, as the job itself describes them. A job performer need not use the system, and is described in the job rather than as a User Class or stakeholder. |
-| Scope | What the system includes and excludes, as the Business Requirements document states it. What a feature includes is its *coverage*. |
+| Business area | The business activities and parties under consideration, whether or not the system supports them, as the Scope document states it. |
+| Scope | What the system includes and excludes, as the Scope document states it. What a feature includes is its *coverage*. |
+| Objective | A result that the system must bring about, stated as an outcome for the business or those it serves rather than as an output, as an entry of the Objectives document. |
+| Indicator | An observable sign by which an objective's achievement is recognized: quantitative, with a target and timeframe, or qualitative, naming the evidence observed. It is neither a Measure nor a key result of a plan. |
 | System-level feature | A feature placed directly under the system. |
 | Subsystem-level feature | A feature placed under a subsystem. |
 | Design constraint | A Requirement whose obligation is to use, or not use, a specific technology, platform, or design. |
@@ -108,13 +114,18 @@ subject.
 spec/
   README.md                        # Adoption declaration
   index.md                         # Navigation; carries okf_version: "0.2"
-  mission.md                       # Mission
-  vision.md                        # Vision
-  principles.md                    # Principles
+  business/                        # Why the system exists, whom it serves, and what it must achieve
+    index.md                       # Entry point, arranged as P-STR-9 requires
+    mission.md                     # Mission
+    vision.md                      # Vision
+    principles.md                  # Principles
+    opportunity.md                 # Opportunity
+    stakeholders.md                # Stakeholders
+    objectives.md                  # Objectives
+    scope.md                       # Scope
+    jobs/                          # Job to Be Done documents
   system.md                        # System
-  business.md                      # Business Requirements
   glossary.md                      # Glossary
-  jobs/                            # Job to Be Done documents
   users/                           # User Class documents
   interfaces/                      # External Interface documents
   rules/                           # Business Rule documents
@@ -160,6 +171,25 @@ spec/
   concept folder that holds only its concept document.
 - **P-STR-8** Concept filenames and concept folder names SHOULD be the
   kebab-case form of the concept's title.
+
+`business/` holds what justifies and directs the system; the rest of the
+corpus specifies the system. Its index is where a reader starts to learn what
+the business cares about, so its headings follow Peter Drucker's questions of
+mission, customer and value, results, and plan, and it shows each of those
+concerns that the corpus leaves unanswered. OKF index entries are links, so a
+concern without a document is stated in a paragraph rather than as an entry.
+
+- **P-STR-9** `business/index.md` MUST use these level-2 headings in this
+  order, each present whether or not it has entries, and under each MUST link
+  every document or folder of the types it lists that the corpus holds or uses
+  from another corpus, or, for each of those types that it neither holds nor
+  uses, state "<Type>: not defined." in a paragraph:
+  - **Why we exist**: Mission, Vision, and Principles.
+  - **Opportunity**: Opportunity.
+  - **Whom we serve**: the `jobs/` folder, Stakeholders, and the corpus's
+    `users/` folder.
+  - **Results we seek**: Objectives.
+  - **What we will and won't do**: Scope.
 
 Every placement level has the same shape: its concept document, which for the
 system is `system.md`; `use-cases/` and `requirements/` for the documents
@@ -216,8 +246,8 @@ external interface, or a glossary term.
   subsystem SHOULD link that subsystem under **Related**.
 - **P-DEC-3** A meaning specific to one subsystem MUST take a name distinct
   from the system's other names.
-- **P-DEC-4** The **Scope** of the Business Requirements MUST link each
-  subsystem it includes.
+- **P-DEC-4** The **In scope** section of the Scope MUST link each subsystem
+  it includes.
 
 ### Rule-placed types
 
@@ -248,8 +278,9 @@ rather than restating them.
 | Why the business or product exists, whatever system serves it | Mission |
 | The progress that people seek in their circumstances, whatever solution helps them | Job to Be Done |
 | Who makes that progress, and the circumstances in which they seek it | The Job to Be Done, not a User Class |
-| The future that the business or product pursues, without a measure or target | Vision |
+| The future that the business or product pursues, without an indicator or target | Vision |
 | How to decide between reasonable options that conflict, such as which user class or quality prevails | Principles |
+| The interest in the system of a person or group who does not use it, what they value, and any authority they hold over it | Stakeholders, not a User Class |
 | Guidance for design decisions, such as visual style or interaction patterns | Not Principles; design records, as [P-CON-8](#work-management-and-design) requires |
 | What a term means to the business | Glossary |
 | How the business decides whether something belongs to a classification, such as *high-risk customer* | Business Rule. The classification's meaning is a glossary entry with a **Decided by** line. |
@@ -268,21 +299,26 @@ can be stated where it is used or in its shared home; one stated in place
 moves to its shared home when its second use appears. Documents link to the
 shared definition.
 
-### Direction, job, or business requirements
+### Direction, job, opportunity, objectives, or scope
 
-- **P-DIR-2** Content that could be direction, a Job to Be Done, or Business
-  Requirements MUST be placed by the first of these questions answered yes.
+- **P-DIR-2** Content that could be direction, a Job to Be Done, the
+  Opportunity, Objectives, or Scope MUST be placed by the first of these
+  questions answered yes.
 
-1. Does it state, or need, a measure or target? It is a business objective or
-   a success indicator.
+1. Does it state, or need, an indicator or target? It is an objective or one
+   of its indicators.
 2. Does it describe progress that people seek for themselves, whether or not
    the business helps them make it, rather than what the business does,
    pursues, or decides? It is a Job to Be Done.
-3. Would it still hold if a different system served the business or product?
-   It is direction, and [where content goes](#where-content-goes) decides its
-   type.
-4. Otherwise, it is Business Requirements content, such as the
-   **Problem or opportunity** or **Scope**.
+3. Does it say why the business or product exists, what future it pursues, or
+   how it decides between options, whatever system serves it? It is
+   direction, and [where content goes](#where-content-goes) decides its type.
+4. Does it say what need is unmet, what gap exists today, or why the system
+   is built or changed now? It is the Opportunity.
+5. Does it say which business activities and parties are under consideration,
+   or what the system includes or excludes? It is Scope.
+6. Otherwise, it belongs to none of these types, and the other ownership
+   tests decide.
 
 ### Job to be done or use case
 
@@ -400,7 +436,7 @@ feature does not link the feature for that reason.
 | Named link | Meaning | Stated in | Links to |
 | --- | --- | --- | --- |
 | specified by | The requirement that states a step's or extension's binding detail | Use Case step or extension | Requirement |
-| serves | What a concept exists to support or help achieve | Feature, Requirement, Quality Characteristic | User Class, Job to Be Done, business objective, or Quality Characteristic |
+| serves | What a concept exists to support or help achieve | Feature, Requirement, Quality Characteristic | User Class, Job to Be Done, objective, or Quality Characteristic |
 | enforces | How the system respects a rule | Requirement | Business Rule |
 | Defined by | The concept whose **Definition** defines the entry's name | Glossary entry | Concept with a **Definition** section |
 | Decided by | The rule that decides whether something belongs to the entry's classification | Glossary entry | Business Rule |
@@ -439,10 +475,10 @@ These rules apply to every concept document.
 ### Record gaps instead of inventing
 
 - **P-CON-4** A document MUST NOT invent content to complete a section, such
-  as objectives, measures, targets, figures, sources, evidence, or authority;
-  what is unknown or undecided, including a term whose meaning is not agreed,
-  is recorded under **Open questions**, and a required field or section whose
-  content is unknown is kept with its gap recorded there.
+  as objectives, indicators, measures, targets, figures, sources, evidence, or
+  authority; what is unknown or undecided, including a term whose meaning is
+  not agreed, is recorded under **Open questions**, and a required field or
+  section whose content is unknown is kept with its gap recorded there.
 
 ### Concerns not yet defined
 
@@ -497,7 +533,9 @@ to write a definition well.
 Binding content establishes the obligations, rules, definitions, or direction
 that a document exists to state. It is everything in a concept document except
 its supporting sections and the entry lines of a document made of entries,
-such as the lines of each Glossary entry after its definition. It takes the
+such as the lines of each Glossary entry after its definition, other than
+entry lines that a Type contract makes binding, such as an objective's
+**Indicator** lines. It takes the
 form that states it most clearly: prose, a list, a table, a diagram, a
 formula, or a combination. Illustrative content, such as examples, scenarios,
 sample data, user interface sketches, and explanatory diagrams, helps a reader
@@ -553,9 +591,10 @@ This version leaves these concerns undefined. Content about them follows
 - frontmatter keys beyond base OKF v0.2;
 - a lifecycle for the specification and its documents, such as review,
   acceptance, status, and review dates;
-- stable identifiers for linked headings other than business objectives;
-- product strategy, initiative priorities and constraints, assumptions and
-  dependencies, and risks;
+- stable identifiers for linked headings other than objectives;
+- product strategy and goals between the vision and the objectives,
+  initiative priorities and constraints, assumptions and dependencies, and
+  risks;
 - principles for one system that add to the principles another corpus holds;
 - for jobs to be done: desired outcome statements, job maps and job steps,
   relationships between jobs, the forces that drive or resist a change of

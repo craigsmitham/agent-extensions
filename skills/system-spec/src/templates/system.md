@@ -39,7 +39,7 @@ description: <What the system is and who it serves, in one sentence>
 
 State what the system is and does in a paragraph, and whether it is new, a
 replacement, or part of a larger family of products. Do not summarize the
-business case; `business.md` holds it. Do not list or describe
+business case; the documents in `business/` hold it. Do not list or describe
 features; the folder indexes list them.
 
 ### Boundary and context

@@ -12,7 +12,7 @@ availability or response time.
     following the profile's
     [definition rules](../references/profile.md#definitions).
   - **Importance**: why the property matters, stating **serves** for each
-    user class and business objective it matters to, and naming any risk that
+    user class and objective it matters to, and naming any risk that
     makes it matter.
   - **Measures** *(when a quality requirement states a level on a measure)*:
     each such measure.
@@ -59,7 +59,7 @@ description: <What the property means for the system or subsystem, in one senten
 There is no fixed set of quality characteristics. Choose the set for the
 system or subsystem:
 
-1. Start from what matters: business objectives,
+1. Start from what matters: objectives,
    user class needs, risks, regulations, and the operating environment. Each
    characteristic traces to at least one of them under **Importance**.
 2. Check the set against a quality model, such as the characteristics and

@@ -9,7 +9,7 @@ serves and what it does for them.
 - **MIS-2** A Mission document MUST include these sections:
   - **Mission**: whom the business or product serves and what it does for
     them, in the present tense, in one or two sentences.
-- **MIS-3** A Mission MUST NOT state a time horizon, a measure or target,
+- **MIS-3** A Mission MUST NOT state a time horizon, an indicator or target,
   features, or how the mission is carried out.
 
 ## Suggested document
@@ -39,7 +39,7 @@ The mission says why the business or product exists now, the
 [vision](vision.md) says the future it pursues, and a System's **Purpose**
 says what one system is and does. A mission stays true when a different system
 serves the business, as the profile's
-[ownership tests](../references/profile.md#direction-job-or-business-requirements)
+[ownership tests](../references/profile.md#direction-job-opportunity-objectives-or-scope)
 decide:
 
 ```markdown
