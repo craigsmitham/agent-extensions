@@ -26,9 +26,9 @@ introduced. Examples in the templates use the [running example](example.md).
 
 | Type | Description |
 | --- | --- |
-| [`Mission`](../templates/mission.md) | Why the business or product exists: whom it serves and what it does for them. |
-| [`Vision`](../templates/vision.md) | The future that the business or product pursues, beyond the horizon of the system's objectives. |
-| [`Principles`](../templates/principles.md) | The guidance by which the business or product decides between reasonable options that conflict, and what each option prevails over. |
+| [`Mission`](../templates/mission.md) | Why the system's business exists: whom it serves and what it does for them. |
+| [`Vision`](../templates/vision.md) | The future that the system's business pursues, beyond the horizon of the system's objectives. |
+| [`Principles`](../templates/principles.md) | The guidance by which the system's business decides between reasonable options that conflict, and what each option prevails over. |
 | [`Opportunity`](../templates/opportunity.md) | What the system is built or changed to make possible: the need that is unmet, the current gap, and why now. |
 | [`Job to Be Done`](../templates/job-to-be-done.md) | The progress that a group of people seek in their circumstances, whatever product, service, or system helps them make it. |
 | [`Stakeholder`](../templates/stakeholder.md) | A person or group with an interest in the system who does not use it, what they value, and any authority they hold over it. |
@@ -72,7 +72,9 @@ Each term below has one meaning throughout this profile and its templates.
 | Home | The one location of a concept. The home of a Use Case or Requirement is the placement level at which it is placed, as [Rule-placed types](#rule-placed-types) decides. |
 | Owning type | The type that the [Ownership tests](#ownership-tests) assign content to. |
 | Named link | A link whose meaning the [Named links](#named-links) table gives, stated in bold with its name. |
-| Direction | The mission, vision, and principles of a business or product, which hold whichever system serves it. Direction is intent and guidance, not obligation. |
+| Business | What a system serves and answers for: an enterprise, a product, or a part of either, with its own reason to exist, those it serves, and the results it seeks. A system's business may be a whole enterprise or product, or sit within an enclosing business. It is not the system; another system could serve it. |
+| Enclosing business | A larger business within which a system's business sits, such as the enterprise that a product or department belongs to. |
+| Direction | The mission, vision, and principles of a business, which hold whichever system serves it. The direction of a business adds to the direction of each enclosing business. Direction is intent and guidance, not obligation. |
 | Principle | A statement of how to decide between reasonable options that conflict, as an entry of a Principles document. |
 | Job performer | The person or group whose progress a Job to Be Done describes, as the job itself describes them. A job performer need not use the system, and is described in the job rather than as a User Class or stakeholder. |
 | Business area | The business activities and parties under consideration, whether or not the system supports them, as the Scope document states it. |
@@ -207,12 +209,26 @@ the
 [Quality Characteristic contract](../templates/quality-characteristic.md#type-contract)
 requires, because those quality requirements are placed beside it.
 
-A business or product that several systems serve has one direction, held by
-one corpus and used by the others.
+Each business has one direction, held by one corpus. A corpus holds the
+direction of its system's business, unless another corpus already holds it
+because several systems serve that business, and uses the direction of each
+enclosing business from the corpus that holds it. A system that is the
+whole of its business holds its business's direction; a system within a larger
+enterprise can hold direction of its own that adds to the enterprise's.
 
-- **P-DIR-1** A corpus that uses a Mission, Vision, or Principles document held
-  by another corpus MUST NOT hold its own document of that type, and its
-  `README.md` MUST link each document it uses.
+- **P-DIR-1** A corpus MUST NOT hold a Mission, Vision, or Principles document
+  of a business whose document of that type another corpus holds, and its
+  `README.md` MUST link each Mission, Vision, or Principles document it uses
+  from another corpus.
+- **P-DIR-4** A Mission, Vision, or Principles document MUST NOT contradict
+  or restate the document of that type of an enclosing business.
+- **P-DIR-5** An apparent conflict with an enclosing business's direction
+  SHOULD be recorded under **Open questions**; until it is resolved, the
+  enclosing business's direction prevails.
+
+A business is named as its people name it. A business within an enclosing
+business that has no name but its system's, such as an internal platform, can
+take its system's name, as in "Rental system principles".
 
 A job that several systems help with is likewise held by one corpus.
 
@@ -275,10 +291,10 @@ rather than restating them.
 
 | Concern | Owning type |
 | --- | --- |
-| Why the business or product exists, whatever system serves it | Mission |
+| Why a business exists, whatever system serves it | Mission |
 | The progress that people seek in their circumstances, whatever solution helps them | Job to Be Done |
 | Who makes that progress, and the circumstances in which they seek it | The Job to Be Done, not a User Class |
-| The future that the business or product pursues, without an indicator or target | Vision |
+| The future that a business pursues, without an indicator or target | Vision |
 | How to decide between reasonable options that conflict, such as which user class or quality prevails | Principles |
 | The interest in the system of a person or group who does not use it, what they value, and any authority they hold over it | Stakeholder, not a User Class |
 | Guidance for design decisions, such as visual style or interaction patterns | Not Principles; design records, as [P-CON-8](#work-management-and-design) requires |
@@ -312,7 +328,7 @@ shared definition.
 2. Does it describe progress that people seek for themselves, whether or not
    the business helps them make it, rather than what the business does,
    pursues, or decides? It is a Job to Be Done.
-3. Does it say why the business or product exists, what future it pursues, or
+3. Does it say why the business exists, what future it pursues, or
    how it decides between options, whatever system serves it? It is
    direction, and [where content goes](#where-content-goes) decides its type.
 4. Does it say what need is unmet, what gap exists today, or why the system
@@ -597,7 +613,6 @@ This version leaves these concerns undefined. Content about them follows
 - product strategy and goals between the vision and the objectives,
   initiative priorities and constraints, assumptions and dependencies, and
   risks;
-- principles for one system that add to the principles another corpus holds;
 - for jobs to be done: desired outcome statements, job maps and job steps,
   relationships between jobs, the forces that drive or resist a change of
   solution, and jobs of buying or supporting a solution;

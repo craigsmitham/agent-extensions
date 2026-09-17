@@ -1,13 +1,14 @@
 # Vision template
 
-Use for the future that the business or product that the system serves
-pursues, beyond the horizon of the system's objectives.
+Use for the future that the system's business pursues, beyond the horizon of
+the system's objectives, whether that business is a whole enterprise or
+product or sits within an enclosing business.
 
 ## Type contract
 
-- **VIS-1** The title MUST be "<Business or product> vision".
+- **VIS-1** The title MUST be "<Business> vision".
 - **VIS-2** A Vision document MUST include these sections:
-  - **Vision**: the future that the business or product pursues, for whom,
+  - **Vision**: the future that the business pursues, for whom,
     and what will be different for them, in one short paragraph.
 - **VIS-3** A Vision MUST NOT state indicators, targets, release timing,
   features, or the design of an experience.
@@ -17,11 +18,11 @@ pursues, beyond the horizon of the system's objectives.
 ```markdown
 ---
 type: Vision
-title: <Business or product> vision
+title: <Business> vision
 description: <The future pursued, in one sentence>
 ---
 
-# <Business or product> vision
+# <Business> vision
 
 ## Vision
 
@@ -35,7 +36,7 @@ description: <The future pursued, in one sentence>
 
 ### Vision and objectives
 
-A vision describes where the business or product is going;
+A vision describes where the business is going;
 [objectives](objectives.md) are the results one system must bring about on the
 way, with indicators that recognize them. A statement that gains an indicator
 or target is an objective, as the profile's
@@ -62,8 +63,10 @@ equipment.
   from what the system does; when none is stated, leave the vision
   unwritten.
 
-### Shared visions
+### Shared and enclosing visions
 
-When several systems serve one business or product, one corpus holds the
-vision and the others link it, as the profile's
+When several systems serve one business, one corpus holds the vision and the
+others link it. A business within an enclosing business links the enclosing
+vision and can state its own: the future it pursues for those it serves,
+without restating or contradicting the enclosing vision, as the profile's
 [Structure](../references/profile.md#structure) requires.

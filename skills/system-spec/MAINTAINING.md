@@ -95,6 +95,13 @@ answers one of those questions for the system rather than specifying the
 system. Business rules stay outside it: they would hold if another system
 served the business, but they bind the system.
 
+A business is what a system serves and answers for, at whatever size: a whole
+enterprise, a product, or a part of either. Direction belongs to a business
+and adds to the direction of each enclosing business, so a system that is its
+own business and a system within a larger enterprise use the same types. Do
+not add product-, system-, or enterprise-specific direction types; a new need
+of that kind is met by naming the business the direction belongs to.
+
 ### One profile
 
 The profile holds the rules for every type. Only the System is required, and

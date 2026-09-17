@@ -1,11 +1,12 @@
 # Principles template
 
-Use for the guidance by which the business or product that the system serves
-decides between reasonable options that conflict.
+Use for the guidance by which the system's business decides between
+reasonable options that conflict, whether that business is a whole enterprise
+or product or sits within an enclosing business.
 
 ## Type contract
 
-- **PRI-1** The title MUST be "<Business or product> principles".
+- **PRI-1** The title MUST be "<Business> principles".
 - **PRI-2** A Principles document MUST include these sections:
   - **Principles**: one entry for each principle, headed by its short name.
 - **PRI-3** An entry's principle MUST be the first paragraph below its
@@ -25,11 +26,11 @@ decides between reasonable options that conflict.
 ```markdown
 ---
 type: Principles
-title: <Business or product> principles
-description: How <business or product> decides between reasonable options that conflict
+title: <Business> principles
+description: How <business> decides between reasonable options that conflict
 ---
 
-# <Business or product> principles
+# <Business> principles
 
 ## Principles
 
@@ -128,8 +129,13 @@ Priorities between user classes or between qualities, such as which user
 class prevails when their needs conflict, are principles, linking the user
 classes or quality characteristics they rank.
 
-### Shared principles
+### Shared and enclosing principles
 
-When several systems serve one business or product, one corpus holds the
-principles and the others link them, as the profile's
-[Structure](../references/profile.md#structure) requires.
+When several systems serve one business, one corpus holds the principles and
+the others link them. A business within an enclosing business links the
+enclosing principles and states its own for decisions that only it faces, such
+as which of its user classes prevails; its principles add to the enclosing
+ones and do not restate or contradict them, as the profile's
+[Structure](../references/profile.md#structure) requires. A principle that
+seems to conflict with an enclosing one is an open question, and until it is
+resolved the enclosing principle prevails.

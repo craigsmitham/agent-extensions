@@ -1,14 +1,15 @@
 # Mission template
 
-Use for why the business or product that the system serves exists: whom it
-serves and what it does for them.
+Use for why the system's business exists: whom it serves and what it does for
+them, whether that business is a whole enterprise or product or sits within an
+enclosing business.
 
 ## Type contract
 
-- **MIS-1** The title MUST be "<Business or product> mission".
+- **MIS-1** The title MUST be "<Business> mission".
 - **MIS-2** A Mission document MUST include these sections:
-  - **Mission**: whom the business or product serves and what it does for
-    them, in the present tense, in one or two sentences.
+  - **Mission**: whom the business serves and what it does for them,
+    in the present tense, in one or two sentences.
 - **MIS-3** A Mission MUST NOT state a time horizon, an indicator or target,
   features, or how the mission is carried out.
 
@@ -17,15 +18,15 @@ serves and what it does for them.
 ```markdown
 ---
 type: Mission
-title: <Business or product> mission
+title: <Business> mission
 description: <The mission, in one sentence>
 ---
 
-# <Business or product> mission
+# <Business> mission
 
 ## Mission
 
-<Business or product> <does what> for <whom>.
+<Business> <does what> for <whom>.
 
 ## Open questions
 ## Related
@@ -35,7 +36,7 @@ description: <The mission, in one sentence>
 
 ### Mission, vision, and purpose
 
-The mission says why the business or product exists now, the
+The mission says why the business exists now, the
 [vision](vision.md) says the future it pursues, and a System's **Purpose**
 says what one system is and does. A mission stays true when a different system
 serves the business, as the profile's
@@ -61,8 +62,10 @@ mission out.
   from what the system does; when none is stated, leave the mission
   unwritten.
 
-### Shared missions
+### Shared and enclosing missions
 
-When several systems serve one business or product, one corpus holds the
-mission and the others link it, as the profile's
+When several systems serve one business, one corpus holds the mission and the
+others link it. A business within an enclosing business links the enclosing
+mission and can state its own: why it exists within the enclosing business,
+without restating or contradicting the enclosing mission, as the profile's
 [Structure](../references/profile.md#structure) requires.

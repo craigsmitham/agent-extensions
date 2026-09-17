@@ -41,9 +41,9 @@ Add the others when the system has their content:
 
 - [Mission](templates/mission.md), [Vision](templates/vision.md), and
   [Principles](templates/principles.md), for the lasting purpose, pursued
-  future, and decision guidance of the business or product the system serves,
-  when the user or a source states them. Do not compose them from a system
-  request.
+  future, and decision guidance of the system's business, whether a whole
+  enterprise or product or a part of a larger one, when the user or a source
+  states them. Do not compose them from a system request.
 - [Job to Be Done](templates/job-to-be-done.md), for the progress people seek
   that the system helps them make, apart from any solution, when the user,
   research, or another source states them.
