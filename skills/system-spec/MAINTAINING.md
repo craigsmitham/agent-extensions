@@ -234,7 +234,7 @@ template.
 | --- | --- |
 | Mission | The mission of the Object Management Group's Business Motivation Model, as what the business does for whom, apart from any system. |
 | Vision | The vision of the Business Motivation Model, and the product vision of Marty Cagan's *Inspired* and *Empowered*, as the future pursued rather than a specification. |
-| Principles | The product principles of Marty Cagan's *Inspired*, Amazon's tenets, and the business policy of the Business Motivation Model: guidance for decisions, ranked to settle conflicts, rather than obligations. |
+| Principles | The product principles of Marty Cagan's *Inspired*, Amazon's tenets, and the business policy of the Business Motivation Model: guidance for decisions rather than obligations, ranked only where the ranking is agreed. Richard Rumelt's guiding policy, from *Good Strategy Bad Strategy* and *The Crux*, supplies the test that a principle rules out options and answers a stated conflict, and the line between a lasting principle and strategy for a current challenge. |
 | Job to Be Done | Clayton Christensen's account of a job as progress sought in circumstances, with functional, emotional, and social dimensions, and Tony Ulwick's job performer and solution-independent job statement, as the [Jobs to Be Done](../../knowledge/product-engineering/src/foundations/jobs-to-be-done.md) foundation of the product-engineering bundle explains them. |
 | System | The system overview of ISO/IEC/IEEE 29148, and the product perspective and operating environment of Karl Wiegers and Joy Beatty's software requirements specification. |
 | Subsystem | The same sources as the System template. |

@@ -28,7 +28,7 @@ introduced. Examples in the templates use the [running example](example.md).
 | --- | --- |
 | [`Mission`](../templates/mission.md) | Why the business or product exists: whom it serves and what it does for them. |
 | [`Vision`](../templates/vision.md) | The future that the business or product pursues, beyond the horizon of the system's objectives. |
-| [`Principles`](../templates/principles.md) | The guidance by which the business or product decides between reasonable options that conflict, in order of precedence. |
+| [`Principles`](../templates/principles.md) | The guidance by which the business or product decides between reasonable options that conflict, and what each option prevails over. |
 | [`Opportunity`](../templates/opportunity.md) | What the system is built or changed to make possible: the need that is unmet, the current gap, and why now. |
 | [`Job to Be Done`](../templates/job-to-be-done.md) | The progress that a group of people seek in their circumstances, whatever product, service, or system helps them make it. |
 | [`Stakeholders`](../templates/stakeholders.md) | The people and groups with an interest in the system who do not use it, what each values, and any authority each holds over it. |
@@ -282,6 +282,8 @@ rather than restating them.
 | How to decide between reasonable options that conflict, such as which user class or quality prevails | Principles |
 | The interest in the system of a person or group who does not use it, what they value, and any authority they hold over it | Stakeholders, not a User Class |
 | Guidance for design decisions, such as visual style or interaction patterns | Not Principles; design records, as [P-CON-8](#work-management-and-design) requires |
+| A value of the business's culture, or guidance for how work on the system is done | Not Principles; work-management records, as [P-CON-7](#work-management-and-design) requires, or no document |
+| A stand taken to overcome a current challenge, such as where to focus next | Not Principles; strategy, which this profile does not yet define, as [Not yet defined](#not-yet-defined) lists |
 | What a term means to the business | Glossary |
 | How the business decides whether something belongs to a classification, such as *high-risk customer* | Business Rule. The classification's meaning is a glossary entry with a **Decided by** line. |
 | The formats and protocols that a counterpart or a named standard requires at a connection | External Interface |

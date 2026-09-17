@@ -1,7 +1,7 @@
 # Principles template
 
 Use for the guidance by which the business or product that the system serves
-decides between reasonable options that conflict, in order of precedence.
+decides between reasonable options that conflict.
 
 ## Type contract
 
@@ -10,12 +10,14 @@ decides between reasonable options that conflict, in order of precedence.
   - **Principles**: one entry for each principle, headed by its short name.
 - **PRI-3** An entry's principle MUST be the first paragraph below its
   heading, and the rest of the entry MUST be entry lines.
-- **PRI-4** Principles MUST be listed so that an earlier principle prevails
-  over a later one that conflicts with it, unless a paragraph before the first
-  entry states that they are unranked.
+- **PRI-4** Principles MUST be unranked unless a paragraph before the first
+  entry states that they are listed in an agreed order of precedence, in which
+  case an earlier principle prevails over a later one that conflicts with it.
 - **PRI-5** Each principle MUST decide between options that the business
-  would otherwise find reasonable.
-- **PRI-6** A principle MUST NOT state an obligation, a rule, or design.
+  would otherwise find reasonable, and MUST name what it prevails over.
+- **PRI-6** A principle MUST NOT state an obligation, a rule, design, a value
+  of the business's culture, how the system is built or the work on it is
+  done, or a strategy for a current challenge.
 - **PRI-7** A Principles document SHOULD NOT state more than seven principles.
 
 ## Suggested document
@@ -35,8 +37,8 @@ description: How <business or product> decides between reasonable options that c
 
 <What to prefer, and what it prevails over.>
 
-- **Rationale:** <why the business holds the principle>
-- **Example:** <a decision the principle settles>
+- **Rationale:** <the conflict or risk that makes the stand necessary>
+- **Example:** <a decision the principle settles, or a link to the rule or requirement that records it>
 
 ## Open questions
 ## Related
@@ -54,8 +56,23 @@ which follows from it and links it under **Rationale**. The profile's
 [ownership tests](../references/profile.md#principle-or-obligation)
 decide which is which.
 
-Principles for visual or interaction design, such as a style guide's, are
-design and belong to design records.
+### Principles, values, and strategy
+
+A principle holds whichever system serves the business and whatever it is
+working on now. Three kinds of guidance that resemble principles belong
+elsewhere:
+
+- A value of the business's culture, such as "we are transparent", takes no
+  stand between options for what the business offers.
+- Guidance for how the system is built or how work on it is done, such as
+  engineering principles, a style guide, or "ship in small increments", belongs
+  to design or work-management records, as the profile's
+  [P-CON-7 and P-CON-8](../references/profile.md#work-management-and-design)
+  require.
+- A stand taken to overcome a current challenge, such as "win depots in the
+  north before expanding south", is strategy, which changes when the challenge
+  does. The profile does not yet define strategy, as
+  [Not yet defined](../references/profile.md#not-yet-defined) lists.
 
 ### Writing a principle
 
@@ -63,15 +80,21 @@ design and belong to design records.
   over availability". A principle that no one would dispute, such as "be
   easy to use", decides nothing.
 - Name the principle in a few words, and state it in one to three sentences.
-- Give why the business holds it on the **Rationale** line when the
-  principle does not make that plain, and a decision it has settled on the
-  **Example** line. A real decision shows that the principle decides between
-  reasonable options. Only the principle is binding.
+- Give the conflict or risk that makes the stand necessary on the
+  **Rationale** line, when the principle does not make it plain. A principle
+  whose conflict no longer arises is due for review.
+- Give a decision the principle has settled on the **Example** line, to show
+  that it decides between reasonable options. When a rule or requirement
+  records that decision, link it rather than restating it. Only the principle
+  is binding.
 - Write only principles that a person or a source states. Do not compose
   them from what the system does; a decision that the stated principles do
   not settle is an open question where it arises.
 
 ~~~markdown
+These principles are listed in the order of precedence that the business
+has agreed.
+
 ### Safe equipment over availability
 
 The business rents only equipment it knows to be safe, even when a contractor
@@ -79,24 +102,28 @@ goes without the equipment they want.
 
 - **Rationale:** An accident with rented equipment harms the contractor and
   the business, and no rental is worth that risk.
-- **Example:** Equipment whose inspection is overdue is withdrawn from rental
-  rather than rented until it can be inspected.
+- **Example:** [Overdue inspection withdrawal](<link>)
 
 ### Contractors' time over depot convenience
 
 When a choice saves contractors time at the cost of more work for depot staff,
 the business chooses contractors' time.
 
-- **Rationale:** Contractors rent to keep work moving, and a lost working day
-  costs them more than the rental.
+- **Rationale:** Depot staff would prefer to prepare equipment only during
+  opening hours, but contractors rent to keep work moving, and a lost working
+  day costs them more than the rental.
 - **Example:** Customers reserve equipment online at any hour, although depot
   staff then prepare equipment reserved overnight.
 ~~~
 
 ### Precedence
 
-The order of entries is binding: when two principles conflict, the earlier
-prevails, so the business decides the order when it agrees the principles.
+A principle's own stand says what prevails within it. Between principles, an
+order binds only when the business has agreed it; the order in which
+principles happen to be written is not a ranking, so do not state that the
+list is ordered unless a person or a source says so. When two unranked
+principles conflict in a decision, record the conflict as an open question.
+
 Priorities between user classes or between qualities, such as which user
 class prevails when their needs conflict, are principles, linking the user
 classes or quality characteristics they rank.

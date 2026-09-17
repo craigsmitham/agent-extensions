@@ -104,6 +104,11 @@ outcomes say what doing a step well means.
   Execute, and it is sound only when Define and Confirm are.
 - **Serve the step's outcomes.** Among the choices the rules allow, prefer the
   one that serves the outcomes of the step at hand.
+- **Apply the stated principles.** Where the rules allow more than one
+  choice, a stated principle can decide between them. A choice that becomes
+  binding is a rule or requirement for the steward to confirm, and a choice
+  that no principle settles, or that unranked principles settle differently,
+  is an open question.
 - **Let the guarding outcomes win.** When completeness or speed competes with
   not inventing detail or with who decides, record the gap under **Open
   questions**, as [P-CON-4](profile.md#record-gaps-instead-of-inventing)

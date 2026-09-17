@@ -54,7 +54,7 @@ and each links Fleet maintenance.
 - Its vision is that contractors have the equipment their work needs on site
   when the work needs it, and never lose a working day to finding, collecting,
   or returning equipment. Objective 1 is a step toward it.
-- Its principles, in order of precedence, are *Safe equipment over
+- Its principles, in the order of precedence that it has agreed, are *Safe equipment over
   availability*: it rents only equipment it knows to be safe, even when a
   contractor goes without, from which the Overdue inspection withdrawal rule
   follows; and *Contractors' time over depot convenience*: when a choice saves
