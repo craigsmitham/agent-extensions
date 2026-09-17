@@ -14,6 +14,11 @@ Represent specs as an OKF v0.2 bundle that follows the
 normative, and its numbered rules are the checklist for writing and reviewing
 a document. Examples follow the [running example](references/example.md).
 
+The skill serves one [job](references/job.md): growing and maintaining a
+software system's specification. Read it when the profile does not decide what
+to do, such as when a request fits no type or leaves a choice of what to do
+first.
+
 ## Concept types
 
 Only `system.md` is required. Write a document of another type when there is
@@ -84,4 +89,5 @@ Add the others when the system has their content:
    link, as [Change](references/profile.md#change) requires.
 
 When content concerns something the profile has not yet defined,
-follow [P-CON-5](references/profile.md#concerns-not-yet-defined).
+follow [P-CON-5](references/profile.md#concerns-not-yet-defined), and use
+the [job](references/job.md) to choose how.

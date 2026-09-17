@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Lint the System Spec skill's profile, templates, and running example.
+"""Lint the System Spec skill's profile, templates, running example, and job.
 
 Checks what breaks silently when these files change: links and anchors, rule
 identifiers and references to them, where normative keywords appear, and
 agreement between each template's Type contract and Suggested document. The
-other conventions in skills/system-spec/README.md are left to review. Exits 1
+other conventions in skills/system-spec/MAINTAINING.md are left to review. Exits 1
 when any finding is reported.
 """
 
@@ -183,14 +183,16 @@ def main() -> int:
     profile = Doc((SRC / "references" / "profile.md").resolve())
     templates = [Doc(p.resolve()) for p in sorted((SRC / "templates").glob("*.md"))]
     example = Doc((SRC / "references" / "example.md").resolve())
-    others = [Doc((SRC / "SKILL.md").resolve()), Doc((SPEC / "README.md").resolve())]
+    job = Doc((SRC / "references" / "job.md").resolve())
+    others = [Doc((SRC / "SKILL.md").resolve()), Doc((SPEC / "README.md").resolve()), Doc((SPEC / "MAINTAINING.md").resolve())]
 
     collect_rules(profile, range(profile.headings(2)[0][0], len(profile.lines)), rules)
     for doc in templates:
         check_template(doc, rules)
     no_keywords(example, range(len(example.lines)))
+    no_keywords(job, range(len(job.lines)))
 
-    docs = [profile, example] + templates + others
+    docs = [profile, example, job] + templates + others
     check_links(docs)
     check_references(docs, rules)
 

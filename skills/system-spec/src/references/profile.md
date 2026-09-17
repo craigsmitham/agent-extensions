@@ -62,6 +62,7 @@ Each term below has one meaning throughout this profile and its templates.
 
 | Term | Meaning |
 | --- | --- |
+| Specification | The agreed account of what a software system does, whom and what it serves, and why, in whatever form holds it. A corpus is the form this profile gives it. |
 | Boundary | What separates the system from the parties it interacts with. |
 | Subject | The System or Subsystem whose boundary a Use Case or Requirement describes. It is never a feature, a feature component, or an external interface. |
 | Placement level | The system, a subsystem, a feature, or a feature component, as a place where Use Cases and Requirements live. |
