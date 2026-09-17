@@ -8,13 +8,17 @@ modules.
 
 The profile, its modules, and each template's **Type contract** are the
 normative contract. Keep them coherent with these conventions when adding or
-changing a template, and run the lint before committing:
+changing a template, and run the lint from the repository root before
+committing:
 
 ```sh
-python3 skills/spec/scripts/lint_spec.py
+scripts/lint-spec.py
 ```
 
-The lint exits non-zero on any error. `--warn-only` reports without failing.
+The lint checks what breaks silently: links and anchors, rule identifiers and
+references to them, where uppercase keywords appear, and agreement between
+each template's Type contract and Suggested document. It exits non-zero on
+any finding. The other conventions here are kept by review.
 
 ### Core and modules
 
@@ -70,11 +74,10 @@ contract.
   and SHOULD NOT, or MAY. Split an item that mixes them.
 - Nested bullets under a tagged item, such as the sections a document
   includes, belong to that item.
-- Identifiers are unique. Before version 1.0, identifiers are numbered in
-  document order and renumbered when rules are added or removed. From 1.0,
-  an identifier is never reused for a different rule: a removed rule's
-  identifier is added to [Retired identifiers](#retired-identifiers), and a
-  replacement rule takes the next unused number.
+- Identifiers are unique and never reused for a different rule. Existing
+  identifiers are not renumbered, so gaps are expected: a new rule takes the
+  next number never used with its prefix, which the history of the file
+  shows.
 
 | Code | Type | Code | Type |
 | --- | --- | --- | --- |
@@ -90,10 +93,6 @@ contract.
 Profile areas are TYP, STR, PLC, OWN, LNK, STA, CON, and DOC. Each
 module has one area: DEC for Decomposition, RUL for Rules, QUA for Quality,
 and DAT for Data.
-
-### Retired identifiers
-
-None. The list starts when version 1.0 is published.
 
 ### Deferring a concern
 

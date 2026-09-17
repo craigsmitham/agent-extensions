@@ -38,7 +38,7 @@ jobs:
         run: node .axm/extensions/@agentxm/skills/agent-skill-evaluator/src/scripts/test-runner.mjs
 
       - name: Lint the Spec skill profile and templates
-        run: python3 skills/spec/scripts/lint_spec.py
+        run: scripts/lint-spec.py
 
       - name: Validate the proposed commit
         run: scripts/check-public-safety.sh --view git-index
