@@ -6,7 +6,7 @@ Version **0.1.0** · Base **OKF v0.2** · Maintainer **@craigsmitham** · Status
 This profile describes the specification of a software system as an OKF v0.2
 bundle. It defines the concept types, the corpus structure, where each concept
 lives, which type owns content that two types border, how concepts link, how
-their status changes, and the rules every document follows. The normative
+they change, and the rules every document follows. The normative
 contract comprises this file and the **Type contract** section of each
 template. Other template sections are authoring guidance.
 
@@ -401,38 +401,22 @@ feature does not link the feature for that reason.
 | specified by | The requirement that states a step's or extension's binding detail | Use Case step or extension | Requirement |
 | serves | What a concept exists to support or help achieve | Feature, Requirement, Quality Characteristic | User Class, Job to Be Done, business objective, or Quality Characteristic |
 | enforces | How the system respects a rule | Requirement | Business Rule |
-| replaces | A concept that supersedes a deprecated one | The replacing concept | The deprecated concept |
 | Defined by | The concept whose **Definition** defines the entry's name | Glossary entry | Concept with a **Definition** section |
 | Decided by | The rule that decides whether something belongs to the entry's classification | Glossary entry | Business Rule |
 
-## Status and change
+## Change
 
-The status of a concept document uses the OKF v0.2 frontmatter fields `status`
-and `verified`.
+Version control holds the history of changes, moves, renames, and deletions,
+and the repository's own review decides what the corpus contains. This version
+defines no lifecycle for documents, as [Not yet defined](#not-yet-defined)
+lists.
 
-| Status | Meaning |
-| --- | --- |
-| `draft` | Not yet accepted. It may hold gaps, recorded under **Open questions**. |
-| `stable` | Accepted by a person with authority to accept it. In OKF, an absent `status` means `stable`. |
-| `deprecated` | No longer current, and kept so that links and history survive. |
-
-- **P-STA-1** A concept document that has not been accepted MUST carry
-  `status: draft`.
-- **P-STA-2** A document MUST become `stable` only when a person with
-  authority to accept it does so, recorded as a `verified` entry whose `by`
-  is a `human:<id>` actor.
-- **P-STA-3** A `stable` document MUST NOT have open questions that affect its
-  binding content.
-- **P-STA-4** A change to the binding content of a `stable` document MUST be
-  accepted again, as P-STA-2 requires, or the document returned to `draft`.
-- **P-STA-5** A concept that is no longer current MUST be marked
-  `status: deprecated` rather than deleted while any document links to it, and
-  a concept that supersedes it MUST state **replaces**.
-- **P-STA-6** A move or rename MUST update every inbound link.
+- **P-CHG-1** A move or rename MUST update every inbound link.
+- **P-CHG-2** A concept that is no longer current MUST be deleted, and every
+  inbound link updated or removed.
 
 Release planning, including release priority and assignment, is work
-management, not status. Version control holds the history of changes, moves,
-and renames.
+management, as [P-CON-7](#work-management-and-design) states.
 
 ## Content rules
 
@@ -463,9 +447,10 @@ These rules apply to every concept document.
 
 - **P-CON-5** Content about a concern that this profile does not define SHOULD
   follow the practice that the Writing guidance of the document's type gives
-  for it, and otherwise be stated in prose in the section nearest to it, with
-  the records that hold it linked under **Related** and what is undecided
-  recorded under **Open questions**.
+  for it. Otherwise, it SHOULD be stated in prose in the section nearest to it
+  only when readers need it to understand that section's binding content, and
+  the records that hold it SHOULD be linked under **Related**, with what is
+  undecided recorded under **Open questions**.
 
 [Not yet defined](#not-yet-defined) lists the concerns this version leaves
 undefined.
@@ -548,9 +533,16 @@ sketch in an illustrative section can take any form, including an image.
 - **P-DOC-5** The provenance of a document's content, such as the stakeholder
   decisions, regulations, incidents, or research it came from, SHOULD be
   recorded in OKF `sources` frontmatter rather than in a body section.
-- **P-DOC-6** **Illustrations** SHOULD be included only when a reader could
-  not readily follow the binding content without them, and SHOULD NOT restate
-  it.
+- **P-DOC-6** A supporting section, or an entry line that is not a named
+  link, SHOULD be included only when it tells a reader something that the
+  binding content and its links do not, and SHOULD NOT restate either; in
+  particular, **Related** SHOULD NOT repeat a link that the body states.
+- **P-DOC-7** **Open questions** SHOULD record only what a person must decide
+  or find out before binding content can be completed, and SHOULD NOT keep a
+  question once it is answered.
+- **P-DOC-8** A concept document SHOULD NOT carry `status`, `verified`, or
+  `stale_after` frontmatter, unless the corpus `README.md` declares a
+  lifecycle as a local exception.
 
 ## Not yet defined
 
@@ -558,7 +550,8 @@ This version leaves these concerns undefined. Content about them follows
 [P-CON-5](#concerns-not-yet-defined).
 
 - frontmatter keys beyond base OKF v0.2;
-- who may accept each type, and review dates such as `stale_after`;
+- a lifecycle for the specification and its documents, such as review,
+  acceptance, status, and review dates;
 - stable identifiers for linked headings other than business objectives;
 - product strategy, initiative priorities and constraints, assumptions and
   dependencies, and risks;

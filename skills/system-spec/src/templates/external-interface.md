@@ -24,7 +24,6 @@ device, and what passes across it.
 type: External Interface
 title: <Counterpart name>
 description: <What passes between the system and the counterpart, and why, in one sentence>
-status: draft
 ---
 
 # <Counterpart name>

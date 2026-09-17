@@ -80,7 +80,7 @@ contract.
 | VIS | Vision | PRI | Principles |
 | JOB | Job to Be Done | | |
 
-Profile areas are TYP, STR, PLC, OWN, LNK, STA, CON, and DOC, and, for rules
+Profile areas are TYP, STR, PLC, OWN, LNK, CHG, CON, and DOC, and, for rules
 that concern particular types, DIR for direction, JOB for jobs to be done, DEC for subsystems and
 feature components, RUL for business rules, QUA for quality, and DAT for
 data.
@@ -102,8 +102,10 @@ Rules that apply to every type, such as the optional **Open questions**,
 and conditional markers, live in the profile's **Document conventions** and
 are not repeated in each Type contract. Every Suggested document lists
 **Open questions** and **Related**. It lists **Illustrations** only when the
-template's Writing guidance says what that type's illustrations hold, so that
-an empty heading does not invite filler. The Glossary and Principles carry an
+template's Writing guidance says what that type's illustrations hold, and
+**Rationale** or **Verification** only when the Type contract lists them, so
+that an empty heading does not invite filler. That guidance says when each
+supporting section is worth adding, not only what it holds. The Glossary and Principles carry an
 **Example** line on each entry instead.
 
 ### Template anatomy
@@ -132,7 +134,7 @@ Every template has this shape, in this order:
    states, so the contract does not declare it. Untagged paragraphs in the
    contract explain; they contain no uppercase keyword.
 4. `## Suggested document`: one fenced Markdown block, with frontmatter
-   carrying only `type`, `title`, `description`, `status: draft`, and
+   carrying only `type`, `title`, `description`, and
    `sources` when the contract requires it; a `Context | Value` table
    exactly when a type-specific rule requires one, as for Use Case; and
    supporting sections last

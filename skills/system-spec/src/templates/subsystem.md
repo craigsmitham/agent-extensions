@@ -30,7 +30,6 @@ Use for a part of the system with its own boundary.
 type: Subsystem
 title: <Subsystem name>
 description: <What the subsystem is and who it serves within the system, in one sentence>
-status: draft
 ---
 
 # <Subsystem name>

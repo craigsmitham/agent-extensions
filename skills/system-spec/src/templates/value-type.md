@@ -25,7 +25,6 @@ money, a rental period, or an email address.
 type: Value Type
 title: <Singular noun phrase>
 description: <What a value of this type is, in one sentence>
-status: draft
 ---
 
 # <Singular noun phrase>

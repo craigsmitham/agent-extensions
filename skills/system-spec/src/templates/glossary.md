@@ -19,7 +19,6 @@ Use for the agreed terms of the system, and what each one means.
 type: Glossary
 title: <System> glossary
 description: Agreed terms of <system> and what each one means
-status: draft
 ---
 
 # <System> glossary
@@ -99,7 +98,10 @@ The return of rented equipment after the last day of its
 ~~~
 
 Only the definition of an entry is binding. Its other lines are not, and its
-**Example** line is the place for illustrations.
+**Example** line is the place for illustrations. Most entries need only a
+definition: add an **Example** or **Note** only when a reader could misapply
+the definition without it, as
+[P-DOC-6](../references/profile.md#document-conventions) states.
 
 ### Definitions
 

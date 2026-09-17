@@ -31,7 +31,6 @@ availability or response time.
 type: Quality Characteristic
 title: <Property as a noun phrase>
 description: <What the property means for the system or subsystem, in one sentence>
-status: draft
 ---
 
 # <Property as a noun phrase>

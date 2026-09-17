@@ -34,7 +34,6 @@ a separate quality requirement.
 type: Quality Requirement
 title: <Obligation as a short declarative phrase>
 description: <The requirement statement, or a one-sentence summary of it>
-status: draft
 ---
 
 # <Obligation as a short declarative phrase>
@@ -54,7 +53,7 @@ While <condition>, the <subject> shall keep [<measure>](<link>) for <placement l
 ### Quality requirements and requirements
 
 A quality requirement is written like a [Requirement](requirement.md): the
-same title style, *shall*, exceptions, forms, **replaces**, and provenance in
+same title style, *shall*, exceptions, forms, and provenance in
 `sources`. It differs in three ways. It links its measure rather than defining
 it, so that levels on one measure can be compared. It names conditions rather
 than a trigger, because compliance is decided over many occurrences, so a
@@ -87,6 +86,9 @@ reservation availability under [Availability](<link>), even though no other
 requirement uses it.
 
 ### Rationale and verification
+
+Include either section only when it adds what the statement and its measure do
+not, as [P-DOC-6](../references/profile.md#document-conventions) states:
 
 - **Rationale**: the need or risk the level answers, any current or previous
   level with its source, period, and population, and the trade-offs

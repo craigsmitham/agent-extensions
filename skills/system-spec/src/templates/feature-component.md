@@ -24,7 +24,6 @@ workflow, or screen, that has its own use cases or requirements.
 type: Feature Component
 title: <Part as a noun phrase>
 description: <What part of the feature the component covers, in one sentence>
-status: draft
 ---
 
 # <Part as a noun phrase>

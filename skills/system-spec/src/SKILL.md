@@ -35,9 +35,12 @@ Add the others when the system has their content:
 
 - [Mission](templates/mission.md), [Vision](templates/vision.md), and
   [Principles](templates/principles.md), for the lasting purpose, pursued
-  future, and decision guidance of the business or product the system serves.
+  future, and decision guidance of the business or product the system serves,
+  when the user or a source states them. Do not compose them from a system
+  request.
 - [Job to Be Done](templates/job-to-be-done.md), for the progress people seek
-  that the system helps them make, apart from any solution.
+  that the system helps them make, apart from any solution, when the user,
+  research, or another source states them.
 - [Subsystem](templates/subsystem.md) and
   [Feature Component](templates/feature-component.md), when part of the
   system or of a feature meets the creation condition in its Type contract.
@@ -67,19 +70,18 @@ Add the others when the system has their content:
 5. **Write from the template.** Start from the template's **Suggested
    document**, satisfy its Type contract and the profile's
    [content rules](references/profile.md#content-rules), and link to what
-   other documents own instead of restating it. Omit empty optional sections.
-6. **Record gaps.** Record what is unknown under **Open questions** rather
-   than inventing it, as
+   other documents own instead of restating it. Omit optional and supporting
+   sections that would add nothing, as
+   [P-DOC-6](references/profile.md#document-conventions) states.
+6. **Record gaps.** Record what a person must decide or find out under
+   **Open questions** rather than inventing it, as
    [Record gaps instead of inventing](references/profile.md#record-gaps-instead-of-inventing)
-   requires, and keep the document `status: draft`.
+   requires.
 7. **Review.** Check the document against each numbered rule in its Type
    contract and the profile rules it touches, and cite rule
    identifiers in findings.
-8. **Change status deliberately.** Only a person with authority to accept a
-   document makes it `stable`, as
-   [Status and change](references/profile.md#status-and-change) requires.
-   Deprecate rather than delete a concept that others link to, and update
-   inbound links when moving or renaming.
+8. **Move, rename, or delete deliberately.** Update or remove every inbound
+   link, as [Change](references/profile.md#change) requires.
 
 When content concerns something the profile has not yet defined,
 follow [P-CON-5](references/profile.md#concerns-not-yet-defined).

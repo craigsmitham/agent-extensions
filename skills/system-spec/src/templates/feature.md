@@ -20,7 +20,6 @@ such as equipment reservations or late returns.
 type: Feature
 title: <Capability as a noun phrase>
 description: <What the feature provides, and to whom, in one sentence>
-status: draft
 ---
 
 # <Capability as a noun phrase>

@@ -27,7 +27,6 @@ at its home, which also sets its subject.
 type: Requirement
 title: <Obligation as a short declarative phrase>
 description: <The requirement statement, or a one-sentence summary of it>
-status: draft
 ---
 
 # <Obligation as a short declarative phrase>
@@ -51,11 +50,21 @@ The document's location shows its home and its subject. Name that subject in
 the statement.
 
 Keep the binding obligation, with its exceptions, in **Requirement**, and
-keep rationale out of the statement. **Illustrations** can hold acceptance
-examples; they support **Verification**, which assesses satisfaction by test,
-analysis, inspection, or demonstration, but they do not replace the
-requirement. Record unresolved meaning, feasibility, or targets under
-**Open questions**, including obligations that cannot both be fully met.
+keep rationale out of the statement. Most requirements need no supporting
+sections, as [P-DOC-6](../references/profile.md#document-conventions) states:
+
+- **Illustrations** holds acceptance examples, such as sample reservations
+  and the result for each, when the statement is hard to apply without them.
+- **Rationale** gives a reason that the statement and its **serves** link do
+  not make plain, such as a trade-off accepted, the principle followed, or an
+  incident it prevents.
+- **Verification** names the method, such as test, analysis, inspection, or
+  demonstration, and what counts as satisfied, only when neither is evident
+  from the statement. It links to acceptance examples rather than repeating
+  them.
+
+Record unresolved meaning, feasibility, or targets under **Open questions**,
+including obligations that cannot both be fully met.
 
 ### Statement
 
@@ -138,8 +147,7 @@ activity in the statement or rationale, such as
 
 State each named link once, in bold, as the
 [named links](../references/profile.md#named-links) table assigns to a Requirement, such as **serves** for the business
-objective or user class that justifies the obligation, and **replaces** for
-the deprecated requirement this one supersedes.
+objective or user class that justifies the obligation.
 
 Link the other concepts the obligation is about under **Related**, such as
 the external interfaces and data it concerns.

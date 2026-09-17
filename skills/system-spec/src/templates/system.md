@@ -22,7 +22,6 @@ the conditions it must work in.
 type: System
 title: <System name>
 description: <What the system is and who it serves, in one sentence>
-status: draft
 ---
 
 # <System name>

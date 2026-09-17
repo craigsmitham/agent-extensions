@@ -26,7 +26,6 @@ similar way and need similar things from it.
 type: User Class
 title: <Role name>
 description: <Who they are>, who <use the system for what>, needing <what distinguishes them>
-status: draft
 ---
 
 # <Role name>

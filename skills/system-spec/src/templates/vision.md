@@ -19,7 +19,6 @@ pursues, beyond the horizon of its business objectives.
 type: Vision
 title: <Business or product> vision
 description: <The future pursued, in one sentence>
-status: draft
 ---
 
 # <Business or product> vision
@@ -54,16 +53,14 @@ equipment.
 
 - Describe the world as it will be for those the business serves, not what
   the business will build. The vision is not a specification.
-- State an approximate horizon, such as five years, when the business has
-  agreed one; release timing belongs to work-management records.
+- State an approximate horizon, such as five years, when one is stated; release timing belongs to work-management records.
 - Give the narrative, storyboard, or prototype that conveys the vision in
   `sources`, when the statement comes from it. A
   positioning statement, such as "For <customer> who <need>, …", is a prompt
   for writing a vision, not the vision.
-- Record only a vision that the business has agreed. A vision that is not
-  agreed is an open question, as
-  [record gaps instead of inventing](../references/profile.md#record-gaps-instead-of-inventing)
-  requires.
+- Write only a vision that a person or a source states. Do not compose one
+  from what the system does; when none is stated, leave the vision
+  unwritten.
 
 ### Shared visions
 

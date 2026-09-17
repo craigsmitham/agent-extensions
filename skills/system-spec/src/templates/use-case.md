@@ -38,7 +38,6 @@ at its home, which also sets its subject.
 type: Use Case
 title: <Goal as an active verb phrase>
 description: <Primary actor> <achieves what>, <with what successful result>
-status: draft
 ---
 
 # <Goal as an active verb phrase>

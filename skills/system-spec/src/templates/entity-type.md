@@ -32,7 +32,6 @@ equipment item.
 type: Entity Type
 title: <Singular noun phrase>
 description: <What one instance is, in one sentence>
-status: draft
 ---
 
 # <Singular noun phrase>

@@ -33,7 +33,7 @@ and each links Fleet maintenance.
 | Feature Component | Reservation calendar and Cancellation, within Equipment reservations |
 | Use Case | Search for equipment; Reserve equipment; Cancel a reservation; Hand over equipment |
 | Requirement | Reservations of unavailable equipment are rejected; Underage rentals are rejected; Reservation notices are sent; Deposits are taken only through the payment service (design constraint); Card payments meet PCI DSS; Reservation pages meet WCAG 2.2 level AA; Handovers can be recorded one-handed; Open reservations are migrated from the previous system |
-| Business Rule | Minimum renter age; Overdue inspection withdrawal; Hold period expiry; Customer data retention; High-risk customer; Late return fee; Flat late fee (deprecated) |
+| Business Rule | Minimum renter age; Overdue inspection withdrawal; Hold period expiry; Customer data retention; High-risk customer; Late return fee |
 | Quality Characteristic | Response time; Availability; Confidentiality |
 | Quality Requirement | Search responds within limit at peak load; Search withstands a depot outage; Reservations are available; Payment details stay private |
 | Measure | Search response time, under Response time; Reservation availability, under Availability |
@@ -153,8 +153,7 @@ and each links Fleet maintenance.
 - A customer is a high-risk customer if the customer has made three or more
   late returns in the past 12 months.
 - The late return fee for a rental is 1.5 times the daily rate for each late
-  day, up to the replacement value of the equipment. It replaces the
-  deprecated flat late fee of a fixed amount for each late day.
+  day, up to the replacement value of the equipment.
 - A customer's personal data must be anonymized 6 years after the customer's
   last rental ends, as data protection law requires.
 

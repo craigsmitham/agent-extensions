@@ -14,9 +14,9 @@ must respect.
     business, and complete with its conditions and any exceptions.
   - **Rationale** *(optional)*: the business goal or risk the rule answers.
 - **BR-3** A Business Rule document MUST state exactly one rule.
-- **BR-4** A Business Rule document MUST record in its `sources` frontmatter
-  the policy, regulation, contract, standard, or expert whose authority the
-  rule has.
+- **BR-4** A Business Rule that an outside authority imposes, such as a law,
+  regulation, contract, or standard, MUST record that authority in its
+  `sources` frontmatter.
 - **BR-5** A rule MUST NOT describe the steps of a process or procedure.
 
 ## Suggested document
@@ -26,10 +26,9 @@ must respect.
 type: Business Rule
 title: <Short name of the rule>
 description: <The rule statement, or a one-sentence summary of it>
-status: draft
 sources:
   - id: <source-id>
-    resource: <Link to the policy, regulation, contract, standard, or expert>
+    resource: <Link to the law, regulation, contract, or standard, when one imposes the rule>
     title: <Name of the source>
 ---
 
@@ -63,10 +62,11 @@ tell a rule from a requirement at a glance.
 
 ### Source
 
-Give the policy, regulation, contract, industry standard, or recognized expert
-that gives the rule its authority in `sources`, with a stable link or
-citation. An unknown source is recorded under **Open questions**. Whether the
-rule's values are expected to change can be noted under **Rationale**.
+When a law, regulation, contract, or industry standard imposes the rule, give
+it in `sources`, with a stable link or citation. A rule that the business
+chose needs no source; omit `sources` rather than citing the conversation or
+the author. Whether the rule's values are expected to change can be noted
+under **Rationale**.
 
 ### Statement
 
@@ -87,8 +87,10 @@ rule's values are expected to change can be noted under **Rationale**.
   classification that a rule decides, such as *high-risk customer*, has a
   glossary entry whose **Decided by** line links to the rule.
 - Keep rationale out of **Rule**; the business goal or risk the rule serves
-  belongs under **Rationale**, and worked examples, such as a computed late
-  return fee for a sample rental, under **Illustrations**.
+  belongs under **Rationale** when the rule and its source do not make it
+  plain, and worked examples, such as a computed late return fee for a sample
+  rental, under **Illustrations** when the rule is hard to apply without
+  them.
 
 Use a decision table when a result depends on combinations of conditions, and
 introduce it in business terms, such as "The late return fee for a rental is
@@ -102,10 +104,8 @@ source or rationale of an exception that has its own under **Rationale**.
 
 ### Related
 
-A rule states **replaces** for the deprecated rule it supersedes, such as
-[Late return fee](<link>) replacing [Flat late fee](<link>). Under
-**Related**, link the entity types and value types the rule is about, and any
-rule whose result this rule uses.
+Under **Related**, link the entity types and value types the rule is about,
+and any rule whose result this rule uses.
 
 Requirements state **enforces**, and glossary entries link to the rule with
 **Decided by**. Guidance that restricts, requires, infers, and computes nothing

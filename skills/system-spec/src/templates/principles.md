@@ -25,7 +25,6 @@ decides between reasonable options that conflict, in order of precedence.
 type: Principles
 title: <Business or product> principles
 description: How <business or product> decides between reasonable options that conflict
-status: draft
 ---
 
 # <Business or product> principles
@@ -64,12 +63,13 @@ design and belong to design records.
   over availability". A principle that no one would dispute, such as "be
   easy to use", decides nothing.
 - Name the principle in a few words, and state it in one to three sentences.
-- Give why the business holds it on the **Rationale** line, and a decision it
-  has settled on the **Example** line. Only the principle is binding.
-- Record only principles that the business has agreed. A principle that is
-  not agreed is an open question, as
-  [record gaps instead of inventing](../references/profile.md#record-gaps-instead-of-inventing)
-  requires.
+- Give why the business holds it on the **Rationale** line when the
+  principle does not make that plain, and a decision it has settled on the
+  **Example** line. A real decision shows that the principle decides between
+  reasonable options. Only the principle is binding.
+- Write only principles that a person or a source states. Do not compose
+  them from what the system does; a decision that the stated principles do
+  not settle is an open question where it arises.
 
 ~~~markdown
 ### Safe equipment over availability

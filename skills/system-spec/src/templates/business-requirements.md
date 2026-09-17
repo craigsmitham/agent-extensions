@@ -7,15 +7,15 @@ addresses, the outcomes it must bring about, and its scope.
 
 - **BIZ-1** The title MUST be "<System> business requirements".
 - **BIZ-2** A Business Requirements document MUST include these sections:
-  - **Problem or opportunity**: whose need is unmet, the current gap, and the
-    evidence for it, without selecting a solution.
+  - **Problem or opportunity**: whose need is unmet and the current gap, with
+    any known evidence for it, without selecting a solution.
   - **Business objectives**: the business outcomes the system must bring
     about, stated as outcomes rather than outputs, each under its own heading
     `Objective <n>`.
   - **Success indicators** *(optional)*: how the achievement of each
     objective will be recognized, with its target and timeframe.
-  - **Stakeholders** *(optional)*: the stakeholders, what they value, and the
-    authority they hold.
+  - **Stakeholders** *(optional)*: the stakeholders, what they value, and any
+    authority they hold over the system.
   - **Scope**: what is in scope and what is explicitly out of scope.
 - **BIZ-3** Each success indicator MUST name, with a link, the objective it
   indicates.
@@ -27,7 +27,6 @@ addresses, the outcomes it must bring about, and its scope.
 type: Business Requirements
 title: <System> business requirements
 description: <The opportunity, objectives, and scope that justify the system, in one sentence>
-status: draft
 ---
 
 # <System> business requirements
@@ -49,7 +48,7 @@ status: draft
 ### Problem or opportunity
 
 Give the background and why now, the audience and the need that is unmet,
-the current gap, and evidence of demand. Link each
+the current gap, and any evidence of demand that is known. Link each
 [job to be done](job-to-be-done.md) that is unmet rather than restating it. This is the need that the
 system addresses now; why the business exists is its [mission](mission.md),
 as the profile's
@@ -75,7 +74,7 @@ Contractor customers reserve equipment without calling a depot.
 For each objective, state the success indicator, its target, and timeframe,
 and link to indicator or KPI definitions where they exist. Outcomes of use,
 such as user effectiveness or satisfaction, are success indicators too. A
-target that is not agreed is an open question, not a plausible number:
+target that is not decided is an open question, not a plausible number:
 
 ```markdown
 - [Objective 1](#objective-1): at least 60% of reservations are made online

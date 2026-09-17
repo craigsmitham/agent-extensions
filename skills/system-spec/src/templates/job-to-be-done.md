@@ -34,7 +34,6 @@ whatever product, service, or system helps them make it.
 type: Job to Be Done
 title: <Progress sought as an active verb phrase>
 description: <Job performer> <seek what progress> when <circumstances>
-status: draft
 ---
 
 # <Progress sought as an active verb phrase>
@@ -86,11 +85,8 @@ whose members perform the job under **Related** when readers need it.
 - Add emotional and social progress only where it affects choice, such as
   confidence that a start date will not slip, or standing with the main
   contractor who set the schedule.
-- Record only jobs that research or the business's agreed understanding
-  supports, and give that evidence in `sources`. A plausible job without
-  evidence is an open question, as
-  [record gaps instead of inventing](../references/profile.md#record-gaps-instead-of-inventing)
-  requires.
+- Write only jobs that a person, research, or another source states. Do not
+  infer a job from the system's features.
 
 ### Level
 

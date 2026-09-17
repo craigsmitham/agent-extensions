@@ -19,7 +19,6 @@ serves and what it does for them.
 type: Mission
 title: <Business or product> mission
 description: <The mission, in one sentence>
-status: draft
 ---
 
 # <Business or product> mission
@@ -58,10 +57,9 @@ mission out.
   glossary entry when a name needs one.
 - Say what the business does for them that another business would not say of
   itself; "delight our customers" says nothing a reader can act on.
-- Record only a mission that the business has agreed. A mission that is not
-  agreed is an open question, as
-  [record gaps instead of inventing](../references/profile.md#record-gaps-instead-of-inventing)
-  requires.
+- Write only a mission that a person or a source states. Do not compose one
+  from what the system does; when none is stated, leave the mission
+  unwritten.
 
 ### Shared missions
 
