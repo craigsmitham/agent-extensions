@@ -36,6 +36,8 @@ Add the others when the system has their content:
 - [Mission](templates/mission.md), [Vision](templates/vision.md), and
   [Principles](templates/principles.md), for the lasting purpose, pursued
   future, and decision guidance of the business or product the system serves.
+- [Job to Be Done](templates/job-to-be-done.md), for the progress people seek
+  that the system helps them make, apart from any solution.
 - [Subsystem](templates/subsystem.md) and
   [Feature Component](templates/feature-component.md), when part of the
   system or of a feature meets the creation condition in its Type contract.

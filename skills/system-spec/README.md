@@ -78,9 +78,10 @@ contract.
 | UC | Use Case | BR | Business Rule |
 | REQ | Requirement | MIS | Mission |
 | VIS | Vision | PRI | Principles |
+| JOB | Job to Be Done | | |
 
 Profile areas are TYP, STR, PLC, OWN, LNK, STA, CON, and DOC, and, for rules
-that concern particular types, DIR for direction, DEC for subsystems and
+that concern particular types, DIR for direction, JOB for jobs to be done, DEC for subsystems and
 feature components, RUL for business rules, QUA for quality, and DAT for
 data.
 
@@ -152,6 +153,7 @@ template.
 | Mission | The mission of the Object Management Group's Business Motivation Model, as what the business does for whom, apart from any system. |
 | Vision | The vision of the Business Motivation Model, and the product vision of Marty Cagan's *Inspired* and *Empowered*, as the future pursued rather than a specification. |
 | Principles | The product principles of Marty Cagan's *Inspired*, Amazon's tenets, and the business policy of the Business Motivation Model: guidance for decisions, ranked to settle conflicts, rather than obligations. |
+| Job to Be Done | Clayton Christensen's account of a job as progress sought in circumstances, with functional, emotional, and social dimensions, and Tony Ulwick's job performer and solution-independent job statement, as the [Jobs to Be Done](../../knowledge/product-engineering/src/foundations/jobs-to-be-done.md) foundation of the product-engineering bundle explains them. |
 | System | The system overview of ISO/IEC/IEEE 29148, and the product perspective and operating environment of Karl Wiegers and Joy Beatty's software requirements specification. |
 | Subsystem | The same sources as the System template. |
 | Business Requirements | The vision and scope document of Karl Wiegers and Joy Beatty, and the business requirements of ISO/IEC/IEEE 29148. |

@@ -41,12 +41,12 @@ The mission says why the business or product exists now, the
 [vision](vision.md) says the future it pursues, and a System's **Purpose**
 says what one system is and does. A mission stays true when a different system
 serves the business, as the profile's
-[ownership tests](../references/profile.md#direction-or-business-requirements)
+[ownership tests](../references/profile.md#direction-job-or-business-requirements)
 decide:
 
 ```markdown
-The rental business keeps contractors working by getting them the equipment a
-job needs, where and when the job needs it.
+The rental business keeps contractors working by getting them the equipment
+their work needs, where and when the work needs it.
 ```
 
 The rental system's purpose, letting customers find and reserve equipment and

@@ -49,11 +49,12 @@ status: draft
 
 ### Problem or opportunity
 
-Give the background and why now, the audience and the need or job that is
-unmet, the current gap, and evidence of demand. This is the need that the
+Give the background and why now, the audience and the need that is unmet,
+the current gap, and evidence of demand. Link each
+[job to be done](job-to-be-done.md) that is unmet rather than restating it. This is the need that the
 system addresses now; why the business exists is its [mission](mission.md),
 as the profile's
-[ownership tests](../references/profile.md#direction-or-business-requirements)
+[ownership tests](../references/profile.md#direction-job-or-business-requirements)
 decide.
 
 ### Business objectives

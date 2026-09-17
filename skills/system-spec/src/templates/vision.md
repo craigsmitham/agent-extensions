@@ -41,13 +41,14 @@ A vision describes where the business or product is going; business
 objectives are the outcomes one system must bring about on the way, with
 success indicators that recognize them. A statement that gains a measure or
 target is an objective, as the profile's
-[ownership tests](../references/profile.md#direction-or-business-requirements)
+[ownership tests](../references/profile.md#direction-job-or-business-requirements)
 decide. Objective 1 of the rental system, that contractor customers reserve
 equipment without calling a depot, is a step toward this vision:
 
 ```markdown
-Contractors have what each job needs on site when the job needs it, and never
-lose a working day to finding, collecting, or returning equipment.
+Contractors have the equipment their work needs on site when the work needs
+it, and never lose a working day to finding, collecting, or returning
+equipment.
 ```
 
 ### Statement

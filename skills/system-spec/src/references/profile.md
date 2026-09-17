@@ -29,6 +29,7 @@ introduced. Examples in the templates use the [running example](example.md).
 | [`Mission`](../templates/mission.md) | Why the business or product exists: whom it serves and what it does for them. |
 | [`Vision`](../templates/vision.md) | The future that the business or product pursues, beyond the horizon of the business objectives. |
 | [`Principles`](../templates/principles.md) | The guidance by which the business or product decides between reasonable options that conflict, in order of precedence. |
+| [`Job to Be Done`](../templates/job-to-be-done.md) | The progress that a group of people seek in their circumstances, whatever product, service, or system helps them make it. |
 | [`System`](../templates/system.md) | The software system being specified, and the boundary that its other concepts describe. |
 | [`Business Requirements`](../templates/business-requirements.md) | The business objectives, expected outcomes, and scope that justify building or changing the system. |
 | [`Subsystem`](../templates/subsystem.md) | A part of the system with its own boundary, because it has its own user classes, external interfaces, required levels of quality, or delivery or operation. |
@@ -69,6 +70,7 @@ Each term below has one meaning throughout this profile and its templates.
 | Named link | A link whose meaning the [Named links](#named-links) table gives, stated in bold with its name. |
 | Direction | The mission, vision, and principles of a business or product, which hold whichever system serves it. Direction is intent and guidance, not obligation. |
 | Principle | A statement of how to decide between reasonable options that conflict, as an entry of a Principles document. |
+| Job performer | The person or group whose progress a Job to Be Done describes, as the job itself describes them. A job performer need not use the system, and is described in the job rather than as a User Class or stakeholder. |
 | Scope | What the system includes and excludes, as the Business Requirements document states it. What a feature includes is its *coverage*. |
 | System-level feature | A feature placed directly under the system. |
 | Subsystem-level feature | A feature placed under a subsystem. |
@@ -111,6 +113,7 @@ spec/
   system.md                        # System
   business.md                      # Business Requirements
   glossary.md                      # Glossary
+  jobs/                            # Job to Be Done documents
   users/                           # User Class documents
   interfaces/                      # External Interface documents
   rules/                           # Business Rule documents
@@ -180,6 +183,12 @@ one corpus and used by the others.
   by another corpus MUST NOT hold its own document of that type, and its
   `README.md` MUST link each document it uses.
 
+A job that several systems help with is likewise held by one corpus.
+
+- **P-JOB-1** A corpus that uses a Job to Be Done held by another corpus MUST
+  NOT hold its own document of that job, and its `README.md` MUST link each
+  job it uses from another corpus.
+
 ## Placement
 
 Each type other than Use Case and Requirement has the one location that
@@ -236,6 +245,8 @@ rather than restating them.
 | Concern | Owning type |
 | --- | --- |
 | Why the business or product exists, whatever system serves it | Mission |
+| The progress that people seek in their circumstances, whatever solution helps them | Job to Be Done |
+| Who makes that progress, and the circumstances in which they seek it | The Job to Be Done, not a User Class |
 | The future that the business or product pursues, without a measure or target | Vision |
 | How to decide between reasonable options that conflict, such as which user class or quality prevails | Principles |
 | Guidance for design decisions, such as visual style or interaction patterns | Not Principles; design records, as [P-CON-8](#work-management-and-design) requires |
@@ -256,18 +267,32 @@ can be stated where it is used or in its shared home; one stated in place
 moves to its shared home when its second use appears. Documents link to the
 shared definition.
 
-### Direction or business requirements
+### Direction, job, or business requirements
 
-- **P-DIR-2** Content that could be direction or Business Requirements MUST be
-  placed by the first of these questions answered yes.
+- **P-DIR-2** Content that could be direction, a Job to Be Done, or Business
+  Requirements MUST be placed by the first of these questions answered yes.
 
 1. Does it state, or need, a measure or target? It is a business objective or
    a success indicator.
-2. Would it still hold if a different system served the business or product?
+2. Does it describe progress that people seek for themselves, whether or not
+   the business helps them make it, rather than what the business does,
+   pursues, or decides? It is a Job to Be Done.
+3. Would it still hold if a different system served the business or product?
    It is direction, and [where content goes](#where-content-goes) decides its
    type.
-3. Otherwise, it is Business Requirements content, such as the
+4. Otherwise, it is Business Requirements content, such as the
    **Problem or opportunity** or **Scope**.
+
+### Job to be done or use case
+
+- **P-JOB-2** Content that could be a Job to Be Done or the goal of a Use Case
+  or Feature MUST be placed by the first of these questions answered yes.
+
+1. Does it name the system, one of its functions or user interfaces, or an
+   interaction with it? It is a Use Case goal or step, or a Feature's
+   capability, placed by the other ownership tests.
+2. Otherwise, it is a Job to Be Done, and the use cases and features that
+   help with it link it.
 
 ### Principle or obligation
 
@@ -374,7 +399,7 @@ feature does not link the feature for that reason.
 | Named link | Meaning | Stated in | Links to |
 | --- | --- | --- | --- |
 | specified by | The requirement that states a step's or extension's binding detail | Use Case step or extension | Requirement |
-| serves | What a concept exists to support or help achieve | Feature, Requirement, Quality Characteristic | User Class, business objective, or Quality Characteristic |
+| serves | What a concept exists to support or help achieve | Feature, Requirement, Quality Characteristic | User Class, Job to Be Done, business objective, or Quality Characteristic |
 | enforces | How the system respects a rule | Requirement | Business Rule |
 | replaces | A concept that supersedes a deprecated one | The replacing concept | The deprecated concept |
 | Defined by | The concept whose **Definition** defines the entry's name | Glossary entry | Concept with a **Definition** section |
@@ -535,6 +560,9 @@ This version leaves these concerns undefined. Content about them follows
 - product strategy, initiative priorities and constraints, assumptions and
   dependencies, and risks;
 - principles for one system that add to the principles another corpus holds;
+- for jobs to be done: desired outcome statements, job maps and job steps,
+  relationships between jobs, the forces that drive or resist a change of
+  solution, and jobs of buying or supporting a solution;
 - use case goal levels, such as summary and subfunction use cases;
 - how the parts of a system or feature fit together beyond folder indexes;
 - optional features, and features that require or exclude each other;

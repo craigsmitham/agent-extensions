@@ -23,6 +23,7 @@ and each links Fleet maintenance.
 | Mission | Rental business mission |
 | Vision | Rental business vision |
 | Principle | Safe equipment over availability; Contractors' time over depot convenience, in the Rental business principles |
+| Job to Be Done | Get equipment on site when the work needs it |
 | Business Requirements | Rental system business requirements |
 | Subsystem | Fleet maintenance |
 | Stakeholder | Equipment insurer |
@@ -47,11 +48,11 @@ and each links Fleet maintenance.
 ### Direction
 
 - The **rental business** is the business that the rental system serves. Its
-  mission is that it keeps contractors working by getting them the equipment a
-  job needs, where and when the job needs it.
-- Its vision is that contractors have what each job needs on site when the job
-  needs it, and never lose a working day to finding, collecting, or returning
-  equipment. Business objective 1 is a step toward it.
+  mission is that it keeps contractors working by getting them the equipment
+  their work needs, where and when the work needs it.
+- Its vision is that contractors have the equipment their work needs on site
+  when the work needs it, and never lose a working day to finding, collecting,
+  or returning equipment. Business objective 1 is a step toward it.
 - Its principles, in order of precedence, are *Safe equipment over
   availability*: it rents only equipment it knows to be safe, even when a
   contractor goes without, from which the Overdue inspection withdrawal rule
@@ -59,6 +60,18 @@ and each links Fleet maintenance.
   contractors time at the cost of more work for depot staff, it chooses
   contractors' time, which is why customers reserve equipment online at any
   hour.
+
+### Jobs
+
+- The job *Get equipment on site when the work needs it* is performed by
+  contractors who run work on a construction site, including site foremen who
+  never use the rental system. It arises when work is scheduled on a site for
+  a known period and needs equipment the contractor does not own. They seek
+  serviceable equipment on site when the crew starts and gone when the work
+  ends, with confidence that the start will not slip. Today they call depots,
+  borrow from other contractors, buy equipment, or reschedule the work.
+- Equipment search, Equipment reservations, and Site delivery serve it, and
+  the Problem or opportunity of the business requirements links it.
 
 ### Business
 

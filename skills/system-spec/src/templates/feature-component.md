@@ -50,7 +50,8 @@ differs from sibling components, such as Reservation calendar choosing days
 and Cancellation ending a confirmed reservation. **Purpose** has no
 **Coverage** beside it and states no **serves**: distinguishing the component
 from its siblings is the coverage a reader needs, and the component serves
-the user classes and business objectives its feature serves.
+the user classes, jobs to be done, and business objectives its feature
+serves.
 
 ### Illustrations
 
