@@ -2,8 +2,7 @@
 
 Use for one rule under the business's jurisdiction that restricts conduct,
 requires an action, infers a fact, or computes a value, and that the system
-must respect. Apply the [Spec profile](../references/profile.md). The Type
-contract is normative; the remaining sections guide authoring.
+must respect.
 
 ## Type contract
 
@@ -87,8 +86,9 @@ rule's values are expected to change can be noted under **Rationale**.
 - A rule that people could break, such as
   [Overdue inspection withdrawal](<link>), uses *must*, *must not*, or
   *may … only if*. A rule that defines, infers, or computes, such as
-  [High-risk customer](<link>) or [Late return fee](<link>), states a fact, as
-  [Not yet defined](../references/modules/rules.md#not-yet-defined) describes.
+  [High-risk customer](<link>) or [Late return fee](<link>), states a fact.
+  Rule categories are not yet defined, so the wording carries the
+  distinction.
 - Use each term as the glossary defines it, and link to the entry. A
   classification that a rule decides, such as *high-risk customer*, has a
   glossary entry whose **Decided by** line links to the rule.
@@ -103,9 +103,8 @@ the amount the following table gives." Name the table's result precisely.
 ### Exceptions
 
 State an exception in the rule, such as with *only if* or *unless*, as
-[Exceptions](../references/profile.md#exceptions) requires. For an exception
-with its own source or rationale, follow
-[Not yet defined](../references/profile.md#not-yet-defined).
+[Exceptions](../references/profile.md#exceptions) requires, and give the
+source or rationale of an exception that has its own under **Rationale**.
 
 ### Related
 

@@ -1,8 +1,6 @@
 # Subsystem template
 
-Use for a part of the system with its own boundary. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+Use for a part of the system with its own boundary.
 
 ## Type contract
 
@@ -64,10 +62,17 @@ A subsystem is specified as the system is, at its own boundary, as
 own folder holds its use cases, requirements, and features, whose subject is
 the subsystem, and the subsystem document links them rather than describing
 them. Concepts specific to it that live at the system level, such as
-[Technician](<link>), link it under **Related**, and its operating conditions
-and quality priorities are stated in the System's sections, as the module's
-[Not yet defined](../references/modules/decomposition.md#not-yet-defined)
-describes.
+[Technician](<link>), link it under **Related**.
+
+Some subsystem concerns are
+[not yet defined](../references/profile.md#not-yet-defined). Until they are:
+
+- state operating conditions and quality priorities specific to the subsystem
+  in the System's **Operating environment** or **Quality priorities**, naming
+  and linking the subsystem; and
+- place a use case or requirement whose subject is the subsystem, but that
+  belongs to a system-level feature, within the subsystem, and link the
+  system-level feature under **Related**.
 
 Parties of the subsystem, such as technicians and equipment telematics for
 Fleet maintenance, are also outside the system, so they appear in the
@@ -77,9 +82,9 @@ System's **Boundary and context** too.
 
 Apply the System's
 [boundary and context guidance](system.md#boundary-and-context) at the
-subsystem's boundary. For what passes between sibling subsystems, follow
-[Not yet defined](../references/modules/decomposition.md#not-yet-defined); the
-subsystem document does not otherwise describe the sibling.
+subsystem's boundary. Describe what passes between sibling subsystems there,
+linking the sibling Subsystem; the subsystem document does not otherwise
+describe the sibling.
 
 **Related** links records that describe how the subsystem is realized, such
 as services or repositories.

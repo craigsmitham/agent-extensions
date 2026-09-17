@@ -42,10 +42,7 @@ TYPES = {
 PROFILE_AREAS = {"TYP", "STR", "PLC", "OWN", "LNK", "STA", "CON", "DOC"}
 SUPPORTING_SECTIONS = ["Illustrations", "Rationale", "Verification", "Open questions", "Related"]
 README = ROOT / "README.md"
-PURPOSE_END = (
-    "Apply the [Spec profile](../references/profile.md). The Type contract is "
-    "normative; the remaining sections guide authoring."
-)
+CONTEXT_HEAD = "MUST have a two-column `Context | Value` table"
 
 KEYWORD = re.compile(r"\b(MUST NOT|MUST|SHOULD NOT|SHOULD|MAY)\b")
 TAG_ITEM = re.compile(r"^- \*\*((?:P-[A-Z]{3})|[A-Z]{2,3})-(\d+)\*\*")
@@ -62,6 +59,8 @@ BANNED = [
     (re.compile(r"\b[Oo]wner\b"), "use 'home' for a concept's location or 'owning type'"),
     (re.compile(r"[Rr]elationships tables?"), "use 'named links table'"),
     (re.compile(r"^### Differences from the "), "say how a type differs in a short topic subsection"),
+    (re.compile(r"^### (Folders|Shared definitions)$"), "folders live in the Structure tree and shared homes in Where content goes"),
+    (re.compile(r"modules/[a-z]+\.md#not-yet-defined"), "deferred concerns are listed once, in the profile's Not yet defined"),
 ]
 
 
@@ -227,8 +226,10 @@ class Linter:
         if not flat:
             self.error(path, 0, "needs a purpose paragraph")
         else:
-            if not flat[0].startswith("Use for") or not flat[0].endswith(PURPOSE_END):
-                self.error(path, paras[0][0], "purpose paragraph must begin 'Use for' and end with the standard sentence")
+            if not flat[0].startswith("Use for"):
+                self.error(path, paras[0][0], "purpose paragraph must begin 'Use for'")
+            if "Type contract is normative" in flat[0]:
+                self.error(path, paras[0][0], "SKILL.md states once that the Type contract is normative")
             if len(flat) > 1:
                 self.error(path, paras[1][0], "only the purpose paragraph precedes the Type contract; lineage belongs in the README's Template sources")
         h2 = [t for _, t in doc.headings(2)]
@@ -236,7 +237,6 @@ class Linter:
             self.error(path, 0, f"H2 sections must be Type contract, Suggested document, Writing guidance; found {h2}")
 
         rules: list[Rule] = []
-        identifies = False
         lists: dict[int, list[str]] = {}
         requires_sources = False
         sec = doc.section(2, "Type contract")
@@ -247,7 +247,7 @@ class Linter:
                     self.error(path, i, "the Type contract has no subsections")
             rules = self.collect_rules(doc, sec[0], sec[1], code)
             blocks = self.items(doc, sec[0], sec[1])
-            rank_names = {1: "title", 2: "identify", 3: "include", 5: "type-specific", 6: "prohibition"}
+            rank_names = {1: "title", 3: "include", 5: "type-specific", 6: "prohibition"}
             last_rank = 0
             article = "An" if type_name[0] in "AEIO" else "A"
             opening = f"{article} {type_name} document is placed as"
@@ -268,25 +268,28 @@ class Linter:
                     if re.search(r"\btitle (MUST|SHOULD)", flat_text):
                         rank = 1
                     elif re.search(r"\b(MUST|SHOULD|MAY)( NOT)? identify\b", head):
-                        rank = 2
-                        identifies = identifies or True
+                        self.error(path, s, f"use a type-specific rule headed '… {CONTEXT_HEAD} …' instead of identified fields")
+                        rank = 5
                     elif re.search(r"\b(MUST|SHOULD|MAY)( NOT)? include\b", head):
                         rank = 3
                     elif re.search(r"\b(MUST NOT|SHOULD NOT)\b", flat_text) and not re.search(r"\b(MUST|SHOULD)\b(?! NOT)", flat_text):
                         rank = 6
                     else:
                         rank = 5
-                    if rank in (2, 3):
-                        want_head = f"MUST {rank_names[rank]} these {'fields' if rank == 2 else 'sections'}:"
+                    if rank == 3:
+                        want_head = "MUST include these sections:"
                         if want_head not in head or rank in lists:
-                            self.error(path, s, f"one {rank_names[rank]} rule per contract, headed '… {want_head}'; mark optional entries instead of adding MAY rules")
+                            self.error(path, s, f"one include rule per contract, headed '… {want_head}'; mark optional entries instead of adding MAY rules")
                         lists[rank] = self.entries(text)
+                    elif CONTEXT_HEAD in flat_text:
+                        if 2 in lists:
+                            self.error(path, s, "one Context table rule per contract")
+                        lists[2] = self.entries(text)
                 if rank < last_rank:
                     self.error(path, s, f"{rank_names[rank]} appears after {rank_names[last_rank]}")
                 last_rank = max(last_rank, rank)
             if not rules or not re.search(r"\btitle (MUST|SHOULD)", rules[0].text):
                 self.error(path, sec[0], "the first tagged rule is the title rule")
-            identifies = any(re.search(r"\bidentify\b", r.text.splitlines()[0]) for r in rules)
 
         # suggested document
         context_rows, sections = [], []
@@ -312,8 +315,8 @@ class Linter:
             if requires_sources and "sources" not in extra and not re.search(r"^sources:", front, re.M):
                 self.error(path, sec[0], "the contract requires `sources`, so the suggested frontmatter carries it")
             has_context = "| Context | Value |" in text
-            if has_context != identifies:
-                self.error(path, sec[0], "a Context table is present exactly when the contract identifies fields")
+            if has_context != (2 in lists):
+                self.error(path, sec[0], "a Context table is present exactly when a contract rule requires one")
             in_ctx = False
             for line in body:
                 if line.startswith("| Context | Value |"):
@@ -332,7 +335,7 @@ class Linter:
             if shared and sections[-len(shared):] != shared:
                 self.error(path, sec[0], "supporting sections come last")
             if lists.get(2, []) != context_rows:
-                self.error(path, sec[0], f"Context rows {context_rows} must match the identified fields {lists.get(2, [])}")
+                self.error(path, sec[0], f"Context rows {context_rows} must match the contract's Context table rows {lists.get(2, [])}")
             own = [s for s in sections if s not in SUPPORTING_SECTIONS or s in lists.get(3, [])]
             if lists.get(3, []) != own:
                 self.error(path, sec[0], f"suggested sections {own} must match the included sections {lists.get(3, [])}")
@@ -385,11 +388,8 @@ class Linter:
                 if line.startswith("|") and not line.startswith("| ---") and not line.startswith("| Named link |"):
                     cells = line.split("|")
                     name = cells[1].strip()
-                    extends = cells[2].strip().startswith("Also:")
-                    if extends and (src is profile or name not in names):
-                        self.error(src.path, i, f"named link '{name}' extends no profile named link")
-                    elif not extends and name in names:
-                        self.error(src.path, i, f"named link '{name}' is defined in more than one table; a module row that extends it begins 'Also:'")
+                    if name in names:
+                        self.error(src.path, i, f"named link '{name}' is defined in more than one row; broaden the one row instead")
                     names.add(name)
         if not names:
             self.error(profile.path, 0, "no Named links table found")

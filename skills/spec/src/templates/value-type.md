@@ -1,9 +1,7 @@
 # Value Type template
 
 Use for one kind of value in the business domain that has no identity, such as
-money, a rental period, or an email address. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+money, a rental period, or an email address.
 
 ## Type contract
 
@@ -96,7 +94,7 @@ allows, as ISO 4217 sets currency codes.
 
 A value that more than one entity type, value type, or external interface uses
 is a Value Type, as the Data module's
-[shared definitions](../references/modules/data.md#shared-definitions) give. A
+[where content goes](../references/modules/data.md#where-content-goes) gives. A
 value used in one place can have one too, or be defined where it is used: fuel
 level, which only the equipment telematics interface carries, is defined
 there.

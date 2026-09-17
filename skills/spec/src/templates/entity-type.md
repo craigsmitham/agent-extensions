@@ -1,9 +1,8 @@
 # Entity Type template
 
 Use for one kind of thing in the business domain that has identity and about
-which the system keeps data, such as a reservation, a customer, or an equipment
-item. Apply the [Spec profile](../references/profile.md). The Type contract is
-normative; the remaining sections guide authoring.
+which the system keeps data, such as a reservation, a customer, or an
+equipment item.
 
 ## Type contract
 
@@ -132,9 +131,8 @@ placed by
 **Lifecycle** holds the states of an instance, its permitted transitions,
 what creates an instance, and whether an ended instance is removed, retained,
 or anonymized. A state diagram is often the clearest form. Label each
-transition with the event that causes it, in business terms, and for linking
-the use cases and business rules that cause transitions, follow
-[Not yet defined](../references/modules/data.md#not-yet-defined).
+transition with the event that causes it, in business terms, and link the use
+cases and business rules that cause transitions under **Related**.
 
 ~~~markdown
 ## Lifecycle

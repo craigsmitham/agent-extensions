@@ -98,33 +98,24 @@ spec/
   system.md                        # System
   business.md                      # Business Requirements
   glossary.md                      # Glossary
-  users/
-  interfaces/
+  users/                           # User Class documents
+  interfaces/                      # External Interface documents
   use-cases/                       # Use Cases placed at the system
   requirements/                    # Requirements placed at the system
-  features/
+  features/                        # A folder for each Feature
     <feature>/
       <feature>.md                 # Feature
-      use-cases/                   # Placed at the feature
-      requirements/                # Placed at the feature
+      use-cases/                   # Use Cases placed at the feature
+      requirements/                # Requirements placed at the feature
 ```
 
 - **P-STR-2** `spec/` MUST contain `README.md`, `index.md`, and `system.md`.
 - **P-STR-3** `README.md` MUST satisfy base OKF, use `Reference` as its type,
   and declare the adopted profile version, each adopted module, and any local
   exceptions.
-- **P-STR-4** Folders MUST be named as shown here or in an adopted module, and
-  each folder MUST hold only its reserved `index.md` and `log.md` and what
-  this table or a module's **Folders** table gives it.
-
-  | Folder | Holds |
-  | --- | --- |
-  | `users/` | `User Class` documents |
-  | `interfaces/` | `External Interface` documents |
-  | `use-cases/` | The `Use Case` documents placed at its placement level |
-  | `requirements/` | The `Requirement` documents placed at its placement level |
-  | `features/` | A folder for each `Feature` at its placement level |
-  | `<feature>/` | Its concept document, `use-cases/`, and `requirements/` |
+- **P-STR-4** Folders MUST be named as this structure or an adopted module's
+  **Structure** shows, and each folder MUST hold only its reserved `index.md`
+  and `log.md` and what the structure shows in it.
 
 - **P-STR-5** Each Feature, and each type that a module makes a folder, MUST
   be a folder containing a concept document with the same name as the folder,
@@ -210,7 +201,14 @@ tests rather than restating them.
 | The formats and protocols that a counterpart or a named standard requires at a connection | External Interface |
 | What a user interface presents and offers | The **Illustrations** of the narrowest placement level whose use cases it serves |
 | A binding obligation on a user interface, such as accessibility | Requirement |
-| The conditions the system must work in, including named conditions that requirements use | System operating environment |
+| The conditions the system must work in | System operating environment |
+| A condition that more than one requirement uses | A named condition in the System's **Operating environment** |
+
+A row for a definition that more than one document uses, such as a named
+condition, gives its shared home. A definition that one document alone uses
+can be stated where it is used or in its shared home; one stated in place
+moves to its shared home when its second use appears. Documents link to the
+shared definition.
 
 ### Defined names
 
@@ -222,23 +220,9 @@ tests rather than restating them.
 A glossary entry for such a name is present when readers look for the name in
 the glossary.
 
-### Shared definitions
-
-- **P-OWN-3** A definition that more than one document uses MUST live in the
-  shared home that this table or an adopted module's **Shared definitions**
-  table gives.
-
-| Definition | Shared home |
-| --- | --- |
-| A condition that requirements use | A named condition in the System's **Operating environment** |
-
-A definition that one document alone uses can be stated where it is used or in
-its shared home; one stated in place moves to its shared home when its second
-use appears. Documents link to the shared definition.
-
 ### Use case extension or requirement
 
-- **P-OWN-4** Detail about how a use case step or extension is handled MUST be
+- **P-OWN-3** Detail about how a use case step or extension is handled MUST be
   placed by the first of these questions answered yes.
 
 1. Would a reviewer need more detail than the condition detected and how the
@@ -269,7 +253,7 @@ gives is stated in bold with that name, such as
 | Named link | Meaning | Stated in | Links to |
 | --- | --- | --- | --- |
 | specified by | The requirement that states a step's or extension's binding detail | Use Case step or extension | Requirement |
-| serves | What a concept exists to support | Feature, Requirement | User Class or business objective |
+| serves | What a concept exists to support or help achieve | Feature, Requirement, Quality Characteristic | User Class, business objective, or, from a Requirement, Quality Characteristic |
 | replaces | A concept that supersedes a deprecated one | The replacing concept | The deprecated concept |
 
 ## Status and change
@@ -326,15 +310,21 @@ These rules apply to every concept document.
 ### Concerns not yet defined
 
 - **P-CON-5** Content about a concern that this profile and the adopted
-  modules do not define SHOULD follow the interim practice that a
-  [Not yet defined](#not-yet-defined) table gives for it, and otherwise be
-  stated in prose in the section nearest to it, with the records that hold it
-  linked under **Related** and what is undecided recorded under
-  **Open questions**.
+  modules do not define SHOULD follow the practice that the Writing guidance
+  of the document's type gives for it, and otherwise be stated in prose in the section
+  nearest to it, with the records that hold it linked under **Related** and
+  what is undecided recorded under **Open questions**.
+
+[Not yet defined](#not-yet-defined) lists the concerns this version leaves
+undefined.
 
 ### Exceptions
 
 - **P-CON-6** Binding content MUST state its exceptions in the same section.
+
+An exception that has its own source or rationale is still stated in the
+concept it is an exception to, with its source or rationale under
+**Rationale**.
 
 ### Work management and design
 
@@ -388,15 +378,15 @@ home; the obligation is a Requirement.
 
 ### Document conventions
 
-A Type contract lists the fields a document identifies and the sections it
-includes. An entry marked *(optional)* need not be present, and an entry
-marked with a condition, such as *(when a step calls on another party)*, is
-required only when the condition holds. Every concept document can also
+A Type contract lists the sections a document includes. An entry marked
+*(optional)* need not be present, and an entry marked with a condition, such
+as *(when a step calls on another party)*, is required only when the
+condition holds. Every concept document can also
 include **Open questions**, **Related**, and **Illustrations**, and a rough
 sketch in an illustrative section can take any form, including an image.
 
-- **P-DOC-1** Optional fields, entry lines, and sections that have no content
-  SHOULD be omitted.
+- **P-DOC-1** Optional Context rows, entry lines, and sections that have no
+  content SHOULD be omitted.
 - **P-DOC-2** The section for unresolved matters MUST be named
   **Open questions**, the section for links to neighboring concepts and records
   **Related**, and the section for illustrative content **Illustrations**,
@@ -404,30 +394,40 @@ sketch in an illustrative section can take any form, including an image.
 - **P-DOC-3** Supporting sections SHOULD come last, in this order:
   **Illustrations**, **Rationale**, **Verification**, **Open questions**,
   **Related**.
-- **P-DOC-4** The fields that a document identifies MUST be presented in a
-  two-column `Context | Value` table directly below the title, and a document
-  that identifies no fields MUST NOT have a Context table.
-- **P-DOC-5** Diagrams SHOULD be written in Mermaid, so that they remain text
+- **P-DOC-4** Diagrams SHOULD be written in Mermaid, so that they remain text
   that can be reviewed and changed with the rest of the document.
-- **P-DOC-6** The provenance of a document's content, such as the stakeholder
+- **P-DOC-5** The provenance of a document's content, such as the stakeholder
   decisions, regulations, incidents, or research it came from, SHOULD be
   recorded in OKF `sources` frontmatter rather than in a body section.
 
-Identified fields are short values or links that situate or classify the
-document, such as a use case's primary actor.
-
 ## Not yet defined
 
-This version does not prescribe every concern. For a concern it leaves
-undefined, follow base OKF v0.2, the conventions already present in the
-bundle, and [P-CON-5](#concerns-not-yet-defined). This table, and the
-**Not yet defined** table of each adopted module, give an interim practice
-only where it is more specific than P-CON-5. Templates link here rather than
-restating an interim practice.
+This version leaves these concerns undefined. Content about them follows base
+OKF v0.2, the conventions already present in the bundle, and
+[P-CON-5](#concerns-not-yet-defined). For some of them, the Writing guidance
+of the type they concern gives a more specific practice.
 
-| Topic | Interim practice |
-| --- | --- |
-| Stable identifiers for linked headings, such as business objective numbers | Do not reuse a number that other documents link to for a different concept. |
-| A product vision; initiative priorities, such as whether schedule, cost, features, and quality are fixed or flexible; initiative constraints, such as budget or deadlines; assumptions and dependencies; and risks | Link the records that hold them from the Business Requirements' **Related**. |
-| Exceptions that have their own source or rationale | State the exception in the concept it is an exception to, as [Exceptions](#exceptions) requires, and give its source or rationale under **Rationale**. |
-| Use case goal levels, such as summary and subfunction use cases | Write use cases for goals that the primary actor completes in one sitting. When another use case achieves a step, link it at that step. |
+- frontmatter keys beyond base OKF v0.2;
+- who may accept each type, and review dates such as `stale_after`;
+- stable identifiers for linked headings, such as business objective numbers;
+- a product vision, initiative priorities and constraints, assumptions and
+  dependencies, and risks;
+- use case goal levels, such as summary and subfunction use cases;
+- how the parts of a system or feature fit together beyond folder indexes;
+- optional features, and features that require or exclude each other;
+- requirement classifications, such as functional, conformance, human
+  factors, and process;
+- kinds of external interface counterpart;
+- obligations that cannot both be fully met;
+- in the Decomposition module: operating conditions and quality priorities
+  specific to one subsystem, connections between sibling subsystems, folders
+  for concepts specific to one subsystem, and use cases and requirements whose
+  subject is a subsystem but that belong to a system-level feature;
+- in the Rules module: business rule categories, volatility, enforcement
+  levels, and relationships between business rules;
+- in the Quality module: correspondence with a quality model, baselines, and
+  quality characteristics nested within other quality characteristics; and
+- in the Data module: what causes each lifecycle transition, where a data
+  attribute's value comes from, the sensitivity and purpose of personal data,
+  specialization between entity types or value types, and an overall data
+  model spanning entity types.

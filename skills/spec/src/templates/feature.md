@@ -1,8 +1,7 @@
 # Feature template
 
-Use for one coherent unit of capability that the system provides to its users, such as equipment reservations or late returns. Apply
-the [Spec profile](../references/profile.md). The Type contract is normative;
-the remaining sections guide authoring.
+Use for one coherent unit of capability that the system provides to its users,
+such as equipment reservations or late returns.
 
 ## Type contract
 

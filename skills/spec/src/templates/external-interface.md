@@ -1,9 +1,7 @@
 # External Interface template
 
-Use for one connection across the system's boundary to an external system or
-a device, and what passes across it. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+Use for one connection across the system's boundary to an external system or a
+device, and what passes across it.
 
 ## Type contract
 
@@ -68,9 +66,9 @@ fees, and refund deposits.
 ### Exchanges
 
 List each item once, with the event or schedule on which it passes, and link
-the item's definition where it has a
-[shared definition](../references/profile.md#shared-definitions); an item that
-only this connection uses can be defined here.
+the item's definition where it has a shared home, as
+[where content goes](../references/profile.md#where-content-goes) gives; an
+item that only this connection uses can be defined here.
 
 ~~~markdown
 ## Exchanges

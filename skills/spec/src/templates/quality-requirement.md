@@ -2,8 +2,6 @@
 
 Use for one required level of a quality characteristic of the system or a
 subsystem, under stated conditions, such as a response time at peak load.
-Apply the [Spec profile](../references/profile.md). The Type contract is
-normative; the remaining sections guide authoring.
 
 ## Type contract
 
@@ -92,8 +90,8 @@ requirement uses it.
 ### Rationale and verification
 
 - **Rationale**: the need or risk the level answers, any current or previous
-  level as [Not yet defined](../references/modules/quality.md#not-yet-defined)
-  describes for baselines, and the trade-offs accepted.
+  level with its source, period, and population, and the trade-offs
+  accepted.
 - **Verification**: such as a load test under the stated condition, and
   whether observation in operation confirms it.
 

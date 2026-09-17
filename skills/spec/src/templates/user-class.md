@@ -1,9 +1,7 @@
 # User Class template
 
 Use for a group of people who use the system or its outputs directly in a
-similar way and need similar things from it. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+similar way and need similar things from it.
 
 ## Type contract
 

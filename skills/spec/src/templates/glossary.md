@@ -1,8 +1,6 @@
 # Glossary template
 
-Use for the agreed terms of the system, and what each one means. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+Use for the agreed terms of the system, and what each one means.
 
 ## Type contract
 

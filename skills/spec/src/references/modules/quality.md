@@ -24,18 +24,11 @@ names the subject.
 
 ```text
 spec/
-  quality/
+  quality/                         # A folder for each Quality Characteristic
     <characteristic>/
       <characteristic>.md          # Quality Characteristic
       <quality-requirement>.md     # Quality Requirement
 ```
-
-### Folders
-
-| Folder | Holds |
-| --- | --- |
-| `quality/` | A folder for each `Quality Characteristic` |
-| `<characteristic>/` | Its `Quality Characteristic` document and its `Quality Requirement` documents |
 
 Quality characteristics are folders, as P-STR-5 requires.
 
@@ -72,16 +65,3 @@ requires, because those quality requirements are placed beside it.
 
 An obligation for which no question is answered yes is recorded under
 **Open questions** until it is restated.
-
-## Named links
-
-| Named link | Meaning | Stated in | Links to |
-| --- | --- | --- | --- |
-| serves | Also: the quality characteristic a requirement helps achieve, and what a quality characteristic matters to | Requirement; Quality Characteristic | From a Requirement, a Quality Characteristic; from a Quality Characteristic, a User Class or business objective |
-
-## Not yet defined
-
-| Topic | Interim practice |
-| --- | --- |
-| Correspondence between quality characteristics and a quality model, such as ISO/IEC 25010 | Give the model's name for a characteristic on the **Also called** line of the glossary entry for the characteristic's name. |
-| Baselines of quality requirements | State the current or previous level, with its source, period, and population, under **Rationale**. |

@@ -15,14 +15,8 @@ profile's tables of the same name.
 
 ```text
 spec/
-  rules/
+  rules/                           # Business Rule documents
 ```
-
-### Folders
-
-| Folder | Holds |
-| --- | --- |
-| `rules/` | `Business Rule` documents |
 
 ## Placement
 
@@ -58,9 +52,3 @@ violation of a rule is a Requirement that **enforces** the rule.
 | Named link | Meaning | Stated in | Links to |
 | --- | --- | --- | --- |
 | enforces | How the system respects a rule | Requirement | Business Rule |
-
-## Not yet defined
-
-| Topic | Interim practice |
-| --- | --- |
-| Business rule categories, such as computation, inference, action enabler, and constraint, and wording that shows them | Write a rule that people could break with *must*, *must not*, or *may … only if*, and a rule that defines, infers, or computes as a plain statement of fact. |

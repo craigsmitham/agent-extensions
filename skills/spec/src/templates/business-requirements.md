@@ -1,9 +1,7 @@
 # Business Requirements template
 
 Use for the business case of the system: the problem or opportunity it
-addresses, the outcomes it must bring about, and its scope. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+addresses, the outcomes it must bring about, and its scope.
 
 ## Type contract
 
@@ -59,7 +57,8 @@ unmet, the current gap, and evidence of demand.
 Head each objective with its number alone, so that its anchor stays stable
 when the wording changes, and state the outcome below the heading. Other
 documents link to it by anchor, such as `business.md#objective-1`, so its
-number stays with the objective.
+number stays with the objective, and a number that other documents link to is
+never reused for a different objective.
 
 ```markdown
 ### Objective 1
@@ -91,6 +90,6 @@ target that is not agreed is an open question, not a plausible number:
   who use or operate the system are user classes, linked rather than
   described.
 - **Related** links records such as business strategy, product vision,
-  roadmaps, and research, when readers need them. For initiative constraints,
-  assumptions and dependencies, and risks, follow
-  [Not yet defined](../references/profile.md#not-yet-defined).
+  roadmaps, and research, when readers need them, and the records that hold
+  initiative priorities and constraints, assumptions and dependencies, and
+  risks, which this version does not define.

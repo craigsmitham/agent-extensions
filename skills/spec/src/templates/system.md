@@ -1,9 +1,7 @@
 # System template
 
 Use for the system being specified: what it is, where its boundary lies, and
-the conditions it must work in. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+the conditions it must work in.
 
 ## Type contract
 
@@ -84,8 +82,8 @@ network conditions, deployment contexts, and named load conditions: the
 conditions, not design choices or deployed instances.
 
 A condition that several requirements use is named here, once, as the
-profile's [shared definitions](../references/profile.md#shared-definitions)
-rule requires. Define it with quantities, so that a tester could reproduce it:
+profile's [where content goes](../references/profile.md#where-content-goes)
+table requires. Define it with quantities, so that a tester could reproduce it:
 
 ```markdown
 **Peak load**: 2,000 concurrent customers, 80% of them searching.

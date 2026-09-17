@@ -1,8 +1,7 @@
 # Use Case template
 
 Use for all the ways a primary actor can succeed or fail to achieve one goal
-at a boundary. Apply the [Spec profile](../references/profile.md). The Type
-contract is normative; the remaining sections guide authoring.
+at a boundary.
 
 ## Type contract
 
@@ -12,7 +11,13 @@ at its home, which also sets its subject.
 
 - **UC-1** The title MUST name the primary actor's goal as an active verb
   phrase in the present tense, such as "Reserve equipment".
-- **UC-2** A Use Case document MUST identify these fields:
+- **UC-2** A Use Case document MUST include these sections:
+  - **Main success scenario**: a typical path to success, as numbered steps,
+    without branches or failures.
+  - **Extensions**: each known condition that makes a step fail or vary,
+    labeled by the step where it is detected, and its handling once decided.
+- **UC-3** A Use Case document MUST have a two-column `Context | Value` table
+  directly below the title, with these rows:
   - **Primary actor**: the User Class or External Interface whose goal the use
     case serves.
   - **Secondary actors** *(when a step calls on or notifies a party other than
@@ -21,11 +26,6 @@ at its home, which also sets its subject.
   - **Preconditions** *(optional)*: what is already true when it starts.
   - **Successful result** *(optional)*: what is true for the primary actor
     when the goal succeeds.
-- **UC-3** A Use Case document MUST include these sections:
-  - **Main success scenario**: a typical path to success, as numbered steps,
-    without branches or failures.
-  - **Extensions**: each known condition that makes a step fail or vary,
-    labeled by the step where it is detected, and its handling once decided.
 - **UC-4** Steps and extensions MUST name data at low precision and link to
   the concept that owns its detail.
 - **UC-5** Steps and extensions MUST NOT name user interface elements or
@@ -74,7 +74,7 @@ status: draft
 
 ## Writing guidance
 
-### Context fields
+### Context rows
 
 - The subject is the boundary that determines what is visible: everything
   inside it is hidden, and everything outside it is an actor. The use case's
@@ -99,9 +99,11 @@ those already linked in its Context table, steps, and extensions.
 
 ### Goal
 
-For the size of a use case's goal, follow
-[Not yet defined](../references/profile.md#not-yet-defined), as for Reserve
-equipment. To check the goal, ask "in order to accomplish what?" and "how?": a
+Goal levels, such as summary and subfunction use cases, are
+[not yet defined](../references/profile.md#not-yet-defined). Until they are,
+write use cases for goals that the primary actor completes in one sitting, such
+as Reserve equipment, and when another use case achieves a step, link it at
+that step. To check the goal, ask "in order to accomplish what?" and "how?": a
 goal that only serves a larger goal in the same sitting is a step.
 
 ### Main success scenario

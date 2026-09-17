@@ -23,16 +23,9 @@ keeps. Its tables extend the profile's tables of the same name.
 
 ```text
 spec/
-  entities/
-  values/
+  entities/                        # Entity Type documents
+  values/                          # Value Type documents
 ```
-
-### Folders
-
-| Folder | Holds |
-| --- | --- |
-| `entities/` | `Entity Type` documents |
-| `values/` | `Value Type` documents |
 
 ## Placement
 
@@ -55,12 +48,7 @@ that only one feature needs still belongs to its entity type.
 | The states of an entity type's instances, the permitted transitions, what creates an instance, and whether an ended instance is removed, retained, or anonymized | The Entity Type's **Lifecycle** |
 | What the system must do when a transition occurs, or when a transition that the lifecycle does not permit is attempted | Requirement, linking to the lifecycle |
 | How long instances or their data are kept, and who may see them | Not the Entity Type; the rule or obligation that sets it, placed by the other ownership tests |
-
-### Shared definitions
-
-| Definition | Shared home |
-| --- | --- |
-| A value that entity types, value types, or external interfaces use | A Value Type |
+| A value that more than one entity type, value type, or external interface uses | A Value Type |
 
 ### Invariant, business rule, or requirement
 
@@ -89,10 +77,4 @@ transitions, concurrency, retries, and failures, is a Requirement.
    an Entity Type.
 2. Otherwise, its equal values are interchangeable, and it is a Value Type,
    or a data attribute defined where it is used when the
-   [shared definitions](#shared-definitions) allow.
-
-## Not yet defined
-
-| Topic | Interim practice |
-| --- | --- |
-| What causes each lifecycle transition | Name the event that causes each transition in business terms, and link the use cases and business rules that cause transitions under the Entity Type's **Related**. |
+   [where content goes](#where-content-goes) allows.

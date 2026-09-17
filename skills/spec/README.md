@@ -23,18 +23,19 @@ that apply to every document. A module holds a group of types that not every
 system needs, with everything that exists only for them.
 
 - A module file has the sections it needs from **Concept types**,
-  **Vocabulary**, **Structure** (with **Folders**), **Placement** (with
-  **Placement levels** and **Fixed locations**), **Ownership tests** (with
-  **Where content goes** and **Shared definitions**), **Named links**, and
-  **Not yet defined**, in that order. Each table extends the profile's table of the same name, whose rule
-  names module tables as extension points.
+  **Vocabulary**, **Structure**, **Placement** (with **Placement levels** and
+  **Fixed locations**), **Ownership tests** (with **Where content goes**), and
+  **Named links**, in that order. Each table extends the profile's table of
+  the same name, whose rule names module tables as extension points. The
+  directory tree in **Structure** is the folder contract, with a comment on
+  each folder that holds concepts.
 - A rule, term, named link, or interim practice that exists only for a
   module's types lives in that module, including guidance that only matters
   when the module is adopted.
-- Core templates and the profile speak only of the system and the core types.
-  The profile names a module's types only in its **Modules** table. A module
-  names another module's types only conditionally, such as "in a corpus
-  without the Rules module".
+- Core rules never depend on a module's types. Core examples, glossary entry
+  lines, and named link rows may mention them, because they add nothing a
+  corpus without the module must do. A module rule names another module's
+  types only conditionally, such as "in a corpus without the Rules module".
 - The Decomposition module makes a subsystem equivalent to a system at its own
   boundary, so no other file restates how a rule applies to subsystems.
 - The profile's **Modules** table gives, for each module, how content is
@@ -47,17 +48,17 @@ system needs, with everything that exists only for them.
 - A rule that applies to more than one type lives in the profile or a module.
   A rule for one type lives in that type's contract, including when to create
   a concept of that type.
-- An interim practice for a deferred concern lives only in a
-  **Not yet defined** table; templates link to it rather than restating it.
+- A deferred concern is listed once, in the profile's **Not yet defined**.
+  An interim practice for it lives in the Writing guidance of the type it
+  concerns, or in the profile's prose when it concerns several types.
 - Writing guidance explains and illustrates rules; it links to them and never
   states a rule of their own. The numbered rules are the checklist, so no
   section restates them as questions. Uppercase MUST, SHOULD, and MAY
   appear only in normative statements.
 - Terms are used as a **Vocabulary** table defines them. Add or change a row
   there before giving a term a new meaning.
-- Named links between documents are defined and assigned to one side in a
-  **Named links** table. Templates use those names in bold. A module row that
-  extends a profile named link begins its meaning with "Also:".
+- Named links between documents are defined and assigned to one side in one
+  row of one **Named links** table. Templates use those names in bold.
 
 ### Rule identifiers
 
@@ -67,8 +68,8 @@ contract.
 
 - A tagged item states rules of one strength only: MUST and MUST NOT, SHOULD
   and SHOULD NOT, or MAY. Split an item that mixes them.
-- Nested bullets under a tagged item, such as the fields a document
-  identifies, belong to that item.
+- Nested bullets under a tagged item, such as the sections a document
+  includes, belong to that item.
 - Identifiers are unique. Before version 1.0, identifiers are numbered in
   document order and renumbered when rules are added or removed. From 1.0,
   an identifier is never reused for a different rule: a removed rule's
@@ -97,13 +98,13 @@ None. The list starts when version 1.0 is published.
 ### Deferring a concern
 
 To keep a version small, defer a concern rather than half-specify it: remove
-its rules, named links, and sections. The profile's general practice for
-undefined concerns, P-CON-5, then applies: state it in prose in the nearest
-section, link records under **Related**, and record what is undecided under
-**Open questions**. Add a row to the **Not yet defined** table of the profile
-or of the module whose types it concerns only when its interim practice is
-more specific than that; otherwise list it in the [Roadmap](#roadmap). When
-the concern is taken up, it returns under new identifiers.
+its rules, named links, and sections, and list it in the profile's
+**Not yet defined**. The profile's general practice for undefined concerns,
+P-CON-5, then applies: state it in prose in the nearest section, link records
+under **Related**, and record what is undecided under **Open questions**. Add
+an interim practice to the Writing guidance of the type it concerns only when
+it is more specific than that. When the concern is taken up, it returns under
+new identifiers.
 
 Links are plain unless a named link applies; a named link is added to a table
 only when readers need its meaning and a plain link's place does not show it.
@@ -113,59 +114,36 @@ Rules that apply to every type, such as the optional **Open questions**,
 and conditional markers, live in the profile's **Document conventions** and
 are not repeated in each Type contract.
 
-### Roadmap
-
-This version also leaves these concerns undefined, with no interim practice
-beyond base OKF v0.2 and P-CON-5:
-
-- frontmatter keys beyond base OKF v0.2;
-- who may accept each type, and review dates such as `stale_after`;
-- how the parts of a system or feature fit together beyond folder indexes;
-- optional features, and features that require or exclude each other;
-- requirement classifications, such as functional, conformance, human
-  factors, and process;
-- kinds of external interface counterpart;
-- obligations that cannot both be fully met;
-- folders for concepts specific to one subsystem;
-- quality characteristics nested within other quality characteristics;
-- business rule volatility, enforcement levels, and relationships between
-  business rules;
-- where a data attribute's value comes from, and the sensitivity and purpose
-  of personal data;
-- specialization or inheritance between entity types or value types; and
-- an overall data model or diagram spanning entity types.
-
 ### Template anatomy
 
 Every template has this shape, in this order:
 
 1. `# <Type> template`.
-2. A purpose paragraph beginning "Use for" and ending
-   `Apply the [Spec profile](../references/profile.md). The Type contract is normative; the remaining sections guide authoring.`
+2. A purpose paragraph beginning "Use for". That the Type contract is
+   normative and the rest guides authoring is stated once, in `SKILL.md`.
 3. `## Type contract`, containing, in this order:
    1. when the profile's or a module's **Fixed locations** table does not
       settle placement alone, an untagged placement paragraph beginning
       "A <Type> document is placed as", linking the placement rules or
       creation test that apply;
    2. the tagged title rule;
-   3. the tagged "MUST identify these fields:" rule, when the type identifies
-      fields;
-   4. the tagged "MUST include these sections:" rule, listing every section
+   3. the tagged "MUST include these sections:" rule, listing every section
       of the type's own in document order, each marked *(optional)* or with a
       condition, such as *(when …)*, unless it is always required, and
       described in a few words;
-   5. tagged type-specific rules;
-   6. tagged MUST NOT and SHOULD NOT rules.
+   4. tagged type-specific rules;
+   5. tagged MUST NOT and SHOULD NOT rules.
 
-   There are no "MAY identify" or "MAY include" rules. Binding content is
+   There are no "MAY include" rules. Binding content is
    everything but the supporting sections, as the profile's
    [binding and illustrative content](src/references/profile.md#binding-and-illustrative-content)
    states, so the contract does not declare it. Untagged paragraphs in the
    contract explain; they contain no uppercase keyword.
 4. `## Suggested document`: one fenced Markdown block, with frontmatter
    carrying only `type`, `title`, `description`, `status: draft`, and
-   `sources` when the contract requires it; a Context
-   table exactly when the contract identifies fields; and supporting sections last
+   `sources` when the contract requires it; a `Context | Value` table
+   exactly when a type-specific rule requires one, as for Use Case; and
+   supporting sections last
    in the profile's order. Nothing follows the block.
 5. `## Writing guidance`: topic subsections that add what the contract does
    not say, such as how to write one section, how the type differs from a

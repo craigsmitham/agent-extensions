@@ -36,28 +36,18 @@ subject.
 spec/
   features/
     <feature>/
-      components/
+      components/                  # A folder for each Feature Component
         <component>/
           <component>.md           # Feature Component
           use-cases/
           requirements/
-  subsystems/
+  subsystems/                      # A folder for each Subsystem
     <subsystem>/
       <subsystem>.md               # Subsystem
       use-cases/                   # Placed at the subsystem
       requirements/
       features/                    # Same structure as spec/features/
 ```
-
-### Folders
-
-| Folder | Holds |
-| --- | --- |
-| `subsystems/` | A folder for each `Subsystem` |
-| `<subsystem>/` | Its concept document, `use-cases/`, `requirements/`, and `features/` |
-| `components/` | A folder for each `Feature Component` of its feature |
-| `<component>/` | Its concept document, `use-cases/`, and `requirements/` |
-| `<feature>/` | Also `components/` |
 
 Subsystems and feature components are folders, as P-STR-5 requires.
 
@@ -89,11 +79,3 @@ external interface, or a glossary term.
   from the system's other names.
 - **P-DEC-4** The **Scope** of the Business Requirements MUST link each
   subsystem it includes.
-
-## Not yet defined
-
-| Topic | Interim practice |
-| --- | --- |
-| Operating environment conditions and quality priorities specific to one subsystem | State them in the System's **Operating environment** or **Quality priorities**, naming and linking the subsystem. |
-| Connections between subsystems of the same system | Describe what passes between them in each Subsystem's **Boundary and context**, linking the sibling Subsystem. |
-| Use cases and requirements whose subject is a subsystem but that belong to a system-level feature | Place them within the subsystem, at the subsystem or in a subsystem-level feature, and link the system-level feature under **Related**. |

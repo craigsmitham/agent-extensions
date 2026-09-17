@@ -1,8 +1,6 @@
 # Requirement template
 
-Use for one obligation that the system must satisfy. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+Use for one obligation that the system must satisfy.
 
 ## Type contract
 

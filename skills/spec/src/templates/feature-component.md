@@ -1,9 +1,7 @@
 # Feature Component template
 
 Use for one distinct part of a feature's behavior, such as a command,
-workflow, or screen, that has its own use cases or requirements. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+workflow, or screen, that has its own use cases or requirements.
 
 ## Type contract
 

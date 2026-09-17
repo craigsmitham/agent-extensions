@@ -1,9 +1,7 @@
 # Quality Characteristic template
 
 Use for one property of how well the system or a subsystem works, such as
-availability or response time. Apply the
-[Spec profile](../references/profile.md). The Type contract is normative; the
-remaining sections guide authoring.
+availability or response time.
 
 ## Type contract
 
@@ -68,8 +66,9 @@ system or subsystem:
    characteristic traces to at least one of them under **Importance**.
 2. Check the set against a quality model, such as the characteristics and
    subcharacteristics of ISO/IEC 25010, to find what is missing. The model is
-   a checklist, not the list of names. To record the correspondence, follow
-   [Not yet defined](../references/modules/quality.md#not-yet-defined).
+   a checklist, not the list of names. To record the correspondence, give the
+   model's name on the **Also called** line of the glossary entry for the
+   characteristic's name.
 3. Split a characteristic whose parts matter to different stakeholders or are
    judged in different ways, such as performance into response time and
    capacity. Merge characteristics that stakeholders never tell apart.
