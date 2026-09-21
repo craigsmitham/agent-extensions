@@ -1,117 +1,110 @@
-lockfileVersion: 7
+lockfileVersion: 8
 skills:
   audit-agent-skill:
-    type: registry
-    sourceType: registry
-    endpoint: https://registry.agentxm.ai/
-    extensionType: skill
-    workspaceName: audit-agent-skill
-    packageFormat: agentxm
-    owner: "@agentxm"
-    name: audit-agent-skill
-    resolvedVersion: 0.8.0
-    integrity: sha512-l9LdMRcC9T5S6QFOmba+STLPx0W/kHyatXW6MDFLq5KV9JWtCGJb7dH4DnxatImxkqcjJseC0aie4RbPR4d/IA==
-    sourceName: agentxm
-    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
+    source:
+      type: registry
+      url: https://registry.agentxm.ai/
+    identity:
+      owner: "@agentxm"
+      name: audit-agent-skill
+    resolved:
+      version: 0.8.0
+      integrity: sha512-l9LdMRcC9T5S6QFOmba+STLPx0W/kHyatXW6MDFLq5KV9JWtCGJb7dH4DnxatImxkqcjJseC0aie4RbPR4d/IA==
+      publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     treeIntegrity: sha256-tree-v1:38a686511ffce240b75797e8588da7bd1eacb7c40ce5db762906c7dc36aa2b03
   author-agent-skill:
-    type: registry
-    sourceType: registry
-    endpoint: https://registry.agentxm.ai/
-    extensionType: skill
-    workspaceName: author-agent-skill
-    packageFormat: agentxm
-    owner: "@agentxm"
-    name: author-agent-skill
-    resolvedVersion: 0.11.0
-    integrity: sha512-119BGRfxmCXrvMN6p/WfQ2rkl9GRdfKmALgCC/snphPJnjDTk/X9fSLaW8eu/aXHtRvrMSzkKbzJRrjChvWxGw==
-    sourceName: agentxm
-    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
+    source:
+      type: registry
+      url: https://registry.agentxm.ai/
+    identity:
+      owner: "@agentxm"
+      name: author-agent-skill
+    resolved:
+      version: 0.11.0
+      integrity: sha512-119BGRfxmCXrvMN6p/WfQ2rkl9GRdfKmALgCC/snphPJnjDTk/X9fSLaW8eu/aXHtRvrMSzkKbzJRrjChvWxGw==
+      publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     treeIntegrity: sha256-tree-v1:70848fee0741f74a32ad4aa959ab5f6e7759ad79ba0edac10a28472c0bfa08ff
   evaluate-agent-skill:
-    type: registry
-    sourceType: registry
-    endpoint: https://registry.agentxm.ai/
-    extensionType: skill
-    workspaceName: evaluate-agent-skill
-    packageFormat: agentxm
-    owner: "@agentxm"
-    name: evaluate-agent-skill
-    resolvedVersion: 0.4.0
-    integrity: sha512-we7WLXbiSr51my2P99aLeHt9AHLi+SjXrh5bsPjO+LCRGvk0fDsxYCpmZ0X0QDh1tAb3vK96Baz9Z4kUJ9Qvvw==
-    sourceName: agentxm
-    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
+    source:
+      type: registry
+      url: https://registry.agentxm.ai/
+    identity:
+      owner: "@agentxm"
+      name: evaluate-agent-skill
+    resolved:
+      version: 0.4.0
+      integrity: sha512-we7WLXbiSr51my2P99aLeHt9AHLi+SjXrh5bsPjO+LCRGvk0fDsxYCpmZ0X0QDh1tAb3vK96Baz9Z4kUJ9Qvvw==
+      publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     treeIntegrity: sha256-tree-v1:8f9c01bfc4f5d0527bb247e27cb0ebc16cfc03387b8cd60bdce35275448720c8
   agent-skill-evaluator:
-    type: registry
-    sourceType: registry
-    endpoint: https://registry.agentxm.ai/
-    extensionType: skill
-    workspaceName: agent-skill-evaluator
-    packageFormat: agentxm
-    owner: "@agentxm"
-    name: agent-skill-evaluator
-    resolvedVersion: 0.3.0
-    integrity: sha512-0PHycZMVpeOD2uzf4o82M00LcAjqiQ3UI91qwpAwO3BiIiCh1wfqFYhrsUH9yLd+hCGDUkMSxa/Eg6+f9izK3g==
-    sourceName: agentxm
-    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
+    source:
+      type: registry
+      url: https://registry.agentxm.ai/
+    identity:
+      owner: "@agentxm"
+      name: agent-skill-evaluator
+    resolved:
+      version: 0.3.0
+      integrity: sha512-0PHycZMVpeOD2uzf4o82M00LcAjqiQ3UI91qwpAwO3BiIiCh1wfqFYhrsUH9yLd+hCGDUkMSxa/Eg6+f9izK3g==
+      publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     treeIntegrity: sha256-tree-v1:3cd5fe44a51bf8bdde6b7c7f04fd8e40a54949fbcbe67a827c367ecdd0775bb9
   audit-agent-instructions:
-    type: registry
-    sourceType: registry
-    endpoint: https://registry.agentxm.ai/
-    extensionType: skill
-    workspaceName: audit-agent-instructions
-    packageFormat: agentxm
-    owner: "@agentxm"
-    name: audit-agent-instructions
-    resolvedVersion: 0.2.1
-    integrity: sha512-1IRqUzeNr+uT/0NiJ6mATQ8Tdh0xEky2riMebJp32IUNSswb2Ana5BZDQEspemwoiZ/947Hbc13Ha5s43Xa4zQ==
-    sourceName: agentxm
-    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
+    source:
+      type: registry
+      url: https://registry.agentxm.ai/
+    identity:
+      owner: "@agentxm"
+      name: audit-agent-instructions
+    resolved:
+      version: 0.2.1
+      integrity: sha512-1IRqUzeNr+uT/0NiJ6mATQ8Tdh0xEky2riMebJp32IUNSswb2Ana5BZDQEspemwoiZ/947Hbc13Ha5s43Xa4zQ==
+      publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     treeIntegrity: sha256-tree-v1:54e439371317fc9fb40395ad5936a799af38a6f78c745e17d0c88494d46f9e5b
   author-agent-instructions:
-    type: registry
-    sourceType: registry
-    endpoint: https://registry.agentxm.ai/
-    extensionType: skill
-    workspaceName: author-agent-instructions
-    packageFormat: agentxm
-    owner: "@agentxm"
-    name: author-agent-instructions
-    resolvedVersion: 0.2.1
-    integrity: sha512-ijn2jN3KpiAsypLD97RuH7c5TQkT4wRprZQGT1zgyQw6JsJeDlR4HbpPt+HnS+3175HQ71/I22frR1qbQAjIzQ==
-    sourceName: agentxm
-    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
+    source:
+      type: registry
+      url: https://registry.agentxm.ai/
+    identity:
+      owner: "@agentxm"
+      name: author-agent-instructions
+    resolved:
+      version: 0.2.1
+      integrity: sha512-ijn2jN3KpiAsypLD97RuH7c5TQkT4wRprZQGT1zgyQw6JsJeDlR4HbpPt+HnS+3175HQ71/I22frR1qbQAjIzQ==
+      publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     treeIntegrity: sha256-tree-v1:d592e24976fa8d59d0610f8c51b9d15081ee35d65fc5c36f4ccfbc6cebf718e7
 knowledge:
   agent-engineering:
-    type: registry
-    sourceType: registry
-    endpoint: https://registry.agentxm.ai/
-    extensionType: knowledge
-    workspaceName: agent-engineering
-    packageFormat: agentxm
-    owner: "@agentxm"
-    name: agent-engineering
-    resolvedVersion: 0.10.1
-    integrity: sha512-yD1+F9zA8tqIKxs91jQ5xKP9NVFGNo7imN36Agf4sccI45LzYlWI6dp0KZEy9ND/861Bgux1w0H0ShoSEsr7aQ==
-    sourceName: agentxm
-    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
+    source:
+      type: registry
+      url: https://registry.agentxm.ai/
+    identity:
+      owner: "@agentxm"
+      name: agent-engineering
+    resolved:
+      version: 0.10.1
+      integrity: sha512-yD1+F9zA8tqIKxs91jQ5xKP9NVFGNo7imN36Agf4sccI45LzYlWI6dp0KZEy9ND/861Bgux1w0H0ShoSEsr7aQ==
+      publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     treeIntegrity: sha256-tree-v1:41df177b1dce0e803fb1f0a12f2f5a5bd228000cbd9ab62b5598f423886b4c65
 packs:
   agent-engineering:
-    type: registry
-    sourceType: registry
-    endpoint: https://registry.agentxm.ai/
-    extensionType: pack
-    workspaceName: agent-engineering
-    packageFormat: agentxm
-    owner: "@agentxm"
-    name: agent-engineering
-    resolvedVersion: 0.11.1
-    integrity: sha512-OZKGBmogmn7+yFzM6xs+vJkoexzh8Rd9SQHpD7yNlgN3D3hgwoVknslE4K168dZuumPLCD8pgsIoN5TyXc+qxg==
-    manifestContentIdentity: 9bfb59d8a319433af6a0b6ffcb7a76cf7a8189a1305dcc642166db7d3a583594
-    sourceName: agentxm
-    publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
+    source:
+      type: registry
+      url: https://registry.agentxm.ai/
+    identity:
+      owner: "@agentxm"
+      name: agent-engineering
+    resolved:
+      version: 0.11.1
+      integrity: sha512-OZKGBmogmn7+yFzM6xs+vJkoexzh8Rd9SQHpD7yNlgN3D3hgwoVknslE4K168dZuumPLCD8pgsIoN5TyXc+qxg==
+      publisherBindingId: hbnd_01ks5vvdf0efz9m4w5qsv4q5qp
     treeIntegrity: sha256-tree-v1:e0d6b59e1b08ca490bcdcdbb6262367b3f28a5e5eabb1090c967ff80d8e3cce8
+    manifestVersion: 0.11.1
+    manifestContentIdentity: 9bfb59d8a319433af6a0b6ffcb7a76cf7a8189a1305dcc642166db7d3a583594
+    members:
+      - "@agentxm/skills/audit-agent-skill"
+      - "@agentxm/skills/author-agent-skill"
+      - "@agentxm/knowledge/agent-engineering"
+      - "@agentxm/skills/evaluate-agent-skill"
+      - "@agentxm/skills/agent-skill-evaluator"
+      - "@agentxm/skills/audit-agent-instructions"
+      - "@agentxm/skills/author-agent-instructions"
