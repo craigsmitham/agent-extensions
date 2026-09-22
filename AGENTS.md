@@ -3,7 +3,7 @@
   terminology or claims before publishing.
 
 
-<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=4df15866eba8537bbdcd1a321ef25e6a32648413a5675e107adccffb5ccad366 -->
+<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=71e559b75a6ceadb7bf57b773b5bfc34c33b2b883ebe7b1d6049b6f4c6eebffa -->
 ## Knowledge Bundles
 
 Use `axm knowledge concepts --help` to search, read, and explore these bundles.
@@ -32,8 +32,8 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-engineering](knowledge/product-engineering/src/index.md) | Opinionated product-development lifecycle from strategy through operations and maintenance, with shared conceptual foundations |
 <!-- axm:end v=1 region=knowledge -->
-<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=8db614040e03a64811017c2de20616e59f1d491f5da07337af060204d3c76018 -->
-<!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@1.0.0 kind=rule -->
+<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=bd0c1c6fccf2ca4978a9ef9bb8e6c0217df3620e08c7d4ec9e13ab3ef1bd52fb -->
+<!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@1.0.1 kind=rule -->
 
 ## Field notes
 
@@ -46,4 +46,8 @@ Use only evidence and context already available. Do not investigate, perform
 additional analysis, or generate hypotheses or recommendations for the note.
 Skip routine steps, expected diagnostic failures, and isolated typing mistakes.
 Capture does not expand the task's authority.
+
+When committing or delivering authorized task work, include the field notes
+created for that work and check that none were left untracked. Keep unrelated
+notes out of the change.
 <!-- axm:end v=1 region=rules -->
