@@ -14,7 +14,6 @@ and are not published from this repository.
 | --- | --- | --- |
 | `effect-v4` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect-v4` |
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
-| `field-notes` | Observe how work actually goes within declared subjects, then triage recurring obstacles into verified improvements | `axm install @craigsmitham/packs/field-notes` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
 | `software-engineering` | Evidence-backed codebase review and coherent repository execution-surface craft, sourced from the `product-engineering` bundle | `axm install @craigsmitham/packs/software-engineering` |
 | `work-management` | Consistent Operational Incident Records, Defect Reports, and Changes across repositories and trackers, sourced from the `product-engineering` bundle | `axm install @craigsmitham/packs/work-management` |

@@ -145,21 +145,17 @@ find_authored_manifests() {
 expected=(
   knowledge/docs
   knowledge/effect-v4
-  knowledge/field-notes
   knowledge/knowledge-management
   knowledge/product-engineering
   packs/docs
   packs/effect-v4
-  packs/field-notes
   packs/research
   packs/software-engineering
   packs/work-management
-  rules/field-notes
   rules/use-effect-v4
   skills/checklist-design
   skills/devops-docs
   skills/docs
-  skills/field-notes
   skills/improve-whatever
   skills/manage-work-items
   skills/okf

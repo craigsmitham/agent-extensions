@@ -5,12 +5,12 @@ for each package is the SPDX expression in its manifest. The prospective
 license-selection policy and package-boundary rules are documented in
 [`docs/licensing.md`](./docs/licensing.md).
 
-- The `docs` knowledge bundle, pack, and skill, the
-  `field-notes` package family, and the `knowledge-management` and
-  `product-engineering` knowledge bundles are licensed under `CC-BY-SA-4.0`.
-  The retired `software-engineering`, `work-management`, and
-  `workflow-automation` bundles carried the same license, and their concepts
-  keep it inside `product-engineering`.
+- The `docs` knowledge bundle, pack, and skill, and the
+  `knowledge-management` and `product-engineering` knowledge bundles are
+  licensed under `CC-BY-SA-4.0`. The retired `software-engineering`,
+  `work-management`, and `workflow-automation` bundles carried the same
+  license, and their concepts keep it inside `product-engineering`. The
+  retired `field-notes` package family carried the same license.
 - `okf` is licensed under `MIT AND Apache-2.0`: Craig's original skill,
   templates, and validator use MIT, while the vendored Open Knowledge Format
   specification retains its upstream Apache-2.0 license.
