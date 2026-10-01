@@ -1,5 +1,92 @@
 # Directory Update Log
 
+## 2026-10-01
+
+* **Retarget**: Reviewed the twenty-four checklists against the changes from
+  Effect `4.0.0-rc.117` through `4.0.0-rc.118` to the stable `4.0.0` release
+  and refreshed all official Effect source pins. Historical applied-example
+  pins remain unchanged.
+* **Correction**: rc.118 moved `effect/unstable/*` modules to `effect/*` and
+  renamed `effect/httpapi` to `effect/http-api`. Repointed the HttpApi,
+  HttpClientError, SqlClient, SqlError, and HttpServerResponse test links.
+  The index now defines version sensitivity by the `@stability unstable` tag,
+  not the import path. Most HTTP, HTTP API, and SQL modules keep that tag.
+* **Correction**: 4.0.0 consolidated the pre-release changesets. The
+  own-property parsing reference in [Schema boundaries](schema-boundaries.md)
+  now points to the rc.113 entry in the package changelog.
+* **HTTP API**: The parse-options check now covers the per-slot annotations
+  added in rc.118. A slot annotation such as `HeadersParseOptions` outranks
+  `ParseOptions` at any level and can keep strict body parsing from rejecting
+  transport headers. The edge-wiring check notes that `HttpRouter.serve` builds
+  its app privately (rc.118), so services shared with sibling layers must be
+  provided outside it.
+* **Branded types**: Since 4.0.0, `Schema.brand` is type-only. Schema
+  representations and generated code omit the brand. The
+  representation-change check now covers rebuilding a schema from either.
+* **Resource safety**: Added a check to close only scopes the code created.
+  Since rc.118, `Scope.close` and `Scope.closeUnsafe` require a
+  `Scope.Closeable`.
+* **Iteration**: Added a check for repetition bounded by both a count or
+  schedule and a stop condition. Since rc.118, `Effect.repeat` with `times` or
+  `schedule` keeps the source result type, because the bound may end
+  repetition before a refinement holds.
+* **Keyed resource sharing**: The acquisition-failure check now asks whether
+  failure surfaces at preload or first use. Since rc.118, `LayerMap` skips
+  preloading keys with a zero idle time-to-live, which is the default.
+* **Testing**: Linked `TestSchema`, now `@stability unstable`. 4.0.0 renamed
+  `verifyLosslessTransformation` to `verifyRoundTrip`.
+* **Not adopted**: No checklist item names the new successes-first tuple order
+  of `partition` and `separate` (4.0.0), but callers migrating from earlier
+  pre-releases must swap the tuple. This matters most where both sides share
+  one type. Fixes to `Effect.race` loser interruption, `Queue` batch takes, `Cache` and
+  `MutableHashMap` retention, PostgreSQL and SQLite failed-`COMMIT` handling,
+  scope finalizer interruptibility, and `ManagedRuntime` disposal ordering
+  strengthen behavior the checklists already require. `Arbitrary.configureGlobal`,
+  the Schema check renames, and the AI, MCP, cluster, workflow, RPC, Atom, and
+  CLI changes fall outside the topics. 4.0.0 requires TypeScript 5.9 or newer,
+  and `@effect/vitest` requires Vitest 5.
+* **Evidence ceiling**: This refresh reviews source, changelogs, and migration
+  documents; it does not claim execution of the upstream suites, re-review of
+  applied example repositories, or field validation of the checklists.
+
+## 2026-09-22
+
+* **Retarget**: Reviewed the twenty-four checklists against the changes from
+  Effect `4.0.0-rc.115` through `4.0.0-rc.117` and refreshed all official
+  Effect source pins. Historical applied-example pins remain unchanged.
+* **Correction**: Repointed the fast-check migration reference in
+  [Testing](testing.md). rc.116 removed `ARBITRARY-MIGRATION.md` and moved its
+  content into the consolidated Schema migration guide.
+* **HTTP API**: Added a check for `HttpApi.ParseOptions`, new in rc.116. Parse
+  options set at the API, group, or endpoint level are replaced, not merged,
+  by a nearer level, and a strict excess-property policy also rejects
+  undeclared headers. [Schema boundaries](schema-boundaries.md) now allows the
+  excess-property decision to sit on the owning contract.
+* **SQL**: Added a check that the dialect client supports the transaction
+  shape relied on. In rc.116 `sqlite-do` gained nested transactions with
+  independent child rollback, but it still does not support concurrent sibling
+  transactions or asynchronous work inside a transaction. rc.117 releases
+  savepoints after nested transactions complete, and custom clients opt in
+  through `releaseSavepoint`. This supersedes the 2026-08-17 note that
+  `sqlite-do` rejects nested transactions. Cloudflare Workers now links the
+  Durable Object SQLite client.
+* **Date and time**: The timestamp-codec check now covers the time zone a
+  driver applies on write. It cites the rc.116 `sql-pg` change: timestamps now
+  decode as `Date`, and `Date` parameters bind as `timestamptz`, so inserting
+  one into a `timestamp` column applies the session `TimeZone`.
+* **Config**: Linked ByteSize parsing. Since rc.116, `ByteSize.Input` accepts
+  only canonical integer strings, so sizes from outside input need
+  `Config.ByteSize` or `ByteSize.fromString`.
+* **Not adopted**: The rc.116 `SchemaGetter`, `SchemaTransformation`, `Stream`,
+  and `Effect.orElseSucceed` API changes do not appear in any checklist item.
+  The experimental Schema JIT and AOT compilers, AI, MCP, cluster, `NetAddress`,
+  and YAML changes fall outside the topics. Fixes to `Pool.makeWithTTL` usage
+  retention (rc.117) and `RcRef` zero idle time-to-live (rc.116) need no
+  checklist change.
+* **Evidence ceiling**: This refresh reviews source, changelogs, and migration
+  documents; it does not claim execution of the upstream suites, re-review of
+  applied example repositories, or field validation of the checklists.
+
 ## 2026-09-11
 
 * **Retarget**: Reviewed the twenty-four checklists against the changes from

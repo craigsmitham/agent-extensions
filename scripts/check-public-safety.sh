@@ -21,7 +21,7 @@ fi
 
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
-trusted_eval_validator="$repo_root/agent_extensions/agentxm/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
+trusted_eval_validator="$repo_root/agent_extensions/registry/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
 
 if ! command -v axm >/dev/null 2>&1; then
   echo "AXM is required. Install the latest release from https://axm.sh." >&2
@@ -145,21 +145,17 @@ find_authored_manifests() {
 expected=(
   knowledge/docs
   knowledge/effect-v4
-  knowledge/field-notes
   knowledge/knowledge-management
   knowledge/product-engineering
   packs/docs
   packs/effect-v4
-  packs/field-notes
   packs/research
   packs/software-engineering
   packs/work-management
-  rules/field-notes
   rules/use-effect-v4
   skills/checklist-design
   skills/devops-docs
   skills/docs
-  skills/field-notes
   skills/improve-whatever
   skills/manage-work-items
   skills/okf

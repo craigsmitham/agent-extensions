@@ -20,7 +20,6 @@
   "skills": {
     "temporal-dates": "workspace",
     "improve-whatever": "workspace",
-    "field-notes": "workspace",
     "docs": "workspace",
     "okf": "workspace",
     "research": "workspace",
@@ -35,7 +34,6 @@
     "product-docs": "workspace"
   },
   "rules": {
-    "field-notes": "workspace",
     "use-effect-v4": {
       "source": "workspace",
       "enabled": false
@@ -43,7 +41,6 @@
   },
   "knowledge": {
     "docs": "workspace",
-    "field-notes": "workspace",
     "effect-v4": "workspace",
     "knowledge-management": "workspace",
     "product-engineering": "workspace"
@@ -54,7 +51,6 @@
   "packs": {
     "effect-v4": "workspace",
     "docs": "workspace",
-    "field-notes": "workspace",
     "agent-engineering": "agentxm:@agentxm/packs/agent-engineering",
     "research": "workspace",
     "work-management": "workspace",
