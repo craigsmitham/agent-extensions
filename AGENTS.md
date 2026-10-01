@@ -3,7 +3,7 @@
   terminology or claims before publishing.
 
 
-<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery gen=4df15866eba8537bbdcd1a321ef25e6a32648413a5675e107adccffb5ccad366 -->
+<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery src={"scope":"project","root":".","owners":[{"name":"agent-engineering","ref":"@agentxm/knowledge/agent-engineering","root":"agent_extensions/registry/@agentxm/knowledge/agent-engineering"},{"name":"docs","ref":"@craigsmitham/knowledge/docs","root":"knowledge/docs"},{"name":"effect-v4","ref":"@craigsmitham/knowledge/effect-v4","root":"knowledge/effect-v4"},{"name":"field-notes","ref":"@craigsmitham/knowledge/field-notes","root":"knowledge/field-notes"},{"name":"knowledge-management","ref":"@craigsmitham/knowledge/knowledge-management","root":"knowledge/knowledge-management"},{"name":"product-engineering","ref":"@craigsmitham/knowledge/product-engineering","root":"knowledge/product-engineering"}]} gen=4df15866eba8537bbdcd1a321ef25e6a32648413a5675e107adccffb5ccad366 -->
 ## Knowledge Bundles
 
 Use `axm knowledge concepts --help` to search, read, and explore these bundles.
@@ -32,7 +32,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [knowledge-management](knowledge/knowledge-management/src/index.md) | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources |
 | [product-engineering](knowledge/product-engineering/src/index.md) | Opinionated product-development lifecycle from strategy through operations and maintenance, with shared conceptual foundations |
 <!-- axm:end v=1 region=knowledge -->
-<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions gen=8db614040e03a64811017c2de20616e59f1d491f5da07337af060204d3c76018 -->
+<!-- axm:start v=1 region=rules ext=@agentxm/rules/instructions src={"scope":"project","root":".","owners":[{"name":"field-notes","ref":"@craigsmitham/rules/field-notes","root":"rules/field-notes"},{"name":"use-effect-v4","ref":"@craigsmitham/rules/use-effect-v4","root":"rules/use-effect-v4"}]} gen=8db614040e03a64811017c2de20616e59f1d491f5da07337af060204d3c76018 -->
 <!-- axm:point v=1 ext=@craigsmitham/rules/field-notes@1.0.0 kind=rule -->
 
 ## Field notes

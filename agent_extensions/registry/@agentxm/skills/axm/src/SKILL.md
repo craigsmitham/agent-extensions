@@ -19,8 +19,8 @@ description: >-
   for merely using an installed extension.
 license: FSL-1.1-MIT; https://github.com/agentxm/axm/blob/main/LICENSE
 metadata:
-  axm.sh/cli-version: "0.32.3"
-  axm.sh/cli-version-range: ">=0.32.0 <0.33.0"
+  axm.sh/cli-version: "0.38.0"
+  axm.sh/cli-version-range: ">=0.38.0 <0.39.0"
 ---
 
 # AXM
@@ -162,6 +162,10 @@ request and host:
 - **Credential operation:** login or token management only when required and
   authorized. Keep secrets symbolic; never print, request in chat, place in a
   command, persist in extension files, or expose through telemetry.
+- **CI publishing:** in GitHub Actions, prefer trusted publishing over a stored
+  token: grant the job `permissions: id-token: write` and register the
+  repository and workflow as a trusted publisher in AgentXM settings. Set
+  `AXM_TRUSTED_PUBLISHING=0` only for a job that must not use it.
 - **Executable upgrade:** `axm upgrade` changes installed executable state and
   requires explicit upgrade authority. Keep it separate from workspace repair.
 
@@ -203,6 +207,13 @@ workspace state. Diagnosis is a local read and authorizes no repair.
    `axm view <fqn> --json` for a replacement named only in a deprecation note.
    Never authenticate for these. Report an offline request, unreachable source,
    or timeout as skipped, not failed.
+   For a directly installed deprecated extension, report its reason and any
+   disclosed replacement. Suggest `axm migrate <fqn> --dry-run` for `obsolete`
+   or `superseded` with an available replacement; apply `axm migrate <fqn>`
+   only when repair was selected. For `superseded` with an unavailable or
+   concealed replacement, explain why migration cannot proceed. For
+   `unmaintained` or `other`, explain that the user must choose a successor.
+   A Pack member requires its publisher to update the dependency.
 5. Render [the doctor report](references/doctor-report.md) exactly, then stop
    at its choice. Only a selected option or named IDs authorize repair;
    free text becomes a plan to approve.
