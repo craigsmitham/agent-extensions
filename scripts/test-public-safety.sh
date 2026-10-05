@@ -68,7 +68,7 @@ if find "$test_root" -maxdepth 1 \
 fi
 
 mismatch_fixture="$(make_fixture)"
-mismatch_manifest="agent_extensions/agentxm/@agentxm/skills/axm/skill.json"
+mismatch_manifest="agent_extensions/registry/@agentxm/skills/axm/skill.json"
 jq '.version = "0.26.3"' "$mismatch_fixture/$mismatch_manifest" \
   >"$mismatch_fixture/$mismatch_manifest.next"
 mv "$mismatch_fixture/$mismatch_manifest.next" "$mismatch_fixture/$mismatch_manifest"
@@ -198,7 +198,7 @@ fi
 
 trusted_eval_fixture="$(make_fixture)"
 eval_sentinel="$test_root/snapshot-eval-validator-executed"
-trusted_eval_validator="agent_extensions/agentxm/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
+trusted_eval_validator="agent_extensions/registry/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
 printf '#!/usr/bin/env node\nimport { writeFileSync } from "node:fs";\nwriteFileSync("%s", "executed\\n");\n' "$eval_sentinel" \
   >"$trusted_eval_fixture/$trusted_eval_validator"
 git -C "$trusted_eval_fixture" add "$trusted_eval_validator"

@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "subagent",
   "name": "researcher",
-  "version": "0.1.1",
-  "description": "Performs one fresh-context, read-only Research Brief framing or evidence-gathering phase",
+  "version": "0.2.0",
+  "description": "Executes one bounded Research Brief framing or evidence-gathering phase in a fresh, read-only delegated context for the Research skill.",
   "keywords": [
     "research",
     "delegation",
@@ -14,7 +14,6 @@
     "isolation",
     "read-only"
   ],
-  "fallback": "auto",
   "recommendedPacks": [
     "@craigsmitham/packs/research"
   ],
@@ -25,5 +24,17 @@
     "directory": "subagents/researcher"
   },
   "homepage": "https://github.com/craigsmitham/agent-extensions",
-  "license": "MIT"
+  "license": "MIT",
+  "core": {
+    "instructions": "src/researcher.md",
+    "name": "researcher"
+  },
+  "implementations": {
+    "codex": {
+      "kind": "customized",
+      "configuration": {
+        "sandbox_mode": "read-only"
+      }
+    }
+  }
 }

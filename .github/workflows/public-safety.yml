@@ -35,7 +35,7 @@ jobs:
         run: scripts/test-public-safety.sh
 
       - name: Test the installed Agent Skill evaluator
-        run: node .axm/extensions/@agentxm/skills/agent-skill-evaluator/src/scripts/test-runner.mjs
+        run: node agent_extensions/registry/@agentxm/skills/agent-skill-evaluator/src/scripts/test-runner.mjs
 
       - name: Lint the Product Docs skill profile and templates
         run: scripts/lint-product-docs.py
