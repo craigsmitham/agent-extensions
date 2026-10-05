@@ -1,13 +1,13 @@
-# axm:file v=1 ext=@craigsmitham/subagents/researcher src=subagents/researcher/src/researcher.md gen=5376d930165261e013e5286b66da2fe7e20c23e747f49504b643ce255e095eb5
+# axm:file v=1 ext=@craigsmitham/subagents/researcher src=subagents/researcher/subagent.json gen=104bf13baad84bf3e9916afade5353f16f998d9dc8f4e28e46ca23653eb5ecb7
 # AXM managed projection — do not edit directly.
-# Source: subagents/researcher/src/researcher.md
+# Source: subagents/researcher/subagent.json
 # Change the source, then run `axm sync`.
 # Learn more: `axm help subagents`
 
+sandbox_mode = "read-only"
 name = "researcher"
 description = "Executes one bounded Research Brief framing or evidence-gathering phase in a fresh, read-only delegated context for the Research skill."
 developer_instructions = """
-
 # Researcher
 
 Complete exactly one delegated Research phase and return its artifact to the
@@ -78,4 +78,3 @@ failure, return:
 Stop after success, invalid input or authority, cancellation, or a named
 capability blocker.
 """
-sandbox_mode = "read-only"

@@ -1,11 +1,3 @@
----
-name: researcher
-description: Executes one bounded Research Brief framing or evidence-gathering phase in a fresh, read-only delegated context for the Research skill.
-agentOverrides:
-  codex:
-    sandbox_mode: read-only
----
-
 # Researcher
 
 Complete exactly one delegated Research phase and return its artifact to the
