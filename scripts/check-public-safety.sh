@@ -21,7 +21,7 @@ fi
 
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
-trusted_eval_validator="$repo_root/agent_extensions/registry/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
+trusted_eval_validator="$repo_root/agent_extensions/registry.agentxm.ai/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
 
 if ! command -v axm >/dev/null 2>&1; then
   echo "AXM is required. Install the latest release from https://axm.sh." >&2
