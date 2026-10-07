@@ -3,7 +3,7 @@
   terminology or claims before publishing.
 
 
-<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery src={"scope":"project","root":".","owners":[{"name":"agent-engineering","ref":"@agentxm/knowledge/agent-engineering","root":"agent_extensions/registry/@agentxm/knowledge/agent-engineering"},{"name":"docs","ref":"@craigsmitham/knowledge/docs","root":"knowledge/docs"},{"name":"effect-v4","ref":"@craigsmitham/knowledge/effect-v4","root":"knowledge/effect-v4"},{"name":"knowledge-management","ref":"@craigsmitham/knowledge/knowledge-management","root":"knowledge/knowledge-management"},{"name":"product-engineering","ref":"@craigsmitham/knowledge/product-engineering","root":"knowledge/product-engineering"}]} gen=564394ed25f43c69b04d2d916962feea177b00ffce9add933b967c42a090dcfb -->
+<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery src={"scope":"project","root":".","owners":[{"name":"agent-engineering","ref":"@agentxm/knowledge/agent-engineering","root":"agent_extensions/registry.agentxm.ai/@agentxm/knowledge/agent-engineering"},{"name":"docs","ref":"@craigsmitham/knowledge/docs","root":"knowledge/docs"},{"name":"effect-v4","ref":"@craigsmitham/knowledge/effect-v4","root":"knowledge/effect-v4"},{"name":"knowledge-management","ref":"@craigsmitham/knowledge/knowledge-management","root":"knowledge/knowledge-management"},{"name":"product-engineering","ref":"@craigsmitham/knowledge/product-engineering","root":"knowledge/product-engineering"}]} gen=6ec9eaaef0e786c3f086138382befd5c0765d484085fb9cf416042cfebb4590b -->
 ## Knowledge Bundles
 
 Use `axm knowledge concepts --help` to search, read, and explore these bundles.
@@ -14,7 +14,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 
 | Bundle | Description |
 | --- | --- |
-| [agent-engineering](agent_extensions/registry/@agentxm/knowledge/agent-engineering/src/index.md) | End-to-end design of goal-directed AI agent systems: agent behavior, multi-agent coordination, prompts, context, harness, skills, evaluation, trust, and operations |
+| [agent-engineering](agent_extensions/registry.agentxm.ai/@agentxm/knowledge/agent-engineering/src/index.md) | End-to-end design of goal-directed AI agent systems: agent behavior, multi-agent coordination, prompts, context, harness, skills, evaluation, trust, and operations |
 
 ### @craigsmitham
 
