@@ -1,7 +1,4 @@
 
-# Generated evaluation runs
-/.work/evals/
-
 # Generated AXM local state and staging directories
 /.axm/
 *.axm-staging/

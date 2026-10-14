@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "checklist-design",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Designs, reviews, and adapts reusable checklists by matching their purpose, interaction model, evidence, validation, and lifecycle to the real work",
   "keywords": [
     "checklist",
