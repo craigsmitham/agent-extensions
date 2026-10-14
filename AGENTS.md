@@ -3,7 +3,7 @@
   terminology or claims before publishing.
 
 
-<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery src={"scope":"project","root":".","owners":[{"name":"agent-engineering","ref":"@agentxm/knowledge/agent-engineering","root":"agent_extensions/registry.agentxm.ai/@agentxm/knowledge/agent-engineering"},{"name":"docs","ref":"@craigsmitham/knowledge/docs","root":"knowledge/docs"},{"name":"effect-v4","ref":"@craigsmitham/knowledge/effect-v4","root":"knowledge/effect-v4"},{"name":"knowledge-management","ref":"@craigsmitham/knowledge/knowledge-management","root":"knowledge/knowledge-management"},{"name":"product-engineering","ref":"@craigsmitham/knowledge/product-engineering","root":"knowledge/product-engineering"}]} gen=6ec9eaaef0e786c3f086138382befd5c0765d484085fb9cf416042cfebb4590b -->
+<!-- axm:start v=1 region=knowledge ext=@agentxm/knowledge/discovery src={"scope":"project","root":".","owners":[{"name":"agent-engineering","ref":"@agentxm/knowledge/agent-engineering","root":"agent_extensions/registry.agentxm.ai/@agentxm/knowledge/agent-engineering"},{"name":"docs","ref":"@craigsmitham/knowledge/docs","root":"knowledge/docs"},{"name":"effect-v4","ref":"@craigsmitham/knowledge/effect-v4","root":"knowledge/effect-v4"},{"name":"knowledge-management","ref":"@craigsmitham/knowledge/knowledge-management","root":"knowledge/knowledge-management"},{"name":"product-engineering","ref":"@craigsmitham/knowledge/product-engineering","root":"knowledge/product-engineering"}]} gen=2cdf6741698b7a90d0a05b1c9591211643c5cdc2e0799ce8a469519b43d180a8 -->
 ## Knowledge Bundles
 
 Use `axm knowledge concepts --help` to search, read, and explore these bundles.
