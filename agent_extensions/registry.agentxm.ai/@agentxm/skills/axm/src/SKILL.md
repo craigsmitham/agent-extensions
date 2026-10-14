@@ -19,8 +19,8 @@ description: >-
   for merely using an installed extension.
 license: FSL-1.1-MIT; https://github.com/agentxm/axm/blob/main/LICENSE
 metadata:
-  axm.sh/cli-version: "0.42.0"
-  axm.sh/cli-version-range: ">=0.42.0 <0.43.0"
+  axm.sh/cli-version: "0.45.0"
+  axm.sh/cli-version-range: ">=0.45.0 <0.46.0"
 ---
 
 # AXM
@@ -129,13 +129,16 @@ there, then verify the projection from AXM state.
 
 For publication, distinguish the complete repository package, the filtered
 Registry archive, the canonical installation extracted from that archive, and
-the type-specific agent projection. `publish.ignore` controls only the Registry
-archive. Omission publishes every package-root file; an explicit empty array is
-a reviewed publish-all decision. AXM assigns no special packaging behavior to
-`evals/` or other development-oriented names—packages may intentionally ship
-them. Use `axm help publish` and inspect `axm publish --preview --json` before
-authorizing upload; unmatched patterns warn, and the filtered package must
-remain type-valid.
+the type-specific agent projection. `publish.include` and `publish.exclude`
+control only Registry distribution. Omitted include uses applicable repository
+`.gitignore` rules; explicit include bypasses them, with `[]` selecting only the
+mandatory manifest and `["**"]` selecting all permitted content. Ordered,
+case-sensitive Git-style excludes run afterward. AXM gives `evals/` and other
+development names no special treatment. Use `axm help publish` and inspect
+`axm publish --preview --json` for rule origins, selected paths, unmatched
+explicit patterns, and final integrity before authorizing upload. The filtered
+package must remain type-valid. For `publish --from`, use repeated
+`--include-file` and `--exclude-file` against original source paths.
 
 ## Subagent implementations
 
@@ -201,7 +204,19 @@ unless a live result says authentication is required. If the request contains
 a literal credential, never echo it in a response, quote, command, finding, or
 report; refer to it only as “the supplied credential.”
 
-An unowned-file collision reported by AXM blocks the affected closure. Preserve
+Validated effective MCP declarations authorize full replacement of their exact
+named native entries without an adoption or ownership approval. Hook extension declarations
+select direct runtime invocations under the exact canonical package root; never
+select by event, array index or a broad substring. Use preview to review the
+selected scope, agents, entry replacements and retained state; do not inject
+ownership metadata. Absence, renaming, departing agents and lost Pack routes
+retain native registrations and do not establish stopped execution. Explicit
+disable/uninstall selects configured-agent registrations before discarding
+intent; after intent is gone, cleanup requires exact native-file selection.
+Retained executable references block canonical package deletion. Verify selected
+agents' projection capability and actual connection or native hook invocation separately.
+
+For other artifact types, an unowned-file collision reported by AXM blocks the affected closure. Preserve
 the artifact and require explicit ownership resolution before apply; do not
 replace that supplied blocker with incidental state from a planning workspace.
 
@@ -235,7 +250,7 @@ workspace state. Diagnosis is a local read and authorizes no repair.
    Never authenticate for these. Report an offline request, unreachable source,
    or timeout as skipped, not failed.
    For a directly installed deprecated extension, report its reason and any
-   disclosed replacement. Suggest `axm migrate <fqn> --dry-run` for `obsolete`
+   disclosed replacement. Suggest `axm migrate <fqn> --preview` for `obsolete`
    or `superseded` with an available replacement; apply `axm migrate <fqn>`
    only when repair was selected. For `superseded` with an unavailable or
    concealed replacement, explain why migration cannot proceed. For

@@ -15,8 +15,8 @@ Use the job to improve the skill:
 
 - A new type, rule, or workflow step names the step of the job map it serves
   and the outcome it improves.
-- The outcomes are criteria for evaluation cases, such as whether the agent
-  recognizes, at Define, that a change to how the system works alters a
+- The outcomes are criteria for judging the skill in use, such as whether the
+  agent recognizes, at Define, that a change to how the system works alters a
   required level of quality.
 - An observed shortfall in use is attributed to the step at which it
   occurred.

@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "product-docs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Creates and maintains a product's documentation: its business direction and the specification of its system",
   "keywords": [
     "specification",

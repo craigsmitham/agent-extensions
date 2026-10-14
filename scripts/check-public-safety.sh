@@ -21,14 +21,13 @@ fi
 
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
-trusted_eval_validator="$repo_root/agent_extensions/registry.agentxm.ai/@agentxm/skills/agent-skill-evaluator/src/scripts/agent-skill-eval.mjs"
 
 if ! command -v axm >/dev/null 2>&1; then
   echo "AXM is required. Install the latest release from https://axm.sh." >&2
   exit 1
 fi
 
-for dependency in jq node rg realpath sha256sum; do
+for dependency in jq rg realpath sha256sum; do
   if ! command -v "$dependency" >/dev/null 2>&1; then
     echo "The public safety gate requires '$dependency', but it is not installed." >&2
     exit 1
@@ -105,7 +104,7 @@ if [[ "$view" == "git-index" ]]; then
   fi
   assert_index_unchanged
 
-  if ! axm lint --view git-index --strict --json >"$lint_output"; then
+  if ! axm lint --staged --strict --json >"$lint_output"; then
     cat "$lint_output"
     exit 1
   fi
@@ -125,7 +124,7 @@ else
   sync_output="$(mktemp "${TMPDIR:-/tmp}/public-safety-sync.XXXXXX")"
   trap 'rm -f -- "$sync_output"; cleanup' EXIT
   assert_sync_converged "$validation_root" "$sync_output"
-  axm lint --view workspace --strict
+  axm lint --strict
 fi
 
 authored_roots=(
@@ -178,20 +177,6 @@ if [[ "$expected_list" != "$actual_list" ]]; then
   diff <(printf '%s\n' "$expected_list") <(printf '%s\n' "$actual_list") || true
   exit 1
 fi
-
-while IFS= read -r -d '' manifest; do
-  package_root="$(dirname "$manifest")"
-  # Evaluation source is optional; validate it only when a skill provides it.
-  if [[ ! -e "$package_root/evals" ]]; then
-    continue
-  fi
-  if ! node "$trusted_eval_validator" validate \
-    --root "$validation_root" \
-    --package "${package_root#"$validation_root/"}"; then
-    echo "Agent Skill evaluation source does not conform to repository policy." >&2
-    exit 1
-  fi
-done < <(find "$validation_root/skills" -mindepth 2 -maxdepth 2 -name skill.json -print0)
 
 if rg -n --hidden \
   '(/Users/|/home/[A-Za-z0-9._-]+|~/(Code|Notes|OneDrive)|agent-extensions-private|personal-os|\.exe\.xyz|craig@)' \
