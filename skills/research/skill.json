@@ -4,9 +4,6 @@
   "type": "skill",
   "name": "research",
   "version": "3.0.5",
-  "publish": {
-    "ignore": []
-  },
   "description": "Explicit-only workflow for fresh-context, read-only evidence research; never select from unprefixed natural language",
   "keywords": [
     "research",

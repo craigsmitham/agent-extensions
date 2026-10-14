@@ -22,8 +22,5 @@
     "directory": "skills/spot-spew"
   },
   "homepage": "https://github.com/craigsmitham/agent-extensions",
-  "license": "MIT",
-  "publish": {
-    "ignore": []
-  }
+  "license": "MIT"
 }
