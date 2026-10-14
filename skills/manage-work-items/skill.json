@@ -28,8 +28,5 @@
   "standalone": false,
   "recommendedPacks": [
     "@craigsmitham/packs/work-management"
-  ],
-  "publish": {
-    "ignore": []
-  }
+  ]
 }
