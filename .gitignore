@@ -15,9 +15,6 @@ __pycache__/
 .DS_Store
 ._*
 /.claude/settings.local.json
-# axm:start v=1 region=instruction-aliases ext=@agentxm/instructions/aliases
-/CLAUDE.md
-# axm:end v=1 region=instruction-aliases
 # axm:instruction-aliases
 /CLAUDE.md
 # /axm:instruction-aliases
