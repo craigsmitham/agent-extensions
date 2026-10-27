@@ -1,4 +1,4 @@
-## Use Effect v4
+## Use Effect
 
 Use Effect v4 as the foundation for all TypeScript code, including applications
 and scripts. Each change should advance adoption by migrating relevant existing

@@ -24,7 +24,7 @@ comparisons. You can also enter through a lifecycle question below.
 | [How to maintain it](src/maintenance/) | What does caring for an existing product involve as its circumstances change? |
 
 The guidance here is technology-agnostic. Anything that churns with a specific
-language, framework, or vendor stays in its own bundle, such as `effect-v4`,
+language, framework, or vendor stays in its own bundle, such as `effect`,
 and is referenced rather than restated. Citing a tool's documentation as
 evidence for a portable claim is not a binding; teaching a reader to operate
 that tool is, and it stays out. The [overview](src/overview.md) states what

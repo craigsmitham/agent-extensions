@@ -70,7 +70,7 @@ function that merely returns `Effect.gen(...)`.
 ### 2. Specify test-harness behavior without mandating Vitest
 
 **Priority: high. Confidence: high.** The first item in
-[Testing](../knowledge/effect-v4/src/testing.md) previously required
+[Testing](../knowledge/effect/src/testing.md) previously required
 `@effect/vitest`. That is a useful default for a Vitest repository but too broad
 as portable guidance. [opencode's Bun harness](https://github.com/anomalyco/opencode/blob/432d870b02683d2e40e895ddc70d437189b25276/packages/core/test/lib/effect.ts)
 supplies scopes, layers, TestClock, TestConsole, failure reporting, and a guard
@@ -181,12 +181,12 @@ guidance rather than copying every detail of an otherwise useful example.
 
 | Recommendation | Implementation |
 | --- | --- |
-| Reusable functions and deliberate tracing | [Services and layers](../knowledge/effect-v4/src/services-and-layers.md), [Wrapping foreign APIs](../knowledge/effect-v4/src/wrapping.md) |
-| Runner-neutral harness, offline substitution, custom-harness checks | [Testing](../knowledge/effect-v4/src/testing.md) |
-| Explicit concurrency synchronization | [Testing](../knowledge/effect-v4/src/testing.md), [Async coordination](../knowledge/effect-v4/src/async-coordination.md) |
-| Service identity and flexible layer placement | [Services and layers](../knowledge/effect-v4/src/services-and-layers.md) |
-| Current recorder and qualified native Worker references | [HTTP client](../knowledge/effect-v4/src/http-client.md), [Cloudflare Workers](../knowledge/effect-v4/src/cloudflare-workers.md) |
-| Reference roles, versions, pinned evidence, and limits on importing local machinery | [Bundle maintenance](../knowledge/effect-v4/src/index.md#maintaining-this-bundle), [Pack maintenance](../packs/effect-v4/README.md#checklist-maintenance) |
+| Reusable functions and deliberate tracing | [Services and layers](../knowledge/effect/src/services-and-layers.md), [Wrapping foreign APIs](../knowledge/effect/src/wrapping.md) |
+| Runner-neutral harness, offline substitution, custom-harness checks | [Testing](../knowledge/effect/src/testing.md) |
+| Explicit concurrency synchronization | [Testing](../knowledge/effect/src/testing.md), [Async coordination](../knowledge/effect/src/async-coordination.md) |
+| Service identity and flexible layer placement | [Services and layers](../knowledge/effect/src/services-and-layers.md) |
+| Current recorder and qualified native Worker references | [HTTP client](../knowledge/effect/src/http-client.md), [Cloudflare Workers](../knowledge/effect/src/cloudflare-workers.md) |
+| Reference roles, versions, pinned evidence, and limits on importing local machinery | [Bundle maintenance](../knowledge/effect/src/index.md#maintaining-this-bundle), [Pack maintenance](../packs/effect/README.md#checklist-maintenance) |
 
 All recommendations are adopted. The checklists retain five through ten items;
 extended rationale stays in this review. Existing clock, schema, cancellation,

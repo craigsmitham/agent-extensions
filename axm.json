@@ -34,14 +34,14 @@
     "product-docs": "workspace"
   },
   "rules": {
-    "use-effect-v4": {
+    "use-effect": {
       "source": "workspace",
       "enabled": false
     }
   },
   "knowledge": {
     "docs": "workspace",
-    "effect-v4": "workspace",
+    "effect": "workspace",
     "knowledge-management": "workspace",
     "product-engineering": "workspace"
   },
@@ -49,7 +49,7 @@
     "researcher": "workspace"
   },
   "packs": {
-    "effect-v4": "workspace",
+    "effect": "workspace",
     "docs": "workspace",
     "agent-engineering": "agentxm:@agentxm/packs/agent-engineering",
     "research": "workspace",

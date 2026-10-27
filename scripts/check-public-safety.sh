@@ -143,15 +143,15 @@ find_authored_manifests() {
 
 expected=(
   knowledge/docs
-  knowledge/effect-v4
+  knowledge/effect
   knowledge/knowledge-management
   knowledge/product-engineering
   packs/docs
-  packs/effect-v4
+  packs/effect
   packs/research
   packs/software-engineering
   packs/work-management
-  rules/use-effect-v4
+  rules/use-effect
   skills/checklist-design
   skills/devops-docs
   skills/docs

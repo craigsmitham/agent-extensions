@@ -2,6 +2,15 @@
 
 ## 2026-10-27
 
+* **Identity and compatibility**: Renamed the knowledge bundle and pack from
+  `effect-v4` to `effect`, and the rule from `use-effect-v4` to `use-effect`,
+  starting all three at `4.0.0`. The major version tracks
+  Effect compatibility; minor and patch versions advance independently.
+  Added companion metadata for core Effect, platform and SQL adapters,
+  OpenTelemetry, Vitest, and the OpenAPI generator, bounded to Effect 4.x
+  and checked against the official `effect@4.0.6` package list. The reviewed
+  API baseline remains `4.0.6`; checklist content is unchanged by the rename.
+
 * **Retarget**: Reviewed the release delta from Effect `4.0.0` through
   `4.0.6` and refreshed the twenty-four checklists' official source pins.
   Confirmed that all 73 distinct current source, guide, and test paths exist

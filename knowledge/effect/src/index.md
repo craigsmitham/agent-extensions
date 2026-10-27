@@ -2,11 +2,18 @@
 okf_version: "0.2"
 ---
 
-# Effect v4 checklists
+# Effect
 
 Concise evaluation checklists for designing, implementing, maintaining, and
 reviewing Effect v4 TypeScript. Each topic contains five to ten independently
 judgeable checks plus links to the primary sources used to author it.
+
+The `effect` bundle starts its renamed release line at `4.0.0`. Its major
+version tracks the supported Effect major; bundle minor and patch versions
+advance independently from upstream releases. Companion package metadata is
+bounded to `>=4.0.0 <5.0.0` and covers official packages relevant to these
+topics. Select adapters for the application's runtime and database; these
+recommendations do not install npm dependencies.
 
 This bundle was last reviewed and updated against **Effect 4.0.6**.
 Within Effect major version 4, use the checklists as the

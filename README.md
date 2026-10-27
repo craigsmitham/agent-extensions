@@ -12,7 +12,7 @@ and are not published from this repository.
 
 | Pack | Purpose | Install |
 | --- | --- | --- |
-| `effect-v4` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect-v4` |
+| `effect` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect` |
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
 | `software-engineering` | Evidence-backed codebase review and coherent repository execution-surface craft, sourced from the `product-engineering` bundle | `axm install @craigsmitham/packs/software-engineering` |
