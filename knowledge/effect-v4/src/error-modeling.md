@@ -6,12 +6,15 @@ tags: [effect, effect-v4, errors, cause, defects, interruption, retry]
 status: stable
 sources:
   - id: effect-errors
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/01_effect/04_errors/01_error-handling.ts
-    title: Effect 4.0.0 error handling basics
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/04_errors/01_error-handling.ts
+    title: Effect 4.0.6 error handling basics
   - id: effect-cause
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Cause.ts
-    title: Effect 4.0.0 Cause source
-generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Cause.ts
+    title: Effect 4.0.6 Cause source
+  - id: effect-mixed-causes
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/Effect.test.ts
+    title: Effect 4.0.6 mixed-cause recovery tests
+generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 ---
 
 # Error modeling
@@ -33,8 +36,14 @@ generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
   channel.
 - [ ] Test expected failure, defect, and interruption behavior separately,
   including which failures are recovered, retried, or allowed to propagate.
+- [ ] Test mixed causes too: typed recovery skips causes containing defects,
+  while a typed failure plus interruption can still enter recovery. Check
+  whether recovery or retry discards interruption and whether finalizer defects
+  remain observable.[^effect-mixed-causes]
 
 ## Resources
 
-- [Error handling basics](https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/01_effect/04_errors/01_error-handling.ts)
-- [Cause source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Cause.ts)
+- [Error handling basics](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/04_errors/01_error-handling.ts)
+- [Cause source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Cause.ts)
+
+[^effect-mixed-causes]: [Effect mixed-cause recovery tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/Effect.test.ts).

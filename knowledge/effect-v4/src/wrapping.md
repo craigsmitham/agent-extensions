@@ -6,18 +6,26 @@ tags: [effect, effect-v4, promise, callback, interop, cancellation, adapter]
 status: stable
 sources:
   - id: effect-source
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Effect.ts
-    title: Effect 4.0.0 Effect source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Effect.ts
+    title: Effect 4.0.6 Effect source
   - id: applied-opencode
     resource: https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/ingest.ts
     title: opencode foreign SDK wrapping at dc4449d
-generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
+  - id: effect-functions
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts
+    title: Effect 4.0.6 reusable generator functions
+generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
 ---
 
 # Wrapping foreign APIs
 
 - [ ] Match the wrapper to the foreign operation: pure success, throwing
   synchronous code, Promise, or callback registration.
+- [ ] Build reusable generator wrappers with named `Effect.fn` at meaningful
+  tracing boundaries or `Effect.fnUntraced` otherwise; pass post-processing
+  combinators to the constructor. Keep pure helpers and concise combinator
+  functions as ordinary functions, and one-off programs as Effect
+  values.[^effect-functions]
 - [ ] Convert thrown values, Promise rejections, and callback errors into one
   adapter-owned error type at the boundary.
 - [ ] The wrapper's interruption behavior states whether it cancels underlying
@@ -35,5 +43,7 @@ generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
 
 ## Resources
 
-- [Effect interop constructors](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Effect.ts)
+- [Effect interop constructors](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Effect.ts)
 - [Applied SDK wrapper in opencode](https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/ingest.ts)
+
+[^effect-functions]: [Effect 4.0.6 reusable generator functions](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts).

@@ -6,30 +6,34 @@ tags: [effect, effect-v4, sql, transaction, schema, repository, database]
 status: stable
 sources:
   - id: effect-sql
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/40_sql/10_basics.ts
-    title: Effect 4.0.0 SQL basics
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/40_sql/10_basics.ts
+    title: Effect 4.0.6 SQL basics
   - id: effect-sql-client
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/sql/SqlClient.ts
-    title: Effect 4.0.0 SqlClient source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/sql/SqlClient.ts
+    title: Effect 4.0.6 SqlClient source
   - id: effect-sql-error
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/sql/SqlError.ts
-    title: Effect 4.0.0 SqlError source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/sql/SqlError.ts
+    title: Effect 4.0.6 SqlError source
   - id: effect-pg-client
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/sql/pg/src/PgClient.ts
-    title: Effect 4.0.0 native PostgreSQL client
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/sql/pg/src/PgClient.ts
+    title: Effect 4.0.6 native PostgreSQL client
   - id: effect-pg-types
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/sql/pg/src/PgTypes.ts
-    title: Effect 4.0.0 PostgreSQL binary codecs
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/sql/pg/src/PgTypes.ts
+    title: Effect 4.0.6 PostgreSQL binary codecs
   - id: effect-sqlite-do-client
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/sql/sqlite-do/src/SqliteClient.ts
-    title: Effect 4.0.0 Durable Object SQLite client
-generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/sql/sqlite-do/src/SqliteClient.ts
+    title: Effect 4.0.6 Durable Object SQLite client
+  - id: effect-sql-tests
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/sql/SqlClient.test.ts
+    title: Effect 4.0.6 post-commit regression tests
+generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 ---
 
 # SQL
 
 - [ ] Provide the dialect-specific client layer at the infrastructure edge and
-  expose database behavior through repositories or domain services.
+  configure prepared statements for the deployed pooler; expose database
+  behavior through repositories or domain services.[^effect-pg-client]
 - [ ] Use parameterized statement construction; never concatenate untrusted
   values into SQL text.
 - [ ] Decode selected rows and encode statement inputs with schemas matching
@@ -45,20 +49,26 @@ generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
   failures, around the complete repeat-safe transaction, with a bound.
 - [ ] Keep credentials and sensitive parameters out of telemetry; control
   whether raw query text is recorded in spans or diagnostics.
-- [ ] Match prepared-statement settings to the deployed connection pooler's
-  capabilities when the driver caches named statements.[^effect-pg-client]
+- [ ] Defer commit-dependent notifications with `SqlClient.afterCommit` only
+  where the dialect supports it; `sqlite-do` runs callbacks immediately.
+  Persist delivery-critical work in the transaction because callbacks can be
+  lost on process exit or an unknown commit outcome.[^effect-sql-client]
 - [ ] Run integration tests against the supported dialect for constraints,
-  transactions, concurrency, schema decoding, and retry behavior.
+  transactions, concurrency, schema decoding, retries, and post-commit behavior
+  under nested rollback and commit failure.[^effect-sql-tests]
 
 ## Resources
 
-- [SQL basics](https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/40_sql/10_basics.ts)
-- [SqlClient source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/sql/SqlClient.ts)
-- [SqlError source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/sql/SqlError.ts)
-- [Native PostgreSQL client and pool configuration](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/sql/pg/src/PgClient.ts)
-- [Durable Object SQLite transactions](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/sql/sqlite-do/src/SqliteClient.ts)
-- [PostgreSQL parameter and result codecs](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/sql/pg/src/PgTypes.ts)
+- [SQL basics](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/40_sql/10_basics.ts)
+- [SqlClient source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/sql/SqlClient.ts)
+- [SqlError source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/sql/SqlError.ts)
+- [Native PostgreSQL client and pool configuration](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/sql/pg/src/PgClient.ts)
+- [Durable Object SQLite transactions](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/sql/sqlite-do/src/SqliteClient.ts)
+- [PostgreSQL parameter and result codecs](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/sql/pg/src/PgTypes.ts)
 
 [^effect-pg-types]: Effect PostgreSQL binary codecs.
 [^effect-pg-client]: Effect native PostgreSQL client.
 [^effect-sqlite-do-client]: Effect Durable Object SQLite client.
+[^effect-sql-client]: Effect SqlClient post-commit callback contract and limitations.
+
+[^effect-sql-tests]: [Effect post-commit regression tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/sql/SqlClient.test.ts).

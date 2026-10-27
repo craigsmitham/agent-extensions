@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Effect v4 guidance: a rule requiring v4 conventions and a standalone knowledge bundle of concise evaluation checklists",
   "keywords": [
     "effect",

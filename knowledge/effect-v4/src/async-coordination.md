@@ -6,15 +6,18 @@ tags: [effect, effect-v4, deferred, queue, pubsub, ref, semaphore, stm]
 status: stable
 sources:
   - id: effect-deferred
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Deferred.ts
-    title: Effect 4.0.0 Deferred source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Deferred.ts
+    title: Effect 4.0.6 Deferred source
   - id: effect-queue
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Queue.ts
-    title: Effect 4.0.0 Queue source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Queue.ts
+    title: Effect 4.0.6 Queue source
   - id: effect-semaphore
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Semaphore.ts
-    title: Effect 4.0.0 Semaphore source
-generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Semaphore.ts
+    title: Effect 4.0.6 Semaphore source
+  - id: applied-opencode-coordination
+    resource: https://github.com/anomalyco/opencode/blob/432d870b02683d2e40e895ddc70d437189b25276/packages/core/test/effect/keyed-mutex.test.ts
+    title: opencode keyed mutex synchronization tests at 432d870 (Effect 4.0.1)
+generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
 ---
 
 # Async coordination
@@ -36,11 +39,15 @@ generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
 - [ ] Avoid using mutable flags plus polling where a signal, stream of changes,
   or blocking coordination primitive expresses the event directly.
 - [ ] Test contention, interruption while waiting, capacity pressure, shutdown,
-  and the atomic invariants the primitive is meant to protect.
+  and atomic invariants using explicit readiness/release signals; verify
+  same-key exclusion, distinct-key progress, and cleanup where applicable
+  without guessing timing.[^applied-opencode-coordination]
 
 ## Resources
 
-- [Deferred source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Deferred.ts)
-- [Queue source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Queue.ts)
-- [Semaphore source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Semaphore.ts)
-- [Transactional modules](https://github.com/Effect-TS/effect/tree/effect%404.0.0/packages/effect/src)
+- [Deferred source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Deferred.ts)
+- [Queue source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Queue.ts)
+- [Semaphore source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Semaphore.ts)
+- [Transactional modules](https://github.com/Effect-TS/effect/tree/effect%404.0.6/packages/effect/src)
+
+[^applied-opencode-coordination]: [opencode keyed mutex synchronization tests at 432d870 (Effect 4.0.1)](https://github.com/anomalyco/opencode/blob/432d870b02683d2e40e895ddc70d437189b25276/packages/core/test/effect/keyed-mutex.test.ts).

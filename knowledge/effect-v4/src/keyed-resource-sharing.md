@@ -6,18 +6,21 @@ tags: [effect, effect-v4, rcmap, layermap, pool, keyed-resource, scope]
 status: stable
 sources:
   - id: effect-rcmap
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/RcMap.ts
-    title: Effect 4.0.0 RcMap source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/RcMap.ts
+    title: Effect 4.0.6 RcMap source
   - id: effect-layermap
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/01_effect/05_resources/30_layer-map.ts
-    title: Effect 4.0.0 LayerMap guide
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/05_resources/30_layer-map.ts
+    title: Effect 4.0.6 LayerMap guide
   - id: effect-pool
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Pool.ts
-    title: Effect 4.0.0 Pool source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Pool.ts
+    title: Effect 4.0.6 Pool source
   - id: effect-layermap-preload
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/LayerMap.ts#L156-L198
-    title: Effect 4.0.0 LayerMap preloading
-generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/LayerMap.ts
+    title: Effect 4.0.6 LayerMap preloading
+  - id: effect-rcmap-tests
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/RcMap.test.ts
+    title: Effect 4.0.6 keyed resource lifetime tests
+generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 ---
 
 # Keyed resource sharing
@@ -38,13 +41,17 @@ generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
 - [ ] Do not expose an underlying client beyond the borrow scope or close it
   directly while other borrowers may still hold it.
 - [ ] Test concurrent same-key acquisition, different keys, last-borrower
-  release, acquisition failure, expiry, eviction, and close races.
+  release, acquisition failure, expiry, eviction, and close races; distinguish
+  one cancelled waiter from all waiters abandoning acquisition, including a
+  fresh acquisition while abandoned cleanup finishes.[^effect-rcmap-tests]
 
 ## Resources
 
-- [RcMap source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/RcMap.ts)
-- [LayerMap guide](https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/01_effect/05_resources/30_layer-map.ts)
-- [Pool source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Pool.ts)
-- [LayerMap preloading](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/LayerMap.ts#L156-L198)
+- [RcMap source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/RcMap.ts)
+- [LayerMap guide](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/05_resources/30_layer-map.ts)
+- [Pool source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Pool.ts)
+- [LayerMap preloading](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/LayerMap.ts)
 
 [^effect-layermap-preload]: Effect LayerMap preloading.
+
+[^effect-rcmap-tests]: [Effect keyed resource lifetime tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/RcMap.test.ts).

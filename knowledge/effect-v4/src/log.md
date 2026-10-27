@@ -1,5 +1,61 @@
 # Directory Update Log
 
+## 2026-10-27
+
+* **Retarget**: Reviewed the release delta from Effect `4.0.0` through
+  `4.0.6` and refreshed the twenty-four checklists' official source pins.
+  Confirmed that all 73 distinct current source, guide, and test paths exist
+  in the `effect@4.0.6` release. Removed old line locators rather than carrying
+  them onto changed files. Kept the historical rc.113 parsing reference;
+  selective applied-example changes are recorded below.
+* **HTTP API**: Added explicit trusted-proxy policy and spoofed-chain checks.
+  Extended streaming coverage to request payloads, bounded total and element
+  sizes, cancellation, and the 400/413 distinction. Reviewed middleware and
+  streaming upload regression tests.
+* **HTTP client**: Added `Retry-After`, manual fetch redirects when using
+  `HttpClient.followRedirects`, and replacement semantics for custom query
+  redaction names.
+* **Filesystem**: Distinguished lexical containment via `Path.resolveWithin`
+  from symlink containment. Covered `lstat`, the final-component and platform
+  limits of `noFollow`, and lossless handling of bigint file metadata.
+* **SQL**: Added commit-dependent side effects and nested rollback/failed
+  commit checks. `SqlClient.afterCommit` does not guarantee durable delivery;
+  the `sqlite-do` implementation runs callbacks immediately. Reviewed the
+  contract and post-commit regression tests.
+* **Cancellation and errors**: Added shared-lookup abandonment, invalidation
+  during computation, and new acquisition during abandoned cleanup. Added
+  mixed-cause recovery checks: defects prevent typed recovery, but an
+  accompanying interruption alone does not. Reviewed cache, keyed resource,
+  and mixed-cause tests.
+* **Date and time**: Distinguished sub-day elapsed arithmetic from calendar
+  arithmetic across DST and linked the gap/repeated-hour regression tests.
+* **Observability**: Added upgrade checks for downstream telemetry consumers
+  affected by signal names, attributes, metric shapes, and interruption status.
+* **Version policy**: The index now includes experimental APIs, which can
+  change in patch releases. Corrected the pack README's stale rc.112 baseline.
+* **Conventions adopted**: Applied the reference review's recommendations:
+  `Effect.fn` / `fnUntraced` for reusable generator functions, runner-neutral
+  test-harness guarantees, explicit readiness/release signals in concurrency
+  tests, and package/path-qualified service identifiers. Kept layer placement
+  flexible and public requirements inspectable; added offline substitution and
+  custom-harness verification expectations.
+* **Reference selection**: Recorded role/version/commit selection policy and
+  retained public Effect APIs as the baseline. Replaced the historical beta.83
+  HTTP recorder citation with opencode's reviewed client decorator at
+  `432d870` (Effect catalog 4.0.1). Repointed and explicitly labeled Alchemy's
+  native async Worker boundary at `59fd117`. Other historical applied-example
+  pins remain unchanged. The pack now distinguishes current, historical,
+  demo, platform-native, and project-specific references.
+* **Not adopted**: Most stream, finalizer, queue, schema, and runtime fixes
+  strengthen existing checks. New AI, event-log, workflow, GraphQL, networking,
+  CLI, archive, and diff APIs do not justify expanding this bundle's topics.
+* **Evidence ceiling**: This is a source-reviewed candidate refresh, using
+  release contracts, selected regression tests, and current reference-repository
+  samples. No upstream test suite or reference application was executed, and
+  no field validation is claimed. The separately recorded convention review's
+  recommendations were adopted after explicit user approval; adoption does
+  not establish runtime or field effectiveness.
+
 ## 2026-10-01
 
 * **Retarget**: Reviewed the twenty-four checklists against the changes from

@@ -6,15 +6,15 @@ tags: [effect, effect-v4, foreach, all, schedule, retry, traversal]
 status: stable
 sources:
   - id: effect-source
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Effect.ts
-    title: Effect 4.0.0 traversal and repetition source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Effect.ts
+    title: Effect 4.0.6 traversal and repetition source
   - id: effect-schedule
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Schedule.ts
-    title: Effect 4.0.0 Schedule source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Schedule.ts
+    title: Effect 4.0.6 Schedule source
   - id: effect-repeat-return
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Effect.ts#L7507-L7520
-    title: Effect 4.0.0 Effect.repeat result type
-generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Effect.ts
+    title: Effect 4.0.6 Effect.repeat result type
+generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 ---
 
 # Iteration
@@ -41,8 +41,8 @@ generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
 
 ## Resources
 
-- [Effect traversal and repetition source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Effect.ts)
-- [Schedule source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Schedule.ts)
-- [Effect.repeat result type](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/Effect.ts#L7507-L7520)
+- [Effect traversal and repetition source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Effect.ts)
+- [Schedule source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Schedule.ts)
+- [Effect.repeat result type](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Effect.ts)
 
 [^effect-repeat-return]: Effect.repeat result type.

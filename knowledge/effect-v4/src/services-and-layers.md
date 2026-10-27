@@ -6,27 +6,38 @@ tags: [effect, effect-v4, context, service, layer, dependency-injection]
 status: stable
 sources:
   - id: effect-services
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/01_effect/03_services/01_service.ts
-    title: Effect 4.0.0 service basics
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/01_service.ts
+    title: Effect 4.0.6 service basics
   - id: effect-layers
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/01_effect/03_services/20_layer-composition.ts
-    title: Effect 4.0.0 layer composition
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/20_layer-composition.ts
+    title: Effect 4.0.6 layer composition
   - id: applied-opencode
     resource: https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/server.ts
     title: opencode application layer composition at dc4449d
-generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
+  - id: effect-functions
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts
+    title: Effect 4.0.6 reusable generator functions
+generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
 ---
 
 # Services and layers
 
-- [ ] Define one coherent capability per service tag with the smallest interface
-  callers need, rather than exposing a concrete client or global singleton.
+- [ ] Define one coherent capability per `Context.Service` with a stable,
+  package/path-qualified identifier and the smallest public interface callers
+  need, rather than exposing a concrete adapter.[^effect-services]
 - [ ] Make each method's success, expected error, and service requirements
   truthful in its Effect type.
 - [ ] Keep implementation construction, configuration, resource acquisition,
-  and dependencies in a layer instead of hiding them in service methods.
+  and dependencies in a layer instead of hiding them in service methods;
+  follow local placement conventions for static members, exported layers, or
+  dependency-open factories.[^effect-layers]
+- [ ] Use `Effect.fn("Operation.name")` for reusable generator functions at
+  meaningful tracing boundaries and `Effect.fnUntraced` when no span is needed;
+  keep pure helpers ordinary functions and one-off programs as Effect
+  values.[^effect-functions]
 - [ ] Compose layers so requirements are satisfied once and the exposed output
-  contains only the services downstream code should depend on.
+  contains only services downstream code needs; keep public layer inputs,
+  outputs, and construction failures inspectable.[^effect-layers]
 - [ ] Process, request, and short-lived resources are built in the scope that
   owns their actual lifetime.
 - [ ] Provide production layers at an application boundary rather than
@@ -38,6 +49,11 @@ generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
 
 ## Resources
 
-- [Service basics](https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/01_effect/03_services/01_service.ts)
-- [Layer composition](https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/01_effect/03_services/20_layer-composition.ts)
+- [Service basics](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/01_service.ts)
+- [Layer composition](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/20_layer-composition.ts)
 - [Applied layer graph in opencode](https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/server.ts)
+
+[^effect-services]: Effect service interfaces and namespaced identifiers.
+[^effect-layers]: Effect layer composition and public requirements.
+
+[^effect-functions]: [Effect 4.0.6 reusable generator functions](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts).

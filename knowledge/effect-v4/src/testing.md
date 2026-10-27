@@ -6,31 +6,45 @@ tags: [effect, effect-v4, testing, vitest, testclock, layers, determinism]
 status: stable
 sources:
   - id: effect-tests
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/09_testing/10_effect-tests.ts
-    title: Effect 4.0.0 Effect tests
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/09_testing/10_effect-tests.ts
+    title: Effect 4.0.6 Effect tests
   - id: effect-layer-tests
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/09_testing/20_layer-tests.ts
-    title: Effect 4.0.0 layer tests
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/09_testing/20_layer-tests.ts
+    title: Effect 4.0.6 layer tests
   - id: effect-testclock
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/testing/TestClock.ts
-    title: Effect 4.0.0 TestClock source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/testing/TestClock.ts
+    title: Effect 4.0.6 TestClock source
   - id: effect-arbitrary
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/ARBITRARY.md
-    title: Effect 4.0.0 native Arbitrary guide
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/ARBITRARY.md
+    title: Effect 4.0.6 native Arbitrary guide
   - id: effect-arbitrary-migration
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/migration/schema.md#migrating-from-the-fast-check-bridge-to-native-arbitrary
-    title: Effect 4.0.0 native Arbitrary migration
-generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/migration/schema.md#migrating-from-the-fast-check-bridge-to-native-arbitrary
+    title: Effect 4.0.6 native Arbitrary migration
+  - id: applied-opencode-harness
+    resource: https://github.com/anomalyco/opencode/blob/432d870b02683d2e40e895ddc70d437189b25276/packages/core/test/lib/effect.ts
+    title: opencode Bun test harness at 432d870 (Effect 4.0.1)
+  - id: applied-opencode-coordination
+    resource: https://github.com/anomalyco/opencode/blob/432d870b02683d2e40e895ddc70d437189b25276/packages/core/test/effect/keyed-mutex.test.ts
+    title: opencode keyed mutex synchronization tests at 432d870 (Effect 4.0.1)
+generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
 ---
 
 # Testing
 
-- [ ] Run Effect assertions with `@effect/vitest` Effect-aware test functions
-  so typed failures, interruption, and test services are handled correctly.
+- [ ] Use a harness that reports failed exits, owns test scopes and fibers,
+  and supplies controlled services; prefer `@effect/vitest` in Vitest
+  repositories. Verify a custom harness's failure, interruption, finalization,
+  and clock behavior.[^effect-tests][^applied-opencode-harness]
 - [ ] Substitute dependencies through the same service tags used in production
-  rather than mocking private functions or module internals.
+  rather than mocking private functions or module internals; explicitly replace
+  network adapters when network access is outside the test contract and fail
+  unexpected access through the transports used.[^applied-opencode-harness]
 - [ ] Control time with `TestClock` for sleeps, retries, schedules, and
   deadlines; use live time only when the test explicitly requires it.
+- [ ] Establish worker readiness and release points with explicit signals;
+  assert observable outcomes after joining or interrupting workers instead of
+  guessing readiness with sleeps or depending on scheduler
+  order.[^applied-opencode-coordination]
 - [ ] Make nondeterministic failures reproducible through controlled inputs or
   captured seeds and replay tokens; retain important failing inputs as explicit
   regression cases across generator upgrades.[^effect-arbitrary-migration]
@@ -47,12 +61,17 @@ generated: { by: claude/opus-5.5, at: 2026-10-01T19:24:06Z }
 
 ## Resources
 
-- [Effect tests](https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/09_testing/10_effect-tests.ts)
-- [Layer tests](https://github.com/Effect-TS/effect/blob/effect%404.0.0/ai-docs/src/09_testing/20_layer-tests.ts)
-- [TestClock source](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/testing/TestClock.ts)
-- [Native property testing](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/ARBITRARY.md)
-- [Migration from the fast-check bridge](https://github.com/Effect-TS/effect/blob/effect%404.0.0/migration/schema.md#migrating-from-the-fast-check-bridge-to-native-arbitrary)
-- [Schema test helpers](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/src/testing/TestSchema.ts)
+- [Effect tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/09_testing/10_effect-tests.ts)
+- [Layer tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/09_testing/20_layer-tests.ts)
+- [TestClock source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/testing/TestClock.ts)
+- [Native property testing](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/ARBITRARY.md)
+- [Migration from the fast-check bridge](https://github.com/Effect-TS/effect/blob/effect%404.0.6/migration/schema.md#migrating-from-the-fast-check-bridge-to-native-arbitrary)
+- [Schema test helpers](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/testing/TestSchema.ts)
 
 [^effect-arbitrary-migration]: Effect native Arbitrary migration.
 [^effect-arbitrary]: Effect native property testing guide.
+[^effect-tests]: Effect-aware tests and test services.
+
+[^applied-opencode-harness]: [opencode Bun test harness at 432d870 (Effect 4.0.1)](https://github.com/anomalyco/opencode/blob/432d870b02683d2e40e895ddc70d437189b25276/packages/core/test/lib/effect.ts).
+
+[^applied-opencode-coordination]: [opencode keyed mutex synchronization tests at 432d870 (Effect 4.0.1)](https://github.com/anomalyco/opencode/blob/432d870b02683d2e40e895ddc70d437189b25276/packages/core/test/effect/keyed-mutex.test.ts).

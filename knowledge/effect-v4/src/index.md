@@ -8,11 +8,13 @@ Concise evaluation checklists for designing, implementing, maintaining, and
 reviewing Effect v4 TypeScript. Each topic contains five to ten independently
 judgeable checks plus links to the primary sources used to author it.
 
-This bundle was last reviewed and updated against **Effect 4.0.0**, the first
-stable v4 release. Within Effect major version 4, use the checklists as the
+This bundle was last reviewed and updated against **Effect 4.0.6**.
+Within Effect major version 4, use the checklists as the
 stable design baseline and consult the linked sources when an API has changed
 or is tagged `@stability unstable`, which permits breaking changes in minor
-releases. Effect v3 APIs and conventions are out of scope.
+releases. APIs tagged `@stability experimental` can change in patch releases.
+Check the installed release and its migration notes before adopting newer
+examples. Effect v3 APIs and conventions are out of scope.
 
 The primary mode is `reporting-review`: use a topic to expose omissions and
 make a design or implementation inspectable. During implementation it can also
@@ -113,6 +115,14 @@ the topic. Keep each checklist between five and ten independently judgeable
 items. Put API detail, examples, and further explanation in linked resources
 rather than expanding the checklist into a guide. Record baseline changes and
 material corrections in the [update log](log.md).
+
+For each applied reference, record its role, declared Effect version, and
+reviewed commit. Prefer small excerpts with relevant tests and check the exact
+behavior before replacing a source pin. Treat demos, platform-native examples,
+and historical code as such; they do not override released contracts or the
+bundle's clock, schema, cancellation, and observability requirements. Use public
+Effect APIs as the baseline; project-specific facades or layer graphs need a
+concrete repeated need before becoming general guidance.
 
 These checklists are **source-reviewed candidates, not field-validated
 controls**. The package owner named in `knowledge.json` owns revisions. The
