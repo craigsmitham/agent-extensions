@@ -11,14 +11,20 @@ judgeable checks plus links to the primary sources used to author it.
 The `effect` bundle starts its renamed release line at `4.0.0`. Its major
 version tracks the supported Effect major; bundle minor and patch versions
 advance independently from upstream releases. Companion package metadata is
-bounded to `>=4.0.0 <5.0.0` and covers official packages relevant to these
+bounded to `>=4.0.6 <5.0.0` and covers official packages relevant to these
 topics. Select adapters for the application's runtime and database; these
 recommendations do not install npm dependencies.
 
-This bundle was last reviewed and updated against **Effect 4.0.6**.
-Within Effect major version 4, use the checklists as the
-stable design baseline and consult the linked sources when an API has changed
-or is tagged `@stability unstable`, which permits breaking changes in minor
+This bundle requires **Effect 4.0.6 or newer within major version 4** and was
+last reviewed against **4.0.6**. Earlier 4.x releases lack APIs and behavior
+used by these checklists, including `SqlClient.afterCommit`, `FileSystem.lstat`,
+and defect-preserving typed recovery of mixed causes. The companion metadata
+uses the same minimum because the official packages release together and their
+4.0.6 releases require core `^4.0.6`; it does not establish every adapter's
+runtime suitability or validate future releases.
+
+Use the checklists as a design baseline and consult the linked sources when an
+API has changed or is tagged `@stability unstable`, which permits breaking changes in minor
 releases. APIs tagged `@stability experimental` can change in patch releases.
 Check the installed release and its migration notes before adopting newer
 examples. Effect v3 APIs and conventions are out of scope.

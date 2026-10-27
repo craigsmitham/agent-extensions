@@ -13,8 +13,11 @@ sources:
     title: Effect 4.0.6 ConfigProvider source
   - id: applied-opencode
     resource: https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/server.ts
-    title: opencode typed server config at dc4449d
-generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
+    title: Historical opencode typed config at dc4449d (Effect 4.0.0-beta.83)
+  - id: applied-opencode-version
+    resource: https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/package.json
+    title: opencode Effect beta.83 catalog at dc4449d
+generated: { by: codex/gpt-6, at: 2026-10-27T19:32:03Z }
 ---
 
 # Config
@@ -40,5 +43,10 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 
 - [Config source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Config.ts)
 - [ConfigProvider source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/ConfigProvider.ts)
-- [Applied typed config in opencode](https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/server.ts)
+- [Historical typed config in opencode (Effect beta.83)](https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/server.ts) —
+  conceptual configuration evidence only. Its `Config.number`, `Config.string`,
+  and `effect/unstable/http` import predate released v4; use the current Config
+  sources above for APIs.[^applied-opencode-version]
 - [Byte-size parsing](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/ByteSize.ts)
+
+[^applied-opencode-version]: opencode Effect beta.83 catalog at dc4449d.

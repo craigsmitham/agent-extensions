@@ -10,14 +10,20 @@ sources:
     title: Effect 4.0.6 service basics
   - id: effect-layers
     resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/20_layer-composition.ts
-    title: Effect 4.0.6 layer composition
+    title: Effect 4.0.6 layer composition (SQL example requires correction)
   - id: applied-opencode
     resource: https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/server.ts
-    title: opencode application layer composition at dc4449d
+    title: Historical opencode layer composition at dc4449d (Effect 4.0.0-beta.83)
+  - id: applied-opencode-version
+    resource: https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/package.json
+    title: opencode Effect beta.83 catalog at dc4449d
+  - id: effect-sql-statements
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/sql/Statement.ts
+    title: Effect 4.0.6 SQL parameter compilation
   - id: effect-functions
     resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts
     title: Effect 4.0.6 reusable generator functions
-generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
+generated: { by: codex/gpt-6, at: 2026-10-27T19:32:03Z }
 ---
 
 # Services and layers
@@ -50,10 +56,20 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
 ## Resources
 
 - [Service basics](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/01_service.ts)
-- [Layer composition](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/20_layer-composition.ts)
-- [Applied layer graph in opencode](https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/server.ts)
+- [Layer composition (composition example only)](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/20_layer-composition.ts) —
+  its `findById` SQL incorrectly quotes `${id}`. Remove those SQL quotes:
+  the tagged template supplies a placeholder and bind value, and quoting the
+  placeholder makes it a string literal.[^effect-sql-statements] Decode selected
+  rows as described in [SQL](sql.md); the sample's generic row type does not
+  validate them.
+- [Historical layer graph in opencode (Effect beta.83)](https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/server.ts) —
+  conceptual composition evidence only. Its `Config.number`, `Config.string`,
+  and `effect/unstable/http` import predate released v4.[^applied-opencode-version]
 
 [^effect-services]: Effect service interfaces and namespaced identifiers.
 [^effect-layers]: Effect layer composition and public requirements.
 
 [^effect-functions]: [Effect 4.0.6 reusable generator functions](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts).
+
+[^applied-opencode-version]: opencode Effect beta.83 catalog at dc4449d.
+[^effect-sql-statements]: Effect SQL parameter compilation.

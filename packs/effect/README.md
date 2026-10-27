@@ -8,15 +8,21 @@ both member dependencies within the 4.x line.
 
 This pack installs two members:
 
-- `@craigsmitham/rules/use-effect` — directs agents working with Effect to
-  use Effect v4 APIs and conventions rather than carrying v3 patterns forward.
+- `@craigsmitham/rules/use-effect` — requires Effect v4 as the foundation for
+  all TypeScript, including scripts, and incremental migration of relevant
+  existing code with each change. By default, installing this pack activates
+  that adoption policy throughout the rule's workspace scope.
 - `@craigsmitham/knowledge/effect` — a standalone OKF 0.2 bundle of
   twenty-four concise checklists for design, implementation, maintenance, and
   review.
 
-The checklists were last reviewed and updated against **Effect 4.0.6**. See the
-[bundle
-index](https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/effect/src/index.md)
+For checklists without the adoption rule, install the standalone bundle with
+`axm knowledge install @craigsmitham/knowledge/effect` instead of the pack.
+
+The checklists require **Effect 4.0.6 or newer within major version 4** and were
+last reviewed against **4.0.6**. Pack `4.0.1` requires knowledge bundle `4.0.1`
+or newer; the unchanged adoption rule remains compatible with Effect 4.0.0.
+See the [bundle index](https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/effect/src/index.md)
 for the complete topic list and the major-version policy.
 
 The former `@craigsmitham/skills/craft-effect-v4` routing skill is not part of
@@ -40,10 +46,13 @@ the twenty-four checklists.
 ## Companion packages
 
 The pack and knowledge manifests recommend these official packages with the
-compatibility range `>=4.0.0 <5.0.0`, using AXM's `packages` metadata. These
+compatibility range `>=4.0.6 <5.0.0`, using AXM's `packages` metadata. These
 recommendations do not install npm dependencies. Choose only the adapters and
 tools needed by the application, and keep their versions aligned with core
 Effect as described in the [official package list](https://github.com/Effect-TS/effect/blob/effect%404.0.6/README.md#packages).
+The common minimum reflects that synchronized release family: each recommended
+companion's 4.0.6 npm release requires core `^4.0.6`. It is not a claim that
+every adapter runs on every platform or that future releases have been tested.
 
 | Use | Packages |
 | --- | --- |

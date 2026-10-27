@@ -17,7 +17,13 @@ sources:
   - id: effect-cache-tests
     resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/Cache.test.ts
     title: Effect 4.0.6 shared lookup cancellation tests
-generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
+  - id: effect-scoped-cache
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/ScopedCache.ts
+    title: Effect 4.0.6 cache-owned resource lifetime
+  - id: effect-scoped-cache-tests
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/ScopedCache.test.ts
+    title: Effect 4.0.6 resource cleanup on cache eviction
+generated: { by: codex/gpt-6, at: 2026-10-27T19:31:53Z }
 ---
 
 # Request batching and cache
@@ -36,11 +42,14 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 - [ ] Give invalidation, refresh, and source-of-truth changes an explicit owner.
 - [ ] Ensure a `RequestResolver` completes every request in each batch,
   including missing and failed entries, and honors backend batch limits.
-- [ ] Use `ScopedCache` only when the cached value itself owns a resource;
-  ordinary value caches must not hide live handles.
+- [ ] Use `Cache` for ordinary values and `ScopedCache` for cache-owned resources
+  whose callers tolerate cache-controlled finalization: eviction, refresh, or
+  invalidation can close a resource while a caller still holds it. Use
+  [scoped `RcMap` or `LayerMap` borrowing](keyed-resource-sharing.md) when active
+  use must delay release.[^effect-scoped-cache]
 - [ ] Test equivalent and distinct keys, concurrent misses, partial batch
-  failure, expiry, capacity eviction, invalidation during computation, and a
-  fresh lookup during abandoned-work cleanup.[^effect-cache-tests]
+  failure, expiry, eviction during active use, invalidation during computation,
+  and a fresh lookup during abandoned-work cleanup.[^effect-cache-tests][^effect-scoped-cache-tests]
 
 ## Resources
 
@@ -49,3 +58,7 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 - [ScopedCache source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/ScopedCache.ts)
 
 [^effect-cache-tests]: [Effect shared lookup cancellation tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/Cache.test.ts).
+
+[^effect-scoped-cache]: Effect cache-owned resource lifetime.
+
+[^effect-scoped-cache-tests]: Effect resource cleanup on cache eviction.

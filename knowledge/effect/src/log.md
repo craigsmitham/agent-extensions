@@ -2,6 +2,21 @@
 
 ## 2026-10-27
 
+* **Audit corrections (4.0.1)**: Raised the knowledge and pack npm compatibility
+  floor to `4.0.6`, matching the APIs and mixed-cause behavior the checklists
+  prescribe. Confirmed that all recommended companion packages have 4.0.6
+  releases with a core `^4.0.6` peer requirement; future releases and every
+  adapter/runtime combination remain unvalidated. The pack now requires the
+  corrected knowledge bundle and explicitly describes its all-TypeScript
+  adoption/migration rule, with a standalone knowledge installation route.
+* **Lifetime boundaries**: Distinguished `ScopedCache` eviction from scoped
+  borrowing and routed in-use resource protection to keyed resource sharing.
+  Bounded HTTP Worker `waitUntil` work by its shared 30-second post-response
+  allowance and directed longer or delivery-critical work to durable ownership.
+* **Reference corrections**: Labeled the opencode config/composition example
+  historical beta.83 evidence and qualified the upstream layer-composition
+  example's quoted SQL interpolation and missing row validation.
+
 * **Identity and compatibility**: Renamed the knowledge bundle and pack from
   `effect-v4` to `effect`, and the rule from `use-effect-v4` to `use-effect`,
   starting all three at `4.0.0`. The major version tracks
