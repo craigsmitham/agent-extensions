@@ -6,24 +6,24 @@ tags: [effect, effect-v4, request, batching, cache, ttl, resolver]
 status: stable
 sources:
   - id: effect-request
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Request.ts
-    title: Effect 4.0.6 Request source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Request.ts
+    title: Effect 4.1.0 Request source
   - id: effect-resolver
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/RequestResolver.ts
-    title: Effect 4.0.6 RequestResolver source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/RequestResolver.ts
+    title: Effect 4.1.0 RequestResolver source
   - id: effect-cache
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Cache.ts
-    title: Effect 4.0.6 Cache source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Cache.ts
+    title: Effect 4.1.0 Cache source
   - id: effect-cache-tests
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/Cache.test.ts
-    title: Effect 4.0.6 shared lookup cancellation tests
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/test/Cache.test.ts
+    title: Effect 4.1.0 shared lookup cancellation tests
   - id: effect-scoped-cache
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/ScopedCache.ts
-    title: Effect 4.0.6 cache-owned resource lifetime
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/ScopedCache.ts
+    title: Effect 4.1.0 cache-owned resource lifetime
   - id: effect-scoped-cache-tests
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/ScopedCache.test.ts
-    title: Effect 4.0.6 resource cleanup on cache eviction
-generated: { by: codex/gpt-6, at: 2026-10-27T19:31:53Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/test/ScopedCache.test.ts
+    title: Effect 4.1.0 resource cleanup on cache eviction
+generated: { by: codex/gpt-6, at: 2026-10-29T19:51:52Z }
 ---
 
 # Request batching and cache
@@ -53,11 +53,11 @@ generated: { by: codex/gpt-6, at: 2026-10-27T19:31:53Z }
 
 ## Resources
 
-- [RequestResolver source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/RequestResolver.ts)
-- [Cache source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Cache.ts)
-- [ScopedCache source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/ScopedCache.ts)
+- [RequestResolver source](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/RequestResolver.ts)
+- [Cache source](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Cache.ts)
+- [ScopedCache source](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/ScopedCache.ts)
 
-[^effect-cache-tests]: [Effect shared lookup cancellation tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/Cache.test.ts).
+[^effect-cache-tests]: [Effect shared lookup cancellation tests](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/test/Cache.test.ts).
 
 [^effect-scoped-cache]: Effect cache-owned resource lifetime.
 

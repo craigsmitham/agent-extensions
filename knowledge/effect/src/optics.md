@@ -6,9 +6,9 @@ tags: [effect, effect-v4, optic, immutable-update, optional, union]
 status: stable
 sources:
   - id: effect-optic
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Optic.ts
-    title: Effect 4.0.6 Optic source
-generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Optic.ts
+    title: Effect 4.1.0 Optic source
+generated: { by: codex/gpt-6, at: 2026-10-29T19:51:52Z }
 ---
 
 # Optics
@@ -32,4 +32,4 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 
 ## Resources
 
-- [Optic source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Optic.ts)
+- [Optic source](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Optic.ts)

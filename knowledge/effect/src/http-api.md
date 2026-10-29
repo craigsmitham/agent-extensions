@@ -6,30 +6,33 @@ tags: [effect, effect-v4, httpapi, server, schema, middleware, openapi]
 status: stable
 sources:
   - id: effect-httpapi
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/51_http-server/10_basics.ts
-    title: Effect 4.0.6 HttpApi basics
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/51_http-server/10_basics.ts
+    title: Effect 4.1.0 HttpApi basics
   - id: effect-httpapi-source
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http-api/HttpApi.ts
-    title: Effect 4.0.6 HttpApi source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApi.ts
+    title: Effect 4.1.0 HttpApi source
   - id: effect-httpapi-parse-options
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http-api/HttpApi.ts
-    title: Effect 4.0.6 HttpApi parse options
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApi.ts
+    title: Effect 4.1.0 HttpApi parse options
   - id: effect-bodyless-tests
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/http/HttpServerResponse.test.ts
-    title: Effect 4.0.6 bodyless Web response tests
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/test/http/HttpServerResponse.test.ts
+    title: Effect 4.1.0 bodyless Web response tests
   - id: effect-httprouter-serve
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http/HttpRouter.ts
-    title: Effect 4.0.6 HttpRouter.serve layer isolation
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http/HttpRouter.ts
+    title: Effect 4.1.0 HttpRouter.serve layer isolation
   - id: effect-http-middleware
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http/HttpMiddleware.ts
-    title: Effect 4.0.6 trusted proxy middleware
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http/HttpMiddleware.ts
+    title: Effect 4.1.0 trusted proxy middleware
   - id: effect-httpapi-streams
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http-api/HttpApiSchema.ts
-    title: Effect 4.0.6 streaming payload contracts
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApiSchema.ts
+    title: Effect 4.1.0 streaming payload contracts
   - id: effect-httpapi-stream-tests
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/httpapi/HttpApiBuilder.test.ts
-    title: Effect 4.0.6 streaming upload regression tests
-generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/test/httpapi/HttpApiBuilder.test.ts
+    title: Effect 4.1.0 streaming upload regression tests
+  - id: effect-httpapi-client
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApiClient.ts
+    title: Effect 4.1.0 upgrade response contracts
+generated: { by: codex/gpt-6, at: 2026-10-29T19:51:52Z }
 ---
 
 # HTTP API
@@ -62,23 +65,31 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 - [ ] Verify responses whose status forbids a body omit it and release unused
   body resources, including statuses 204, 205, and 304.[^effect-bodyless-tests]
 - [ ] Test schema rejection, each declared response and error, middleware
-  behavior, generated-client compatibility, and handler interruption.
+  behavior, generated-client compatibility, and handler interruption. For
+  endpoints allowing ordinary and upgraded responses, test both, narrow with
+  `HttpApiClient.isUpgraded`, and verify connection cleanup.[^effect-httpapi-client]
 
 ## Resources
 
-- [HttpApi basics](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/51_http-server/10_basics.ts)
-- [HttpApi source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http-api/HttpApi.ts)
-- [HttpApi test support](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/51_http-server/20_testing.ts)
-- [HttpApi parse options](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http-api/HttpApi.ts)
-- [Bodyless Web response tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/http/HttpServerResponse.test.ts)
-- [HttpRouter.serve layer isolation](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http/HttpRouter.ts)
+- [Optional Problem Details middleware and disclosure settings](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApiMiddleware.ts)
+
+- [Optional Problem Details error contracts (application chooses the representation)](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApiError.ts)
+
+- [HttpApi basics](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/51_http-server/10_basics.ts)
+- [HttpApi source](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApi.ts)
+- [HttpApi test support](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/51_http-server/20_testing.ts)
+- [HttpApi parse options](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApi.ts)
+- [Bodyless Web response tests](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/test/http/HttpServerResponse.test.ts)
+- [HttpRouter.serve layer isolation](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http/HttpRouter.ts)
 
 [^effect-httpapi-parse-options]: Effect HttpApi parse options.
 [^effect-bodyless-tests]: Effect bodyless Web response tests.
 [^effect-httprouter-serve]: Effect HttpRouter.serve layer isolation.
 
-[^effect-http-middleware]: [Effect trusted proxy middleware](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http/HttpMiddleware.ts).
+[^effect-http-middleware]: [Effect trusted proxy middleware](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http/HttpMiddleware.ts).
 
-[^effect-httpapi-streams]: [Effect streaming payload contracts](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/http-api/HttpApiSchema.ts).
+[^effect-httpapi-streams]: [Effect streaming payload contracts](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApiSchema.ts).
 
-[^effect-httpapi-stream-tests]: [Effect streaming upload regression tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/httpapi/HttpApiBuilder.test.ts).
+[^effect-httpapi-stream-tests]: [Effect streaming upload regression tests](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/test/httpapi/HttpApiBuilder.test.ts).
+
+[^effect-httpapi-client]: [Effect upgrade response contracts](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/http-api/HttpApiClient.ts).

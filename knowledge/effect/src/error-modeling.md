@@ -6,15 +6,15 @@ tags: [effect, effect-v4, errors, cause, defects, interruption, retry]
 status: stable
 sources:
   - id: effect-errors
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/04_errors/01_error-handling.ts
-    title: Effect 4.0.6 error handling basics
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/04_errors/01_error-handling.ts
+    title: Effect 4.1.0 error handling basics
   - id: effect-cause
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Cause.ts
-    title: Effect 4.0.6 Cause source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Cause.ts
+    title: Effect 4.1.0 Cause source
   - id: effect-mixed-causes
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/Effect.test.ts
-    title: Effect 4.0.6 mixed-cause recovery tests
-generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/test/Effect.test.ts
+    title: Effect 4.1.0 mixed-cause recovery tests
+generated: { by: codex/gpt-6, at: 2026-10-29T19:51:52Z }
 ---
 
 # Error modeling
@@ -43,7 +43,7 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 
 ## Resources
 
-- [Error handling basics](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/04_errors/01_error-handling.ts)
-- [Cause source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Cause.ts)
+- [Error handling basics](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/04_errors/01_error-handling.ts)
+- [Cause source](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Cause.ts)
 
-[^effect-mixed-causes]: [Effect mixed-cause recovery tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/test/Effect.test.ts).
+[^effect-mixed-causes]: [Effect mixed-cause recovery tests](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/test/Effect.test.ts).

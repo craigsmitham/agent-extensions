@@ -6,11 +6,11 @@ tags: [effect, effect-v4, context, service, layer, dependency-injection]
 status: stable
 sources:
   - id: effect-services
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/01_service.ts
-    title: Effect 4.0.6 service basics
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/03_services/01_service.ts
+    title: Effect 4.1.0 service basics
   - id: effect-layers
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/20_layer-composition.ts
-    title: Effect 4.0.6 layer composition (SQL example requires correction)
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/03_services/20_layer-composition.ts
+    title: Effect 4.1.0 layer composition (SQL example requires correction)
   - id: applied-opencode
     resource: https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/server.ts
     title: Historical opencode layer composition at dc4449d (Effect 4.0.0-beta.83)
@@ -18,12 +18,15 @@ sources:
     resource: https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/package.json
     title: opencode Effect beta.83 catalog at dc4449d
   - id: effect-sql-statements
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/sql/Statement.ts
-    title: Effect 4.0.6 SQL parameter compilation
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/sql/Statement.ts
+    title: Effect 4.1.0 SQL parameter compilation
   - id: effect-functions
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts
-    title: Effect 4.0.6 reusable generator functions
-generated: { by: codex/gpt-6, at: 2026-10-27T19:32:03Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/01_basics/02_effect-fn.ts
+    title: Effect 4.1.0 reusable generator functions
+  - id: effect-crypto
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/CHANGELOG.md#410
+    title: Effect 4.1.0 crypto provisioning migration
+generated: { by: codex/gpt-6, at: 2026-10-29T19:51:52Z }
 ---
 
 # Services and layers
@@ -47,7 +50,9 @@ generated: { by: codex/gpt-6, at: 2026-10-27T19:32:03Z }
 - [ ] Process, request, and short-lived resources are built in the scope that
   owns their actual lifetime.
 - [ ] Provide production layers at an application boundary rather than
-  repeatedly deep inside business logic.
+  repeatedly deep inside business logic; explicitly provide required crypto
+  family layers, which are no longer included in platform `*Services`
+  bundles.[^effect-crypto]
 - [ ] Exhaust or translate the expected error channel before handing a program
   to a runtime that requires `E = never`; do not erase failures mechanically.
 - [ ] Test through the same service tag with a deterministic substitute, and
@@ -55,8 +60,8 @@ generated: { by: codex/gpt-6, at: 2026-10-27T19:32:03Z }
 
 ## Resources
 
-- [Service basics](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/01_service.ts)
-- [Layer composition (composition example only)](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/03_services/20_layer-composition.ts) —
+- [Service basics](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/03_services/01_service.ts)
+- [Layer composition (composition example only)](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/03_services/20_layer-composition.ts) —
   its `findById` SQL incorrectly quotes `${id}`. Remove those SQL quotes:
   the tagged template supplies a placeholder and bind value, and quoting the
   placeholder makes it a string literal.[^effect-sql-statements] Decode selected
@@ -69,7 +74,9 @@ generated: { by: codex/gpt-6, at: 2026-10-27T19:32:03Z }
 [^effect-services]: Effect service interfaces and namespaced identifiers.
 [^effect-layers]: Effect layer composition and public requirements.
 
-[^effect-functions]: [Effect 4.0.6 reusable generator functions](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts).
+[^effect-functions]: [Effect 4.1.0 reusable generator functions](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/01_basics/02_effect-fn.ts).
 
 [^applied-opencode-version]: opencode Effect beta.83 catalog at dc4449d.
 [^effect-sql-statements]: Effect SQL parameter compilation.
+
+[^effect-crypto]: [Effect crypto provisioning migration](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/CHANGELOG.md#410).

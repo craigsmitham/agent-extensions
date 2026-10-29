@@ -11,17 +11,15 @@ judgeable checks plus links to the primary sources used to author it.
 The `effect` bundle starts its renamed release line at `4.0.0`. Its major
 version tracks the supported Effect major; bundle minor and patch versions
 advance independently from upstream releases. Companion package metadata is
-bounded to `>=4.0.6 <5.0.0` and covers official packages relevant to these
+bounded to `>=4.1.0 <5.0.0` and covers official packages relevant to these
 topics. Select adapters for the application's runtime and database; these
 recommendations do not install npm dependencies.
 
-This bundle requires **Effect 4.0.6 or newer within major version 4** and was
-last reviewed against **4.0.6**. Earlier 4.x releases lack APIs and behavior
-used by these checklists, including `SqlClient.afterCommit`, `FileSystem.lstat`,
-and defect-preserving typed recovery of mixed causes. The companion metadata
-uses the same minimum because the official packages release together and their
-4.0.6 releases require core `^4.0.6`; it does not establish every adapter's
-runtime suitability or validate future releases.
+This bundle requires **Effect 4.1.0 or newer within major version 4** and was
+last reviewed against **4.1.0**. The baseline includes the 4.1 filesystem adapter
+contract, scoped semaphore acquisition, and cron overlap policy. Keep official companion packages aligned
+with core Effect. The metadata does not establish every adapter's runtime
+suitability or validate future releases.
 
 Use the checklists as a design baseline and consult the linked sources when an
 API has changed or is tagged `@stability unstable`, which permits breaking changes in minor
@@ -119,6 +117,31 @@ resumed at the first open box after interruption.
 - [Testing](testing.md) — Evaluate whether Effect programs are tested
   deterministically through public services, controlled runtime inputs, and
   complete lifetime behavior.
+
+## Scope and inclusion
+
+Include guidance when it addresses a consequential, recurring Effect-specific
+decision or omission, has credible source evidence, fits a concise review check,
+and has no adequate existing owner. The bundle supports Effect authors and
+reviewers making boundaries, failures, lifetimes, and integration behavior
+inspectable; it does not aim to cover every upstream module.
+
+Extend an existing topic when it already owns the decision. Add a topic only
+when a distinct reader need and uncovered failure mode justify an independent
+five-to-ten-item checklist; record that rationale in the update log. Keep each
+concern under one topic and cross-reference it elsewhere.
+
+Keep guidance portable across applications. Include platform-specific behavior
+under its named integration topic; leave deployment policy, repository layout,
+and application-specific modeling choices to their owners. Prefer released
+public contracts, relevant tests, and representative applied practice. A demo
+or project-specific abstraction does not establish a general convention.
+
+Put API inventories, migration recipes, examples, and extended explanations in
+linked resources. A new API or upstream release alone does not justify a new
+item or topic; fixes that satisfy an existing check may need only a source
+refresh. Revisit earlier exclusions when new evidence changes the reader need,
+while retaining application ownership of optional choices.
 
 ## Maintaining this bundle
 

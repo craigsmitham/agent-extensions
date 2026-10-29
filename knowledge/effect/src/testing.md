@@ -6,27 +6,27 @@ tags: [effect, effect-v4, testing, vitest, testclock, layers, determinism]
 status: stable
 sources:
   - id: effect-tests
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/09_testing/10_effect-tests.ts
-    title: Effect 4.0.6 Effect tests
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/09_testing/10_effect-tests.ts
+    title: Effect 4.1.0 Effect tests
   - id: effect-layer-tests
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/09_testing/20_layer-tests.ts
-    title: Effect 4.0.6 layer tests
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/09_testing/20_layer-tests.ts
+    title: Effect 4.1.0 layer tests
   - id: effect-testclock
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/testing/TestClock.ts
-    title: Effect 4.0.6 TestClock source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/testing/TestClock.ts
+    title: Effect 4.1.0 TestClock source
   - id: effect-arbitrary
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/ARBITRARY.md
-    title: Effect 4.0.6 native Arbitrary guide
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/ARBITRARY.md
+    title: Effect 4.1.0 native Arbitrary guide
   - id: effect-arbitrary-migration
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/migration/schema.md#migrating-from-the-fast-check-bridge-to-native-arbitrary
-    title: Effect 4.0.6 native Arbitrary migration
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/migration/schema.md#migrating-from-the-fast-check-bridge-to-native-arbitrary
+    title: Effect 4.1.0 native Arbitrary migration
   - id: applied-opencode-harness
     resource: https://github.com/anomalyco/opencode/blob/432d870b02683d2e40e895ddc70d437189b25276/packages/core/test/lib/effect.ts
     title: opencode Bun test harness at 432d870 (Effect 4.0.1)
   - id: applied-opencode-coordination
     resource: https://github.com/anomalyco/opencode/blob/432d870b02683d2e40e895ddc70d437189b25276/packages/core/test/effect/keyed-mutex.test.ts
     title: opencode keyed mutex synchronization tests at 432d870 (Effect 4.0.1)
-generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
+generated: { by: codex/gpt-6, at: 2026-10-29T19:51:52Z }
 ---
 
 # Testing
@@ -61,12 +61,14 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
 
 ## Resources
 
-- [Effect tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/09_testing/10_effect-tests.ts)
-- [Layer tests](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/09_testing/20_layer-tests.ts)
-- [TestClock source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/testing/TestClock.ts)
-- [Native property testing](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/ARBITRARY.md)
-- [Migration from the fast-check bridge](https://github.com/Effect-TS/effect/blob/effect%404.0.6/migration/schema.md#migrating-from-the-fast-check-bridge-to-native-arbitrary)
-- [Schema test helpers](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/testing/TestSchema.ts)
+- [Crypto service substitution with Layer.mock (replaces TestCrypto)](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/CHANGELOG.md#410)
+
+- [Effect tests](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/09_testing/10_effect-tests.ts)
+- [Layer tests](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/09_testing/20_layer-tests.ts)
+- [TestClock source](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/testing/TestClock.ts)
+- [Native property testing](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/ARBITRARY.md)
+- [Migration from the fast-check bridge](https://github.com/Effect-TS/effect/blob/effect%404.1.0/migration/schema.md#migrating-from-the-fast-check-bridge-to-native-arbitrary)
+- [Schema test helpers](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/testing/TestSchema.ts)
 
 [^effect-arbitrary-migration]: Effect native Arbitrary migration.
 [^effect-arbitrary]: Effect native property testing guide.

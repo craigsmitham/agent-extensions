@@ -19,8 +19,8 @@ This pack installs two members:
 For checklists without the adoption rule, install the standalone bundle with
 `axm knowledge install @craigsmitham/knowledge/effect` instead of the pack.
 
-The checklists require **Effect 4.0.6 or newer within major version 4** and were
-last reviewed against **4.0.6**. Pack `4.0.1` requires knowledge bundle `4.0.1`
+The checklists require **Effect 4.1.0 or newer within major version 4** and were
+last reviewed against **4.1.0**. Pack `4.1.0` requires knowledge bundle `4.1.0`
 or newer; the unchanged adoption rule remains compatible with Effect 4.0.0.
 See the [bundle index](https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/effect/src/index.md)
 for the complete topic list and the major-version policy.
@@ -46,12 +46,12 @@ the twenty-four checklists.
 ## Companion packages
 
 The pack and knowledge manifests recommend these official packages with the
-compatibility range `>=4.0.6 <5.0.0`, using AXM's `packages` metadata. These
+compatibility range `>=4.1.0 <5.0.0`, using AXM's `packages` metadata. These
 recommendations do not install npm dependencies. Choose only the adapters and
 tools needed by the application, and keep their versions aligned with core
-Effect as described in the [official package list](https://github.com/Effect-TS/effect/blob/effect%404.0.6/README.md#packages).
-The common minimum reflects that synchronized release family: each recommended
-companion's 4.0.6 npm release requires core `^4.0.6`. It is not a claim that
+Effect as described in the [official package list](https://github.com/Effect-TS/effect/blob/effect%404.1.0/README.md#packages).
+The common minimum reflects the reviewed 4.1.0 release family and the APIs
+used by the checklists. It is not a claim that
 every adapter runs on every platform or that future releases have been tested.
 
 | Use | Packages |
@@ -70,6 +70,9 @@ adding topics or changing the supported Effect major.
 
 ## Checklist maintenance
 
+The bundle index owns [scope and inclusion](https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/effect/src/index.md#scope-and-inclusion).
+Use those criteria when deciding whether to extend a topic or add one.
+
 Before revising a checklist, inspect current Effect v4 source and tests plus
 representative v4 applications or libraries that exercise the topic. Record
 each reference's role, declared Effect version, and reviewed commit. Prefer
@@ -77,7 +80,8 @@ small excerpts with relevant tests; verify the specific behavior before moving
 a source pin. The reference selection reviewed on 2026-10-27 is:
 
 - [Effect](https://github.com/Effect-TS/effect) — released API contracts,
-  regression tests, and idiomatic examples; 4.0.6.
+  regression tests, and idiomatic examples; release baseline refreshed to 4.1.0
+  on 2026-10-29. Applied snapshots below retain their 2026-10-27 review dates.
 - [opencode](https://github.com/anomalyco/opencode) — application services,
   Bun test harness, and concurrency tests; catalog 4.0.1. Its
   [HTTP recorder](https://github.com/anomalyco/opencode/tree/432d870b02683d2e40e895ddc70d437189b25276/packages/http-recorder)

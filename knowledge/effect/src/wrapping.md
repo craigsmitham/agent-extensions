@@ -6,15 +6,15 @@ tags: [effect, effect-v4, promise, callback, interop, cancellation, adapter]
 status: stable
 sources:
   - id: effect-source
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Effect.ts
-    title: Effect 4.0.6 Effect source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Effect.ts
+    title: Effect 4.1.0 Effect source
   - id: applied-opencode
     resource: https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/ingest.ts
     title: opencode foreign SDK wrapping at dc4449d
   - id: effect-functions
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts
-    title: Effect 4.0.6 reusable generator functions
-generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/01_basics/02_effect-fn.ts
+    title: Effect 4.1.0 reusable generator functions
+generated: { by: codex/gpt-6, at: 2026-10-29T19:51:52Z }
 ---
 
 # Wrapping foreign APIs
@@ -43,7 +43,7 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:57:24Z }
 
 ## Resources
 
-- [Effect interop constructors](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Effect.ts)
+- [Effect interop constructors](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Effect.ts)
 - [Applied SDK wrapper in opencode](https://github.com/anomalyco/opencode/blob/dc4449df0d52199704ea4989a5a993ebbc605612/packages/stats/server/src/ingest.ts)
 
-[^effect-functions]: [Effect 4.0.6 reusable generator functions](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/01_basics/02_effect-fn.ts).
+[^effect-functions]: [Effect 4.1.0 reusable generator functions](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/01_basics/02_effect-fn.ts).

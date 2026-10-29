@@ -6,12 +6,12 @@ tags: [effect, effect-v4, scope, acquire-release, finalizer, resource]
 status: stable
 sources:
   - id: effect-acquire-release
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/05_resources/10_acquire-release.ts
-    title: Effect 4.0.6 acquire-release guide
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/05_resources/10_acquire-release.ts
+    title: Effect 4.1.0 acquire-release guide
   - id: effect-scope
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Scope.ts
-    title: Effect 4.0.6 Scope source
-generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Scope.ts
+    title: Effect 4.1.0 Scope source
+generated: { by: codex/gpt-6, at: 2026-10-29T19:51:52Z }
 ---
 
 # Resource safety
@@ -39,7 +39,7 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 
 ## Resources
 
-- [Acquire-release guide](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/05_resources/10_acquire-release.ts)
-- [Scope source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Scope.ts)
+- [Acquire-release guide](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/05_resources/10_acquire-release.ts)
+- [Scope source](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Scope.ts)
 
 [^effect-scope]: Effect Scope source.

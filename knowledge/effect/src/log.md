@@ -1,5 +1,59 @@
 # Directory Update Log
 
+## 2026-10-29
+
+* **Scope (4.1.0)**: Consolidated the topic-admission policy in the root index's
+  Scope and inclusion section, with a link from the pack README. Require a
+  consequential recurring Effect-specific decision, credible evidence, concise
+  review form, and an uncovered owner before adding a topic. Retained all
+  twenty-four topics and the separate adoption rule.
+* **Baseline**: Reviewed the release delta from `4.0.6` through `4.0.7` and
+  `4.1.0` at upstream commit `9a91b1926a5fbfaffd302a7a41a94d4d53a1154e`.
+  Refreshed official source pins (88 distinct paths confirmed at the tag),
+  inspected changed contracts and selected
+  regression tests, and raised pack and knowledge companion ranges to
+  `>=4.1.0 <5.0.0`. All twenty recommended companion npm releases exist at
+  4.1.0 and require core `^4.1.0`. Pack and knowledge are version `4.1.0`; the unchanged
+  `use-effect` rule remains `4.0.0`.
+* **Filesystem**: Covered `readDirectoryEntries` for custom implementations,
+  consistent directory wrappers, derived `glob`, and explicit glob root,
+  dotfile, symlink, and unreadable-directory expectations.
+* **SQL correction**: Storage-backed `sqlite-do` now uses
+  `SqlClient.makeWithTransaction`: `afterCommit` waits for the outermost commit
+  and concurrent nested siblings are serialized. Removed the stale immediate-
+  callback caveat; retained dialect verification and durable-delivery limits.
+  Added empty-batch handling before nonempty SQL row helpers and linked the
+  relocated filesystem migration loader.
+* **HTTP**: Added origin-aware cookie storage, bounded opt-in buffering when
+  Fetch cannot stream uploads, raw-error-property redaction awareness, and
+  upgrade-response narrowing and cleanup checks. Linked optional Problem
+  Details contracts and middleware without prescribing that representation;
+  this preserves the application-ownership decision recorded on 2026-08-17.
+* **Time and concurrency**: Added cron overlap policy, ISO duration boundary
+  constraints, and scoped semaphore acquisition without an interruption gap.
+  Existing cancellation and timing checks cover the corrected pool fairness,
+  SQLite acquisition, and Fibonacci schedule behavior.
+* **Streams and operation**: Distinguished upstream failures from sink error
+  recovery; added unobserved-finalizer logging policy and string-record config
+  whitespace/empty-value tests. Linked streaming CSV as an optional format
+  adapter under the existing streams topic.
+* **Crypto**: Folded explicit crypto-family layer provision into services and
+  linked test substitution guidance replacing `TestCrypto`. A release alone
+  does not establish a distinct unmet need for a crypto checklist; algorithm
+  selection and security policy are not inferred from API availability.
+* **References and limits**: Re-inspected the pinned opencode HTTP recorder and
+  keyed-mutex tests for client decoration, redaction, and readiness signaling;
+  retained their declared Effect 4.0.1 baseline and commits. Other applied
+  snapshots retain their earlier review dates. This is a release-delta source
+  review and checklist design review, not a full upstream code audit. No
+  upstream suites, application builds, benchmarks, or field studies were run;
+  source review does not establish runtime correctness or checklist effectiveness.
+* **Not adopted**: AI, MCP, RPC, cluster, event-log, persistence, CLI, and process
+  changes do not justify new topics in this refresh. Their upgrade procedures
+  remain in upstream migration/release resources. Schema and collection fixes
+  largely satisfy existing boundary, identity, and round-trip checks.
+
+
 ## 2026-10-27
 
 * **Audit corrections (4.0.1)**: Raised the knowledge and pack npm compatibility

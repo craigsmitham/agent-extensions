@@ -6,18 +6,18 @@ tags: [effect, effect-v4, schema, decoding, encoding, validation, boundaries]
 status: stable
 sources:
   - id: effect-schema
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/02_schema/10_schema-basics.ts
-    title: Effect 4.0.6 schema basics
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/02_schema/10_schema-basics.ts
+    title: Effect 4.1.0 schema basics
   - id: effect-schema-source
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Schema.ts
-    title: Effect 4.0.6 Schema source
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Schema.ts
+    title: Effect 4.1.0 Schema source
   - id: effect-parser-policy
-    resource: https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/SchemaAST.ts
-    title: Effect 4.0.6 Schema parse options
+    resource: https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/SchemaAST.ts
+    title: Effect 4.1.0 Schema parse options
   - id: effect-parser-changes
     resource: https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/CHANGELOG.md#L1285
     title: Effect 4.0.0 changelog, rc.113 Schema parsing changes
-generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
+generated: { by: codex/gpt-6, at: 2026-10-29T19:51:52Z }
 ---
 
 # Schema boundaries
@@ -46,9 +46,9 @@ generated: { by: codex/gpt-6, at: 2026-10-27T18:45:50Z }
 
 ## Resources
 
-- [Schema basics](https://github.com/Effect-TS/effect/blob/effect%404.0.6/ai-docs/src/01_effect/02_schema/10_schema-basics.ts)
-- [Schema source](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/Schema.ts)
-- [Schema parse options](https://github.com/Effect-TS/effect/blob/effect%404.0.6/packages/effect/src/SchemaAST.ts)
+- [Schema basics](https://github.com/Effect-TS/effect/blob/effect%404.1.0/ai-docs/src/01_effect/02_schema/10_schema-basics.ts)
+- [Schema source](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/Schema.ts)
+- [Schema parse options](https://github.com/Effect-TS/effect/blob/effect%404.1.0/packages/effect/src/SchemaAST.ts)
 - [Schema parsing changes (rc.113 changelog)](https://github.com/Effect-TS/effect/blob/effect%404.0.0/packages/effect/CHANGELOG.md#L1285)
 
 [^effect-parser-policy]: Effect Schema parse options.
