@@ -12,6 +12,7 @@ and are not published from this repository.
 
 | Pack | Purpose | Install |
 | --- | --- | --- |
+| [`codebase-renewal`](./packs/codebase-renewal/README.md) | Five standalone skills for codebase renewal: align with guidance, prune unnecessary elements, improve quality, generalize capabilities, and experiment to reduce uncertainty. | `axm install @craigsmitham/packs/codebase-renewal` |
 | `effect` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect` |
 | `docs` | Portable documentation craft plus distinct authoring/remediation and read-only audit skills | `axm install @craigsmitham/packs/docs` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |

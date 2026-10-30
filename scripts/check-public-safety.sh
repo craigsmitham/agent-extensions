@@ -146,6 +146,7 @@ expected=(
   knowledge/effect
   knowledge/knowledge-management
   knowledge/product-engineering
+  packs/codebase-renewal
   packs/docs
   packs/effect
   packs/research

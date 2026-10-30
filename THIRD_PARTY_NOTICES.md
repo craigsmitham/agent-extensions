@@ -34,6 +34,15 @@ vendored copy of the Effect source.
 to authoritative public references. It does not vendor the TC39 specification
 or MDN documentation.
 
+## Codebase renewal
+
+The `codebase-renewal` pack contains original explanatory prose inspired by
+Peter Drucker's renewal practices, with a software-engineering mapping to its
+five standalone members. Its [package README](packs/codebase-renewal/README.md)
+links the Drucker Institute reading and the members' source discussions. No
+source text or code is vendored; the pack metadata and README use MIT, and each
+member retains its own declared license.
+
 ## Software improvement
 
 The `improve` skill contains original guidance inspired by Peter Drucker's
