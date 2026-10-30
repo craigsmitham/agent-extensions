@@ -155,6 +155,7 @@ expected=(
   skills/checklist-design
   skills/devops-docs
   skills/docs
+  skills/generalize
   skills/improve-whatever
   skills/manage-work-items
   skills/okf

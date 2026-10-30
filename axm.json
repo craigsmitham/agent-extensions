@@ -31,7 +31,8 @@
     "manage-work-items": "workspace",
     "spot-spew": "workspace",
     "devops-docs": "workspace",
-    "product-docs": "workspace"
+    "product-docs": "workspace",
+    "generalize": "workspace"
   },
   "rules": {
     "use-effect": {

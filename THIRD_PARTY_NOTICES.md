@@ -34,6 +34,14 @@ vendored copy of the Effect source.
 to authoritative public references. It does not vendor the TC39 specification
 or MDN documentation.
 
+## Software generalization
+
+The `generalize` skill contains original guidance inspired by Bertrand Meyer,
+David Musser and Alexander Stepanov, David Parnas, John Ousterhout, Martin
+Fowler, and Sandi Metz. Its [package README](skills/generalize/README.md)
+links the sources and explains each contribution. No source text or code is
+vendored; the package's original instructions and explanatory prose use MIT.
+
 ## Knowledge and management sources
 
 The `knowledge-management` and `product-engineering` bundles synthesize ideas

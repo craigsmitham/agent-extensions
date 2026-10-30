@@ -45,6 +45,7 @@ again claimed scope that has not been written.
 | `devops-docs` | Set up, discover, author, and maintain engineering and operations documentation | `axm install @craigsmitham/skills/devops-docs` |
 | `improve-whatever` | Evidence-based evaluation through the lens of Philippians 4:8–9 | `axm install @craigsmitham/skills/improve-whatever` |
 | `spot-spew` | Spot avoidable maintenance burden from custom or non-idiomatic code and weigh replacing it with adopted capabilities | `axm install @craigsmitham/skills/spot-spew` |
+| [`generalize`](./skills/generalize/README.md) | Generalize a codebase or a specified part to support a broader, coherent family of cases. | `axm install @craigsmitham/skills/generalize` |
 
 ## Layout
 
