@@ -117,8 +117,8 @@ def has_frontmatter_opener(text: str) -> bool:
     return bool(text.split("\n", 1)) and text.split("\n", 1)[0] == "---"
 
 
-def strip_code(text: str) -> str:
-    """Blank out fenced blocks and inline code so link scanning sees only prose."""
+def strip_code(text: str, *, inline: bool = True) -> str:
+    """Blank fenced blocks and, by default, inline code for prose scanning."""
     out, fence = [], None
     for line in text.split("\n"):
         m = RE_FENCE.match(line)
@@ -131,7 +131,7 @@ def strip_code(text: str) -> str:
                 fence = None
             out.append("")
             continue
-        out.append(re.sub(r"`[^`]*`", "", line))
+        out.append(re.sub(r"`[^`]*`", "", line) if inline else line)
     return "\n".join(out)
 
 
@@ -340,6 +340,7 @@ def check_verified(f, rel, fm) -> str:
         return "unverified"
 
     valid_kinds = []
+    valid_times = []
     for i, entry in enumerate(entries):
         where = f"verified[{i}]"
         if not isinstance(entry, dict):
@@ -359,9 +360,20 @@ def check_verified(f, rel, fm) -> str:
             valid_at = True
         if kind in ("human", "process", "agent") and valid_at:
             valid_kinds.append(kind)
+            valid_times.append(as_datetime(entry["at"]))
     if not valid_kinds:
         f.warn("verified-no-valid-events", rel, "`verified` contains no complete, valid verification event")
         return "unverified"
+    generated = fm.get("generated")
+    changed_at = as_datetime(generated.get("at")) if isinstance(generated, dict) else None
+    latest_verified = max(valid_times)
+    if changed_at is not None and changed_at > latest_verified:
+        f.info(
+            "verification-predates-content",
+            rel,
+            f"content changed at {changed_at.isoformat()} after the latest valid recorded "
+            f"verification at {latest_verified.isoformat()}; historical trust tier is unchanged",
+        )
     return "human-reviewed" if "human" in valid_kinds else "machine-confirmed"
 
 
@@ -660,29 +672,52 @@ def check_index(f, rel, path, root, text, is_root):
     elif is_root:
         f.info("okf-version-missing", rel, "root index.md declares no `okf_version: \"0.2\"`")
 
+    # §11 makes §8's headed link groups structural requirements. Ignore examples
+    # and comments, and accept Markdown heading/link forms beyond our inline-only
+    # discovery extractor so valid presentation choices do not become errors.
+    prose = strip_code(body, inline=False)
+    prose = re.sub(r"<!--.*?(?:-->|$)", lambda m: "\n" * m.group().count("\n"), prose, flags=re.S)
+    reference_labels = {
+        normalize_space(m.group(1)).casefold()
+        for m in re.finditer(r"^\s{0,3}\[([^\]^][^\]]*)\]:\s*\S", prose, re.MULTILINE)
+    }
     seen_heading = False
     has_entry = False
-    for n, line in enumerate(body.split("\n"), start=1):
-        if re.match(r"^\s{0,3}#{1,6}\s+\S", line):
+    previous_line = ""
+    for n, line in enumerate(prose.split("\n"), start=1):
+        is_setext = (
+            re.fullmatch(r"\s{0,3}(?:=+|-+)\s*", line)
+            and previous_line.strip()
+            and not RE_BULLET.match(previous_line)
+        )
+        previous_line = line
+        if RE_HEADING.match(line) or is_setext:
             seen_heading = True
             continue
         if RE_BULLET.match(line):
             has_entry = True
             if not seen_heading:
-                f.warn(
+                f.error(
                     "index-structure",
                     rel,
-                    "entry appears before any section heading (§8)",
+                    "entry appears before any section heading (§8, §11)",
                     line=body_start + n - 1,
                 )
-            if not RE_BULLET_LINK.match(line):
-                f.warn(
+            reference = re.match(r"^\s{0,3}[-*+]\s+\[([^\]]+)\](?:\[([^\]]*)\])?", line)
+            reference_link = False
+            if reference:
+                label = reference.group(2) or reference.group(1)
+                reference_link = normalize_space(label).casefold() in reference_labels
+            if not RE_BULLET_LINK.match(line) and not reference_link:
+                f.error(
                     "index-entry",
                     rel,
-                    "entry is not a `* [Title](url)` link",
+                    "entry is not a Markdown link (§8, §11)",
                     line=body_start + n - 1,
                 )
-    if not has_entry and body.strip():
+    if not seen_heading and not has_entry:
+        f.error("index-structure", rel, "index.md needs at least one section heading (§8, §11)")
+    if not has_entry:
         f.warn("index-empty", rel, "index.md lists no entries")
     return declared_version
 

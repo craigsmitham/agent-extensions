@@ -88,6 +88,11 @@ conformance and bundle coherence, not the host repository's documentation taxono
 - Keep substantive knowledge out of indexes, and keep every concept reachable from the root
   through meaningful index entries.
 
+When choosing concept boundaries, restructuring discovery, or checking whether readers can find
+the right concept, read [Discovery and granularity](references/discovery-and-granularity.md).
+It explains how to review discovery routes and the [synthetic delivery bundle](examples/delivery/index.md).
+Use independently useful concepts; keep the context needed when search bypasses their parents.
+
 ## Workflows
 
 ### Create a new bundle
@@ -102,7 +107,9 @@ conformance and bundle coherence, not the host repository's documentation taxono
 4. Finish the root `index.md` with `okf_version: "0.2"` and the exact concept titles and
    descriptions. This is the only `index.md` permitted to have frontmatter.
 5. Start `log.md` at the root with an initialization entry (`templates/log.md`).
-6. Walk the bundle once from the root index and once by likely search terms, then validate.
+6. Review both index and search routes using `references/discovery-and-granularity.md`, then
+   validate. Check that the selected concept answers the reader's question; structural reachability
+   alone does not establish usefulness.
 
 ### Convert existing material into OKF
 
@@ -123,8 +130,8 @@ conformance and bundle coherence, not the host repository's documentation taxono
    agent, or process that performed it.
 7. Prefer structural markdown (tables, lists, fenced blocks) over prose paragraphs. Both humans and
    retrieval do better with structure.
-8. Reconcile the completed concepts with the discovery map, walk both browse and search routes, and
-   validate.
+8. Reconcile the completed concepts with the discovery map, review both browse and search routes,
+   and validate.
 
 ### Extend or maintain an existing bundle
 
@@ -146,9 +153,13 @@ Then:
 - Add a `verified` entry only on an actual verification event. Append to the list; do not overwrite.
 - Refresh `stale_after` only when the content was genuinely re-confirmed.
 - Mark superseded concepts `status: deprecated` rather than deleting them — inbound links survive.
+- For moves, splits, or changed source authority, follow
+  [Maintenance and identity](references/frontmatter.md#maintenance-and-identity). Paths are concept
+  IDs: preserve useful old routes and repair inbound links, including path-valued metadata.
 - Update the enclosing `index.md`; if bundle scope changed, also update the root introduction and
   any publisher description. Append a dated `log.md` entry in the same change.
-- Validate.
+- Review affected discovery routes and validate. Report edits newer than recorded verification
+  separately from the standard trust tier; never create a verification event merely to clear a finding.
 
 ### Validate or audit a bundle
 
@@ -165,6 +176,12 @@ on their merits — several are advisory by design (broken links are explicitly 
 Timestamp-format findings are warnings under §11's optional-family guidance. `--strict` also
 fails on warnings without changing the base-conformance result. The legacy `--today YYYY-MM-DD`
 clock override means midnight UTC; prefer `--now` for precise staleness checks.
+
+Index entries need headings and must be links (§8, §11); malformed structure is an error. Missing
+indexes, descriptions, and cross-link targets remain advisory. The informational
+`verification-predates-content` finding (`--info`) compares valid timestamps without changing trust
+tiers or declaring content false. See [Validation boundaries](references/validation.md) for the
+rule-to-severity mapping and checks that require a reader or renderer.
 
 The bundled validator checks OKF v0.2 and general authoring hazards; it does not enforce arbitrary
 producer application profiles. When a profile applies, run its validator when one exists and
@@ -238,16 +255,24 @@ Common starting values: `BigQuery Table`, `BigQuery Dataset`, `API Endpoint`, `M
 
 ## Links and paths
 
-Prefer **bundle-relative** links beginning with `/` — they survive a document moving within its
-subdirectory:
+Choose links for the intended consumer. OKF-aware consumers interpret **bundle-relative** links
+beginning with `/` from the bundle root; this is the spec's recommended form and does not depend
+on the source document's directory:
 
 ```markdown
 See the [customers table](/tables/customers.md) for the join key.
 ```
 
-Relative links (`./other.md`) are also valid. Links are untyped: the relationship kind lives in the
-surrounding prose, not the link. Consumers must tolerate broken links, so a link to a not-yet-written
-concept is legitimate — the validator reports these as warnings so you can tell intent from typo.
+For GitHub or ordinary file-based Markdown navigation, prefer valid **file-relative** links such
+as `../tables/customers.md` from a document in `guides/`. A leading `/` in a web renderer need not
+mean the OKF bundle root. This is a rendering choice, not a different conformance rule; the
+upstream reference agent makes the same GitHub-oriented choice. Follow an existing convention
+when it works for the intended consumers, and check representative links in each supported renderer
+as well as with the validator. Neither form survives moving the target without repair.
+
+Links are untyped: state relationships such as prerequisite, alternative, or successor in the
+surrounding prose. Consumers must tolerate broken links, so a link to a not-yet-written concept
+is legitimate — the validator reports these as warnings so you can tell intent from typo.
 
 Path-valued fields (`resource`, `sources[].resource`, `computation`, `executor.resource`,
 `attester.resource`) accept an absolute URL, a bundle-relative path, or a relative path. A

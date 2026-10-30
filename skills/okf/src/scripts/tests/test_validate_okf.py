@@ -106,6 +106,58 @@ sources:
         self.write("index.md", "---\nokf_version: 0.2\n---\n\n# Bundle\n")
         self.assertIn("okf-version-type", self.codes("warn"))
 
+    def test_index_structure_is_required_at_root_and_nested_levels(self) -> None:
+        cases = {
+            "": "index-structure",
+            "An introduction without a heading.\n": "index-structure",
+            "* [Concept](concept.md)\n": "index-structure",
+            "* [Concept](concept.md)\n\n# Later heading\n": "index-structure",
+            "# Bundle\n\n* Unlinked concept\n": "index-entry",
+            "# Bundle\n\n* [Undefined reference]\n": "index-entry",
+            "```markdown\n# Example only\n```\n": "index-structure",
+            "<!-- # Comment only -->\n": "index-structure",
+        }
+        for path in ("index.md", "section/index.md"):
+            for body, expected in cases.items():
+                with self.subTest(path=path, body=body):
+                    index = self.write(path, body)
+                    self.assertIn(expected, self.codes("error"))
+                    index.unlink()
+
+    def test_index_accepts_standard_heading_and_link_forms(self) -> None:
+        for body in (
+            "# Bundle\n\n* [Concept](concept.md)\n",
+            "# `Bundle`\n\n- [Concept](concept.md)\n",
+            "Bundle\n======\n\n+ [Concept](concept.md)\n",
+            "Bundle\n------\n\n- [Concept](concept.md)\n",
+            "# Bundle\n\n- [Concept][target]\n\n[target]: concept.md\n",
+            "# Bundle\n\n- [Concept][]\n\n[Concept]: concept.md\n",
+            "# Bundle\n\n- [Concept]\n\n[concept]: concept.md\n",
+            "# Bundle\n\n```markdown\n- Not an entry\n```\n\n- [Concept](concept.md)\n",
+        ):
+            with self.subTest(body=body):
+                self.write("index.md", body)
+                self.assertEqual(set(), self.codes("error"))
+
+    def test_headed_empty_index_remains_advisory(self) -> None:
+        self.write("index.md", "# Empty directory\n")
+        self.assertEqual(set(), self.codes("error"))
+        self.assertIn("index-empty", self.codes("warn"))
+
+    def test_missing_index_and_broken_links_remain_conformant(self) -> None:
+        self.write("concept.md", concept(
+            "type: Unregistered type\ncustom_key: retained",
+            "# Concept\n\nSee [Future concept](missing.md).\n",
+        ))
+        self.assertEqual(set(), self.codes("error"))
+        self.assertTrue({"discovery-root-missing", "link-broken"} <= self.codes("warn"))
+
+    def test_bad_index_structure_fails_cli_without_strict(self) -> None:
+        self.write("index.md", "* [Future concept](missing.md)\n")
+        code, output, _ = self.run_cli()
+        self.assertEqual(1, code)
+        self.assertFalse(json.loads(output)["base_conformant"])
+
     def test_invalid_optional_dates_are_warnings(self) -> None:
         self.write(
             "concept.md",
@@ -156,6 +208,97 @@ sources:
         _, stats = self.validate()
         self.assertEqual(1, stats["tiers"]["machine-confirmed"])
         self.assertEqual(1, stats["tiers"]["human-reviewed"])
+
+    def test_verification_freshness_compares_instants_without_changing_tier(self) -> None:
+        for checked_at, predates in (
+            ("2026-08-26T11:59:59Z", True),
+            ("2026-08-26T07:00:00-05:00", False),
+            ("2026-08-27T01:00:00+13:00", False),
+            ("2026-08-26T12:00:01Z", False),
+        ):
+            with self.subTest(checked_at=checked_at):
+                self.write("concept.md", concept(
+                    "type: Reference\n"
+                    "generated: { by: process:synthetic, at: 2026-08-26T12:00:00Z }\n"
+                    f"verified: {{ by: human:reviewer, at: {checked_at} }}\n"
+                ))
+                findings, stats = self.validate()
+                self.assertEqual({"human-reviewed": 1}, stats["tiers"])
+                self.assertEqual(0, findings.count("error"))
+                self.assertEqual(predates, "verification-predates-content" in self.codes("info"))
+                self.assertNotIn("verification-predates-content", self.codes("warn"))
+
+    def test_latest_valid_verification_is_independent_of_order_and_actor(self) -> None:
+        old_human = "  - { by: human:reviewer, at: 2026-08-25T12:00:00Z }\n"
+        new_machine = "  - { by: process:synthetic, at: 2026-08-27T12:00:00Z }\n"
+        for events in (old_human + new_machine, new_machine + old_human):
+            with self.subTest(events=events):
+                self.write("concept.md", concept(
+                    "type: Reference\n"
+                    "generated: { by: process:synthetic, at: 2026-08-26T12:00:00Z }\n"
+                    "verified:\n" + events
+                ))
+                _, stats = self.validate()
+                self.assertEqual({"human-reviewed": 1}, stats["tiers"])
+                self.assertNotIn("verification-predates-content", self.codes())
+
+    def test_invalid_later_event_does_not_hide_unreviewed_change(self) -> None:
+        self.write("concept.md", concept(
+            "type: Reference\n"
+            "generated: { by: process:synthetic, at: 2026-08-26T12:00:00Z }\n"
+            "verified:\n"
+            "  - { by: human:reviewer, at: 2026-08-25T12:00:00Z }\n"
+            "  - { at: 2026-08-27T12:00:00Z }\n"
+            "  - { by: human:reviewer, at: 2026-08-28T12:00:00 }\n"
+        ))
+        self.assertIn("verification-predates-content", self.codes("info"))
+
+    def test_unknown_timestamps_do_not_infer_verification_freshness(self) -> None:
+        for metadata in (
+            "verified: { by: human:reviewer, at: 2026-08-25T12:00:00Z }",
+            "generated: { by: process:synthetic, at: 2026-08-26T12:00:00Z }",
+            "generated: { by: process:synthetic, at: 2026-08-26 }\n"
+            "verified: { by: human:reviewer, at: 2026-08-25T12:00:00Z }",
+            "generated: { by: process:synthetic, at: 2026-08-26T12:00:00Z }\n"
+            "verified: { by: human:reviewer, at: 2026-08-25 }",
+        ):
+            with self.subTest(metadata=metadata):
+                self.write("concept.md", concept("type: Reference\n" + metadata))
+                self.assertNotIn("verification-predates-content", self.codes())
+
+    def test_verification_observation_is_info_only_even_in_strict_mode(self) -> None:
+        self.write("index.md", "# Bundle\n\n* [Concept](concept.md)\n")
+        original = concept(
+            "type: Reference\n"
+            "generated: { by: process:synthetic, at: 2026-08-26T12:00:00Z }\n"
+            "verified: { by: human:reviewer, at: 2026-08-25T12:00:00Z }\n"
+        )
+        path = self.write("concept.md", original)
+        for info in (False, True):
+            code, output, _ = self.run_cli("--strict", *(["--info"] if info else []))
+            data = json.loads(output)
+            self.assertEqual(0, code)
+            self.assertTrue(data["base_conformant"])
+            self.assertEqual({"human-reviewed": 1}, data["summary"]["trust_tiers"])
+            self.assertEqual(info, any(
+                f["code"] == "verification-predates-content" for f in data["findings"]
+            ))
+        self.assertEqual(original, path.read_text(encoding="utf-8"))
+
+    def test_concept_template_does_not_claim_unobserved_metadata(self) -> None:
+        template = VALIDATOR_PATH.parents[1] / "templates" / "concept.md"
+        fm = VALIDATOR.parse_mapping_frontmatter(template.read_text(encoding="utf-8"))
+        self.assertTrue(fm["type"])
+        self.assertFalse({"verified", "generated", "sources", "resource", "stale_after", "usage_window"} & fm.keys())
+
+    def test_worked_example_has_consistent_discovery_and_resolvable_links(self) -> None:
+        example = VALIDATOR_PATH.parents[1] / "examples" / "delivery"
+        findings, stats = VALIDATOR.validate(
+            example, VALIDATOR.dt.datetime(2026, 10, 30, tzinfo=VALIDATOR.dt.timezone.utc)
+        )
+        self.assertEqual([], findings.items)
+        self.assertEqual(3, stats["concepts"])
+        self.assertEqual({"unverified": 3}, stats["tiers"])
 
     def test_invalid_status_is_not_counted_as_stable(self) -> None:
         self.write("concept.md", concept("type: Reference\nstatus: proposed"))

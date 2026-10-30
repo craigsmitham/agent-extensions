@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.3.0 — 2026-10-30
+
+- Add discovery-route review, concept-boundary guidance, and a synthetic
+  bundle demonstrating browsing, direct search, nearby alternatives, and shared
+  definitions. Keep detailed guidance conditional on the authoring task.
+- Start concept templates without example provenance, verification, usage, or
+  freshness claims. Add optional metadata only from evidence; a format check
+  does not verify the knowledge in a concept.
+- Choose link forms for the intended consumer: retain OKF bundle-root semantics
+  and explain file-relative navigation for GitHub and ordinary Markdown readers.
+  Add migration guidance for paths, successor routes, incoming metadata links,
+  changed source authority, and historical verification.
+- Correct index structure severity under §8 and §11: missing headings, entries
+  before headings, and non-link entries now fail base validation. Accept Setext
+  headings and reference-style links; missing indexes, empty headed indexes,
+  missing descriptions, and broken cross-links remain advisory. Discovery
+  extraction remains limited to inline link entries.
+- Add informational `verification-predates-content` when a content-change
+  timestamp is later than the latest complete valid verification. Compare
+  instants without changing trust tiers, deleting history, or failing `--strict`.
+- Add focused validator regressions and validate the runtime example's metadata,
+  reachability, and links.
+- Migration: fix malformed index groups when updating from 0.2.0; some previous
+  successful validations now fail. OKF remains v0.2, with no new metadata fields,
+  runtime dependencies, network access, or execution authority. Retain skill
+  0.2.0 to recover earlier validation behavior. No existing bundle is migrated.
+
 ## 0.2.0 — 2026-10-30
 
 - Align with the canonical `GoogleCloudPlatform/open-knowledge-format` spec and
