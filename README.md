@@ -41,6 +41,8 @@ again claimed scope that has not been written.
 | Skill | Purpose | Install |
 | --- | --- | --- |
 | [`align`](./skills/align/README.md) | Align a codebase or a specified part with supplied or identified requirements and guidance. | `axm install @craigsmitham/skills/align` |
+| [`improve`](./skills/improve/README.md) | Improve a codebase or a specified part with evidence-backed gains in fitness for its intended purpose. | `axm install @craigsmitham/skills/improve` |
+| [`experiment`](./skills/experiment/README.md) | Experiment within a codebase or a specified scope to reduce uncertainty about an engineering question through empirical evidence. | `axm install @craigsmitham/skills/experiment` |
 | [`prune`](./skills/prune/README.md) | Prune a codebase or a specified part by removing unnecessary elements and their associated maintenance burden. | `axm install @craigsmitham/skills/prune` |
 | `temporal-dates` | JavaScript Temporal type selection, API usage, interoperability, and pitfalls | `axm install @craigsmitham/skills/temporal-dates` |
 | `okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/okf` |

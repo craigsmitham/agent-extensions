@@ -34,7 +34,9 @@
     "product-docs": "workspace",
     "generalize": "workspace",
     "align": "workspace",
-    "prune": "workspace"
+    "prune": "workspace",
+    "improve": "workspace",
+    "experiment": "workspace"
   },
   "rules": {
     "use-effect": {
