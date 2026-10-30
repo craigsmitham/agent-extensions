@@ -7,9 +7,11 @@ description: "{{One sentence distinguishing this concept from its neighbors.}}"
 # Canonical URI of the underlying asset. Delete for abstract concepts.
 resource: "{{https://...}}"
 tags: ["{{tag}}", "{{tag}}"]
+# All timestamps are examples: replace with supported instants and offsets,
+# or omit optional fields when unknown. Do not infer midnight UTC from a date.
 # Lifecycle. Absent status means `stable`. Delete either line if not applicable.
 status: draft
-stale_after: 2027-01-01
+stale_after: 2027-01-01T00:00:00Z
 # Trust. `by` is an actor: <producer>/<version>, human:<id>, or process:<id>.
 generated: { by: "{{producer}}/{{version}}", at: 2026-01-01T00:00:00Z }
 # Add only on a real verification event. Append; never overwrite. Delete if unverified.
@@ -22,8 +24,8 @@ sources:
     title: "{{Human-readable label}}"
     author: "team:{{id}}"
     usage_count: 0
-    last_modified: 2026-01-01
-usage_window: { from: 2026-01-01, to: 2026-01-31 }
+    last_modified: 2026-01-01T00:00:00Z
+usage_window: { from: 2026-01-01T00:00:00Z, to: 2026-02-01T00:00:00Z }
 ---
 
 # {{Human-readable display name; match `title` above}}

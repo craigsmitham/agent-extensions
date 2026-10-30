@@ -16,10 +16,13 @@ OKF v0.2 represents knowledge as a directory of markdown files with YAML frontma
 registry, no central authority, no required tooling. This skill covers producing conformant bundles
 and keeping them coherent as they grow.
 
-The full spec is vendored at `references/SPEC.md` (pinned to upstream commit `3fcbb9f`, retrieved
-2026-07-27). Read it for Attested Computation details (§10), the v0.1 migration (§13), or any
-question this file does not answer. Do not fetch the spec from the network — the vendored copy is
-the version this skill targets.
+The full spec is vendored at `references/SPEC.md` from the canonical
+`GoogleCloudPlatform/open-knowledge-format` repository (commit `ad30107`, retrieved
+2026-10-30). Read it for Attested Computation details (§10), the v0.1 migration (§13), or any
+question this file does not answer. Use that pinned copy for ordinary bundle work. When explicitly
+asked to align this skill with newer upstream guidance, compare the canonical spec and docs,
+refresh the pin, and reconcile the instructions, templates, and validator together. The upstream
+README's reference agent and visualizer are examples, not required OKF tooling.
 
 ## Invariants
 
@@ -116,7 +119,8 @@ conformance and bundle coherence, not the host repository's documentation taxono
 5. **Attribute per claim** using [Sources and claim attribution](#sources-and-claim-attribution).
 6. **Set `generated`** to the actor that actually did the conversion, e.g.
    `generated: { by: claude/opus-5, at: <now, ISO 8601> }`. Do not set `verified` — conversion is
-   generation, not verification. A human reviewer adds `verified` afterwards.
+   generation, not verification. Add `verified` only after an actual check, recording the human,
+   agent, or process that performed it.
 7. Prefer structural markdown (tables, lists, fenced blocks) over prose paragraphs. Both humans and
    retrieval do better with structure.
 8. Reconcile the completed concepts with the discovery map, walk both browse and search routes, and
@@ -153,10 +157,14 @@ python3 scripts/validate_okf.py <bundle>              # errors + warnings
 python3 scripts/validate_okf.py <bundle> --info       # also recommended-field gaps
 python3 scripts/validate_okf.py <bundle> --summary    # type inventory, trust tiers, staleness
 python3 scripts/validate_okf.py <bundle> --json       # machine-readable
+python3 scripts/validate_okf.py <bundle> --now 2026-10-30T12:00:00Z  # fixed staleness instant
 ```
 
 Report findings by severity and fix `error` findings before reporting done. Weigh `warn` findings
 on their merits — several are advisory by design (broken links are explicitly legal per §11).
+Timestamp-format findings are warnings under §11's optional-family guidance. `--strict` also
+fails on warnings without changing the base-conformance result. The legacy `--today YYYY-MM-DD`
+clock override means midnight UTC; prefer `--now` for precise staleness checks.
 
 The bundled validator checks OKF v0.2 and general authoring hazards; it does not enforce arbitrary
 producer application profiles. When a profile applies, run its validator when one exists and
@@ -207,6 +215,13 @@ Examples illustrate rules but cannot alone establish correctness.[^sbe]
 Read [Frontmatter reference](references/frontmatter.md) when choosing field forms,
 recording provenance or lifecycle metadata, or interpreting actors and trust tiers.
 `type` remains the only always-required key; optional metadata must be truthful.
+Every timestamp-valued key uses an ISO 8601 datetime with an explicit UTC offset,
+such as `2026-10-30T12:00:00Z`. This includes `generated.at`, `verified[].at`,
+`sources[].last_modified`, shared and per-source `usage_window` endpoints, and
+`stale_after`. Staleness is `now >= stale_after`, comparing instants. Log headings
+remain `YYYY-MM-DD`. When migrating date-only metadata, establish its intended
+time and offset from the source or producer policy; do not invent precision or
+verification events. See the frontmatter reference for migration guidance.
 
 ## Type discipline
 

@@ -13,11 +13,12 @@ material has been reorganized, summarized, and adapted for agent use.
 
 ## Open Knowledge Format
 
-`okf/src/references/SPEC.md` is a vendored copy of the
-[Open Knowledge Format v0.2 specification](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
-from GoogleCloudPlatform's `knowledge-catalog` repository, pinned in the file's
-header to upstream commit `3fcbb9f828c2f23d109c855ee403c3a4c81f3a96` and
-retrieved on 2026-07-27. The upstream work is licensed under Apache-2.0. A
+`skills/okf/src/references/SPEC.md` is a vendored copy of the
+[Open Knowledge Format v0.2 specification](https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/ad30107c31c06aec8a7d5636e0d1058118604e6f/SPEC.md)
+from GoogleCloudPlatform's `open-knowledge-format` repository, pinned in the file's
+header to upstream commit `ad30107c31c06aec8a7d5636e0d1058118604e6f` and
+retrieved on 2026-10-30. The upstream work is licensed under Apache-2.0; its license
+is included at `skills/okf/src/references/LICENSE-OKF.txt`. A
 vendor header was added; the specification body is otherwise unchanged from
 that pinned revision.
 
