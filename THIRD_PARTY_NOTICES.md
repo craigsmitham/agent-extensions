@@ -34,6 +34,14 @@ vendored copy of the Effect source.
 to authoritative public references. It does not vendor the TC39 specification
 or MDN documentation.
 
+## Software pruning
+
+The `prune` skill contains original guidance inspired by David Parnas's work on
+software contraction, SWEBOK's maintenance and retirement guidance, and Martin
+Fowler's refactoring work. Its [package README](skills/prune/README.md) links
+the sources and explains their contributions. No source text or code is
+vendored; the package's original instructions and explanatory prose use MIT.
+
 ## Software alignment
 
 The `align` skill contains original guidance inspired by W3C's specification

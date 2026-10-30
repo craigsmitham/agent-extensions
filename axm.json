@@ -33,7 +33,8 @@
     "devops-docs": "workspace",
     "product-docs": "workspace",
     "generalize": "workspace",
-    "align": "workspace"
+    "align": "workspace",
+    "prune": "workspace"
   },
   "rules": {
     "use-effect": {

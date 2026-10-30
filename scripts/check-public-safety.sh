@@ -161,6 +161,7 @@ expected=(
   skills/manage-work-items
   skills/okf
   skills/product-docs
+  skills/prune
   skills/research
   skills/spot-spew
   skills/temporal-dates
