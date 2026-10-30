@@ -34,6 +34,15 @@ vendored copy of the Effect source.
 to authoritative public references. It does not vendor the TC39 specification
 or MDN documentation.
 
+## Software alignment
+
+The `align` skill contains original guidance inspired by W3C's specification
+guidelines, IETF RFCs 2119 and 8174, SEI's architecture conformance work, and
+NASA's requirements management and product verification guidance. Its
+[package README](skills/align/README.md) links the sources and explains their
+contributions. No source text or code is vendored; the package's original
+instructions and explanatory prose use MIT.
+
 ## Software generalization
 
 The `generalize` skill contains original guidance inspired by Bertrand Meyer,

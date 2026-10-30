@@ -32,7 +32,8 @@
     "spot-spew": "workspace",
     "devops-docs": "workspace",
     "product-docs": "workspace",
-    "generalize": "workspace"
+    "generalize": "workspace",
+    "align": "workspace"
   },
   "rules": {
     "use-effect": {
