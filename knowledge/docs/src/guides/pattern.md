@@ -1,7 +1,7 @@
 ---
 type: Guide
 title: Pattern guide
-description: Use when recurring evidence supports a reusable solution to a problem in context; mine, write, review, and maintain a pattern that supports safe adaptation.
+description: Use when documenting or revising a recurring solution or explicit candidate; mine evidence, write for intended readers, review the pattern claim, and maintain guidance for adaptation.
 tags: [docs, pattern, pattern-library, guide, authoring, evidence, review]
 status: stable
 sources:
@@ -23,23 +23,38 @@ sources:
   - id: va-maturity
     resource: https://design.va.gov/about/maturity-scale
     title: VA Design System — Maturity scale
-generated: { by: "codex/gpt-5.6", at: "2026-08-26T14:02:36Z" }
+  - id: who-will-read
+    resource: https://wirfs-brock.com/rebecca/papers/whowillread/
+    title: Wirfs-Brock and Hvatum — Who Will Read My Patterns?
+  - id: refresh-patterns
+    resource: https://wirfs-brock.com/rebecca/papers/stop-writing-patterns/
+    title: Wirfs-Brock — Should we stop writing design patterns?
+  - id: elephants-patterns
+    resource: https://wirfs-brock.com/rebecca/papers/ElephantsPatternsAndHeuristics/
+    title: Wirfs-Brock and Kohls — Elephants, Patterns, and Heuristics
+  - id: patterns-umwelt
+    resource: https://wirfs-brock.com/rebecca/papers/patternsumwelt/
+    title: Wirfs-Brock and Kohls — Patterns and their Umwelt
+  - id: pattern-feedback
+    resource: https://wirfs-brock.com/rebecca/papers/constructivefeedback/
+    title: Kohls and Wirfs-Brock — Constructive Feedback Using Pattern Smells (2026 preprint)
+generated: { by: "codex/gpt-6", at: "2026-10-30T20:12:16Z" }
 ---
 
 # Pattern guide
 
-Use this guide when recurrence and evidence support mining and writing a
-pattern so another practitioner can recognize the problem, judge whether the
-solution fits, understand its tradeoffs, and create
-a locally appropriate realization. For what makes the form distinct, read
+Use this guide to document or revise a recurring solution, or an explicitly
+labeled candidate, so another practitioner can recognize the problem, judge
+whether the solution fits, understand its tradeoffs, and create a locally
+appropriate realization. For what makes the form distinct, read
 [Pattern explainer](../explainers/pattern.md).
 
 ## Goal
 
-Publish an honestly matured, skimmable pattern whose solution is reusable
-because its invariant, context, forces, consequences, evidence, and
-relationships are clear — not because readers are expected to copy one
-example.
+Publish a skimmable pattern description with an honest evidence claim. Its
+solution is reusable because its invariant, context, forces, consequences,
+evidence, and relationships are clear — not because readers are expected to
+copy one example.
 
 ## Preconditions
 
@@ -55,10 +70,18 @@ example.
 
 ## Steps
 
+First identify intended readers, their prior knowledge, and the situations in
+which they will use the entry. Test those assumptions with representative
+readers; a named audience alone does not establish that the writing serves
+them.[^who-will-read]
+
 1. **Mine before naming.** Gather independent occurrences of the apparent
    solution and the situations that prompted it. Search existing literature
    for the same or overlapping patterns. Do not create a new name merely
-   because local terminology differs.
+   because local terminology differs. Refresh or connect existing patterns
+   when that better meets the need. State what a new entry contributes: new
+   insight, a contextual refinement, or a more accessible account of existing
+   knowledge.[^refresh-patterns]
 
 2. **Separate instances from the invariant.** Compare the occurrences. Mark
    what remains stable, what varies with context, and what is merely an
@@ -70,6 +93,9 @@ example.
    able to recognize the problem before seeing or agreeing with the solution.
    Begin from a constraint, risk, or goal conflict — not from a preferred
    technology.
+   Include the values and assumptions of authors, applying practitioners,
+   and people affected by the result; these perspectives may
+   differ.[^patterns-umwelt]
 
 4. **Surface the forces.** Name the competing goals, constraints, pressures,
    and attractive alternatives that make the problem non-trivial. Include
@@ -78,10 +104,10 @@ example.
    or simple how-to rather than a pattern.
 
 5. **Write the solution core.** State the essential arrangement as a
-   constructive instruction. Describe structure and, when needed, important
-   dynamics. Do not prescribe choices that the context should determine. Move
-   platform-specific commands, complete code, and procedural detail to linked
-   how-tos or examples.
+   constructive instruction. Include the process of creating or evolving it
+   when essential, with room to adjust as feedback changes the next
+   decision.[^patterns-umwelt] Keep concise implementation examples when they
+   reveal the core; move full platform procedures to linked how-tos.
 
 6. **Trace consequences and resulting context.** Explain how the solution
    resolves each important force, where it compromises, what liabilities it
@@ -98,11 +124,15 @@ example.
    one origin. Use three independent occurrences as a recurrence heuristic,
    not a mechanical gate. When evidence is insufficient, label the entry as a
    candidate or proto-pattern.
+   Separate observed behavior from proposed extensions, including untested
+   details within an otherwise observed solution.[^pattern-feedback]
 
 9. **Add examples without turning them into the rule.** Use a diagram, worked
    example, or implementation sketch when it makes the invariant easier to
    see. Label synthetic examples as illustrative. Name which details realize
-   the pattern and which are local choices.
+   the pattern and which are local choices. Show meaningful variation so
+   readers can distinguish the core from one familiar
+   implementation.[^elephants-patterns]
 
 10. **Map relationships by role.** Identify patterns that establish this
     context, solve resulting problems, offer alternatives, complement the
@@ -116,9 +146,10 @@ example.
     relations in clearly named sections that a committed reader can enter
     without slowing the first scan.
 
-12. **Review the relation, not only the prose.** Ask a domain practitioner to
-    challenge recurrence, forces, evidence, and contraindications. Ask a
-    less-familiar practitioner whether the entry supports recognition and a
+12. **Review throughout development.** Use the [review priorities](#review-checks)
+    below. Ask a domain practitioner to challenge recurrence, forces, evidence,
+    and contraindications. Ask a less-familiar practitioner whether the entry
+    supports recognition and a
     fresh realization. Revise the pattern when either reader has to infer the
     problem or copy the example.
 
@@ -176,13 +207,31 @@ For a maintained library:
 - support problem-first browsing rather than technology-only categories;
 - use consistent scan-critical elements across entries;
 - distinguish candidate, established, and deprecated guidance visibly;
-- typed relationships such as *alternative to* or *followed by*;
+- describe typed relationships such as *alternative to* or *followed by*;
 - keep known uses, research, issues, and contribution routes discoverable;
   and
 - claim a **pattern language** only when relationships or sequences help
   readers build coherent larger solutions.
 
 ## Review checks
+
+Review in iterations, addressing the largest uncertainty first. Kohls and
+Wirfs-Brock's feedback approach distinguishes solution and domain problems,
+incomplete analysis, and problems in how the description communicates. An
+unclear solution may need clearer presentation or may lack substance;
+establish which before polishing it.[^pattern-feedback]
+
+1. Check that the solution is recognizable, worthwhile, and grounded in the
+   claimed experience. State its strengths as well as doubts.
+2. Examine the relation among context, forces, solution, and consequences.
+   Investigate missing perspectives and explain how forces interact and
+   which dominate.
+3. Improve examples, representations, names, and prose for the intended
+   audience. Recheck earlier judgments when revision changes the claim.
+
+These are review priorities, not a mandated conference workflow. Treat smell
+labels and suggested remedies as prompts for discussion; prioritize concrete
+evidence and reader impact over counting labels.[^pattern-feedback]
 
 - Can the intended reader recognize the context and problem before seeing the
   answer?
@@ -229,3 +278,9 @@ it.
 - [Reference guide](reference.md)
 - [Explanation guide](explanation.md)
 - [How-to guide](how-to.md)
+
+[^who-will-read]: Wirfs-Brock and Hvatum, [Who Will Read My Patterns?](https://wirfs-brock.com/rebecca/papers/whowillread/).
+[^refresh-patterns]: Wirfs-Brock, [Should we stop writing design patterns?](https://wirfs-brock.com/rebecca/papers/stop-writing-patterns/).
+[^elephants-patterns]: Wirfs-Brock and Kohls, [Elephants, Patterns, and Heuristics](https://wirfs-brock.com/rebecca/papers/ElephantsPatternsAndHeuristics/).
+[^patterns-umwelt]: Wirfs-Brock and Kohls, [Patterns and their Umwelt](https://wirfs-brock.com/rebecca/papers/patternsumwelt/).
+[^pattern-feedback]: Kohls and Wirfs-Brock, [Constructive Feedback Using Pattern Smells](https://wirfs-brock.com/rebecca/papers/constructivefeedback/), 2026 preprint.

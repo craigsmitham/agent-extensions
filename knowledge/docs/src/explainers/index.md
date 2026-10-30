@@ -37,4 +37,4 @@ bundle's top-level organization.
 ## Reusable guidance forms
 
 * [Principle explainer](principle.md) - What a principle document is — a sourced, action-directing articulation of a recognized good that guides judgment without pretending to determine every situation.
-* [Pattern explainer](pattern.md) - What a pattern document is — a named, evidence-backed, adaptable solution to a recurring problem in context, expressed through forces, consequences, and relationships rather than one fixed implementation.
+* [Pattern explainer](pattern.md) - How pattern descriptions communicate recurring solutions in context — their evidence, forces, adaptation, generative potential, and relationships within collections and languages.

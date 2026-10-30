@@ -1,8 +1,8 @@
 ---
 type: Explainer
 title: Pattern explainer
-description: What a pattern document is — a named, evidence-backed, adaptable solution to a recurring problem in context, expressed through forces, consequences, and relationships rather than one fixed implementation.
-tags: [docs, pattern, pattern-library, design, explainer, reference]
+description: How pattern descriptions communicate recurring solutions in context — their evidence, forces, adaptation, generative potential, and relationships within collections and languages.
+tags: [docs, pattern, pattern-description, pattern-library, pattern-language, generativity, umwelt, design, explainer]
 status: stable
 sources:
   - id: hillside-patterns
@@ -26,16 +26,28 @@ sources:
   - id: va-maturity
     resource: https://design.va.gov/about/maturity-scale
     title: VA Design System — Maturity scale
-generated: { by: "codex/gpt-5.6", at: 2026-08-15T16:02:55Z }
+  - id: elephants-patterns
+    resource: https://wirfs-brock.com/rebecca/papers/ElephantsPatternsAndHeuristics/
+    title: Wirfs-Brock and Kohls — Elephants, Patterns, and Heuristics
+  - id: generative-patterns
+    resource: https://wirfs-brock.com/rebecca/papers/explrgenpat2023/
+    title: Hvatum and Wirfs-Brock — Exploring the Generative Nature of Patterns
+  - id: patterns-umwelt
+    resource: https://wirfs-brock.com/rebecca/papers/patternsumwelt/
+    title: Wirfs-Brock and Kohls — Patterns and their Umwelt
+  - id: pattern-smells
+    resource: https://wirfs-brock.com/rebecca/papers/patternsmells/
+    title: Wirfs-Brock and Kohls — Pattern Smells, Get Rid of Them (2026 preprint)
+generated: { by: "codex/gpt-6", at: 2026-10-30T20:12:16Z }
 ---
 
 # Pattern explainer
 
-A **pattern** is a named, evidence-backed, adaptable solution to a **recurring
-problem in a stated context**. It explains the forces that make the problem
-difficult and the consequences of resolving them this way, so a reader can
-reproduce the solution's essential structure without copying one
-implementation.
+A design **pattern** is a recurring problem–solution relationship in context.
+A **pattern description** names and communicates that relationship: its
+essential structure, forces, consequences, and supporting evidence. A
+particular implementation is an **instance**. Neither an instance nor its
+written description exhausts the pattern.[^elephants-patterns]
 
 The name makes experience discussable. *Circuit Breaker*, *Strangler Fig*, or
 *One Thing per Page* can stand for a larger body of judgment once a community
@@ -43,11 +55,13 @@ shares the meaning. The entry preserves that meaning: not only what experienced
 practitioners tend to do, but when, why, with what tradeoffs, and on what
 evidence.
 
-A pattern is a reusable guidance form, distinct from an explainer, guide, or
-principle. Its structured fields serve lookup during work, while its forces,
-rationale, and consequences supply the understanding needed to adapt the
-solution safely. A compact solution statement instructs generatively; a full
-implementation procedure still belongs in a how-to guide.
+A pattern description is a reusable guidance form, distinct from an explainer,
+guide, or principle. Its structured fields serve lookup during work, while its
+forces, rationale, and consequences supply the understanding needed to adapt the
+solution safely. It can explain both the arrangement and the process of
+creating it; a full environment-specific procedure belongs in a linked how-to.
+Here, *pattern entry* means the description, and the evidence requirements
+below govern the strength of its claims.
 
 To write one, use [Pattern guide](../guides/pattern.md).
 
@@ -57,7 +71,7 @@ To write one, use [Pattern guide](../guides/pattern.md).
 | --- | --- |
 | Name, intent, context, problem, applicability | Reference — recognize and compare the entry while working |
 | Forces, rationale, consequences | Explanation — understand why the solution fits and what it costs |
-| Solution core | A generative prescription — state the invariant, not a full procedure |
+| Solution core | Constructive guidance — the reusable arrangement and how it can be created |
 | Implementation steps | How-to guide — link rather than absorbing environment-specific instructions |
 | Worked introduction for a newcomer | Tutorial — teach separately when first-use learning is a real need |
 
@@ -72,13 +86,13 @@ guide.
 | --- | --- |
 | **Reader need** | Select and adapt an established response to a recurring problem |
 | **Success** | The reader recognizes fit, understands the tradeoffs, and can produce a locally appropriate realization |
-| **Voice** | Conditional and generative: *in this context, when these forces recur, arrange the solution this way* |
+| **Voice** | Conditional and constructive: *in this context, when these forces recur, arrange the solution this way* |
 | **Typical prompt** | *We keep encountering X — what established approach fits, and what will it cost?* |
 | **Title cue** | A short, memorable name for the solution rather than the tool or one project |
 
 ## What makes it a pattern
 
-A sound pattern has all of these properties:
+A useful description of an established pattern makes these properties clear:
 
 - **Recurring** — it abstracts over multiple occurrences rather than
   presenting one invention or anecdote.
@@ -86,7 +100,7 @@ A sound pattern has all of these properties:
   solution are relevant.
 - **Force-resolving** — it exposes competing goals and constraints instead of
   declaring an unexplained best practice.
-- **Generative** — it tells readers enough to construct a new realization,
+- **Constructive** — it tells readers enough to construct a new realization,
   while leaving incidental form open to local conditions.
 - **Named** — its concise, evocative name becomes shared vocabulary.
 - **Evidence-backed** — known uses, research, review, or other observations
@@ -99,6 +113,30 @@ starting point, not a sufficient entry. Without forces, evidence, and
 consequences it is easy to package ordinary advice as something more proven
 and transferable than it is.
 
+## Adaptation and generative potential
+
+Pattern descriptions convey design heuristics: useful, fallible guidance.
+Applying them requires judgment, including knowledge the description leaves
+implicit. Experts may supply that knowledge readily; newcomers may need
+contrasting examples to recognize the same pattern across different
+implementations.[^elephants-patterns]
+
+Hvatum and Wirfs-Brock distinguish degrees of **generativity**. A pattern can
+solve an immediate problem well without having much wider effect. More
+generative patterns can reshape the problem situation and enable benefits
+beyond the immediate solution, often through combinations of patterns. Their
+quality depends on what people create and experience, not just the elegance
+of the description.[^generative-patterns] This bundle therefore expects
+constructive guidance without making strong generativity a universal entry
+requirement.
+
+**Umwelt** names the situated perceptions and experience through which someone
+recognizes what matters. Authors, designers applying patterns, and people
+living with the resulting solutions may see different needs. A description
+must bridge those perspectives. Application involves **unfolding**: making
+successive design choices, observing their fit, and adapting. Leave room for
+those choices while explaining the essential structure.[^patterns-umwelt]
+
 ## Canonical anatomy
 
 Pattern traditions use different forms. Their stable semantic core matters
@@ -110,7 +148,7 @@ more than reproducing one template exactly.
 | **Context** | In what circumstances does the problem arise? |
 | **Problem** | What recurring tension needs resolution? |
 | **Forces** | Which goals, constraints, and pressures conflict? |
-| **Solution** | What essential arrangement resolves those forces? |
+| **Solution** | What essential arrangement resolves those forces, and how can it be created? |
 | **Consequences / resulting context** | What improves, worsens, or becomes necessary next? |
 | **Applicability** | When should or should not the reader use it? |
 | **Evidence / known uses** | Where has it recurred, and why should the reader trust the claim? |
@@ -166,7 +204,7 @@ Both can influence action. Their unit and promise differ:
 | Unit | Recurring problem/solution relation | One real-world goal |
 | Reader decision | Whether and how to adapt the solution | Which actions complete the task |
 | Specificity | Stable invariant with local variation | Concrete directions in the reader's situation |
-| Sequence | Usually none; may describe structure or dynamics | Ordered enough to execute |
+| Sequence | May describe a recurring process for creating or evolving the arrangement | Ordered enough to execute |
 | Rationale | Forces and tradeoffs are central | Only what supports successful action now |
 | Evidence | Known uses support the pattern claim | Verification shows this procedure works |
 
@@ -177,7 +215,8 @@ pattern.
 
 ## Collection, catalog, library, and language
 
-Do not use these terms interchangeably:
+This bundle uses the following working distinctions. *Catalog* and *library*
+are organizational conventions here, not universal maturity grades:
 
 - A **collection** is any group of patterns.
 - A **catalog** makes them consistently browsable and comparable, commonly by
@@ -185,7 +224,9 @@ Do not use these terms interchangeably:
 - A **library** is a maintained catalog with evidence, lifecycle, ownership,
   contribution, and retirement practices.
 - A **pattern language** connects patterns through meaningful relationships
-  and sequences so readers can generate coherent larger solutions.
+  and sequences so readers can generate coherent larger solutions within a
+  declared domain. It is a kind of collection, not a compulsory destination
+  for every catalog.
 
 A folder of pattern pages is not yet a language. The language claim becomes
 useful only when the collection guides movement: a larger pattern establishes
@@ -249,6 +290,11 @@ apparently independent uses truly are independent.
 
 ## Failure modes (common)
 
+Wirfs-Brock and Kohls call warning signs in patterns and their descriptions
+**pattern smells**. They invite investigation; they are not automatic defects
+or a validated scoring system. The following is this bundle's working list,
+not a reproduction of their taxonomy.[^pattern-smells]
+
 - **Template theatre** — all expected headings are present, but the relation
   among context, forces, and solution is weak.
 - **Solution looking for a problem** — a favored technology appears first and
@@ -267,6 +313,10 @@ apparently independent uses truly are independent.
   they are alternatives, prerequisites, or follow-ons.
 - **Maturity inflation** — a candidate is called proven because the author
   believes in it.
+- **Flat forces** — pressures are listed without explaining their relative
+  importance or interactions.[^pattern-smells]
+- **Fantasy assumptions** — the solution silently depends on resources or
+  human behavior its users cannot reasonably expect.[^pattern-smells]
 - **Dead library** — patterns have no owner, evidence refresh, deprecation, or
   replacement path.
 
@@ -280,3 +330,8 @@ apparently independent uses truly are independent.
 - [Reference explainer](reference.md) · [Reference guide](../guides/reference.md)
 - [Explanation explainer](explanation.md) · [Explanation guide](../guides/explanation.md)
 - [How-to explainer](how-to.md) · [How-to guide](../guides/how-to.md)
+
+[^elephants-patterns]: Wirfs-Brock and Kohls, [Elephants, Patterns, and Heuristics](https://wirfs-brock.com/rebecca/papers/ElephantsPatternsAndHeuristics/).
+[^generative-patterns]: Hvatum and Wirfs-Brock, [Exploring the Generative Nature of Patterns](https://wirfs-brock.com/rebecca/papers/explrgenpat2023/).
+[^patterns-umwelt]: Wirfs-Brock and Kohls, [Patterns and their Umwelt](https://wirfs-brock.com/rebecca/papers/patternsumwelt/).
+[^pattern-smells]: Wirfs-Brock and Kohls, [Pattern Smells, Get Rid of Them](https://wirfs-brock.com/rebecca/papers/patternsmells/), 2026 preprint; the authors identify evaluation of the smells and remedies as future work.

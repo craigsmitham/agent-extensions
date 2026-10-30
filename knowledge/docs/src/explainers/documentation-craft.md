@@ -40,7 +40,7 @@ sources:
     title: Martin Fowler — Writing Software Patterns
 generated:
   by: codex/gpt-6
-  at: 2026-09-11T00:08:06Z
+  at: 2026-10-30T20:12:16Z
 ---
 
 # Documentation craft
@@ -200,14 +200,15 @@ created**. This bundle distinguishes four forms of **reusable guidance**:
 | Explainer | *What is this, why does it matter, and where are its boundaries?* | Concepts, context, relationships, and distinctions |
 | Guide | *How do I create, revise, or maintain it?* | Goal-oriented authoring or remediation process |
 | Principle | *What durable direction should guide this class of decisions, and why?* | Recognized good, normative direction, warrant, scope, tensions, judgment cases, and enactments |
-| Pattern | *This recurring problem is present — what established solution fits, and what will it cost?* | Context, forces, generative solution, consequences, evidence, and relationships |
+| Pattern description | *This recurring problem is present — what established solution fits, and what will it cost?* | Context, forces, constructive solution, consequences, evidence, and relationships |
 
 An explainer and guide often form a useful pair: understanding stays separate
 from action while each links directly to the other. Not every subject needs
 both. A principle is warranted when a sourced, action-directing claim gives
-durable orientation to judgment in service of a recognized good. A pattern is
-warranted only when recurrence and evidence support a conditional reusable
-solution. Neither is a decorated guide or a synonym for best practice.
+durable orientation to judgment in service of a recognized good. An established
+pattern claim is warranted when recurrence and evidence support a conditional
+reusable solution; an unconfirmed proposal needs an explicit candidate label.
+Neither form is a decorated guide or a synonym for best practice.
 
 A [practice](practice.md) is not a fifth reusable-guidance form. It is the
 socially sustained, embodied, equipped, purposive, and normative reality in
@@ -228,12 +229,12 @@ combining, and adapting responses to a situation. The produced runbook or
 playbook is a realization of the pattern, not a reason to maintain another
 competing taxonomy.
 
-A principle or pattern is not another Diátaxis reader need. Each combines
-reader jobs while making a different reusable claim. [Principle
+A principle or pattern is not another Diátaxis reader need. Their descriptions
+combine reader jobs while making different reusable claims. [Principle
 explainer](principle.md) defines action-directing normative guidance, and
 [Principle guide](../guides/principle.md) supplies its authoring workflow.
-[Pattern explainer](pattern.md) defines the recurring problem-solution form;
-[Pattern guide](../guides/pattern.md) supplies its distinctive mining and
+[Pattern explainer](pattern.md) distinguishes recurring solutions from their
+descriptions; [Pattern guide](../guides/pattern.md) supplies the mining and
 authoring workflow; the [pattern library](../patterns/) contains actual
 entries.
 

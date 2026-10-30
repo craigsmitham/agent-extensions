@@ -1,15 +1,15 @@
 # Documentation patterns
 
 Evidence-backed, adaptable solutions to recurring documentation problems. A
-pattern states its context, problem, forces, solution, consequences, evidence,
-and relationships; it is not merely a template or preferred example.
+pattern description states its context, problem, forces, solution, consequences,
+evidence, and relationships; it is not merely a template or preferred example.
 
 Read [Pattern explainer](../explainers/pattern.md) to understand the form and
 [Pattern guide](../guides/pattern.md) to author or review one.
 
 ## Library patterns
 
-* [Pattern library](pattern-library.md) - Maintain recurring guidance as a problem-indexed, evidence-bearing catalog with consistent anatomy, typed relationships, ownership, and lifecycle.
+* [Pattern library](pattern-library.md) - Maintain recurring guidance as a problem-indexed, evidence-bearing catalog shaped by reader needs, with consistent anatomy, meaningful relationships, ownership, and feedback from use.
 * [Concept boundaries](concept-boundaries.md) - For a cohesive set of concepts readers repeatedly confuse, keep each positive definition canonical and give their comparative distinctions one explicit boundary document.
 
 ## Operational documentation patterns

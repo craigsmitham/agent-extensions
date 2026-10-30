@@ -1,7 +1,7 @@
 ---
 type: Pattern
 title: Pattern library
-description: Maintain recurring guidance as a problem-indexed, evidence-bearing catalog with consistent anatomy, typed relationships, ownership, and lifecycle.
+description: Maintain recurring guidance as a problem-indexed, evidence-bearing catalog shaped by reader needs, with consistent anatomy, meaningful relationships, ownership, and feedback from use.
 tags: [docs, pattern-library, catalog, evidence, discovery, lifecycle]
 status: stable
 sources:
@@ -26,13 +26,26 @@ sources:
   - id: va-maturity
     resource: https://design.va.gov/about/maturity-scale
     title: VA Design System — Maturity scale
-generated: { by: "codex/gpt-6", at: 2026-09-11T00:08:06Z }
+  - id: collection-value
+    resource: https://wirfs-brock.com/rebecca/papers/valueofpatterncollections/
+    title: Wirfs-Brock and Hvatum — The Value of Pattern Collections (2026 preprint)
+  - id: who-will-read
+    resource: https://wirfs-brock.com/rebecca/papers/whowillread/
+    title: Wirfs-Brock and Hvatum — Who Will Read My Patterns?
+  - id: pattern-smells
+    resource: https://wirfs-brock.com/rebecca/papers/patternsmells/
+    title: Wirfs-Brock and Kohls — Pattern Smells, Get Rid of Them (2026 preprint)
+  - id: generative-patterns
+    resource: https://wirfs-brock.com/rebecca/papers/explrgenpat2023/
+    title: Hvatum and Wirfs-Brock — Exploring the Generative Nature of Patterns
+generated: { by: "codex/gpt-6", at: 2026-10-30T20:12:16Z }
 ---
 
 # Pattern library
 
 Maintain recurring guidance as a **problem-indexed, evidence-bearing catalog
-with consistent anatomy, typed relationships, ownership, and lifecycle**.
+shaped by reader needs, with consistent anatomy, meaningful relationships,
+ownership, and feedback from use**.
 
 ## Context
 
@@ -68,6 +81,11 @@ headings without establishing recurrence, evidence, or useful relationships.
 
 ## Solution
 
+Identify who needs the collection and what improvement they seek. Begin with
+a useful core, test it with practitioners, and grow from feedback about its
+application.[^collection-value] Make underlying design values explicit so
+readers can judge compatibility with their own context.[^generative-patterns]
+
 Create a maintained **pattern library** with:
 
 1. a concise intent thumbnail for every pattern;
@@ -87,6 +105,19 @@ Create a maintained **pattern library** with:
 Keep illustrative examples distinct from known uses. Treat the library as a
 maintained knowledge product, not a directory convention.
 
+Support both quick lookup and learning through a connected example or story.
+Readers may enter with different experience and purposes; test their routes
+through the collection. Where related papers become one collection, reconcile
+terminology, repetition, and reading order instead of merely gathering the
+papers in one place.[^who-will-read]
+
+Provide a route for users to report adaptations, failures, and outcomes.
+Use those reports to revise the collection and decide what to add, replace,
+or retire. Plan how intended readers will discover it and learn about
+updates, and who will sustain that work. Publication alone does not establish
+value; assess benefits for practitioners and the people affected by their
+designs.[^collection-value]
+
 ## Consequences
 
 - Practitioners gain shared vocabulary and can compare tradeoffs before
@@ -98,6 +129,18 @@ maintained knowledge product, not a directory convention.
 - Ownership, review, and deprecation require durable governance capacity.
 - A library without active use and maintenance becomes a graveyard of plausible
   advice.
+
+## Illustrative use
+
+A documentation team starts with [Runbook](runbook.md) and
+[Playbook](playbook.md) entries for recurring operational writing problems.
+An author chooses Runbook to document a rollback procedure, then Playbook to
+support incident diagnosis and coordination, linking that playbook to the
+runbook. The produced documents are instances; the library holds reusable
+pattern descriptions. Trial authors confuse the two entries, so maintainers
+revise their selection cues and relationship before expanding the catalog.
+This hypothetical sequence illustrates adaptation and feedback; it is not a
+known use or a mandatory order of patterns.
 
 ## When to use
 
@@ -129,6 +172,11 @@ maturity depend on evidence, adoption, stability, and deprecation. Together
 these independent libraries support the recurring solution while showing that
 no single page template is universal.
 
+Wirfs-Brock and Hvatum propose the product-lifecycle framing used here as a
+way to improve collections' continuing value. Their essay is a rationale for
+the approach, not empirical validation of this whole library
+pattern.[^collection-value]
+
 ## Pattern language threshold
 
 A library becomes a **pattern language** only when relationships and useful
@@ -137,8 +185,17 @@ cross-links is not automatically a language. Make the stronger claim only when
 the collection guides movement from context through related choices and
 resulting problems.
 
+Show a plausible route through a larger problem, including patterns at the
+scales needed to resolve its subproblems and enough coverage to support the
+intended whole. A map should expose useful local connections and entry points.
+Keep it open to alternatives and patterns from
+other collections; an exhaustive link graph is insufficient.[^pattern-smells]
+
 ## Related patterns
 
+- [Concept boundaries](concept-boundaries.md) — complements the library when
+  readers repeatedly confuse neighboring concepts and need one canonical
+  comparison.
 - [Playbook](playbook.md) — guides assessment, response choices, and coordination
   for a recurring class of situations.
 - [Runbook](runbook.md) — specifies repeatable execution of a bounded operational
@@ -147,3 +204,8 @@ resulting problems.
   its boundaries.
 - [Pattern guide](../guides/pattern.md) — supplies the mining, authoring,
   review, and maintenance process for individual entries.
+
+[^collection-value]: Wirfs-Brock and Hvatum, [The Value of Pattern Collections](https://wirfs-brock.com/rebecca/papers/valueofpatterncollections/), 2026 preprint.
+[^who-will-read]: Wirfs-Brock and Hvatum, [Who Will Read My Patterns?](https://wirfs-brock.com/rebecca/papers/whowillread/).
+[^pattern-smells]: Wirfs-Brock and Kohls, [Pattern Smells, Get Rid of Them](https://wirfs-brock.com/rebecca/papers/patternsmells/), 2026 preprint.
+[^generative-patterns]: Hvatum and Wirfs-Brock, [Exploring the Generative Nature of Patterns](https://wirfs-brock.com/rebecca/papers/explrgenpat2023/).

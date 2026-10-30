@@ -1,5 +1,19 @@
 # Documentation craft update log
 
+## 2026-10-30
+
+- **Pattern alignment**: Revised [Pattern explainer](explainers/pattern.md),
+  [Pattern guide](guides/pattern.md), and [Pattern library](patterns/pattern-library.md)
+  against Rebecca Wirfs-Brock's writings with Christian Kohls and Lise Hvatum.
+  Distinguished patterns, descriptions, and instances; clarified degrees of
+  generativity and the role of situated judgment; retained evidence and
+  candidate-labeling requirements.
+- **Authoring and use**: Added reader-informed authoring, review priorities
+  informed by pattern smells, collection feedback and value guidance, and an
+  illustrative operational-documentation sequence. Added claim-specific source
+  attribution, identified the 2026 preprints, and refreshed previews and the
+  terminology in [Documentation craft](explainers/documentation-craft.md).
+
 ## 2026-09-10
 
 - **Clarification**: Revised [Playbook](patterns/playbook.md) around assessment,

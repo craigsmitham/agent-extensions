@@ -21,4 +21,4 @@ rationale are unclear.
 ## Reusable guidance authoring
 
 * [Principle guide](principle.md) - Use when a recognized good needs durable, sourced direction for judgment; research, write, review, and maintain a principle without collapsing it into a slogan, rule, or pattern.
-* [Pattern guide](pattern.md) - Use when recurring evidence supports a reusable solution to a problem in context; mine, write, review, and maintain a pattern that supports safe adaptation.
+* [Pattern guide](pattern.md) - Use when documenting or revising a recurring solution or explicit candidate; mine evidence, write for intended readers, review the pattern claim, and maintain guidance for adaptation.
