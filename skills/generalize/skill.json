@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "generalize",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generalize a codebase or a specified part to support a broader, coherent family of cases.",
   "keywords": [
     "generalization",
