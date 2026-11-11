@@ -2,6 +2,8 @@
 
 ## 2026-11-11
 
+- **Remove:** Removed references to the retired shared work-item collection.
+
 - **Prune:** Retired generic development, authoring, and adaptation workflows; retained specialized obligation forms, templates, lineage, and review criteria, with shared concepts in foundations.
 
 - Updated executable-specification references to the consolidated software-testing pattern, retaining requirements authority and optional companion status.

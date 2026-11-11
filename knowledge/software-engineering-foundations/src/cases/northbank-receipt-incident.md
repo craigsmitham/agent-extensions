@@ -4,7 +4,7 @@ title: "Northbank receipts: incident, defect, and corrective change"
 description: A fictional receipt-worker failure shows how operational impact, uncertain diagnosis, corrective work, verification, and closure remain connected without collapsing into one record or status.
 tags: [northbank, worked-example, incident, defect-report, change, evidence, maintenance, software-engineering-foundations]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
 ---
 
 # Northbank receipts: incident, defect, and corrective change
@@ -14,7 +14,7 @@ receipt jobs persist until completion. Rendering uses committed Billing data
 and cannot initiate a charge. Spare workers normally preserve service when
 one worker fails. A new workload exhausts capacity across workers and makes
 receipt delays an operational concern. The following records and evidence are
-invented to illustrate the [work-item taxonomy](../work-items/software-work-item-taxonomy.md).
+invented to illustrate incident, defect, and corrective-change records.
 
 The baseline receipt can arrive after the rental transaction; immediate receipt
 availability is not required for collection. A contrasting maintenance example
@@ -83,8 +83,7 @@ boundary. A useful result would identify:
 Those are required fields for the example's evidence, not claims that a real
 test has passed. A clean build is insufficient. A unit test can examine a
 resource-release path; runtime accumulation and job recovery require a world
-that preserves those failure mechanisms. [Defining verification](../work-items/work-item-content-contract.md)
-and cross-boundary tests (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/evidence-matched-test-world`)
+that preserves those failure mechanisms. Cross-boundary tests (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/evidence-matched-test-world`)
 develop the continuation.
 
 Restoration can end the immediate response while the Defect Report and Change

@@ -11,7 +11,7 @@ sources:
   - id: doe-maintenance
     resource: https://www.energy.gov/sites/default/files/2020/04/f74/omguide_complete_w-eo-disclaimer.pdf
     title: DOE — Operations and Maintenance Best Practices Guide, Release 3.0 (2010)
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
 ---
 
 # Run-to-failure maintenance: deliberate acceptance and reactive repair
@@ -121,9 +121,6 @@ examines the evidence that can justify acting sooner without replacing on a
 fixed schedule. The [maintenance strategy comparison](maintenance-strategies.md)
 explains how these choices depend on the particular failure mode.
 
-For the distinction between a failed service event, an underlying defect, and
-the change addressing it, follow the
-[software work-item taxonomy](../work-items/software-work-item-taxonomy.md).
 For the meaning of the service boundary, read
 [SLIs, SLOs, and SLAs](../measurement/service-level-indicators-objectives-and-agreements.md).
 

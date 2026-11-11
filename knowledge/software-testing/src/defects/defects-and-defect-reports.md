@@ -3,7 +3,7 @@ type: Explanation
 title: Defects and Defect Reports
 description: Explains how observations, failures, Defects, Defect Reports, investigation, correction, verification, and closure remain distinct.
 tags: [defect, defect-report, bug, failure, observation, expectation, diagnosis, correction, verification, software-testing]
-generated: { by: codex/gpt-6, at: 2026-11-11T19:46:48Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
 sources:
 - id: prior-recording-defect-reports
   resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/defects/recording-defect-reports.md
@@ -22,9 +22,7 @@ An **observation** records something perceived under stated conditions. A
 **failure** is an observed inability to perform as required or intended. A
 **Defect** is a deficiency in a system or work product relative to an
 applicable expectation or intended use. A **Defect Report** is the durable work
-item that preserves evidence suggesting one or more Defects may exist; it is
-one of the three portable work-item roles defined in the
-Software work-item taxonomy (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#work-items/software-work-item-taxonomy`).
+item that preserves evidence suggesting one or more Defects may exist.
 
 These concepts do not imply one another automatically. An anomaly may have a
 valid explanation. A static finding may establish a Defect without a witnessed

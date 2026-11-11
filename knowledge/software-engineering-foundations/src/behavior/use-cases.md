@@ -14,7 +14,7 @@ sources:
   - id: slice-grow
     resource: "Alistair Cockburn, Slice the Problem, Grow the Solution, v0.95b, EPUB, Humans and Technology Press, 2026"
     title: Alistair Cockburn — Slice the Problem, Grow the Solution, v0.95b
-generated: { by: codex/gpt-6, at: 2026-11-11T19:19:09Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
 ---
 
 # Use cases: goals, behavior, and incremental delivery
@@ -382,7 +382,7 @@ The following connections are this bundle's synthesis:
 | Requirements (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#index`) | Determines which statements are accepted obligations and how their identity, conditions, and evidence are maintained. A use case can express behavioral requirements when that form is accepted. |
 | Domain-driven design (optional companion reading: `@craigsmitham/knowledge/architecture-and-design#domain-driven-design`) | Investigates the language and model behind behavior. A reservation scenario can reveal a distinction between promised capability and assigned equipment; it does not determine aggregates or bounded contexts. |
 | Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`) | Can exercise accepted rules through examples. Use case paths suggest cases to examine; the written narrative alone is not an executable check. |
-| [Work items](../work-items/index.md) | Coordinate changes to the product. Links can relate work to affected use cases without making a delivery ticket the permanent behavioral authority. |
+| Work items | Coordinate changes to the product. Links can relate work to affected use cases without making a delivery ticket the permanent behavioral authority. |
 | [Outcomes and evidence](../value/outcomes-and-evidence.md) | Asks whether the delivered behavior produces the intended outcome. Conforming to a use case does not establish customer value. |
 
 Cockburn explicitly permits use cases to serve as behavioral requirements,

@@ -23,4 +23,3 @@ Companion readings in other discipline bundles are optional. Resolve a named con
 - [Quality](quality/index.md) — Product-quality pillars and cross-cutting evidence relationships.
 - [Requirements](requirements/index.md) — Obligation, authority, maturity, and neighboring artifacts.
 - [Value](value/index.md) — Value, outcomes, risks, and evidence.
-- [Work items](work-items/index.md) — Portable record contracts, identity, lifecycle, and provenance.

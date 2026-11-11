@@ -4,7 +4,7 @@ title: Value and demand model
 description: How Offering, Audience, Need, Job to Be Done, and Value Proposition form an evidence-backed graph rather than a hierarchy.
 tags: [product-management, offering, audience, needs, jobs-to-be-done, value-proposition, software-engineering-foundations]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
 ---
 
 # Value and demand model
@@ -96,9 +96,7 @@ capabilities, and value creation. This section applies those choices by forming
 and testing product meaning.
 Requirements engineering (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#index`) owns normative statements about what a system or
 service must achieve, and the handoff from product meaning to a requirement;
-realization choices belong to Software construction (optional companion reading: `@craigsmitham/knowledge/software-construction#index`). The record
-used to coordinate a change is owned by
-[Work items](../work-items/index.md) in the shared foundations.
+realization choices belong to Software construction (optional companion reading: `@craigsmitham/knowledge/software-construction#index`).
 
 These boundaries are about authority, not isolation. One initiative may draw
 on all of them, provided links do not silently transfer authority from one

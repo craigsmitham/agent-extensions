@@ -2,6 +2,8 @@
 
 ## 2026-11-11
 
+- **Remove:** Removed references to the retired shared work-item collection.
+
 - **Prune:** Consolidated test selection and lifecycle guidance into evidence-matched and owned-test-world patterns; retained browser evidence constraints, diagnostic records, and suite-quality criteria. Consolidated defect workflows into the model and template.
 
 - Consolidated the former foundations guides into [Executable specifications](patterns/executable-specifications.md), established the [Testing pattern collection](patterns/index.md), and updated test-selection routes. Preserved source attribution and illustrative examples; the new pattern description is draft and has not received renewed source verification.

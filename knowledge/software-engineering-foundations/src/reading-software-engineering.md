@@ -8,7 +8,7 @@ sources:
   - id: overview
     resource: design-and-requirements.md
     title: Design and requirements
-generated: { by: codex/gpt-6, at: 2026-11-11T19:56:05Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
 ---
 
 # Reading software engineering
@@ -195,8 +195,7 @@ commitment. Its product-engineering connections (optional companion reading: `@c
 distinguish forecasts from Shape Up's appetite and clarify their different uses
 of baseline and progress measures.
 
-Continue to [Work-item content contract](work-items/work-item-content-contract.md)
-when a bounded change needs completion evidence. Return to
+Return to
 [Value and evidence](#value-and-evidence) when the question is whether completing
 the project produced a worthwhile result.
 
@@ -225,10 +224,6 @@ depend on, including when leaving it alone is a serious option.
    of maintenance decision.
 
 To assess an existing implementation, continue to Codebase review (optional companion reading: `@craigsmitham/knowledge/software-construction#index`).
-To coordinate the resulting work, use [Work items](work-items/index.md): start
-with its taxonomy when deciding whether the concern is an incident, defect, or
-change, then follow the role and common guidance. A work item coordinates the
-intervention; it does not replace the authority for product behavior.
 
 For the meaning of production promises, read
 [SLIs, SLOs, and SLAs](measurement/service-level-indicators-objectives-and-agreements.md).

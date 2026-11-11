@@ -24,44 +24,10 @@
       "operation": "consolidated"
     },
     {
-      "source": "delivery/work-items/common/defining-verification.md",
-      "destination": "knowledge/software-engineering-foundations/src/work-items/work-item-content-contract.md",
-      "previousDestination": "knowledge/software-engineering-foundations/src/work-items/defining-verification.md",
-      "operation": "consolidated"
-    },
-    {
-      "source": "delivery/work-items/common/maintaining-identity-and-relationships.md",
-      "destination": "knowledge/software-engineering-foundations/src/work-items/maintaining-identity-and-relationships.md"
-    },
-    {
-      "source": "delivery/work-items/common/managing-lifecycle-and-completion.md",
-      "destination": "knowledge/software-engineering-foundations/src/work-items/managing-lifecycle-and-completion.md"
-    },
-    {
       "source": "delivery/work-items/common/mapping-to-work-item-hosts.md",
       "destination": "knowledge/software-engineering-foundations/src/local-policy-and-host-representation.md",
       "previousDestination": "knowledge/software-engineering-foundations/src/work-items/mapping-to-work-item-hosts.md",
       "operation": "consolidated"
-    },
-    {
-      "source": "delivery/work-items/common/preserving-evidence-and-provenance.md",
-      "destination": "knowledge/software-engineering-foundations/src/work-items/preserving-evidence-and-provenance.md"
-    },
-    {
-      "source": "delivery/work-items/common/preserving-technical-context.md",
-      "destination": "knowledge/software-engineering-foundations/src/work-items/work-item-content-contract.md",
-      "previousDestination": "knowledge/software-engineering-foundations/src/work-items/preserving-technical-context.md",
-      "operation": "consolidated"
-    },
-    {
-      "source": "delivery/work-items/common/titling-and-summarizing-work-items.md",
-      "destination": "knowledge/software-engineering-foundations/src/work-items/work-item-content-contract.md",
-      "previousDestination": "knowledge/software-engineering-foundations/src/work-items/titling-and-summarizing-work-items.md",
-      "operation": "consolidated"
-    },
-    {
-      "source": "delivery/work-items/common/work-item-content-contract.md",
-      "destination": "knowledge/software-engineering-foundations/src/work-items/work-item-content-contract.md"
     },
     {
       "source": "delivery/work-items/defects/defect-report-template.md",
@@ -102,10 +68,6 @@
     {
       "source": "delivery/work-items/northbank-receipt-incident.md",
       "destination": "knowledge/software-engineering-foundations/src/cases/northbank-receipt-incident.md"
-    },
-    {
-      "source": "delivery/work-items/software-work-item-taxonomy.md",
-      "destination": "knowledge/software-engineering-foundations/src/work-items/software-work-item-taxonomy.md"
     },
     {
       "source": "engineering/adopting-a-repository-task-interface.md",
@@ -444,6 +406,49 @@
     {
       "source": "overview.md",
       "reason": "Superseded lifecycle organization; existing design and workflow distinctions extracted into foundations."
+    },
+    {
+      "source": "delivery/work-items/common/defining-verification.md",
+      "previousDestination": "knowledge/software-engineering-foundations/src/work-items/defining-verification.md",
+      "operation": "removed without replacement",
+      "retiredDestination": "knowledge/software-engineering-foundations/src/work-items/work-item-content-contract.md"
+    },
+    {
+      "source": "delivery/work-items/common/maintaining-identity-and-relationships.md",
+      "retiredDestination": "knowledge/software-engineering-foundations/src/work-items/maintaining-identity-and-relationships.md",
+      "operation": "removed without replacement"
+    },
+    {
+      "source": "delivery/work-items/common/managing-lifecycle-and-completion.md",
+      "retiredDestination": "knowledge/software-engineering-foundations/src/work-items/managing-lifecycle-and-completion.md",
+      "operation": "removed without replacement"
+    },
+    {
+      "source": "delivery/work-items/common/preserving-evidence-and-provenance.md",
+      "retiredDestination": "knowledge/software-engineering-foundations/src/work-items/preserving-evidence-and-provenance.md",
+      "operation": "removed without replacement"
+    },
+    {
+      "source": "delivery/work-items/common/preserving-technical-context.md",
+      "previousDestination": "knowledge/software-engineering-foundations/src/work-items/preserving-technical-context.md",
+      "operation": "removed without replacement",
+      "retiredDestination": "knowledge/software-engineering-foundations/src/work-items/work-item-content-contract.md"
+    },
+    {
+      "source": "delivery/work-items/common/titling-and-summarizing-work-items.md",
+      "previousDestination": "knowledge/software-engineering-foundations/src/work-items/titling-and-summarizing-work-items.md",
+      "operation": "removed without replacement",
+      "retiredDestination": "knowledge/software-engineering-foundations/src/work-items/work-item-content-contract.md"
+    },
+    {
+      "source": "delivery/work-items/common/work-item-content-contract.md",
+      "retiredDestination": "knowledge/software-engineering-foundations/src/work-items/work-item-content-contract.md",
+      "operation": "removed without replacement"
+    },
+    {
+      "source": "delivery/work-items/software-work-item-taxonomy.md",
+      "retiredDestination": "knowledge/software-engineering-foundations/src/work-items/software-work-item-taxonomy.md",
+      "operation": "removed without replacement"
     }
   ],
   "retiredNavigation": "Old indexes and log remain in the source commit. New indexes describe actual package contents; product risks and incident ownership were extracted from indexes."

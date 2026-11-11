@@ -3,7 +3,7 @@ type: Explanation
 title: Verification and validation
 description: Distinguishes specification-quality and realization checks from validation of stakeholder need and intended use.
 tags: [verification, validation, evidence, stakeholder, intended-use, software-engineering-foundations]
-generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
 ---
 
 # Verification and validation
@@ -27,12 +27,6 @@ Both operate throughout the lifecycle:
 Passing a test does not prove that the requirement was the right one. Stakeholder
 agreement does not prove that a realization satisfies the accepted wording.
 Record each claim with its target, revision, context, method, result, and limits.
-
-Where a work item is the record that carries a change, [Work-item content contract](../work-items/work-item-content-contract.md)
-applies this distinction to that record: stating observable completion
-conditions, choosing an evidence strategy, and keeping a bounded result
-separate from closure. It specializes this concept rather than restating it,
-and neither treats a recorded result as authority over the requirement itself.
 
 For the connection between delivered behavior and customer or business results,
 read [Outcomes and evidence](../value/outcomes-and-evidence.md). It

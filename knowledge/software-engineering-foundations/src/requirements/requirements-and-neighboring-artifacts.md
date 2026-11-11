@@ -3,7 +3,7 @@ type: Reference
 title: Requirements and neighboring artifacts
 description: Distinguishes requirements from goals, designs, plans, tests, evidence, and work items.
 tags: [requirement, goal, design, use-case, test, evidence, work-item, software-engineering-foundations]
-generated: { by: codex/gpt-6, at: 2026-11-11T19:45:59Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
 sources:
 - id: prior-composing-with-work-management
   resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/requirements-engineering/src/adaptation/composing-with-work-management.md
@@ -70,13 +70,10 @@ independently of the obligation it cites.
 Do not copy the requirement into a work item as a competing authority. Do not
 infer that reported behavior is a defect, that a proposed change is approved,
 or that delivery changes normative requirement text. A project that coordinates
-work through its own native records rather than these portable roles applies
+work through its own native records rather than these record types applies
 the same semantic boundary to whatever records it has.
 
-The [work-item content contract](../work-items/work-item-content-contract.md)
-and requirement content contract (optional companion reading:
-`@craigsmitham/knowledge/requirements-engineering#authoring/requirement-content-contract`)
-define the respective records. Their shared adaptation rules live in
+Shared adaptation rules live in
 [Local policy and host representation](../local-policy-and-host-representation.md).
 
 ## Continue exploring

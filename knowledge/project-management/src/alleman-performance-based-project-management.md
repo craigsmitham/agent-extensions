@@ -35,7 +35,7 @@ sources:
   - id: overview
     resource: https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/overview.md
     title: Product engineering overview
-generated: { by: codex/gpt-6, at: 2026-11-11T19:19:09Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
 ---
 
 # Glen Alleman's performance-based project management: capabilities, credible plans, and evidence of progress
@@ -346,7 +346,7 @@ provides the practical continuation when a revised commitment changes
 behavior, scope, or acceptance evidence.
 
 Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
-can supply part of the evidence of accomplishment. Work items (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#work-items/index`)
+can supply part of the evidence of accomplishment. Work items
 coordinate the changes that travel toward delivery. Neither a passing example
 nor a closed ticket automatically establishes the whole project capability.
 
