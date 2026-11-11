@@ -3,7 +3,7 @@ type: Guide
 title: Analyzing and specifying requirement change
 description: Traces a proposed requirement change through sources, dependents, realization, verification, validation, and operations, then states the exact change put up for decision. Use when a requirement change is proposed and either its reach across dependents and existing evidence or its precise before and after meaning is not yet written down.
 tags: [impact-analysis, requirement-change, before-after, traceability, evidence, dependency, requirements-engineering]
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Analyzing and specifying requirement change
@@ -44,8 +44,7 @@ A requirement change should identify more than edited prose. Record:
 Do not infer authorization from the existence of a proposal or implementation.
 If the changed meaning is materially different, consider a new requirement
 identity linked by `supersedes` rather than overwriting historical meaning.
-Where a work item coordinates the revision, [Composing with work
-management](../adaptation/composing-with-work-management.md) owns that
+Where a work item coordinates the revision, Requirements and neighboring artifacts (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#requirements/requirements-and-neighboring-artifacts`) owns that
 relationship and leaves requirement meaning with the requirement source.
 
 When the proposed change affects project capability, cost, or timing,
@@ -57,7 +56,7 @@ analysis here states the changed obligation; a forecast does not authorize it.
 
 - Maintenance and the life of software products (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#maintenance/maintenance-and-the-life-of-software-products`)
   supplies the wider judgment about understanding and intervening in existing arrangements.
-- Keeping specifications authoritative (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#behavior/keeping-specifications-authoritative`)
+- Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
   covers the continued authority and evidence of affected executable specifications.
 - The continuity and change route (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#reading-software-engineering`)
   places this requirement-specific analysis in its wider product context.

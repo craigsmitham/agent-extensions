@@ -4,7 +4,7 @@ title: "Northbank commitments: requirements, witnesses, and change"
 description: A fictional allocation change shows how disputed needs become bounded obligations, how examples and artifacts witness them, and how scope and evidence survive a later revision.
 tags: [northbank, worked-example, requirements, authority, invariants, traceability, migration, software-engineering-foundations]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Northbank commitments: requirements, witnesses, and change
@@ -27,7 +27,7 @@ and revision. It is not a complete rental specification.
 These accounts inform candidates. None becomes authoritative because a team
 has written a test or opened a Change. In the story, product and depot leaders
 accept the selected rules after reviewing scenarios and feasibility. Engineering
-chooses mechanisms within them. Resolving conflicts (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#development/resolving-conflicts-and-open-decisions`)
+chooses mechanisms within them. Resolving conflicts (optional companion reading: `@craigsmitham/knowledge/software-engineering-foundations#requirements/requirement-authority-and-maturity`)
 explains how to preserve the competing claims and decision evidence.
 
 ## Declare the accepted scope

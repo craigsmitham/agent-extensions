@@ -8,7 +8,7 @@ Portable guidance for writing, reviewing, organizing, and maintaining useful
 documentation, including reusable checklists, pattern descriptions, and
 collections across domains.
 Start with the reader's job, then choose the relevant documentation pattern or
-workflow. Host projects keep their own layouts, metadata, and tooling.
+design. Host projects keep their own layouts, metadata, and tooling.
 
 ## Choose what to write
 
@@ -18,6 +18,6 @@ workflow. Host projects keep their own layouts, metadata, and tooling.
 
 * [Documentation foundations](explainers/index.md) - Reader needs, quality, organization, audits, and the concepts that guide documentation decisions.
 
-## Do the work
+## Organize and assess
 
-* [Documentation workflows](guides/index.md) - Write, revise, organize, compare, audit, and maintain documents and collections.
+* [Documentation organization and assessment](guides/index.md) - Focused organization and comparison guidance, with a predictable audit report contract.

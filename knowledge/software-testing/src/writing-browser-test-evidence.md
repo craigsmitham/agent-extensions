@@ -1,7 +1,7 @@
 ---
-type: Guide
-title: Writing browser test evidence
-description: Use once a browser test is admitted and the question is how to write it; choose locators and readiness conditions that survive churn, isolate browser and application state, size the environment matrix to real risk, and keep visual and accessibility conclusions inside what their methods support.
+type: Reference
+title: Browser test evidence
+description: Defines browser capability and scope choices, observable assertions, readiness, isolation, visual baselines, accessibility limits, and failure evidence.
 tags:
   [
     testing,
@@ -19,68 +19,111 @@ tags:
     software-testing,
   ]
 status: stable
+generated: { by: codex/gpt-6, at: 2026-11-11T19:51:11Z }
 sources:
-  - id: playwright-best-practices
-    resource: https://playwright.dev/docs/best-practices
-    title: Playwright — Best Practices
-  - id: playwright-projects
-    resource: https://playwright.dev/docs/test-projects
-    title: Playwright — Projects
-  - id: playwright-fixtures
-    resource: https://playwright.dev/docs/test-fixtures
-    title: Playwright — Fixtures
-  - id: playwright-visual
-    resource: https://playwright.dev/docs/test-snapshots
-    title: Playwright — Visual comparisons
-  - id: playwright-accessibility
-    resource: https://playwright.dev/docs/accessibility-testing
-    title: Playwright — Accessibility testing
-  - id: cypress-isolation
-    resource: https://docs.cypress.io/app/core-concepts/test-isolation
-    title: Cypress — Test Isolation
-  - id: selenium-practices
-    resource: https://www.selenium.dev/documentation/test_practices/
-    title: Selenium — Test Practices
-  - id: selenium-state
-    resource: https://www.selenium.dev/documentation/test_practices/encouraged/avoid_sharing_state/
-    title: Selenium — Avoid sharing state
-  - id: testing-library-queries
-    resource: https://testing-library.com/docs/queries/about/
-    title: Testing Library — About Queries
-  - id: wai-evaluation
-    resource: https://www.w3.org/WAI/test-evaluate/
-    title: W3C WAI — Evaluating Web Accessibility Overview
-  - id: ui-flaky-tests
-    resource: https://arxiv.org/abs/2103.02669
-    title: An Empirical Analysis of UI-based Flaky Tests
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+- id: playwright-best-practices
+  resource: https://playwright.dev/docs/best-practices
+  title: "Playwright \u2014 Best Practices"
+- id: playwright-projects
+  resource: https://playwright.dev/docs/test-projects
+  title: "Playwright \u2014 Projects"
+- id: playwright-fixtures
+  resource: https://playwright.dev/docs/test-fixtures
+  title: "Playwright \u2014 Fixtures"
+- id: playwright-visual
+  resource: https://playwright.dev/docs/test-snapshots
+  title: "Playwright \u2014 Visual comparisons"
+- id: playwright-accessibility
+  resource: https://playwright.dev/docs/accessibility-testing
+  title: "Playwright \u2014 Accessibility testing"
+- id: cypress-isolation
+  resource: https://docs.cypress.io/app/core-concepts/test-isolation
+  title: "Cypress \u2014 Test Isolation"
+- id: selenium-practices
+  resource: https://www.selenium.dev/documentation/test_practices/
+  title: "Selenium \u2014 Test Practices"
+- id: selenium-state
+  resource: https://www.selenium.dev/documentation/test_practices/encouraged/avoid_sharing_state/
+  title: "Selenium \u2014 Avoid sharing state"
+- id: testing-library-queries
+  resource: https://testing-library.com/docs/queries/about/
+  title: "Testing Library \u2014 About Queries"
+- id: wai-evaluation
+  resource: https://www.w3.org/WAI/test-evaluate/
+  title: "W3C WAI \u2014 Evaluating Web Accessibility Overview"
+- id: ui-flaky-tests
+  resource: https://arxiv.org/abs/2103.02669
+  title: An Empirical Analysis of UI-based Flaky Tests
+- id: cypress-testing-types
+  resource: https://docs.cypress.io/app/core-concepts/testing-types
+  title: "Cypress \u2014 Testing Types"
+- id: storybook-testing
+  resource: https://storybook.js.org/docs/writing-tests
+  title: "Storybook \u2014 How to test UIs with Storybook"
+- id: jsdom
+  resource: https://github.com/jsdom/jsdom/blob/main/README.md
+  title: jsdom README
+- id: prior-choosing-browser-dependent-interface-tests
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/choosing-browser-dependent-interface-tests.md
+  title: Choosing browser-dependent interface tests
 ---
 
-# Writing browser test evidence
+# Browser test evidence
 
-Use this guide after [Choosing browser-dependent interface
-tests](choosing-browser-dependent-interface-tests.md) has admitted a browser
-test and fixed its scope. The admission gate decides *whether* a browser is
-necessary; this guide decides how the resulting test observes, waits, isolates,
-varies, and reports — and how far its conclusions may reach.
+Browser evidence concerns rendering, interaction, accessibility, and platform
+behavior. A browser component test can preserve interface fidelity while
+substituting the rest of the application; a browser is not automatically an
+end-to-end observer. The [Evidence-matched test world](patterns/evidence-matched-test-world.md)
+pattern owns the general fidelity and substitution tradeoff.
+
+## Required capabilities
+
+A real browser is warranted when the contrary condition depends materially on
+capabilities such as:
+
+| Capability | Risks it can reveal |
+| --- | --- |
+| Layout and rendering | Geometry, wrapping, clipping, overflow, stacking, fonts, replaced content |
+| Hit testing and scrolling | Obscured controls, pointer target, sticky behavior, scroll position |
+| Focus and native interaction | Sequential focus, focus restoration, native controls, keyboard and pointer behavior |
+| CSS and media evaluation | Cascade consequences, computed values, breakpoints, color scheme, reduced motion, forced colors |
+| Navigation and origin behavior | History, redirects, document replacement, cookies, storage, security boundaries |
+| Browser APIs and scheduling | Observers, workers, clipboard, media, animation, event timing, platform capability |
+| Engine or platform implementation | Compatibility differences among supported engines, operating systems, fonts, and devices |
+
+A DOM implementation can be appropriate for markup, accessible naming, event
+contracts, or framework rendering, but it does not automatically provide real
+layout, navigation, or browser-platform behavior. jsdom, for example,
+explicitly omits layout and full navigation.[^jsdom]
+
+If removing the browser would not erase the distinction the test must detect,
+use the cheaper observer.
+
+## Subject scope
+
+Subject scope is independent of browser capability:
+
+| Test form | Choose it when | It does not establish |
+| --- | --- | --- |
+| **Pure or server-side test** | The claim is logic, data, generated markup, or request/response behavior | Browser rendering or interaction |
+| **DOM-emulated component test** | DOM semantics and framework state are enough; layout and platform behavior are irrelevant | Real geometry, navigation, engine behavior |
+| **Browser component test** | A component needs real rendering or interaction but can receive controlled props, context, and dependencies | Application routing, backend, or deployment behavior |
+| **Browser route/application test** | Routing, page composition, browser storage, or application wiring matters; remote dependencies can be controlled | Substituted backend or deployment boundaries |
+| **Browser-driven cross-boundary test** | The claim spans browser, application, and necessary live boundaries | Any dependency that the declared world replaces |
+| **Human or assistive-technology evaluation** | Usability, visual judgment, or accessibility cannot be decided by the automated observer | Exhaustive conformance or population-wide experience |
+
+Storybook's browser component model demonstrates that real-browser interaction
+can remain scoped to one UI unit with mocked dependencies. Cypress likewise
+distinguishes component, API, accessibility, and E2E modes. Tool taxonomies
+vary, but the capability/scope separation remains portable.[^storybook-testing][^cypress-testing-types]
 
 ## Prefer user-facing control and observation
 
-Drive and locate the interface through the semantics relevant to the claim:
-
-1. accessible role and name;
-2. associated label, visible text, or other user-facing content;
-3. a stable product contract such as a named region or route; then
-4. a dedicated test identifier when no user-facing identifier is stable or
-   when the test intentionally targets a non-user-facing contract.
-
-Testing Library prioritizes accessible queries, and Playwright recommends
-user-facing attributes and explicit contracts rather than implementation
-details.[^testing-library-queries][^playwright-best-practices] Cypress commonly
-recommends dedicated `data-*` selectors to isolate tests from CSS and JavaScript
-churn. The portable rule is not one selector hierarchy for every claim: choose
-the most meaningful stable public or deliberate testing contract, and avoid
-accidental DOM shape, generated classes, and styling hooks.
+Choose the most meaningful stable public or deliberate testing contract for
+the claim: accessible role/name, label or visible text, a named region or route,
+or a dedicated test identifier. Accessible queries and explicit contracts avoid
+incidental DOM shape, generated classes, and styling hooks; selector choice is
+contextual, not a universal hierarchy.[^testing-library-queries][^playwright-best-practices]
 
 Assert the observable outcome, not merely that the action ran. For example,
 assert the new accessible state, rendered content, focus destination, geometry,
@@ -146,16 +189,11 @@ Treat these as independent dimensions:
 - anonymous, authenticated, authorized, and persisted state; and
 - application or deployment configuration.
 
-Do not multiply them into a full Cartesian product. Instead:
-
-1. choose one representative default configuration for general functional
-   evidence;
-2. map each material risk to the dimensions that can change its outcome;
-3. add the smallest pairwise or focused variations that expose those
-   interactions;
-4. reserve full supported-environment sweeps for compatibility claims that
-   actually require them; and
-5. review usage, incidents, and support commitments when the matrix changes.
+A representative default supports general functional evidence. Focused or
+pairwise variations cover dimensions that can change a material outcome;
+full supported-environment sweeps serve compatibility claims that require them.
+Usage, incidents, and support commitments inform matrix changes. A Cartesian
+product is not automatically a useful coverage target.
 
 Runner projects or profiles are suitable for repeated configuration and test
 subsets. They do not, by themselves, require separate repository projects or
@@ -251,3 +289,7 @@ to a different assessment.
 [^wai-evaluation]: W3C WAI, [Evaluating Web Accessibility Overview](https://www.w3.org/WAI/test-evaluate/), states that tools assist evaluation but knowledgeable human evaluation is required for an accessibility determination.
 [^playwright-accessibility]: Playwright, [Accessibility testing](https://playwright.dev/docs/accessibility-testing), distinguishes automatically detectable issues from manual assessment and inclusive user testing.
 [^ui-flaky-tests]: Romano et al., [An Empirical Analysis of UI-based Flaky Tests](https://arxiv.org/abs/2103.02669), analyzes causes and remediation of flaky UI tests across web and Android projects.
+
+[^jsdom]: jsdom, [README](https://github.com/jsdom/jsdom/blob/main/README.md), explicitly identifies navigation and layout as outside its implemented scope.
+[^storybook-testing]: Storybook, [How to test UIs with Storybook](https://storybook.js.org/docs/writing-tests), describes browser-rendered component tests with controlled context and mocked dependencies.
+[^cypress-testing-types]: Cypress, [Testing Types](https://docs.cypress.io/app/core-concepts/testing-types), distinguishes component, API, accessibility, and browser-to-backend E2E testing and their tradeoffs.

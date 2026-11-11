@@ -44,9 +44,7 @@ sources:
 - id: zen-python
   resource: https://peps.python.org/pep-0020/
   title: PEP 20 — The Zen of Python
-generated:
-  by: codex/gpt-6
-  at: '2026-11-11T16:59:49Z'
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Principle document
@@ -455,7 +453,7 @@ element of the proposed document design.
 - [How-to guide](how-to.md) — documents a particular implementation or task
   without narrowing the principle to that one realization.
 - [Documentation craft](../explainers/documentation-craft.md) — selecting and combining documentation patterns.
-- [Writing a document](../guides/documentation-craft.md) — the shared authoring process.
+- [Writing a document](../explainers/documentation-craft.md) — the shared authoring process.
 
 [^frame-christian-life]: John Frame — *The Doctrine of the Christian Life* (excerpt)
 

@@ -6,8 +6,8 @@ version = 1
 contract = 1
 
 [projections.knowledge.units."AGENTS.md"]
-gen = "sha256:b9beb6d94e93eda22f22f12dfe59b7b89b7e08e904197d67f1b1830e08ce002d"
-output = "sha256:446a8e413e6bba25b2d7b70f5f0ad5eb3742d049f6c183cc0236e026744ed333"
+gen = "sha256:5bf3a9493f30c4ca7d50a5ba8811874915fbfb1d7ff0c3fe2e5001062043a142"
+output = "sha256:ec58532baaddf2c09b527d1aef624e8971dfac37867a9f554e68a170b381c9b1"
 
 [projections.instructions]
 contract = 1
@@ -20,17 +20,17 @@ output = "sha256:a5272edad73cf6a53581f2fe4c831a74b665ef5edb4b20374559b502da557ae
 contract = 1
 
 [projections.subagents.units.".claude/agents/researcher.md"]
-gen = "sha256:2d3726702ae61b58735a60d6864ef382cf1c210a764be5e6cd5d1a8d83df1c15"
-output = "sha256:ae55df4997e5c12d3f0045c89c09b1ff5c48de4d431bdc527cf2d5851bda1da0"
+gen = "sha256:a77ecc4dc775c281ed974b1737f5e8140727c62644af5fed2132ef54bafafbe6"
+output = "sha256:2cf8aa857d9a372fe3e1c078fc7acb7b499904224df0be38b7f53e2771cb37da"
 
 [projections.subagents.units.".codex/agents/researcher.toml"]
-gen = "sha256:af248bdac0b654ea498e0071076cc45ca4e520e4be40ea833a67530237606fd5"
-output = "sha256:88857caaa2d9b2bc6acbea44114419f981ef422175d50fd2208fbd23b6b615ee"
+gen = "sha256:e2c43c1c6c377db27ad6a71987237ed77d365ac1ad7f8e19f21d191409ce23b0"
+output = "sha256:49a553681617c8dab1ca93ed23e547ac3af15fc3f512544701fa3243c48149b8"
 
 [projections.subagents.units.".cursor/agents/researcher.md"]
-gen = "sha256:136828dfa51aba987499725c3a27d071ec14b8b6041ab95356b39992f4a785d1"
-output = "sha256:ae55df4997e5c12d3f0045c89c09b1ff5c48de4d431bdc527cf2d5851bda1da0"
+gen = "sha256:882547e58feb04e4a5e66821ad3d458942657a243b1fd7cd379a41da0d51ac81"
+output = "sha256:2cf8aa857d9a372fe3e1c078fc7acb7b499904224df0be38b7f53e2771cb37da"
 
 [projections.subagents.units.".github/agents/researcher.md"]
-gen = "sha256:aa9b5e5e4cb86c66f588a9eb8b4cd951c95bba2829197cefcb801325df224a97"
-output = "sha256:ae55df4997e5c12d3f0045c89c09b1ff5c48de4d431bdc527cf2d5851bda1da0"
+gen = "sha256:17fe1019ec9c42abb35fa854905da05e275eecc9474d69aef64ef45c1a5f0431"
+output = "sha256:2cf8aa857d9a372fe3e1c078fc7acb7b499904224df0be38b7f53e2771cb37da"

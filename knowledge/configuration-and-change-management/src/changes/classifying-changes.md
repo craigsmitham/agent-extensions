@@ -1,17 +1,17 @@
 ---
-type: Guide
-title: Classifying Changes
-description: Use when a Change needs a truthful purpose classification without treating labels as diagnosis, priority, or authorization.
+type: Reference
+title: Change classification
+description: Distinguishes Change purpose classifications from diagnosis, priority, authority, and completion.
 tags: [change, classification, bugfix, feature, improvement, maintenance, migration, configuration-and-change-management]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:46:48Z }
 ---
 
-# Classifying Changes
+# Change classification
 
 Classification helps filtering, reporting, and applying local policy. It does
 not establish priority, approval, scope, diagnosis, or completion.
 
-## Classify from purpose
+## Purpose
 
 Use the smallest local classification vocabulary that changes handling. Common
 examples include:
@@ -27,7 +27,7 @@ examples include:
 These examples are not a required universal enumeration. Prefer the consuming
 project's accepted classifications and definitions when they exist.
 
-## Avoid invalid inference
+## Classification limits
 
 - A `bug` label does not establish a Defect or make the Change a Bugfix.
 - A source Defect Report does not authorize remediation.

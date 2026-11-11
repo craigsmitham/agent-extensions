@@ -141,7 +141,7 @@ the desired learning journey; it does not imply a production defect.
   describes separating commitments and allocations;
   [Wardley: equipment-rental example](../knowledge/business-analysis/src/wardley-mapping.md#an-equipment-rental-example)
   deliberately scopes digital coordination;
-  [task-interface adoption](../knowledge/engineering-environment/src/adopting-a-repository-task-interface.md#worked-example)
+  task-interface adoption (optional companion reading: `@craigsmitham/knowledge/engineering-environment#patterns/repository-task-interface`)
   has a useful separate four-inventory example.
 - Impact: Readers must invent the connection to tactical responsibilities,
   tooling, CI/CD, and infrastructure themselves.

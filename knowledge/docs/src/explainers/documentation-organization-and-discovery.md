@@ -11,7 +11,7 @@ sources:
   - id: documentation-workflow
     resource: documentation-workflow.md
     title: Documentation workflow
-generated: { by: "codex/gpt-6", at: "2026-11-11T16:45:58Z" }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Documentation organization and discovery
@@ -192,10 +192,10 @@ indefinitely.
 
 ## Related
 
-- [Documentation audits](documentation-audits.md) · [Auditing documentation](../guides/auditing-documentation.md)
+- [Documentation audits](documentation-audits.md) · [Documentation audit report contract](../guides/auditing-documentation.md)
 - [Organizing and naming documentation](../guides/organizing-and-naming-documentation.md)
-- [Documentation craft](documentation-craft.md) · [Documentation craft guide](../guides/documentation-craft.md)
-- [Documentation workflow](documentation-workflow.md) · [Documentation workflow guide](../guides/documentation-workflow.md)
+- [Documentation craft](documentation-craft.md)
+- [Documentation workflow](documentation-workflow.md)
 - [Documentation quality](documentation-quality.md)
 
 [^documentation-craft]: Documentation craft distinguishes the reader job of a

@@ -1,54 +1,51 @@
 ---
-type: Guide
-title: Operating cross-boundary test suites
-description: Use once a cross-boundary test world is chosen and the suite has to live somewhere; place the harness with one accountable owner, design seed state, readiness, and cleanup, bind execution to the decision point it can honestly serve, and keep failures attributable.
-tags:
-  [
-    testing,
-    end-to-end-testing,
-    e2e,
-    test-ownership,
-    test-projects,
-    test-data,
-    test-isolation,
-    flaky-tests,
-    diagnostics,
-    ci,
-    monorepo,
-    software-testing,
-  ]
-status: stable
+type: Pattern
+title: Owned test worlds
+description: Makes spanning tests accountable and repeatable through owned state, observable readiness, interruption-safe cleanup, and attributable evidence.
+tags: [testing, ownership, isolation, readiness, cleanup, evidence, software-testing]
+status: draft
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 sources:
-  - id: google-larger-testing
-    resource: https://abseil.io/resources/swe-book/html/ch14.html
-    title: Software Engineering at Google — Larger Testing
-  - id: rails-testing
-    resource: https://guides.rubyonrails.org/testing.html
-    title: Testing Rails Applications
-  - id: nx-playwright
-    resource: https://nx.dev/docs/technologies/test-tools/playwright/introduction
-    title: Nx with Playwright
-  - id: nx-react-template
-    resource: https://nx.dev/docs/templates/react
-    title: Nx React template
-  - id: playwright-projects
-    resource: https://playwright.dev/docs/test-projects
-    title: Playwright — Projects
-  - id: flaky-tests-google
-    resource: https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html
-    title: Flaky Tests at Google and How We Mitigate Them
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+- id: google-larger-testing
+  resource: https://abseil.io/resources/swe-book/html/ch14.html
+  title: "Software Engineering at Google \u2014 Larger Testing"
+- id: rails-testing
+  resource: https://guides.rubyonrails.org/testing.html
+  title: Testing Rails Applications
+- id: nx-playwright
+  resource: https://nx.dev/docs/technologies/test-tools/playwright/introduction
+  title: Nx with Playwright
+- id: nx-react-template
+  resource: https://nx.dev/docs/templates/react
+  title: Nx React template
+- id: playwright-projects
+  resource: https://playwright.dev/docs/test-projects
+  title: "Playwright \u2014 Projects"
+- id: flaky-tests-google
+  resource: https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html
+  title: Flaky Tests at Google and How We Mitigate Them
+- id: prior-operating-cross-boundary-test-suites
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/operating-cross-boundary-test-suites.md
+  title: Operating cross-boundary test suites
 ---
 
-# Operating cross-boundary test suites
+# Owned test worlds
 
-[Designing cross-boundary and end-to-end tests](designing-cross-boundary-and-end-to-end-tests.md)
-settles what a suite must prove and which boundaries stay real. This guide
-covers what happens next: where the harness lives, who is accountable for its
-failures, how its state and readiness are designed, which decision point it
-serves, and what evidence a failure must leave behind.
+## Problem and forces
 
-## Give the harness an honest owner
+A spanning test can fail without an accountable owner, leave state that poisons
+later runs, or report a retry as though no failure occurred. Larger worlds need
+representative state and observable readiness while remaining independently
+selectable, diagnosable, and recoverable after interruption.
+
+## Response
+
+Give the test world one semantic owner, explicit lifecycle responsibilities,
+and execution and evidence contracts tied to the decision it supports.
+[Evidence-matched test world](evidence-matched-test-world.md) owns the choice of
+real and substituted boundaries.
+
+## Ownership
 
 Project layout should reflect evidence ownership and lifecycle:
 
@@ -76,19 +73,12 @@ Give every spanning test one diagnosis owner even when several teams must help
 repair the product. Cross-boundary tests without clear ownership tend to rot
 because no single component owner can interpret the whole failure path.[^google-larger-testing]
 
-## Design state and lifecycle as part of the test
+## State and lifecycle
 
-A complete test contract includes:
-
-1. obtain the exact system under test;
-2. establish a known environment and identity;
-3. create the minimum representative seed state;
-4. wait for observable readiness;
-5. perform the stimulus;
-6. observe the public consequence and relevant contrary conditions;
-7. capture diagnostic evidence; and
-8. release resources or leave uniquely attributable data safe for later
-   cleanup.
+The lifecycle identifies the exact system, environment, identity, seed state,
+readiness condition, stimulus, public consequence, diagnostic capture, and
+resource cleanup. Readiness must be observable. Cleanup includes interruption,
+not only the successful end of a test.
 
 Prefer setup through stable domain or support APIs when their behavior belongs
 to the scenario. Direct seeding is appropriate when it shortens setup without
@@ -120,8 +110,7 @@ support:
 | Post-deployment | Non-destructive probes and observations that only the live environment can answer |
 
 Bind the suite to a repository task whose inputs, dependencies, environment,
-freshness, artifacts, and meaning of success are explicit. Use Designing a
-coherent repository task interface (optional companion reading: `@craigsmitham/knowledge/engineering-environment#repository-task-interface`) for those
+freshness, artifacts, and meaning of success are explicit. Use Repository task interface (optional companion reading: `@craigsmitham/knowledge/engineering-environment#patterns/repository-task-interface`) for those
 execution-surface semantics.
 
 A retry is another observation, not proof that the first failure was harmless.
@@ -145,6 +134,14 @@ On failure, retain the smallest safe evidence set that reconstructs the path:
 Do not collect secrets, unbounded production data, or opaque bodies merely
 because they might help. Prefer structured, redacted, attributable diagnostics
 designed with the system.
+
+## Consequences and evidence
+
+Explicit ownership and isolation improve attribution and repeatability at the
+cost of harness and cleanup work. Shared environments limit destructive control
+and early feedback; a fixture cannot promise isolation beyond the state it
+actually owns. The cited practices support this draft synthesis; the Northbank
+case is illustrative, not field validation of the pattern.
 
 ## Northbank: own the allocation test world
 

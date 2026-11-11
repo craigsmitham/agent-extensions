@@ -1,17 +1,17 @@
 ---
-type: Guide
-title: Maintaining work-item identity and relationships
-description: Use when creating, relating, duplicating, merging, splitting, superseding, or reopening work items without losing independently meaningful history.
+type: Reference
+title: Work-item identity and relationships
+description: Defines independent work-item identity, directional relationships, and history through merges, splits, supersession, and regression.
 tags: [work-item, identity, relationships, duplicate, merge, split, supersession, reopening, regression, software-engineering-foundations]
-generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:45:59Z }
 ---
 
-# Maintaining work-item identity and relationships
+# Work-item identity and relationships
 
 Identity decides which record carries a concern. Relationships state how
 separately identified records bear on one another. Both are distinct from
 lifecycle state, which
-[Managing work-item lifecycle and completion](managing-lifecycle-and-completion.md)
+[Work-item lifecycle and completion](managing-lifecycle-and-completion.md)
 covers.
 
 ## Reuse or create an identity

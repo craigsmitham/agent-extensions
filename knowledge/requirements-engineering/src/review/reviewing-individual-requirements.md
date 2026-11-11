@@ -3,7 +3,7 @@ type: Checklist
 title: Reviewing individual requirements
 description: Provides a risk-sensitive review of one requirement's authority, content, quality, relationships, and assessment basis. Use when a single requirement is reviewed before it is accepted, changed, or relied on.
 tags: [review, requirement-quality, verification, validation, checklist, requirements-engineering]
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:48:50Z }
 ---
 
 # Reviewing individual requirements
@@ -11,26 +11,20 @@ generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
 Scale review depth to consequence, novelty, ambiguity, and change cost. Check
 the record, not just the sentence.
 
-- [ ] Identity, maturity, normative force, and decision authority are explicit.
-- [ ] Sources are applicable, versioned when necessary, and distinguish fact
-      from inference.
-- [ ] One obligated subject, condition, and bounded obligation are identifiable.
-- [ ] Terms, quantities, units, scope, and exceptions are unambiguous for the
-      intended audience.
-- [ ] The requirement is necessary, feasible, and free of accidental design.
-- [ ] Independently decidable obligations are separated; atomic rules remain intact.
-- [ ] Conflicts, dependencies, assumptions, and open decisions are visible.
-- [ ] A credible verification approach could distinguish satisfaction from failure.
-- [ ] The validation basis supports stakeholder need and intended use.
-- [ ] Relationships and change history do not create competing authority.
+- [ ] The [content contract](../authoring/requirement-content-contract.md) is
+      satisfied: identity and authority, sources, bounded obligation, terms and
+      scope, relationships, assessment basis, and history are recoverable.
+- [ ] The [individual quality characteristics](../specification-methods/iso-iec-ieee-29148-requirement-quality.md#characteristics-of-an-individual-requirement)
+      are assessed for the applicable obligation and audience.
+- [ ] Independently decidable obligations are separated without destroying an
+      atomic rule or invariant; design detail has an accepted constraint basis.
+- [ ] Conflicts, assumptions, and unresolved decisions remain visible.
+- [ ] Verification can distinguish satisfaction from failure, and validation
+      supports stakeholder need and intended use; neither creates acceptance.
 
 Record findings with severity, location, evidence, and the decision needed.
 Review does not itself accept a candidate or approve a change unless the local
 policy grants the reviewer that authority.
-
-For the ISO/IEC/IEEE 29148 characteristics behind several of these checks, and
-the correctness and conformity questions they add, read
-[requirement quality under 29148](../specification-methods/iso-iec-ieee-29148-requirement-quality.md#characteristics-of-an-individual-requirement).
 
 ## Worked continuation
 

@@ -8,7 +8,7 @@ sources:
   - id: overview
     resource: design-and-requirements.md
     title: Design and requirements
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:56:05Z }
 ---
 
 # Reading software engineering
@@ -163,23 +163,23 @@ problem ownership, read How Shape Up fits product engineering (optional companio
    asks how independently designed parts preserve an understandable product.
    Follow it to distinguish contribution from decision authority and shared
    commitments from the models used inside bounded contexts.
-5. [Designing executable specifications](behavior/designing-executable-specifications.md)
-   turns selected accepted rules into readable examples with executable
-   evidence. Continue to [Keeping specifications authoritative](behavior/keeping-specifications-authoritative.md)
-   when those statements must survive change.
+5. Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
+   connects selected accepted rules to readable statements and executable
+   evidence, including how their authority and evidence survive change.
 
 When ready to state or revise obligations, the Requirements (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#index`)
-index branches into development, authoring, review, lifecycle, and local
-adaptation. To judge whether those obligations and their sets are well formed
+index branches into specification, review, lifecycle, and specification methods.
+Shared authority and local representation remain in the foundations. To judge whether those obligations and their sets are well formed
 against an international baseline, read
 ISO/IEC/IEEE 29148: requirement and requirement-set quality (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#specification-methods/iso-iec-ieee-29148-requirement-quality`).
 For the distinction between conforming behavior and a useful
 solution, read [Verification and validation](requirements/verification-and-validation.md),
 then return to [Outcomes and evidence](value/outcomes-and-evidence.md).
 
-The engineering index (optional companion reading: `@craigsmitham/knowledge/software-construction#index`) routes from choosing a test level to
-building and operating the admitted suite. Its repository task interface (optional companion reading: `@craigsmitham/knowledge/engineering-environment#repository-task-interface`)
-route addresses how people and automation invoke that work consistently.
+The testing patterns (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/index`)
+connect readable specifications to evidence-matched and owned test worlds. The
+repository task interface (optional companion reading: `@craigsmitham/knowledge/engineering-environment#patterns/repository-task-interface`)
+addresses how people and automation invoke that work consistently.
 Those are practical continuations once the behavior and evidence questions
 are clear. Architecture, construction, and solution-design guidance remain
 incomplete; these links do not fill those gaps by implication.
@@ -195,7 +195,7 @@ commitment. Its product-engineering connections (optional companion reading: `@c
 distinguish forecasts from Shape Up's appetite and clarify their different uses
 of baseline and progress measures.
 
-Continue to [Defining work-item verification](work-items/defining-verification.md)
+Continue to [Work-item content contract](work-items/work-item-content-contract.md)
 when a bounded change needs completion evidence. Return to
 [Value and evidence](#value-and-evidence) when the question is whether completing
 the project produced a worthwhile result.

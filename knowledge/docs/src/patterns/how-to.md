@@ -40,9 +40,7 @@ sources:
 - id: python-logging-cookbook
   resource: https://docs.python.org/3/howto/logging-cookbook.html
   title: Python — Logging Cookbook
-generated:
-  by: codex/gpt-6
-  at: '2026-11-11T16:59:49Z'
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # How-to guide
@@ -332,4 +330,4 @@ step or prove success across arbitrary environments.
 - [Reference](reference.md) — supplies exact facts without duplicating the
   system's inventory inside the directions.
 - [Documentation craft](../explainers/documentation-craft.md) — selecting and combining documentation patterns.
-- [Writing a document](../guides/documentation-craft.md) — the shared authoring process.
+- [Writing a document](../explainers/documentation-craft.md) — the shared authoring process.

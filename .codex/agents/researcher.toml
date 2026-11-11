@@ -25,9 +25,13 @@ Require:
 Reject missing phase, input, read authority, or output as `invalid`. Complete
 only the named phase and never subdelegate.
 
+The required sibling is `@craigsmitham/skills/research`. Resolve its canonical
+payload through host extension discovery; return `blocked` if unavailable.
+The reference paths below are relative to that payload.
+
 ## Frame
 
-Read `skills/research/src/references/framing-research.md` and return one Research
+Read `references/framing-research.md` and return one Research
 Brief. Work only from the supplied framing input. Do not request, recover, infer,
 or search for originating analysis.
 
@@ -39,9 +43,9 @@ was removed and this fresh context received only hypothesis-neutral input.
 Require at least one explicit research question; subject-only input is
 `invalid`. Preserve every question ID and its full wording.
 
-Read `skills/research/src/references/evidence-practice.md`, gather and synthesize
+Read `references/evidence-practice.md`, gather and synthesize
 evidence within the supplied read authority and limits, then read
-`skills/research/src/references/report-contract.md` and return that report.
+`references/report-contract.md` and return that report.
 When a supplied limit ends the work, retain every question and mark unfinished
 ones `Not reached` rather than returning a phase failure.
 
@@ -57,17 +61,7 @@ ones `Not reached` rather than returning a phase failure.
 ## Return
 
 On success, return only the complete Research Brief or Research report. On
-failure, return:
-
-```markdown
-# Research result
-
-- **Status:** `blocked` or `invalid`
-- **Phase:** `frame` or `execute`
-- **Reason:** concrete missing capability, input, or authority
-- **Preserved state:** valid brief, question IDs, evidence, or partial coverage
-- **Resume condition:** the smallest condition that could resume the phase
-```
+failure, use the **Failure result** contract in `SKILL.md`.
 
 Stop after success, invalid input or authority, cancellation, or a named
 capability blocker.

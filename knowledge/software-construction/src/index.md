@@ -12,4 +12,4 @@ Shared definitions and guidance are supplied by `@craigsmitham/knowledge/softwar
 
 Companion readings in other discipline bundles are optional. Resolve a named concept by its bundle identity and concept ID with `axm knowledge concepts get`.
 
-- [Reviewing a codebase](reviewing-a-codebase.md) — Use when a repository needs a bounded quality review; frame product claims, assess the applicable quality pillars, apply relevant cross-cutting concerns, choose evidence methods, and preserve uncertainty without treating completion as assurance.
+- [Reviewing a codebase](reviewing-a-codebase.md) — Defines codebase-review coverage, assessment states, evidence limits, and predictable assessment and finding records.

@@ -1,40 +1,20 @@
 ---
-type: Guide
-title: Preserving evidence and provenance
-description: Use when creating or substantively revising a work item so sources, uncertainty, attribution, and decision authority survive synthesis.
+type: Reference
+title: Work-item evidence and provenance
+description: Preserves attribution, claim maturity, decision authority, and safe access to evidence recorded in work items.
 tags: [work-item, evidence, provenance, attribution, uncertainty, authority, source-inventory, software-engineering-foundations]
-generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:45:59Z }
 ---
 
-# Preserving evidence and provenance
+# Work-item evidence and provenance
 
-Apply this guide to every new work item and every substantive body revision.
-Synthesis is where sources, uncertainty, attribution, and decision authority are
-most easily lost.
+Record evidence preserves what was observed, reported, measured, inferred,
+or found unavailable, with the provenance that makes it attributable. Capturing
+a claim does not establish that its conclusion is true. Outcome and assessment
+claims retain their own criteria; see [Outcomes and evidence](../value/outcomes-and-evidence.md)
+and [Verification and validation](../requirements/verification-and-validation.md).
 
-## Which sense of evidence this is
-
-Several sections of this bundle use the word evidence, and they do not mean the
-same thing. This guide means one of them: **record evidence**, the material a
-work item preserves about what was observed, reported, measured, inferred, or
-found unavailable, together with the provenance that keeps it attributable.
-
-| Sense | What it is | Where it is owned |
-| --- | --- | --- |
-| Record evidence | What a work item preserves about an occurrence, and the provenance that makes it attributable | This guide, for every work-item role |
-| Outcome evidence | What would tell a team that an intended outcome actually occurred | [Value and outcomes](../value/outcomes-and-evidence.md) |
-| Assessment evidence | What establishes that a stated condition holds, in verification and validation | [Architecture and design](../requirements/verification-and-validation.md) |
-| Review evidence | What a repository and its surroundings can supply to a bounded codebase verdict | Software construction (optional companion reading: `@craigsmitham/knowledge/software-construction#reviewing-a-codebase`) |
-
-Record evidence is not a verdict. Preserving it establishes nothing about
-whether a condition holds, whether an outcome occurred, or whether a codebase is
-sound. Those judgments are made elsewhere, and when one is made it becomes
-material this guide preserves rather than material it produces. Diagnostic
-evidence gathered during an incident is record evidence once it is captured into
-an Operational Incident Record (optional companion reading: `@craigsmitham/knowledge/software-operations#incidents/index`); deciding what it means is
-response work, owned by Software operations (optional companion reading: `@craigsmitham/knowledge/software-operations#index`).
-
-## 1. Inventory before synthesis
+## Source context
 
 For each material occurrence, request, observation, finding, or decision,
 preserve the smallest useful set of source system or kind, stable identity or
@@ -42,7 +22,7 @@ safe retrieval key, relevant time, environment or revision, conditions,
 availability, and faithful statement or synopsis. Keep independently meaningful
 occurrences traceable even when several inform one item.
 
-## 2. Preserve claim kind and maturity
+## Claim kind and maturity
 
 Do not convert:
 
@@ -54,7 +34,7 @@ Do not convert:
 When understanding changes, retain the earlier attributable state or history
 rather than rewriting the item to make new knowledge appear contemporaneous.
 
-## 3. Preserve decisions with their authority
+## Decisions and authority
 
 Record each consequential decision, its time or revision, applicable authority,
 and material rationale. Classification, severity, priority, assignment, scope,
@@ -65,16 +45,9 @@ Permission to edit a work item authorizes faithful recording, not invention.
 When a missing decision controls dependent action, state the exact unresolved
 choice and stop that action.
 
-## 4. Use safe evidence channels
+## Safe evidence channels
 
 Keep credentials, personal information, private customer content, confidential
 commercial information, restricted links, and exploitable security detail out
 of public records. Prefer safe synopses, minimal redacted examples,
 controlled-access evidence links, and non-sensitive correlation identifiers.
-
-## 5. Verify the synthesis
-
-Compare material claims with their sources, confirm that attribution and
-uncertainty survived compression, and check that stable links resolve when
-available. After an external write, read back the persisted item; a submitted
-payload is not persistence evidence.

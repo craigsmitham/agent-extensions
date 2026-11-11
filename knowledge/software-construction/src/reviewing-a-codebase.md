@@ -1,7 +1,7 @@
 ---
-type: Guide
+type: Reference
 title: Reviewing a codebase
-description: Use when a repository needs a bounded quality review; frame product claims, assess the applicable quality pillars, apply relevant cross-cutting concerns, choose evidence methods, and preserve uncertainty without treating completion as assurance.
+description: Defines codebase-review coverage, assessment states, evidence limits, and predictable assessment and finding records.
 tags: [codebase-review, software-quality, evidence, assessment, reporting-review, checklist, software-construction]
 status: draft
 sources:
@@ -26,22 +26,16 @@ sources:
   - id: nist-ai-rmf
     resource: https://airc.nist.gov/airmf-resources/airmf/5-sec-core/
     title: NIST AI Risk Management Framework — Core
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:48:50Z }
 ---
 
 # Reviewing a codebase
 
-Use this guide to assess a bounded software product through the ten
-software quality pillars (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#quality/software-quality-pillars`). The primary
-interaction mode is `reporting-review`. A reporting-review checklist records a
-judgment against each item rather than driving an execution sequence: the list
-supplies coverage and traceability, the reviewer or model selects a
-context-appropriate way to investigate each outcome, and the output is an
-assessment carrying its evidence and uncertainty. That working definition is
-all this guide assumes; the full taxonomy of checklist modes belongs to
-checklist design, outside this body of knowledge. Each pillar receives a
-multi-state assessment; recording one does not prove the judgment or certify
-the product.[^inspections]
+Assess a bounded software product through the ten software quality pillars
+(shared concept: `@craigsmitham/knowledge/software-engineering-foundations#quality/software-quality-pillars`).
+The reporting-review format supplies coverage and traceability; investigation
+methods depend on the claim and available evidence. Each pillar receives an
+assessment with evidence and uncertainty, not certification.[^inspections]
 
 **Collection status:** candidate. The pillars are source-reviewed, not
 field-validated controls. They do not establish release, security, safety,
@@ -104,23 +98,10 @@ for applicability; do not force a relationship or repeat the default pillar
 matrix on every pillar. Record a pillar-specific relationship only when it
 changes interpretation, evidence, or a finding.
 
-## Assess every selected pillar
+## Assessment states
 
-For each pillar:
-
-1. determine whether it applies within the shared claim context;
-2. choose an inspection approach suited to the repository, consequence, and
-   evidence access;
-3. record observations, declarations, conflicting evidence, unavailable
-   evidence, and material counterevidence;
-4. distinguish the desired product state from principles, mechanisms,
-   metrics, heuristics, and supporting-artifact qualities;
-5. assign exactly one assessment state and explain the evidence-to-claim
-   relationship; and
-6. link a supported finding, bounded exception, or reason that no finding is
-   warranted.
-
-Use these states:
+Each selected pillar receives exactly one state, with an evidence-to-claim
+rationale and material counterevidence. Use these states:
 
 | State | Meaning |
 | --- | --- |
@@ -237,22 +218,14 @@ Rank findings by consequence, exposure or frequency, breadth, evidence
 strength, and remediation leverage. Report up to ten material findings per
 selected pillar; never manufacture findings to fill a quota.
 
-## Finish or resume safely
+## Report completeness and continuity
 
-A review is reporting-complete when:
-
-- the shared claim context is recorded;
-- every pillar is selected or excluded with a reason;
-- every selected pillar has exactly one state and an assessment record;
-- unsupported claims, missing evidence, and unfinished work remain visible;
-- findings have canonical owners and cross-references; and
-- the report states that completion is not certification or exhaustive
-  assurance.
-
-If interrupted, record the last completed pillar, the current evidence
-boundary, unfinished work, and any external state that may change before
-resumption. Resume against the same revision or explicitly create a new claim
-context.
+Reporting completion requires the shared context, selection or exclusion of
+every pillar, one assessment record per selected pillar, canonical findings,
+and visible evidence gaps and unfinished work. Completion is not certification
+or exhaustive assurance. An interrupted review retains the last completed
+pillar, evidence boundary, and unfinished work; a changed revision requires an
+explicitly new claim context.
 
 ## Northbank: scope the verdict before following the files
 

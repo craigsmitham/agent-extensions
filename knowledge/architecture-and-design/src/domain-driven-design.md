@@ -53,7 +53,7 @@ sources:
   - id: whirlpool
     resource: https://www.domainlanguage.com/ddd/whirlpool/
     title: Eric Evans — Whirlpool Process of Model Exploration
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:19:09Z }
 ---
 
 # Domain-driven design
@@ -609,10 +609,10 @@ exceptions, overloaded terms, and coordinated changes across supposedly
 independent areas are reasons to investigate. They are symptoms, not proof of
 one predetermined refactoring.
 
-Executable examples can keep important rules visible during evolution. Their
-place in this bundle is Designing executable
-specifications (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#behavior/designing-executable-specifications`) and
-Keeping specifications authoritative (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#behavior/keeping-specifications-authoritative`).
+Executable examples can keep important rules visible during evolution.
+Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
+connects readable rules to automation and the continuing maintenance of their
+authority and evidence.
 
 ## Applicability, tradeoffs, and distinctions
 
@@ -687,7 +687,7 @@ comparisons. Those adaptations are not statements of endorsement by Evans.
 
 - Wardley mapping (optional companion reading: `@craigsmitham/knowledge/business-analysis#wardley-mapping`)
   distinguishes component evolution from subdomain importance and model boundaries.
-- Designing executable specifications (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#behavior/designing-executable-specifications`)
+- Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
   connects selected domain rules to readable statements and executable evidence.
 - The behavior and commitment route (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#reading-software-engineering`)
   places modeling alongside actor goals, requirements, and validation.

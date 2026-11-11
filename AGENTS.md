@@ -24,5 +24,5 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [software-construction](knowledge/software-construction/src/index.md) | Software implementation, integration, review, and evolution; migrated existing knowledge. |
 | [software-engineering-foundations](knowledge/software-engineering-foundations/src/index.md) | Shared concepts, relationships, evidence, quality, maintenance, and cross-discipline examples for software engineering; migrated existing knowledge. |
 | [software-operations](knowledge/software-operations/src/index.md) | Software operation, service reliability, incident response, and recovery; migrated existing knowledge. |
-| [software-testing](knowledge/software-testing/src/index.md) | Test design, execution, evidence, suite quality, and defect reporting; migrated existing knowledge. |
+| [software-testing](knowledge/software-testing/src/index.md) | Test design, executable specifications, execution, evidence, suite quality, and defect reporting. |
 <!-- /axm:knowledge -->

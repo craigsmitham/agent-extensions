@@ -50,9 +50,7 @@ sources:
 - id: sqlite-isolation
   resource: https://www.sqlite.org/isolation.html
   title: SQLite — Isolation in SQLite
-generated:
-  by: codex/gpt-6
-  at: '2026-11-11T16:59:49Z'
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Explanation
@@ -515,7 +513,7 @@ comprehension or evidence that one outline works for every topic.
 - [Principle document](principle.md) — communicates a warranted direction for
   judgment when describing how things relate is not sufficient.
 - [Documentation craft](../explainers/documentation-craft.md) — selecting and combining documentation patterns.
-- [Writing a document](../guides/documentation-craft.md) — the shared authoring process.
+- [Writing a document](../explainers/documentation-craft.md) — the shared authoring process.
 
 [^diataxis-explanation]: Diátaxis, [Explanation](https://diataxis.fr/explanation/).
 

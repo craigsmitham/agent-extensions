@@ -52,7 +52,7 @@ complete report has sound methods or correct conclusions.
 
 Use [Checklist](checklist.md) for item wording, source authority, accessibility,
 and lifecycle. For a corpus audit, pair the aid with the scope and coverage
-method in [Auditing documentation](../guides/auditing-documentation.md).
+method in [Documentation audit report contract](../guides/auditing-documentation.md).
 
 ## Applicability and tradeoffs
 

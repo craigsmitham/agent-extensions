@@ -36,9 +36,7 @@ sources:
 - id: python-logging-reference
   resource: https://docs.python.org/3/library/logging.html
   title: Python — Logging reference
-generated:
-  by: codex/gpt-6
-  at: '2026-11-11T16:59:49Z'
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Reference
@@ -264,4 +262,4 @@ accuracy of every documented entry.
 - [Tutorial](tutorial.md) — introduces unfamiliar concepts through a guided
   experience before assuming readers can use the reference independently.
 - [Documentation craft](../explainers/documentation-craft.md) — selecting and combining documentation patterns.
-- [Writing a document](../guides/documentation-craft.md) — the shared authoring process.
+- [Writing a document](../explainers/documentation-craft.md) — the shared authoring process.

@@ -2,6 +2,8 @@
 
 ## 2026-11-11
 
+- **Prune:** Retired duplicate craft/workflow recipes and centralized audit presentation in its report contract; removed arbitrary action and publication sequencing.
+
 - **Checklist patterns**: Migrated the standalone checklist-design skill's
   durable guidance into [Checklist](patterns/checklist.md) and five draft
   specializations: [Execution](patterns/execution-checklist.md),
@@ -149,8 +151,7 @@
   and information architecture explicitly, making the existing organizing and
   naming guidance easier to find before a document exists.
 - **Creation**: Added [Documentation
-  audits](explainers/documentation-audits.md) and [Auditing
-  documentation](guides/auditing-documentation.md) to distinguish corpus-level
+  audits](explainers/documentation-audits.md) and [Documentation audit report contract](guides/auditing-documentation.md) to distinguish corpus-level
   diagnosis from review, linting, verification, and remediation and to define
   evidence, coverage, findings, and handoff.
 - **Creation**: Added [Documentation organization and

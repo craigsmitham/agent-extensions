@@ -59,7 +59,7 @@ sources:
   - id: dora
     resource: https://dora.dev/guides/dora-metrics/
     title: DORA software delivery performance metrics
-generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Software quality pillars
@@ -301,7 +301,7 @@ outside this framework, and each has a named home.
 
 | Capability | Owner |
 | --- | --- |
-| Task graphs, dependency control, and the repository surface those run through | Designing a coherent repository task interface (optional companion reading: `@craigsmitham/knowledge/engineering-environment#repository-task-interface`) |
+| Task graphs, dependency control, and the repository surface those run through | Repository task interface (optional companion reading: `@craigsmitham/knowledge/engineering-environment#patterns/repository-task-interface`) |
 | Delivery automation and the pipelines that run a task | Release engineering (optional companion reading: `@craigsmitham/knowledge/release-engineering#index`) |
 | Telemetry instrumentation and the operational signals it produces | Software operations (optional companion reading: `@craigsmitham/knowledge/software-operations#index`) |
 | Deterministic and reproducible construction | Software construction (optional companion reading: `@craigsmitham/knowledge/software-construction#index`); applied construction guidance remains unwritten |

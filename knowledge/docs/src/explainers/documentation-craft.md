@@ -9,43 +9,44 @@ tags:
 - diataxis
 - explainer
 status: stable
+generated: { by: codex/gpt-6, at: 2026-11-11T19:48:50Z }
 sources:
 - id: diataxis
   resource: https://diataxis.fr/
-  title: Diátaxis documentation system
+  title: "Di\xE1taxis documentation system"
 - id: diataxis-start
   resource: https://diataxis.fr/start-here/
-  title: Diátaxis — Start here
+  title: "Di\xE1taxis \u2014 Start here"
 - id: diataxis-start-src
   resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/start-here.rst
-  title: Diátaxis source — start-here.rst
+  title: "Di\xE1taxis source \u2014 start-here.rst"
 - id: diataxis-map
   resource: https://diataxis.fr/map/
-  title: Diátaxis — The map
+  title: "Di\xE1taxis \u2014 The map"
 - id: diataxis-map-src
   resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/map.rst
-  title: Diátaxis source — map.rst
+  title: "Di\xE1taxis source \u2014 map.rst"
 - id: diataxis-foundations
   resource: https://diataxis.fr/foundations/
-  title: Diátaxis — Foundations
+  title: "Di\xE1taxis \u2014 Foundations"
 - id: diataxis-foundations-src
   resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/foundations.rst
-  title: Diátaxis source — foundations.rst
+  title: "Di\xE1taxis source \u2014 foundations.rst"
 - id: johnson-diataxis
   resource: https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework
-  title: Tom Johnson — What is Diátaxis
+  title: "Tom Johnson \u2014 What is Di\xE1taxis"
 - id: mintlify-content-types
   resource: https://www.mintlify.com/guides/content-types
-  title: Mintlify — Content types
+  title: "Mintlify \u2014 Content types"
 - id: pattern-description
   resource: ../patterns/pattern-description.md
   title: Pattern description
 - id: pattern-collection
   resource: ../patterns/pattern-collection.md
   title: Pattern collection
-generated:
-  by: codex/gpt-6
-  at: '2026-11-11T17:40:43Z'
+- id: prior-documentation-craft
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/docs/src/guides/documentation-craft.md
+  title: Documentation craft guide
 ---
 
 # Documentation craft
@@ -74,9 +75,7 @@ Draft entries identify where their formulations still need evidence from use.
 umbrella term; use **how-to guide** when specifically referring to directions
 for accomplishing a task. These names do not prescribe host metadata or folders.
 
-For how to apply this craft in practice, see
-[Documentation craft guide](../guides/documentation-craft.md). For iterative remediation of an
-existing corpus, see [Documentation workflow](documentation-workflow.md). For
+For iterative remediation of an existing corpus, see [Documentation workflow](documentation-workflow.md). For
 functional vs deep quality, see [Documentation quality](documentation-quality.md).
 For choosing a physical organization and names without turning either into a
 universal taxonomy, see [Documentation organization and
@@ -186,6 +185,11 @@ is in [Documentation quality](documentation-quality.md).
    product surface, without reader-need forms, produces wild inconsistency
    across a portfolio.
 
+Authoritative sources establish product behavior and policy. Distinguish facts,
+proposals, and illustrative examples; name unresolved authority rather than
+inventing content. Relevant validators and exercised procedures provide bounded
+evidence. An author's review does not establish reader comprehension.
+
 ## Neighbour bleed (where reader-need forms collapse)
 
 Each form has affinity with its neighbours; blur is common:
@@ -271,7 +275,6 @@ improvements over empty form shells — see
 ## Related
 
 - [Documentation pattern collection](../patterns/index.md)
-- [Documentation craft guide](../guides/documentation-craft.md)
 - [Documentation quality](documentation-quality.md)
 - [Documentation audits](documentation-audits.md)
 - [Documentation organization and discovery](documentation-organization-and-discovery.md)

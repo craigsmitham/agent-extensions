@@ -23,7 +23,7 @@ sources:
   - id: selecting-method
     resource: ../authoring/selecting-a-specification-method.md
     title: Selecting a requirement specification method
-generated: { by: claude/opus-5, at: 2026-09-15T00:00:00Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # EARS: preconditions, triggers, and system responses
@@ -355,7 +355,7 @@ rather than a grammar error.
 different jobs. An EARS requirement states a rule for every situation matching
 its conditions. A Given–When–Then scenario illustrates one path with concrete
 data. Northbank's `NB-REPLACE-01` witness is one example of the rule, not the
-rule. Designing executable specifications (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#behavior/designing-executable-specifications`)
+rule. Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
 owns when a rule earns an executable witness.
 
 **User stories and use cases.** Stories and use cases express actor goals and
@@ -433,7 +433,7 @@ should be read before extending its claims about practice:
 
 - [Selecting a requirement specification method](../authoring/selecting-a-specification-method.md)
   chooses between EARS-like syntax and other forms.
-- [Authoring requirements](../authoring/authoring-requirements.md)
+- [Requirement content contract](../authoring/requirement-content-contract.md)
   drafts a single obligation with its sources, authority, and conditions.
 - [ISO/IEC/IEEE 29148: requirement and requirement-set quality](iso-iec-ieee-29148-requirement-quality.md)
   supplies the quality characteristics an EARS statement still has to meet.

@@ -4,7 +4,7 @@ title: "Northbank receipts: incident, defect, and corrective change"
 description: A fictional receipt-worker failure shows how operational impact, uncertain diagnosis, corrective work, verification, and closure remain connected without collapsing into one record or status.
 tags: [northbank, worked-example, incident, defect-report, change, evidence, maintenance, software-engineering-foundations]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Northbank receipts: incident, defect, and corrective change
@@ -83,8 +83,8 @@ boundary. A useful result would identify:
 Those are required fields for the example's evidence, not claims that a real
 test has passed. A clean build is insufficient. A unit test can examine a
 resource-release path; runtime accumulation and job recovery require a world
-that preserves those failure mechanisms. [Defining verification](../work-items/defining-verification.md)
-and cross-boundary tests (optional companion reading: `@craigsmitham/knowledge/software-testing#designing-cross-boundary-and-end-to-end-tests`)
+that preserves those failure mechanisms. [Defining verification](../work-items/work-item-content-contract.md)
+and cross-boundary tests (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/evidence-matched-test-world`)
 develop the continuation.
 
 Restoration can end the immediate response while the Defect Report and Change

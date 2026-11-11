@@ -4,7 +4,7 @@ title: "Northbank engineering: tooling, delivery, and infrastructure"
 description: A fictional engineering-system change connects package boundaries, task contracts, CI/CD, runtime dependencies, artifact identity, migration, and retirement to the product obligations they support.
 tags: [northbank, worked-example, tooling, ci-cd, infrastructure, task-contracts, migration, software-engineering-foundations]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Northbank engineering: tooling, delivery, and infrastructure
@@ -95,7 +95,7 @@ Suppose local verification includes a new allocation-concurrency suite but
 CI's copied list omits it. Both commands print success. The defect is in what
 the caller thinks success establishes.
 
-Use the repository task interface (optional companion reading: `@craigsmitham/knowledge/engineering-environment#repository-task-interface`) to define
+Use the repository task interface (optional companion reading: `@craigsmitham/knowledge/engineering-environment#patterns/repository-task-interface`) to define
 the supported intents. The following names describe the fictional contract;
 they are not commands for a particular runner.
 
@@ -117,7 +117,7 @@ The completed change should make one deliberate failure observable: arrange
 for the required allocation assessment to fail and confirm that the intended
 validation workflow fails. Inspect the resolved task membership as well.
 Testing only that a YAML file contains a task name would miss the original
-semantic problem. Task conformance (optional companion reading: `@craigsmitham/knowledge/engineering-environment#task-invocation-and-conformance-principles`)
+semantic problem. Task conformance (optional companion reading: `@craigsmitham/knowledge/engineering-environment#repository-task-contract`)
 develops the distinction.
 
 ## Separate task contracts from delivery orchestration

@@ -9,7 +9,7 @@ sources:
     resource: https://www.iso.org/standard/72089.html
     title: ISO/IEC/IEEE 29148:2018 Systems and software engineering — Life cycle processes — Requirements engineering
   - id: authoring-requirements
-    resource: ../authoring/authoring-requirements.md
+    resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/requirements-engineering/src/authoring/authoring-requirements.md
     title: Authoring requirements
   - id: reviewing-individual
     resource: ../review/reviewing-individual-requirements.md
@@ -17,7 +17,7 @@ sources:
   - id: reviewing-sets
     resource: ../review/reviewing-requirement-sets.md
     title: Reviewing requirement sets
-generated: { by: claude/opus-5, at: 2026-09-15T00:00:00Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:59Z }
 ---
 
 # ISO/IEC/IEEE 29148: requirement and requirement-set quality
@@ -282,15 +282,19 @@ bundle's synthesis.
 
 ### Characteristics
 
-| Standard characteristic | Bundle treatment |
-| --- | --- |
-| Individual: necessary, appropriate, unambiguous, complete, singular, feasible, verifiable | Named in [Authoring requirements](../authoring/authoring-requirements.md) and checked in [Reviewing individual requirements](../review/reviewing-individual-requirements.md) |
-| Individual: correct | Not named. The review checklist's validation-basis and source items approach it, but faithfulness to the originating need is not an explicit check |
-| Individual: conforming | Not named. [Applying project-specific requirements policy](../adaptation/applying-project-specific-requirements-policy.md) and the [requirement template](../authoring/requirement-template.md) supply the local style it would test |
-| Set: consistent, feasible | Covered by the set review's consistency, conflict, and realization items |
-| Set: complete | Treated as relative to declared sources, scope, method, and date. The standard adds a sharper test: no unresolved placeholders |
-| Set: comprehensible, able to be validated | Not named as set characteristics, though the set review asks for coverage of goals and stakeholders |
-| — | The bundle adds **traceable**, **modifiable**, and **balanced** set qualities. The standard supports traceability through identification attributes and process tasks, and balance through priority and trade-off decisions, but does not list them among set characteristics |
+This explanation defines the standard's individual and set characteristics.
+[Reviewing individual requirements](../review/reviewing-individual-requirements.md)
+selects those characteristics directly, alongside the artifact's content and
+authority contract. [Reviewing requirement sets](../review/reviewing-requirement-sets.md)
+adds scope, relationship, and maintenance checks.
+
+Set completeness remains relative to declared sources, scope, assumptions,
+method, and date; the standard's stronger completeness criterion also excludes
+unresolved placeholders. Its comprehensibility and validation-feasibility
+characteristics require assessment in addition to source coverage. Traceability,
+modifiability, and balance remain useful bundle checks without becoming named
+29148 set characteristics. These mappings do not claim conformance to the
+standard as a whole.
 
 ### Structure and management
 
@@ -387,7 +391,7 @@ evidence that applying its characteristics improves outcomes for every team.
 
 ## Continue exploring
 
-- [Authoring requirements](../authoring/authoring-requirements.md)
+- [Requirement content contract](../authoring/requirement-content-contract.md)
   applies the characteristics while drafting one obligation.
 - [Reviewing individual requirements](../review/reviewing-individual-requirements.md)
   and [Reviewing requirement sets](../review/reviewing-requirement-sets.md)

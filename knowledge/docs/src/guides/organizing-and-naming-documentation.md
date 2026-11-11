@@ -9,9 +9,9 @@ sources:
     resource: ../explainers/documentation-organization-and-discovery.md
     title: Documentation organization and discovery
   - id: documentation-craft-guide
-    resource: documentation-craft.md
+    resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/docs/src/guides/documentation-craft.md
     title: Documentation craft guide
-generated: { by: "codex/gpt-6", at: "2026-11-11T16:45:58Z" }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Organizing and naming documentation
@@ -36,8 +36,7 @@ path and title understandable when directory context is absent.
 - Authority to add or rename the affected paths
 
 If restructuring an existing corpus, keep the first change small enough to
-validate independently. Use the [Documentation workflow
-guide](documentation-workflow.md) rather than waiting for a complete site-wide
+validate independently. Use the [Documentation workflow](../explainers/documentation-workflow.md) rather than waiting for a complete site-wide
 redesign.
 
 ## 1. Name the scope and reader entry point
@@ -203,14 +202,14 @@ match their targets.
 ## Related
 
 - [Documentation organization and discovery](../explainers/documentation-organization-and-discovery.md)
-- [Documentation craft](../explainers/documentation-craft.md) · [Documentation craft guide](documentation-craft.md)
-- [Documentation workflow](../explainers/documentation-workflow.md) · [Documentation workflow guide](documentation-workflow.md)
+- [Documentation craft](../explainers/documentation-craft.md)
+- [Documentation workflow](../explainers/documentation-workflow.md)
 - [Documentation quality](../explainers/documentation-quality.md)
 - [Comparing concepts](comparing-concepts.md)
 
 [^organization]: Documentation organization and discovery defines form-first
     and subject-first grouping and treats semantic adjacency as the deciding
     relationship.
-[^documentation-craft-guide]: Documentation craft guide begins with the reader
+[^documentation-craft-guide]: Documentation craft begins with the reader
     need and applies host paths, metadata, and validators after the document's
     job is clear.

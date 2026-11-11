@@ -17,7 +17,7 @@ sources:
   - id: lifecycle
     resource: https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/overview.md
     title: Product engineering overview
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:19:09Z }
 ---
 
 # Fred Brooks on the architect's role: conceptual integrity and responsibility to the user
@@ -165,7 +165,7 @@ requirements authority (shared concept: `@craigsmitham/knowledge/software-engine
 explains how an accepted obligation differs from a proposal.
 
 Examples can then become witnesses to the accepted rule through
-executable specifications (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#behavior/designing-executable-specifications`).
+Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`).
 A passing example establishes only what it observes. The wider design still
 needs examination for gaps and contradictions, and the relationship between
 the examples and the authoritative statement must survive change.

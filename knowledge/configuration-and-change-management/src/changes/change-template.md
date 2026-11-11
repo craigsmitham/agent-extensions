@@ -3,7 +3,11 @@ type: Reference
 title: Change template
 description: Provides a compact, tracker-neutral body fallback for a bounded Change without prescribing a delivery method or separate specification and design stages.
 tags: [change, change-request, template, markdown, acceptance-criteria, verification, configuration-and-change-management]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:46:48Z }
+sources:
+- id: prior-authoring-changes
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/configuration-and-change-management/src/changes/authoring-changes.md
+  title: Authoring Changes
 ---
 
 # Change template
@@ -11,6 +15,18 @@ generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
 Use native host fields for identity, type, classification, status, priority,
 assignment, relationships, milestones, and timestamps when their semantics
 match. Omit inapplicable headings.
+
+A Change represents one coherent outcome and boundary. Split independently
+manageable work when one record cannot carry truthful state. Motivation and
+sources do not establish approval or priority. Keep the intended outcome
+independent of an implementation while alternatives remain open; preserve
+supplied technical and delivery context with its decision state. Linked peer
+artifacts retain authority, without requiring separate specifications or designs
+for every Change.
+
+The work-item content contract (shared concept:
+`@craigsmitham/knowledge/software-engineering-foundations#work-items/work-item-content-contract`)
+owns common title, evidence, and verification semantics.
 
 ```markdown
 # <Verb> <bounded outcome>

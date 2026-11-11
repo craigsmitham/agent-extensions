@@ -25,8 +25,7 @@ analysis, or validation result supports each successor and its revision. A link
 preserves lineage; it is not proof of satisfaction.
 
 Work items use the same split, merge, supersession, and retirement vocabulary
-against a different artifact, covered by Maintaining work-item identity and
-relationships (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#work-items/maintaining-identity-and-relationships`).
+against a different artifact, covered by Work-item identity and relationships (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#work-items/maintaining-identity-and-relationships`).
 Keep the two lineages separate. Merging duplicate work items does not merge the
 requirements they cite, and retiring a requirement does not close the item that
 retired it.

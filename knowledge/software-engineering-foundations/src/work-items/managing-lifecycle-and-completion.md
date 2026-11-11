@@ -1,12 +1,12 @@
 ---
-type: Guide
-title: Managing work-item lifecycle and completion
-description: Use when changing disposition, delivery, verification, operational, or closure state while keeping those dimensions independent.
+type: Reference
+title: Work-item lifecycle and completion
+description: Distinguishes handoff, disposition, delivery, verification, operational state, and authorized closure.
 tags: [work-item, lifecycle, completion, disposition, delivery, verification, closure, handoff, software-engineering-foundations]
-generated: { by: codex/gpt-5.6, at: 2026-08-29T19:30:08Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:45:59Z }
 ---
 
-# Managing work-item lifecycle and completion
+# Work-item lifecycle and completion
 
 One workflow status rarely carries all material state. Preserve evidence and
 understanding, decision, delivery, verification, operational, follow-up, and

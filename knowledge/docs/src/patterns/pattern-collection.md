@@ -42,9 +42,7 @@ sources:
 - id: documentation-organization
   resource: ../guides/organizing-and-naming-documentation.md
   title: Organizing and naming documentation
-generated:
-  by: codex/gpt-6
-  at: '2026-11-11T17:28:28Z'
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Pattern collection
@@ -218,5 +216,5 @@ documentation features; its full workflow has not been independently evaluated.
   cross-entry distinctions in one maintained place.
 - [Documentation craft](../explainers/documentation-craft.md) — applies this
   collection to documentation choices.
-- [Documentation workflow guide](../guides/documentation-workflow.md) — supports
+- [Documentation workflow](../explainers/documentation-workflow.md) — supports
   bounded improvements to an existing corpus.

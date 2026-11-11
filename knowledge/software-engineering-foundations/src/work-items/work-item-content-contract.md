@@ -1,9 +1,19 @@
 ---
 type: Reference
 title: Work-item content contract
-description: Defines the common semantic slots, their conditional applicability, and the composition order for portable work-item templates.
+description: Defines the semantic content, title and summary conventions, technical context, and bounded verification claims of portable work items.
 tags: [work-item, content-contract, template, scope, evidence, completion, verification, next-action, software-engineering-foundations]
-generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:45:59Z }
+sources:
+- id: prior-titling-and-summarizing-work-items
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-engineering-foundations/src/work-items/titling-and-summarizing-work-items.md
+  title: Titling and summarizing work items
+- id: prior-preserving-technical-context
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-engineering-foundations/src/work-items/preserving-technical-context.md
+  title: Preserving technical context
+- id: prior-defining-verification
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-engineering-foundations/src/work-items/defining-verification.md
+  title: Defining work-item verification
 ---
 
 # Work-item content contract
@@ -25,7 +35,7 @@ when it carries the same semantics; use body content only for residual meaning.
 | --- | --- | --- |
 | Identity and role | Always | Stable host identity when persisted; Operational Incident Record, Defect Report, or Change role |
 | Classification | Established and decision-relevant | Such as Bugfix, maintenance, migration, or another local classification; never infer from a label alone |
-| Title and summary | Always for a persisted item | A derived brief of the current body, written last |
+| Title and summary | Always for a persisted item | A derived brief consistent with the current body |
 | Sources and evidence | Material input exists | Originating occurrences, requests, observations, findings, links, conditions, availability, and limitations |
 | Context or motivation | Always | Why the item exists and which situation it concerns |
 | Scope and exclusions | A bounded response or case is needed | Included and intentionally excluded outcomes, systems, users, or conditions |
@@ -55,6 +65,47 @@ when it carries the same semantics; use body content only for residual meaning.
 
 Role templates are complete fallbacks for hosts without suitable structured
 fields. They apply this contract directly and add only role-specific meaning.
+
+## Title and summary
+
+The title identifies the affected behavior, artifact, service, or bounded
+outcome and its distinguishing condition or result. Useful prompts are:
+
+- Defect Report: `<subject> <observed result> when <condition>`
+- Change: `<verb> <bounded outcome>`
+- Operational Incident Record: `<affected service or capability> <current impact>`
+
+These are prompts, not mandatory grammar. Avoid leading with a tracker label,
+priority, team, or mechanism unless it is the enduring subject. The summary
+uses one or two sentences to explain the case and current boundary before a
+proposed response. Neither brief adds cause, priority, decisions, or results
+absent from the record; both remain consistent when the case changes.
+
+## Technical context and verification
+
+Preserve material constraints, findings, alternatives, decisions, test strategy,
+risks, and open questions with their source and applicable revision or
+conditions. Proposed, recommended, selected, rejected, and superseded are
+meaningfully different states. A polished proposal does not authorize work.
+
+Short case-specific context belongs in the record. Stable peer artifacts retain
+their detail; transient or restricted sources need a compact attributed synopsis
+through an appropriate evidence channel.
+
+Completion conditions state what must be observably true. An evidence strategy
+states how to assess it, including limitations. A result records what a bounded
+execution or observation established: method, target revision, environment,
+inputs, observation window, outcome, and uncertainty. Planned testing is not a
+result, and a pass does not generalize to another revision or context. Unknown
+or unavailable evidence is not a pass. Local authority determines sufficiency
+for closure, with residual risk and follow-up visible; see
+[Work-item lifecycle and completion](managing-lifecycle-and-completion.md).
+
+## Local representation
+
+[Local policy and host representation](../local-policy-and-host-representation.md)
+owns the shared rules for local obligations, native fields, and derived views.
+This contract supplies the work-item semantics that representation must retain.
 
 ## Relation to the requirement contract
 

@@ -9,13 +9,15 @@
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "Test design, execution, evidence, suite quality, and defect reporting; migrated existing knowledge.",
+  "description": "Test design, executable specifications, execution, evidence, suite quality, and defect reporting.",
   "license": "CC-BY-SA-4.0",
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "keywords": [
     "software-testing",
     "software-engineering",
-    "discipline"
+    "discipline",
+    "testing-patterns",
+    "executable-specifications"
   ],
   "repository": {
     "type": "git",

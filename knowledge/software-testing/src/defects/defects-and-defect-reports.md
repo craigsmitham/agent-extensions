@@ -3,7 +3,17 @@ type: Explanation
 title: Defects and Defect Reports
 description: Explains how observations, failures, Defects, Defect Reports, investigation, correction, verification, and closure remain distinct.
 tags: [defect, defect-report, bug, failure, observation, expectation, diagnosis, correction, verification, software-testing]
-generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:46:48Z }
+sources:
+- id: prior-recording-defect-reports
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/defects/recording-defect-reports.md
+  title: Recording Defect Reports
+- id: prior-triaging-defect-reports
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/defects/triaging-defect-reports.md
+  title: Triaging Defect Reports
+- id: prior-linking-defects-to-corrective-changes
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/defects/linking-defects-to-corrective-changes.md
+  title: Linking Defects to corrective Changes
 ---
 
 # Defects and Defect Reports
@@ -45,7 +55,54 @@ decision. A report can be closed as duplicate, not reproducible under stated
 conditions, accepted risk, out of scope, or remediated; those dispositions have
 different meanings and evidence needs.
 
-When correction is authorized, preserve the Defect Report and create or link a
-separate Change (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#work-items/software-work-item-taxonomy`) classified as Bugfix. This
-keeps the observation history intact while the Change coordinates the intended
-modification.
+## Evidence and disposition
+
+One report preserves one independently managed discrepancy. Related occurrences
+retain separate identities when their impact, evidence, communication, or
+closure requires it. A record includes the applicable expectation, observed
+result, revision and environment, inputs and trigger, impact, and uncertainty;
+the [Defect Report template](defect-report-template.md) supplies the fallback
+presentation.
+
+Reproduction steps are valuable when established and safe, but not universally
+required. Static findings, logs, measurements, screenshots, or unavailable
+material can be relevant evidence. Preserve provenance and limitations, including
+workaround risks. Sensitive evidence belongs in a governed channel with a safe
+public synopsis. Severity and priority remain separately authorized metadata.
+
+Triage establishes an attributable classification or explicit unknown,
+relationship decisions, and next route. It does not automatically diagnose
+root cause, set priority, authorize correction, or close a report. Applicability
+depends on the actual version, environment, configuration, and supported use;
+title similarity is insufficient evidence for a duplicate decision.
+
+Possible conclusions include insufficient evidence, plausible discrepancy,
+established Defect, expected behavior, environmental or data issue, and
+documentation issue. The record preserves the deciding authority, rationale,
+review trigger, and blocked action. A material unresolved question can require
+investigation before disposition. Item-local evidence survives batch grouping;
+external persistence follows Local policy and host representation (shared
+concept: `@craigsmitham/knowledge/software-engineering-foundations#local-policy-and-host-representation`).
+
+## Corrective Changes
+
+A Change is classified as Bugfix only when evidence establishes a Defect and
+its authorized purpose is correction or acceptable compensation. Investigation,
+monitoring, risk acceptance, and deferment alone do not establish that purpose.
+
+The report remains an independently recoverable evidence record. The separate
+Change links the Defects or reports it remediates and states the corrected or
+compensated condition, included and excluded cases, constraints, regression
+risks, and acceptance conditions. The applicable expectation remains linked to
+its authority. Mixed work shares a Change only when outcome, authority,
+delivery, and verification form a coherent boundary.
+
+The Change records delivery and verification. Each report retains its own
+disposition and closure policy: a delivered Bugfix does not automatically verify
+or close every report, and a closed report does not prove delivery.
+
+In Northbank's receipt episode (shared concept:
+`@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-receipt-incident`),
+`NB-DEF-07` preserves evidence and `NB-CHG-19` corrects the established retention
+defect. `NB-CHG-20`, replacing lifecycle plumbing, remains a separate proposal;
+the incident does not authorize it.

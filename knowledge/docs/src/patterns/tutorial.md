@@ -37,9 +37,7 @@ sources:
 - id: python-tutorial
   resource: https://docs.python.org/3/tutorial/
   title: Python — The Python Tutorial
-generated:
-  by: codex/gpt-6
-  at: '2026-11-11T17:40:43Z'
+generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
 ---
 
 # Tutorial
@@ -270,4 +268,4 @@ effectiveness of this full formulation for a particular learner group.
 - [Learning checklist](learning-checklist.md) — adds bounded practice prompts,
   feedback, and a plan to fade instructional support toward independent use.
 - [Documentation craft](../explainers/documentation-craft.md) — selecting and combining documentation patterns.
-- [Writing a document](../guides/documentation-craft.md) — the shared authoring process.
+- [Writing a document](../explainers/documentation-craft.md) — the shared authoring process.

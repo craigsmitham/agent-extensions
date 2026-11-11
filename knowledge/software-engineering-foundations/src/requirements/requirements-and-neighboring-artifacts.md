@@ -3,7 +3,11 @@ type: Reference
 title: Requirements and neighboring artifacts
 description: Distinguishes requirements from goals, designs, plans, tests, evidence, and work items.
 tags: [requirement, goal, design, use-case, test, evidence, work-item, software-engineering-foundations]
-generated: { by: codex/gpt-6, at: 2026-09-09T15:53:30Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T19:45:59Z }
+sources:
+- id: prior-composing-with-work-management
+  resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/requirements-engineering/src/adaptation/composing-with-work-management.md
+  title: Composing with work management
 ---
 
 # Requirements and neighboring artifacts
@@ -48,33 +52,39 @@ allows use cases to serve as behavioral requirements; the
 [use-case explanation](../behavior/use-cases.md#connections-to-neighboring-concepts)
 develops that relationship and its source basis.
 
-## Where each artifact's portable craft lives
+## Requirements and work items
 
-The requirement and the work item are the two artifacts this body of knowledge
-treats portably end to end, and each has its own content contract, identity
-rules, host mapping, and policy overlay. The pairs read alike because the
-underlying craft is the same. They are not interchangeable, because the
-artifacts are not.
+A requirement keeps its authority, identity, and decision history independently
+of the record coordinating work around it. A work item keeps its lifecycle
+independently of the obligation it cites.
 
-| Concern | Requirement | Work item |
-| --- | --- | --- |
-| Content contract | Requirement content contract (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#authoring/requirement-content-contract`) | [Work-item content contract](../work-items/work-item-content-contract.md) |
-| Identity through change | Maintaining requirement identity and lineage (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#lifecycle/maintaining-requirement-identity-and-lineage`) | [Maintaining work-item identity and relationships](../work-items/maintaining-identity-and-relationships.md) |
-| Host mapping | Mapping to requirements hosts (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#adaptation/mapping-to-requirements-hosts`) | [Mapping work items to native hosts](../work-items/mapping-to-work-item-hosts.md) |
-| Local policy overlay | Applying project-specific requirements policy (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#adaptation/applying-project-specific-requirements-policy`) | [Applying repository-specific work-item considerations](../work-items/applying-project-specific-considerations.md) |
-| Verification | [Verification and validation](verification-and-validation.md) | [Defining work-item verification](../work-items/defining-verification.md) |
+- A Defect Report may cite the requirement or intended use against which a
+  suspected deficiency was observed.
+- A Change may propose, authorize, or coordinate a requirement revision and its
+  downstream realization.
+- An Operational Incident Record may provide evidence that a requirement,
+  assumption, realization, or verification strategy needs review.
+- A requirement may link to these records as provenance or change context while
+  retaining its own authoritative identity and decision history.
 
-Choose by the artifact in hand. Neither column is a general treatment the other
-specializes, and neither is a summary of the other. How the two artifacts
-relate once both exist is covered by Composing with work
-management (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#adaptation/composing-with-work-management`).
+Do not copy the requirement into a work item as a competing authority. Do not
+infer that reported behavior is a defect, that a proposed change is approved,
+or that delivery changes normative requirement text. A project that coordinates
+work through its own native records rather than these portable roles applies
+the same semantic boundary to whatever records it has.
+
+The [work-item content contract](../work-items/work-item-content-contract.md)
+and requirement content contract (optional companion reading:
+`@craigsmitham/knowledge/requirements-engineering#authoring/requirement-content-contract`)
+define the respective records. Their shared adaptation rules live in
+[Local policy and host representation](../local-policy-and-host-representation.md).
 
 ## Continue exploring
 
 - Domain-driven design (optional companion reading: `@craigsmitham/knowledge/architecture-and-design#domain-driven-design`) develops
   the language and models through which domain behavior is understood; the
   model does not confer requirement authority by itself.
-- [Designing executable specifications](../behavior/designing-executable-specifications.md)
+- Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
   explains how selected obligations gain readable examples and executable evidence.
 - The [behavior and commitment route](../reading-software-engineering.md#behavior-and-commitment)
   connects these distinctions to actor goals, construction, and validation.
