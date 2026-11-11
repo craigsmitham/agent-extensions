@@ -8,6 +8,9 @@ and the evidence supporting it, leaving the method to the caller and model.
 
 ## Usage
 
+Invoke this skill directly during maintenance. Automatic model invocation is
+disabled through the supported native settings.
+
 Name the scope, priorities, and any relevant constraints. For example:
 
 ```text

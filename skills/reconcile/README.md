@@ -9,6 +9,9 @@ caller and model.
 
 ## Usage
 
+Invoke this skill directly during maintenance. Automatic model invocation is
+disabled through the supported native settings.
+
 Name the scope and any known authority or differences that must remain:
 
 ```text

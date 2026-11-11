@@ -5,9 +5,14 @@ Generalize a codebase or a specified part to support a broader, coherent family 
 A concise, reusable prompt that defines the desired outcome and leaves the
 method to the caller and model. The [skill](src/SKILL.md) emphasizes essential
 properties, required behavior for existing cases, simplicity of use, and an
-extent of generality determined by intended reuse.
+extent of generality determined by intended reuse. Suitable existing
+capabilities can supply that generality; case-specific policy remains with
+its owning integrations.
 
 ## Usage
+
+Invoke this skill directly during maintenance. Automatic model invocation is
+disabled through the supported native settings.
 
 Invoke it with a codebase, component, or concern; include intended reuse when
 known. For example:

@@ -1,6 +1,7 @@
 ---
 name: reconcile
 description: Reconcile a repository or a specified part by resolving unnecessary duplication and unintended divergence in its content.
+disable-model-invocation: true
 ---
 
 Reconcile the requested scope: resolve unnecessary duplication and unintended

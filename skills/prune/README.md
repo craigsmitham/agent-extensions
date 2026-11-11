@@ -8,6 +8,9 @@ and the integrity of what remains, leaving the method to the caller and model.
 
 ## Usage
 
+Invoke this skill directly during maintenance. Automatic model invocation is
+disabled through the supported native settings.
+
 Name the scope and any relevant limits on what must remain supported. For example:
 
 ```text

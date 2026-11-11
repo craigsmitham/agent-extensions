@@ -92,11 +92,11 @@ vendored copy of the Effect source.
 to authoritative public references. It does not vendor the TC39 specification
 or MDN documentation.
 
-## Codebase renewal
+## Software maintenance
 
-The `codebase-renewal` pack contains original explanatory prose inspired by
+The `software-maintenance` pack contains original explanatory prose inspired by
 Peter Drucker's renewal practices, with a software-engineering mapping to its
-six standalone members. Its [package README](packs/codebase-renewal/README.md)
+seven standalone members. Its [package README](packs/software-maintenance/README.md)
 links the Drucker Institute reading and the members' source discussions. No
 source text or code is vendored; the pack metadata and README use MIT, and each
 member retains its own declared license.
@@ -115,16 +115,6 @@ ISO/IEC 25010:2023, Basili, Caldiera, and Rombach's Goal Question Metric work,
 and Google's engineering practices. Its [package README](skills/improve/README.md)
 links the sources and explains their contributions. No source text or code is
 vendored; the package's original instructions and explanatory prose use MIT.
-
-## Software experimentation
-
-The `experiment` skill contains original guidance inspired by Peter Drucker's
-systematic innovation, James Shore and Shane Warden's spike solutions,
-Barry O'Reilly's hypothesis-driven development, and Microsoft Research's
-trustworthy experimentation work. Its [package README](skills/experiment/README.md)
-links the sources and explains their contributions and limits. No source text
-or code is vendored; the package's original instructions and explanatory prose
-use MIT.
 
 ## Software pruning
 

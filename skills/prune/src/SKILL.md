@@ -1,6 +1,7 @@
 ---
 name: prune
 description: Prune a codebase or a specified part by removing unnecessary elements and their associated maintenance burden.
+disable-model-invocation: true
 ---
 
 Prune the requested scope: remove elements that no longer serve its

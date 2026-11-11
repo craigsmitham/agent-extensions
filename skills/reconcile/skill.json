@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "reconcile",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Reconcile a repository or a specified part by resolving unnecessary duplication and unintended divergence in its content.",
   "keywords": [
     "reconciliation",
@@ -21,6 +21,6 @@
   "license": "MIT",
   "standalone": true,
   "recommendedPacks": [
-    "@craigsmitham/packs/codebase-renewal"
+    "@craigsmitham/packs/software-maintenance"
   ]
 }

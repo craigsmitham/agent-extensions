@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "align",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Align a codebase or a specified part with supplied or identified requirements and guidance.",
   "keywords": [
     "alignment",
@@ -22,6 +22,6 @@
   "license": "MIT",
   "standalone": true,
   "recommendedPacks": [
-    "@craigsmitham/packs/codebase-renewal"
+    "@craigsmitham/packs/software-maintenance"
   ]
 }

@@ -33,7 +33,6 @@
     "align": "workspace",
     "prune": "workspace",
     "improve": "workspace",
-    "experiment": "workspace",
     "business-analysis": {
       "source": "workspace",
       "enabled": false
@@ -62,7 +61,9 @@
       "source": "workspace",
       "enabled": false
     },
-    "reconcile": "workspace"
+    "reconcile": "workspace",
+    "modularize": "workspace",
+    "reuse": "workspace"
   },
   "rules": {
     "use-effect": {
@@ -89,14 +90,14 @@
     "docs": "workspace",
     "research": "workspace",
     "software-engineering": "workspace",
-    "codebase-renewal": "workspace",
     "business-analysis": "workspace",
     "requirements-engineering": "workspace",
     "architecture-and-design": "workspace",
     "software-testing": "workspace",
     "release-engineering": "workspace",
     "software-operations": "workspace",
-    "project-management": "workspace"
+    "project-management": "workspace",
+    "software-maintenance": "workspace"
   },
   "owner": "@craigsmitham"
 }

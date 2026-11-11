@@ -1,0 +1,26 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "reuse",
+  "version": "0.1.0",
+  "description": "Adapt a codebase or a specified part to use suitable existing capabilities with less maintenance burden.",
+  "keywords": [
+    "reuse",
+    "capability substitution",
+    "maintenance",
+    "dependencies",
+    "software design"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/reuse"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "standalone": true,
+  "recommendedPacks": [
+    "@craigsmitham/packs/software-maintenance"
+  ]
+}

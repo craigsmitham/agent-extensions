@@ -1,6 +1,7 @@
 ---
 name: improve
 description: Improve a codebase or a specified part with evidence-backed gains in fitness for its intended purpose.
+disable-model-invocation: true
 ---
 
 Improve the requested scope's fitness for its intended purpose, with a

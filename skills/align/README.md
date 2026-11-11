@@ -9,6 +9,9 @@ caller and model.
 
 ## Usage
 
+Invoke this skill directly during maintenance. Automatic model invocation is
+disabled through the supported native settings.
+
 Name the scope and the requirements or guidance it should align with. Include
 the relevant version or applicability when needed. For example:
 

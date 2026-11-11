@@ -1,6 +1,7 @@
 ---
 name: align
 description: Align a codebase or a specified part with supplied or identified requirements and guidance.
+disable-model-invocation: true
 ---
 
 Align the requested scope with the applicable requirements and guidance:

@@ -12,7 +12,7 @@ and are not published from this repository.
 
 | Pack | Purpose | Install |
 | --- | --- | --- |
-| [`codebase-renewal`](./packs/codebase-renewal/README.md) | Six standalone skills for codebase renewal: align with guidance, reconcile duplication and drift, prune unnecessary elements, improve quality, generalize capabilities, and experiment to reduce uncertainty. | `axm install @craigsmitham/packs/codebase-renewal` |
+| [`software-maintenance`](./packs/software-maintenance/README.md) | Seven standalone skills for explicit maintenance: align, reconcile, modularize, generalize, reuse, prune, and improve. | `axm install @craigsmitham/packs/software-maintenance` |
 | `effect` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect` |
 | [`docs`](./packs/docs/README.md) | Documentation craft, checklist patterns, pattern authoring and collections, organization, and audits | `axm install @craigsmitham/packs/docs` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
@@ -44,8 +44,9 @@ remain members of the published packs.
 | --- | --- | --- |
 | [`align`](./skills/align/README.md) | Align a codebase or a specified part with supplied or identified requirements and guidance. | `axm install @craigsmitham/skills/align` |
 | [`reconcile`](./skills/reconcile/README.md) | Reconcile a repository or a specified part by resolving unnecessary duplication and unintended divergence in its content. | `axm install @craigsmitham/skills/reconcile` |
+| [`modularize`](./skills/modularize/README.md) | Modularize a codebase or a specified part around cohesive responsibilities that can evolve independently. | `axm install @craigsmitham/skills/modularize` |
+| [`reuse`](./skills/reuse/README.md) | Adapt a codebase or a specified part to use suitable existing capabilities with less maintenance burden. | `axm install @craigsmitham/skills/reuse` |
 | [`improve`](./skills/improve/README.md) | Improve a codebase or a specified part with evidence-backed gains in fitness for its intended purpose. | `axm install @craigsmitham/skills/improve` |
-| [`experiment`](./skills/experiment/README.md) | Experiment within a codebase or a specified scope to reduce uncertainty about an engineering question through empirical evidence. | `axm install @craigsmitham/skills/experiment` |
 | [`prune`](./skills/prune/README.md) | Prune a codebase or a specified part by removing unnecessary elements and their associated maintenance burden. | `axm install @craigsmitham/skills/prune` |
 | `temporal-dates` | JavaScript Temporal type selection, API usage, interoperability, and pitfalls | `axm install @craigsmitham/skills/temporal-dates` |
 | `okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/okf` |

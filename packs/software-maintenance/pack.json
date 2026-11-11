@@ -1,0 +1,35 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "owner": "@craigsmitham",
+  "version": "0.1.0",
+  "description": "Seven standalone skills for explicit maintenance: align, reconcile, modularize, generalize, reuse, prune, and improve.",
+  "type": "pack",
+  "name": "software-maintenance",
+  "dependencies": {
+    "@craigsmitham/skills/align": ">=0.1.0",
+    "@craigsmitham/skills/reconcile": ">=0.1.0",
+    "@craigsmitham/skills/modularize": ">=0.1.0",
+    "@craigsmitham/skills/generalize": ">=0.1.0",
+    "@craigsmitham/skills/reuse": ">=0.1.0",
+    "@craigsmitham/skills/prune": ">=0.1.0",
+    "@craigsmitham/skills/improve": ">=0.1.0"
+  },
+  "keywords": [
+    "software maintenance",
+    "alignment",
+    "pruning",
+    "improvement",
+    "generalization",
+    "reconciliation",
+    "modularity",
+    "reuse",
+    "explicit invocation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "packs/software-maintenance"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT"
+}
