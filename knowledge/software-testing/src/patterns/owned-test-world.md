@@ -4,7 +4,7 @@ title: Owned test worlds
 description: Makes spanning tests accountable and repeatable through owned state, observable readiness, interruption-safe cleanup, and attributable evidence.
 tags: [testing, ownership, isolation, readiness, cleanup, evidence, software-testing]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:34:01Z }
 sources:
 - id: google-larger-testing
   resource: https://abseil.io/resources/swe-book/html/ch14.html
@@ -110,8 +110,7 @@ support:
 | Post-deployment | Non-destructive probes and observations that only the live environment can answer |
 
 Bind the suite to a repository task whose inputs, dependencies, environment,
-freshness, artifacts, and meaning of success are explicit. Use Repository task interface (optional companion reading: `@craigsmitham/knowledge/engineering-environment#patterns/repository-task-interface`) for those
-execution-surface semantics.
+freshness, artifacts, and meaning of success are explicit.
 
 A retry is another observation, not proof that the first failure was harmless.
 Preserve attempt-level results and distinguish product failure, test defect,

@@ -59,7 +59,7 @@ sources:
   - id: cagan
     resource: https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/foundations/cagan-product-strategy.md
     title: Marty Cagan's product strategy
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:34:01Z }
 ---
 
 # Shape Up: Ryan Singer's approach to shaping, betting, and building
@@ -292,7 +292,7 @@ handoffs.
 | Lifecycle question | Contribution and boundary |
 | --- | --- |
 | Architecture and design (optional companion reading: `@craigsmitham/knowledge/architecture-and-design#index`) | Explore a solution within appetite, reduce avoidable risks, and state its boundaries. Accepted obligations need explicit authority. |
-| Software construction (optional companion reading: `@craigsmitham/knowledge/software-construction#index`) | Give the team responsibility for integration, discovered work, scope decisions, and evidence of behavior. |
+| Software construction | Give the team responsibility for integration, discovered work, scope decisions, and evidence of behavior. |
 | Release engineering (optional companion reading: `@craigsmitham/knowledge/release-engineering#index`) | Connect commitment to a finishable result and protect capacity. Release engineering and operational readiness require their own practices. |
 
 Marty Cagan's product strategy (optional companion reading: `@craigsmitham/knowledge/business-analysis#foundations/cagan-product-strategy`) connects strategic

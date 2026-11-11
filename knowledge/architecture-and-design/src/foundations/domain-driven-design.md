@@ -53,7 +53,7 @@ sources:
   - id: whirlpool
     resource: https://www.domainlanguage.com/ddd/whirlpool/
     title: Eric Evans — Whirlpool Process of Model Exploration
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:34:01Z }
 ---
 
 # Domain-driven design
@@ -624,8 +624,7 @@ any particular context map, architecture, or subdomain classification.
 Jobs to Be Done (optional companion reading: `@craigsmitham/knowledge/business-analysis#foundations/jobs-to-be-done`) helps explain customer choice and needs;
 DDD helps explain and design the domain behavior through which a solution
 works. Requirements (optional companion reading: `@craigsmitham/knowledge/requirements-engineering#index`) owns the craft of stating and
-maintaining accepted obligations. Software construction (optional companion reading: `@craigsmitham/knowledge/software-construction#index`) owns
-construction and verification guidance. These concerns inform one another
+maintaining accepted obligations. These concerns inform one another
 without making the domain model the authority for every product decision.
 
 ## Reading routes and source basis

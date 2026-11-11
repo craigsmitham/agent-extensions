@@ -146,11 +146,9 @@ expected=(
   knowledge/business-analysis
   knowledge/docs
   knowledge/effect
-  knowledge/engineering-environment
   knowledge/project-management
   knowledge/release-engineering
   knowledge/requirements-engineering
-  knowledge/software-construction
   knowledge/software-operations
   knowledge/software-testing
   packs/architecture-and-design
@@ -158,12 +156,10 @@ expected=(
   packs/codebase-renewal
   packs/docs
   packs/effect
-  packs/engineering-environment
   packs/project-management
   packs/release-engineering
   packs/requirements-engineering
   packs/research
-  packs/software-construction
   packs/software-engineering
   packs/software-operations
   packs/software-testing
@@ -173,7 +169,6 @@ expected=(
   skills/business-analysis
   skills/devops-docs
   skills/docs
-  skills/engineering-environment
   skills/experiment
   skills/generalize
   skills/improve
@@ -185,7 +180,6 @@ expected=(
   skills/release-engineering
   skills/requirements-engineering
   skills/research
-  skills/software-construction
   skills/software-operations
   skills/software-testing
   skills/spot-spew

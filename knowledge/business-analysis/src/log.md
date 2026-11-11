@@ -2,6 +2,8 @@
 
 ## 2026-11-11
 
+- **Retirement:** Removed reading routes to the retired engineering-environment and software-construction packages.
+
 - **Organization:** Established `foundations/` for discipline explainers; moved existing explainers and repaired discovery routes and references.
 
 - **Retirement:** Removed installed-bundle references and reading routes to the retired software-engineering-foundations bundle. Historical provenance remains attributed.

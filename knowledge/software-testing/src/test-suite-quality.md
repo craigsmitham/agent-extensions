@@ -29,7 +29,7 @@ sources:
   - id: coverage
     resource: https://www.cs.ubc.ca/~rtholmes/papers/icse_2014_inozemtseva.pdf
     title: Coverage Is Not Strongly Correlated with Test Suite Effectiveness
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:34:01Z }
 ---
 
 # Test-suite quality criteria
@@ -49,8 +49,7 @@ a score in which every property can be maximized at once.[^test-desiderata]
 This candidate `reporting-review` checklist therefore asks for a bounded
 artifact judgment and preserves tradeoffs, uncertainty, and applicability.
 
-Apply the shared states and record shape in Reviewing a
-codebase (optional companion reading: `@craigsmitham/knowledge/software-construction#reviewing-a-codebase`). `XC-01` Claim context identifies the
+`XC-01` Claim context identifies the
 product claims, change risks, execution environments, and consequence the suite
 is intended to support. `XC-06` Assurance relates the suite to a broader
 verification portfolio, while `XC-08` Evidence governs relevance, validity,
@@ -215,7 +214,7 @@ in an appropriately layered portfolio.
 does not compensate for irrelevant or nondiscriminating tests.
 
 Completion means every applicable criterion has one assessment state and a
-claim-bound record under Reviewing a codebase (optional companion reading: `@craigsmitham/knowledge/software-construction#reviewing-a-codebase`).
+claim-bound record.
 The ten items are interacting review lenses, not equal-weight factors. A strong
 suite does not prove product correctness, safety, security, or fitness, and no
 finite test suite establishes exhaustive fault absence.[^testing-theory]

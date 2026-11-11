@@ -6,8 +6,8 @@ version = 1
 contract = 1
 
 [projections.knowledge.units."AGENTS.md"]
-gen = "sha256:a9129c89d3dd2df372b863925e919bc7957b5fce4bcde4f63f43f20456f5a2aa"
-output = "sha256:b925d860daae9e0a5f574cc1a2568ae8d89e678e841202c55a3a4b58a8550b9e"
+gen = "sha256:f456073199c3085a65edefdb6fabd9873fe3d7d8b77824136fef3889e1abc064"
+output = "sha256:a60314b47028972aa538e9f07360acec410f70d008df74148e6f337fdfc34675"
 
 [projections.instructions]
 contract = 1

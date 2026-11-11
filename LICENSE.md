@@ -9,7 +9,7 @@ for each package is the SPDX expression in its manifest.
   Migrated concepts retain their original licensing and attribution. Retired
   releases retain their published licenses.
 - The placeholder `release-engineering` knowledge bundle uses `CC-BY-4.0`.
-- The ten new placeholder skills and discipline pack metadata use MIT.
+- The placeholder discipline skills and discipline pack metadata use MIT.
 - `okf` is licensed under `MIT AND Apache-2.0`: Craig's original skill,
   templates, and validator use MIT, while the vendored Open Knowledge Format
   specification retains its upstream Apache-2.0 license.

@@ -23,7 +23,7 @@ sources:
   - id: management
     resource: https://www.svpg.com/product-strategy-management/
     title: Marty Cagan — Product Strategy – Management
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:34:01Z }
 ---
 
 # Marty Cagan's product strategy
@@ -165,8 +165,7 @@ strategy. The following mapping preserves both vocabularies:
   Strategic direction provides context for that exploration.
 
 His term *product delivery* includes building and bringing a solution to market;
-it spans concerns this collection distributes across Software construction (optional companion reading: `@craigsmitham/knowledge/software-construction#index`)
-and Release engineering (optional companion reading: `@craigsmitham/knowledge/release-engineering#index`). These are different organizing schemes,
+it spans software construction and Release engineering (optional companion reading: `@craigsmitham/knowledge/release-engineering#index`). These are different organizing schemes,
 not a requirement for sequential handoffs.
 
 The account supports the connection between strategic direction, problem

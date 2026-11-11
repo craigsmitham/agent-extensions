@@ -46,10 +46,6 @@
       "source": "workspace",
       "enabled": false
     },
-    "software-construction": {
-      "source": "workspace",
-      "enabled": false
-    },
     "software-testing": {
       "source": "workspace",
       "enabled": false
@@ -63,10 +59,6 @@
       "enabled": false
     },
     "project-management": {
-      "source": "workspace",
-      "enabled": false
-    },
-    "engineering-environment": {
       "source": "workspace",
       "enabled": false
     },
@@ -84,12 +76,10 @@
     "business-analysis": "workspace",
     "requirements-engineering": "workspace",
     "architecture-and-design": "workspace",
-    "software-construction": "workspace",
     "software-testing": "workspace",
     "release-engineering": "workspace",
     "software-operations": "workspace",
-    "project-management": "workspace",
-    "engineering-environment": "workspace"
+    "project-management": "workspace"
   },
   "subagents": {
     "researcher": "workspace"
@@ -103,12 +93,10 @@
     "business-analysis": "workspace",
     "requirements-engineering": "workspace",
     "architecture-and-design": "workspace",
-    "software-construction": "workspace",
     "software-testing": "workspace",
     "release-engineering": "workspace",
     "software-operations": "workspace",
-    "project-management": "workspace",
-    "engineering-environment": "workspace"
+    "project-management": "workspace"
   },
   "owner": "@craigsmitham"
 }
