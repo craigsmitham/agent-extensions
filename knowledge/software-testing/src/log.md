@@ -2,6 +2,10 @@
 
 ## 2026-11-11
 
+- **Organization:** Established `foundations/` for discipline explainers; moved existing explainers and repaired discovery routes and references.
+
+- **Retirement:** Removed installed-bundle references and reading routes to the retired software-engineering-foundations bundle. Historical provenance remains attributed.
+
 - **Remove:** Removed references to the retired shared work-item collection.
 
 - **Prune:** Consolidated test selection and lifecycle guidance into evidence-matched and owned-test-world patterns; retained browser evidence constraints, diagnostic records, and suite-quality criteria. Consolidated defect workflows into the model and template.

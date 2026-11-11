@@ -4,7 +4,7 @@ title: Evidence-matched test world
 description: Chooses the smallest test world that preserves material failure distinctions, with explicit boundaries, substitutions, and evidence limits.
 tags: [testing, test-fidelity, test-scope, test-doubles, integration, end-to-end, software-testing]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-11T19:51:11Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 sources:
 - id: google-unit-testing
   resource: https://abseil.io/resources/swe-book/html/ch12.html
@@ -239,17 +239,6 @@ remaining in the suite.
 [Browser test evidence](../writing-browser-test-evidence.md) distinguishes
 browser capability from subject scope. [Owned test worlds](owned-test-world.md)
 addresses state, readiness, interruption, cleanup, execution, and diagnosis.
-
-## Evidence and example
-
-This draft pattern consolidates the cited test-design guidance; it is not a
-field validation of the formulation. In Northbank's allocation case (shared
-concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-allocation-change`),
-plain comparisons need no browser, while competing commits need a real-store
-observer. A sequential fake erases the decisive condition. A separate world
-can interrupt publication after commit and redeliver to an idempotent consumer;
-a provider emulator does not establish the real provider's availability or
-transaction guarantees.
 
 [^google-unit-testing]: Winters et al., [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html), describes why small, focused tests give fast and specific feedback and how to keep them maintainable.
 [^test-desiderata]: Beck and Sutton, [Test Desiderata](https://testdesiderata.com/), presents valuable test properties as interacting aims rather than one universal test shape.

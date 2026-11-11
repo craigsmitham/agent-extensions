@@ -153,11 +153,9 @@ vendored; the package's original instructions and explanatory prose use MIT.
 
 ## Software-engineering discipline migration
 
-The `software-engineering-foundations` and discipline knowledge bundles retain
-existing product-engineering material and its source attribution. The migration
-map in `docs/software-engineering-migration.json` identifies the original
-revision, moved concepts, and passages extracted from existing organizational
-pages. These bundles synthesize ideas from public sources identified in each
+The discipline knowledge bundles retain
+existing product-engineering material and its source attribution.
+These bundles synthesize ideas from public sources identified in each
 concept’s provenance metadata. These include public
 agent-engineering guidance from Anthropic and OpenAI, Silicon Valley Product
 Group's product-model writing,

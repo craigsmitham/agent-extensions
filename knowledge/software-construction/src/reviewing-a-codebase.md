@@ -26,16 +26,14 @@ sources:
   - id: nist-ai-rmf
     resource: https://airc.nist.gov/airmf-resources/airmf/5-sec-core/
     title: NIST AI Risk Management Framework — Core
-generated: { by: codex/gpt-6, at: 2026-11-11T19:48:50Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 ---
 
 # Reviewing a codebase
 
-Assess a bounded software product through the ten software quality pillars
-(shared concept: `@craigsmitham/knowledge/software-engineering-foundations#quality/software-quality-pillars`).
-The reporting-review format supplies coverage and traceability; investigation
-methods depend on the claim and available evidence. Each pillar receives an
-assessment with evidence and uncertainty, not certification.[^inspections]
+Assess a bounded software product through the ten software quality pillars.
+Each pillar receives an assessment with evidence and uncertainty, not
+certification.[^inspections]
 
 **Collection status:** candidate. The pillars are source-reviewed, not
 field-validated controls. They do not establish release, security, safety,
@@ -67,20 +65,13 @@ Consider all ten pillars — `SQ-01` Suitability, `SQ-02` Correctness, `SQ-03`
 Reliability, `SQ-04` Security, `SQ-05` Safety, `SQ-06` Efficiency, `SQ-07`
 Usability, `SQ-08` Compatibility, `SQ-09` Evolvability, and `SQ-10`
 Intelligibility — then select each applicable one or record why it is outside
-the review boundary. Software quality pillars (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#quality/software-quality-pillars`)
-supplies each pillar's desired outcome, inclusions, exclusions, and
-nearest-neighbor boundary test.
+the review boundary.
 
 The ten pillars own product-quality judgments. Do not substitute a verdict
 about tests, documentation, modularity, telemetry, build configuration, or
 another supporting subject for the relevant product verdict.
 
 ## Apply cross-cutting concerns without creating extra pillars
-
-Use Cross-cutting concerns for software
-quality (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#quality/cross-cutting-concerns`) for what each record means and for the
-typed edge a finding should carry. Interpret the records that matter to a
-selected pillar:
 
 | Record | Use in a review |
 | --- | --- |
@@ -226,17 +217,6 @@ and visible evidence gaps and unfinished work. Completion is not certification
 or exhaustive assurance. An interrupted review retains the last completed
 pillar, evidence boundary, and unfinished work; a changed revision requires an
 explicitly new claim context.
-
-## Northbank: scope the verdict before following the files
-
-The Northbank allocation (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-allocation-change`) and
-engineering-system (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-engineering-system`) cases provide different
-evidence surfaces. For a review, identify the actual revision, accepted rules,
-writers, workload, deployment, and available results. The examples describe
-plans and fictional conditions; they are not evidence for a real verdict.
-Inspect structure and lifecycle integrity for their contribution to product
-claims. Task presence, deletion counts, and a green pipeline cannot substitute
-for correctness, reliability, or customer evidence.
 
 [^iso-evaluation]: ISO, [ISO/IEC 25040:2024 quality evaluation framework](https://www.iso.org/standard/83467.html).
 [^assurance-case]: ISO, [ISO/IEC/IEEE 15026-2:2022 assurance case](https://www.iso.org/standard/80625.html).

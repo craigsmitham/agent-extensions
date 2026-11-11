@@ -62,10 +62,6 @@
       "source": "workspace",
       "enabled": false
     },
-    "configuration-and-change-management": {
-      "source": "workspace",
-      "enabled": false
-    },
     "project-management": {
       "source": "workspace",
       "enabled": false
@@ -85,7 +81,6 @@
   "knowledge": {
     "docs": "workspace",
     "effect": "workspace",
-    "software-engineering-foundations": "workspace",
     "business-analysis": "workspace",
     "requirements-engineering": "workspace",
     "architecture-and-design": "workspace",
@@ -93,7 +88,6 @@
     "software-testing": "workspace",
     "release-engineering": "workspace",
     "software-operations": "workspace",
-    "configuration-and-change-management": "workspace",
     "project-management": "workspace",
     "engineering-environment": "workspace"
   },
@@ -113,7 +107,6 @@
     "software-testing": "workspace",
     "release-engineering": "workspace",
     "software-operations": "workspace",
-    "configuration-and-change-management": "workspace",
     "project-management": "workspace",
     "engineering-environment": "workspace"
   },

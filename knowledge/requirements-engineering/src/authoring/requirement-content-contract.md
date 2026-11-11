@@ -3,7 +3,7 @@ type: Reference
 title: Requirement content contract
 description: Defines the minimum semantic content needed for a durable, reviewable, assessable requirement.
 tags: [requirement, content-contract, identity, evidence, traceability, requirements-engineering]
-generated: { by: codex/gpt-6, at: 2026-11-11T20:03:45Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 sources:
 - id: prior-authoring-requirements
   resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/requirements-engineering/src/authoring/authoring-requirements.md
@@ -50,10 +50,3 @@ preference is not an accepted constraint.
 Separate independently decidable obligations; retain an atomic rule or invariant
 whose meaning would be destroyed by splitting. Vague qualifiers and unbounded
 terms need an explicit interpretation, not invented precision.
-
-The [individual review criteria](../review/reviewing-individual-requirements.md)
-and [set review criteria](../review/reviewing-requirement-sets.md) define the
-quality checks used with this contract. Local policy and host representation
-(shared concept: `@craigsmitham/knowledge/software-engineering-foundations#local-policy-and-host-representation`)
-owns adaptation rules; requirement authority remains independent of its host's
-workflow status.

@@ -8,7 +8,6 @@ Business context, strategy, customer progress, and service modeling.
 | --- | --- |
 | `@craigsmitham/skills/business-analysis` | Placeholder; task guidance has not been authored |
 | `@craigsmitham/knowledge/business-analysis` | Existing knowledge migrated from product-engineering; coverage is partial |
-| `@craigsmitham/knowledge/software-engineering-foundations` | Shared concepts and existing cross-discipline guidance |
 
 The scope names the intended discipline. It does not claim complete practice coverage.
 

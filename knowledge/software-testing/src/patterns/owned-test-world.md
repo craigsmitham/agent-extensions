@@ -4,7 +4,7 @@ title: Owned test worlds
 description: Makes spanning tests accountable and repeatable through owned state, observable readiness, interruption-safe cleanup, and attributable evidence.
 tags: [testing, ownership, isolation, readiness, cleanup, evidence, software-testing]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 sources:
 - id: google-larger-testing
   resource: https://abseil.io/resources/swe-book/html/ch14.html
@@ -142,16 +142,6 @@ cost of harness and cleanup work. Shared environments limit destructive control
 and early feedback; a fixture cannot promise isolation beyond the state it
 actually owns. The cited practices support this draft synthesis; the Northbank
 case is illustrative, not field validation of the pattern.
-
-## Northbank: own the allocation test world
-
-For the allocation case (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-allocation-change`), the owning team
-supplies a real-store world with isolated reservation histories, declared
-schema/setup dependencies, readiness checks, and cleanup that survives a
-failed test. The concurrency claim must observe committed application results.
-The task contract (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-engineering-system`)
-identifies how local and CI callers start that world and what result freshness
-means. A test that never ran because CI omitted it is an evidence gap, not a pass.
 
 [^google-larger-testing]: Graves, [Larger Testing](https://abseil.io/resources/swe-book/html/ch14.html), explains fidelity, system-under-test forms, ownership, hermeticity, data, and the costs of larger tests.
 [^rails-testing]: Rails, [Testing Rails Applications](https://guides.rubyonrails.org/testing.html), distinguishes framework integration tests from browser-driven system tests and their cost and fidelity tradeoffs.

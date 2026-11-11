@@ -1,11 +1,11 @@
 # Software engineering
 
-An optional aggregate of the ten discipline collections. It installs eleven
-knowledge bundles and ten placeholder skills. Existing knowledge is partial;
-the release-engineering knowledge bundle and all ten skills are placeholders.
+An optional aggregate of the nine discipline collections. It installs nine
+knowledge bundles and nine placeholder skills. Existing knowledge is partial;
+the release-engineering knowledge bundle and all nine skills are placeholders.
 
 AXM packs do not nest. This pack lists each discipline’s skill and knowledge
-bundle directly, plus `@craigsmitham/knowledge/software-engineering-foundations`.
+bundle directly.
 
 ## Disciplines
 
@@ -18,12 +18,10 @@ bundle directly, plus `@craigsmitham/knowledge/software-engineering-foundations`
 | software-testing | `@craigsmitham/skills/software-testing`, `@craigsmitham/knowledge/software-testing` |
 | release-engineering | `@craigsmitham/skills/release-engineering`, `@craigsmitham/knowledge/release-engineering` |
 | software-operations | `@craigsmitham/skills/software-operations`, `@craigsmitham/knowledge/software-operations` |
-| configuration-and-change-management | `@craigsmitham/skills/configuration-and-change-management`, `@craigsmitham/knowledge/configuration-and-change-management` |
 | project-management | `@craigsmitham/skills/project-management`, `@craigsmitham/knowledge/project-management` |
 | engineering-environment | `@craigsmitham/skills/engineering-environment`, `@craigsmitham/knowledge/engineering-environment` |
 
-The foundations bundle is also independently installable. Discipline packs
-provide smaller selections containing their skill, knowledge, and foundations.
+Discipline packs provide smaller selections containing their skill and knowledge bundle.
 
 ## Install
 

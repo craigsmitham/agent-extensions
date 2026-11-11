@@ -3,7 +3,7 @@ type: Guide
 title: Authoring quantitative and quality requirements
 description: Specifies measurable quality obligations without inventing targets or omitting assessment context. Use when a requirement asserts a quality such as performance, reliability, or availability, or rests on an adjective with no measure, condition, or target.
 tags: [quality, quantitative, measure, threshold, performance, reliability, requirements-engineering]
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 ---
 
 # Authoring quantitative and quality requirements
@@ -29,19 +29,4 @@ Balance qualities explicitly. Improving throughput may affect consistency,
 cost, energy use, operability, or accessibility; the requirement set should
 make accepted tradeoffs discoverable.
 
-For a worked service-quality example, read
-SLIs, SLOs, and SLAs (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#measurement/service-level-indicators-objectives-and-agreements`).
-It develops event eligibility, measurement locations, windows, and the distinction
-between a measured indicator, an objective, and an agreement.
-Key performance indicators (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#measurement/key-performance-indicators`)
-explains why a measure is selected for attention; selection does not by itself
-make its target an accepted requirement.
-
 ## Keep the case population with the target
-
-The Northbank case (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-equipment`)
-keeps the later two-depot confirmation KPI separate from the controlled
-one-depot pilot and the confirmation-read arithmetic exhibit. Copying only a
-percentage would lose the obligated subject, population, window, and evidence.
-A new partner-recovery timeout remains an explicit candidate until its meaning
-and authority are resolved.

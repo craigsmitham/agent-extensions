@@ -66,7 +66,7 @@ sources:
 - id: prior-maintenance-guide
   resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-engineering-foundations/src/behavior/keeping-specifications-authoritative.md
   title: Keeping specifications authoritative
-generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 ---
 
 # Executable specifications
@@ -120,11 +120,6 @@ may hold the requirement itself or witness a separate requirement record:
 | --- | --- |
 | A requirement record already states the rule | The specification witnesses that requirement; changes to the two follow the requirement's authority |
 | The project accepts the specification text as the requirement | Its text holds the obligation; implementation and supporting coverage conform to it |
-
-Use One authority, many witnesses (shared concept:
-`@craigsmitham/knowledge/software-engineering-foundations#requirements/one-authority-many-witnesses`)
-to keep these relationships explicit. Two accepted statements of the same rule
-without a declared authority relationship invite drift.
 
 Choosing and accepting a requirement's form belongs to requirements engineering.
 Selecting a requirement specification method (optional companion reading:
@@ -226,13 +221,6 @@ make that obligation an executable specification.
 
 ## Consequences and excessive use
 
-Readable rules make intent disputable, and repeated execution keeps evidence
-of conformance current. Separating bindings lets interfaces evolve while the
-rule remains recognizable. Neither benefit establishes that the accepted rule
-was the right one; Verification and validation (shared concept:
-`@craigsmitham/knowledge/software-engineering-foundations#requirements/verification-and-validation`)
-distinguishes those questions.
-
 Appropriate use still costs review time, ownership, automation maintenance,
 and execution capacity. Applying the pattern to every test adds ceremony to
 mechanisms that do not need independent agreement. Too many example-table rows
@@ -244,8 +232,6 @@ Reduce those costs by retaining the smallest useful readable set, keeping
 exhaustive coverage beneath it, and retiring statements whose obligations have
 ended. Useful specifications survive because their rules remain live, not
 because someone once wrote their scenarios.
-
-## Keeping the pattern effective through change
 
 ### Acceptance and evidence remain separate
 
@@ -315,16 +301,6 @@ For this entitlement, interface walkthrough details have other homes:
 Those details would stay in readable text if they were the obligation being
 specified—for example, a status code promised to API consumers.
 
-The synthetic Northbank commitment specimen (shared concept:
-`@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-commitment-requirements`)
-illustrates the other authority arrangement: `NB-REPLACE-01` lives in a separate
-requirement record, and its conflict scenario witnesses that rule. The
-allocation case (shared concept:
-`@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-allocation-change`)
-binds behavior below the statement and uses a real store for its concurrency
-claim. Expanding to partner coordination reopens the evidence question; the
-old local result does not establish provider-integration behavior.
-
 ## Evidence and relationships
 
 This draft consolidates the repository's earlier design and maintenance
@@ -336,17 +312,6 @@ the BDD quality study informs vocabulary and abstraction choices.[^farley-four-l
 The refund and Northbank examples are illustrations, not field evaluations of
 this pattern description. Reorganization does not constitute renewed source
 verification or evidence of effectiveness in this repository.
-
-Use cases (shared concept:
-`@craigsmitham/knowledge/software-engineering-foundations#behavior/use-cases`)
-can suggest actor goals and alternative paths. Domain-driven design (optional
-companion reading:
-`@craigsmitham/knowledge/architecture-and-design#domain-driven-design`) can inform
-the language and invariants. Fred Brooks on the architect's role (optional
-companion reading:
-`@craigsmitham/knowledge/architecture-and-design#brooks-architect-role`) addresses
-the coherence of the wider design. Passing executable examples does not settle
-any of those broader questions.
 
 [^north-introducing-bdd]: [Introducing BDD](https://dannorth.net/introducing-bdd/).
 [^fowler-spec-by-example]: [Specification by Example](https://martinfowler.com/bliki/SpecificationByExample.html).

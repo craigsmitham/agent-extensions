@@ -8,7 +8,6 @@ Software operation, service reliability, incident response, and recovery.
 | --- | --- |
 | `@craigsmitham/skills/software-operations` | Placeholder; task guidance has not been authored |
 | `@craigsmitham/knowledge/software-operations` | Existing knowledge migrated from product-engineering; coverage is partial |
-| `@craigsmitham/knowledge/software-engineering-foundations` | Shared concepts and existing cross-discipline guidance |
 
 The scope names the intended discipline. It does not claim complete practice coverage.
 

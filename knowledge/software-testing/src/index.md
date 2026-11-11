@@ -8,8 +8,6 @@ Test design, execution, evidence, suite quality, and defect reporting.
 This bundle contains testing guidance and a pattern collection, based on existing
 material migrated from product-engineering. Coverage is partial.
 
-Shared definitions and guidance are supplied by `@craigsmitham/knowledge/software-engineering-foundations`, included in this discipline’s pack.
-
 Companion readings in other discipline bundles are optional. Resolve a named concept by its bundle identity and concept ID with `axm knowledge concepts get`.
 
 ## Concepts and collections
@@ -18,3 +16,5 @@ Companion readings in other discipline bundles are optional. Resolve a named con
 - [Browser test evidence](writing-browser-test-evidence.md) — Defines browser capability and scope choices, observable assertions, readiness, isolation, visual baselines, accessibility limits, and failure evidence.
 - [Defects](defects/index.md) — Discrepancy evidence, disposition, correction, and report presentation.
 - [Testing pattern collection](patterns/index.md) — Reusable responses to test-evidence problems.
+
+- [Foundations](foundations/index.md) — Explainers for software testing.

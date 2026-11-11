@@ -8,7 +8,6 @@ Software architecture, domain modeling, and design.
 | --- | --- |
 | `@craigsmitham/skills/architecture-and-design` | Placeholder; task guidance has not been authored |
 | `@craigsmitham/knowledge/architecture-and-design` | Existing knowledge migrated from product-engineering; coverage is partial |
-| `@craigsmitham/knowledge/software-engineering-foundations` | Shared concepts and existing cross-discipline guidance |
 
 The scope names the intended discipline. It does not claim complete practice coverage.
 

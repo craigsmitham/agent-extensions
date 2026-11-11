@@ -2,11 +2,10 @@
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
   "version": "4.0.0",
-  "description": "Aggregate of ten software-engineering discipline packs\u2019 members: migrated knowledge, shared foundations, and placeholder skills.",
+  "description": "Aggregate of nine software-engineering discipline packs\u2019 members: migrated knowledge, and placeholder skills.",
   "keywords": [
     "software-engineering",
     "disciplines",
-    "foundations",
     "placeholder"
   ],
   "repository": {
@@ -33,12 +32,9 @@
     "@craigsmitham/knowledge/release-engineering": ">=0.1.0",
     "@craigsmitham/skills/software-operations": ">=0.0.1",
     "@craigsmitham/knowledge/software-operations": ">=0.1.0",
-    "@craigsmitham/skills/configuration-and-change-management": ">=0.0.1",
-    "@craigsmitham/knowledge/configuration-and-change-management": ">=0.1.0",
     "@craigsmitham/skills/project-management": ">=0.0.1",
     "@craigsmitham/knowledge/project-management": ">=0.1.0",
     "@craigsmitham/skills/engineering-environment": ">=0.0.1",
-    "@craigsmitham/knowledge/engineering-environment": ">=0.1.0",
-    "@craigsmitham/knowledge/software-engineering-foundations": ">=0.1.0"
+    "@craigsmitham/knowledge/engineering-environment": ">=0.1.0"
   }
 }

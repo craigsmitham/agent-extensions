@@ -19,7 +19,7 @@ tags:
     software-testing,
   ]
 status: stable
-generated: { by: codex/gpt-6, at: 2026-11-11T19:51:11Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 sources:
 - id: playwright-best-practices
   resource: https://playwright.dev/docs/best-practices
@@ -267,16 +267,6 @@ to diagnose rather than a reason to normalize retries as success.[^ui-flaky-test
 Classify failures as product, test, environment, or unknown only from retained
 evidence. Quarantine can protect an unrelated decision path temporarily, but
 must preserve visibility, ownership, and a route to repair or retirement.
-
-## Northbank: observe the current commitment
-
-In Northbank's confirmation flow, locate controls and state by their user-facing
-meaning and wait for an observable update rather than an arbitrary pause.
-Exercise keyboard operation and the relevant viewport only where the claim
-requires them. The allocation case (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-allocation-change`) explains
-why a screenshot of a green confirmation is insufficient: the current state
-and the user's interpretation need evidence, while database concurrency belongs
-to a different assessment.
 
 [^testing-library-queries]: Testing Library, [About Queries](https://testing-library.com/docs/queries/about/), prioritizes accessible, user-corresponding queries.
 [^playwright-best-practices]: Playwright, [Best Practices](https://playwright.dev/docs/best-practices), recommends user-visible behavior, isolated tests, resilient locators, actionability checks, controlled data, and deliberate browser coverage.

@@ -3,7 +3,7 @@ type: Guide
 title: Authoring constraints and external conformance requirements
 description: States genuine restrictions and applicable external obligations with explicit scope, version, and evidence. Use when a requirement restricts the solution space or invokes a law, standard, contract, or interface obligation.
 tags: [constraint, conformance, standard, regulation, contract, interface, requirements-engineering]
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 ---
 
 # Authoring constraints and external conformance requirements
@@ -28,9 +28,3 @@ External text may have licensing or quotation restrictions. Link and summarize
 within permitted bounds rather than copying it unnecessarily.
 
 ## Worked continuation
-
-The Northbank specimen (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-commitment-requirements`) uses a fictional
-versioned fleet-interface clause to illustrate external conformance and a
-controlled local allocation scope to illustrate a chosen boundary. The case
-claims no actual provider or legal compliance. An adopted design choice becomes
-a constraint only when an authorized decision restricts subsequent choices.

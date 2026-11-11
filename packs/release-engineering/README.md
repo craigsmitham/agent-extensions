@@ -8,7 +8,6 @@ Release preparation, packaging, distribution, deployment, and rollout.
 | --- | --- |
 | `@craigsmitham/skills/release-engineering` | Placeholder; task guidance has not been authored |
 | `@craigsmitham/knowledge/release-engineering` | Placeholder; no domain guidance has been authored |
-| `@craigsmitham/knowledge/software-engineering-foundations` | Shared concepts and existing cross-discipline guidance |
 
 The scope names the intended discipline. It does not claim complete practice coverage.
 

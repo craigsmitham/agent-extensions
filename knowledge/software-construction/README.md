@@ -2,7 +2,7 @@
 
 Software implementation, integration, review, and evolution; migrated existing knowledge.
 
-1 existing concepts and extracted passages. The `software-construction` pack also includes the shared `@craigsmitham/knowledge/software-engineering-foundations` bundle and a placeholder skill.
+1 existing concepts and extracted passages. The `software-construction` pack also includes a placeholder skill.
 
 Cross-discipline companion readings are optional; they are identified by bundle and concept identity. Resolve installed concepts with `axm knowledge concepts get`.
 

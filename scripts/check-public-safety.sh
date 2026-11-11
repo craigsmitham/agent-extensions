@@ -144,7 +144,6 @@ find_authored_manifests() {
 expected=(
   knowledge/architecture-and-design
   knowledge/business-analysis
-  knowledge/configuration-and-change-management
   knowledge/docs
   knowledge/effect
   knowledge/engineering-environment
@@ -152,13 +151,11 @@ expected=(
   knowledge/release-engineering
   knowledge/requirements-engineering
   knowledge/software-construction
-  knowledge/software-engineering-foundations
   knowledge/software-operations
   knowledge/software-testing
   packs/architecture-and-design
   packs/business-analysis
   packs/codebase-renewal
-  packs/configuration-and-change-management
   packs/docs
   packs/effect
   packs/engineering-environment
@@ -174,7 +171,6 @@ expected=(
   skills/align
   skills/architecture-and-design
   skills/business-analysis
-  skills/configuration-and-change-management
   skills/devops-docs
   skills/docs
   skills/engineering-environment

@@ -2,7 +2,7 @@
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
   "version": "0.1.0",
-  "description": "Project capabilities, plans, commitments, resources, and progress; existing knowledge where available, shared foundations, and a placeholder skill.",
+  "description": "Project capabilities, plans, commitments, resources, and progress; existing knowledge where available, and a placeholder skill.",
   "keywords": [
     "project-management",
     "software-engineering",
@@ -20,7 +20,6 @@
   "name": "project-management",
   "dependencies": {
     "@craigsmitham/skills/project-management": ">=0.0.1",
-    "@craigsmitham/knowledge/project-management": ">=0.1.0",
-    "@craigsmitham/knowledge/software-engineering-foundations": ">=0.1.0"
+    "@craigsmitham/knowledge/project-management": ">=0.1.0"
   }
 }

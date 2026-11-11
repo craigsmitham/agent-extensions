@@ -1,12 +1,10 @@
 # Licensing
 
 This repository contains independently packaged agent extensions. The license
-for each package is the SPDX expression in its manifest. The prospective
-license-selection policy and package-boundary rules are documented in
-[`docs/licensing.md`](./docs/licensing.md).
+for each package is the SPDX expression in its manifest.
 
 - The `docs` knowledge bundle, pack, and skill, the `devops-docs` skill,
-  `software-engineering-foundations`, and the nine discipline knowledge bundles
+  and the discipline knowledge bundles
   containing migrated product-engineering material use `CC-BY-SA-4.0`.
   Migrated concepts retain their original licensing and attribution. Retired
   releases retain their published licenses.

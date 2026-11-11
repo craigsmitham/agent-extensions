@@ -171,8 +171,8 @@ set -euo pipefail
 "$real_axm" "\$@"
 status=\$?
 if [[ \$status -eq 0 && "\${1:-}" == "lint" ]]; then
-  printf '\nindex mutation\n' >> docs/publishing.md
-  git add docs/publishing.md
+  printf '\nindex mutation\n' >> README.md
+  git add README.md
 fi
 exit \$status
 EOF
@@ -183,8 +183,8 @@ expect_failure "Git index mutation during validation" \
 
 hook_fixture="$(make_fixture)"
 git -C "$hook_fixture" config core.hooksPath .githooks
-printf '\nHook integration test.\n' >>"$hook_fixture/docs/publishing.md"
-git -C "$hook_fixture" add docs/publishing.md
+printf '\nHook integration test.\n' >>"$hook_fixture/README.md"
+git -C "$hook_fixture" add README.md
 (
   cd "$hook_fixture"
   PATH="$(dirname "$real_axm"):$PATH" git commit -qm "test: exercise public safety hook"

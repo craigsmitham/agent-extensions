@@ -8,7 +8,6 @@ Software implementation, integration, review, and evolution.
 | --- | --- |
 | `@craigsmitham/skills/software-construction` | Placeholder; task guidance has not been authored |
 | `@craigsmitham/knowledge/software-construction` | Existing knowledge migrated from product-engineering; coverage is partial |
-| `@craigsmitham/knowledge/software-engineering-foundations` | Shared concepts and existing cross-discipline guidance |
 
 The scope names the intended discipline. It does not claim complete practice coverage.
 

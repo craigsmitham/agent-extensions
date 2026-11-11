@@ -4,7 +4,7 @@ title: Repository task interface
 description: Resolves competing repository commands through canonical task meaning, bounded entrypoints, and one workflow membership authority.
 tags: [repository-task-interface, task-runner, ci, workflow, engineering-environment]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-11T19:47:25Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 sources:
 - id: fowler-ci
   resource: https://www.martinfowler.com/articles/continuousIntegration.html
@@ -91,7 +91,6 @@ Keep a short repository policy or executable binding that names:
 Keep repository-specific syntax and inventories in that binding or executable
 configuration, not in portable guidance.
 
-
 ## Consequences and limits
 
 One semantic owner reduces synchronization and makes failures and success easier
@@ -138,16 +137,6 @@ inventory rather than four competing definitions. The valuable result is that
 a developer or agent can discover the validation intent, invoke it through a
 supported entrypoint, distinguish execution from replay, trust what success
 means, and add a future check in one authoritative place.
-
-## Apply the example to a product change
-
-In Northbank's engineering-system episode (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-engineering-system`),
-one copied CI inventory omits a new allocation-concurrency check. The worked
-change resolves membership, shows an intentional failure propagating through
-the supported workflow, and distinguishes source validation, artifact build,
-migration rehearsal, and current deployed assessment. Use that case to follow
-the contract into CI/CD and infrastructure while keeping orchestration separate
-from each task's meaning.
 
 [^fowler-ci]: Martin Fowler, *Continuous Integration*.
 [^nx-project-configuration]: Nx, *Project Configuration*.

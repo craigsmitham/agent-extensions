@@ -29,7 +29,7 @@ sources:
   - id: coverage
     resource: https://www.cs.ubc.ca/~rtholmes/papers/icse_2014_inozemtseva.pdf
     title: Coverage Is Not Strongly Correlated with Test Suite Effectiveness
-generated: { by: codex/gpt-6, at: 2026-09-09T17:14:14Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 ---
 
 # Test-suite quality criteria
@@ -56,8 +56,6 @@ is intended to support. `XC-06` Assurance relates the suite to a broader
 verification portfolio, while `XC-08` Evidence governs relevance, validity,
 representativeness, attribution, freshness, and uncertainty. A high-quality
 suite can support but cannot establish a product-quality verdict.
-
-## Criteria
 
 ### TSQ-01 — Claim relevance
 
@@ -221,17 +219,6 @@ claim-bound record under Reviewing a codebase (optional companion reading: `@cra
 The ten items are interacting review lenses, not equal-weight factors. A strong
 suite does not prove product correctness, safety, security, or fitness, and no
 finite test suite establishes exhaustive fault absence.[^testing-theory]
-
-## Northbank: assess the evidence mechanism
-
-A Northbank suite may have excellent coverage numbers while its sequential
-fake cannot expose the double-allocation risk. Its test-world fidelity is then
-insufficient for that claim. Conversely, a valuable real-store assessment can
-be absent from CI because copied task inventories drifted. The
-allocation (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-allocation-change`) and
-engineering-system (shared concept: `@craigsmitham/knowledge/software-engineering-foundations#cases/northbank-engineering-system`) cases separate
-those conditions from the product verdict and from the quality of the suite
-as a supporting artifact.
 
 [^test-desiderata]: Beck and Sutton, [Test Desiderata](https://testdesiderata.com/).
 [^testing-theory]: Goodenough and Gerhart, [Toward a Theory of Test Data Selection](https://archiv.infsec.ethz.ch/intranet_secured/Y/w/GG75.pdf).
