@@ -1,0 +1,30 @@
+{
+  "$schema": "https://axm.sh/schemas/knowledge.schema.json",
+  "owner": "@craigsmitham",
+  "name": "software-operations",
+  "version": "0.1.0",
+  "type": "knowledge",
+  "format": {
+    "name": "okf",
+    "version": "0.2"
+  },
+  "bundleRoot": "src",
+  "description": "Software operation, service reliability, incident response, and recovery; migrated existing knowledge.",
+  "license": "CC-BY-SA-4.0",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "software-operations",
+    "software-engineering",
+    "discipline"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "knowledge/software-operations"
+  },
+  "standalone": false,
+  "recommendedPacks": [
+    "@craigsmitham/packs/software-operations",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://axm.sh/schemas/knowledge.schema.json",
+  "owner": "@craigsmitham",
+  "name": "release-engineering",
+  "version": "0.1.0",
+  "type": "knowledge",
+  "format": {
+    "name": "okf",
+    "version": "0.2"
+  },
+  "bundleRoot": "src",
+  "description": "Release preparation, packaging, distribution, deployment, and rollout. Placeholder bundle; no domain guidance has been authored.",
+  "license": "CC-BY-4.0",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "release-engineering",
+    "software-engineering",
+    "discipline"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "knowledge/release-engineering"
+  },
+  "standalone": false,
+  "recommendedPacks": [
+    "@craigsmitham/packs/release-engineering",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

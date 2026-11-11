@@ -145,12 +145,14 @@ Fowler, and Sandi Metz. Its [package README](skills/generalize/README.md)
 links the sources and explains each contribution. No source text or code is
 vendored; the package's original instructions and explanatory prose use MIT.
 
-## Product engineering sources
+## Software-engineering discipline migration
 
-The `product-engineering` bundle synthesizes ideas
-from public sources identified in each concept's provenance metadata, or, where
-a claim is held by a reserved section index that the Open Knowledge Format does
-not permit to carry frontmatter, in that index itself. These include public
+The `software-engineering-foundations` and discipline knowledge bundles retain
+existing product-engineering material and its source attribution. The migration
+map in `docs/software-engineering-migration.json` identifies the original
+revision, moved concepts, and passages extracted from existing organizational
+pages. These bundles synthesize ideas from public sources identified in each
+concept’s provenance metadata. These include public
 agent-engineering guidance from Anthropic and OpenAI, Silicon Valley Product
 Group's product-model writing,
 Roger L. Martin's Playing to Win writing, and Harvard Business School's
@@ -162,7 +164,7 @@ program, and public build-tool and browser-automation documentation. The
 bundle contains original summaries and applications; it does not vendor those
 sources or reproduce their proprietary templates.
 
-The product-engineering foundations also cite Google SRE material, NASA and
+The migrated foundations also cite Google SRE material, NASA and
 DOE maintenance guidance, Parnas's software-aging work, Bill Buxton's design
 work, Fred Brooks's essays, Ryan Singer's Shape Up, Glen Alleman's project
 management writing, and Peter Drucker's business and renewal writing. Each

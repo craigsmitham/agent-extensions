@@ -142,25 +142,55 @@ find_authored_manifests() {
 }
 
 expected=(
+  knowledge/architecture-and-design
+  knowledge/business-analysis
+  knowledge/configuration-and-change-management
   knowledge/docs
   knowledge/effect
-  knowledge/product-engineering
+  knowledge/engineering-environment
+  knowledge/project-management
+  knowledge/release-engineering
+  knowledge/requirements-engineering
+  knowledge/software-construction
+  knowledge/software-engineering-foundations
+  knowledge/software-operations
+  knowledge/software-testing
+  packs/architecture-and-design
+  packs/business-analysis
   packs/codebase-renewal
+  packs/configuration-and-change-management
   packs/docs
   packs/effect
+  packs/engineering-environment
+  packs/project-management
+  packs/release-engineering
+  packs/requirements-engineering
   packs/research
+  packs/software-construction
   packs/software-engineering
+  packs/software-operations
+  packs/software-testing
   rules/use-effect
   skills/align
+  skills/architecture-and-design
+  skills/business-analysis
+  skills/configuration-and-change-management
   skills/devops-docs
   skills/docs
+  skills/engineering-environment
   skills/experiment
   skills/generalize
   skills/improve
   skills/improve-whatever
   skills/okf
+  skills/project-management
   skills/prune
+  skills/release-engineering
+  skills/requirements-engineering
   skills/research
+  skills/software-construction
+  skills/software-operations
+  skills/software-testing
   skills/spot-spew
   skills/temporal-dates
   subagents/researcher

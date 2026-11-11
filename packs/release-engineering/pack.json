@@ -1,0 +1,26 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "owner": "@craigsmitham",
+  "version": "0.1.0",
+  "description": "Release preparation, packaging, distribution, deployment, and rollout; existing knowledge where available, shared foundations, and a placeholder skill.",
+  "keywords": [
+    "release-engineering",
+    "software-engineering",
+    "discipline",
+    "placeholder"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "packs/release-engineering"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "type": "pack",
+  "name": "release-engineering",
+  "dependencies": {
+    "@craigsmitham/skills/release-engineering": ">=0.0.1",
+    "@craigsmitham/knowledge/release-engineering": ">=0.1.0",
+    "@craigsmitham/knowledge/software-engineering-foundations": ">=0.1.0"
+  }
+}

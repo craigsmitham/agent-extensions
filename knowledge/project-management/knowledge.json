@@ -1,0 +1,30 @@
+{
+  "$schema": "https://axm.sh/schemas/knowledge.schema.json",
+  "owner": "@craigsmitham",
+  "name": "project-management",
+  "version": "0.1.0",
+  "type": "knowledge",
+  "format": {
+    "name": "okf",
+    "version": "0.2"
+  },
+  "bundleRoot": "src",
+  "description": "Project capabilities, plans, commitments, resources, and progress; migrated existing knowledge.",
+  "license": "CC-BY-SA-4.0",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "project-management",
+    "software-engineering",
+    "discipline"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "knowledge/project-management"
+  },
+  "standalone": false,
+  "recommendedPacks": [
+    "@craigsmitham/packs/project-management",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

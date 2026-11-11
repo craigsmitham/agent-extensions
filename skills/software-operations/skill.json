@@ -1,0 +1,25 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "software-operations",
+  "version": "0.0.1",
+  "description": "Placeholder for software operation, service reliability, incident response, and recovery; task guidance has not been authored.",
+  "license": "MIT",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "software-operations",
+    "placeholder",
+    "software-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/software-operations"
+  },
+  "standalone": true,
+  "recommendedPacks": [
+    "@craigsmitham/packs/software-operations",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

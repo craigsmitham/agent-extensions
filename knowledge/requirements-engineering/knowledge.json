@@ -1,0 +1,30 @@
+{
+  "$schema": "https://axm.sh/schemas/knowledge.schema.json",
+  "owner": "@craigsmitham",
+  "name": "requirements-engineering",
+  "version": "1.0.0",
+  "type": "knowledge",
+  "format": {
+    "name": "okf",
+    "version": "0.2"
+  },
+  "bundleRoot": "src",
+  "description": "Requirements development, specification, review, and maintenance; migrated existing knowledge.",
+  "license": "CC-BY-SA-4.0",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "requirements-engineering",
+    "software-engineering",
+    "discipline"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "knowledge/requirements-engineering"
+  },
+  "standalone": false,
+  "recommendedPacks": [
+    "@craigsmitham/packs/requirements-engineering",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

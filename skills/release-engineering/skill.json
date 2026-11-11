@@ -1,0 +1,25 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "release-engineering",
+  "version": "0.0.1",
+  "description": "Placeholder for release preparation, packaging, distribution, deployment, and rollout; task guidance has not been authored.",
+  "license": "MIT",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "release-engineering",
+    "placeholder",
+    "software-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/release-engineering"
+  },
+  "standalone": true,
+  "recommendedPacks": [
+    "@craigsmitham/packs/release-engineering",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

@@ -16,24 +16,42 @@ and are not published from this repository.
 | `effect` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect` |
 | [`docs`](./packs/docs/README.md) | Documentation craft, checklist patterns, pattern authoring and collections, organization, and audits | `axm install @craigsmitham/packs/docs` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
-| `software-engineering` | Evidence-backed codebase review and coherent repository execution-surface craft, sourced from the `product-engineering` bundle | `axm install @craigsmitham/packs/software-engineering` |
+| [`software-engineering`](./packs/software-engineering/README.md) | Aggregate of ten discipline collections: migrated knowledge, shared foundations, and placeholder skills | `axm install @craigsmitham/packs/software-engineering` |
+
+## Software-engineering disciplines
+
+Each discipline pack includes its same-named skill and knowledge bundle, plus
+`software-engineering-foundations`. All ten skills are placeholders. Knowledge
+coverage reflects existing migrated material; release engineering contains only
+a placeholder notice. No new domain guidance was authored for this migration.
+
+| Pack | Intended scope |
+| --- | --- |
+| [`business-analysis`](./packs/business-analysis/README.md) | Business context, strategy, customer progress, and service modeling |
+| [`requirements-engineering`](./packs/requirements-engineering/README.md) | Requirements development, specification, review, and maintenance |
+| [`architecture-and-design`](./packs/architecture-and-design/README.md) | Software architecture, domain modeling, and design |
+| [`software-construction`](./packs/software-construction/README.md) | Software implementation, integration, review, and evolution |
+| [`software-testing`](./packs/software-testing/README.md) | Test design, execution, evidence, suite quality, and defect reporting |
+| [`release-engineering`](./packs/release-engineering/README.md) | Release preparation, packaging, distribution, deployment, and rollout |
+| [`software-operations`](./packs/software-operations/README.md) | Software operation, service reliability, incident response, and recovery |
+| [`configuration-and-change-management`](./packs/configuration-and-change-management/README.md) | Software configurations, baselines, change records, and traceability |
+| [`project-management`](./packs/project-management/README.md) | Project capabilities, plans, commitments, resources, and progress |
+| [`engineering-environment`](./packs/engineering-environment/README.md) | Engineering tools, repository interfaces, workflows, and environments |
+
+Install a discipline with `axm install @craigsmitham/packs/<discipline>`.
+The placeholder skills are disabled in this authoring workspace; their packages
+remain members of the published packs.
 
 ## Standalone knowledge
 
 | Bundle | Purpose | Install |
 | --- | --- | --- |
-| `product-engineering` | An opinionated product-development lifecycle from strategy through operations and maintenance, with shared conceptual foundations | `axm install @craigsmitham/knowledge/product-engineering` |
+| [`software-engineering-foundations`](./knowledge/software-engineering-foundations/README.md) | Shared concepts, evidence, quality, maintenance, and cross-discipline examples | `axm install @craigsmitham/knowledge/software-engineering-foundations` |
 
-The `strategy`, `product-management`, `requirements-engineering`,
-`software-engineering`, `work-management`, and `workflow-automation` bundles
-were retired into `product-engineering`. Surviving concepts live under the
-section that owns the question they answer, and each carries a `pe-` section
-tag, because a query can be scoped to a bundle but not to a folder. Not all of
-them survived. The `workflow-automation` and `strategy` concepts have since
-been dropped rather than absorbed, because they summarized public sources that
-are better read at the source: "Where to play" now holds its question, its
-scope, and its boundaries and nothing else, and delivery automation is once
-again claimed scope that has not been written.
+The former `product-engineering` bundle has been distributed across these
+collections. The [migration map](./docs/software-engineering-migration.json)
+records the source revision, every migrated concept, extracted existing
+passages, and retired organizational material.
 
 ## Standalone skills
 
@@ -76,7 +94,7 @@ Follow [How to review and publish public extensions](./docs/publishing.md) for
 the complete commit and release gate. For a catalog-wide registry preflight:
 
 ```bash
-axm publish --authored --owner @craigsmitham --preview --json
+axm publish --owner @craigsmitham --preview --json
 ```
 
 ## Licensing

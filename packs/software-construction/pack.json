@@ -1,0 +1,26 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "owner": "@craigsmitham",
+  "version": "0.1.0",
+  "description": "Software implementation, integration, review, and evolution; existing knowledge where available, shared foundations, and a placeholder skill.",
+  "keywords": [
+    "software-construction",
+    "software-engineering",
+    "discipline",
+    "placeholder"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "packs/software-construction"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "type": "pack",
+  "name": "software-construction",
+  "dependencies": {
+    "@craigsmitham/skills/software-construction": ">=0.0.1",
+    "@craigsmitham/knowledge/software-construction": ">=0.1.0",
+    "@craigsmitham/knowledge/software-engineering-foundations": ">=0.1.0"
+  }
+}

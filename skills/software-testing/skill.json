@@ -1,0 +1,25 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "software-testing",
+  "version": "0.0.1",
+  "description": "Placeholder for test design, execution, evidence, suite quality, and defect reporting; task guidance has not been authored.",
+  "license": "MIT",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "software-testing",
+    "placeholder",
+    "software-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/software-testing"
+  },
+  "standalone": true,
+  "recommendedPacks": [
+    "@craigsmitham/packs/software-testing",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

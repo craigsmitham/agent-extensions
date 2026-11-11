@@ -1,0 +1,26 @@
+{
+  "$schema": "https://axm.sh/schemas/pack.schema.json",
+  "owner": "@craigsmitham",
+  "version": "0.1.0",
+  "description": "Engineering tools, repository interfaces, workflows, and environments; existing knowledge where available, shared foundations, and a placeholder skill.",
+  "keywords": [
+    "engineering-environment",
+    "software-engineering",
+    "discipline",
+    "placeholder"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "packs/engineering-environment"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT",
+  "type": "pack",
+  "name": "engineering-environment",
+  "dependencies": {
+    "@craigsmitham/skills/engineering-environment": ">=0.0.1",
+    "@craigsmitham/knowledge/engineering-environment": ">=0.1.0",
+    "@craigsmitham/knowledge/software-engineering-foundations": ">=0.1.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "project-management",
+  "version": "0.0.1",
+  "description": "Placeholder for project capabilities, plans, commitments, resources, and progress; task guidance has not been authored.",
+  "license": "MIT",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "project-management",
+    "placeholder",
+    "software-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/project-management"
+  },
+  "standalone": true,
+  "recommendedPacks": [
+    "@craigsmitham/packs/project-management",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

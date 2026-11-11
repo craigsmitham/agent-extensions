@@ -1,0 +1,39 @@
+{
+  "$schema": "https://axm.sh/schemas/knowledge.schema.json",
+  "owner": "@craigsmitham",
+  "name": "software-engineering-foundations",
+  "version": "0.1.0",
+  "type": "knowledge",
+  "format": {
+    "name": "okf",
+    "version": "0.2"
+  },
+  "bundleRoot": "src",
+  "description": "Shared concepts, relationships, evidence, quality, maintenance, and cross-discipline examples for software engineering; migrated existing knowledge.",
+  "license": "CC-BY-SA-4.0",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "software-engineering-foundations",
+    "software-engineering",
+    "foundations"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "knowledge/software-engineering-foundations"
+  },
+  "standalone": true,
+  "recommendedPacks": [
+    "@craigsmitham/packs/business-analysis",
+    "@craigsmitham/packs/requirements-engineering",
+    "@craigsmitham/packs/architecture-and-design",
+    "@craigsmitham/packs/software-construction",
+    "@craigsmitham/packs/software-testing",
+    "@craigsmitham/packs/release-engineering",
+    "@craigsmitham/packs/software-operations",
+    "@craigsmitham/packs/configuration-and-change-management",
+    "@craigsmitham/packs/project-management",
+    "@craigsmitham/packs/engineering-environment",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

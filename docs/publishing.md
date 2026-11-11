@@ -47,7 +47,7 @@ safety gate so the gate remains the final check of commit contents.
 3. Treat every cross-extension reference as blocked until one pack manifest
    lists both extensions as direct dependencies, the referencing package sets
    `standalone: false` and names that pack in `recommendedPacks`, and the
-   reference uses AXM's canonical cross-extension path. Current installation
+   reference uses the extension identity and concept discovery. Current installation
    state is not evidence of co-installation.
 4. Verify provenance, redistribution rights, attribution, license declarations,
    file-level boundaries for mixed-license packages, and synthetic examples
@@ -118,7 +118,7 @@ For a catalog-wide release, select only packages authored here by the public
 publisher:
 
 ```bash
-axm publish --authored --owner @craigsmitham --preview --json
+axm publish --owner @craigsmitham --preview --json
 ```
 
 Review the JSON result and confirm that the package and dependency selection is

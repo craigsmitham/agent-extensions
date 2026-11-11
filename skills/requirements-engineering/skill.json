@@ -1,0 +1,25 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "requirements-engineering",
+  "version": "0.0.1",
+  "description": "Placeholder for requirements development, specification, review, and maintenance; task guidance has not been authored.",
+  "license": "MIT",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "requirements-engineering",
+    "placeholder",
+    "software-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/requirements-engineering"
+  },
+  "standalone": true,
+  "recommendedPacks": [
+    "@craigsmitham/packs/requirements-engineering",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

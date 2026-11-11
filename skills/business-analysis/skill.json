@@ -1,0 +1,25 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "business-analysis",
+  "version": "0.0.1",
+  "description": "Placeholder for business context, strategy, customer progress, and service modeling; task guidance has not been authored.",
+  "license": "MIT",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "business-analysis",
+    "placeholder",
+    "software-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/business-analysis"
+  },
+  "standalone": true,
+  "recommendedPacks": [
+    "@craigsmitham/packs/business-analysis",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

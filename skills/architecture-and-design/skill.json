@@ -1,0 +1,25 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "architecture-and-design",
+  "version": "0.0.1",
+  "description": "Placeholder for software architecture, domain modeling, and design; task guidance has not been authored.",
+  "license": "MIT",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "architecture-and-design",
+    "placeholder",
+    "software-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/architecture-and-design"
+  },
+  "standalone": true,
+  "recommendedPacks": [
+    "@craigsmitham/packs/architecture-and-design",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

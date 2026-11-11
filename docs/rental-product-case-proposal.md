@@ -1,8 +1,13 @@
 # Proposal: a shared rental-product case for product engineering
 
+Historical proposal. Existing-case links below were updated during the discipline
+migration; the proposal’s original inventory and lifecycle organization describe
+its earlier source revision. See [the migration map](software-engineering-migration.json)
+for current concept locations.
+
 Status: implemented in the local documentation on 2026-09-09. The original
 analysis and proposal below are retained as the decision history. The authored
-[Northbank case](../knowledge/product-engineering/src/northbank-equipment.md)
+[Northbank case](../knowledge/software-engineering-foundations/src/cases/northbank-equipment.md)
 and its linked worked examples now supply the context across the explainers
 and selected lifecycle guidance. All business decisions remain fictional.
 
@@ -14,11 +19,11 @@ of the managed package.
 
 | Accepted element | Current implementation evidence |
 | --- | --- |
-| Shared business, actors, service vocabulary, episodes, and numerical scopes | [Northbank Equipment](../knowledge/product-engineering/src/northbank-equipment.md) |
-| Tactical DDD/code responsibilities, consistency, tests, and migration | [Allocation change](../knowledge/product-engineering/src/engineering/northbank-allocation-change.md), linked from DDD and use cases |
-| Tooling, CI/CD, infrastructure, task contracts, replacement and retention | [Engineering-system change](../knowledge/product-engineering/src/engineering/northbank-engineering-system.md), linked from strategy and task-interface guidance |
-| Accepted obligation, witness authority, and later impact analysis | [Commitment specimens](../knowledge/product-engineering/src/solution/requirements/authoring/northbank-commitment-requirements.md), connected to development, authoring, review, lifecycle, and adaptation guidance |
-| Incident, defect, corrective Change, recovery, and maintenance | [Receipt records](../knowledge/product-engineering/src/delivery/work-items/northbank-receipt-incident.md), connected to JTBD, maintenance strategies, and work-item guidance |
+| Shared business, actors, service vocabulary, episodes, and numerical scopes | [Northbank Equipment](../knowledge/software-engineering-foundations/src/cases/northbank-equipment.md) |
+| Tactical DDD/code responsibilities, consistency, tests, and migration | [Allocation change](../knowledge/software-engineering-foundations/src/cases/northbank-allocation-change.md), linked from DDD and use cases |
+| Tooling, CI/CD, infrastructure, task contracts, replacement and retention | [Engineering-system change](../knowledge/software-engineering-foundations/src/cases/northbank-engineering-system.md), linked from strategy and task-interface guidance |
+| Accepted obligation, witness authority, and later impact analysis | [Commitment specimens](../knowledge/software-engineering-foundations/src/cases/northbank-commitment-requirements.md), connected to development, authoring, review, lifecycle, and adaptation guidance |
+| Incident, defect, corrective Change, recovery, and maintenance | [Receipt records](../knowledge/software-engineering-foundations/src/cases/northbank-receipt-incident.md), connected to JTBD, maintenance strategies, and work-item guidance |
 | Other conceptual connections | All twenty foundation explainers use the relevant Northbank context; value/demand, outcomes, care, testing, and codebase-review guidance include scoped applications |
 | Related map views | Contractor digital-coordination SVG and engineering-capability SVG in the Wardley explainer; both rendered and visually inspected |
 | Discovery and local readability | Root/section indexes and reading routes preserve existing locations; all five new concept titles are returned by AXM's bundle-scoped query |
@@ -88,8 +93,8 @@ sampling. The census covered the following populations, including indexes:
 | Strategy and operations | 2 | Scope, responsibilities, and acknowledged coverage gaps |
 | Root | 4 | Bundle index, overview, and revised reading routes; log inventoried |
 
-The primary local authorities are the [overview](../knowledge/product-engineering/src/overview.md),
-[reading routes](../knowledge/product-engineering/src/reading-product-engineering.md),
+The primary local authorities are the [overview](../knowledge/software-engineering-foundations/src/design-and-requirements.md),
+[reading routes](../knowledge/software-engineering-foundations/src/reading-software-engineering.md),
 subject concepts, and the repository's coherence instruction. This assessment
 does not revalidate the external scholarship behind the methods. It does not
 cover other knowledge bundles, skills, or a real rental implementation.
@@ -132,11 +137,11 @@ the desired learning journey; it does not imply a production defect.
 - Condition: Rental modeling and landscape examples explain choices, but do
   not yet connect them through a concrete file-level change, enforcement,
   verification, and migration of an existing engineering system.
-- Evidence: [DDD: model refinement](../knowledge/product-engineering/src/foundations/domain-driven-design.md#model-refinement-and-evolution)
+- Evidence: [DDD: model refinement](../knowledge/architecture-and-design/src/domain-driven-design.md#model-refinement-and-evolution)
   describes separating commitments and allocations;
-  [Wardley: equipment-rental example](../knowledge/product-engineering/src/foundations/wardley-mapping/wardley-mapping.md#an-equipment-rental-example)
+  [Wardley: equipment-rental example](../knowledge/business-analysis/src/wardley-mapping.md#an-equipment-rental-example)
   deliberately scopes digital coordination;
-  [task-interface adoption](../knowledge/product-engineering/src/engineering/adopting-a-repository-task-interface.md#worked-example)
+  [task-interface adoption](../knowledge/engineering-environment/src/adopting-a-repository-task-interface.md#worked-example)
   has a useful separate four-inventory example.
 - Impact: Readers must invent the connection to tactical responsibilities,
   tooling, CI/CD, and infrastructure themselves.
@@ -153,9 +158,9 @@ the desired learning journey; it does not imply a production defect.
 - Confidence: High.
 - Condition: The examples deliberately use different situations and local
   assumptions; they do not yet constitute one consistent case history.
-- Evidence: [JTBD](../knowledge/product-engineering/src/foundations/jobs-to-be-done.md#running-example-coordinating-a-service-incident)
-  uses incident coordination; [maintenance](../knowledge/product-engineering/src/maintenance/maintenance-and-the-life-of-software-products.md#maintenance-makes-continuity-possible)
-  uses an invoice service; [renewal](../knowledge/product-engineering/src/foundations/drucker-organizational-renewal.md)
+- Evidence: [JTBD](../knowledge/business-analysis/src/jobs-to-be-done.md#running-example-coordinating-a-service-incident)
+  uses incident coordination; [maintenance](../knowledge/software-engineering-foundations/src/maintenance/maintenance-and-the-life-of-software-products.md#maintenance-makes-continuity-possible)
+  uses an invoice service; [renewal](../knowledge/business-analysis/src/drucker-organizational-renewal.md)
   uses a library. Shape Up excludes automatic substitution from its bounded
   project; Alleman's example narrows a two-depot pilot to one; the KPI definition
   measures a two-depot population.
@@ -175,9 +180,9 @@ the desired learning journey; it does not imply a production defect.
 - Condition: The bundle explicitly leaves architecture/construction, release
   flow/automation, and operational procedures unwritten while the requested
   case needs artifacts in all those areas.
-- Evidence: Current [engineering](../knowledge/product-engineering/src/engineering/index.md),
-  [delivery](../knowledge/product-engineering/src/delivery/index.md), and
-  [operations](../knowledge/product-engineering/src/operations/index.md) indexes.
+- Evidence: Current [engineering](../knowledge/software-construction/src/index.md),
+  [delivery](../knowledge/release-engineering/src/index.md), and
+  [operations](../knowledge/software-operations/src/index.md) indexes.
 - Impact: A sufficiently detailed case could accidentally be presented as
   complete general guidance or obscure the acknowledged coverage gaps.
 - Expected state: Concrete fictional choices illustrate existing concepts;

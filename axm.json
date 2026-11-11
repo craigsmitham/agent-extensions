@@ -33,7 +33,47 @@
     "align": "workspace",
     "prune": "workspace",
     "improve": "workspace",
-    "experiment": "workspace"
+    "experiment": "workspace",
+    "business-analysis": {
+      "source": "workspace",
+      "enabled": false
+    },
+    "requirements-engineering": {
+      "source": "workspace",
+      "enabled": false
+    },
+    "architecture-and-design": {
+      "source": "workspace",
+      "enabled": false
+    },
+    "software-construction": {
+      "source": "workspace",
+      "enabled": false
+    },
+    "software-testing": {
+      "source": "workspace",
+      "enabled": false
+    },
+    "release-engineering": {
+      "source": "workspace",
+      "enabled": false
+    },
+    "software-operations": {
+      "source": "workspace",
+      "enabled": false
+    },
+    "configuration-and-change-management": {
+      "source": "workspace",
+      "enabled": false
+    },
+    "project-management": {
+      "source": "workspace",
+      "enabled": false
+    },
+    "engineering-environment": {
+      "source": "workspace",
+      "enabled": false
+    }
   },
   "rules": {
     "use-effect": {
@@ -44,7 +84,17 @@
   "knowledge": {
     "docs": "workspace",
     "effect": "workspace",
-    "product-engineering": "workspace"
+    "software-engineering-foundations": "workspace",
+    "business-analysis": "workspace",
+    "requirements-engineering": "workspace",
+    "architecture-and-design": "workspace",
+    "software-construction": "workspace",
+    "software-testing": "workspace",
+    "release-engineering": "workspace",
+    "software-operations": "workspace",
+    "configuration-and-change-management": "workspace",
+    "project-management": "workspace",
+    "engineering-environment": "workspace"
   },
   "subagents": {
     "researcher": "workspace"
@@ -54,7 +104,17 @@
     "docs": "workspace",
     "research": "workspace",
     "software-engineering": "workspace",
-    "codebase-renewal": "workspace"
+    "codebase-renewal": "workspace",
+    "business-analysis": "workspace",
+    "requirements-engineering": "workspace",
+    "architecture-and-design": "workspace",
+    "software-construction": "workspace",
+    "software-testing": "workspace",
+    "release-engineering": "workspace",
+    "software-operations": "workspace",
+    "configuration-and-change-management": "workspace",
+    "project-management": "workspace",
+    "engineering-environment": "workspace"
   },
   "owner": "@craigsmitham"
 }

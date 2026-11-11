@@ -1,0 +1,30 @@
+{
+  "$schema": "https://axm.sh/schemas/knowledge.schema.json",
+  "owner": "@craigsmitham",
+  "name": "configuration-and-change-management",
+  "version": "0.1.0",
+  "type": "knowledge",
+  "format": {
+    "name": "okf",
+    "version": "0.2"
+  },
+  "bundleRoot": "src",
+  "description": "Software configurations, baselines, change records, and traceability; migrated existing knowledge.",
+  "license": "CC-BY-SA-4.0",
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "keywords": [
+    "configuration-and-change-management",
+    "software-engineering",
+    "discipline"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "knowledge/configuration-and-change-management"
+  },
+  "standalone": false,
+  "recommendedPacks": [
+    "@craigsmitham/packs/configuration-and-change-management",
+    "@craigsmitham/packs/software-engineering"
+  ]
+}

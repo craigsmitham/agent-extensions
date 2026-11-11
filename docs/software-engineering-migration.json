@@ -1,0 +1,396 @@
+{
+  "sourceCommit": "c56a54cb5cdb2c14c0d71801709c2b38968c99dd",
+  "sourceBundle": "@craigsmitham/knowledge/product-engineering",
+  "sourceVersion": "2.2.2",
+  "movedConcepts": [
+    {
+      "source": "delivery/work-items/changes/authoring-changes.md",
+      "destination": "knowledge/configuration-and-change-management/src/changes/authoring-changes.md"
+    },
+    {
+      "source": "delivery/work-items/changes/change-template.md",
+      "destination": "knowledge/configuration-and-change-management/src/changes/change-template.md"
+    },
+    {
+      "source": "delivery/work-items/changes/classifying-changes.md",
+      "destination": "knowledge/configuration-and-change-management/src/changes/classifying-changes.md"
+    },
+    {
+      "source": "delivery/work-items/common/applying-project-specific-considerations.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/applying-project-specific-considerations.md"
+    },
+    {
+      "source": "delivery/work-items/common/defining-verification.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/defining-verification.md"
+    },
+    {
+      "source": "delivery/work-items/common/maintaining-identity-and-relationships.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/maintaining-identity-and-relationships.md"
+    },
+    {
+      "source": "delivery/work-items/common/managing-lifecycle-and-completion.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/managing-lifecycle-and-completion.md"
+    },
+    {
+      "source": "delivery/work-items/common/mapping-to-work-item-hosts.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/mapping-to-work-item-hosts.md"
+    },
+    {
+      "source": "delivery/work-items/common/preserving-evidence-and-provenance.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/preserving-evidence-and-provenance.md"
+    },
+    {
+      "source": "delivery/work-items/common/preserving-technical-context.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/preserving-technical-context.md"
+    },
+    {
+      "source": "delivery/work-items/common/titling-and-summarizing-work-items.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/titling-and-summarizing-work-items.md"
+    },
+    {
+      "source": "delivery/work-items/common/work-item-content-contract.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/work-item-content-contract.md"
+    },
+    {
+      "source": "delivery/work-items/defects/defect-report-template.md",
+      "destination": "knowledge/software-testing/src/defects/defect-report-template.md"
+    },
+    {
+      "source": "delivery/work-items/defects/defects-and-defect-reports.md",
+      "destination": "knowledge/software-testing/src/defects/defects-and-defect-reports.md"
+    },
+    {
+      "source": "delivery/work-items/defects/linking-defects-to-corrective-changes.md",
+      "destination": "knowledge/software-testing/src/defects/linking-defects-to-corrective-changes.md"
+    },
+    {
+      "source": "delivery/work-items/defects/recording-defect-reports.md",
+      "destination": "knowledge/software-testing/src/defects/recording-defect-reports.md"
+    },
+    {
+      "source": "delivery/work-items/defects/triaging-defect-reports.md",
+      "destination": "knowledge/software-testing/src/defects/triaging-defect-reports.md"
+    },
+    {
+      "source": "delivery/work-items/incidents/operational-incident-template.md",
+      "destination": "knowledge/software-operations/src/incidents/operational-incident-template.md"
+    },
+    {
+      "source": "delivery/work-items/incidents/recording-operational-incidents.md",
+      "destination": "knowledge/software-operations/src/incidents/recording-operational-incidents.md"
+    },
+    {
+      "source": "delivery/work-items/northbank-receipt-incident.md",
+      "destination": "knowledge/software-engineering-foundations/src/cases/northbank-receipt-incident.md"
+    },
+    {
+      "source": "delivery/work-items/software-work-item-taxonomy.md",
+      "destination": "knowledge/software-engineering-foundations/src/work-items/software-work-item-taxonomy.md"
+    },
+    {
+      "source": "engineering/adopting-a-repository-task-interface.md",
+      "destination": "knowledge/engineering-environment/src/adopting-a-repository-task-interface.md"
+    },
+    {
+      "source": "engineering/choosing-browser-dependent-interface-tests.md",
+      "destination": "knowledge/software-testing/src/choosing-browser-dependent-interface-tests.md"
+    },
+    {
+      "source": "engineering/choosing-the-narrowest-effective-test.md",
+      "destination": "knowledge/software-testing/src/choosing-the-narrowest-effective-test.md"
+    },
+    {
+      "source": "engineering/codebase-review/cross-cutting-concerns.md",
+      "destination": "knowledge/software-engineering-foundations/src/quality/cross-cutting-concerns.md"
+    },
+    {
+      "source": "engineering/codebase-review/reviewing-a-codebase.md",
+      "destination": "knowledge/software-construction/src/reviewing-a-codebase.md"
+    },
+    {
+      "source": "engineering/codebase-review/software-quality-pillars.md",
+      "destination": "knowledge/software-engineering-foundations/src/quality/software-quality-pillars.md"
+    },
+    {
+      "source": "engineering/codebase-review/supporting/test-suite-quality.md",
+      "destination": "knowledge/software-testing/src/test-suite-quality.md"
+    },
+    {
+      "source": "engineering/designing-cross-boundary-and-end-to-end-tests.md",
+      "destination": "knowledge/software-testing/src/designing-cross-boundary-and-end-to-end-tests.md"
+    },
+    {
+      "source": "engineering/designing-executable-specifications.md",
+      "destination": "knowledge/software-engineering-foundations/src/behavior/designing-executable-specifications.md"
+    },
+    {
+      "source": "engineering/keeping-specifications-authoritative.md",
+      "destination": "knowledge/software-engineering-foundations/src/behavior/keeping-specifications-authoritative.md"
+    },
+    {
+      "source": "engineering/northbank-allocation-change.md",
+      "destination": "knowledge/software-engineering-foundations/src/cases/northbank-allocation-change.md"
+    },
+    {
+      "source": "engineering/northbank-engineering-system.md",
+      "destination": "knowledge/software-engineering-foundations/src/cases/northbank-engineering-system.md"
+    },
+    {
+      "source": "engineering/operating-cross-boundary-test-suites.md",
+      "destination": "knowledge/software-testing/src/operating-cross-boundary-test-suites.md"
+    },
+    {
+      "source": "engineering/repository-task-interface.md",
+      "destination": "knowledge/engineering-environment/src/repository-task-interface.md"
+    },
+    {
+      "source": "engineering/resolved-task-contract-principles.md",
+      "destination": "knowledge/engineering-environment/src/resolved-task-contract-principles.md"
+    },
+    {
+      "source": "engineering/task-invocation-and-conformance-principles.md",
+      "destination": "knowledge/engineering-environment/src/task-invocation-and-conformance-principles.md"
+    },
+    {
+      "source": "engineering/writing-browser-test-evidence.md",
+      "destination": "knowledge/software-testing/src/writing-browser-test-evidence.md"
+    },
+    {
+      "source": "foundations/alleman-performance-based-project-management.md",
+      "destination": "knowledge/project-management/src/alleman-performance-based-project-management.md"
+    },
+    {
+      "source": "foundations/brooks-architect-role.md",
+      "destination": "knowledge/architecture-and-design/src/brooks-architect-role.md"
+    },
+    {
+      "source": "foundations/buxton-design.md",
+      "destination": "knowledge/architecture-and-design/src/buxton-design.md"
+    },
+    {
+      "source": "foundations/cagan-product-strategy.md",
+      "destination": "knowledge/business-analysis/src/cagan-product-strategy.md"
+    },
+    {
+      "source": "foundations/condition-based-and-predictive-maintenance.md",
+      "destination": "knowledge/software-engineering-foundations/src/maintenance/condition-based-and-predictive-maintenance.md"
+    },
+    {
+      "source": "foundations/domain-driven-design.md",
+      "destination": "knowledge/architecture-and-design/src/domain-driven-design.md"
+    },
+    {
+      "source": "foundations/drucker-five-questions.md",
+      "destination": "knowledge/business-analysis/src/drucker-five-questions.md"
+    },
+    {
+      "source": "foundations/drucker-organizational-renewal.md",
+      "destination": "knowledge/business-analysis/src/drucker-organizational-renewal.md"
+    },
+    {
+      "source": "foundations/drucker-theory-of-the-business.md",
+      "destination": "knowledge/business-analysis/src/drucker-theory-of-the-business.md"
+    },
+    {
+      "source": "foundations/easy-approach-to-requirements-syntax.md",
+      "destination": "knowledge/requirements-engineering/src/specification-methods/easy-approach-to-requirements-syntax.md"
+    },
+    {
+      "source": "foundations/iso-iec-ieee-29148-requirement-quality.md",
+      "destination": "knowledge/requirements-engineering/src/specification-methods/iso-iec-ieee-29148-requirement-quality.md"
+    },
+    {
+      "source": "foundations/jobs-to-be-done.md",
+      "destination": "knowledge/business-analysis/src/jobs-to-be-done.md"
+    },
+    {
+      "source": "foundations/key-performance-indicators.md",
+      "destination": "knowledge/software-engineering-foundations/src/measurement/key-performance-indicators.md"
+    },
+    {
+      "source": "foundations/maintenance-strategies.md",
+      "destination": "knowledge/software-engineering-foundations/src/maintenance/maintenance-strategies.md"
+    },
+    {
+      "source": "foundations/playing-to-win.md",
+      "destination": "knowledge/business-analysis/src/playing-to-win.md"
+    },
+    {
+      "source": "foundations/preventive-maintenance.md",
+      "destination": "knowledge/software-engineering-foundations/src/maintenance/preventive-maintenance.md"
+    },
+    {
+      "source": "foundations/run-to-failure-maintenance.md",
+      "destination": "knowledge/software-engineering-foundations/src/maintenance/run-to-failure-maintenance.md"
+    },
+    {
+      "source": "foundations/service-blueprinting.md",
+      "destination": "knowledge/business-analysis/src/service-blueprinting.md"
+    },
+    {
+      "source": "foundations/service-level-indicators-objectives-and-agreements.md",
+      "destination": "knowledge/software-engineering-foundations/src/measurement/service-level-indicators-objectives-and-agreements.md"
+    },
+    {
+      "source": "foundations/shape-up.md",
+      "destination": "knowledge/project-management/src/shape-up.md"
+    },
+    {
+      "source": "foundations/strategy-perspectives.md",
+      "destination": "knowledge/business-analysis/src/strategy-perspectives.md"
+    },
+    {
+      "source": "foundations/use-cases.md",
+      "destination": "knowledge/software-engineering-foundations/src/behavior/use-cases.md"
+    },
+    {
+      "source": "foundations/value-based-strategy.md",
+      "destination": "knowledge/business-analysis/src/value-based-strategy.md"
+    },
+    {
+      "source": "foundations/wardley-mapping/wardley-mapping.md",
+      "destination": "knowledge/business-analysis/src/wardley-mapping.md"
+    },
+    {
+      "source": "maintenance/maintenance-and-the-life-of-software-products.md",
+      "destination": "knowledge/software-engineering-foundations/src/maintenance/maintenance-and-the-life-of-software-products.md"
+    },
+    {
+      "source": "northbank-equipment.md",
+      "destination": "knowledge/software-engineering-foundations/src/cases/northbank-equipment.md"
+    },
+    {
+      "source": "problem/outcomes-and-evidence.md",
+      "destination": "knowledge/software-engineering-foundations/src/value/outcomes-and-evidence.md"
+    },
+    {
+      "source": "problem/value-and-demand-model.md",
+      "destination": "knowledge/software-engineering-foundations/src/value/value-and-demand-model.md"
+    },
+    {
+      "source": "reading-product-engineering.md",
+      "destination": "knowledge/software-engineering-foundations/src/reading-software-engineering.md"
+    },
+    {
+      "source": "solution/requirements/adaptation/applying-project-specific-requirements-policy.md",
+      "destination": "knowledge/requirements-engineering/src/adaptation/applying-project-specific-requirements-policy.md"
+    },
+    {
+      "source": "solution/requirements/adaptation/composing-with-work-management.md",
+      "destination": "knowledge/requirements-engineering/src/adaptation/composing-with-work-management.md"
+    },
+    {
+      "source": "solution/requirements/adaptation/mapping-to-requirements-hosts.md",
+      "destination": "knowledge/requirements-engineering/src/adaptation/mapping-to-requirements-hosts.md"
+    },
+    {
+      "source": "solution/requirements/authoring/authoring-constraints-and-external-conformance.md",
+      "destination": "knowledge/requirements-engineering/src/authoring/authoring-constraints-and-external-conformance.md"
+    },
+    {
+      "source": "solution/requirements/authoring/authoring-invariants-and-stateful-behavior.md",
+      "destination": "knowledge/requirements-engineering/src/authoring/authoring-invariants-and-stateful-behavior.md"
+    },
+    {
+      "source": "solution/requirements/authoring/authoring-quantitative-and-quality-requirements.md",
+      "destination": "knowledge/requirements-engineering/src/authoring/authoring-quantitative-and-quality-requirements.md"
+    },
+    {
+      "source": "solution/requirements/authoring/authoring-requirements.md",
+      "destination": "knowledge/requirements-engineering/src/authoring/authoring-requirements.md"
+    },
+    {
+      "source": "solution/requirements/authoring/classifying-requirements.md",
+      "destination": "knowledge/requirements-engineering/src/authoring/classifying-requirements.md"
+    },
+    {
+      "source": "solution/requirements/authoring/northbank-commitment-requirements.md",
+      "destination": "knowledge/software-engineering-foundations/src/cases/northbank-commitment-requirements.md"
+    },
+    {
+      "source": "solution/requirements/authoring/requirement-content-contract.md",
+      "destination": "knowledge/requirements-engineering/src/authoring/requirement-content-contract.md"
+    },
+    {
+      "source": "solution/requirements/authoring/requirement-template.md",
+      "destination": "knowledge/requirements-engineering/src/authoring/requirement-template.md"
+    },
+    {
+      "source": "solution/requirements/authoring/selecting-a-specification-method.md",
+      "destination": "knowledge/requirements-engineering/src/authoring/selecting-a-specification-method.md"
+    },
+    {
+      "source": "solution/requirements/development/developing-candidate-requirements.md",
+      "destination": "knowledge/requirements-engineering/src/development/developing-candidate-requirements.md"
+    },
+    {
+      "source": "solution/requirements/development/eliciting-and-inventorying-requirement-sources.md",
+      "destination": "knowledge/requirements-engineering/src/development/eliciting-and-inventorying-requirement-sources.md"
+    },
+    {
+      "source": "solution/requirements/development/resolving-conflicts-and-open-decisions.md",
+      "destination": "knowledge/requirements-engineering/src/development/resolving-conflicts-and-open-decisions.md"
+    },
+    {
+      "source": "solution/requirements/foundations/one-authority-many-witnesses.md",
+      "destination": "knowledge/software-engineering-foundations/src/requirements/one-authority-many-witnesses.md"
+    },
+    {
+      "source": "solution/requirements/foundations/requirement-authority-and-maturity.md",
+      "destination": "knowledge/software-engineering-foundations/src/requirements/requirement-authority-and-maturity.md"
+    },
+    {
+      "source": "solution/requirements/foundations/requirements-and-neighboring-artifacts.md",
+      "destination": "knowledge/software-engineering-foundations/src/requirements/requirements-and-neighboring-artifacts.md"
+    },
+    {
+      "source": "solution/requirements/foundations/verification-and-validation.md",
+      "destination": "knowledge/software-engineering-foundations/src/requirements/verification-and-validation.md"
+    },
+    {
+      "source": "solution/requirements/lifecycle/analyzing-requirement-impact.md",
+      "destination": "knowledge/requirements-engineering/src/lifecycle/analyzing-requirement-impact.md"
+    },
+    {
+      "source": "solution/requirements/lifecycle/maintaining-requirement-identity-and-lineage.md",
+      "destination": "knowledge/requirements-engineering/src/lifecycle/maintaining-requirement-identity-and-lineage.md"
+    },
+    {
+      "source": "solution/requirements/review/reviewing-individual-requirements.md",
+      "destination": "knowledge/requirements-engineering/src/review/reviewing-individual-requirements.md"
+    },
+    {
+      "source": "solution/requirements/review/reviewing-requirement-sets.md",
+      "destination": "knowledge/requirements-engineering/src/review/reviewing-requirement-sets.md"
+    }
+  ],
+  "extractedPassages": [
+    {
+      "source": "overview.md",
+      "destination": "knowledge/software-engineering-foundations/src/design-and-requirements.md",
+      "operation": "extract existing text"
+    },
+    {
+      "source": "overview.md",
+      "destination": "knowledge/software-engineering-foundations/src/agents-and-workflow-boundaries.md",
+      "operation": "extract existing text"
+    },
+    {
+      "source": "problem/index.md",
+      "destination": "knowledge/software-engineering-foundations/src/value/product-risks.md",
+      "operation": "extract existing text"
+    },
+    {
+      "source": "delivery/work-items/incidents/index.md",
+      "destination": "knowledge/software-operations/src/incidents/incident-policy-and-records.md",
+      "operation": "extract existing text"
+    }
+  ],
+  "retiredConcepts": [
+    {
+      "source": "overview.md",
+      "reason": "Superseded lifecycle organization; existing design and workflow distinctions extracted into foundations."
+    }
+  ],
+  "retiredNavigation": "Old indexes and log remain in the source commit. New indexes describe actual package contents; product risks and incident ownership were extracted from indexes."
+}
