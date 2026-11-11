@@ -14,6 +14,14 @@ disabled through the supported native settings.
 
 Name the scope and any known authority or differences that must remain:
 
+An opportunity question requests findings and recommendations without edits:
+
+```text
+What opportunities do we have to $reconcile our API examples and schemas?
+```
+
+A direct change request asks for implementation and verification:
+
 ```text
 $reconcile the setup instructions across README.md, docs/, and example projects
 $reconcile our API schema, examples, and implementation against the supported contract
@@ -49,6 +57,16 @@ Evidence of coherence depends on the scope: it may involve checking claims,
 links and discovery paths, generated output, or observable behavior. The skill
 prescribes no fixed workflow, tool, reporting template, or automatic execution
 of other skills.
+
+## Maintenance companion
+
+`reconcile` remains independently installable after software-maintenance 0.2.0.
+It is no longer a member of that pack. Install it directly when this specific
+outcome is needed:
+
+```bash
+axm install @craigsmitham/skills/reconcile
+```
 
 ## License
 

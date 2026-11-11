@@ -94,12 +94,23 @@ or MDN documentation.
 
 ## Software maintenance
 
-The `software-maintenance` pack contains original explanatory prose inspired by
-Peter Drucker's renewal practices, with a software-engineering mapping to its
-seven standalone members. Its [package README](packs/software-maintenance/README.md)
-links the Drucker Institute reading and the members' source discussions. No
-source text or code is vendored; the pack metadata and README use MIT, and each
-member retains its own declared license.
+The `software-maintenance` pack and its maintenance guide contain original
+guidance informed by SWEBOK's maintenance account, the SEI's technical-debt
+recommendations, DORA's research on testing, small batches, and documentation,
+NIST SSDF, Software Engineering at Google, Google SRE's treatment of toil, and
+the SPACE framework. Peter Drucker's renewal practices remain an organizational
+inspiration. The [package README](packs/software-maintenance/README.md) and
+guide identify the sources and distinguish the pack's composition and sequencing
+from the source authors' claims.
+
+The new `assess`, `stabilize`, `refresh`, and `simplify` skills contain original
+instructions and explanatory prose drawing on those engineering sources.
+Their package READMEs identify the relevant contributions; `simplify` also
+draws on Martin Fowler's YAGNI and refactoring guidance and Sandi Metz's
+The Wrong Abstraction. The revised retained members preserve their source
+discussions below and in their READMEs. No source text or code is vendored;
+the maintenance pack and these skills use MIT. Linked sources retain their
+respective rights.
 
 ## Repository reconciliation
 

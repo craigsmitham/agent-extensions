@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "reconcile",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reconcile a repository or a specified part by resolving unnecessary duplication and unintended divergence in its content.",
   "keywords": [
     "reconciliation",
@@ -19,8 +19,5 @@
   },
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "license": "MIT",
-  "standalone": true,
-  "recommendedPacks": [
-    "@craigsmitham/packs/software-maintenance"
-  ]
+  "standalone": true
 }

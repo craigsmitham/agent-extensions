@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "reuse",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Adapt a codebase or a specified part to use suitable existing capabilities with less maintenance burden.",
   "keywords": [
     "reuse",
@@ -19,8 +19,5 @@
   },
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "license": "MIT",
-  "standalone": true,
-  "recommendedPacks": [
-    "@craigsmitham/packs/software-maintenance"
-  ]
+  "standalone": true
 }

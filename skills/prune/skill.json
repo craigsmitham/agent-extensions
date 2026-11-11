@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "prune",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Prune a codebase or a specified part by removing unnecessary elements and their associated maintenance burden.",
   "keywords": [
     "pruning",

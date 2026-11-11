@@ -1,28 +1,18 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.1.0",
-  "description": "Seven standalone skills for explicit maintenance: align, reconcile, modularize, generalize, reuse, prune, and improve.",
-  "type": "pack",
-  "name": "software-maintenance",
-  "dependencies": {
-    "@craigsmitham/skills/align": ">=0.1.0",
-    "@craigsmitham/skills/reconcile": ">=0.1.0",
-    "@craigsmitham/skills/modularize": ">=0.1.0",
-    "@craigsmitham/skills/generalize": ">=0.1.0",
-    "@craigsmitham/skills/reuse": ">=0.1.0",
-    "@craigsmitham/skills/prune": ">=0.1.0",
-    "@craigsmitham/skills/improve": ">=0.1.0"
-  },
+  "version": "0.2.0",
+  "description": "Seven standalone skills for explicit maintenance: assess, stabilize, refresh, prune, simplify, modularize, and improve.",
   "keywords": [
     "software maintenance",
-    "alignment",
+    "codebase health",
+    "prioritization",
+    "stabilization",
+    "dependency lifecycle",
     "pruning",
-    "improvement",
-    "generalization",
-    "reconciliation",
+    "simplification",
     "modularity",
-    "reuse",
+    "improvement",
     "explicit invocation"
   ],
   "repository": {
@@ -31,5 +21,16 @@
     "directory": "packs/software-maintenance"
   },
   "homepage": "https://github.com/craigsmitham/agent-extensions",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "pack",
+  "name": "software-maintenance",
+  "dependencies": {
+    "@craigsmitham/skills/assess": ">=0.1.0",
+    "@craigsmitham/skills/stabilize": ">=0.1.0",
+    "@craigsmitham/skills/refresh": ">=0.1.0",
+    "@craigsmitham/skills/prune": ">=0.2.0",
+    "@craigsmitham/skills/simplify": ">=0.1.0",
+    "@craigsmitham/skills/modularize": ">=0.2.0",
+    "@craigsmitham/skills/improve": ">=0.2.0"
+  }
 }

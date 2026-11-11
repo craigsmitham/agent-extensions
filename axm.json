@@ -63,7 +63,11 @@
     },
     "reconcile": "workspace",
     "modularize": "workspace",
-    "reuse": "workspace"
+    "reuse": "workspace",
+    "assess": "workspace",
+    "stabilize": "workspace",
+    "refresh": "workspace",
+    "simplify": "workspace"
   },
   "rules": {
     "use-effect": {

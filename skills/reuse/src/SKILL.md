@@ -8,6 +8,10 @@ Adapt the requested scope to use suitable capabilities already available
 in the codebase, platform, or dependencies, with less unnecessary
 implementation and maintenance burden.
 
+For opportunity questions, assess candidates and their tradeoffs without
+implementing them. For change requests, carry the requested outcome through
+implementation and verification within the authorized scope.
+
 The result should preserve required behavior and operational guarantees,
 keep case-specific policy with its owners, and leave a coherent integration
 with obsolete supporting machinery removed.

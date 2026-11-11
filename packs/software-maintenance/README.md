@@ -1,12 +1,15 @@
 # Software maintenance
 
-Seven standalone skills for explicit maintenance: align, reconcile, modularize, generalize, reuse, prune, and improve.
+Seven standalone skills for explicit maintenance: assess, stabilize, refresh, prune, simplify, modularize, and improve.
 
-Software maintenance keeps software useful as requirements, knowledge, and
-circumstances change. This pack brings together seven concise, outcome-focused
-skills for direct use during maintenance. Invoke a skill with a scope and the
-outcome or constraints that matter. Each leaves methods to the caller and
-model; the pack prescribes no execution order.
+Keep software dependable, supportable, understandable, and economical to change
+by selecting worthwhile maintenance, preserving live obligations, and verifying
+the resulting benefit. The pack supports correction, adaptation, prevention,
+and improvement across code and its supporting machinery.
+
+Each skill is self-contained and individually installable. The pack supplies
+selection and sequencing guidance; it does not automatically run its members
+or require a repository-wide assessment before a bounded change.
 
 ## Install
 
@@ -14,107 +17,118 @@ model; the pack prescribes no execution order.
 axm install @craigsmitham/packs/software-maintenance
 ```
 
-Each skill remains self-contained and individually installable. For example:
+Install an individual skill when only its outcome is needed:
 
 ```bash
-axm install @craigsmitham/skills/improve
+axm install @craigsmitham/skills/modularize
 ```
 
-The pack installs its members together. Each skill declares explicit-only
-invocation and remains independently usable.
+## Choose an outcome
 
-## Choose a skill
-
-All seven skills use identities under `@craigsmitham/skills/`.
+All seven identities are under `@craigsmitham/skills/`.
 
 | Skill | Choose it when… | Desired outcome |
 | --- | --- | --- |
-| `align` | Requirements or guidance have changed, or implementation has drifted. | The codebase satisfies applicable requirements and reflects relevant guidance. |
-| `reconcile` | Related content repeats the same knowledge or has drifted apart. | Related representations agree on shared meaning, with less unnecessary duplication. |
-| `modularize` | Responsibilities are entangled or changes spread across unrelated concerns. | Cohesive responsibilities with simple boundaries that let them evolve independently. |
-| `generalize` | A capability should serve a broader family of related cases. | Broader applicability through coherent commonality and appropriate variation. |
-| `reuse` | Available capabilities could replace unnecessary implementation. | A coherent integration with suitable existing capabilities and less maintenance burden. |
-| `prune` | Elements no longer justify their continued presence. | A smaller, coherent system with less maintenance burden. |
-| `improve` | Existing software could better serve its intended purpose. | Worthwhile, evidence-backed gains in relevant qualities. |
+| `assess` | You need to choose worthwhile maintenance in a bounded scope. | Evidence-supported priorities, prerequisites, and visible uncertainty; assessment only. |
+| `stabilize` | Behavior, tests, builds, or environments are unreliable or materially weak. | Corrected failures or weaknesses and trustworthy evidence of the correction. |
+| `refresh` | Dependencies, platforms, toolchains, or external contracts are changing. | A supportable, compatible configuration and completed justified migrations. |
+| `prune` | Elements no longer justify their continued presence. | A smaller, coherent system that preserves remaining obligations. |
+| `simplify` | Retained capabilities require unnecessarily burdensome machinery. | Less total maintenance burden through direct implementation, suitable reuse, or consolidation. |
+| `modularize` | Responsibilities are entangled and changes spread across unrelated concerns. | Cohesive responsibilities that can evolve independently. |
+| `improve` | A selected quality could better serve users, maintainers, or operators. | A worthwhile gain supported by comparison with a relevant baseline. |
 
-The outcomes can share techniques. Generalization may require better boundaries;
-reuse may remove superseded machinery. The requested outcome determines scope
-and success. Shared mechanisms should preserve independently changing policies,
-and similar implementations need not represent the same knowledge.
+Stabilization restores dependable behavior or feedback; improvement advances a
+selected quality. Refresh responds to an evolving environment. Pruning removes
+expendable elements, simplification reduces the burden of retained capabilities,
+and modularization improves independent change. Their techniques may overlap;
+the requested outcome determines scope and completion.
 
-## Usage
+## Ask for opportunities or action
 
-Name the relevant scope and the outcome or constraints that matter. For example:
+Name the scope and the outcome or constraints that matter. A question about
+opportunities requests findings and recommendations. A request to make a change
+requests implementation and verification within that scope. Mentioning a skill
+in an opportunity question does not authorize edits.
 
-```text
-$align src/api/ with the updated error-handling requirements
-$reconcile setup instructions across README.md, docs/, and example projects
-$modularize src/billing/ around independently changing responsibilities
-$generalize the exporter to support the additional formats in the specification
-$reuse the adopted parser's capabilities in src/importers/
-$prune obsolete build configuration while retaining supported release targets
-$improve the importer's memory use without sacrificing required throughput
-```
+| Find opportunities | Direct request |
+| --- | --- |
+| `What maintenance opportunities does $assess identify in our checkout flow?` | `$assess our checkout flow and recommend the next maintenance priority` (assessment only) |
+| `Where could we $stabilize our build and test pipeline?` | `$stabilize the intermittent failures in our build and test pipeline` |
+| `What opportunities do we have to $refresh our runtime and dependencies?` | `$refresh our runtime and dependencies to a compatible supported configuration` |
+| `What could we safely $prune from our legacy import pipeline?` | `$prune the retired importer and its exclusive supporting machinery` |
+| `Where could we $simplify our configuration system?` | `$simplify the configuration system while preserving supported overrides` |
+| `What opportunities do we have to $modularize the billing area of our app?` | `$modularize billing so pricing changes remain independent of delivery details` |
+| `How could we $improve the importer's memory use?` | `$improve the importer's memory use without sacrificing required throughput` |
 
-Use `$skill` in Codex and the host's skill command or mention in other agents.
-The packages set `policy.allow_implicit_invocation: false` in
-`agents/openai.yaml` for [Codex](https://learn.chatgpt.com/docs/build-skills),
-and `disable-model-invocation: true` in `SKILL.md` for
-[Claude Code](https://code.claude.com/docs/en/skills),
-[Cursor](https://cursor.com/docs/skills),
-[Copilot CLI](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference),
-and [Zed](https://zed.dev/docs/ai/skills). These settings retain direct invocation
-while disabling automatic selection in hosts that support them.
+Each member preserves explicit-only invocation. Codex receives
+`policy.allow_implicit_invocation: false` in `agents/openai.yaml`; the skill
+frontmatter also declares `disable-model-invocation: true` for hosts supporting
+that setting. Use the host's direct skill invocation control as appropriate.
 
-Work can begin with whichever outcome is needed. Changed requirements may
-call for alignment, with removal of superseded machinery where obligations
-permit. A well-scoped task may need only one skill. The pack prescribes no
-sequence or requirement to use every member.
+## Maintenance practice
 
-## Philosophy
+The default loop is: assess the need, establish sufficient confidence, perform
+a bounded intervention, verify the benefit, and reconsider the remaining work.
+Enter at the point justified by the task. Urgent failures may take precedence;
+an understood local change may need only brief assessment.
 
-Renewal is purposeful change in relation to what software is for and what it
-must continue to support. A useful result can involve removing something,
-improving a quality, extending applicability, satisfying changed guidance,
-learning that a proposed change is not worthwhile, or reconciling content that
-duplicates or contradicts shared knowledge.
+The [maintenance guide](guides/maintaining-a-codebase.md) explains conditional
+sequencing, prioritization, recurring use, and completion. It is optional reader
+guidance. Each installed skill carries its own essential decision criteria and
+does not depend on this README or another skill being available.
 
-The skills share a concern for context, live obligations, and claims supported
-by appropriate evidence. They have distinct outcomes, even when their
-techniques overlap. Conformance does not by itself establish improved quality;
-broader applicability does not establish that every new case is valuable.
+Across the pack, a useful result:
 
-The pack's organizing inspiration is Peter Drucker's treatment of renewal
-through abandonment, continuing improvement, exploitation of success, and
-systematic innovation. The software mapping is this pack's synthesis:
+- Preserves applicable requirements, intended behavior, and live obligations.
+- Addresses a concrete risk, recurring burden, lifecycle change, or quality goal.
+- Accounts for transition, operating, coupling, and ownership costs.
+- Uses evidence proportionate to the intervention and the claim.
+- Completes affected configuration, tests, documentation, and transitional work.
+- Distinguishes demonstrated gains, expected benefits, and unresolved uncertainty.
 
-- Pruning closely corresponds to systematic abandonment.
-- Improving closely corresponds to continuing improvement.
-- Generalizing and reusing can enable new applications of proven capabilities,
-  supporting exploitation of success.
-- Aligning adds conformance as requirements and guidance change.
-- Reconciling adds coherence among related representations of shared knowledge.
-- Modularizing helps responsibilities evolve independently as software changes.
+A justified no-change result is successful. Structural checks and source
+review establish bounded properties of the packages; they do not prove the
+skills' behavioral effectiveness or guarantee codebase health.
 
-This is not a claim that Drucker proposed seven software practices or a fixed
-renewal cycle. The pack supplies a vocabulary of useful outcomes and convenient
-installation. The caller and model retain judgment about methods, priorities,
-sequence, and the extent of change.
+## Companion skills and migration
 
-## Sources and inspiration
+`align`, `reconcile`, `reuse`, and `generalize` remain independently available.
+Alignment constrains maintenance; reconciliation resolves shared meaning;
+reuse targets capability substitution; generalization serves concrete intended
+cases. `spot-spew` remains a narrower assessment of avoidable maintenance burden.
+These companions are not dependencies of this pack.
 
-- **Peter Drucker — [Drucker on Creating an Innovative
-  Culture](https://drucker.institute/wp-content/uploads/2018/08/Reading_Drucker-on-Creating-an-Innovative-Culture.pdf).**
-  This Drucker Institute reading adapts “Management's New Paradigms” and
-  *Innovation and Entrepreneurship*, presenting four ongoing entrepreneurial
-  activities. It supplies the organizational inspiration described above.
-- **Engineering foundations:** each member's package README credits the
-  sources behind its definition and explains the limits of its synthesis.
+Version 0.2.0 replaces four members of the 0.1.0 pack. See the
+[changelog](CHANGELOG.md) for exact membership and retention instructions.
+Existing direct installations can retain companion skills independently of
+pack membership. The discipline packs and their knowledge remain separately
+scoped; this pack does not rely on their placeholder skills.
 
-The pack's explanatory prose is original. Linked sources retain their respective
-rights; no source text or code is vendored here.
+## Sources and rationale
+
+This is an original synthesis of complementary practices:
+
+- [SWEBOK: Software Maintenance](https://swebokwiki.org/Chapter_5:_Software_Maintenance)
+  informs the breadth of maintenance and its migration and retirement concerns.
+- [SEI's technical-debt recommendations](https://www.sei.cmu.edu/blog/5-recommendations-to-help-your-organization-manage-technical-debt/)
+  inform visibility, prioritization, tradeoffs, and contextual measures.
+- [DORA's test automation](https://dora.dev/capabilities/test-automation/) and
+  [small batches](https://dora.dev/capabilities/working-in-small-batches/)
+  inform trustworthy feedback and bounded interventions.
+- [NIST SSDF](https://csrc.nist.gov/projects/ssdf) informs security maintenance
+  and learning from root causes.
+- [Software Engineering at Google](https://abseil.io/resources/swe-book)
+  informs dependency management, deprecation, and consumer migration.
+
+The original pack drew organizational inspiration from
+[Peter Drucker's renewal practices](https://drucker.institute/wp-content/uploads/2018/08/Reading_Drucker-on-Creating-an-Innovative-Culture.pdf).
+That inspiration remains relevant to purposeful abandonment and improvement.
+The seven-skill composition and sequencing are this pack's design, not a
+framework attributed to Drucker or an empirically established optimal set.
+Each member's README explains its own sources and their limits.
 
 ## License
 
-The pack metadata and README are MIT-licensed. Each included skill retains the
-license declared in its own manifest.
+The pack metadata and documentation are MIT-licensed. Each member retains its
+declared license. Linked sources retain their respective rights; no source text
+or code is vendored here.

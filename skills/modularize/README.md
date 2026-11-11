@@ -12,6 +12,14 @@ together or separating independently changing policies.
 Invoke this skill directly during maintenance with a scope. Automatic model
 invocation is disabled through the supported native settings.
 
+An opportunity question requests findings and recommendations without edits:
+
+```text
+What opportunities do we have to $modularize the billing area of our app?
+```
+
+A direct change request asks for implementation and verification:
+
 ```text
 $modularize src/billing/ around independently changing responsibilities
 $modularize the importer so format changes remain local
@@ -38,6 +46,19 @@ are actually shared.
 
 The skill defines these outcomes without prescribing a particular architecture,
 directory layout, or an interface for every implementation.
+
+## Completion evidence
+
+Identify representative changes that currently spread across responsibilities
+and explain how the result makes them more local. Dependency reasoning, concrete
+change scenarios, and relevant checks provide evidence; more interfaces or
+smaller files alone do not. Account for migration and ownership costs while
+preserving required behavior and keeping intentional behavior changes distinct.
+
+Complete affected integrations and guidance. Temporary boundaries need removal
+when their obligations end, or named remaining consumers and exit conditions.
+A proportionate architectural check or clear ownership may help preserve the
+result. Existing boundaries can remain when no worthwhile intervention is justified.
 
 ## Sources and inspiration
 

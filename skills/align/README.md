@@ -15,6 +15,14 @@ disabled through the supported native settings.
 Name the scope and the requirements or guidance it should align with. Include
 the relevant version or applicability when needed. For example:
 
+An opportunity question requests findings and recommendations without edits:
+
+```text
+Where could we $align our API with the published error-handling requirements?
+```
+
+A direct change request asks for implementation and verification:
+
 ```text
 $align this codebase with the updated architecture in docs/architecture.md
 $align src/api/ with the supplied error-response requirements
@@ -81,6 +89,16 @@ institutional procedures are not incorporated as required workflow.
   Relates verification claims to objective evidence and the disposition of
   discrepancies and exceptions. This informs evidence-supported claims and
   explicit limits on claimed alignment.
+
+## Maintenance companion
+
+`align` remains independently installable after software-maintenance 0.2.0.
+It is no longer a member of that pack. Install it directly when this specific
+outcome is needed:
+
+```bash
+axm install @craigsmitham/skills/align
+```
 
 ## License
 

@@ -166,6 +166,7 @@ expected=(
   rules/use-effect
   skills/align
   skills/architecture-and-design
+  skills/assess
   skills/business-analysis
   skills/devops-docs
   skills/docs
@@ -177,13 +178,16 @@ expected=(
   skills/project-management
   skills/prune
   skills/reconcile
+  skills/refresh
   skills/release-engineering
   skills/requirements-engineering
   skills/research
   skills/reuse
+  skills/simplify
   skills/software-operations
   skills/software-testing
   skills/spot-spew
+  skills/stabilize
   skills/temporal-dates
   subagents/researcher
 )

@@ -12,7 +12,7 @@ and are not published from this repository.
 
 | Pack | Purpose | Install |
 | --- | --- | --- |
-| [`software-maintenance`](./packs/software-maintenance/README.md) | Seven standalone skills for explicit maintenance: align, reconcile, modularize, generalize, reuse, prune, and improve. | `axm install @craigsmitham/packs/software-maintenance` |
+| [`software-maintenance`](./packs/software-maintenance/README.md) | Seven standalone skills for explicit maintenance: assess, stabilize, refresh, prune, simplify, modularize, and improve. | `axm install @craigsmitham/packs/software-maintenance` |
 | `effect` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect` |
 | [`docs`](./packs/docs/README.md) | Documentation craft, checklist patterns, pattern authoring and collections, organization, and audits | `axm install @craigsmitham/packs/docs` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
@@ -42,6 +42,10 @@ remain members of the published packs.
 
 | Skill | Purpose | Install |
 | --- | --- | --- |
+| [`assess`](./skills/assess/README.md) | Assess maintenance health and prioritize worthwhile interventions in a codebase or specified scope; assessment only. | `axm install @craigsmitham/skills/assess` |
+| [`stabilize`](./skills/stabilize/README.md) | Stabilize a codebase or specified scope by correcting failures and material weaknesses in behavior or engineering feedback. | `axm install @craigsmitham/skills/stabilize` |
+| [`refresh`](./skills/refresh/README.md) | Refresh a codebase or specified scope to remain supportable as dependencies, platforms, toolchains, and external contracts evolve. | `axm install @craigsmitham/skills/refresh` |
+| [`simplify`](./skills/simplify/README.md) | Simplify retained software capabilities through more direct implementation, suitable reuse, and appropriate consolidation. | `axm install @craigsmitham/skills/simplify` |
 | [`align`](./skills/align/README.md) | Align a codebase or a specified part with supplied or identified requirements and guidance. | `axm install @craigsmitham/skills/align` |
 | [`reconcile`](./skills/reconcile/README.md) | Reconcile a repository or a specified part by resolving unnecessary duplication and unintended divergence in its content. | `axm install @craigsmitham/skills/reconcile` |
 | [`modularize`](./skills/modularize/README.md) | Modularize a codebase or a specified part around cohesive responsibilities that can evolve independently. | `axm install @craigsmitham/skills/modularize` |
@@ -52,7 +56,7 @@ remain members of the published packs.
 | `okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/okf` |
 | `devops-docs` | Set up, discover, author, and maintain engineering and operations documentation | `axm install @craigsmitham/skills/devops-docs` |
 | `improve-whatever` | Evidence-based evaluation through the lens of Philippians 4:8–9 | `axm install @craigsmitham/skills/improve-whatever` |
-| `spot-spew` | Spot avoidable maintenance burden from custom or non-idiomatic code and weigh replacing it with adopted capabilities | `axm install @craigsmitham/skills/spot-spew` |
+| `spot-spew` | Finds opportunities to release engineering capacity through elimination, capability substitution, idiomatic simplification, and consolidation that reduce total maintenance burden while preserving live obligations and domain meaning | `axm install @craigsmitham/skills/spot-spew` |
 | [`generalize`](./skills/generalize/README.md) | Generalize a codebase or a specified part to support a broader, coherent family of cases. | `axm install @craigsmitham/skills/generalize` |
 
 ## Layout
