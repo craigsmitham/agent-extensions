@@ -4,7 +4,7 @@ title: Product engineering overview
 description: How the seven lifecycle sections express an opinionated product-development practice, how Foundations supplies shared conceptual context, where concepts belong, and what stays outside the bundle.
 tags: [product-engineering, body-of-knowledge, information-architecture, organizing-scheme, design, explanation]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-11T17:50:18Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T17:50:51Z }
 sources:
   - id: anthropic-agents
     resource: https://www.anthropic.com/engineering/building-effective-agents
@@ -101,32 +101,28 @@ happened, keep what we learned, and retire what is stale? It has been retired,
 and the reasoning is recorded here because knowing why a section was set aside
 is as useful as knowing why the others were kept.
 
-The section never found content it could own. Of its four planned areas, two
-restated the separate `knowledge-management` bundle, one restated the separate
-`field-notes` bundle, and the fourth was never written at all. Nothing was left
-in the middle. The only candidate identity that was genuinely product
-engineering, learning from what shipped, already had an owner: [Outcomes and
-evidence](problem/outcomes-and-evidence.md) covers whether the expected outcome
-occurred, and names production use as one link in that evidence chain.
+The section never found content it could own. Its knowledge-management areas
+restated the separate `knowledge-management` bundle, and its remaining proposed
+guidance never developed a distinct body of craft. The only candidate identity
+that was genuinely product engineering, learning from what shipped, already had
+an owner: [Outcomes and evidence](problem/outcomes-and-evidence.md) covers whether
+the expected outcome occurred, and names production use as one link in that
+evidence chain.
 
-Retiring those separate bundles does not move their concerns into product
-engineering. Knowledge management stays outside on
-exactly the argument this overview already accepts for documentation craft: it
-governs agent instructions, skills, and knowledge bundles, none of which are
-products, so its audience is wider than product engineering. Field-note practice
-stays outside because it was the concept layer of a mechanism
-coupled to a rule, a skill, and a pack, rather than portable craft that
-travels on its own.
+Retiring the separate knowledge-management bundle does not move its concerns
+into product engineering. Knowledge management stays outside on exactly the
+argument this overview already accepts for documentation craft: it governs
+agent instructions, skills, and knowledge bundles, none of which are products,
+so its audience is wider than product engineering.
 
 The section's retirement assigned its concerns as follows. The external
-bundles named here have since also been retired; these historical assignments
-are not current discovery routes.
+knowledge-management bundle has since also been retired; its historical
+assignment is not a current discovery route.
 
 | Clause | Owner |
 | --- | --- |
 | Learning from production, including what an incident taught | [How to run it](operations/), as post-incident review |
 | Learning whether the expected outcome occurred | [What to solve](problem/) |
-| Noticing friction in how work actually goes | The `field-notes` bundle |
 | Keeping a claim trustworthy and retiring it when stale | The `knowledge-management` bundle |
 
 The retired section had no distinct body of product-engineering craft left to
@@ -281,7 +277,7 @@ specification, and technical design regularly sends it back.
 
 ## What stays outside
 
-Five things are deliberately not here. Each is real craft; none of it is owned
+Four things are deliberately not here. Each is real craft; none of it is owned
 by a product-engineering question.
 
 | Outside | Why |
@@ -289,7 +285,6 @@ by a product-engineering question.
 | Technology bindings | A language, framework, or vendor specific ages on a different clock than the practice does, so it lives in its own bundle and is referenced rather than restated |
 | Documentation craft | Expressing knowledge for a reader is a discipline in its own right, with an audience wider than product engineering |
 | Knowledge management | It governs agent instructions, skills, and knowledge bundles, none of which are products, so its audience is wider too |
-| Field-note practice | It is the concept layer of a mechanism this repository runs, coupled to a rule, a skill, and a pack, rather than portable craft that travels alone |
 | Agent engineering | The design of goal-directed model-driven systems is its own discipline, owned by the separate `agent-engineering` bundle; this bundle owns the workflow that surrounds an agent step, not the model-directed choice inside it |
 
 The first row rules out technology bindings, and the rule is narrower than it

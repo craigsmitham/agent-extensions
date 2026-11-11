@@ -2,6 +2,8 @@
 
 ## 2026-11-11
 
+- **Boundary maintenance**: Reconciled the package README and overview boundary
+  lists and the historical explanation of the retired How to learn section.
 - **Neighbor retirement**: Removed current discovery claims for the retired
   knowledge-management bundle from the package README and
   [Product engineering overview](overview.md). Preserved the historical
@@ -444,11 +446,11 @@
   the subtree still says plainly where its own field stops and agent
   engineering begins.
 - **Retirement**: Removed the `learning/` section, leaving six questions rather
-  than seven. The reasoning is recorded in [the overview](overview.md), which
-  now names the owner of every clause of the retired question. In short, the
-  section never found content it could own: two of its planned areas restated
-  the `knowledge-management` bundle, one restated `field-notes`, one was never
-  written, and the single clause that was genuinely product engineering already
+  than seven. [The overview](overview.md) records the reasoning and the retired
+  question's concerns. The section never found content it
+  could own: its knowledge-management areas restated the `knowledge-management`
+  bundle, other proposed guidance never developed a distinct body of craft,
+  and the single clause that was genuinely product engineering already
   belonged to [What to solve](problem/). A section that is nothing but routing
   to other bundles fails this bundle's own placement test.
 - **Convention**: Every concept file now carries one section tag matching its
@@ -611,9 +613,9 @@
 - **Decision**: Documentation craft stays in the separate `docs` bundle rather
   than becoming a section here. Expressing knowledge for a reader is its own
   discipline, and it applies well beyond product engineering.
-- **Decision**: `knowledge-management` and `field-notes` are not recorded as
-  migration sources for How to learn. The section scope stands as intent;
-  sourcing is deferred until those bundles have a clearer purpose.
+- **Decision**: `knowledge-management` is not recorded as a migration source
+  for How to learn. The section scope stands as intent; sourcing is deferred
+  until that bundle has a clearer purpose.
   (Superseded: How to learn has since been retired and its `learning/`
   directory removed, so the deferral no longer has a subject.)
 - **Migration**: Moved the eight concepts of the standalone `strategy` bundle
