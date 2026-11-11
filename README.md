@@ -17,13 +17,11 @@ and are not published from this repository.
 | [`docs`](./packs/docs/README.md) | Documentation craft, checklist patterns, pattern authoring and collections, organization, and audits | `axm install @craigsmitham/packs/docs` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
 | `software-engineering` | Evidence-backed codebase review and coherent repository execution-surface craft, sourced from the `product-engineering` bundle | `axm install @craigsmitham/packs/software-engineering` |
-| `work-management` | Consistent Operational Incident Records, Defect Reports, and Changes across repositories and trackers, sourced from the `product-engineering` bundle | `axm install @craigsmitham/packs/work-management` |
 
 ## Standalone knowledge
 
 | Bundle | Purpose | Install |
 | --- | --- | --- |
-| `knowledge-management` | Durable knowledge authority, lifecycle, discovery, provenance, and maintenance across human and executable sources | `axm install @craigsmitham/knowledge/knowledge-management` |
 | `product-engineering` | An opinionated product-development lifecycle from strategy through operations and maintenance, with shared conceptual foundations | `axm install @craigsmitham/knowledge/product-engineering` |
 
 The `strategy`, `product-management`, `requirements-engineering`,

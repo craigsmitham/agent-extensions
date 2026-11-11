@@ -27,10 +27,8 @@
       "source": "workspace",
       "origin": "bundled"
     },
-    "manage-work-items": "workspace",
     "spot-spew": "workspace",
     "devops-docs": "workspace",
-    "product-docs": "workspace",
     "generalize": "workspace",
     "align": "workspace",
     "prune": "workspace",
@@ -46,7 +44,6 @@
   "knowledge": {
     "docs": "workspace",
     "effect": "workspace",
-    "knowledge-management": "workspace",
     "product-engineering": "workspace"
   },
   "subagents": {
@@ -56,7 +53,6 @@
     "effect": "workspace",
     "docs": "workspace",
     "research": "workspace",
-    "work-management": "workspace",
     "software-engineering": "workspace",
     "codebase-renewal": "workspace"
   },

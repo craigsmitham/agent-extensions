@@ -2,6 +2,11 @@
 
 ## 2026-11-11
 
+- **Neighbor retirement**: Removed current discovery claims for the retired
+  knowledge-management bundle from the package README and
+  [Product engineering overview](overview.md). Preserved the historical
+  allocation of the How to learn section's concerns and clarified that
+  retirement does not expand product engineering's scope.
 - **Terminology**: Use pattern collections in the design-quality exclusions in [Cross-cutting concerns for software quality](engineering/codebase-review/cross-cutting-concerns.md).
 
 ## 2026-09-16

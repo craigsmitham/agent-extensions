@@ -29,8 +29,5 @@ jobs:
       - name: Test the Git-index safety gate
         run: scripts/test-public-safety.sh
 
-      - name: Lint the Product Docs skill profile and templates
-        run: scripts/lint-product-docs.py
-
       - name: Validate the proposed commit
         run: scripts/check-public-safety.sh --view git-index

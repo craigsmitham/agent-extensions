@@ -144,14 +144,12 @@ find_authored_manifests() {
 expected=(
   knowledge/docs
   knowledge/effect
-  knowledge/knowledge-management
   knowledge/product-engineering
   packs/codebase-renewal
   packs/docs
   packs/effect
   packs/research
   packs/software-engineering
-  packs/work-management
   rules/use-effect
   skills/align
   skills/devops-docs
@@ -160,9 +158,7 @@ expected=(
   skills/generalize
   skills/improve
   skills/improve-whatever
-  skills/manage-work-items
   skills/okf
-  skills/product-docs
   skills/prune
   skills/research
   skills/spot-spew

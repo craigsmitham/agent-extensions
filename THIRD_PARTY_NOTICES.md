@@ -145,22 +145,22 @@ Fowler, and Sandi Metz. Its [package README](skills/generalize/README.md)
 links the sources and explains each contribution. No source text or code is
 vendored; the package's original instructions and explanatory prose use MIT.
 
-## Knowledge and management sources
+## Product engineering sources
 
-The `knowledge-management` and `product-engineering` bundles synthesize ideas
+The `product-engineering` bundle synthesizes ideas
 from public sources identified in each concept's provenance metadata, or, where
 a claim is held by a reserved section index that the Open Knowledge Format does
-not permit to carry frontmatter, in that index itself. These include the FAIR
-Guiding Principles, W3C PROV, KCS, public agent-engineering guidance from
-Anthropic and OpenAI, Silicon Valley Product Group's product-model writing,
+not permit to carry frontmatter, in that index itself. These include public
+agent-engineering guidance from Anthropic and OpenAI, Silicon Valley Product
+Group's product-model writing,
 Roger L. Martin's Playing to Win writing, and Harvard Business School's
 value-stick materials. The `product-engineering` bundle also absorbed the
 retired `software-engineering` and `work-management` bundles, adding sources
 such as ISO/IEC/IEEE and NIST standards, published Google engineering material,
 Martin Fowler's and Kent Beck's public writing on testing, the DORA research
 program, and public build-tool and browser-automation documentation. The
-bundles and related rule packages contain original summaries and applications;
-they do not vendor those sources or reproduce their proprietary templates.
+bundle contains original summaries and applications; it does not vendor those
+sources or reproduce their proprietary templates.
 
 The product-engineering foundations also cite Google SRE material, NASA and
 DOE maintenance guidance, Parnas's software-aging work, Bill Buxton's design

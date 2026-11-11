@@ -4,7 +4,7 @@ title: Product engineering overview
 description: How the seven lifecycle sections express an opinionated product-development practice, how Foundations supplies shared conceptual context, where concepts belong, and what stays outside the bundle.
 tags: [product-engineering, body-of-knowledge, information-architecture, organizing-scheme, design, explanation]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-09-09T15:48:35Z }
+generated: { by: codex/gpt-6, at: 2026-11-11T17:50:18Z }
 sources:
   - id: anthropic-agents
     resource: https://www.anthropic.com/engineering/building-effective-agents
@@ -109,15 +109,18 @@ engineering, learning from what shipped, already had an owner: [Outcomes and
 evidence](problem/outcomes-and-evidence.md) covers whether the expected outcome
 occurred, and names production use as one link in that evidence chain.
 
-Neither neighboring bundle should move in. Knowledge management stays outside on
+Retiring those separate bundles does not move their concerns into product
+engineering. Knowledge management stays outside on
 exactly the argument this overview already accepts for documentation craft: it
 governs agent instructions, skills, and knowledge bundles, none of which are
 products, so its audience is wider than product engineering. Field-note practice
-stays outside because it is the concept layer of a mechanism this repository
-runs, coupled to a rule, a skill, and a pack, rather than portable craft that
+stays outside because it was the concept layer of a mechanism
+coupled to a rule, a skill, and a pack, rather than portable craft that
 travels on its own.
 
-Every clause of the retired question now has an owner.
+The section's retirement assigned its concerns as follows. The external
+bundles named here have since also been retired; these historical assignments
+are not current discovery routes.
 
 | Clause | Owner |
 | --- | --- |

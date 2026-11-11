@@ -76,18 +76,19 @@ For a new or changed concept:
 
 ## Boundaries
 
-Four neighboring disciplines stay in their own bundles.
+Four neighboring disciplines stay outside this bundle. Retiring a neighboring
+bundle does not transfer its scope into product engineering.
 
-| Outside | Bundle | Why |
+| Outside | Guidance | Why |
 | --- | --- | --- |
 | Documentation craft | `docs` | Expressing knowledge for a reader is its own discipline, and it applies well beyond product engineering |
-| Knowledge management | `knowledge-management` | It governs agent instructions, skills, and knowledge bundles, none of which are products |
-| Field-note practice | `field-notes` | It is the concept layer of a mechanism this repository runs, coupled to a rule, a skill, and a pack |
+| Knowledge management | Former `knowledge-management` bundle, now retired | It governs agent instructions, skills, and knowledge bundles, none of which are products |
+| Field-note practice | Former `field-notes` package family, now retired | It was the concept layer of a mechanism coupled to a rule, a skill, and a pack |
 | Agent engineering | `agent-engineering` | The design of goal-directed model-driven systems is its own discipline; this bundle owns the workflow that surrounds an agent step, not the model-directed choice inside it |
 
 The second and third were once candidates for a seventh section, How to learn.
 That section has been retired; the [overview](src/overview.md) records the
-reasoning and shows where each clause of its question now lives.
+reasoning and the historical allocation of its concerns.
 
 ## Status
 
