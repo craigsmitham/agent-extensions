@@ -27,7 +27,6 @@
       "source": "workspace",
       "origin": "bundled"
     },
-    "checklist-design": "workspace",
     "manage-work-items": "workspace",
     "spot-spew": "workspace",
     "devops-docs": "workspace",

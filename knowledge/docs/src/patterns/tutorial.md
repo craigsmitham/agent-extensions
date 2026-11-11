@@ -39,7 +39,7 @@ sources:
   title: Python — The Python Tutorial
 generated:
   by: codex/gpt-6
-  at: '2026-11-11T16:59:49Z'
+  at: '2026-11-11T17:40:43Z'
 ---
 
 # Tutorial
@@ -267,5 +267,7 @@ effectiveness of this full formulation for a particular learner group.
 - [Explanation](explanation.md) — develops the rationale a lesson introduces
   briefly, without interrupting its sequence.
 - [Reference](reference.md) — supplies exact details for later exploration.
+- [Learning checklist](learning-checklist.md) — adds bounded practice prompts,
+  feedback, and a plan to fade instructional support toward independent use.
 - [Documentation craft](../explainers/documentation-craft.md) — selecting and combining documentation patterns.
 - [Writing a document](../guides/documentation-craft.md) — the shared authoring process.

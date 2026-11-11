@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "docs",
-  "version": "0.5.0",
-  "description": "Author, review, organize, audit, and maintain documentation, pattern descriptions, and pattern collections",
+  "version": "0.6.0",
+  "description": "Author, review, adapt, organize, audit, and maintain documentation, reusable checklists, pattern descriptions, and pattern collections",
   "keywords": [
     "docs",
     "documentation",
@@ -24,7 +24,11 @@
     "pattern-description",
     "pattern-mining",
     "pattern-review",
-    "pattern-language"
+    "pattern-language",
+    "checklist",
+    "checklist-design",
+    "readiness",
+    "learning-scaffold"
   ],
   "recommendedPacks": [
     "@craigsmitham/packs/docs"

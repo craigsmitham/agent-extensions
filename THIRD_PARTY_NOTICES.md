@@ -50,6 +50,24 @@ Bobby Woolf's Enterprise Integration Patterns are credited as observed
 documentation examples, without reproducing their descriptions. The source
 review for these pattern entries was refreshed on 2026-11-11.
 
+## Checklist patterns
+
+The docs bundle's checklist patterns reorganize and rewrite Craig Smitham's
+earlier checklist-design guidance, whose 0.1.10 release used MIT. Concept
+provenance pins that source revision. The new documentation belongs to the
+existing `CC-BY-SA-4.0` docs bundle; earlier releases retain their license.
+
+The concepts cite Degani and Wiener's NASA checklist study, Conroy and
+colleagues' AAPM checklist guidance, PRISMA reporting guidance, Moore and
+colleagues' process-evaluation guidance, the BetterBirth trial, software
+inspection research, Shao and colleagues' regulated-learning meta-analysis,
+Green and colleagues' test-enhanced-learning review, and Kalyuga and
+colleagues' expertise-reversal review. These sources inform original summaries
+and illustrative examples. Their full texts, checklists, figures, and templates
+are not reproduced or vendored, and their source rights are not relicensed by
+this repository. Domain-specific evidence is distinguished from the bundle's
+generalized design guidance.
+
 ## Open Knowledge Format
 
 `skills/okf/src/references/SPEC.md` is a vendored copy of the

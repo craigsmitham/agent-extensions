@@ -26,7 +26,7 @@ sources:
   title: Diátaxis — How-to guides
 generated:
   by: codex/gpt-6
-  at: '2026-11-11T16:59:49Z'
+  at: '2026-11-11T17:40:43Z'
 ---
 
 # Runbook
@@ -127,6 +127,8 @@ Use a runbook when:
   or escalate before claiming a repeatable path.
 - The reader is learning the system from zero — provide a tutorial separately.
 - The material is only a system inventory — use reference documentation.
+- Competent users need only prompts for known actions or a bounded check — use
+  a [Checklist](checklist.md), linking procedural detail where needed.
 
 ## Terminology
 
@@ -184,6 +186,8 @@ its execution concerns without making the terminology universal.
 - [Playbook](playbook.md) — guides assessment and coordinated response, and may
   invoke a runbook for a selected task.
 - [How-to guide](how-to.md) — supplies the underlying procedure craft.
+- [Checklist](checklist.md) — supports bounded execution prompts, verification,
+  or readiness decisions within or alongside the procedure.
 - [Reference](reference.md) — owns inventories and exact
   system facts that a runbook can link instead of duplicating.
 

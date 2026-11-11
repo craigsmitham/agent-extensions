@@ -1,11 +1,12 @@
 # Documentation craft
 
 Practical guidance for writing, reviewing, organizing, and maintaining useful
-documentation. Its pattern collection describes nine reusable document
-designs: tutorial, how-to guide, reference, explanation, principle document,
-playbook, runbook, pattern description, and pattern collection. Each connects
-a recurring reader problem to a design response, with applicability,
-tradeoffs, evidence, and detailed authoring guidance.
+documentation. Its pattern collection covers tutorials, how-to guides,
+reference, explanation, principle documents, playbooks, runbooks, checklists,
+pattern descriptions, and pattern collections. Checklist specializations cover
+execution, verification, readiness, reporting and review, and learning. Each
+pattern connects a recurring reader problem to a design response, with
+applicability, tradeoffs, evidence, and detailed authoring guidance.
 
 The four general reader needs draw on [Diátaxis](https://diataxis.fr/).
 Pattern concepts, mining, description, review, and collection maintenance draw
@@ -20,8 +21,8 @@ retain their own layouts, metadata schemas, validators, and tooling.
 
 | Extension | Role |
 | --- | --- |
-| `@craigsmitham/knowledge/docs` | Documentation pattern collection, foundations, and practical workflows |
-| `@craigsmitham/skills/docs` | Write, review, organize, audit, and remediate documentation |
+| `@craigsmitham/knowledge/docs` | Documentation and checklist patterns, foundations, and practical workflows |
+| `@craigsmitham/skills/docs` | Write, review, adapt, organize, audit, and remediate documentation and reusable checklists |
 
 Install the pack to supply the skill with its knowledge companion. These two
 extensions provide all required guidance.
@@ -38,6 +39,15 @@ links, or audit a bounded documentation corpus. Search the knowledge with
 `axm knowledge concepts query` or open a concept by identity with
 `axm knowledge concepts get`.
 
+For checklist work, start with the shared pattern, then select its purpose:
+
+```bash
+axm knowledge concepts get '@craigsmitham/knowledge/docs#patterns/checklist'
+```
+
+The guidance includes use protocols, evidence, validation plans, and lifecycle.
+Writing or reviewing a checklist does not establish its real-world effectiveness.
+
 Start with the reader's problem and choose a suitable pattern. Adapt its design
 and authoring guidance to the document's job. For an example of selecting and
 combining patterns, open the Documentation craft concept:
@@ -45,6 +55,16 @@ combining patterns, open the Documentation craft concept:
 ```bash
 axm knowledge concepts get '@craigsmitham/knowledge/docs#explainers/documentation-craft'
 ```
+
+## Checklist consolidation in 0.9.0
+
+Docs knowledge 0.15.0 and docs skill 0.6.0 absorb checklist design into the
+existing docs pack. The standalone checklist-design skill is retired and
+archived in the registry, with its source removed from the repository. Its
+rigid response format and decision-gate
+scripts are not retained. The knowledge owns the design guidance; the docs
+skill routes checklist creation, review, adaptation, and validation planning
+to it. No additional package dependency is required.
 
 ## Migration in 0.8.0
 

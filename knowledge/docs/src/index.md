@@ -5,7 +5,8 @@ okf_version: "0.2"
 # Documentation craft knowledge
 
 Portable guidance for writing, reviewing, organizing, and maintaining useful
-documentation, including pattern descriptions and collections across domains.
+documentation, including reusable checklists, pattern descriptions, and
+collections across domains.
 Start with the reader's job, then choose the relevant documentation pattern or
 workflow. Host projects keep their own layouts, metadata, and tooling.
 

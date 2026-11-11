@@ -45,7 +45,7 @@ sources:
   title: Pattern collection
 generated:
   by: codex/gpt-6
-  at: '2026-11-11T17:10:27Z'
+  at: '2026-11-11T17:40:43Z'
 ---
 
 # Documentation craft
@@ -213,6 +213,10 @@ combine several reader needs:
   and coordination as a situation develops.
 - A [runbook](../patterns/runbook.md) supports repeatable execution of a bounded
   operational task, including verification and recovery.
+- A [checklist](../patterns/checklist.md) puts bounded prompts at the point of
+  work to address omissions or coordination gaps. Its purpose-specific patterns
+  cover execution, verification, readiness, reporting and review, and learning.
+  The use protocol, evidence, and response to unmet items are part of its design.
 
 A [practice](practice.md) is the activity documentation supports, not another
 document type. A [standard](standard.md) supplies a recognized basis for
@@ -233,6 +237,10 @@ set of pages:
    a real goal, drawing on the same reference.
 4. A **playbook** guides assessment when errors rise. If rollback is selected,
    a **runbook** supplies its bounded execution, verification, and recovery.
+5. A **verification checklist** can support a consequential runbook pause,
+   while a **readiness checklist** brings current evidence to the role deciding
+   whether to proceed. A **learning checklist** can scaffold the tutorial's
+   practice; its learning claim needs later independent evidence.
 
 Start with the actual problem, choose only the patterns it needs, and follow
 their relationships when another reader need emerges. Pattern descriptions

@@ -2,6 +2,28 @@
 
 ## 2026-11-11
 
+- **Checklist patterns**: Migrated the standalone checklist-design skill's
+  durable guidance into [Checklist](patterns/checklist.md) and five draft
+  specializations: [Execution](patterns/execution-checklist.md),
+  [Verification](patterns/verification-checklist.md),
+  [Readiness](patterns/readiness-checklist.md),
+  [Reporting and review](patterns/reporting-review-checklist.md), and
+  [Learning](patterns/learning-checklist.md). Preserved artifact fit, item and
+  interaction design, coordination, evidence, validation, and lifecycle guidance.
+- **Checklist distinctions**: Separated purpose from read-do, do-confirm, and
+  challenge-response interaction choices. Replaced fixed response statuses and
+  decision-gate scripting with adaptable authoring guidance. Kept reported
+  completion, observed execution, quality, and independent learning distinct.
+- **Checklist provenance**: Recorded the original 0.1.10 source revision and
+  claim-specific external sources. Added illustrative cases, tradeoffs, and
+  evidence limits; the new formulations are drafts, not field-validated aids.
+  Corrected the regulated-learning source attribution to Shao and colleagues.
+- **Checklist discovery and retirement**: Routed checklist authoring through
+  the docs skill, expanded collection and catalog discovery, and removed the
+  standalone skill from this repository and its managed projections. Archived
+  its registry identity and confirmed the published 0.1.10 entry remains in
+  the archived package's history. Docs
+  knowledge 0.15.0, skill 0.6.0, and pack 0.9.0 carry the replacement.
 - **Pattern collection**: Consolidated explanations and authoring guidance for
   [Tutorial](patterns/tutorial.md), [How-to guide](patterns/how-to.md),
   [Reference](patterns/reference.md), [Explanation](patterns/explanation.md),

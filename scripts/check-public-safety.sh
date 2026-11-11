@@ -154,7 +154,6 @@ expected=(
   packs/work-management
   rules/use-effect
   skills/align
-  skills/checklist-design
   skills/devops-docs
   skills/docs
   skills/experiment

@@ -28,7 +28,7 @@ sources:
   title: Red Hat — What is an Ansible playbook
 generated:
   by: codex/gpt-6
-  at: '2026-11-11T16:59:49Z'
+  at: '2026-11-11T17:40:43Z'
 ---
 
 # Playbook
@@ -188,6 +188,8 @@ comparative effectiveness of a particular outline.
   tasks that a playbook may invoke.
 - [How-to guide](how-to.md) — supplies action-oriented authoring craft
   for activities within a playbook.
+- [Checklist](checklist.md) — supports known conditions, communications, or
+  branch-local checks while the playbook owns broader assessment and response.
 - [Explanation](explanation.md) — supports separate
   treatment of rationale that would interrupt use of the playbook.
 

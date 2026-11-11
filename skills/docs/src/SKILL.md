@@ -3,12 +3,14 @@ name: docs
 description: >
   Creates, reviews, organizes, audits, and remediates documentation using
   portable craft. Use for READMEs, tutorials, how-to guides, reference,
-  explanations, principle documents, playbooks, runbooks, and design pattern
-  descriptions, collections, or languages across domains; mining patterns for documentation;
+  explanations, principle documents, playbooks, runbooks, reusable checklists,
+  and design pattern descriptions, collections, or languages across domains;
+  mining patterns for documentation;
   reviewing pattern evidence or smells; reviewing one document; auditing bounded
   documentation corpora or assessing documentation health; proposing structures,
   paths, filenames, or titles; organizing collections; fixing links or stale
-  content; and implementing accepted documentation-audit findings. Apply when
+  content; designing, adapting, and planning validation of checklists; and
+  implementing accepted documentation-audit findings. Apply when
   documentation is the requested artifact, even when another skill covers its
   subject. Not for editing always-on agent instructions, Word or Google Docs
   artifacts, regular expressions, visual motifs, corpus audits beyond
@@ -37,6 +39,7 @@ assessment that serves the reader's job and respects local authority.
 | --- | --- | --- |
 | Choose a documentation pattern | `explainers/documentation-craft` | Matching `patterns/<subject>` |
 | Write or review a tutorial, how-to, reference, explanation, principle document, playbook, or runbook | Matching `patterns/<subject>` | `guides/documentation-craft` for the shared process |
+| Create, review, adapt, or plan validation of a reusable checklist | `patterns/checklist` | Matching `patterns/{execution,verification,readiness,reporting-review,learning}-checklist` for its purpose |
 | Mine, write, or review a design pattern description; assess its evidence or smells | `patterns/pattern-description` | `patterns/pattern-collection` for relationships within a collection |
 | Author, review, or maintain a pattern collection or language | `patterns/pattern-collection` | `patterns/pattern-description` for individual entries |
 | Audit a bounded corpus | `explainers/documentation-audits` | `guides/auditing-documentation` |
@@ -57,6 +60,12 @@ Pattern subjects can come from any design domain. Mining gathers evidence for
 the requested descriptions; domain validation and implementation remain
 separate work. Keep the detailed pattern method in the selected knowledge
 entries rather than reproducing it in this workflow.
+
+Checklist authoring includes its use protocol and validation plan. Choose
+purpose separately from interaction mode, and preserve the distinction between
+recorded completion and evidence of the intended outcome. Execution, domain
+approval, and real-world effectiveness evaluation remain separate work; the
+selected checklist patterns own the detailed design guidance.
 
 3. **Audit when requested.** For a bounded corpus assessment, state the audit
    question, included and excluded scope, audience, authority, and repository
