@@ -96,10 +96,16 @@ or MDN documentation.
 
 The `codebase-renewal` pack contains original explanatory prose inspired by
 Peter Drucker's renewal practices, with a software-engineering mapping to its
-five standalone members. Its [package README](packs/codebase-renewal/README.md)
+six standalone members. Its [package README](packs/codebase-renewal/README.md)
 links the Drucker Institute reading and the members' source discussions. No
 source text or code is vendored; the pack metadata and README use MIT, and each
 member retains its own declared license.
+
+## Repository reconciliation
+
+The `reconcile` skill contains original instructions and explanatory prose
+about duplication, divergence, and appropriate independence among repository
+content. No third-party text or code is vendored; the package uses MIT.
 
 ## Software improvement
 

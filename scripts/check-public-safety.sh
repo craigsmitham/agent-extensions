@@ -185,6 +185,7 @@ expected=(
   skills/okf
   skills/project-management
   skills/prune
+  skills/reconcile
   skills/release-engineering
   skills/requirements-engineering
   skills/research

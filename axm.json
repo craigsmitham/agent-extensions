@@ -73,7 +73,8 @@
     "engineering-environment": {
       "source": "workspace",
       "enabled": false
-    }
+    },
+    "reconcile": "workspace"
   },
   "rules": {
     "use-effect": {
