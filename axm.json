@@ -56,7 +56,6 @@
   "packs": {
     "effect": "workspace",
     "docs": "workspace",
-    "agent-engineering": "agentxm:@agentxm/packs/agent-engineering",
     "research": "workspace",
     "work-management": "workspace",
     "software-engineering": "workspace",

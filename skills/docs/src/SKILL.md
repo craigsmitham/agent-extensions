@@ -1,19 +1,18 @@
 ---
 name: docs
 description: >
-  Creates, reviews, organizes, audits, and remediates repository documentation
-  using portable documentation craft. Use for writing or improving READMEs,
-  tutorials, how-to guides, reference material, explanations, documentation
-  principles and patterns, playbooks and runbooks; reviewing one identified
-  document; auditing a bounded documentation corpus or assessing documentation
-  health; proposing a documentation structure, path, filename, or title;
-  organizing or renaming a documentation collection; fixing broken links or
-  stale content; or implementing accepted documentation-audit findings. When
-  documentation is the requested artifact, apply this skill even if another
-  skill covers the document's subject. Not for editing always-on agent
-  instruction files themselves, Word or Google Docs artifacts, corpus audits
-  beyond documentation, or implementing the product or design the
-  documentation describes.
+  Creates, reviews, organizes, audits, and remediates documentation using
+  portable craft. Use for READMEs, tutorials, how-to guides, reference,
+  explanations, principle documents, playbooks, runbooks, and design pattern
+  descriptions, collections, or languages across domains; mining patterns for documentation;
+  reviewing pattern evidence or smells; reviewing one document; auditing bounded
+  documentation corpora or assessing documentation health; proposing structures,
+  paths, filenames, or titles; organizing collections; fixing links or stale
+  content; and implementing accepted documentation-audit findings. Apply when
+  documentation is the requested artifact, even when another skill covers its
+  subject. Not for editing always-on agent instructions, Word or Google Docs
+  artifacts, regular expressions, visual motifs, corpus audits beyond
+  documentation, or implementing a product or named design pattern.
 ---
 
 # Author docs
@@ -28,30 +27,36 @@ assessment that serves the reader's job and respects local authority.
    the target and its authoritative sources, and preserve unrelated user
    changes. Route by requested artifact: a guide about an agent instruction
    file is documentation work; modifying the instruction file itself is not.
-2. **Choose the smallest knowledge route.** Open only the needed concepts under
-   `knowledge/docs/src/`:
+2. **Choose the smallest knowledge route.** Resolve the docs pack sibling
+   `@craigsmitham/knowledge/docs` through host knowledge discovery or
+   `axm knowledge concepts get`. The paths below are concept IDs within that
+   bundle, not workspace file paths. If required guidance is unavailable,
+   report the missing docs pack dependency rather than inventing a substitute.
 
 | Request | Start with | Add when needed |
 | --- | --- | --- |
-| Understand or classify a documentation form | `explainers/documentation-craft.md` | Matching `explainers/<subject>.md` |
-| Create or substantially revise one document | `guides/documentation-craft.md` | Matching guide and explainer for the reader need |
-| Review one document's structure | Matching `guides/<subject>.md` | Matching explainer for form-fit questions |
-| Audit a bounded documentation corpus | `explainers/documentation-audits.md` | `guides/auditing-documentation.md` and concepts for the selected dimensions |
-| Remediate or restructure a corpus | `guides/documentation-workflow.md` | `explainers/documentation-workflow.md` for rationale; concepts for the selected unit |
-| Propose, organize, place, or rename documentation paths, filenames, titles, or collections | `guides/organizing-and-naming-documentation.md` | `explainers/documentation-organization-and-discovery.md` for tradeoffs |
-| Implement accepted audit findings | The supplied finding set | `guides/documentation-workflow.md` and the concept for each affected unit |
-| Author or review a principle | `explainers/principle.md` | `guides/principle.md`; related patterns or domain cases when needed |
-| Author or review a pattern or pattern library | `explainers/pattern.md` | `guides/pattern.md` and matching `patterns/*.md` examples |
-| Author or review a playbook or runbook | Matching `patterns/*.md` | Pattern explainer and guide when pattern quality is in scope |
-| Distinguish a practice, standard, principle, or pattern | Matching `explainers/{practice,standard,principle,pattern}.md` | A guide only when authoring is requested |
-| Check links, staleness, or factual accuracy | Repository-local sources and validators | Relevant concepts only when form or structure is also in scope |
+| Choose a documentation pattern | `explainers/documentation-craft` | Matching `patterns/<subject>` |
+| Write or review a tutorial, how-to, reference, explanation, principle document, playbook, or runbook | Matching `patterns/<subject>` | `guides/documentation-craft` for the shared process |
+| Mine, write, or review a design pattern description; assess its evidence or smells | `patterns/pattern-description` | `patterns/pattern-collection` for relationships within a collection |
+| Author, review, or maintain a pattern collection or language | `patterns/pattern-collection` | `patterns/pattern-description` for individual entries |
+| Audit a bounded corpus | `explainers/documentation-audits` | `guides/auditing-documentation` |
+| Remediate or restructure a corpus | `guides/documentation-workflow` | Relevant pattern and organization guidance |
+| Place, organize, or rename documentation | `guides/organizing-and-naming-documentation` | `explainers/documentation-organization-and-discovery` |
+| Clarify repeatedly confused concepts | `guides/comparing-concepts` | The authoritative definitions |
+| Distinguish a practice or standard | Matching `explainers/{practice,standard}` | `explainers/standard-authority-and-conformance` |
+| Check links, staleness, or factual accuracy | Repository-local sources and validators | Relevant pattern guidance when structure is in scope |
 
-`explainers/` supports understanding, `guides/` supports action, and
-`patterns/` holds reusable solutions to recurring documentation problems.
-Principle authoring guidance lives in the explainer and guide collections;
-actual principles belong with their subject domain.
-Each directory has an `index.md` routing map. The four Diátaxis reader needs
-remain foundational inside the explainer and guide collections.
+`patterns/` is the documentation pattern collection. Each page describes a
+recurring reader problem, a document design that addresses it, applicability,
+tradeoffs, evidence, and authoring guidance. Select by fit and adapt the design
+to the reader's job; the resulting document follows its own useful structure.
+`explainers/` and `guides/` contain broader documentation foundations and
+workflows. The docs pack supplies all required guidance.
+
+Pattern subjects can come from any design domain. Mining gathers evidence for
+the requested descriptions; domain validation and implementation remain
+separate work. Keep the detailed pattern method in the selected knowledge
+entries rather than reproducing it in this workflow.
 
 3. **Audit when requested.** For a bounded corpus assessment, state the audit
    question, included and excluded scope, audience, authority, and repository

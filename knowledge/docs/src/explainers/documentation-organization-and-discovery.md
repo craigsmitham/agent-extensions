@@ -11,9 +11,7 @@ sources:
   - id: documentation-workflow
     resource: documentation-workflow.md
     title: Documentation workflow
-generated:
-  by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+generated: { by: "codex/gpt-6", at: "2026-11-11T16:45:58Z" }
 ---
 
 # Documentation organization and discovery
@@ -53,7 +51,7 @@ level.
 
 ## When form-first grouping fits
 
-Folders such as `explainers/`, `guides/`, and `patterns/` fit when:
+Folders such as `tutorials/`, `how-to/`, and `reference/` fit when:
 
 - readers deliberately browse by the kind of guidance they need;
 - comparing documents of the same form across subjects is useful;

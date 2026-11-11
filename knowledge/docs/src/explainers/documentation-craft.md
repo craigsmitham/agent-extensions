@@ -2,45 +2,50 @@
 type: Explainer
 title: Documentation craft
 description: What effective documentation craft is — matching form to reader need, keeping each job recognizable, and respecting host conventions over portable layout rules.
-tags: [docs, craft, quality, diataxis, explainer]
+tags:
+- docs
+- craft
+- quality
+- diataxis
+- explainer
 status: stable
 sources:
-  - id: diataxis
-    resource: https://diataxis.fr/
-    title: Diátaxis documentation system
-  - id: diataxis-start
-    resource: https://diataxis.fr/start-here/
-    title: Diátaxis — Start here
-  - id: diataxis-start-src
-    resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/start-here.rst
-    title: Diátaxis source — start-here.rst
-  - id: diataxis-map
-    resource: https://diataxis.fr/map/
-    title: Diátaxis — The map
-  - id: diataxis-map-src
-    resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/map.rst
-    title: Diátaxis source — map.rst
-  - id: diataxis-foundations
-    resource: https://diataxis.fr/foundations/
-    title: Diátaxis — Foundations
-  - id: diataxis-foundations-src
-    resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/foundations.rst
-    title: Diátaxis source — foundations.rst
-  - id: johnson-diataxis
-    resource: https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework
-    title: Tom Johnson — What is Diátaxis
-  - id: mintlify-content-types
-    resource: https://www.mintlify.com/guides/content-types
-    title: Mintlify — Content types
-  - id: pattern-writing-language
-    resource: https://www.hillside.net/index.php/a-pattern-language-for-pattern-writing
-    title: Meszaros and Doble — A Pattern Language for Pattern Writing
-  - id: fowler-writing-patterns
-    resource: https://martinfowler.com/articles/writingPatterns.html
-    title: Martin Fowler — Writing Software Patterns
+- id: diataxis
+  resource: https://diataxis.fr/
+  title: Diátaxis documentation system
+- id: diataxis-start
+  resource: https://diataxis.fr/start-here/
+  title: Diátaxis — Start here
+- id: diataxis-start-src
+  resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/start-here.rst
+  title: Diátaxis source — start-here.rst
+- id: diataxis-map
+  resource: https://diataxis.fr/map/
+  title: Diátaxis — The map
+- id: diataxis-map-src
+  resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/map.rst
+  title: Diátaxis source — map.rst
+- id: diataxis-foundations
+  resource: https://diataxis.fr/foundations/
+  title: Diátaxis — Foundations
+- id: diataxis-foundations-src
+  resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/foundations.rst
+  title: Diátaxis source — foundations.rst
+- id: johnson-diataxis
+  resource: https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework
+  title: Tom Johnson — What is Diátaxis
+- id: mintlify-content-types
+  resource: https://www.mintlify.com/guides/content-types
+  title: Mintlify — Content types
+- id: pattern-description
+  resource: ../patterns/pattern-description.md
+  title: Pattern description
+- id: pattern-collection
+  resource: ../patterns/pattern-collection.md
+  title: Pattern collection
 generated:
   by: codex/gpt-6
-  at: 2026-10-30T20:12:16Z
+  at: '2026-11-11T17:10:27Z'
 ---
 
 # Documentation craft
@@ -49,16 +54,25 @@ Portable **understanding** of documentation quality — not repository layout,
 frontmatter schemas, or tooling. Host projects may add structure, metadata,
 and validators; those local rules win when they exist.
 
-On the question of **which reader need a document serves**, this bundle adopts
-Diátaxis — tutorial, how-to guide, reference, and explanation. Each is
-developed as an [explainer](index.md) (what the form is for) plus a paired
-[guide](../guides/) (how to write one).
+Choose documentation by what the reader needs to do: learn, complete a task,
+look up facts, or understand a subject. Diátaxis supplies these four reader
+needs. The [Documentation pattern collection](../patterns/index.md) describes
+reusable document designs for these and more specific situations. Each pattern
+connects a recurring reader problem to a design response, with applicability,
+tradeoffs, evidence, and detailed authoring guidance. A particular tutorial or
+runbook is an instance of the design described by its pattern.
 
-Diátaxis is foundational craft, not the directory scheme or an exhaustive
-taxonomy for every artifact name. This bundle recognizes **explainers**,
-**guides**, **principles**, and **patterns** as distinct forms of reusable
-guidance. Those forms answer a different question: how should this knowledge
-help its reader?
+For documenting patterns in any design domain, use
+[Pattern description](../patterns/pattern-description.md) for the concepts,
+evidence, authoring, and review of an individual description, and
+[Pattern collection](../patterns/pattern-collection.md) for curation and
+maintenance. These two entries own the general pattern guidance used throughout
+the bundle, including the distinction between a collection and a language.
+Draft entries identify where their formulations still need evidence from use.
+
+“Explainer” is another name for an explanation document. “Guide” can be an
+umbrella term; use **how-to guide** when specifically referring to directions
+for accomplishing a task. These names do not prescribe host metadata or folders.
 
 For how to apply this craft in practice, see
 [Documentation craft guide](../guides/documentation-craft.md). For iterative remediation of an
@@ -75,8 +89,8 @@ Documentation must serve the [**practitioner in a practice**](practice.md) — s
 *how*) and **cognition** (knowing *that*). Those two dimensions define four
 quarters, and Diátaxis holds that the map they produce is complete: those four
 categories cover all the territory defined by the two axes. Diátaxis calls
-them documentation types; this bundle calls them **reader-need forms** to keep
-that classification distinct from the form of the guidance itself.
+them documentation types. This bundle describes their reusable design guidance
+as patterns while retaining the distinctions between the reader needs.
 
 Take that claim at its own scope. It is an argument about the **map of reader
 needs** — no fifth quarter exists on those two axes. It is not a claim that
@@ -98,12 +112,12 @@ job well.
 
 ## Choose a form by need
 
-| Need | Form | Explainer | Guide |
-| --- | --- | --- | --- |
-| Learn by doing, first success path | Tutorial | [Tutorial explainer](tutorial.md) | [Tutorial guide](../guides/tutorial.md) |
-| Achieve a concrete goal in a real system | How-to | [How-to explainer](how-to.md) | [How-to guide](../guides/how-to.md) |
-| Look up facts, interfaces, or terms | Reference | [Reference explainer](reference.md) | [Reference guide](../guides/reference.md) |
-| Understand why, context, or tradeoffs | Explanation | [Explanation explainer](explanation.md) | [Explanation guide](../guides/explanation.md) |
+| Reader need | Documentation pattern |
+| --- | --- |
+| Learn by doing | [Tutorial](../patterns/tutorial.md) |
+| Achieve a concrete goal | [How-to guide](../patterns/how-to.md) |
+| Look up facts or interfaces | [Reference](../patterns/reference.md) |
+| Understand context and reasoning | [Explanation](../patterns/explanation.md) |
 
 If a draft tries to do two of these at once, prefer splitting or making one
 job primary and linking the rest.
@@ -129,9 +143,6 @@ Diátaxis pairs each need with a characteristic form (paraphrased):
 | Form | a lesson | a series of steps | dry description | discursive discussion |
 | Everyday analogy | teaching a child to cook | a recipe | label on a food packet | culinary social history |
 
-Secondary writeups treat these as **information patterns** authors can keep
-distinct so readers get the voice and structure they need.
-
 ## Cycle of interaction
 
 Users do not always walk the map in order, but craft mastery often moves
@@ -150,8 +161,8 @@ support that cycle without forcing a single linear site tour.
 Practical checks for authors. The two-layer model (functional vs deep quality)
 is in [Documentation quality](documentation-quality.md).
 
-1. **One primary reader job per ordinary document.** When a maintained pattern
-   calls for several coordinated parts, keep each job recognizable so readers
+1. **One primary reader job per ordinary document.** When a document
+   needs several coordinated parts, keep each job recognizable so readers
    know whether they are learning, doing, looking up, or understanding.
 2. **Match form to job.** Steps belong in tutorials and how-tos; exhaustive
    inventories in reference; discussion and rationale in explanation.
@@ -188,55 +199,49 @@ Each form has affinity with its neighbours; blur is common:
 
 Worst case: tutorials and how-tos fully collapse, so neither study nor work
 is served. Keep the compass and the hard-boundary sections on
-each explainer when form starts to slip.
+each pattern description when form starts to slip.
 
-## Explainers, guides, principles, and patterns
+## Other named documents
 
-The four Diátaxis forms classify the **reader job of the documentation being
-created**. This bundle distinguishes four forms of **reusable guidance**:
+The collection also includes designs for more specific purposes that may
+combine several reader needs:
 
-| Guidance form | Reader asks | Characteristic content |
-| --- | --- | --- |
-| Explainer | *What is this, why does it matter, and where are its boundaries?* | Concepts, context, relationships, and distinctions |
-| Guide | *How do I create, revise, or maintain it?* | Goal-oriented authoring or remediation process |
-| Principle | *What durable direction should guide this class of decisions, and why?* | Recognized good, normative direction, warrant, scope, tensions, judgment cases, and enactments |
-| Pattern description | *This recurring problem is present — what established solution fits, and what will it cost?* | Context, forces, constructive solution, consequences, evidence, and relationships |
+- A [Principle document](../patterns/principle.md) articulates a recognized good
+  and gives sourced direction for judgment, with scope and limits. The pattern
+  describes the document design; the principle is the direction it communicates.
+- A [playbook](../patterns/playbook.md) supports assessment, response selection,
+  and coordination as a situation develops.
+- A [runbook](../patterns/runbook.md) supports repeatable execution of a bounded
+  operational task, including verification and recovery.
 
-An explainer and guide often form a useful pair: understanding stays separate
-from action while each links directly to the other. Not every subject needs
-both. A principle is warranted when a sourced, action-directing claim gives
-durable orientation to judgment in service of a recognized good. An established
-pattern claim is warranted when recurrence and evidence support a conditional
-reusable solution; an unconfirmed proposal needs an explicit candidate label.
-Neither form is a decorated guide or a synonym for best practice.
+A [practice](practice.md) is the activity documentation supports, not another
+document type. A [standard](standard.md) supplies a recognized basis for
+judgment or coordination; documenting it does not by itself establish authority.
 
-A [practice](practice.md) is not a fifth reusable-guidance form. It is the
-socially sustained, embodied, equipped, purposive, and normative reality in
-which people acquire and apply skill. Documentation can articulate parts of a
-practice and support participation without containing the whole practice or
-replacing formation and judgment.
+## Select and combine patterns
 
-A [standard](standard.md) is likewise not another reader need or guidance form.
-It establishes a recognized basis for judgment or coordination. A standards
-document commonly uses reference-like presentation for its normative
-provisions, while separate guides and explanations support implementation and
-understanding.
+Consider documentation for a service that accepts requests and sometimes needs
+recovery. This illustrative sequence shows complementary choices, not a required
+set of pages:
 
-Patterns may prescribe named artifacts. [Runbook](../patterns/runbook.md)
-supports repeatable execution of a bounded operational task;
-[Playbook](../patterns/playbook.md) guides assessment and judgment in choosing,
-combining, and adapting responses to a situation. The produced runbook or
-playbook is a realization of the pattern, not a reason to maintain another
-competing taxonomy.
+1. A **tutorial** gives a new practitioner a safe first request and visible
+   result. Link to **reference** for the exact request fields.
+2. An **explanation** connects retries, failures, and duplicate effects. A
+   **principle document** can communicate the warranted direction that governs
+   choices where those concerns conflict.
+3. A **how-to guide** helps a competent practitioner configure the service for
+   a real goal, drawing on the same reference.
+4. A **playbook** guides assessment when errors rise. If rollback is selected,
+   a **runbook** supplies its bounded execution, verification, and recovery.
 
-A principle or pattern is not another Diátaxis reader need. Their descriptions
-combine reader jobs while making different reusable claims. [Principle
-explainer](principle.md) defines action-directing normative guidance, and
-[Principle guide](../guides/principle.md) supplies its authoring workflow.
-[Pattern explainer](pattern.md) distinguishes recurring solutions from their
-descriptions; [Pattern guide](../guides/pattern.md) supplies the mining and
-authoring workflow; the [pattern library](../patterns/) contains actual
-entries.
+Start with the actual problem, choose only the patterns it needs, and follow
+their relationships when another reader need emerges. Pattern descriptions
+help authors make those choices; they do not require every resulting document
+to reproduce the description's headings.
+
+The docs bundle maintainer owns this collection with the rest of the bundle.
+Apply the [collection maintenance guidance](../patterns/pattern-collection.md#author-and-maintain-the-collection)
+to proposed changes, and record revisions and retirements in the bundle log.
 
 ## What this bundle does not define
 
@@ -257,17 +262,8 @@ improvements over empty form shells — see
 
 ## Related
 
+- [Documentation pattern collection](../patterns/index.md)
 - [Documentation craft guide](../guides/documentation-craft.md)
-- [Documentation workflow](documentation-workflow.md) · [Documentation workflow guide](../guides/documentation-workflow.md)
-- [Documentation organization and discovery](documentation-organization-and-discovery.md) · [Organizing and naming documentation](../guides/organizing-and-naming-documentation.md)
 - [Documentation quality](documentation-quality.md)
-- [Practice](practice.md)
-- [Standard](standard.md)
-- [Tutorial explainer](tutorial.md) · [Tutorial guide](../guides/tutorial.md)
-- [How-to explainer](how-to.md) · [How-to guide](../guides/how-to.md)
-- [Reference explainer](reference.md) · [Reference guide](../guides/reference.md)
-- [Explanation explainer](explanation.md) · [Explanation guide](../guides/explanation.md)
-- [Principle explainer](principle.md) · [Principle guide](../guides/principle.md)
-- [Pattern explainer](pattern.md) · [Pattern guide](../guides/pattern.md)
-- [Pattern library](../patterns/pattern-library.md)
-- [Playbook](../patterns/playbook.md) · [Runbook](../patterns/runbook.md)
+- [Documentation audits](documentation-audits.md)
+- [Documentation organization and discovery](documentation-organization-and-discovery.md)

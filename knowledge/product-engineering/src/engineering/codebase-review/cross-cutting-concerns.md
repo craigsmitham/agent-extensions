@@ -35,7 +35,7 @@ sources:
   - id: dependability
     resource: https://www.landwehr.org/2004-aviz-laprie-randell.pdf
     title: Basic Concepts and Taxonomy of Dependable and Secure Computing
-generated: { by: claude/opus-5, at: 2026-09-08T00:00:00Z }
+generated: { by: "codex/gpt-6", at: "2026-11-11T16:50:52Z" }
 ---
 
 # Cross-cutting concerns for software quality
@@ -133,7 +133,7 @@ state and effects; representation choices; concurrency boundaries; and
 justified complexity.
 
 **Excludes:** the product-level outcomes of intelligibility and evolvability,
-prescriptive pattern catalogs, and uncalibrated proxies such as file length or
+prescriptive pattern collections, and uncalibrated proxies such as file length or
 number of abstractions.
 
 ### `XC-04` — Lifecycle integrity

@@ -1,5 +1,9 @@
 # Product engineering update log
 
+## 2026-11-11
+
+- **Terminology**: Use pattern collections in the design-quality exclusions in [Cross-cutting concerns for software quality](engineering/codebase-review/cross-cutting-concerns.md).
+
 ## 2026-09-16
 
 - **Correction**: Revised [Drucker's five most important questions](foundations/drucker-five-questions.md) after checking it against Drucker Institute readings. Replaced the business results of sales, profit, and market share, which the Audio-Tech summary takes from a co-author's essay, with Drucker's own account of results as existing only outside the organization. Added his insistence on one primary customer and the full list of supporting customers, made clear that the customer distinction does not depend on use, and mapped the plan question to strategy as well as scope, marking that mapping as an interpretation, as the system-spec skill's `business/` folder now uses it.

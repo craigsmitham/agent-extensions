@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "docs",
-  "version": "0.4.1",
-  "description": "Create, review, organize, audit, and remediate repository documentation using portable craft, principles, and reusable patterns",
+  "version": "0.5.0",
+  "description": "Author, review, organize, audit, and maintain documentation, pattern descriptions, and pattern collections",
   "keywords": [
     "docs",
     "documentation",
@@ -19,7 +19,12 @@
     "remediation",
     "diataxis",
     "principles",
-    "patterns"
+    "documentation-patterns",
+    "pattern-collection",
+    "pattern-description",
+    "pattern-mining",
+    "pattern-review",
+    "pattern-language"
   ],
   "recommendedPacks": [
     "@craigsmitham/packs/docs"

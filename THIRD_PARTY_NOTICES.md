@@ -11,6 +11,45 @@ under the Creative Commons Attribution-ShareAlike 4.0 International license.
 The package concept files identify their specific sources and indicate that the
 material has been reorganized, summarized, and adapted for agent use.
 
+## Pattern descriptions and collections
+
+The `docs` knowledge bundle summarizes and adapts guidance from these works,
+each published under Creative Commons Attribution-ShareAlike 4.0 International:
+
+- Rebecca Wirfs-Brock and Christian Kohls,
+  [Elephants, Patterns, and Heuristics](https://wirfs-brock.com/rebecca/papers/ElephantsPatternsAndHeuristics/)
+  (2019, revised 2021).
+- Lise B. Hvatum and Rebecca Wirfs-Brock,
+  [Exploring the Generative Nature of Patterns](https://wirfs-brock.com/rebecca/papers/explrgenpat2023/)
+  (2023).
+- Rebecca Wirfs-Brock and Lise Hvatum,
+  [Who Will Read My Patterns?](https://wirfs-brock.com/rebecca/papers/whowillread/)
+  (2019, revised 2021).
+- Lise B. Hvatum and Rebecca Wirfs-Brock,
+  [Pattern Stories and Sequences for the Backlog](https://wirfs-brock.com/rebecca/papers/magicbacklog2017/)
+  (2017).
+
+The bundle reorganizes these ideas into documentation patterns, authoring and
+review guidance, and original synthetic examples. The adapted guidance and
+the existing docs package family retain `CC-BY-SA-4.0`; concept provenance
+identifies the sources and bounds the claims attributed to them.
+
+The bundle also discusses Alistair Cockburn's
+[2023 PLoP talk](https://alistaircockburn.com/Talk%202023-10%20PLOP%2030%20yrs%20patterns.pdf),
+Wirfs-Brock and Christian Kohls's
+[Pattern Smells, Get Rid of Them](https://wirfs-brock.com/rebecca/papers/patternsmells/),
+Kohls and Wirfs-Brock's
+[Constructive Feedback Using Pattern Smells](https://wirfs-brock.com/rebecca/papers/constructivefeedback/),
+and Wirfs-Brock and Lise Hvatum's
+[The Value of Pattern Collections](https://wirfs-brock.com/rebecca/papers/valueofpatterncollections/).
+The latter three are identified as 2026 preprints. These sources are cited in
+original explanatory prose; their slides, figures, full texts, and templates
+are not reproduced or vendored. Their source rights are not relicensed by
+this repository. Chris Richardson's Microservices.io and Gregor Hohpe and
+Bobby Woolf's Enterprise Integration Patterns are credited as observed
+documentation examples, without reproducing their descriptions. The source
+review for these pattern entries was refreshed on 2026-11-11.
+
 ## Open Knowledge Format
 
 `skills/okf/src/references/SPEC.md` is a vendored copy of the

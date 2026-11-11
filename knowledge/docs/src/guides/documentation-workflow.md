@@ -14,9 +14,7 @@ sources:
   - id: diataxis-start
     resource: https://diataxis.fr/start-here/
     title: Diátaxis — Start here
-generated:
-  by: codex/gpt-5.6
-  at: 2026-08-26T14:02:36Z
+generated: { by: "codex/gpt-6", at: "2026-11-11T16:59:49Z" }
 ---
 
 # Documentation workflow guide
@@ -90,7 +88,7 @@ waiting for a full restructure or inventing empty form folders.
 - [Documentation craft guide](documentation-craft.md)
 - [Documentation organization and discovery](../explainers/documentation-organization-and-discovery.md) · [Organizing and naming documentation](organizing-and-naming-documentation.md)
 - [Documentation quality](../explainers/documentation-quality.md)
-- [Tutorial guide](tutorial.md)
-- [How-to guide](how-to.md)
-- [Reference guide](reference.md)
-- [Explanation guide](explanation.md)
+- [Tutorial](../patterns/tutorial.md)
+- [How-to guide](../patterns/how-to.md)
+- [Reference](../patterns/reference.md)
+- [Explanation](../patterns/explanation.md)
