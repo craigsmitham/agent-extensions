@@ -53,7 +53,7 @@ remain members of the published packs.
 | [`improve`](./skills/improve/README.md) | Improve a codebase or a specified part with evidence-backed gains in fitness for its intended purpose. | `axm install @craigsmitham/skills/improve` |
 | [`prune`](./skills/prune/README.md) | Prune a codebase or a specified part by removing unnecessary elements and their associated maintenance burden. | `axm install @craigsmitham/skills/prune` |
 | `temporal-dates` | JavaScript Temporal type selection, API usage, interoperability, and pitfalls | `axm install @craigsmitham/skills/temporal-dates` |
-| `okf` | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/okf` |
+| [`okf`](./skills/okf/README.md) | Author and validate Open Knowledge Format v0.2 bundles | `axm install @craigsmitham/skills/okf` |
 | `devops-docs` | Set up, discover, author, and maintain engineering and operations documentation | `axm install @craigsmitham/skills/devops-docs` |
 | `improve-whatever` | Evidence-based evaluation through the lens of Philippians 4:8–9 | `axm install @craigsmitham/skills/improve-whatever` |
 | `spot-spew` | Finds opportunities to release engineering capacity through elimination, capability substitution, idiomatic simplification, and consolidation that reduce total maintenance burden while preserving live obligations and domain meaning | `axm install @craigsmitham/skills/spot-spew` |
