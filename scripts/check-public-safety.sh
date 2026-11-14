@@ -66,10 +66,11 @@ assert_sync_converged() {
     return 1
   fi
 
+  # AXM reports the operation outcome on the result envelope, not inside `.result`.
   if ! jq -e '
     select(
       .ok == true and
-      (.result.outcome == "previewed" or .result.outcome == "no-op") and
+      (.outcome == "previewed" or .outcome == "no-op") and
       .result.counts.failed == 0 and
       .result.counts.blocked == 0
     )
