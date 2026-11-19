@@ -13,12 +13,12 @@ tree = "sha256-tree-v2:eac9a3e6889959845d50a5a106de1e3d835bd12510fa24fd3db64e329
 [[package]]
 id = "registry.agentxm.ai/@agentxm/packs/axe"
 source = { registry = "https://registry.agentxm.ai" }
-version = "0.3.0"
-archive = "sha512-9ZCxd2XbPCV+pJGYEsnX0mW2iw1HDZNGw31i7EYCN0q14k2kGfsFLjwmD6vdNXv5pR1cgaz8W8LrL5PjzWtI+A=="
+version = "0.3.1"
+archive = "sha512-Pz+ShVVvCa2nfX6HW/PxW3a3qLHW/fSa5/xBlCnOWC6OhPzz270S7Qa/Vg85ZwxpFaaEuQotIvwygZvAuyrnag=="
 publisher = "hbnd_01ks5vvdf0efz9m4w5qsv4q5qp"
-tree = "sha256-tree-v2:ac5f6774a1e9323f90bcdbc4c58c9ec57343c82d82212e499199747cec40e6c6"
-manifest-version = "0.3.0"
-manifest-identity = "8dbfec58fb11b63be21acd92f3e321306bbe9be27db06779db1436c0c838060a"
+tree = "sha256-tree-v2:d6414c52ea30931ecbabd6e567608f05493af6f2cbe3ddc20bcdd7c63334a1b2"
+manifest-version = "0.3.1"
+manifest-identity = "04d19f19ef39cc7fe160b54fca9736998a51156f3d0e6d41a49f0cf33f2f71fe"
 dependencies = [
   { name = "@agentxm/knowledge/axe", range = "0.3.0" },
   { name = "@agentxm/skills/axe", range = "0.3.0" },
