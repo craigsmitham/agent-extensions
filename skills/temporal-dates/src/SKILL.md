@@ -38,28 +38,31 @@ explain that consistent JSON strings do not require identical in-memory types.
 
 ## Establish the Temporal runtime
 
-After Temporal is selected, check support once per project and write code that
-matches the actual runtime:
+Identify the runtime and version each deployment supports from its runtime pin,
+deployment configuration, or browser support policy. Run the matching probe
+in that environment, using the supported version. For example:
 
-```bash
-# Node / Bun / Deno — is it a global here?
-node -e "console.log(typeof Temporal)"
-
-# Is a polyfill already a dependency?
-rg -n "temporal-polyfill|@js-temporal/polyfill" package.json
-
-# Does this ship to browsers, and which?
-rg -n "browserslist|\"engines\"" package.json
+```sh
+node -e 'console.log(typeof globalThis.Temporal)'
+bun -e 'console.log(typeof globalThis.Temporal)'
+deno eval 'console.log(typeof globalThis.Temporal)'
 ```
 
-- **`"object"` and no browser target** → use the `Temporal` global, no import.
-- **`"undefined"`, or a browserslist that includes anything not yet shipping Temporal** → the project needs a polyfill. Prefer `temporal-polyfill` (smaller, actively maintained); `@js-temporal/polyfill` is the champions' reference implementation. Add the import at the top of files that use it:
-  ```js
-  import { Temporal } from 'temporal-polyfill';
-  ```
-- If a polyfill is already present, **match the existing import style** rather than introducing the global.
+For browser code, evaluate `typeof globalThis.Temporal` in the supported
+browsers. For shared code, check each target that runs it, including the
+oldest supported versions. A missing local executable leaves that target
+unverified. Use its deployment image or CI environment to check it.
 
-Every example below uses bare `Temporal.*`. Add the import line if the project needs it.
+Keep an existing polyfill and its import convention when the project already
+uses one. Use the native global when every target supports the APIs the code
+needs. If a supported target lacks Temporal, supply the polyfill to the code
+that runs there. For example:
+
+```js
+import { Temporal } from 'temporal-polyfill';
+```
+
+The examples below use `Temporal.*` with either binding.
 
 ## Pick the type
 

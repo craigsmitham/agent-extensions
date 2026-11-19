@@ -1,10 +1,14 @@
 # Release engineering
 
-Release preparation, packaging, distribution, deployment, and rollout. Placeholder bundle; no domain guidance has been authored.
+This placeholder reserves space for guidance on release preparation, packaging, distribution, deployment, and rollout. It currently contains only a scope notice.
 
-0 existing concepts and extracted passages. The `release-engineering` pack also includes a placeholder skill.
+Install the [release-engineering pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/release-engineering) to get this bundle and its companion placeholder skill.
 
-Cross-discipline companion readings are optional; they are identified by bundle and concept identity. Resolve installed concepts with `axm knowledge concepts get`.
+```sh
+axm install @craigsmitham/packs/release-engineering
+```
+
+See the [placeholder notice](src/placeholder.md) for the current scope.
 
 ## License
 

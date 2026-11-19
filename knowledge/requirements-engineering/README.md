@@ -1,10 +1,22 @@
 # Requirements engineering
 
-Requirements development, specification, review, and maintenance; migrated existing knowledge.
+Requirements development, specification, review, and maintenance.
 
-13 concepts. The `requirements-engineering` pack also includes a placeholder skill.
+Install the [requirements-engineering pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/requirements-engineering) to get this bundle and its companion placeholder skill.
 
-Cross-discipline companion readings are optional; they are identified by bundle and concept identity. Resolve installed concepts with `axm knowledge concepts get`.
+```sh
+axm install @craigsmitham/packs/requirements-engineering
+```
+
+Before accepting a requirement, use the individual review checklist to check its authority, meaning, and assessment basis.
+
+```sh
+axm knowledge concepts get '@craigsmitham/knowledge/requirements-engineering#review/reviewing-individual-requirements'
+```
+
+Browse the [bundle index](src/index.md) for all 13 concepts.
+
+Optional readings identify the companion bundle and concept to look up.
 
 ## License
 

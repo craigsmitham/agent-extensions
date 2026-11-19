@@ -1,10 +1,22 @@
 # Business analysis
 
-Business context, strategy, customer progress, and service modeling; migrated existing knowledge.
+Business context, strategy, customer progress, and service modeling.
 
-10 existing concepts and extracted passages. The `business-analysis` pack also includes a placeholder skill.
+Install the [business-analysis pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/business-analysis) to get this bundle and its companion placeholder skill.
 
-Cross-discipline companion readings are optional; they are identified by bundle and concept identity. Resolve installed concepts with `axm knowledge concepts get`.
+```sh
+axm install @craigsmitham/packs/business-analysis
+```
+
+To trace a customer handoff, open the service blueprinting explanation. It connects visible touchpoints to the people and processes behind them.
+
+```sh
+axm knowledge concepts get '@craigsmitham/knowledge/business-analysis#foundations/service-blueprinting'
+```
+
+Browse the [bundle index](src/index.md) for all ten concepts and extracted passages.
+
+Optional readings identify the companion bundle and concept to look up.
 
 ## License
 

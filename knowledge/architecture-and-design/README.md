@@ -1,10 +1,22 @@
 # Architecture and design
 
-Software architecture, domain modeling, and design; migrated existing knowledge.
+Software architecture, domain modeling, and design.
 
-3 existing concepts and extracted passages. The `architecture-and-design` pack also includes a placeholder skill.
+Install the [architecture-and-design pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/architecture-and-design) to get this bundle and its companion placeholder skill.
 
-Cross-discipline companion readings are optional; they are identified by bundle and concept identity. Resolve installed concepts with `axm knowledge concepts get`.
+```sh
+axm install @craigsmitham/packs/architecture-and-design
+```
+
+When two teams use the same term differently, read how bounded contexts connect the language of each team to its model.
+
+```sh
+axm knowledge concepts get '@craigsmitham/knowledge/architecture-and-design#foundations/domain-driven-design'
+```
+
+Browse the [bundle index](src/index.md) for all three concepts and extracted passages.
+
+Optional readings identify the companion bundle and concept to look up.
 
 ## License
 

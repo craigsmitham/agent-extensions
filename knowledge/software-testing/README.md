@@ -2,9 +2,21 @@
 
 Test design, executable specifications, execution, evidence, suite quality, and defect reporting.
 
-7 concepts, including a [testing pattern collection](src/patterns/index.md) covering executable specifications, evidence-matched test worlds, and owned test worlds. The `software-testing` pack also includes a placeholder skill.
+Install the [software-testing pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/software-testing) to get this bundle and its companion placeholder skill.
 
-Cross-discipline companion readings are optional; they are identified by bundle and concept identity. Resolve installed concepts with `axm knowledge concepts get`.
+```sh
+axm install @craigsmitham/packs/software-testing
+```
+
+When deciding which dependencies a test can substitute, open this pattern to identify which failures the test must still distinguish.
+
+```sh
+axm knowledge concepts get '@craigsmitham/knowledge/software-testing#patterns/evidence-matched-test-world'
+```
+
+The [bundle index](src/index.md) covers seven concepts, including a [testing pattern collection](src/patterns/index.md) on executable specifications, evidence-matched test worlds, and owned test worlds.
+
+Optional readings identify the companion bundle and concept to look up.
 
 ## License
 

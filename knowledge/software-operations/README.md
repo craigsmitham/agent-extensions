@@ -1,10 +1,22 @@
 # Software operations
 
-Software operation, service reliability, incident response, and recovery; migrated existing knowledge.
+Software operation, service reliability, incident response, and recovery.
 
-2 concepts. The `software-operations` pack also includes a placeholder skill.
+Install the [software-operations pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/software-operations) to get this bundle and its companion placeholder skill.
 
-Cross-discipline companion readings are optional; they are identified by bundle and concept identity. Resolve installed concepts with `axm knowledge concepts get`.
+```sh
+axm install @craigsmitham/packs/software-operations
+```
+
+When recording an ongoing incident, open the incident record template to put current impact and response coordination ahead of the chronology.
+
+```sh
+axm knowledge concepts get '@craigsmitham/knowledge/software-operations#incidents/operational-incident-template'
+```
+
+Browse the [bundle index](src/index.md) for both concepts.
+
+Optional readings identify the companion bundle and concept to look up.
 
 ## License
 

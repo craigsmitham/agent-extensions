@@ -1,5 +1,9 @@
 # Log
 
+## 2026-11-18
+
+- Removed the empty Foundations index. The bundle index links directly to the placeholder notice.
+
 ## 2026-11-11
 
 - **Organization:** Established `foundations/` for discipline explainers; no new domain guidance added.

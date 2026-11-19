@@ -1,10 +1,22 @@
 # Project management
 
-Project capabilities, plans, commitments, resources, and progress; migrated existing knowledge.
+Project capabilities, plans, commitments, resources, and progress.
 
-2 existing concepts and extracted passages. The `project-management` pack also includes a placeholder skill.
+Install the [project-management pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/project-management) to get this bundle and its companion placeholder skill.
 
-Cross-discipline companion readings are optional; they are identified by bundle and concept identity. Resolve installed concepts with `axm knowledge concepts get`.
+```sh
+axm install @craigsmitham/packs/project-management
+```
+
+When a team has six weeks to invest in a proposed change, read how Shape Up uses appetite to shape the scope of a bet.
+
+```sh
+axm knowledge concepts get '@craigsmitham/knowledge/project-management#foundations/shape-up'
+```
+
+Browse the [bundle index](src/index.md) for both concepts and their extracted passages.
+
+Optional readings identify the companion bundle and concept to look up.
 
 ## License
 
