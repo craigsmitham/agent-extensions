@@ -82,23 +82,20 @@ Scale the response to the request. Usually provide:
    a remedy aimed outside the declared scope belongs in a closing note, not
    in Improvements.
 
-   - Open by noting that items are independent, not sequential, and that
-     letters are alternative remedies.
-   - Under each item, letter options differing in approach, scope, or
-     ambition; include a keep-as-is option that accepts the defect when
-     reasonable. Write options as nested bullets styled as in the example
-     (markdown does not treat letters as list markers, so bare lettered
-     lines lose their indentation), and mark exactly one option per item
-     as `Recommended:`.
-   - Keep-as-is options belong in Improvements, never in Praiseworthy:
-     Praiseworthy names strengths, while keep-as-is accepts a defect.
-     Propose preservation only when it needs a concrete step.
-   - Close by inviting a reply naming items or options (e.g., "do 1 and 3c").
+   - If one remedy depends on another, name the prerequisite and what happens
+     if the caller selects the remedy alone.
+   - Give a single remedy directly. When alternatives have materially
+     different consequences, letter them under the finding, explain the
+     tradeoff, and mark the recommended option. Keeping the subject as it is
+     can be an option when the caller has reason to accept the defect.
+   - Invite a reply by finding or option. For example, “do 1 and 3b” selects
+     the recommendation for finding 1 and the displayed alternative 3b.
 
    ```
-   1. **Redundant phrasing** (Pure — intro repeats the summary):
-      - **a. Recommended:** *Tighten* — cut redundant clauses to half length.
-      - **b.** *Keep as-is* — accept the repetition as emphasis.
+   1. **Missing prerequisite** (True) — Add the required tool version to Setup.
+   2. **Quickstart fails on a fresh machine** (Excellent)
+      - **a. Recommended** — Link to Setup. This depends on finding 1 so readers get the version they need.
+      - **b.** Give the version in the quickstart. It works on its own but creates a second place to maintain it once Setup is corrected.
    ```
 6. **Overall judgment** — a concise account of the whole, including confidence
    and the most important tradeoff.
