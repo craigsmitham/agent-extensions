@@ -101,7 +101,8 @@
     "release-engineering": "workspace",
     "software-operations": "workspace",
     "project-management": "workspace",
-    "software-maintenance": "workspace"
+    "software-maintenance": "workspace",
+    "axe": "agentxm:@agentxm/packs/axe"
   },
   "owner": "@craigsmitham"
 }

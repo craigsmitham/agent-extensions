@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "subagent",
   "name": "researcher",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Executes one bounded Research Brief framing or evidence-gathering phase in a fresh, read-only delegated context for the Research skill.",
   "keywords": [
     "research",

@@ -1,8 +1,8 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "4.0.0",
-  "description": "Aggregate of seven software-engineering discipline packs\u2019 members: migrated knowledge, and placeholder skills.",
+  "version": "4.0.1",
+  "description": "Aggregate of seven software-engineering discipline packs’ members: migrated knowledge, and placeholder skills.",
   "keywords": [
     "software-engineering",
     "disciplines",

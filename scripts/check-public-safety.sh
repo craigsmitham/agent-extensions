@@ -279,7 +279,8 @@ if jq -e --argjson expected_count "${#expected[@]}" '
       ((.source | startswith("agentxm:@agentxm/skills/axm")) or
        .source == "bundled")) or
     (.type == "packs" and
-      (.key == "agent-engineering" or
+      (.key == "axe" or
+       .key == "agent-engineering" or
        .key == "context-engineering" or
        .key == "harness-engineering" or
        .key == "skill-engineering") and

@@ -8,6 +8,12 @@
 
 Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 
+### @agentxm
+
+| Bundle | Description |
+| --- | --- |
+| [axe](agent_extensions/registry.agentxm.ai/@agentxm/knowledge/axe/src/index.md) | Design and maintain skills, instructions, knowledge, agent definitions, hooks, MCP connections, and packs, and manage the workspaces that supply them |
+
 ### @craigsmitham
 
 | Bundle | Description |
