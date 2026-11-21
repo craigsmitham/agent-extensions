@@ -13,7 +13,7 @@ sources:
   title: Degani and Wiener — Human Factors of Flight-Deck Checklists
 generated:
   by: codex/gpt-6
-  at: '2026-11-11T17:40:43Z'
+  at: '2026-11-21T22:50:25Z'
 ---
 
 # Execution checklist
@@ -34,23 +34,10 @@ by step and distinguishes it from checking an already configured system.
 That distinction informs this pattern; it does not establish that cockpit
 procedures transfer unchanged to another practice.[^nasa-checklists]
 
-## How to write it
-
-- Name the applicable task, entry condition, required competence, and finish.
-- Put an actionable prompt where the action belongs in the workflow. Preserve
-  actual dependencies; make independent items recognizable when order can vary.
-- Define what counts as completing an item and who acts when roles differ.
-- Group around natural pauses and handoffs. Show the current or incomplete
-  item and how to re-establish state after interruption.
-- Give a bounded response for an impossible or failed action. Link to the
-  procedure that owns detailed recovery and exceptional branches.
-- Keep explanations and exact procedural detail available where needed
-  without reproducing a complete manual inside every prompt.
-
-Use the shared [Checklist](checklist.md) guidance for evidence, accessibility,
-validation, and maintenance. Prompting an action is not independent verification
-that it happened correctly. Add a separately identified
-[verification check](verification-checklist.md) when that is needed.
+[How an execution checklist helps work resume](../explainers/execution-checklist.md)
+explores placekeeping under interruption. To develop an aid for a particular
+sequence and rehearse the handoff, follow
+[How to design an execution checklist](../guides/designing-an-execution-checklist.md).
 
 ## Applicability and tradeoffs
 

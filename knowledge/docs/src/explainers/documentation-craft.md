@@ -9,7 +9,7 @@ tags:
 - diataxis
 - explainer
 status: stable
-generated: { by: codex/gpt-6, at: 2026-11-11T19:48:50Z }
+generated: { by: codex/gpt-6, at: 2026-11-21T22:46:07Z }
 sources:
 - id: diataxis
   resource: https://diataxis.fr/
@@ -58,18 +58,13 @@ and validators; those local rules win when they exist.
 Choose documentation by what the reader needs to do: learn, complete a task,
 look up facts, or understand a subject. Diátaxis supplies these four reader
 needs. The [Documentation pattern collection](../patterns/index.md) describes
-reusable document designs for these and more specific situations. Each pattern
-connects a recurring reader problem to a design response, with applicability,
-tradeoffs, evidence, and detailed authoring guidance. A particular tutorial or
-runbook is an instance of the design described by its pattern.
-
-For documenting patterns in any design domain, use
-[Pattern description](../patterns/pattern-description.md) for the concepts,
-evidence, authoring, and review of an individual description, and
-[Pattern collection](../patterns/pattern-collection.md) for curation and
-maintenance. These two entries own the general pattern guidance used throughout
-the bundle, including the distinction between a collection and a language.
-Draft entries identify where their formulations still need evidence from use.
+reusable document designs for these and more specific situations. Use a pattern to judge how well a design fits the
+situation. For example, a runbook gives an operator a bounded, repeatable
+procedure. Someone writing that runbook needs to work through the decisions
+that make the directions usable during an incident. The
+[authoring guides](../guides/index.md) serve that second reader. A third
+reader might want to understand why an operator reaches for a runbook in
+the first place. The [explainers](index.md) take up questions of that kind.
 
 “Explainer” is another name for an explanation document. “Guide” can be an
 umbrella term; use **how-to guide** when specifically referring to directions
@@ -202,8 +197,7 @@ Each form has affinity with its neighbours; blur is common:
 | Serve acquisition of skill | tutorial ↔ explanation |
 
 Worst case: tutorials and how-tos fully collapse, so neither study nor work
-is served. Keep the compass and the hard-boundary sections on
-each pattern description when form starts to slip.
+is served. Return to the reader’s immediate purpose when the form of a draft starts to slip.
 
 ## Other named documents
 
@@ -252,7 +246,7 @@ help authors make those choices; they do not require every resulting document
 to reproduce the description's headings.
 
 The docs bundle maintainer owns this collection with the rest of the bundle.
-Apply the [collection maintenance guidance](../patterns/pattern-collection.md#author-and-maintain-the-collection)
+Apply the [collection maintenance guidance](../guides/curating-a-pattern-collection.md)
 to proposed changes, and record revisions and retirements in the bundle log.
 
 ## What this bundle does not define

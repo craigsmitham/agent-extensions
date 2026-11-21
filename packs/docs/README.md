@@ -4,9 +4,8 @@ Practical guidance for writing, reviewing, organizing, and maintaining useful
 documentation. Its pattern collection covers tutorials, how-to guides,
 reference, explanation, principle documents, playbooks, runbooks, checklists,
 pattern descriptions, and pattern collections. Checklist specializations cover
-execution, verification, readiness, reporting and review, and learning. Each
-pattern connects a recurring reader problem to a design response, with
-applicability, tradeoffs, evidence, and detailed authoring guidance.
+execution, verification, readiness, reporting and review, and learning. Each form has a
+standalone explainer, authoring guide, and design pattern.
 
 The four general reader needs draw on [Diátaxis](https://diataxis.fr/).
 Pattern concepts, mining, description, review, and collection maintenance draw
@@ -43,27 +42,19 @@ links, or audit a bounded documentation corpus. Search the knowledge with
 `axm knowledge concepts query` or open a concept by identity with
 `axm knowledge concepts get`.
 
-For checklist work, start with the shared pattern, then select its purpose:
-
-```bash
-axm knowledge concepts get '@craigsmitham/knowledge/docs#patterns/checklist'
-```
-
-The guidance includes use protocols, evidence, validation plans, and lifecycle.
-Writing or reviewing a checklist does not establish its real-world effectiveness.
-
 For example, ask the skill to “Draft a release-readiness checklist from our
-release procedure” and supply that procedure. The skill uses the bundle's
-readiness pattern to turn the procedure's release conditions into checks with
-observable evidence and a decision about whether to proceed.
+release procedure” and supply that procedure. It opens the authoring guide
+for turning release conditions into evidence and a decision. To explore why
+the form works or judge its fit, use the companion explainer or pattern.
 
-Start with the reader's problem and choose a suitable pattern. Adapt its design
-and authoring guidance to the document's job. For an example of selecting and
-combining patterns, open the Documentation craft concept:
-
-```bash
-axm knowledge concepts get '@craigsmitham/knowledge/docs#explainers/documentation-craft'
+```sh
+axm knowledge concepts get '@craigsmitham/knowledge/docs#guides/designing-a-readiness-checklist'
+axm knowledge concepts get '@craigsmitham/knowledge/docs#explainers/readiness-checklist'
+axm knowledge concepts get '@craigsmitham/knowledge/docs#patterns/readiness-checklist'
 ```
+
+For situations that span several reader needs, [Documentation craft](../../knowledge/docs/src/explainers/documentation-craft.md)
+illustrates how to select and combine designs.
 
 ## Checklist consolidation in 0.9.0
 

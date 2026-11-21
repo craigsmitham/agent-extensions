@@ -2,6 +2,38 @@
 
 ## 2026-11-21
 
+- Established separate understanding, authoring, and design-selection routes
+  for explanation and how-to. The existing pattern paths now lead writers
+  to the guides. The [explainer-writing guide](guides/writing-an-explainer.md)
+  carries the concept-mapping decision into the worked example.
+- Added standalone tutorial and reference explainers and guides. The
+  [tutorial guide](guides/writing-a-tutorial.md) rehearses a first lesson
+  and a variation. The [reference guide](guides/writing-reference-documentation.md)
+  checks an entry against a real lookup.
+- Added companions for principle documents, playbooks, and runbooks. The
+  [principle guide](guides/writing-a-principle-document.md) distinguishes
+  standing policy from a proposed direction. The [playbook](guides/writing-a-playbook.md)
+  and [runbook](guides/writing-a-runbook.md) guides develop a choice of
+  responses and the execution of a selected procedure respectively.
+
+- Added explainers and authoring guides for [describing patterns](guides/writing-a-pattern-description.md)
+  and [curating collections](guides/curating-a-pattern-collection.md). The
+  patterns retain the evidence for selecting these designs.
+- Established a [shared checklist design guide](guides/designing-a-checklist.md)
+  and companion pages for execution, verification, readiness, reporting and
+  review, and learning. The guides address interruption, discrepancy,
+  decision authority, coverage, and later independent use respectively.
+- Tried each of the 15 authoring routes on a brief and reviewed the resulting
+  documents. The same dispatch brief produced a usable handoff guide with
+  both the former pattern route and the authoring guide. A photo-loan brief
+  exposed an extra permission requirement in a principle document. After a
+  guide revision, the replay preserved the committee’s actual conditions.
+  A release-verification replay brought the candidate checklist’s owner,
+  trial cases, and review trigger into the maintainer note. These were
+  authoring trials and document reviews. Reader outcomes remain open.
+
+- Added [How to write a how-to guide](guides/writing-a-how-to-guide.md), following a concert volunteer’s request from the first draft through checking a folded program. The docs skill now routes how-to authoring to this guide.
+
 - Added [How to write an explainer](guides/writing-an-explainer.md), a drafting and revision guide that works through a reader’s question about booklet printing.
 
 - Added [How-to guides and the work they serve](explainers/how-to.md), a draft exploring Diátaxis’s account of practical directions through the example of printing a concert program.

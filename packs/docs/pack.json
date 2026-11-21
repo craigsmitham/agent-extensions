@@ -2,7 +2,7 @@
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
   "version": "0.9.1",
-  "description": "Documentation and checklist patterns, pattern authoring, organization, and audit guidance",
+  "description": "Explainers, authoring guides, and design patterns for documentation and checklists, with guidance for organization and audits",
   "keywords": [
     "docs",
     "documentation",

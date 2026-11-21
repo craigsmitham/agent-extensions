@@ -46,16 +46,6 @@ during an incident. The reader has the required skills but may be unfamiliar
 with this procedure. Accurate execution matters regardless of whether the work
 is urgent.
 
-## What it helps readers do
-
-How can any qualified practitioner complete the task consistently without
-relying on the original author's memory or filling gaps during execution?
-
-A list of actions can omit applicability, expected results, and handling for
-exceptions. Those omissions make it difficult to know whether to proceed,
-recover, or stop. The procedure needs to make those decisions explicit enough
-to execute and verify.
-
 ## Design tradeoffs
 
 - **Efficiency versus safety** — readers need to finish promptly while checking
@@ -69,46 +59,8 @@ to execute and verify.
 - **Current accuracy versus maintenance cost** — system changes can make a
   command, threshold, or prerequisite stale.
 
-## How to write it
-
-Create a **runbook** that:
-
-1. names the task, desired outcome, and request, schedule, alert, or observed
-   condition that makes it applicable;
-2. states prerequisites, including access, tools, supported system state,
-   input parameters, and safety constraints;
-3. provides ordered, precise actions with explicit conditions for supported
-   branches, retries, and parameter choices;
-4. places expected results or verification after consequential actions and
-   defines the final success criteria;
-5. states when to stop and escalate before the reader reaches that condition;
-6. supplies recovery, rollback, or safe-abort guidance, identifying irreversible
-   actions and the limits of available recovery; and
-7. links to reference and explanation without interrupting execution with
-   inventories or background.
-
-Keep branches bounded by the task. For example, selecting the documented
-command for the target operating system can remain inside one runbook. If the
-reader must investigate an unexplained condition or reconsider the response,
-state the handoff to a [playbook](playbook.md) or an appropriate owner.
-
-Assign an owner, test the procedure with someone other than its author, and
-rehearse supported paths and relevant failures. Review it when the system or
-procedure changes. Automate reliable steps where useful and keep invocation,
-inputs, permissions, expected results, and recovery guidance aligned with the
-implementation. A runbook can be manual, partly automated, or fully
-executable.[^aws-runbooks]
-
-## Benefits and maintenance costs
-
-- Execution becomes transferable and silent failures become visible earlier.
-- Supported variation can be handled without improvising new procedures.
-- Readers can recognize conditions outside the procedure and stop knowingly.
-- Verification and recovery guidance add detail that must remain easy to scan.
-- Automation reduces repeated manual work but still requires testing and
-  maintenance of its operating contract.
-- A procedure becomes dependable through successful validation and continued
-  maintenance; writing it alone does not establish reliability.
+To document a procedure and rehearse its failure path, follow
+[How to write a runbook](../guides/writing-a-runbook.md).
 
 ## When to use
 
@@ -131,6 +83,9 @@ Use a runbook when:
   a [Checklist](checklist.md), linking procedural detail where needed.
 
 ## Terminology
+
+For why checks and branches belong to one bounded task, see
+[What a runbook lets an operator repeat](../explainers/runbook.md).
 
 A runbook owns repeatable execution of a bounded task. Explicit branching,
 parameterization, multiple participating roles, and automation can all serve

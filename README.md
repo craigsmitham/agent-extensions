@@ -14,7 +14,7 @@ and are not published from this repository.
 | --- | --- | --- |
 | [`software-maintenance`](./packs/software-maintenance/README.md) | Seven standalone skills for explicit maintenance: assess, stabilize, refresh, prune, simplify, modularize, and improve. | `axm install @craigsmitham/packs/software-maintenance` |
 | `effect` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect` |
-| [`docs`](./packs/docs/README.md) | Documentation craft, checklist patterns, pattern authoring and collections, organization, and audits | `axm install @craigsmitham/packs/docs` |
+| [`docs`](./packs/docs/README.md) | Explainers, authoring guides, and design patterns for documents and checklists, plus organization and audit guidance | `axm install @craigsmitham/packs/docs` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
 | [`software-engineering`](./packs/software-engineering/README.md) | Aggregate of seven discipline collections: migrated knowledge and placeholder skills | `axm install @craigsmitham/packs/software-engineering` |
 

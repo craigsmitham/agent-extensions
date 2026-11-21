@@ -16,82 +16,52 @@ sources:
   title: Perspective-based versus checklist-based software inspection
 generated:
   by: codex/gpt-6
-  at: '2026-11-11T17:40:43Z'
+  at: '2026-11-21T22:51:04Z'
 ---
 
 # Reporting and review checklist
 
-When a report or review can omit important topics, **map explicit coverage
-criteria to located evidence, findings, and justified exclusions without
-treating completeness as proof of quality**.
+Use a reporting and review checklist when a report or an inspection needs
+coverage that others can trace. Each criterion gives a reviewer a question,
+and the review record connects their answer to a passage, observation, or
+finding. An exclusion earns its place when someone can establish why the
+criterion falls outside the case. A blank record leaves the question open.
 
-## Problem and design response
+## When coverage or inspection is the job
 
-Authors can omit information readers need; reviewers can overlook a relevant
-question. A coverage checklist makes the topics explicit and records what was
-found. Reporting and inspection are related applications of that response, but
-their claims differ: reporting can establish that information is present;
-inspection can identify a discrepancy that still needs adjudication.
+PRISMA 2020 shows this design in published reporting guidance. Its checklist
+lets an author indicate where each item appears, so another reader can inspect
+how the work was reported.[^prisma] A design review might instead direct
+attention to a consequence an author overlooked. A passage that addresses
+that consequence can satisfy a reporting obligation and still reveal a
+defect when a reviewer examines it.
 
-PRISMA publishes reporting checklists with expanded recommendations and a
-separate explanation-and-elaboration paper. This illustrates concise coverage
-prompts backed by fuller guidance.[^prisma] It does not establish that a
-complete report has sound methods or correct conclusions.
+A [verification checklist](verification-checklist.md) fits a different
+question about whether completed work meets stated conditions. A rubric is
+useful when readers need to distinguish levels of performance. A form alone
+can suffice when the need is simply to collect values.
 
-## How to write it
+## Costs and evidence
 
-1. Name the artifact, scope, version, audience, and reporting or inspection job.
-2. Select criteria from the relevant authority and failure evidence. Make clear
-   whether an item asks for presence, traceability, or a substantive finding.
-3. Provide a place for the evidence location, result, and reason for an exclusion
-   or non-applicable item. An empty field must not silently mean “reviewed.”
-4. For findings, separate observation, interpretation, materiality, and follow-up.
-   Identify who resolves disagreements or accepts a disposition.
-5. Preserve the reviewer’s place and outstanding questions across interruptions
-   or multiple sessions. Keep evidence tied to the reviewed revision.
+A common set of prompts makes omissions and disagreements visible across
+reviews. It can also focus attention so tightly on listed concerns that
+an unexpected issue goes unreported. When reviewers need judgment,
+allow a finding outside the listed topics and preserve the evidence for it.
+A long list of generic questions costs time even where most are inapplicable.
 
-Use [Checklist](checklist.md) for item wording, source authority, accessibility,
-and lifecycle. For a corpus audit, pair the aid with the scope and coverage
-method in [Documentation audit report contract](../guides/auditing-documentation.md).
+Evaluate a reporting aid by whether someone else can trace required coverage
+and find unresolved gaps. For an inspection aid, examine whether findings
+are material and supported, which defects were missed, how often people
+reported the same defect, and how much review effort it took. Empirical
+comparisons of inspection methods apply to the artifacts, participants, and
+conditions studied. A higher raw count alone can include repeated or invalid
+findings.[^inspection-comparison][^checklist-design-origin]
 
-## Applicability and tradeoffs
+For an account of what a located passage establishes, read
+[What a reporting checklist makes visible](../explainers/reporting-review-checklist.md).
+For a worked review with an exclusion and an open finding, follow
+[How to design a reporting and review checklist](../guides/designing-a-reporting-and-review-checklist.md).
 
-Use this pattern when explicit topics can improve coverage or consistency.
-Use [Verification checklist](verification-checklist.md) when checking known
-resulting states is the primary job. Use a rubric and expert judgment for
-qualitative assessment; use a form when data capture is the main need.
-
-Shared prompts make coverage comparable but can anchor reviewers on the listed
-topics and hide unanticipated concerns. Broad lists generate irrelevant work;
-narrow lists invite mistaken claims of completeness. A reporting aid may help
-an author explain what happened while providing little evidence that it was
-done well. Leave room for consequential observations outside the list.
-
-## Illustrative realizations
-
-A release report might locate the change description, validation evidence,
-known limitations, and responsible owner. A code-review aid might prompt the
-reviewer to inspect error paths and record a concrete defect or the evidence
-supporting no finding. One emphasizes reporting coverage; the other seeks
-material findings. They need different acceptance criteria.
-
-These are synthetic examples. A checklist claiming to prove overall design
-excellence from the presence of sections exceeds this pattern's evidence.
-
-## Review and evidence
-
-For reporting, examine missing information and traceability. For inspection,
-adjudicate valid, material findings, missed issues, false positives, agreement,
-and review effort. When comparing review methods, examine overlap and unique
-findings as well as totals; more raw findings can mean duplicated or invalid
-reports. The earlier guidance cites research comparing perspective-based and
-checklist-based inspection as a domain-specific comparator, not proof that
-one method is universally superior.[^inspection-comparison]
-
-This draft migrates that claim-specific evaluation guidance.[^checklist-design-origin]
-Successful coverage is one result; artifact quality and downstream outcomes
-require their own evidence.
-
-[^checklist-design-origin]: Craig Smitham — Validation and lifecycle, version 0.1.10.
-[^prisma]: PRISMA — PRISMA 2020 statement and reporting checklists.
-[^inspection-comparison]: Perspective-based versus checklist-based software inspection.
+[^checklist-design-origin]: Craig Smitham, Validation and lifecycle, version 0.1.10.
+[^prisma]: PRISMA, [PRISMA 2020 statement and reporting checklists](https://www.prisma-statement.org/prisma-2020).
+[^inspection-comparison]: [Perspective-based versus checklist-based software inspection](https://publica.fraunhofer.de/entities/publication/eb2a71d4-2bfc-43c8-a5bf-8a03f643c016).

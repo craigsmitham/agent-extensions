@@ -4,7 +4,7 @@ title: How-to guides and the work they serve
 description: Why a how-to guide takes its shape from the reader’s goal, how it draws on practical judgment, and why even an experienced practitioner might reach for one.
 tags: [docs, how-to, guide, practitioner, task, tutorial, diataxis]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-21T21:37:19Z }
+generated: { by: codex/gpt-6, at: 2026-11-21T22:42:03Z }
 sources:
   - id: how-to
     resource: https://diataxis.fr/how-to-guides/
@@ -78,6 +78,11 @@ it gives the learner. The volunteer chooses a guide for the help it gives
 with work already in hand. Months later, that same volunteer might consult
 the guide again at a different printer. Remembering every setting was
 never the purpose of the evening.[^tutorial]
+
+To turn a task like the volunteer’s into usable directions, follow
+[How to write a how-to guide](../guides/writing-a-how-to-guide.md).
+For a choice among document designs, see the
+[How-to guide pattern](../patterns/how-to.md).
 
 [^how-to]: Daniele Procida, [How-to guides](https://diataxis.fr/how-to-guides/).
 [^foundations]: Daniele Procida, [Foundations](https://diataxis.fr/foundations/).

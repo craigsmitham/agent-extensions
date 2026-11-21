@@ -7,14 +7,10 @@ for the guidance and the skill that selects it for writing and review tasks.
 axm packs install @craigsmitham/packs/docs
 ```
 
-The bundle helps you choose a document design, organize a collection, or
-assess how well documentation serves its readers. For example, when deciding
-whether a release checklist should guide execution or establish readiness,
-open the shared checklist pattern.
-
-```sh
-axm knowledge concepts get '@craigsmitham/knowledge/docs#patterns/checklist'
-```
-
-Its purpose table points to the pattern for each decision. Browse the
-[knowledge index](src/index.md) for other reader needs.
+Enter through the [knowledge index](src/index.md), or go directly to the
+kind of help you need. For example, choose an
+[explainer](src/explainers/readiness-checklist.md) to understand how a
+readiness decision works, the [authoring guide](src/guides/designing-a-readiness-checklist.md)
+to turn release conditions into a usable checklist, or the
+[pattern](src/patterns/readiness-checklist.md) to judge whether this design
+fits the decision.

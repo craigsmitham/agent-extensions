@@ -2,7 +2,8 @@
 name: docs
 description: >
   Creates, reviews, organizes, audits, and remediates documentation using
-  portable craft. Use for READMEs, tutorials, how-to guides, reference,
+  portable craft. Explains how document forms work and helps select a design
+  for a reader’s need. Use for READMEs, tutorials, how-to guides, reference,
   explanations, principle documents, playbooks, runbooks, reusable checklists,
   and design pattern descriptions, collections, or languages across domains;
   mining patterns for documentation;
@@ -28,15 +29,33 @@ Resolve `@craigsmitham/knowledge/docs` through host discovery or
 pack sibling; report a missing dependency rather than inventing its guidance.
 Load only the relevant route.
 
-| Need | Knowledge route |
+For a cataloged form, select one starting page by intent. To understand how
+the form works, open `explainers/<subject>`. To choose or assess its design,
+open `patterns/<subject>`. To write or revise it, open the guide in its row.
+Use a companion when a further question calls for it.
+
+| Form | Subject | Authoring guide |
+| --- | --- | --- |
+| Explanation | `explanation` | `guides/writing-an-explainer` |
+| How-to guide | `how-to` | `guides/writing-a-how-to-guide` |
+| Tutorial | `tutorial` | `guides/writing-a-tutorial` |
+| Reference | `reference` | `guides/writing-reference-documentation` |
+| Principle document | `principle` | `guides/writing-a-principle-document` |
+| Playbook | `playbook` | `guides/writing-a-playbook` |
+| Runbook | `runbook` | `guides/writing-a-runbook` |
+| Pattern description or mining | `pattern-description` | `guides/writing-a-pattern-description` |
+| Pattern collection or language | `pattern-collection` | `guides/curating-a-pattern-collection` |
+| Checklist | `checklist` | `guides/designing-a-checklist` |
+| Execution checklist | `execution-checklist` | `guides/designing-an-execution-checklist` |
+| Verification checklist | `verification-checklist` | `guides/designing-a-verification-checklist` |
+| Readiness checklist | `readiness-checklist` | `guides/designing-a-readiness-checklist` |
+| Reporting and review checklist | `reporting-review-checklist` | `guides/designing-a-reporting-and-review-checklist` |
+| Learning checklist | `learning-checklist` | `guides/designing-a-learning-checklist` |
+
+| Other need | Knowledge route |
 | --- | --- |
-| Choose a document design | `explainers/documentation-craft`, then matching `patterns/<subject>` |
-| Write or revise an explainer | `explainers/explanation` for how the form works, then `guides/writing-an-explainer` for drafting and revision |
-| Write or revise a how-to guide | `explainers/how-to` for the reader’s practical need, then `patterns/how-to` for authoring decisions |
-| Tutorial, reference, principle, playbook, or runbook | Matching `patterns/<subject>` |
-| Reusable checklist | `patterns/checklist`, then the applicable purpose pattern |
-| Pattern description or mining | `patterns/pattern-description` |
-| Pattern collection or language | `patterns/pattern-collection` |
+| Choose among unfamiliar forms | `explainers/documentation-craft`, then the relevant pattern |
+| Review the evidence or reasoning in a pattern description | Review guidance in `guides/writing-a-pattern-description` |
 | Review one document, including a README | `explainers/documentation-quality`, plus a matching pattern when its form matters |
 | Bounded corpus audit | `explainers/documentation-audits` and `guides/auditing-documentation` |
 | Organization, placement, or naming | `guides/organizing-and-naming-documentation` |
