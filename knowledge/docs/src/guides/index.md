@@ -1,8 +1,12 @@
-# Documentation organization and assessment
+# Documentation authoring, organization, and assessment
 
-Focused organization and comparison guidance, with a predictable audit report contract.
+Find guidance for writing explainers, organizing related documents, and reporting audit findings.
 
-## Concepts
+## Author a document
+
+- [How to write an explainer](writing-an-explainer.md) — When readers can follow a procedure but still have questions about the subject, or when a topic needs an introduction, turn their question into a focused, source-backed explainer.
+
+## Organize and assess
 
 - [Documentation audit report contract](auditing-documentation.md) — Defines the scope, coverage, ordered finding fields, and report structure for a bounded documentation audit.
 - [Comparing concepts](comparing-concepts.md) — Use when readers repeatedly confuse related concepts; clarify their differences and keep shared comparisons in one maintained place.

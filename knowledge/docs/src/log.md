@@ -1,5 +1,13 @@
 # Documentation craft update log
 
+## 2026-11-21
+
+- Added [How to write an explainer](guides/writing-an-explainer.md), a drafting and revision guide that works through a reader’s question about booklet printing.
+
+- Added [How-to guides and the work they serve](explainers/how-to.md), a draft exploring Diátaxis’s account of practical directions through the example of printing a concert program.
+
+- Added a draft of [How explainers build understanding](explainers/explanation.md) at the former explainer’s path. It follows Diátaxis’s account of reflection through Harold McGee’s investigation of copper bowls.
+
 ## 2026-11-18
 
 - Clarified the scope of a naming proposal in [Organizing and naming documentation](guides/organizing-and-naming-documentation.md) and linked the historical authoring cases in [Explanation](patterns/explanation.md).

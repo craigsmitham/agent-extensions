@@ -1,0 +1,109 @@
+---
+type: Explainer
+title: How explainers build understanding
+description: Why Diátaxis gives reflection a place in documentation, and how an explainer connects a familiar practice with the ideas, history, and judgments behind it.
+tags: [docs, explainer, explanation, understanding, reflection, diataxis]
+status: draft
+generated: { by: claude/fable-5-2, at: 2026-11-21T21:58:42Z }
+sources:
+  - id: explanation
+    resource: https://diataxis.fr/explanation/
+    title: Diátaxis — Explanation
+  - id: foundations
+    resource: https://diataxis.fr/foundations/
+    title: Diátaxis — Foundations
+  - id: reference
+    resource: https://diataxis.fr/reference-explanation/
+    title: Diátaxis — The difference between reference and explanation
+  - id: mcgee
+    resource: https://haroldmcgee.substack.com/p/eggs-again-old-and-new-whipping-whites
+    title: "Harold McGee — Eggs again, old and new: whipping whites"
+---
+
+# How explainers build understanding
+
+A cook can make meringues for years before wondering why pastry cooks have
+traditionally beaten egg whites in a copper bowl. The meringues may have
+turned out beautifully every time. Success can leave a question just as
+interesting as failure. What part did the bowl play?[^mcgee]
+
+An **explainer** is a document devoted to the understanding of a subject.
+Diátaxis calls the form *explanation* and distinguishes it by the room it
+gives the reader for *reflection*. There is already something to reflect
+on, perhaps a familiar utensil, a surprising result, or a decision someone
+else made. A cook can see what a bowl is made of. It takes a wider view to
+understand how that metal earned its place in a pastry kitchen.[^explanation]
+
+## What the bowl brings into view
+
+Daniele Procida, the author of Diátaxis, uses Harold McGee’s *On Food and
+Cooking* as an example of explanation. In an essay published in 2025, McGee
+recalls how the copper bowl found its way into that book. His account shows
+what Procida means. While looking for illustrations for the book, McGee
+came across an eighteenth-century engraving of a pastry kitchen. Its key
+identified a copper bowl specifically for whipping egg whites. McGee had
+heard a chemical reason for using copper and found it unconvincing, and he
+had taken the practice for an old cook’s tale. Its persistence across two
+centuries persuaded him to buy a bowl and try it. In his comparison, the
+whites took longer to whip in copper than in glass, and the foam stayed
+smooth.[^explanation][^mcgee]
+
+The engraving showed that the custom was already familiar in that kitchen.
+It took a comparison to show McGee what difference the metal made. Even
+then the reason remained open. McGee and his colleagues found that the
+whites take up copper from the bowl. They proposed that one egg protein,
+which binds copper, was the key. That protein does not bind silver. When
+McGee happened to whip whites in a silver bowl a decade later, he expected
+them to clump. The foam was stable and creamy. In his revised account, both
+metals react with sulfur groups on the egg proteins before those groups can
+bond to one another, which keeps the foam from tightening and leaking.
+McGee presents this as a theory, and writes that there is more to
+learn.[^mcgee]
+
+McGee took a lesson from that first comparison. Cooks, he writes, “have
+always been practical chemists and usually know what works, if not
+necessarily how.” The silver bowl bore him out. The cooks’ observation
+outlasted one scientific account of it. Diátaxis describes explanation as
+a discussion that can admit opinions and weigh them against the
+alternatives. McGee’s account keeps his own mistaken opinion in view, along
+with the theory he had to give up.[^explanation][^mcgee]
+
+The account gathers a good deal around one bowl. There is the history of
+a kitchen habit, a test of what the habit achieves, and McGee’s two
+theories about why it works, one of them since discarded. There are
+judgments too, the pastry cooks’ in keeping the bowl and McGee’s in
+doubting it. Making those connections is how an explainer builds
+understanding. A reader who will never own a copper bowl can still
+appreciate what the pastry cooks knew and why there was still something to
+discover.[^explanation][^mcgee]
+
+## Why explanation has a place of its own
+
+In Diátaxis, *work* means applying a craft and *study* means acquiring it.
+The same cook moves between them. With the mixer running, a description
+of soft peaks helps the cook recognize when to stop. In a first lesson,
+watching those peaks form and stopping the mixer is itself part of the
+learning. Later, the cook can put the whisk down and still have plenty to
+think about. This is study as well, and it is the occasion for explanation.
+The change is in the cook’s relationship to the subject.[^foundations][^reference]
+
+A sentence about copper in a recipe can give the cook confidence in a
+choice of bowl. The history of the experiment would interrupt the recipe
+at precisely the moment the cook needs to watch the foam. And if that
+sentence were the whole of the documentation, the curious reader would
+never learn why the silver bowl came as a surprise. Giving the discussion
+a place of its own serves both moments. The next time the cook picks up
+the same bowl, the recipe may be exactly as before. What the cook sees
+in that ordinary utensil has changed.[^reference][^mcgee]
+
+## Related
+
+- [How to write an explainer](../guides/writing-an-explainer.md) — drafting
+  and revising an explainer from a reader’s question.
+- [Explanation](../patterns/explanation.md) — the pattern’s account of
+  scope, evidence, and tradeoffs.
+
+[^explanation]: Daniele Procida, [Explanation](https://diataxis.fr/explanation/).
+[^foundations]: Daniele Procida, [Foundations](https://diataxis.fr/foundations/).
+[^reference]: Daniele Procida, [The difference between reference and explanation](https://diataxis.fr/reference-explanation/).
+[^mcgee]: Harold McGee, [Eggs again, old and new: whipping whites](https://haroldmcgee.substack.com/p/eggs-again-old-and-new-whipping-whites).

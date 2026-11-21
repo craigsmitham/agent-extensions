@@ -18,6 +18,6 @@ design. Host projects keep their own layouts, metadata, and tooling.
 
 * [Documentation foundations](explainers/index.md) - Reader needs, quality, organization, audits, and the concepts that guide documentation decisions.
 
-## Organize and assess
+## Write, organize, and assess
 
-* [Documentation organization and assessment](guides/index.md) - Focused organization and comparison guidance, with a predictable audit report contract.
+* [Documentation authoring, organization, and assessment](guides/index.md) - Write an explainer, organize and compare related material, or report the results of a documentation audit.

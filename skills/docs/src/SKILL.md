@@ -31,7 +31,9 @@ Load only the relevant route.
 | Need | Knowledge route |
 | --- | --- |
 | Choose a document design | `explainers/documentation-craft`, then matching `patterns/<subject>` |
-| Tutorial, how-to, reference, explanation, principle, playbook, or runbook | Matching `patterns/<subject>` |
+| Write or revise an explainer | `explainers/explanation` for how the form works, then `guides/writing-an-explainer` for drafting and revision |
+| Write or revise a how-to guide | `explainers/how-to` for the reader’s practical need, then `patterns/how-to` for authoring decisions |
+| Tutorial, reference, principle, playbook, or runbook | Matching `patterns/<subject>` |
 | Reusable checklist | `patterns/checklist`, then the applicable purpose pattern |
 | Pattern description or mining | `patterns/pattern-description` |
 | Pattern collection or language | `patterns/pattern-collection` |
