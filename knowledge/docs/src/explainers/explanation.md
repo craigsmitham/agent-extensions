@@ -4,7 +4,7 @@ title: How explainers build understanding
 description: Why Diátaxis gives reflection a place in documentation, and how an explainer connects a familiar practice with the ideas, history, and judgments behind it.
 tags: [docs, explainer, explanation, understanding, reflection, diataxis]
 status: draft
-generated: { by: claude/fable-5-2, at: 2026-11-22T01:02:46Z }
+generated: { by: claude/opus-5-5, at: 2026-11-22T01:34:55Z }
 sources:
   - id: explanation
     resource: https://diataxis.fr/explanation/
@@ -40,18 +40,20 @@ understand how that metal earned its place in a pastry kitchen.[^explanation]
 ## What the bowl brings into view
 
 Daniele Procida, the author of Diátaxis, uses Harold McGee’s *On Food and
-Cooking* as an example of explanation. In an essay published in 2025, McGee
-recalls how the copper bowl found its way into that book. His account shows
-what Procida means. While looking for illustrations for the book, McGee
-came across an eighteenth-century engraving of a pastry kitchen. Its key
-identified a copper bowl specifically for whipping egg whites. McGee had
-read in Julia Child’s *Mastering the Art of French Cooking* that copper
-acidifies the foam. The chemistry made no sense to him, and he had taken
-the practice for an old cook’s tale. Its persistence across two centuries
-persuaded him to buy a bowl and try it. In his comparison, the whites
-took longer to whip in copper than in glass. The copper bowl’s foam
-stayed creamy and never turned grainy. Plain whites, he notes, easily
-overwhip until they turn clumpy and watery.[^explanation][^mcgee]
+Cooking* as an example of explanation. The book, he writes, “places food
+and cooking in the context of history, society, science and technology.”
+In an essay published in 2025, McGee recalls how the copper bowl found its
+way into that book. His account shows what Procida means. While looking
+for illustrations for the book, McGee came across an eighteenth-century
+engraving of a pastry kitchen. Its key identified a copper bowl for
+whipping egg whites. McGee had read in Julia Child’s *Mastering the Art of
+French Cooking* that copper acidifies the foam. The chemistry made no sense
+to him, and he had taken the practice for an old cook’s tale. Its
+persistence across two centuries persuaded him to buy a bowl and try it.
+In his comparison, the whites took longer to whip in copper than in glass.
+The copper bowl’s foam stayed creamy and never turned grainy. Plain
+whites, he notes, easily overwhip until they turn clumpy and
+watery.[^explanation][^mcgee]
 
 The engraving showed that the custom was already familiar in that kitchen.
 It took a comparison to show McGee what difference the metal made. Even
@@ -79,12 +81,13 @@ a kitchen habit, a test of what the habit achieves, and McGee’s two
 theories about why it works, one of them since discarded. There are
 judgments too, the pastry cooks’ in keeping the bowl and McGee’s in
 doubting it. Making those connections is how an explainer builds
-understanding. A reader wondering why a team chose one design over another
-needs the same kind of connection between the options people saw, the
-constraints they faced, and what mattered to them at the time.
-A reader who will never own a copper bowl can still
+understanding. A reader who will never own a copper bowl can still
 appreciate what the pastry cooks knew and why there was still something to
-discover.[^explanation][^mcgee]
+discover. A reader wondering why a team chose one design over another
+needs the same kind of account. It connects the alternatives the team
+compared, the reasons it gave at the time, and which of those reasons
+still hold. Like the bowl, a design can outlast the first account of why
+it works.[^explanation][^mcgee]
 
 ## Why explanation has a place of its own
 
@@ -99,14 +102,15 @@ cook applies the craft in the first moment and acquires it in the other
 two, through practice in the lesson and through thought
 afterward.[^foundations][^reference]
 
-A sentence about copper in a recipe can give the cook confidence in a
-choice of bowl. The history of the experiment would interrupt the recipe
-at precisely the moment the cook needs to watch the foam. And if that
-sentence were the whole of the documentation, the curious reader would
-never learn why the silver bowl came as a surprise. Giving the discussion
-a place of its own serves both moments. The next time the cook picks up
-the same bowl, the recipe may be exactly as before. What the cook sees
-in that ordinary utensil has changed.[^how-to][^explanation][^mcgee]
+A recipe can tell a cook who has no copper bowl to stabilize the foam
+with cream of tartar, as Julia Child’s book did. The history of the
+experiment would interrupt the recipe at precisely the moment the cook
+needs to watch the foam. And if that sentence were the whole of the
+documentation, the curious reader would never learn why the silver bowl
+came as a surprise. Giving the discussion a place of its own serves both
+moments. The next time the cook picks up the same bowl, the recipe may be
+exactly as before. What the cook sees in that ordinary utensil has
+changed.[^how-to][^explanation][^mcgee]
 
 To turn a question like the cook’s into an explainer, follow
 [How to write an explainer](../guides/writing-an-explainer.md). To judge
