@@ -45,10 +45,11 @@ and Wirfs-Brock and Lise Hvatum's
 The latter three are identified as 2026 preprints. These sources are cited in
 original explanatory prose; their slides, figures, full texts, and templates
 are not reproduced or vendored. Their source rights are not relicensed by
-this repository. Chris Richardson's Microservices.io and Gregor Hohpe and
-Bobby Woolf's Enterprise Integration Patterns are credited as observed
-documentation examples, without reproducing their descriptions. The source
-review for these pattern entries was refreshed on 2026-11-11.
+this repository. The bundle also uses Chris Richardson's Microservices.io,
+Gregor Hohpe and Bobby Woolf's Enterprise Integration Patterns, and the
+Group Works facilitation collection as examples of published pattern
+descriptions and navigation. Readers can inspect the original entries
+through the citations on each page.
 
 ## Checklist patterns
 
@@ -59,9 +60,9 @@ existing `CC-BY-SA-4.0` docs bundle; earlier releases retain their license.
 
 The concepts cite Degani and Wiener's NASA checklist study, Conroy and
 colleagues' AAPM checklist guidance, PRISMA reporting guidance, Moore and
-colleagues' process-evaluation guidance, the BetterBirth trial, software
-inspection research, Shao and colleagues' regulated-learning meta-analysis,
-Green and colleagues' test-enhanced-learning review, and Kalyuga and
+colleagues' process-evaluation guidance, the BetterBirth trial, Laitenberger
+and colleagues' code-inspection comparison, Butler's work on retrieval and
+transfer, Renkl and colleagues' worked-example studies, and Kalyuga and
 colleagues' expertise-reversal review. These sources inform original summaries
 and illustrative examples. Their full texts, checklists, figures, and templates
 are not reproduced or vendored, and their source rights are not relicensed by

@@ -4,7 +4,7 @@ title: How explainers build understanding
 description: Why Diátaxis gives reflection a place in documentation, and how an explainer connects a familiar practice with the ideas, history, and judgments behind it.
 tags: [docs, explainer, explanation, understanding, reflection, diataxis]
 status: draft
-generated: { by: claude/fable-5-2, at: 2026-11-21T21:58:42Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:06:55Z }
 sources:
   - id: explanation
     resource: https://diataxis.fr/explanation/
@@ -54,11 +54,11 @@ then the reason remained open. McGee and his colleagues found that the
 whites take up copper from the bowl. They proposed that one egg protein,
 which binds copper, was the key. That protein does not bind silver. When
 McGee happened to whip whites in a silver bowl a decade later, he expected
-them to clump. The foam was stable and creamy. In his revised account, both
-metals react with sulfur groups on the egg proteins before those groups can
-bond to one another, which keeps the foam from tightening and leaking.
-McGee presents this as a theory, and writes that there is more to
-learn.[^mcgee]
+them to clump. The foam was stable and creamy. The bowl contained some copper, so
+he repeated the comparison with a copper-free silver solution and again
+got a stable foam. He proposed that either metal could limit bonding
+between the egg proteins. McGee presents this as a theory and writes
+that there is more to learn.[^mcgee]
 
 McGee took a lesson from that first comparison. Cooks, he writes, “have
 always been practical chemists and usually know what works, if not

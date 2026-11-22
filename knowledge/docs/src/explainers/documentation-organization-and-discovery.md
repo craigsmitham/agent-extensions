@@ -11,7 +11,7 @@ sources:
   - id: documentation-workflow
     resource: documentation-workflow.md
     title: Documentation workflow
-generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
 ---
 
 # Documentation organization and discovery
@@ -39,7 +39,7 @@ Two questions commonly compete:
 - **Subject-first:** What do I need help with — billing, architecture,
   deployment, or another domain concern?
 
-A physical tree cannot make both axes primary at the same scope without either
+A directory tree cannot make both axes primary at the same scope without either
 duplicating documents or producing an inconsistent mixture. Choose the stronger
 axis for that scope and expose the other through titles, metadata, links,
 indexes, and search.
@@ -110,9 +110,11 @@ No numerical score decides the answer. The table makes the competing
 relationships discussable and exposes when a proposed folder scheme serves
 authors or tooling more than readers.
 
-## One physical tree, several discovery views
+## One directory tree, several discovery views
 
-Physical placement is only one discovery mechanism:
+A knowledge-base search or a bot may take someone straight to a page. Its
+title and opening lines then do the orienting work that a directory or
+navigation menu would otherwise do.
 
 - **Directories** express collection-level boundaries and the primary browsing
   axis.
@@ -147,11 +149,11 @@ The three naming surfaces have related but different jobs:
 | Filename | Supply a stable, distinctive concept or task identifier | `documenting-principles.md` |
 | Title | State the reader-facing subject or action naturally | “Documenting principles” |
 
-For explainers, use a subject-oriented noun phrase that exposes the important
-distinction: `principles-as-normative-guidance.md`, not merely `principle.md` or
-`principle-explainer.md`. For guides, name the action or outcome:
-`documenting-principles.md`, not `principle-guide.md`. A suffix identifies form
-but often conceals purpose.
+Name the distinction readers are looking for. In a rehearsal collection,
+`repeat-signs.md` can be specific enough for a lookup entry.
+`following-first-and-second-endings.md` names the task a singer might need
+help with. A suffix such as `-guide` alone would tell them little about
+which page to open.
 
 Filename and title should remain recognizably aligned without being forced into
 identical grammar. Prefer stable domain language over current team names,

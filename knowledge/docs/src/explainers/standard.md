@@ -8,16 +8,7 @@ sources:
   - id: iso-definitions
     resource: https://policy.iso.org/resources.html
     title: ISO — Useful definitions
-  - id: iso-directives
-    resource: https://www.iso.org/sites/directives/current/consolidated/
-    title: ISO/IEC Directives
-  - id: odonovan-waking
-    resource: https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Waking.pdf
-    title: Oliver O'Donovan — Waking
-  - id: odonovan-resolving
-    resource: https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Resolving.pdf
-    title: Oliver O'Donovan — Resolving
-generated: { by: "codex/gpt-6", at: "2026-11-11T16:59:49Z" }
+generated: { by: "codex/gpt-6", at: "2026-11-22T00:10:36Z" }
 ---
 
 # Standard
@@ -76,7 +67,7 @@ ISO's formal definition emphasizes a document established by consensus,
 approved by a recognized body, and intended for common and repeated use to
 achieve an appropriate degree of order in a context. That is a disciplined
 institutional use of the term, not an exhaustive account of every standard by
-which people judge.
+which people judge.[^iso-definitions]
 
 A documentary standard makes a standard more public, portable, reviewable, and
 versionable. It does not necessarily make every relevant judgment explicit.
@@ -98,10 +89,9 @@ Standards can address different objects and use different normative means:
 | **Measurement or test method** | Defines how a property is observed, sampled, calculated, or reported |
 | **Quality or safety** | Establishes characteristics or thresholds for fitness, reliability, or protection |
 
-One standards document may combine several kinds. Prefer performance
-requirements when they preserve worthwhile freedom and innovation; prescribe
-design when the implementation itself is material to safety, interoperability,
-auditability, or another named purpose.
+One standards document may combine several kinds. A performance requirement
+can leave room for different methods. A prescribed design can matter when
+independently produced parts have to fit together.
 
 ## Threshold, target, exemplar, and scale
 
@@ -161,9 +151,9 @@ correct interpretation.
 
 Keep supporting jobs recognizable:
 
-- tutorials can introduce implementation through a protected success path;
-- how-to guides can direct a particular implementation or assessment;
-- reference can expose interfaces, terms, and test methods for lookup;
+- tutorials can let a newcomer practice applying a criterion to a sample;
+- how-to guides can help a practitioner carry out an assessment;
+- reference can supply the exact terms, limits, and methods for lookup;
 - explanations can discuss history, rationale, alternatives, and effects; and
 - examples and test suites can demonstrate or evaluate provisions without
   silently becoming the normative source.
@@ -218,3 +208,5 @@ and should be governed accordingly or the standard's claim is underspecified.
 - [Documentation craft](documentation-craft.md)
 - [Reference](../patterns/reference.md)
 - [Explanation](../patterns/explanation.md)
+
+[^iso-definitions]: ISO, [Useful definitions](https://policy.iso.org/resources.html), drawing on ISO/IEC Guide 2:2004.

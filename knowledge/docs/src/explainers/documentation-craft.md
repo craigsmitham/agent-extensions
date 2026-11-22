@@ -9,41 +9,17 @@ tags:
 - diataxis
 - explainer
 status: stable
-generated: { by: codex/gpt-6, at: 2026-11-21T22:46:07Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
 sources:
-- id: diataxis
-  resource: https://diataxis.fr/
-  title: "Di\xE1taxis documentation system"
 - id: diataxis-start
   resource: https://diataxis.fr/start-here/
   title: "Di\xE1taxis \u2014 Start here"
-- id: diataxis-start-src
-  resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/start-here.rst
-  title: "Di\xE1taxis source \u2014 start-here.rst"
 - id: diataxis-map
   resource: https://diataxis.fr/map/
   title: "Di\xE1taxis \u2014 The map"
-- id: diataxis-map-src
-  resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/map.rst
-  title: "Di\xE1taxis source \u2014 map.rst"
 - id: diataxis-foundations
   resource: https://diataxis.fr/foundations/
   title: "Di\xE1taxis \u2014 Foundations"
-- id: diataxis-foundations-src
-  resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/foundations.rst
-  title: "Di\xE1taxis source \u2014 foundations.rst"
-- id: johnson-diataxis
-  resource: https://idratherbewriting.com/blog/what-is-diataxis-documentation-framework
-  title: "Tom Johnson \u2014 What is Di\xE1taxis"
-- id: mintlify-content-types
-  resource: https://www.mintlify.com/guides/content-types
-  title: "Mintlify \u2014 Content types"
-- id: pattern-description
-  resource: ../patterns/pattern-description.md
-  title: Pattern description
-- id: pattern-collection
-  resource: ../patterns/pattern-collection.md
-  title: Pattern collection
 - id: prior-documentation-craft
   resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/docs/src/guides/documentation-craft.md
   title: Documentation craft guide
@@ -51,13 +27,16 @@ sources:
 
 # Documentation craft
 
-Portable **understanding** of documentation quality — not repository layout,
-frontmatter schemas, or tooling. Host projects may add structure, metadata,
-and validators; those local rules win when they exist.
+Suppose a choir keeps its rehearsal notes in a repository. A new singer
+looking up a repeat sign needs a short definition. Someone learning to
+follow repeats needs a passage to sing and a way to tell where to come
+back in. Both readers can open the same site. Their questions call for
+different documents.
 
 Choose documentation by what the reader needs to do: learn, complete a task,
 look up facts, or understand a subject. Diátaxis supplies these four reader
-needs. The [Documentation pattern collection](../patterns/index.md) describes
+needs in its account of skilled practice.[^diataxis-foundations] The
+[Documentation pattern collection](../patterns/index.md) describes
 reusable document designs for these and more specific situations. Use a pattern to judge how well a design fits the
 situation. For example, a runbook gives an operator a bounded, repeatable
 procedure. Someone writing that runbook needs to work through the decisions
@@ -72,26 +51,16 @@ for accomplishing a task. These names do not prescribe host metadata or folders.
 
 For iterative remediation of an existing corpus, see [Documentation workflow](documentation-workflow.md). For
 functional vs deep quality, see [Documentation quality](documentation-quality.md).
-For choosing a physical organization and names without turning either into a
-universal taxonomy, see [Documentation organization and
+For choosing paths and names readers can find, see [Documentation organization and
 discovery](documentation-organization-and-discovery.md).
 
 ## Why four reader needs
 
-Documentation must serve the [**practitioner in a practice**](practice.md) — someone who both
-**acquires** and **applies** skill, and who needs both **action** (knowing
-*how*) and **cognition** (knowing *that*). Those two dimensions define four
-quarters, and Diátaxis holds that the map they produce is complete: those four
-categories cover all the territory defined by the two axes. Diátaxis calls
-them documentation types. This bundle describes their reusable design guidance
-as patterns while retaining the distinctions between the reader needs.
-
-Take that claim at its own scope. It is an argument about the **map of reader
-needs** — no fifth quarter exists on those two axes. It is not a claim that
-documentation has no other concerns, and it does not bear on the questions
-Diátaxis leaves alone: what artifacts get named, how a corpus is published and
-reviewed, or how documentation is kept current. Adding concepts on those
-questions extends the bundle without contradicting the map.
+Diátaxis considers the [practitioner](practice.md) acquiring or applying
+a skill. At either point the reader may need to act or to think something
+through. These two distinctions yield four needs. They explain why a lesson
+feels different from a lookup entry even when both cover the same subject.
+The reader's need can change during a visit.[^diataxis-foundations][^diataxis-map]
 
 | Need | Form | User mode | Documentation informs |
 | --- | --- | --- | --- |
@@ -115,27 +84,6 @@ job well.
 
 If a draft tries to do two of these at once, prefer splitting or making one
 job primary and linking the rest.
-
-Quick compass (content + user mode → reader-need form):
-
-| If the content… | …and serves the user’s… | …then it belongs to… |
-| --- | --- | --- |
-| informs action | acquisition of skill | tutorial |
-| informs action | application of skill | how-to guide |
-| informs cognition | application of skill | reference |
-| informs cognition | acquisition of skill | explanation |
-
-## Form follows job
-
-Diátaxis pairs each need with a characteristic form (paraphrased):
-
-| | Tutorial | How-to | Reference | Explanation |
-| --- | --- | --- | --- | --- |
-| Does | introduce, educate, lead | guide | state, describe, inform | explain, clarify, discuss |
-| Answers | *Can you teach me to…?* | *How do I…?* | *What is…?* | *Why…?* / *About…* |
-| Oriented to | learning | goals | information | understanding |
-| Form | a lesson | a series of steps | dry description | discursive discussion |
-| Everyday analogy | teaching a child to cook | a recipe | label on a food packet | culinary social history |
 
 ## Cycle of interaction
 
@@ -171,19 +119,20 @@ is in [Documentation quality](documentation-quality.md).
    voluntarily selected guide normally states reader intent. Keep selection
    conditions distinct from the access, knowledge, or state preconditions
    required after selection.
-6. **Stay accurate enough for the job.** How-tos and reference go stale
-   fastest; refresh or retire when commands, APIs, or ownership change.
+6. **Check what can change.** Revisit a page when the behavior, policy,
+   terminology, or other evidence its readers depend on changes.
 7. **Respect the host.** Paths, indexes, metadata fields, and naming are
    project choices. Portable craft does not mandate a folder tree or a
    single frontmatter profile.
-8. **Resist feature-shaped IA as the only scheme.** Organizing only by
-   product surface, without reader-need forms, produces wild inconsistency
-   across a portfolio.
+8. **Test the route from the reader’s question.** A topic index can lead
+   straight to a definition yet bury the lesson a newcomer needs. Follow
+   each route from the place that reader is likely to enter.
 
-Authoritative sources establish product behavior and policy. Distinguish facts,
-proposals, and illustrative examples; name unresolved authority rather than
-inventing content. Relevant validators and exercised procedures provide bounded
-evidence. An author's review does not establish reader comprehension.
+Identify the authority for the claim.[^prior-documentation-craft] A recording
+can establish what happened at a rehearsal, an adopted policy settles the
+choir’s attendance rule, and a reproducible example can establish what a
+software command does. Label proposals and illustrative cases so readers
+know what they can rely on.
 
 ## Neighbour bleed (where reader-need forms collapse)
 
@@ -261,10 +210,9 @@ The bundle does offer portable criteria for choosing among host-compatible
 organizations. It does not prescribe the resulting paths; see [Documentation
 organization and discovery](documentation-organization-and-discovery.md).
 
-Diátaxis itself is pragmatic: use what helps; you need not adopt every
-theoretical layer to improve one page today. Prefer small iterative
-improvements over empty form shells — see
-[Documentation workflow](documentation-workflow.md).
+Diátaxis encourages authors to start with a change they can use today.[^diataxis-start]
+For an example of a collection growing from recurring reader questions,
+see [Documentation workflow](documentation-workflow.md).
 
 ## Related
 
@@ -272,3 +220,8 @@ improvements over empty form shells — see
 - [Documentation quality](documentation-quality.md)
 - [Documentation audits](documentation-audits.md)
 - [Documentation organization and discovery](documentation-organization-and-discovery.md)
+
+[^diataxis-foundations]: Diátaxis, [Foundations](https://diataxis.fr/foundations/).
+[^diataxis-map]: Diátaxis, [The map](https://diataxis.fr/map/).
+[^diataxis-start]: Diátaxis, [Start here](https://diataxis.fr/start-here/).
+[^prior-documentation-craft]: [Earlier documentation craft guide](https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/docs/src/guides/documentation-craft.md).

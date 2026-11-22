@@ -26,7 +26,7 @@ sources:
   - id: odonovan-resolving
     resource: https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Resolving.pdf
     title: Oliver O'Donovan — Resolving
-generated: { by: "codex/gpt-6", at: "2026-11-11T16:59:49Z" }
+generated: { by: "codex/gpt-6", at: "2026-11-22T00:10:36Z" }
 ---
 
 # Standard authority and conformance
@@ -75,12 +75,10 @@ measured easily takes the place of the good that made measurement worthwhile.
 
 ## Reality, authority, and judgment
 
-O'Donovan's realist account of practical reason supplies an important test for
-standards. Normative direction should be answerable to the goods and realities
-upon which action bears; it does not become sound merely because it is
-directive, inherited, or accepted. A standard may possess social or legal
-authority and still describe its subject badly, privilege a distorted purpose,
-or demand an unfitting response.
+O'Donovan asks how recognizing something good gives a person reason to
+act in a particular situation.[^odonovan-waking][^odonovan-resolving]
+Applied here, that question helps explain why people can agree that a
+standard is in force and still disagree about how well it serves its purpose.
 
 This exposes three distinguishable questions:
 
@@ -114,10 +112,11 @@ certifies, or enforces it. Keeping these authorities distinct prevents a
 publisher's reputation from silently implying legal obligation or independent
 certification.
 
-Consensus means substantial agreement reached through a credible process, not
-unanimity and not proof of truth. It strengthens legitimacy by exposing a
-proposal to relevant knowledge and affected interests. The resulting standard
-remains open to evidence, appeal, revision, and eventual withdrawal.
+IEEE’s board looks for substantial agreement among the interests directly
+affected and an effort to resolve objections. ISO describes how a committee
+judges agreement and handles sustained opposition. Either process can reach
+consensus while some participants still disagree. For a different issuing
+body, consult its own approval rules.[^ieee-standards-bylaws][^iso-directives]
 
 ## Criteria, evidence, and measurement
 
@@ -138,7 +137,7 @@ Not every valuable standard can be reduced to numerical metrics or automated
 tests. Testability is especially important when a technical specification
 permits an objective conformance claim: the subject, prerequisites, required
 behavior, normative strength, and relevant terms must be clear enough to
-evaluate. Human judgment remains legitimate when the standard names what
+evaluate.[^w3c-testable-requirements] Human judgment remains legitimate when the standard names what
 competence and evidence it requires rather than disguising discretion as
 mechanical measurement.
 
@@ -157,16 +156,15 @@ the relevant subject and version. A credible conformance claim identifies:
 
 Vocabulary varies by standards community. ISO commonly speaks of
 **conformity** and conformity assessment; W3C commonly speaks of
-**conformance**. Use the governing standard's term. Reserve **compliance** for
-contexts in which a law, regulation, contract, or policy makes satisfaction an
-obligation; a voluntary standard does not become legally binding merely by
-publication.
+**conformance**. Use the governing standard's term. If an organization is
+obliged to follow it, identify the policy, agreement, or regulation that
+creates that obligation.[^iso-definitions]
 
 Conformance is intentionally bounded. A conforming system can still be hard to
 use; a conforming process can still pursue a poor end; a conforming
 professional can still exercise bad judgment in an untested situation. W3C's
 accessibility guidance, for example, distinguishes satisfying testable success
-criteria from the wider question of usability.
+criteria from the wider question of usability.[^w3c-conformance]
 
 Standards should make their promise neither weaker nor stronger than their
 requirements. When excellence matters beyond conformance, preserve space for
@@ -179,3 +177,11 @@ examples, qualitative review, outcomes, and practitioner judgment.
 - [Principle document](../patterns/principle.md)
 - [Documentation quality](documentation-quality.md)
 - [Documentation audits](documentation-audits.md)
+
+[^odonovan-waking]: Oliver O’Donovan, [Waking](https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Waking.pdf).
+[^odonovan-resolving]: Oliver O’Donovan, [Resolving](https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Resolving.pdf).
+[^ieee-standards-bylaws]: IEEE SA Standards Board Bylaws, [§2.1](https://standards.ieee.org/about/policies/bylaws/sect1-3/).
+[^iso-directives]: ISO/IEC Directives, [Part 1, §2.5.7](https://www.iso.org/sites/directives/current/consolidated/).
+[^iso-definitions]: ISO, [Useful definitions](https://policy.iso.org/resources.html).
+[^w3c-testable-requirements]: W3C Working Group Note, [A Method for Writing Testable Conformance Requirements](https://www.w3.org/TR/test-methodology/).
+[^w3c-conformance]: W3C, [Understanding Conformance to WCAG 2.0](https://www.w3.org/WAI/WCAG20/Understanding/conformance.html).

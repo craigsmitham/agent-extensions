@@ -1,10 +1,10 @@
 ---
 type: Explainer
 title: Why a tutorial gives the learner something to do
-description: How a chosen exercise, visible feedback, and a tutor’s decisions let a learner encounter a skill in use.
+description: How a chosen exercise, recognizable feedback, and a tutor’s decisions let a learner encounter a skill in use.
 tags: [docs, tutorial, lesson, learning, feedback, diataxis]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-21T22:44:26Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:06:36Z }
 sources:
   - id: lesson
     resource: https://diataxis.fr/tutorials/
@@ -24,8 +24,8 @@ draws in the current direction. Turning changes the direction the next
 line will take.[^turtle]
 
 A finished picture would show the triangle immediately. Watching the
-arrow turn gives the learner something else. They can see that the tip
-has moved around while its position on the page has stayed the same.
+arrow turn gives the learner something else. They can see it change
+direction at the same spot in the window.
 When they send it forward again, the new edge reveals the consequence
 of their own last instruction. The picture records a sequence of
 decisions that the learner has had a hand in making.

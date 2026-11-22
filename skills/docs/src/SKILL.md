@@ -1,21 +1,18 @@
 ---
 name: docs
 description: >
-  Creates, reviews, organizes, audits, and remediates documentation using
-  portable craft. Explains how document forms work and helps select a design
-  for a reader’s need. Use for READMEs, tutorials, how-to guides, reference,
-  explanations, principle documents, playbooks, runbooks, reusable checklists,
-  and design pattern descriptions, collections, or languages across domains;
-  mining patterns for documentation;
-  reviewing pattern evidence or smells; reviewing one document; auditing bounded
-  documentation corpora or assessing documentation health; proposing structures,
-  paths, filenames, or titles; organizing collections; fixing links or stale
-  content; designing, adapting, and planning validation of checklists; and
-  implementing accepted documentation-audit findings. Apply when
-  documentation is the requested artifact, even when another skill covers its
-  subject. Not for editing always-on agent instructions, Word or Google Docs
-  artifacts, regular expressions, visual motifs, corpus audits beyond
-  documentation, or implementing a product or named design pattern.
+  Writes, reviews, organizes, audits, and repairs documentation across domains,
+  including knowledge-base articles, READMEs, tutorials, how-to guides,
+  reference, explanations, principles, playbooks, and runbooks. Explains
+  document forms and helps choose one for the reader’s purpose. Use for
+  designing, adapting, or planning validation of reusable checklists, mining
+  design patterns, reviewing pattern evidence or smells, and curating pattern
+  collections or languages. Covers documentation health, structure, filenames,
+  titles, links, stale content, and implementing accepted audit findings.
+  Applies when documentation is the requested artifact even if a different
+  skill covers the subject. Excludes always-on agent instructions, Word or
+  Google Docs artifacts, regular expressions, visual motifs, audits of other
+  corpora, and implementation of products or named design patterns.
 ---
 
 # Docs
@@ -23,9 +20,11 @@ description: >
 Create or assess documentation for the reader and subject in the brief.
 The typical setting is a software engineering workspace. Assume readers will
 access the documentation digitally unless the request or their working
-conditions call for another medium. Ground worked examples in the subject
-being documented. When an example uses a physical artifact, explain which
-part of the guidance carries over to other settings.
+conditions call for another medium. Ground examples in the reader’s domain.
+In guidance for authors, distinguish a reusable design choice from its
+implementation, such as keeping an interruption marker with the work item.
+In a checklist for the person doing the work, give the concrete action
+that fits their setting.
 
 Respect the requested scope and output format. Preserve applicable local
 authority and source support. Distinguish audit, review, authoring, and

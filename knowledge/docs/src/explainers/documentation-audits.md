@@ -11,10 +11,7 @@ sources:
   - id: documentation-organization
     resource: documentation-organization-and-discovery.md
     title: Documentation organization and discovery
-  - id: documentation-workflow
-    resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/docs/src/guides/documentation-workflow.md
-    title: Documentation workflow guide
-generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
 ---
 
 # Documentation audits
@@ -48,11 +45,12 @@ Select dimensions that answer the audit question rather than applying every
 possible checklist indiscriminately.
 
 - **Discovery and organization** — Can readers find the right material through
-  browsing, search, links, filenames, titles, and metadata?
+  browsing, search, links, filenames, titles, and metadata?[^documentation-organization]
 - **Reader-job and form fit** — Is each document's primary job recognizable,
   and does its form support that job?
-- **Accuracy and functional completeness** — Do claims agree with current
-  authoritative behavior, and is enough present for the stated job?
+- **Accuracy and functional completeness** — Do claims agree with the
+  governing sources for this subject and edition? Can readers find the
+  facts their task depends on?
 - **Conceptual clarity and coherence** — Are important distinctions explained,
   related concepts connected, and terms used consistently?
 - **Authority and provenance** — Can a maintainer tell what source governs a
@@ -87,8 +85,8 @@ than “all product documentation was audited.” A clean sample should not be
 generalized beyond the population it represents.
 
 Useful evidence includes source files, rendered navigation, search results,
-local instructions, authoritative code or interfaces, release history,
-analytics, support questions, validator output, and observed reader journeys.
+local instructions, adopted policies, collection records, product behavior,
+support questions, validator output, and observed reader journeys.
 Absence can also be evidence, but only relative to a demonstrated reader need
 or documentation obligation. A collection does not have a gap merely because
 one Diátaxis form or taxonomy category is absent.
@@ -135,3 +133,4 @@ traceable to evidence, then use the smallest appropriate authoring workflow.
 [^documentation-quality]: Documentation quality distinguishes objective,
     independently checkable functional qualities from interdependent qualities
     of human fit and flow.
+[^documentation-organization]: [Documentation organization and discovery](documentation-organization-and-discovery.md).

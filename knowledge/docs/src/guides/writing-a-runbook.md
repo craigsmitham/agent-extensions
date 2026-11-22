@@ -11,7 +11,7 @@ tags:
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:45:38Z'
+  at: '2026-11-22T00:07:34Z'
 sources:
 - id: aws
   resource: https://docs.aws.amazon.com/wellarchitected/latest/operational-excellence-pillar/ops_ready_to_support_use_runbooks.html
@@ -23,16 +23,16 @@ sources:
 Start with a task the team can already perform. Obtain the maintained
 procedure or observe an authorized operator on a rehearsal target.
 Ask what request lets them start, which state changes, and what they would
-show the next shift as proof of completion. AWS recommends naming the
-outcome, required permissions, error handling, and owner, then asking a
-second operator to run the instructions.[^aws]
+show the next person as proof of completion. For cloud operations, AWS
+recommends naming the outcome, required permissions, error handling, and
+owner, then asking a teammate to try the instructions.[^aws]
 
 ## Pin the request to a target and an end state
 
 Suppose a station asks for a runbook to publish its approved timetable.
 For this worked example the display controller has a rehearsal screen,
-revision history, and a **Publish** control. Confirm the local equivalents
-with the operator. Ask who approves a revision and who may publish it.
+revision history, and a **Publish** control. Ask the operator who approves
+a revision and who may publish it.
 Write the first line of the draft so it can stop a mistaken change.
 
 > **Publish the approved timetable to the named display.** Start with a
@@ -71,15 +71,16 @@ and contact before adopting the procedure locally.
 
 ## Rehearse the handoff
 
-Give a second operator the draft, a signed sample request and a rehearsal
-display. Have them run the normal case. Then supply a target that still
+Give a second operator the draft and a case they can safely rehearse.
+At the station, supply a signed sample request and a rehearsal display.
+Have them run the normal case. Then supply a target that still
 shows the old revision after the controller acknowledges the change.
 Inspect both the display and the record delivered to dispatch. In the
 second case, can the lead tell which revision was visible and whether
 anyone tried to publish twice?
 
-Revise where the operator supplied a step from memory. Record which
-target and controller version the rehearsal covered, who maintains the
-runbook, and what equipment or procedure change calls for another trial.
+Revise where the operator supplied a step from memory. Record the
+conditions the rehearsal covered, who maintains the runbook, and what
+change to the work would call for another trial.
 
 [^aws]: [AWS Well-Architected — Use runbooks to perform procedures](https://docs.aws.amazon.com/wellarchitected/latest/operational-excellence-pillar/ops_ready_to_support_use_runbooks.html).

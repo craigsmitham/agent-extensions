@@ -8,10 +8,10 @@ sources:
   - id: organization
     resource: ../explainers/documentation-organization-and-discovery.md
     title: Documentation organization and discovery
-  - id: documentation-craft-guide
-    resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/docs/src/guides/documentation-craft.md
-    title: Documentation craft guide
-generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
+  - id: documentation-craft
+    resource: ../explainers/documentation-craft.md
+    title: Documentation craft
+generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
 ---
 
 # Organizing and naming documentation
@@ -72,7 +72,7 @@ Prefer adjacency for documents that share meaning, authority, and change over
 documents that merely share a metadata value. This prevents a mechanically
 tidy taxonomy from fragmenting the subject.
 
-## 3. Choose the primary physical axis
+## 3. Choose how readers will browse this collection
 
 Use the strongest evidence at this scope:[^organization]
 
@@ -112,14 +112,14 @@ its form.
 | Document job | Filename shape | Example |
 | --- | --- | --- |
 | Explain a concept | Distinctive subject-oriented noun phrase | `transaction-isolation.md` |
-| Guide an action | Verb or outcome phrase | `writing-release-notes.md` |
-| State reference facts | Named interface, object, or fact set | `payment-status-fields.md` |
+| Guide an action | Verb or outcome phrase | `booking-a-rehearsal-room.md` |
+| State reference facts | Name of the item or facts readers look up | `instrument-loan-periods.md` |
 | Document an operational procedure | Task-specific name | `rotate-service-credentials.md` |
 
 Avoid generic leaf names such as `overview.md`, `guide.md`, or `concept.md`
 unless their enclosing scope is guaranteed to remain present in every URL,
 search result, tab, export, and citation. Avoid mechanical names such as
-`writing-guide.md` when `writing-release-notes.md` reveals the actual task.
+`booking-guide.md` when `booking-a-rehearsal-room.md` reveals the actual task.
 
 Use stable domain language. Exclude temporary project phases, current team
 names, and implementation details unless they define the document's enduring
@@ -130,7 +130,7 @@ scope.
 The title should remain clear in a flattened search result or backlink.
 
 - Give explainers a subject or distinction: “Transaction isolation.”
-- Give guides an action or outcome: “Writing release notes.”
+- Give guides an action or outcome: “Booking a rehearsal room.”
 - Avoid identical display titles for paired documents unless their interface
   always supplies reliable context.
 - Align title and filename closely enough that a reader can predict one from
@@ -141,7 +141,7 @@ carry the title's entire semantic burden.
 
 ## 7. Design the secondary discovery routes
 
-Use one authoritative physical location and expose the secondary axis through:
+Keep one maintained copy of each page. Readers can reach it through:
 
 - local and root indexes;
 - type, subject, and lifecycle metadata;
@@ -156,7 +156,7 @@ event, symptom, or reader intent that makes it relevant. Do not mistake access,
 knowledge, or state preconditions for the reason a reader should select it.
 The general document-authoring workflow still applies: match the content to
 its reader job before applying host-specific paths and
-metadata.[^documentation-craft-guide]
+metadata.[^documentation-craft]
 
 ## 8. Plan a rename or move as a migration
 
@@ -216,6 +216,4 @@ match their targets.
 [^organization]: Documentation organization and discovery defines form-first
     and subject-first grouping and treats semantic adjacency as the deciding
     relationship.
-[^documentation-craft-guide]: Documentation craft begins with the reader
-    need and applies host paths, metadata, and validators after the document's
-    job is clear.
+[^documentation-craft]: [Documentation craft](../explainers/documentation-craft.md).

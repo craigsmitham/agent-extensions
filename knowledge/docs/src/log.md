@@ -2,6 +2,27 @@
 
 ## 2026-11-21
 
+- Reviewed all 56 concepts from their individual entry points. The
+  [how-to explainer](explainers/how-to.md) keeps the folded booklet as a
+  task with a physical outcome. The [how-to authoring guide](guides/writing-a-how-to-guide.md)
+  now follows a volunteer preserving uncertainty in a catalog date. The
+  [explainer-writing guide](guides/writing-an-explainer.md) follows a
+  reader’s question about a library’s reported wait time.
+- Revised checklist prompts around where people can observe the work,
+  record a result, or recover after an interruption. Kept the paper
+  flight-deck findings in their original setting and traced claims about
+  code inspection and learning to the comparisons the studies actually made.
+  Other worked examples include an oral-history publication decision and
+  two routes through a facilitation pattern collection.
+- Tried the revised skill on three fresh briefs. A quilt-archive article
+  distinguished maker from donor and handled an unidentified maker. A
+  Git how-to initially assumed a remote name when describing recovery.
+  After revising the authoring guide, the replay produced a ZIP of the
+  tagged catalog and preserved local edits. A costume pickup checklist
+  retained the hold and interruption rules and fit a quarter sheet at
+  12-point body size. These were draft reviews, a command trial, and a
+  layout check. Use by volunteers at work remains untested.
+
 - Clarified the pack’s usual workspace and digital reading context. The
   [learning-checklist guide](guides/designing-a-learning-checklist.md) now
   shows how learners can draft an answer before revealing feedback on a

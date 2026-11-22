@@ -8,21 +8,16 @@ sources:
   - id: diataxis-quality
     resource: https://diataxis.fr/quality/
     title: Diátaxis — Towards a theory of quality in documentation
-  - id: diataxis-quality-src
-    resource: https://github.com/evildmp/diataxis-documentation-framework/blob/main/source/quality.rst
-    title: Diátaxis source — quality.rst
-  - id: diataxis-start
-    resource: https://diataxis.fr/start-here/
-    title: Diátaxis — Start here
-generated: { by: codex/gpt-6, at: 2026-11-11T19:52:17Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
 ---
 
 # Documentation quality
 
-Portable **understanding** of two layers of quality in documentation:
-**functional quality** and **deep quality**. Form-aware craft (the four jobs, form
-matching, and workflow) mainly conditions deep quality; it does not replace
-accuracy, completeness, or other functional obligations.
+An accurate rehearsal schedule can still be frustrating if a singer has to
+read every entry to find where their section meets. Diátaxis distinguishes
+**functional quality**, such as getting the room and time right, from
+**deep quality**, which includes how well the schedule fits the person
+using it.[^diataxis-quality]
 
 Practical authoring principles (one job per document, match form to job, link
 rather than restate, stay accurate enough for the job, and so on) live in
@@ -44,12 +39,12 @@ such as:
 These traits are largely **independent**: material can be accurate yet
 incomplete, complete yet inconsistent, or accurate and complete yet still
 useless for the task at hand. Failures are often **measurable** or at least
-checkable against the world the docs describe (the product, the API, the
-process).
+checkable against the world the docs describe.
 
 Attaining functional quality needs domain skill, attention, and ongoing
 maintenance. Form-aware craft **does not create** functional quality by itself.
-Every release can make yesterday’s correct page wrong again.
+An updated timetable or a new software release can make yesterday’s correct
+page wrong again.
 
 ## Deep quality
 
@@ -118,10 +113,10 @@ layers on purpose:
 
 | Principle (examples) | Layer |
 | --- | --- |
-| Stay accurate enough for the job; refresh stale how-tos and reference | Functional |
+| Recheck facts against the authority for the subject | Functional |
 | One primary job; match form to job; link rather than restate | Deep (need fit, flow) |
 | Prefer clarity of outcome near the top | Both (skip wrong page; serve the need) |
-| Resist feature-only IA without reader-need forms | Deep (portfolio consistency of jobs) |
+| Check whether readers can find the right help from their starting point | Deep (fit and flow) |
 
 When reviewing, ask both:
 
@@ -134,3 +129,5 @@ When reviewing, ask both:
 - [Documentation audits](documentation-audits.md) · [Documentation audit report contract](../guides/auditing-documentation.md)
 - [Documentation craft](documentation-craft.md)
 - [Documentation workflow](documentation-workflow.md)
+
+[^diataxis-quality]: Diátaxis, [Towards a theory of quality in documentation](https://diataxis.fr/quality/).

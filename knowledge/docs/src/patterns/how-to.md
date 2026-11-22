@@ -22,7 +22,7 @@ sources:
 - id: python-logging-cookbook
   resource: https://docs.python.org/3/howto/logging-cookbook.html
   title: Python — Logging Cookbook
-generated: { by: codex/gpt-6, at: 2026-11-21T22:42:03Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:07:45Z }
 ---
 
 # How-to guide
@@ -42,12 +42,12 @@ would otherwise have to assemble from separate interface descriptions.
 The cookbook uses different recipes for other logging tasks.[^python-logging-cookbook]
 
 A novice asking for a first experience with logging has a different need.
-A [tutorial](tutorial.md) can provide a controlled exercise and feedback.
+A [tutorial](tutorial.md) can provide a controlled exercise and feedback.[^diataxis-tutorials-how-to]
 An experienced programmer asking which levels a handler accepts needs
 [reference](reference.md). A situation that still requires choosing what
 kind of response to make may call for a [playbook](playbook.md). Routine
 operational work with prescribed checks, recovery, and escalation may
-justify a [runbook](runbook.md).[^diataxis-tutorials-how-to]
+justify a [runbook](runbook.md).
 
 ## What the design costs
 

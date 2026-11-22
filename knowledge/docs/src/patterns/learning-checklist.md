@@ -8,18 +8,15 @@ sources:
 - id: checklist-design-origin
   resource: https://github.com/craigsmitham/agent-extensions/blob/156c3d4346bee6874ab3d356c19446cf6425713b/skills/checklist-design/src/references/learning-checklists.md
   title: Craig Smitham — Learning checklists, version 0.1.10
-- id: regulated-learning
-  resource: https://pubmed.ncbi.nlm.nih.gov/37034913/
-  title: Shao et al. — Effects of regulated learning scaffolding on regulation strategies and academic performance
-- id: test-enhanced-learning
-  resource: https://pubmed.ncbi.nlm.nih.gov/29390949/
-  title: Green et al. — Test-enhanced learning in health professions education
+- id: fading
+  resource: https://doi.org/10.1080/00220970209599510
+  title: 'Renkl et al. — From Example Study to Problem Solving: Smooth Transitions Help Learning'
 - id: expertise-reversal
   resource: https://www.tandfonline.com/doi/abs/10.1207/S15326985EP3801_4
   title: Kalyuga et al. — The expertise reversal effect
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:51:04Z'
+  at: '2026-11-22T00:07:11Z'
 ---
 
 # Learning checklist
@@ -35,7 +32,7 @@ a way to discover which predictions held up.[^checklist-design-origin]
 
 A few prompts can make practice more deliberate at relatively little cost.
 If someone still needs a demonstration and a carefully arranged first
-experience, the card can sit within a [tutorial](tutorial.md). If the job
+experience, the prompts can sit within a [tutorial](tutorial.md). If the job
 calls for a reliable reminder every time, an
 [execution checklist](execution-checklist.md) can continue to serve an
 experienced practitioner. Removing a standing operational check changes how
@@ -50,11 +47,11 @@ support earns its place here.[^expertise-reversal]
 
 ## What the evidence supports
 
-Shao and colleagues synthesized research on several kinds of regulated-learning
-scaffolding. Green and colleagues reviewed test-enhanced learning in health
-professions education. Both address broader interventions. Neither establishes
-that a particular checklist improves independent judgment, nor specifies a
-schedule for withdrawing it.[^regulated-learning][^test-enhanced-learning]
+Renkl and colleagues studied examples that left progressively more steps
+for students to solve. Students benefited on new problems similar to those
+they had practiced.[^fading] To see whether a checklist helps a novice
+reviewer in the same way, give them a different draft that calls for the
+same judgment and see what they notice without the prompts.
 
 Completing a prompted task shows performance with the aid. Delayed work on a
 familiar case can reveal retention. A changed case can show whether the learner
@@ -68,6 +65,5 @@ For a worked design with feedback and a transfer exercise, follow
 [How to design a learning checklist](../guides/designing-a-learning-checklist.md).
 
 [^checklist-design-origin]: Craig Smitham, Learning checklists, version 0.1.10.
-[^regulated-learning]: Shao and colleagues, [Effects of regulated learning scaffolding on regulation strategies and academic performance](https://pubmed.ncbi.nlm.nih.gov/37034913/).
-[^test-enhanced-learning]: Green and colleagues, [Test-enhanced learning in health professions education](https://pubmed.ncbi.nlm.nih.gov/29390949/).
+[^fading]: Renkl and colleagues, [From Example Study to Problem Solving](https://doi.org/10.1080/00220970209599510).
 [^expertise-reversal]: Kalyuga and colleagues, [The expertise reversal effect](https://www.tandfonline.com/doi/abs/10.1207/S15326985EP3801_4).

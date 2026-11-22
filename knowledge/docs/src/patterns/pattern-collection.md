@@ -4,14 +4,14 @@ title: Pattern collection
 description: When readers need to choose among related patterns, offer routes from their situations to useful choices, explain complementary or opposing responses, and maintain shared knowledge through feedback from use.
 tags: [docs, documentation-pattern, pattern-collection, pattern-language, relationships, curation]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-21T22:48:05Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:07:34Z }
 sources:
   - id: catalog
     resource: https://microservices.io/patterns/index.html
     title: Chris Richardson — A pattern language for microservices
-  - id: messaging
-    resource: https://www.enterpriseintegrationpatterns.com/patterns/messaging/IdempotentReceiver.html
-    title: Gregor Hohpe and Bobby Woolf — Idempotent Receiver
+  - id: group-works
+    resource: https://groupworksdeck.org/patterns_by_category
+    title: Group Works — Patterns by Category
   - id: counterbalance
     resource: https://alistaircockburn.com/Talk%202023-10%20PLOP%2030%20yrs%20patterns.pdf
     title: Alistair Cockburn — The take-home value of a pattern is its name
@@ -39,12 +39,12 @@ service boundaries, and collaboration. An engineer choosing how to
 decompose a service can see alternatives before learning their
 names.[^catalog]
 
-A reader arriving directly at an entry may need the neighboring choices
-after understanding the first one. Hohpe and Woolf place *Idempotent
-Receiver* within their catalog of messaging endpoints and offer other
-routes through the collection. The observable feature is navigability.
-Whether a particular team makes better design decisions requires evidence
-from its work.[^messaging]
+Group Works organizes facilitation patterns by needs that arise in
+meetings. Someone looking for ways to make sense of a discussion can
+find *Distilling* and *Harvesting* under *Inquiry & Synthesis*. Someone
+who already knows either name can use the alphabetical index. Both
+routes lead to the same entry. Whether facilitators find the right help
+for a particular gathering is a question to try with them.[^group-works]
 
 ## Costs and tensions
 
@@ -73,6 +73,6 @@ trying, and maintaining your own collection, see
 [How to curate a pattern collection](../guides/curating-a-pattern-collection.md).
 
 [^catalog]: Chris Richardson, [A pattern language for microservices](https://microservices.io/patterns/index.html).
-[^messaging]: Gregor Hohpe and Bobby Woolf, [Idempotent Receiver](https://www.enterpriseintegrationpatterns.com/patterns/messaging/IdempotentReceiver.html).
+[^group-works]: Group Works, [Patterns by Category](https://groupworksdeck.org/patterns_by_category), with a link to its name index.
 [^counterbalance]: Alistair Cockburn, [PLoP 2023 talk, slide 27](https://alistaircockburn.com/Talk%202023-10%20PLOP%2030%20yrs%20patterns.pdf#page=27).
 [^value]: Rebecca Wirfs-Brock and Lise Hvatum, [The Value of Pattern Collections](https://wirfs-brock.com/rebecca/papers/valueofpatterncollections/), preprint.

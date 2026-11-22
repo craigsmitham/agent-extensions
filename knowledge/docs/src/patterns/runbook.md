@@ -26,7 +26,7 @@ sources:
   title: Diátaxis — How-to guides
 generated:
   by: codex/gpt-6
-  at: '2026-11-11T17:40:43Z'
+  at: '2026-11-22T00:07:34Z'
 ---
 
 # Runbook
@@ -56,8 +56,8 @@ is urgent.
   unrelated background.
 - **Human judgment versus automation** — reliable steps can be automated, while
   remaining decisions and responsibility must be explicit.
-- **Current accuracy versus maintenance cost** — system changes can make a
-  command, threshold, or prerequisite stale.
+- **Current accuracy versus maintenance cost** — a change in equipment,
+  responsibilities, or working conditions can make a step obsolete.
 
 To document a procedure and rehearse its failure path, follow
 [How to write a runbook](../guides/writing-a-runbook.md).
@@ -77,8 +77,8 @@ Use a runbook when:
   [Playbook](playbook.md), then invoke runbooks for selected tasks.
 - No established procedure covers the task or current conditions — investigate
   or escalate before claiming a repeatable path.
-- The reader is learning the system from zero — provide a tutorial separately.
-- The material is only a system inventory — use reference documentation.
+- The reader needs guided practice to acquire the skill — consider a tutorial.
+- The reader needs facts to look up during work — use reference documentation.
 - Competent users need only prompts for known actions or a bounded check — use
   a [Checklist](checklist.md), linking procedural detail where needed.
 
@@ -143,8 +143,8 @@ its execution concerns without making the terminology universal.
 - [How-to guide](how-to.md) — supplies the underlying procedure craft.
 - [Checklist](checklist.md) — supports bounded execution prompts, verification,
   or readiness decisions within or alongside the procedure.
-- [Reference](reference.md) — owns inventories and exact
-  system facts that a runbook can link instead of duplicating.
+- [Reference](reference.md) — supplies exact facts a runbook can link
+  where the operator needs them.
 
 [^aws-runbooks]: AWS — Use runbooks to perform procedures.
 [^aws-runbook-branching]: AWS — Run conditional automation steps.

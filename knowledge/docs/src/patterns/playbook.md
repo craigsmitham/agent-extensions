@@ -28,7 +28,7 @@ sources:
   title: Red Hat — What is an Ansible playbook
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:46:21Z'
+  at: '2026-11-22T00:07:34Z'
 ---
 
 # Playbook
@@ -36,8 +36,8 @@ generated:
 Choose a playbook when a team recognizes a recurring situation but needs to
 investigate, choose among responses, or coordinate people whose observations
 change what others should do. The team needs enough experience to offer
-defensible choices, including a way to escalate when the available evidence
-fits none of them.[^aws-playbooks]
+defensible choices, including a way to get help when the evidence fits
+none of them.
 
 ## Illustrative example
 

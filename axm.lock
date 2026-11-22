@@ -45,8 +45,8 @@ axe = { package = "registry.agentxm.ai/@agentxm/packs/axe", name = "@agentxm/pac
 contract = 1
 
 [projections.knowledge.units."AGENTS.md"]
-gen = "sha256:470aa0a000da2cf7e94d9cf4c24bd77f1b75482ddd72334c78060a7233579368"
-output = "sha256:01a073722a36bfe42172c76f355640fb319eb1482795b9b2c49f3dc679112fd8"
+gen = "sha256:19bcc2740e5695df16f2d118e89d9fdfda1e6577dd9ce6adb6f8e8f94e37a162"
+output = "sha256:5aa3ea82a7868444058c97cfcb24546bef76b56eb4b3ee926b75789d8c909bd2"
 
 [projections.instructions]
 contract = 1

@@ -4,7 +4,7 @@ title: How principles guide judgment
 description: Why a shared commitment can guide two people toward different actions, and what gives their decisions a common basis.
 tags: [docs, principle, judgment, practical-reason, authority, explanation]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-21T22:44:16Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:07:34Z }
 sources:
   - id: zen
     resource: https://peps.python.org/pep-0020/
@@ -13,8 +13,8 @@ sources:
     resource: https://peps.python.org/pep-0008/
     title: PEP 8 — Style Guide for Python Code
   - id: goods
-    resource: https://globalfacultyinitiative.net/content_item/320
-    title: Oliver O’Donovan — Created Order / Theology
+    resource: https://facultyinitiative.net/article/the-christian-tradition-never-agreed-on-when-rebellion-is-justified
+    title: Oliver O’Donovan — The Christian Tradition Never Agreed on When Rebellion Is Justified
   - id: perspectives
     resource: https://frame-poythress.org/wp-content/uploads/2014/04/John-Frame-Doctrine-of-the-Christian-Life-Excerpt.pdf
     title: John Frame — The Doctrine of the Christian Life
@@ -76,5 +76,5 @@ different choice. For help developing such a document, see
 
 [^zen]: Tim Peters, [The Zen of Python](https://peps.python.org/pep-0020/).
 [^style]: [PEP 8](https://peps.python.org/pep-0008/), introductory guidance and function names.
-[^goods]: Oliver O’Donovan, [Created Order / Theology](https://globalfacultyinitiative.net/content_item/320).
+[^goods]: Oliver O’Donovan, [response to Nigel Biggar on created order](https://facultyinitiative.net/article/the-christian-tradition-never-agreed-on-when-rebellion-is-justified), first question.
 [^perspectives]: John Frame, [The Doctrine of the Christian Life](https://frame-poythress.org/wp-content/uploads/2014/04/John-Frame-Doctrine-of-the-Christian-Life-Excerpt.pdf), chapter 3.

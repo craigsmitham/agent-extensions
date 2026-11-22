@@ -63,7 +63,7 @@ axm knowledge concepts get '@craigsmitham/knowledge/docs#explainers/readiness-ch
 axm knowledge concepts get '@craigsmitham/knowledge/docs#patterns/readiness-checklist'
 ```
 
-For situations that span several reader needs, [Documentation craft](../../knowledge/docs/src/explainers/documentation-craft.md)
+For situations that span several reader needs, [Documentation craft](https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/docs/src/explainers/documentation-craft.md)
 illustrates how to select and combine designs.
 
 ## Checklist consolidation in 0.9.0

@@ -4,7 +4,7 @@ title: How to write a tutorial
 description: When someone needs a first experience with a skill, build a short lesson around something they can do, observe, and try again.
 tags: [docs, tutorial, lesson, authoring, revision, learning, diataxis]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-21T22:44:26Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:06:36Z }
 sources:
   - id: lesson
     resource: https://diataxis.fr/tutorials/
@@ -53,9 +53,9 @@ noticing.[^calculator]
 > Add a row. Enter `rows = 7`, then enter `rows * 8` on the next line.
 > You now have room for 56 people.
 
-## Revise for the learner at the keyboard
+## Revise around the feedback the learner gets
 
-Read the draft looking only at what the learner can see after each action.
+Read each step for what the learner can observe and what it tells them.
 When assignment succeeds, Python prints no confirmation. If a draft
 promises a result after every command, someone following it may repeat
 the assignment and wait again. Put the expected quiet moment beside the

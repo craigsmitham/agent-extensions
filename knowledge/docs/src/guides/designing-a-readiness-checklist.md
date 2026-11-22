@@ -4,7 +4,7 @@ title: How to design a readiness checklist
 description: When a named person must decide whether work can proceed, turn the governing conditions into current evidence, a disposition, and a way to reopen a held decision.
 tags: [docs, readiness-checklist, authoring, readiness, evidence, decision, hold]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-21T22:49:04Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:07:11Z }
 sources:
   - id: orr
     resource: https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_7123_001C_&page_name=all
@@ -34,7 +34,8 @@ its successful conclusion.[^orr]
 
 ## 2. Put the decision and its alternatives on the page
 
-An excerpt from the desk's draft card could read as follows.
+Put the prompts where the lead records the sales-opening decision. For
+example, the concert’s booking record could include this checklist.
 
 > **Open public sales for this concert?** The box office lead records the
 > decision before releasing the inventory.
@@ -51,7 +52,7 @@ An excerpt from the desk's draft card could read as follows.
 >   manager and reconsider when the current evidence is available.
 
 Use the [shared checklist design guide](designing-a-checklist.md) for item
-wording, handoffs, and how to try the card at the point of work. Keep
+wording, handoffs, and how to try the checklist at the point of work. Keep
 inventory repair instructions in the procedure the technician uses after
 a discrepancy. The decision owner needs to know when to reconvene.
 
@@ -73,6 +74,6 @@ For the ticket desk, a useful trial log records which revision the lead
 actually inspected, whether a stale report caused a hold, and whether a
 discrepant seat reached public sales. For a reusable candidate, include the
 [maintainer note](designing-a-checklist.md#decide-what-would-justify-keeping-it)
-with the card and identify any open ownership or evidence questions.
+with the checklist and identify any open ownership or evidence questions.
 
 [^orr]: NASA, [Systems Engineering Processes and Requirements](https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_7123_001C_&page_name=all), appendix G.12, table G-12.

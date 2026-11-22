@@ -11,7 +11,7 @@ sources:
 - id: fading
   resource: https://doi.org/10.1080/00220970209599510
   title: From Example Study to Problem Solving
-generated: { by: codex/gpt-6, at: 2026-11-21T22:51:04Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:07:11Z }
 ---
 
 # How a learning checklist changes practice
@@ -21,14 +21,15 @@ can follow a colleague’s itinerary from room to room. Asked to plan a
 tour for a visiting choir, they pick three instruments but have trouble
 saying what the group could notice by seeing them together.
 
-Imagine a practice card with two prompts. *What would you like the group
-to notice? Which detail on each object will help them see it?* The guide
+Imagine the guide preparing for the tour in the museum’s shared planning
+notes. Two prompts sit above the proposed stops. *What would you like the
+group to notice? Which detail on each object will help them see it?* The guide
 might choose three objects that make sound in different ways and point
 to a string, a membrane, and a column of air. A colleague can now give
 feedback on an actual connection the guide made. A list of object names
 would have shown only the result of that reasoning.
 
-## What the card contributes
+## What the prompts contribute
 
 Answering before consulting a model asks the learner to retrieve and use
 what they know. Butler studied a related mechanism in experiments with
@@ -38,9 +39,9 @@ repeatedly studied it. The final test took place a week later. This was
 evidence about retrieval under those conditions. The museum exercise
 illustrates a possible use of the idea.[^butler]
 
-The card also supplies a cue the guide may eventually have to generate.
-If every successful practice tour begins with those two questions already
-printed, it remains possible that the paper is doing the remembering.
+The prompts also supply a cue the guide may eventually have to generate.
+If every successful tour plan begins with those two questions, the
+supervisor still has to find out whether the guide can frame them unaided.
 Renkl and colleagues studied a transition from worked examples to problems
 with progressively more of the solution left to the learner. Their
 experiments found benefits on near-transfer problems. The object tour
@@ -48,11 +49,11 @@ would need its own trial.[^fading]
 
 Later, a group interested in the history of local industry requests a
 tour. Can the guide select a thread connecting the objects and identify
-what visitors can see for themselves, with the card put away? That new
+what visitors can see for themselves, without the practice prompts? That new
 occasion gives the supervisor evidence about independent use. It also
 shows why the intention behind a checklist matters. A permanent reminder
-to count every visitor at the exit serves a different purpose, even if
-the two cards fit in the same pocket.
+to count every visitor at the exit serves a different purpose. It can
+keep helping an experienced guide long after the practice prompts come away.
 
 For help choosing the form, see the [Learning checklist pattern](../patterns/learning-checklist.md).
 To develop practice, feedback, and an independent check, see

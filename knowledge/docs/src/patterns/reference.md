@@ -1,7 +1,7 @@
 ---
 type: Pattern
 title: Reference
-description: When readers need authoritative facts during work, organize accurate, consistently structured entries around the system so they can locate and compare details quickly.
+description: When readers need authoritative facts during work, organize accurate, consistently structured entries around the subject so they can locate and compare details quickly.
 tags:
 - docs
 - reference
@@ -18,7 +18,7 @@ sources:
 - id: python-logging-reference
   resource: https://docs.python.org/3/library/logging.html
   title: Python — Logging reference
-generated: { by: codex/gpt-6, at: 2026-11-21T22:46:07Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:06:36Z }
 ---
 
 # Reference
@@ -30,9 +30,9 @@ remember its exact properties, parameters, constraints, or behavior. They need
 to enter at an arbitrary point and compare entries. Narrative order and
 inconsistent descriptions make that lookup difficult.
 
-Use this pattern when the described surface and its authoritative source are
-identifiable. Choose explanation for a connected account of why it works, or
-a how-to when readers need a route to a goal.
+Use this pattern when you can name what the reference covers and who or
+what establishes its facts. Choose explanation for a connected account of
+why something works, or a how-to when readers need a route to a goal.
 
 ## Design response and tradeoffs
 
@@ -54,20 +54,15 @@ detail can invalidate a decision or procedure that depends on it.
 
 ## Example and evidence
 
-An illustrative configuration reference might give each setting a stable name,
-type, default, allowed values, and version-specific constraints. A reader can
-compare two settings without following an introductory lesson.
+The Python logging reference gives each class and function its own entry.
+A reader arriving at the page for a first lesson or a practical recipe
+can follow its links to tutorials or the cookbook. Those routes illustrate
+the design. Assessing lookup speed would require observing readers with
+a question in hand.[^python-logging-reference] Diátaxis describes how
+the arrangement of reference entries can reflect the thing they
+describe.[^diataxis-reference]
 
-The Python logging reference organizes classes and functions into addressable
-entries and directs readers to tutorials and the cookbook for other needs. It illustrates
-how a reader can move from lookup to learning or task guidance.[^python-logging-reference]
-Diátaxis gives the rationale for following the structure of the described system.[^diataxis-reference]
-
-This pattern description is a draft synthesis. The observed structure supports
-the proposed arrangement, not a measured claim about lookup speed or the
-accuracy of every documented entry.
-
-For the relationship between an interface and its documentation, see
+For an example of how the structure of a subject guides lookup, see
 [Why reference follows the shape of the thing it describes](../explainers/reference.md).
 To build and verify entries, use [How to write reference documentation](../guides/writing-reference-documentation.md).
 

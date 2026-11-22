@@ -12,7 +12,7 @@ tags:
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:50:25Z'
+  at: '2026-11-22T00:07:11Z'
 sources:
 - id: flight
   resource: https://ntrs.nasa.gov/citations/19910017830
@@ -29,8 +29,9 @@ At the end of a long day she hands a sealed crate to the courier.
 The signed receipt is still on her desk. Both people knew a receipt was
 required. Each thought the other had collected it.
 
-A checklist can change this particular moment. Imagine a prompt fixed to
-the trolley where the handover takes place. *Who has the signed receipt?*
+A checklist can change this particular moment. Imagine the registrar
+opening the dispatch record at the trolley and seeing a prompt.
+*Who has the signed receipt?*
 The registrar can ask the question while the courier is still there.
 The answer can uncover a missing document while it is cheap to fetch.
 A tick added later at the registrar’s desk records a very different event.
@@ -39,7 +40,7 @@ A tick added later at the registrar’s desk records a very different event.
 
 A checklist can remind someone to perform a familiar action, or direct
 attention to the state left by work already performed. It can also make
-two people's knowledge available to each other. The same physical list
+two people's knowledge available to each other. The same checklist
 might do all three. Degani and Wiener describe flight crews using lists
 to configure equipment or to check a configuration afterward. Their
 observations also show how the spoken exchange between crew members and

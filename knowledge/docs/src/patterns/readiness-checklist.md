@@ -13,7 +13,7 @@ sources:
   title: Conroy et al. — Development, implementation, use and maintenance of safety checklists
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:49:04Z'
+  at: '2026-11-22T00:07:11Z'
 ---
 
 # Readiness checklist
@@ -46,8 +46,9 @@ condition, and a [runbook](runbook.md) can guide work after release.
 
 ## Evidence and application
 
-Conroy and colleagues describe a team pause in which responsible
-participants verify their completed tasks. It illustrates a way to
+In their safety checklist guidance for medical physicists, Conroy and
+colleagues describe a pause in which the group responsible for each task
+confirms its completion and accuracy. It illustrates a way to
 coordinate observations. The broader pattern of an accountable release
 decision is a synthesis informed by that example and by earlier checklist
 design guidance.[^aapm-checklists][^checklist-design-origin]

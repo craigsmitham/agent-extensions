@@ -12,11 +12,11 @@ sources:
   resource: https://www.prisma-statement.org/prisma-2020
   title: PRISMA — PRISMA 2020 statement and reporting checklists
 - id: inspection-comparison
-  resource: https://publica.fraunhofer.de/entities/publication/eb2a71d4-2bfc-43c8-a5bf-8a03f643c016
-  title: Perspective-based versus checklist-based software inspection
+  resource: https://doi.org/10.1109/32.922713
+  title: Laitenberger et al. — An Internally Replicated Quasi-Experimental Comparison of Checklist and Perspective-Based Reading of Code Documents
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:51:04Z'
+  at: '2026-11-22T00:07:11Z'
 ---
 
 # Reporting and review checklist
@@ -52,10 +52,12 @@ A long list of generic questions costs time even where most are inapplicable.
 Evaluate a reporting aid by whether someone else can trace required coverage
 and find unresolved gaps. For an inspection aid, examine whether findings
 are material and supported, which defects were missed, how often people
-reported the same defect, and how much review effort it took. Empirical
-comparisons of inspection methods apply to the artifacts, participants, and
-conditions studied. A higher raw count alone can include repeated or invalid
-findings.[^inspection-comparison][^checklist-design-origin]
+reported the same defect, and how much review effort it took.[^checklist-design-origin]
+For example, Laitenberger and colleagues compared two ways of inspecting
+code at Bosch Telecom. Their teams found more distinct defects with
+perspective-based reading than with checklist-based reading. Counting
+distinct defects gives one issue reported by several reviewers the same
+weight as one found by a single reviewer.[^inspection-comparison]
 
 For an account of what a located passage establishes, read
 [What a reporting checklist makes visible](../explainers/reporting-review-checklist.md).
@@ -64,4 +66,4 @@ For a worked review with an exclusion and an open finding, follow
 
 [^checklist-design-origin]: Craig Smitham, Validation and lifecycle, version 0.1.10.
 [^prisma]: PRISMA, [PRISMA 2020 statement and reporting checklists](https://www.prisma-statement.org/prisma-2020).
-[^inspection-comparison]: [Perspective-based versus checklist-based software inspection](https://publica.fraunhofer.de/entities/publication/eb2a71d4-2bfc-43c8-a5bf-8a03f643c016).
+[^inspection-comparison]: Laitenberger, El Emam, and Harbich, [An Internally Replicated Quasi-Experimental Comparison of Checklist and Perspective-Based Reading of Code Documents](https://doi.org/10.1109/32.922713).

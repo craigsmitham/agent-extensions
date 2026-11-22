@@ -27,12 +27,12 @@ sources:
 - id: saga
   resource: https://microservices.io/patterns/data/saga.html
   title: Chris Richardson — Saga
-- id: idempotent-receiver
-  resource: https://www.enterpriseintegrationpatterns.com/patterns/messaging/IdempotentReceiver.html
-  title: Gregor Hohpe and Bobby Woolf — Idempotent Receiver
+- id: harvesting
+  resource: https://groupworksdeck.org/patterns/Harvesting
+  title: Group Works — Harvesting
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:48:16Z'
+  at: '2026-11-22T00:07:34Z'
 ---
 
 # Pattern description
@@ -66,12 +66,14 @@ requires evidence about application.[^generative-patterns]
 Richardson's *Saga* gives the setting in which services each own their data.
 It describes how to coordinate local transactions, presents choreography and
 orchestration as alternatives, and names costs including the need to design
-compensating actions and account for isolation. Hohpe and Woolf’s public
-*Idempotent Receiver* excerpt is much shorter. It names a property and
-gives two ways to achieve it. Both descriptions leave readers with choices
-to make in their own systems. Their published text shows the choices the
-authors communicate. A claim about success in a particular deployment would
-need evidence from that deployment.[^saga][^idempotent-receiver]
+compensating actions and account for isolation.[^saga]
+
+Group Works’ *Harvesting* helps a meeting facilitator decide what to
+collect and share. A team that needs a record of decisions might use
+minutes. A group returning to a discussion might want a visual map of
+ideas. The pattern asks who will use the result and for what purpose.
+The published examples show how the choice can vary. Whether the selected
+record actually helped a group calls for evidence from its use.[^harvesting]
 
 For the relationship between a recurring design, its description, and a
 particular realization, read
@@ -85,4 +87,4 @@ see [Pattern collection](pattern-collection.md).
 [^elephants-patterns-heuristics]: Rebecca Wirfs-Brock and Christian Kohls, [Elephants, Patterns, and Heuristics](https://wirfs-brock.com/rebecca/papers/ElephantsPatternsAndHeuristics/).
 [^generative-patterns]: Lise Hvatum and Rebecca Wirfs-Brock, [Exploring the Generative Nature of Patterns](https://wirfs-brock.com/rebecca/papers/explrgenpat2023/).
 [^saga]: Chris Richardson, [Saga](https://microservices.io/patterns/data/saga.html).
-[^idempotent-receiver]: Gregor Hohpe and Bobby Woolf, [Idempotent Receiver](https://www.enterpriseintegrationpatterns.com/patterns/messaging/IdempotentReceiver.html).
+[^harvesting]: Group Works, [Harvesting](https://groupworksdeck.org/patterns/Harvesting).

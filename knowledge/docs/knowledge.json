@@ -9,7 +9,7 @@
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "Documentation craft and patterns for authoring, reviewing, organizing, and maintaining documents, reusable checklists, and pattern collections across domains",
+  "description": "Explainers, authoring guides, and patterns for documentation across domains, including knowledge bases, product guides, and reusable checklists",
   "keywords": [
     "docs",
     "documentation",

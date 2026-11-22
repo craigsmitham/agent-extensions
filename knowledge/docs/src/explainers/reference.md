@@ -7,52 +7,53 @@ tags:
 - docs
 - reference
 - lookup
-- interface
+- terminology
 - diataxis
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:43:55Z'
+  at: '2026-11-22T00:06:36Z'
 sources:
 - id: reference
   resource: https://diataxis.fr/reference/
   title: Diátaxis — Reference
-- id: iter
-  resource: https://docs.python.org/3/library/itertools.html
-  title: Python — itertools
+- id: constellations
+  resource: https://www.iau.org/IAU/Astronomy-FAQs/Constellations.aspx
+  title: International Astronomical Union — The Constellations
 ---
 
 # Why reference follows the shape of the thing it describes
 
-A programmer sees `islice(records, 2)` in a report generator. Will it
-skip two records or keep two? The answer changes which customers appear
-in the report. Python's itertools reference shows two call forms. In the
-shorter one the number is the stopping position. The result yields the
-first two records. In the longer form there is a separate starting
-position.[^iter]
+A volunteer editing an astronomy club’s observing notes encounters the
+abbreviation *UMi*. Is that the Great Bear or the Little Bear? In the
+International Astronomical Union’s table of constellations, the Ursa
+Minor row puts *UMi* alongside *The Little Bear*. The neighboring row
+gives *UMa* for Ursa Major, the Great Bear. A single letter changes
+which part of the sky the notes refer to.[^constellations]
 
-The programmer already had a name and a question. The module heading,
-the function name and the signatures took them to the answer. Someone
-looking up `pairwise` on the same page can reuse that route. A consistent
-arrangement lets the reader bring their knowledge of the interface to
-the page and take a fact straight back to work.[^reference][^iter]
+The volunteer came with a known term and a missing fact. The table
+offers several ways in. A reader who knows the English name can find
+the Latin name in the same row. A reader interpreting a star name can
+look up the Latin possessive form. Each row describes one constellation.
+Each column answers the same kind of question about it.[^constellations]
 
-## Why the small print belongs beside the name
+## Why the field names matter
 
-A reader who knows Python's usual slicing syntax might try a negative
-index to select items from the end. The entry for `islice` names the
-restriction on negative arguments at the point of lookup. An example
-with positive arguments alone would leave that question open. A signature
-answers which arguments fit where. A restriction answers which uses a
-caller can rely on. Both belong with the same function.[^iter]
+For Aries, the table lists both *Aries* and *Arietis*. A list of words
+alone might make these look like interchangeable spellings. The column
+labels distinguish the constellation’s name from the form it takes in
+a star designation such as *Alpha Arietis*. A short definition of that
+field serves every entry, and the particular value sits where a reader
+can find it.[^constellations]
 
-Diátaxis describes reference as a faithful account of the thing a reader
-consults it about. That obligation includes choosing the right unit.
-A module summary lets a reader scan for an operation. A function entry
-can give its precise behavior. A reader can enter at either level and
-leave as soon as the uncertainty is resolved.[^reference]
+Diátaxis describes reference as an orderly account that reflects the
+structure of its subject. The constellation table makes the reason
+visible. Organizing the same information by the evening when the club
+first observed each constellation would tell the club’s story. It would
+give an editor who knows only *UMi* very little help finding the right
+entry.[^reference]
 
 For a practical method, see [How to write reference documentation](../guides/writing-reference-documentation.md).
 
 [^reference]: [Diátaxis — Reference](https://diataxis.fr/reference/).
-[^iter]: [Python — itertools](https://docs.python.org/3/library/itertools.html).
+[^constellations]: International Astronomical Union, [The Constellations](https://www.iau.org/IAU/Astronomy-FAQs/Constellations.aspx), “Constellation Names” and “Charts.”

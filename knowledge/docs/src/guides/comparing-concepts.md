@@ -15,15 +15,12 @@ sources:
 - id: documentation-craft
   resource: ../explainers/documentation-craft.md
   title: Documentation craft
-- id: documentation-audits
-  resource: ../explainers/documentation-audits.md
-  title: Documentation audits
 - id: documentation-organization
   resource: ../explainers/documentation-organization-and-discovery.md
   title: Documentation organization and discovery
 generated:
   by: codex/gpt-6
-  at: '2026-11-11T16:45:58Z'
+  at: '2026-11-22T00:10:36Z'
 ---
 
 # Comparing concepts
@@ -37,20 +34,24 @@ a separate comparison earns its place only when readers or maintainers need it.
 1. Identify the smallest set of concepts involved and the decisions the confusion affects.
 2. Keep each concept's positive definition in its own authoritative document.
 3. Compare the relevant differences: purpose, scope, authority, overlap, and conditions for choosing each. Use only axes that resolve the confusion.
-4. Put a substantive recurring comparison in one document. Keep local reminders short and link to it; indexes should route readers rather than own the analysis.
+4. Give a recurring comparison one maintained home. Link to it from the terms readers look up separately.[^documentation-organization]
 5. Use a table for quick lookup and prose or contrasting examples for relationships a table cannot express. Do not force overlap into a false hierarchy.
 6. Review the definitions and comparison together when either changes.
 
-## Example shape
+## Example from a music archive
 
-| Concept | Question answered | Owns | Does not own |
-| --- | --- | --- | --- |
-| First concept | What does it help decide? | Its responsibility | A neighboring responsibility |
-| Second concept | What different question does it answer? | Its responsibility | The first concept's responsibility |
+Suppose an archive’s catalog distinguishes a composition from each recorded
+performance. A volunteer finds two performances of the same piece and wonders
+which title to correct. The archive’s definitions give them a practical test.
+
+| Entry | Question it answers | Example correction |
+| --- | --- | --- |
+| Composition | Which musical work is this? | Fix the spelling of the work’s title for both performances. |
+| Recorded performance | Which rendition is this? | Correct the venue for one performance. |
 
 The comparison owns the relationship, not every definition it mentions. Use
 reference-style presentation for lookup or explanation when reasoning is the
-main need. Do not introduce a metadata type just to mark a comparison.
+main need.[^documentation-craft] Do not introduce a metadata type just to mark a comparison.
 
 ## Check
 
@@ -63,3 +64,6 @@ This is editorial guidance, not a claim of independently measured effectiveness.
 
 - [Documentation organization and discovery](../explainers/documentation-organization-and-discovery.md)
 - [Organizing and naming documentation](organizing-and-naming-documentation.md)
+
+[^documentation-craft]: [Documentation craft](../explainers/documentation-craft.md).
+[^documentation-organization]: [Documentation organization and discovery](../explainers/documentation-organization-and-discovery.md).

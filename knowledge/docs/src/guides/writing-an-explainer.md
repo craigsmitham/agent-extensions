@@ -4,7 +4,7 @@ title: How to write an explainer
 description: When readers can follow a procedure but still have questions about the subject, or when a topic needs an introduction, turn their question into a focused, source-backed explainer.
 tags: [docs, explanation, explainer, conceptual-documentation, authoring, how-to, diataxis]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-21T22:42:03Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
 sources:
   - id: explanation
     resource: https://diataxis.fr/explanation/
@@ -15,136 +15,101 @@ sources:
   - id: audience
     resource: https://developers.google.com/tech-writing/one/audience
     title: Google Technical Writing — Audience
-  - id: booklet
-    resource: https://helpx.adobe.com/acrobat/desktop/print-documents/booklets-posters-banners/print-booklets.html
-    title: Adobe Acrobat — Print booklets
-  - id: booklet-overview
-    resource: https://helpx.adobe.com/acrobat/desktop/print-documents/booklets-posters-banners/about-booklets-printing.html
-    title: Adobe Acrobat — Booklet printing with Adobe Acrobat
+  - id: location
+    resource: https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm
+    title: NIST/SEMATECH — Measures of Location
 ---
 
 # How to write an explainer
 
-Use this guide to turn a reader’s question into a document they can read
-away from the task that prompted it. You can start with a new topic or
-with a passage of background material that has outgrown a how-to guide.
+Start with something a reader wants to understand. They may have noticed
+a surprising result, heard two apparently conflicting accounts, or asked
+for background that would take a how-to guide too far from its task.
 
 ## 1. Find the question behind the topic
 
-Write down what the reader has already seen and what they still want to
-understand. Use a question from a reader if you have one. For a broad
-request such as “explain booklet printing,” picture a specific encounter
-with the subject. Someone opens a print preview and sees page eight beside
-page one. They know how to read a booklet. *Why would the pages look out of
-order before printing?* That question gives the draft a subject and a
-sensible place to stop.[^explanation][^audience]
+Suppose a library volunteer asks for a knowledge-base article about
+waiting times for reserved books. What have they already seen? In this
+example, four of five borrowers waited two days, yet the desk reported
+an average wait of four days. *How can both statements be true?* That
+question gives the article a subject and a place to stop.[^explanation][^audience]
 
-A topic that needs an introduction usually holds several questions. Start
-with the one the others depend on. A reader who understands why the preview
-pairs page eight with page one is ready to ask why a ten-page program
-prints with two blank pages. Take each later question through the same
-steps. Give it a section on the same page when its answer builds on the one
-before, and a page of its own when readers arrive with it separately. For a subject with several intertwined ideas, sketch the relationships as
-sentences. A printed sheet has two sides. Each side holds two page faces.
-Folding the sheet makes those faces into four pages. Follow those
-connections only as far as the question requires. For a draft about
-blank pages, the four-page unit matters. For a draft about an upside-down
-page, the orientation of the second side matters.
-
-Give the page a working title that names what it explains, such as *Why
-booklet pages look out of order*. If the reader is actually asking which
-print setting to select, direct them to the printing guide.[^explanation]
-If both questions recur, link the two pages at the point where readers
-encounter the surprise. When the material began as a passage in a how-to
-guide, leave the guide the one sentence the task needs, such as *The
-preview shows the pages as they will sit on each sheet*, and link that
-sentence to the new page.
+For a broad introduction, sketch the ideas a reader needs and how they
+depend on one another. Here, “average” needs a definition. The mean
+depends on the total time waited and the number of borrowers. Comparing
+it with the middle wait needs one more idea, the borrowers’ order from
+shortest wait to longest. *Why the average wait can exceed most borrowers’
+waits* is enough for one page. Keep questions together when the answer to
+one supplies the reasoning for the next. Give an independently sought
+question its own entry. Which figure the library should publish, for
+example, has its own audience and evidence.
 
 ## 2. Work out the answer and check its basis
 
-Begin with the encounter itself. A reader’s report gives you their account
-of it. If you pictured it instead, confirm that it happens before you
-explain it. Open an eight-page file in Acrobat, choose Booklet in the print
-dialog, and look at the preview. Adobe’s overview says the feature places
-two pages on each sheet and provides a preview of the layout. Which two
-pages appear together is something to see for yourself.[^booklet-overview]
+Start with a concrete case. Label invented figures as examples. For an
+actual report, check how the library defines a wait and which requests
+it counted. A statistics handbook can define the measures. The desk’s
+records establish what happened at this library.
 
-Write a provisional answer in plain language. Underline any phrase that
-hides a step in the reasoning. Then open up each one until every step is
-something you have worked out for yourself or found in a source that can
-establish it.
+Try answering in a sentence. “The long wait pulled up the average” names
+the effect but leaves the mechanism unexplained. Work through it. With
+waits of 2, 2, 2, 2, and 12 days, the five borrowers waited 20 days in
+total. Sharing that total equally gives four days each. The middle entry
+is still two days. These calculations illustrate NIST’s distinction
+between the arithmetic mean and the median.[^location]
 
-For the booklet, “Acrobat rearranges the pages for booklet printing” leaves
-*for booklet printing* doing most of the work. What does folding change?
-Sketch the outer sheet of an eight-page booklet, or fold two sheets, number
-the pages, and open them again. Check the claim about what Acrobat does
-against Adobe’s documentation. Each part of the answer now has its own
-basis. The preview is your observation. The folded paper accounts for the
-page positions. Adobe’s documentation says what the software sets out to do
-when it arranges them.[^booklet]
-
-Choose evidence that fits your own question. For the reason behind a design
-decision, look for the decision record or the designer’s account. If you
-can establish only that the design has a useful consequence, describe that
-consequence and leave the designer’s motive open.
+Match the evidence to each claim in your own explanation. If the question
+is why a group made a decision, look for its record or a participant’s
+account. The consequences you observe today may give readers a reason to
+value that decision while leaving its original motivation open.
 
 ## 3. Draft the connection the reader is missing
 
-Start with the familiar experience. Introduce each idea where the reader
-needs it, and follow the connection through to its consequence. Here is
-an opening paragraph for *Why booklet pages look out of order*.
+Introduce each idea when the reader needs it. An opening for the library
+page might read like this.
 
-> In the preview of an eight-page program, page eight sits beside page one.
-> Picture the closed program. Its front cover is page one and its back
-> cover is page eight. Open the outer sheet flat and those covers are
-> neighbors. The preview shows their positions on the paper. Folding the
-> paper puts them at opposite ends of the program.
+> Four borrowers waited two days apiece. A fifth waited twelve. If each
+> had waited two days, the group would have waited ten days altogether.
+> The last borrower’s ten extra days doubled that total. Spread those
+> twenty days across five borrowers and the mean wait is four days, even
+> though nobody in this group waited exactly four.
 
-Where a claim rests on a source, name the source at that point. The reader
-can check the fold with two sheets of paper. What Acrobat is built to do
-is Adobe’s to say, so the next paragraph of the draft opens with the
-attribution: *Adobe’s booklet instructions say that Acrobat arranges the
-pages for folding.*[^booklet]
+Readers who wonder what a typical borrower experienced can now use the
+sorted list to see why the median is two. Name the source for a definition
+where you use it. Keep the reasoning and the numbers close enough that a
+reader can check the claim without having the original report open.[^location]
 
-Choose a different order when the question calls for it. To explain how a
-practice arose, start with the constraint people faced at the time and
-trace the choice it prompted. When people disagree about that choice, give
-the reasons each side finds persuasive and identify whose interpretation
-you are offering. Include the history or alternative that changes how the
-reader sees the subject.[^explanation] For an explainer organized around
-the history of a practice, read
-[How explainers build understanding](../explainers/explanation.md). It
-follows a kitchen custom from an eighteenth-century engraving to a theory
-its investigator later gave up.
+Choose a different order when the question warrants one. An account of
+a practice may begin with a choice people once faced, then follow the
+evidence that changed their minds. For a worked example, see
+[How explainers build understanding](../explainers/explanation.md). Its
+kitchen history connects a practice with a theory its investigator
+eventually gave up.[^explanation]
 
-## 4. Read the draft away from the task
+When credible accounts disagree, state what each proposes and which
+observations it explains. Attribute the interpretations so readers can
+tell where the evidence ends and a judgment begins.
 
-Read it without the product open. Restore any context the reader would
-otherwise need the screen to supply. Move click sequences to the how-to
-guide and detailed option descriptions to reference.[^explanation][^reference]
-Keep concrete details that carry the reasoning. Removing the page numbers
-from the booklet example would make the passage shorter and the fold harder
-to picture.
+## 4. Check what the draft lets a reader account for
 
-Return to the opening question. Can someone give the answer from the
-passage and say why it follows? Try a nearby case. Which pages would share
-the outside of a twelve-page program? If a reader is available, ask them,
-and listen for the reason as well as the numbers. If they remember “eight
-beside one” but miss that the covers share a sheet, revise the sentence or
-add the sketch that makes the fold visible.
+Read the draft from its own link. Restore any context it assumes the
+reader has just seen elsewhere. If it grew out of a how-to, leave that
+guide the sentence needed for the task and link to the full explanation
+there. Detailed instructions and tables of options have their own uses.
+Keep the details that carry this explanation’s reasoning.[^reference]
 
-Without a reader, work the nearby case yourself from the draft alone, and
-point to the sentence that supplies the reason. That shows the reasoning
-is on the page. Whether readers follow it is something only a reader can
-show. Finish when the draft answers the original question and each step of
-the reasoning can be traced to the example or its evidence.
+Try a nearby case. If the longest wait becomes 22 days, which measure
+changes? A reader who can explain why the mean rises to six while the
+median stays at two can use the account beyond the original figures. If
+they can repeat only that a long wait “pulls up the average,” revisit
+the sentence that connects an individual’s wait to the total.
 
-If a reviewer asks whether the draft would serve better as a table of
-settings or a set of instructions, revisit the reader need with the
-[Explanation pattern](../patterns/explanation.md).
+Without a reader, work the variation from the draft and identify the
+passage that makes it possible. Report the check you made. To judge
+whether the reader’s question calls for a different design, consult
+the [Explanation pattern](../patterns/explanation.md).
 
 [^explanation]: Daniele Procida, [Explanation](https://diataxis.fr/explanation/).
 [^reference]: Daniele Procida, [The difference between reference and explanation](https://diataxis.fr/reference-explanation/).
 [^audience]: Google Technical Writing, [Audience](https://developers.google.com/tech-writing/one/audience).
-[^booklet]: Adobe Acrobat, [Print booklets](https://helpx.adobe.com/acrobat/desktop/print-documents/booklets-posters-banners/print-booklets.html).
-[^booklet-overview]: Adobe Acrobat, [Booklet printing with Adobe Acrobat](https://helpx.adobe.com/acrobat/desktop/print-documents/booklets-posters-banners/about-booklets-printing.html).
+[^location]: NIST/SEMATECH, [Measures of Location](https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm).

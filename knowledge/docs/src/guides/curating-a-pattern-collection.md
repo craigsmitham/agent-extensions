@@ -4,7 +4,7 @@ title: How to curate a pattern collection
 description: When readers have several documented patterns to choose from, build and test routes from their design questions to useful entries, then revise the collection from experience of use.
 tags: [docs, pattern-collection, pattern-language, curation, indexing, feedback, maintenance]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-21T22:47:00Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:07:34Z }
 sources:
   - id: readers
     resource: https://wirfs-brock.com/rebecca/papers/whowillread/
@@ -86,15 +86,16 @@ an intended reader when claiming that people can find their way.
 
 ## 4. Revise from use and preserve old paths
 
-Ask the engineers which entry they actually used, what they changed, and
-whether the people doing the packing or billing got the result they needed.
-A search that ends in the right place and a design that works in service
-answer different questions. Keep the case and its conditions so future
-readers can judge how far the lesson travels. Wirfs-Brock and Hvatum’s
+Ask practitioners which entry they used and what happened when they
+applied it. In the order example, did each job reach just one packing
+station? Did billing receive the events it needed? Finding a relevant
+pattern and getting the intended result answer different questions. Keep
+the case and its conditions so future readers can judge how far the
+lesson travels. Wirfs-Brock and Hvatum’s
 2026 preprint discusses feedback and obsolescence across a collection’s
 life.[^value]
 
-When two readers choose the wrong entry, try their actual search wording
+When a reader chooses an unsuitable entry, try their actual search wording
 and inspect the first misleading cue. Change the cue if discovery failed.
 Revisit the description if the design itself failed under conditions it
 claimed to cover. If an entry has lost its use or evidence, record why

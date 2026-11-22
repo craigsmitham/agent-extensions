@@ -6,8 +6,8 @@ Choose by the reader’s problem. Each pattern describes a recurring design, whe
 
 - [Explanation](explanation.md) — When readers need to reason about a subject, connect concepts, consequential distinctions, and examples into a bounded account that develops understanding.
 - [How-to guide](how-to.md) — When competent readers need to achieve a bounded real-world goal, organize adaptable directions around the task, its conditions, and a verifiable result.
-- [Tutorial](tutorial.md) — When readers need to acquire a skill, lead them through a safe, bounded lesson with meaningful actions and visible results that build confidence for further practice.
-- [Reference](reference.md) — When readers need authoritative facts during work, organize accurate, consistently structured entries around the system so they can locate and compare details quickly.
+- [Tutorial](tutorial.md) — When readers need to acquire a skill, lead them through a safe, bounded lesson with meaningful actions and recognizable results that build confidence for further practice.
+- [Reference](reference.md) — When readers need authoritative facts during work, organize accurate, consistently structured entries around the subject so they can locate and compare details quickly.
 
 ## Principles and operational documents
 

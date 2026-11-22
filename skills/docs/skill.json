@@ -4,7 +4,7 @@
   "type": "skill",
   "name": "docs",
   "version": "0.6.1",
-  "description": "Author, review, adapt, organize, audit, and maintain documentation, reusable checklists, pattern descriptions, and pattern collections",
+  "description": "Write, review, organize, and audit documentation across domains, including knowledge-base articles, product guides, reusable checklists, and pattern collections",
   "keywords": [
     "docs",
     "documentation",

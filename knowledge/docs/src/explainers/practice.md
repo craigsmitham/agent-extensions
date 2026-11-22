@@ -23,7 +23,7 @@ sources:
   - id: odonovan-resolving
     resource: https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Resolving.pdf
     title: Oliver O'Donovan — Resolving
-generated: { by: "codex/gpt-6", at: "2026-11-11T16:59:49Z" }
+generated: { by: "codex/gpt-6", at: "2026-11-22T00:10:36Z" }
 ---
 
 # Practice
@@ -51,9 +51,10 @@ selectively articulate.
 
 ## What constitutes a practice
 
-Wrathall's account of Dreyfus identifies a practice with the structure that
-sustains action, rather than with the actions considered separately. That
-structure has several interdependent dimensions:
+Wrathall’s account of Dreyfus connects skilled action to equipment, learned
+dispositions, and social recognition. His soccer example includes both the
+ability to play and the standing of a referee to make a call.[^wrathall-background-practices]
+For someone documenting a practice, several dimensions are worth examining:
 
 - **Purposes and goods** — participants pursue one or more related ends that
   give the undertaking point. These ends may be open-ended: a successful
@@ -106,7 +107,7 @@ Practices do more than regulate behavior after a situation is recognized. They
 help participants perceive what the situation *is*: what counts as equipment,
 evidence, danger, success, a permissible move, or a call for response. Dreyfus
 uses **background practice** for practices that normally recede from attention
-while making people, things, and situations intelligible.
+while making people, things, and situations intelligible.[^dreyfus-background-practices]
 
 Not every named practice needs to be classified as a background practice. The
 important insight is that focal action relies on a wider background that the
@@ -120,7 +121,7 @@ Polanyi explains why skilled participation cannot be reduced to rules. In an
 integrated performance, a practitioner relies **subsidiarily** on many clues,
 movements, maxims, and tool-mediated sensations while attending **focally** to
 the meaningful whole. Exclusive attention to the fragments can even disrupt
-their coordination.
+their coordination.[^polanyi-tacit-knowing]
 
 This is not a contrast between mysterious intuition and communicable
 knowledge. Analysis can make some particulars explicit, and explicit teaching
@@ -139,7 +140,7 @@ including:
 
 Polanyi calls the assimilated use of bodies, language, tools, and conceptual
 frameworks **indwelling**. A capable participant ordinarily attends *through*
-them to the work rather than treating them as isolated objects. Describing a
+them to the work rather than treating them as isolated objects.[^polanyi-personal-knowledge] Describing a
 practice's equipment should therefore explain what practitioners perceive and
 accomplish through it, not merely list what they use.
 
@@ -154,7 +155,7 @@ O'Donovan's account of practical reason adds this distinction. Sound action
 moves from attentive recognition of goods in the world toward a particular
 judgment about what is right to do here and now. Rules can preserve generic
 insight and give continuity to practical direction, but they neither generate
-the goods they serve nor remove the need for judgment.
+the goods they serve nor remove the need for judgment.[^odonovan-waking][^odonovan-resolving]
 
 This keeps two questions visible:
 
@@ -282,3 +283,10 @@ subject domains and should follow their host's conventions.
 - [Principle document](../patterns/principle.md)
 - [Tutorial](../patterns/tutorial.md)
 - [Explanation](../patterns/explanation.md)
+
+[^wrathall-background-practices]: Mark A. Wrathall, [Introduction: Background Practices and Understandings of Being](https://academic.oup.com/book/6516/chapter-abstract/150414262), pp. 3–4.
+[^dreyfus-background-practices]: Hubert L. Dreyfus, [Background Practices](https://doi.org/10.1093/oso/9780198796220.001.0001).
+[^polanyi-tacit-knowing]: Michael Polanyi, [Tacit Knowing](https://doi.org/10.1103/RevModPhys.34.601).
+[^polanyi-personal-knowledge]: Michael Polanyi, [Personal Knowledge](https://www.bibliovault.org/BV.landing.epl?ISBN=9780226232621), “Skills.”
+[^odonovan-waking]: Oliver O’Donovan, [Waking](https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Waking.pdf).
+[^odonovan-resolving]: Oliver O’Donovan, [Resolving](https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Resolving.pdf).

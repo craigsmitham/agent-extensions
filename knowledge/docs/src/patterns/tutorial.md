@@ -1,7 +1,7 @@
 ---
 type: Pattern
 title: Tutorial
-description: When readers need to acquire a skill, lead them through a safe, bounded lesson with meaningful actions and visible results that build confidence for further practice.
+description: When readers need to acquire a skill, lead them through a safe, bounded lesson with meaningful actions and recognizable results that build confidence for further practice.
 tags:
 - docs
 - tutorial
@@ -19,10 +19,13 @@ sources:
 - id: diataxis-tutorials-how-to
   resource: https://diataxis.fr/tutorials-how-to/
   title: Diátaxis — The difference between a tutorial and how-to guide
+- id: beats
+  resource: https://learningmusic.ableton.com/make-beats/make-beats.html
+  title: Ableton — Make beats
 - id: python-tutorial
   resource: https://docs.python.org/3/tutorial/
   title: Python — The Python Tutorial
-generated: { by: codex/gpt-6, at: 2026-11-21T22:44:26Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:06:36Z }
 ---
 
 # Tutorial
@@ -35,14 +38,17 @@ lets this particular learner experience.[^diataxis-tutorials]
 
 ## Where a lesson earns its place
 
-The Python Tutorial addresses programmers learning Python and assumes
-some programming experience. Its opening interpreter examples let a
-reader type short expressions and see their values. The author has
-chosen a particular encounter with Python while leaving a much larger
-language available for later exploration. The audience assumption
-matters when choosing that tutorial for a class of complete beginners.
-The presence of examples establishes what the text offers. Evidence of
-what learners acquire would have to come from their use of it.[^python-tutorial]
+In Ableton’s *Make beats*, the learner starts with a musical pattern and
+can add or remove individual notes in a grid. The exercise gives a
+beginner a rhythm to vary and a way to hear what one change does. A
+lesson built around producing a polished recording would ask much more
+of the same learner.[^beats]
+
+The audience matters even for a first lesson. The Python Tutorial
+assumes its readers already understand programming. An author can
+choose an introductory exercise for someone experienced in another
+language that would leave a first-time programmer guessing. Check what
+the activity asks the learner to bring to it.[^python-tutorial]
 
 ## The cost of choosing the exercise
 
@@ -53,13 +59,13 @@ on the skill in front of them. It also makes the author responsible
 for the path. A changed default or missing prerequisite early in the
 lesson can spoil everything after it.[^diataxis-tutorials]
 
-An operator restoring a service brings an immediate goal and
+A musician preparing a rhythm track for a rehearsal brings a deadline and
 conditions the author cannot choose. A [how-to guide](how-to.md) can
-accommodate that work. Someone who can already perform the task but
+accommodate that work.[^diataxis-tutorials-how-to] Someone who can already perform the task but
 wonders why it behaves as it does has a question for an
 [explainer](explanation.md). For repeated practice where learners can
 increasingly direct themselves, consider whether a
-[learning checklist](learning-checklist.md) provides enough support.[^diataxis-tutorials-how-to]
+[learning checklist](learning-checklist.md) provides enough support.
 
 To understand what a chosen activity gives the learner, read
 [Why a tutorial gives the learner something to do](../explainers/tutorial.md).
@@ -68,4 +74,5 @@ To develop and check a lesson, follow
 
 [^diataxis-tutorials]: Daniele Procida, [Tutorials](https://diataxis.fr/tutorials/).
 [^diataxis-tutorials-how-to]: Daniele Procida, [The difference between a tutorial and how-to guide](https://diataxis.fr/tutorials-how-to/).
+[^beats]: Ableton, [Make beats](https://learningmusic.ableton.com/make-beats/make-beats.html).
 [^python-tutorial]: Python, [The Python Tutorial](https://docs.python.org/3/tutorial/).

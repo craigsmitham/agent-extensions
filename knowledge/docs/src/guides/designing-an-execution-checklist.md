@@ -12,7 +12,7 @@ tags:
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:50:25Z'
+  at: '2026-11-22T00:07:11Z'
 sources:
 - id: flight
   resource: https://ntrs.nasa.gov/citations/19910017830
@@ -31,7 +31,7 @@ someone can tell what remains to be done on one kit.
 
 ## Find where the sequence can lose its place
 
-Put a finger on the first action that depends on the previous one. Releasing
+Find the first action that depends on an earlier one. Releasing
 a kit depends on both the card and the headset being present. Either can
 be fitted first. Preserve that freedom unless the local procedure requires
 a specific order. Ask the librarian what would still be visible if they
@@ -40,9 +40,10 @@ examines this same placekeeping problem in a different working setting.[^flight]
 
 ## Draft prompts that travel with the work
 
-In this example the library uses a numbered packing card clipped to each
-open kit. Adapt the medium to the work. Keep the identifier with the
-prompts if several kits can be open together.
+In this example the kits move between tables while they are open, so the
+library clips a numbered packing card to each case. If the library keeps
+packing status in its loan system, opening a kit’s record should show
+which actions remain for that kit.
 
 > **Recorder kit ____ · Keep this card with the open case.**
 >
