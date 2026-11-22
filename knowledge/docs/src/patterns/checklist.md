@@ -19,30 +19,29 @@ sources:
   title: Moore et al. — Process evaluation of complex interventions
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:50:25Z'
+  at: '2026-11-22T02:13:03Z'
 ---
 
 # Checklist for recurring omissions
 
-When known actions, states, or communications are easily missed, **place
-concise, observable prompts at the point of work with an explicit use protocol
-and response to unmet items**.
-
-A checklist couples its items to how people use them. A checked box records a
-response; it does not by itself establish correct execution, sound judgment,
-learning, or an effective intervention. The purpose-specific patterns below describe different uses of this design.
+Choose a checklist when people know the work, yet a consequential action,
+observation, or exchange keeps getting missed. The useful part is a prompt
+someone can act on while there is still time to put things right.
 
 ## Problem and applicability
 
-People who know how to do the work can still omit an action, overlook a
-condition, or fail to communicate it. A bounded prompt can make that omission
-visible at a useful moment. The user must be able to recognize the situation,
-interpret the item, and act on the result.
+Suppose support engineers pass an unresolved customer issue from one shift
+to the next. Both shifts know how to investigate it, yet several issues
+have gone unattended because each shift thought the other still owned them.
+A prompt on the issue can ask who has accepted the next action. A spoken
+readback at shift change could serve the same purpose if both people are
+there. In either case, someone can see the missing acknowledgment while
+the outgoing shift can still arrange cover.
 
-Establish the outcome, relevant failure, users and expertise, trigger and
-completion condition, environment, medium, available resources, and authority.
-Consider interruption, time pressure, and the consequences of delay or false
-completion. Scale this brief to the decisions it changes.
+Now suppose the next owner is already clear, but that engineer lacks
+access to the affected service. Another prompt to acknowledge ownership
+would add work. The change that matters is arranging access or handing
+the issue to someone who has it.
 
 Choose a different primary aid when another problem dominates:
 
@@ -61,7 +60,11 @@ the availability of checkbox formatting.
 
 ## Choose a design for the likely omission
 
-Select the primary outcome before choosing how users encounter the items:
+The purpose of a prompt determines what its answer needs to show. Once
+you know the purpose, choose how people will use the prompt. For example,
+either a spoken exchange or a written check can support a release decision.
+If the purpose is learning, the question becomes what the learner will
+later be able to do without the cue.
 
 | Purpose | Pattern |
 | --- | --- |
@@ -85,11 +88,10 @@ maintenance costs. Excessive coverage creates irrelevant work; excessive
 compression makes interpretation depend on memory. Independence of verification
 costs time and coordination. Familiarity can encourage ritual responses.
 
-Challenge a candidate with wrong-aid selection, a missing critical item,
-ambiguous wording, impossible actions, interruption, urgent competing work,
-and completion without the required state. Consider language and access needs,
-hierarchy, incentives, and missing resources. These are design-review scenarios;
-imagining them does not establish usability or effectiveness.
+In the shift example, a compulsory owner field might merely fill with the
+outgoing engineer’s name. A verbal reply might come from someone unable to
+accept the work. The form, language, timing, and authority to speak up
+matter whenever they change what people can actually observe or do.
 
 ## Evidence and maintenance
 
@@ -97,24 +99,14 @@ Degani and Wiener observed how flight crews used normal checklists, including
 the method of performing or confirming an action and reporting completion.[^nasa-checklists]
 Process evaluation examines implementation and context, both of which matter
 when interpreting an intervention’s results.[^mrc-process] The [checklist explainer](../explainers/checklist.md)
-examines this distinction using evidence from a field trial. Costs include
-maintaining the aid when tools,
-roles, or criteria change. Conroy and colleagues treat maintenance and
-retirement as part of the lifecycle in their practice setting.[^aapm-checklists]
+examines this distinction using evidence from a field trial. A change of
+tools, roles, or criteria can make a prompt obsolete. Conroy and colleagues
+include revision and retirement in their practice guidance.[^aapm-checklists]
 
-## Examples and evidence boundary
-
-A publication checklist might prompt an editor to inspect the final rendered
-file. A handoff checklist might ask participants to state an unresolved issue
-and acknowledge its owner. Both need a trigger and observable response, but
-their order, medium, and evidence differ. Neither replaces a full procedure or
-establishes the quality of the entire publication or handoff. These are
-illustrative designs, not evaluated interventions.
-
-This draft reorganizes the repository's earlier checklist guidance into a
-documentation pattern and purpose-specific companions.[^checklist-design-origin]
-Its synthesis and examples have not been independently field-validated. The
-sources support particular distinctions and concerns, not a universal template.
+The shift handoff illustrates a design adapted from earlier checklist
+guidance.[^checklist-design-origin] A count of acknowledged issues would
+show use. To find out whether ownership gaps fell, the team would have to
+compare issues actually left unattended across comparable shifts.
 
 [^checklist-design-origin]: Craig Smitham — Checklist design skill and references, version 0.1.10.
 [^nasa-checklists]: Degani and Wiener — Human Factors of Flight-Deck Checklists.

@@ -4,7 +4,7 @@ title: Pattern collection
 description: When readers need to choose among related patterns, offer routes from their situations to useful choices, explain complementary or opposing responses, and maintain shared knowledge through feedback from use.
 tags: [docs, documentation-pattern, pattern-collection, pattern-language, relationships, curation]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-22T00:07:34Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:15:25Z }
 sources:
   - id: catalog
     resource: https://microservices.io/patterns/index.html
@@ -32,8 +32,9 @@ make a decision that the separate descriptions leave open.
 ## Where the design pays for itself
 
 A team with one well-understood problem may need only a link to one good
-description. A team choosing among several responses benefits from an
-overview that exposes the decisive differences. Chris Richardson’s
+description. If colleagues already know which name they want, a name
+index can be enough. A route by situation earns its maintenance cost
+when readers know the problem but need to compare responses. Chris Richardson’s
 microservices catalog groups entries under questions about architecture,
 service boundaries, and collaboration. An engineer choosing how to
 decompose a service can see alternatives before learning their
@@ -58,8 +59,10 @@ Each extra entry or view brings maintenance costs. A precise-looking map
 can conceal gaps in coverage or give a candidate pattern the appearance
 of proven use. Comparable previews help readers choose when they preserve
 the conditions behind different advice. A claim to offer a *language*
-also calls for cohesive coverage of its stated field and guidance on
-combining decisions into a design.
+also calls for cohesive coverage of its stated field. Readers need to see
+how one decision opens or changes the next as they develop a design.
+Cross-links help people browse. A stronger claim needs a case showing
+how the relationships helped someone develop a design.
 
 The collection’s value can differ for the author, the practitioner, and
 the people who live with the resulting design. Wirfs-Brock and Hvatum’s

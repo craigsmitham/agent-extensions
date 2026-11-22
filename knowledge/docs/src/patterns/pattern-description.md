@@ -32,7 +32,7 @@ sources:
   title: Group Works — Harvesting
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:07:34Z'
+  at: '2026-11-22T02:15:25Z'
 ---
 
 # Pattern description
@@ -48,10 +48,12 @@ or strategy to apply and which choices depend on circumstances.[^cockburn-patter
 A designer seeking a single local procedure can use a [how-to guide](how-to.md).
 A team that wishes to state a warranted direction for judgment can write a
 [principle document](principle.md). A claim about recurring design experience
-carries another obligation. Readers should be able to inspect uses, compare
-conditions across them, and judge the consequences the description attributes
-to the design. A promising idea with little evidence can stand as a candidate
-whose limitations are visible.[^elephants-patterns-heuristics]
+carries another obligation. Readers should be able to inspect uses of the
+response, compare conditions across them, and judge which consequences
+those accounts support.[^elephants-patterns-heuristics] A problem may have
+come up repeatedly while the proposed response has only been sketched.
+That is grounds for a candidate. Several teams citing the same sketch still
+leave the reader looking for an account of a team actually trying it.
 
 This form takes time to investigate and maintain even when the fit is good.
 Too much abstraction hides the decision a practitioner needs to make. Too

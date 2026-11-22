@@ -16,7 +16,7 @@ sources:
   title: Laitenberger et al. — An Internally Replicated Quasi-Experimental Comparison of Checklist and Perspective-Based Reading of Code Documents
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:07:11Z'
+  at: '2026-11-22T02:13:03Z'
 ---
 
 # Reporting and review checklist
@@ -36,10 +36,15 @@ attention to a consequence an author overlooked. A passage that addresses
 that consequence can satisfy a reporting obligation and still reveal a
 defect when a reviewer examines it.
 
-A [verification checklist](verification-checklist.md) fits a different
-question about whether completed work meets stated conditions. A rubric is
-useful when readers need to distinguish levels of performance. A form alone
-can suffice when the need is simply to collect values.
+Suppose a service review must account for alerts during an outage.
+A reader follows the alert-count item to a timeline that ends at the shift
+change. The outage continued, so the reviewer can identify the missing
+period. If the question is whether a test alert actually
+reaches the person on call, the timeline alone cannot settle it.
+A [verification checklist](verification-checklist.md) could direct someone
+to compare that delivery with the expected recipient. A rubric fits a
+decision that calls for grading the response. A form alone can suffice
+when someone simply needs to collect the shift totals.
 
 ## Costs and evidence
 

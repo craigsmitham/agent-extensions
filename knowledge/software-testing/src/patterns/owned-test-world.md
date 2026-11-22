@@ -1,10 +1,10 @@
 ---
 type: Pattern
 title: Owned test worlds
-description: Makes spanning tests accountable and repeatable through owned state, observable readiness, interruption-safe cleanup, and attributable evidence.
+description: When a test leaves state behind or a failure crosses team boundaries, give someone responsibility for its setup, recovery, and diagnosis.
 tags: [testing, ownership, isolation, readiness, cleanup, evidence, software-testing]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-11T20:34:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:14:03Z }
 sources:
 - id: google-larger-testing
   resource: https://abseil.io/resources/swe-book/html/ch14.html
@@ -31,6 +31,12 @@ sources:
 
 # Owned test worlds
 
+Two test runs leave reservations in the same queue. When a third run picks
+one up, its output looks right even though its own request failed. Who can
+tell which run produced the result, and who can clear the abandoned work
+without disturbing a live run? This is a choice about operating a test whose
+resources or effects extend beyond a single invocation.
+
 ## Problem and forces
 
 A spanning test can fail without an accountable owner, leave state that poisons
@@ -40,10 +46,17 @@ selectable, diagnosable, and recoverable after interruption.
 
 ## Response
 
-Give the test world one semantic owner, explicit lifecycle responsibilities,
-and execution and evidence contracts tied to the decision it supports.
-[Evidence-matched test world](evidence-matched-test-world.md) owns the choice of
-real and substituted boundaries.
+Give an identifiable person or team responsibility for the whole run and
+the means to distinguish its work, recover its resources, and investigate
+failures. A broker that removes an exclusive queue when its worker
+disconnects can clear one run without disturbing others. With a persistent queue, give each
+run its own address or filter so it only receives its own messages. Reclaim
+abandoned messages once the owner can distinguish an expired run from one
+still processing. A pure calculation with local inputs usually needs only
+the ordinary ownership of its test code.
+
+If the broker is incidental to the claim, first consider a smaller
+[Evidence-matched test world](evidence-matched-test-world.md).
 
 ## Ownership
 
@@ -139,8 +152,18 @@ designed with the system.
 Explicit ownership and isolation improve attribution and repeatability at the
 cost of harness and cleanup work. Shared environments limit destructive control
 and early feedback; a fixture cannot promise isolation beyond the state it
-actually owns. The cited practices support this draft synthesis; the Northbank
-case is illustrative, not field validation of the pattern.
+actually owns. A team that adds a dedicated harness
+to every local check takes on that maintenance even for checks with no
+independent state to recover.
+
+This collection proposes *Owned test worlds* as a candidate pattern. Graves reports
+two ways Google makes test owners discoverable: repository ownership records
+and annotations on individual tests. The Rails guide documents a different
+part of the design. Parallel test processes get separate databases, and
+disabling test transactions leaves the suite responsible for removing its
+data. Together these sources support the ownership and isolation choices.
+The queue scenario is an illustration. Outcomes from adopting the combined
+pattern have yet to be documented here.[^google-larger-testing][^rails-testing]
 
 [^google-larger-testing]: Graves, [Larger Testing](https://abseil.io/resources/swe-book/html/ch14.html), explains fidelity, system-under-test forms, ownership, hermeticity, data, and the costs of larger tests.
 [^rails-testing]: Rails, [Testing Rails Applications](https://guides.rubyonrails.org/testing.html), distinguishes framework integration tests from browser-driven system tests and their cost and fidelity tradeoffs.

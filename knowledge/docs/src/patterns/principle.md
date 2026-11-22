@@ -14,7 +14,7 @@ sources:
   - id: judgment
     resource: https://firstthings.com/government-as-judgment/
     title: Oliver O’Donovan — Government as Judgment
-generated: { by: codex/gpt-6, at: 2026-11-21T22:44:16Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:15:25Z }
 ---
 
 # Principle document
@@ -34,6 +34,11 @@ default, and a requirement enacted by a particular organization place
 different obligations on a practitioner. If every legitimate case has the
 same prescribed answer, the reader may need the governing rule. To carry
 out a settled procedure, they may need a [how-to guide](how-to.md).
+
+A team can also draft a principle it wants to adopt. Until the people
+responsible accept it, label the direction as a proposal. Readers deciding
+one case need to know whether they can rely on a shared commitment or
+whether agreement is itself still the decision before them.
 
 The design has a cost. A short maxim travels easily and can acquire meanings
 its authors never intended. A catalog of approved examples can make each new

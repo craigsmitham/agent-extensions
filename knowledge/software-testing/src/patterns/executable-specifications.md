@@ -33,6 +33,9 @@ sources:
 - id: adzic-spec-by-example
   resource: https://www.manning.com/books/specification-by-example
   title: Specification by Example — How Successful Teams Deliver the Right Software
+- id: adzic-team-interviews
+  resource: https://manning-content.s3.amazonaws.com/download/0/e31349c-e7f9-457d-834d-3a29e71e9136/adzic_ch01.pdf
+  title: Gojko Adzic — Specification by Example, chapter 1
 - id: cucumber-better-gherkin
   resource: https://cucumber.io/docs/bdd/better-gherkin/
   title: Cucumber — Writing Better Gherkin
@@ -66,7 +69,7 @@ sources:
 - id: prior-maintenance-guide
   resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-engineering-foundations/src/behavior/keeping-specifications-authoritative.md
   title: Keeping specifications authoritative
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:14:03Z }
 ---
 
 # Executable specifications
@@ -108,8 +111,8 @@ a browser journey may check behavior without owning any statement of intent.
 
 Give accepted rules a readable representation, bind checks beneath that
 representation, and maintain both the rule's authority and its evidence.
-Automate validation without changing the specification merely to make
-automation convenient.[^adzic-spec-by-example]
+Let the check report whether the implementation satisfies the stated rule.
+Keep the rule readable when adapting its automation.[^adzic-spec-by-example]
 
 ### Establish the authority
 
@@ -173,10 +176,10 @@ smallest separation that preserves readable intent and replaceable automation.
 
 Bind at the lowest layer that still exercises the rule. Driving every
 specification through a browser adds slowness and brittleness.[^cucumber-antipatterns]
-Use [Evidence-matched test world](evidence-matched-test-world.md),
-[Evidence-matched test world](evidence-matched-test-world.md),
-and [Browser test evidence](../writing-browser-test-evidence.md)
-for that separate choice.
+Use [Evidence-matched test world](evidence-matched-test-world.md) to choose
+the boundaries needed to detect a violation. If the outcome depends on
+rendering or interaction, [Browser test evidence](../writing-browser-test-evidence.md)
+identifies which observations need a browser.
 
 Organize domain actions by domain concept, reuse established phrasing, and
 keep vocabulary and abstraction consistent across the suite.[^bdd-quality-study]
@@ -268,10 +271,14 @@ that exercise it; volume and successful execution do not establish acceptance.
 
 ## Worked example
 
-This synthetic refund example illustrates readable rules and boundary cases:
+Suppose a membership team approves a policy with a full refund through day
+fourteen and zero thereafter. It counts calendar dates in the membership's
+billing time zone. The following fictional examples distinguish the two
+outcomes in terms a member-services reviewer can check.
 
 ```gherkin
-Rule: An annual membership is refunded in full if cancelled within 14 days of purchase
+Rule: An annual membership cancelled up to 14 calendar days after purchase receives a full refund.
+      Later cancellations receive no refund. Count dates in the membership's billing time zone.
 
   Example: Priya cancels on the last day of the window
     Given Priya bought an annual membership for £120 on 1 March
@@ -284,10 +291,11 @@ Rule: An annual membership is refunded in full if cancelled within 14 days of pu
     Then she is refunded £0
 ```
 
-The examples expose whether the fourteenth day is included. Before acceptance,
-the complete rule must also settle calendar days versus elapsed time and the
-governing time zone where applicable. Additional date combinations belong in
-supporting coverage once those choices are explicit.
+If those same amounts came only from replaying two cancellations against the
+old system, preserve the observations in a characterization test. A passing
+run cannot tell the reviewer what members are entitled to receive. Once
+the policy is accepted, additional dates can exercise the boundary without
+adding another policy statement.
 
 For this entitlement, interface walkthrough details have other homes:
 
@@ -304,20 +312,26 @@ specified—for example, a status code promised to API consumers.
 ## Evidence and relationships
 
 This draft consolidates the repository's earlier design and maintenance
-guides.[^prior-design-guide][^prior-maintenance-guide] Their cited work supplies
-the existing basis: specification by example, readable domain language,
-separation of automation responsibilities, and continuing evidence. Sanderson's
-acceptance-test example illustrates the layered automation arrangement;
-the BDD quality study informs vocabulary and abstraction choices.[^farley-four-layer][^bdd-quality-study]
-The refund and Northbank examples are illustrations, not field evaluations of
-this pattern description. Reorganization does not constitute renewed source
-verification or evidence of effectiveness in this repository.
+guides.[^prior-design-guide][^prior-maintenance-guide] In interviews reported
+by Adzic, members of Iowa Student Loan described using living specifications
+to decide which lending rules had to change. At Songkick, tests recorded how
+activity feeds should behave while the team replaced their infrastructure.
+The teams reported their experiences alongside other changes in development
+practice, which limits attribution of the outcomes to any one technique.[^adzic-team-interviews]
+Sanderson's blog tests show a concrete way to bind domain actions such as
+opening a post to a browser driver. The BDD quality study informs vocabulary
+and abstraction choices.[^farley-four-layer][^bdd-quality-study]
+These sources support distinct parts of the design. The refund example is
+fictional. Whether a team's rule owners can actually read its chosen
+specification and use a failed check to resolve a disagreement calls for
+observation in that team.
 
 [^north-introducing-bdd]: [Introducing BDD](https://dannorth.net/introducing-bdd/).
 [^fowler-spec-by-example]: [Specification by Example](https://martinfowler.com/bliki/SpecificationByExample.html).
 [^fowler-business-readable]: [Business Readable DSL](https://martinfowler.com/bliki/BusinessReadableDSL.html).
 [^fowler-given-when-then]: [Given When Then](https://martinfowler.com/bliki/GivenWhenThen.html).
 [^adzic-spec-by-example]: [Specification by Example — How Successful Teams Deliver the Right Software](https://www.manning.com/books/specification-by-example).
+[^adzic-team-interviews]: Gojko Adzic, [Specification by Example, chapter 1](https://manning-content.s3.amazonaws.com/download/0/e31349c-e7f9-457d-834d-3a29e71e9136/adzic_ch01.pdf), pp. 5–7.
 [^cucumber-better-gherkin]: [Cucumber — Writing Better Gherkin](https://cucumber.io/docs/bdd/better-gherkin/).
 [^cucumber-brief]: [Keep Your Scenarios BRIEF](https://cucumber.io/blog/bdd/keep-your-scenarios-brief/).
 [^cucumber-antipatterns]: [Cucumber Anti-Patterns](https://cucumber.io/blog/bdd/cucumber-anti-patterns-part-two/).

@@ -32,7 +32,7 @@ sources:
 - id: sqlite-isolation
   resource: https://www.sqlite.org/isolation.html
   title: SQLite — Isolation in SQLite
-generated: { by: codex/gpt-6, at: 2026-11-21T22:42:03Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:10:28Z }
 ---
 
 # Explanation
@@ -45,18 +45,21 @@ several ideas make sense only in relation to one another.[^diataxis-explanation]
 ## When the distinction matters
 
 Consider SQLite's account of isolation. Someone who wants the spelling of
-a journal-mode setting can look it up. Someone who wants to know how a read
-transaction can keep seeing old data after a writer commits needs to connect
-journal mode, the reader’s snapshot, and the lifetime of the transaction.
-SQLite traces those connections through two concurrent connections.
+a journal-mode setting can look it up. Someone puzzled by an old value
+after a writer commits needs to know which version the reader can see.
+SQLite follows two database connections in write-ahead logging mode.
+The reader keeps the snapshot it was already reading. When it ends that
+transaction and starts a new one, the committed change becomes visible.[^sqlite-isolation]
 A page that lists each setting accurately could still leave this question
-unanswered.[^sqlite-isolation]
+unanswered.
 
 The reader’s use decides the form. A table comparing how two authors use a
-term can carry an explanation. A table of accepted values supports lookup.
-Directions for choosing a setting belong in a how-to. A principle document
-can build on an explanation when a team also needs warranted direction for
-a recurring decision.[^diataxis-ref-explanation]
+term can carry an explanation. A table of accepted values serves as
+[reference](reference.md).[^diataxis-ref-explanation] Directions for
+configuring a database for a particular workload belong in a
+[how-to guide](how-to.md). A [principle document](principle.md) can build
+on an explanation when a team also needs warranted direction for a
+recurring decision.
 
 ## Costs and limits
 

@@ -18,7 +18,7 @@ sources:
 - id: python-logging-reference
   resource: https://docs.python.org/3/library/logging.html
   title: Python — Logging reference
-generated: { by: codex/gpt-6, at: 2026-11-22T00:06:36Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:10:28Z }
 ---
 
 # Reference
@@ -39,7 +39,7 @@ why something works, or a how-to when readers need a route to a goal.
 Mirror the subject's useful structure in named, addressable entries. Give
 comparable items consistent fields and vocabulary, identify the supported
 version or scope, and connect each assertion to the maintained system or
-other authority. Use concise examples to clarify facts.
+other authority. Use concise examples to clarify facts.[^diataxis-reference]
 
 - **Coverage versus scanability:** cover the promised surface while keeping
   each entry easy to inspect.
@@ -54,13 +54,18 @@ detail can invalidate a decision or procedure that depends on it.
 
 ## Example and evidence
 
-The Python logging reference gives each class and function its own entry.
-A reader arriving at the page for a first lesson or a practical recipe
-can follow its links to tutorials or the cookbook. Those routes illustrate
-the design. Assessing lookup speed would require observing readers with
-a question in hand.[^python-logging-reference] Diátaxis describes how
-the arrangement of reference entries can reflect the thing they
-describe.[^diataxis-reference]
+Consider someone looking up `NOTSET` in Python’s logging reference. Under
+`Logger.setLevel`, a non-root logger with that level inherits its effective
+threshold from its ancestors. Under `Handler.setLevel`, the same value lets
+through every level the handler receives. Both entries answer a question
+about thresholds. Keeping the answer with its object preserves a difference
+that a single list of level names could hide.[^python-logging-reference]
+
+The same reference links to tutorials and a cookbook. A reader learning to
+log for the first time can choose a lesson. Someone looking up a threshold
+mid-recipe can consult one entry and return to the task. Those routes are
+visible on the page. Their speed or usefulness for a particular reader
+would need to be observed.[^python-logging-reference]
 
 For an example of how the structure of a subject guides lookup, see
 [Why reference follows the shape of the thing it describes](../explainers/reference.md).

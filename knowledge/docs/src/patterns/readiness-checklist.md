@@ -13,7 +13,7 @@ sources:
   title: Conroy et al. — Development, implementation, use and maintenance of safety checklists
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:07:11Z'
+  at: '2026-11-22T02:13:03Z'
 ---
 
 # Readiness checklist
@@ -26,11 +26,17 @@ the one condition that still prevents the handoff.
 
 ## Fit and tradeoffs
 
-A workshop coordinator could use a readiness check before opening
-registration. A facilitator could use one before accepting responsibility
-for the workshop. Both involve handoffs, but the conditions, evidence and
-authorized decision maker can differ. Each decision must be specific
-enough that the team can recognize a hold, resolve it, and reconsider.
+Suppose a workshop coordinator may open registration once the venue
+confirms a room with enough places. An assistant can verify the capacity
+against a seating plan. The coordinator still needs to know which room
+the venue has confirmed for that date. If the room changes, the old
+capacity check loses its bearing on the decision. A new confirmation and
+capacity check give the coordinator grounds to reconsider a hold.
+
+One coordinator could make that decision from a booking record. Where
+several groups hold the evidence, they could exchange confirmations at
+a handoff. A standing meeting adds little when one person already has
+both the evidence and the authority.
 
 The pause costs coordination time. It can prevent an error that would
 be expensive to reverse, yet a standing approval meeting can keep people

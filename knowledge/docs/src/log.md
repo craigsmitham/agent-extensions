@@ -2,6 +2,12 @@
 
 ## 2026-11-22
 
+- Reviewed the 15 documentation patterns against the decisions their
+  readers face. The [collection](patterns/index.md) now shows when a team
+  can hand an investigation to a runbook and when verification feeds a
+  separate readiness decision. The [pattern description](patterns/pattern-description.md)
+  distinguishes repeated proposals from accounts of people trying the design.
+
 - The how-to authoring guide now asks writers to check what the opening
   implies about the reader and their tools. The runbook guide cites AWS
   at the rehearsal step that its operational guidance supports.

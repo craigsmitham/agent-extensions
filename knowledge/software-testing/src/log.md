@@ -2,6 +2,8 @@
 
 ## 2026-11-22
 
+- Revised the testing collection around three design decisions: who owns a rule, what must run to expose a failure, and who can recover a test. Distinguished documented testing practices from the collection’s syntheses and worked illustrations.
+
 - Connected the defect-report vocabulary with two similar receipt reports that merit different dispositions.
 
 ## 2026-11-11

@@ -13,7 +13,7 @@ sources:
   title: Degani and Wiener — Human Factors of Flight-Deck Checklists
 generated:
   by: codex/gpt-6
-  at: '2026-11-21T22:49:04Z'
+  at: '2026-11-22T02:13:03Z'
 ---
 
 # Verification checklist
@@ -32,13 +32,19 @@ that the caption was fixed would share a blind spot. A self-check can
 detect an error. A claim of independent review needs evidence of who or
 what was independent of the original action.
 
-Use the [execution checklist](execution-checklist.md) when the missed
-action still needs doing. A verification result can supply evidence for a
-[readiness decision](readiness-checklist.md). An open question about the
-merit of a work may call for expert judgment or a rubric. When all
-comparisons are mechanical, automation may handle them directly. A
-checklist earns its cost where a person still has to select the right
-evidence, interpret an exception, or coordinate correction and recheck.
+If a caption is missing from the proof, the reviewer can return that
+specific proof for correction and check its replacement. If captions go
+missing because editors lose their place while laying out several pages,
+an [execution checklist](execution-checklist.md) could cue that action
+earlier. Both designs can earn their place on the same job.
+
+A caption match can supply evidence for a
+[readiness decision](readiness-checklist.md) when someone must authorize
+publication and other conditions, such as image rights, also matter.
+An open question about the merit of a work may call for expert judgment
+or a rubric. When all comparisons are mechanical, automation may handle
+them directly. A checklist earns its cost where a person still has to
+select the right evidence, interpret an exception, or coordinate correction and recheck.
 
 ## What supports the design
 

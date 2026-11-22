@@ -26,9 +26,12 @@ sources:
 - id: redhat-ansible-playbook
   resource: https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook
   title: Red Hat — What is an Ansible playbook
+- id: kube-prometheus
+  resource: https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubepodnotready/
+  title: kube-prometheus runbooks — KubePodNotReady
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:07:34Z'
+  at: '2026-11-22T02:15:25Z'
 ---
 
 # Playbook
@@ -37,7 +40,7 @@ Choose a playbook when a team recognizes a recurring situation but needs to
 investigate, choose among responses, or coordinate people whose observations
 change what others should do. The team needs enough experience to offer
 defensible choices, including a way to get help when the evidence fits
-none of them.
+none of them.[^aws-playbooks]
 
 ## Illustrative example
 
@@ -66,19 +69,25 @@ contact roles, signals, and linked procedures current costs real rehearsal
 and maintenance time.
 
 For a bounded task with established execution and recovery, a runbook can
-stand alone. A checklist can support one pause within a response when the
-main risk is missing a known action or communication. The need to make
-situational choices explains when a playbook adds value to either.
+stand alone. A [checklist](checklist.md) can support one pause within a
+response when the main risk is missing a known action or communication.
+The need to make situational choices explains when a playbook adds value to either.
 
 ## Terminology
 
-This bundle uses *playbook* for guidance on approaching a situation. AWS
-uses the term for incident investigation and escalation, with runbooks for
-known remedies.[^aws-playbooks] Atlassian's Team Playbook collects facilitated
-activities for teams. Microsoft’s Engineering Fundamentals Playbook gathers
-engineering practices, recipes, and checklists. Those examples show a wider
-range of uses and leave the structure of any one response open.[^atlassian-team-playbook][^ise-playbook] In Ansible, a playbook is an
-executable YAML automation artifact.[^redhat-ansible-playbook]
+Local names vary. The kube-prometheus project calls its guidance for an
+unready pod a *runbook*. The alert can arise from different conditions.
+Readers use events, logs, and configuration to narrow the cause before
+choosing a remedy.[^kube-prometheus] For a team designing guidance for
+that decision, the investigation is where this bundle’s playbook pattern
+fits. A team can keep the name its responders already look up.
+
+Check what a named resource actually delivers. Atlassian’s Team Playbook
+collects facilitated activities.[^atlassian-team-playbook] Microsoft’s
+Engineering Fundamentals Playbook collects engineering practices and
+checklists.[^ise-playbook] An Ansible playbook specifies automation to
+execute.[^redhat-ansible-playbook] The shared name alone tells a responder
+little about which resource will help them choose a response.
 
 For an account of why response choices change, read
 [How a playbook guides a response as evidence changes](../explainers/playbook.md).
@@ -89,3 +98,4 @@ To draft and rehearse one with a team, see
 [^atlassian-team-playbook]: Atlassian, [Team Playbook](https://www.atlassian.com/team-playbook).
 [^ise-playbook]: Microsoft ISE, [Engineering Fundamentals Playbook](https://microsoft.github.io/code-with-engineering-playbook/).
 [^redhat-ansible-playbook]: Red Hat, [What is an Ansible playbook?](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook).
+[^kube-prometheus]: kube-prometheus runbooks, [KubePodNotReady](https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubepodnotready/).

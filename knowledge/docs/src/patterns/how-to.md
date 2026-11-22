@@ -22,7 +22,7 @@ sources:
 - id: python-logging-cookbook
   resource: https://docs.python.org/3/howto/logging-cookbook.html
   title: Python — Logging Cookbook
-generated: { by: codex/gpt-6, at: 2026-11-22T00:07:45Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:10:28Z }
 ---
 
 # How-to guide
@@ -34,16 +34,19 @@ when the job crosses several tools.[^diataxis-how-to]
 
 ## Recognizing the fit
 
-A Python programmer wants messages from two modules to reach the same log.
-The logging cookbook presents a main module that configures the handlers,
+Suppose a Python programmer wants messages from two modules to reach the
+same log. The logging cookbook presents a main module that configures the handlers,
 an auxiliary module that emits messages, and sample output containing
 records from both. The recipe brings together the pieces the programmer
 would otherwise have to assemble from separate interface descriptions.
-The cookbook uses different recipes for other logging tasks.[^python-logging-cookbook]
+That recipe assumes the modules run in one process. When several processes
+must write to one file, the cookbook offers a separate recipe. The desired
+output is similar, but the programmer has to coordinate the writes.[^python-logging-cookbook]
 
-A novice asking for a first experience with logging has a different need.
-A [tutorial](tutorial.md) can provide a controlled exercise and feedback.[^diataxis-tutorials-how-to]
-An experienced programmer asking which levels a handler accepts needs
+The same programmer might want to practice logging before applying it to
+their own modules. A [tutorial](tutorial.md) can provide a controlled
+exercise and feedback.[^diataxis-tutorials-how-to] A reader asking which
+levels a handler accepts needs
 [reference](reference.md). A situation that still requires choosing what
 kind of response to make may call for a [playbook](playbook.md). Routine
 operational work with prescribed checks, recovery, and escalation may

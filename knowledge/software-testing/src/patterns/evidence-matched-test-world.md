@@ -1,10 +1,10 @@
 ---
 type: Pattern
 title: Evidence-matched test world
-description: Chooses the smallest test world that preserves material failure distinctions, with explicit boundaries, substitutions, and evidence limits.
+description: When choosing which components to run and which to substitute, keep the smallest setup in which a failure that matters would still be visible.
 tags: [testing, test-fidelity, test-scope, test-doubles, integration, end-to-end, software-testing]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:14:03Z }
 sources:
 - id: google-unit-testing
   resource: https://abseil.io/resources/swe-book/html/ch12.html
@@ -48,6 +48,12 @@ sources:
 ---
 
 # Evidence-matched test world
+
+Suppose a CSV exporter passes its tests, but customers open the downloaded
+file and see garbled names. A direct call can check which names the exporter
+selects. To catch the reported failure the test must also read the bytes the
+customer receives. If the download handler changes the encoding after export,
+even a perfect test of the exporter will miss it.
 
 ## Problem, context, and forces
 
@@ -180,9 +186,9 @@ consumer-visible response.
 
 Write a unit test when logic can be exercised with plain inputs and observed
 through return values, emitted events, or calls on an explicit collaborator.
-Skip a direct unit test for route-local composition, static copy, declarative
-configuration, or a wrapper that adds no behavior. Those subjects are proved by
-the composed contract they participate in or by a type or build check.
+For a wrapper that only delegates, look for a composed check that would
+already fail if the wrapper broke. A route with its own error mapping adds
+an observable decision. A focused case can earn its keep there.
 
 ### Contract suites
 
@@ -190,8 +196,8 @@ Use a dedicated suite when it is the comprehensive contract promised to a
 consumer. Organize it by capabilities and observable outcomes, so a reader can
 tell which promise a failing case breaks. When one interface has several
 implementations, write the contract once as a shared suite and run it against
-each implementation. A shared suite is what keeps an in-memory implementation
-honest against the real one.[^fowler-contract-test]
+each implementation. Disagreement on a shared case exposes drift.
+Behavior outside those cases still needs its own evidence.[^fowler-contract-test]
 
 ### Narrow integration tests
 
@@ -216,16 +222,17 @@ Signs that a substitution has gone wrong:
 - the same fake is re-declared in many files with drifting behavior; or
 - production has no seam and the test reaches in through the module system.
 
-When a seam is missing, add it to the subject rather than to the test.
+If substituting the dependency would hide the failure you care about, keep it
+real. If substitution would preserve the claim, weigh a new production seam
+against exercising the subject through an existing boundary.
 
-## Keep conventions out of tests
+## When a static check is enough
 
-Do not use a test runner to scan source files, Markdown, exports, directories,
-workflow definitions, or package metadata for required or forbidden structure.
-Mechanically decidable conventions belong in lint rules, repository quality
-scripts, schema validation, typechecking, or build checks. Those tools report
-the violation where it occurs, run in the right decision point, and do not
-inflate a behavioral suite with structural ceremony.
+A schema check can identify an invalid package manifest before the build.
+Use lint, schema, type, or build checks where the declaration itself settles
+the question. If an installed command could be missing a file despite a
+valid manifest, exercise the installed command. Its result answers a
+different question about what reached the consumer.
 
 ## Consequences and related patterns
 
@@ -238,7 +245,17 @@ remaining in the suite.
 
 [Browser test evidence](../writing-browser-test-evidence.md) distinguishes
 browser capability from subject scope. [Owned test worlds](owned-test-world.md)
-addresses state, readiness, interruption, cleanup, execution, and diagnosis.
+helps decide who can restore a run when the selected world depends on shared
+services or persistent state.
+
+The name *evidence-matched test world* is this collection's synthesis. At
+Google, teams record service traffic in a larger run and replay it for faster
+checks. Changes in the live interaction still require the larger run.
+Spring's MockMvc and ASP.NET Core's test host illustrate another realization:
+framework request handling remains real while transport is substituted.
+These accounts document different ways to preserve a distinction. The CSV
+example is illustrative. The sources supply no comparison of how well this
+description guides teams choosing their own boundaries.[^google-larger-testing][^spring-mockmvc][^aspnet-integration]
 
 [^google-unit-testing]: Winters et al., [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html), describes why small, focused tests give fast and specific feedback and how to keep them maintainable.
 [^test-desiderata]: Beck and Sutton, [Test Desiderata](https://testdesiderata.com/), presents valuable test properties as interacting aims rather than one universal test shape.

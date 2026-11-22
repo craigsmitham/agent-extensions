@@ -25,7 +25,7 @@ sources:
 - id: python-tutorial
   resource: https://docs.python.org/3/tutorial/
   title: Python — The Python Tutorial
-generated: { by: codex/gpt-6, at: 2026-11-22T00:06:36Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:10:28Z }
 ---
 
 # Tutorial
@@ -40,9 +40,10 @@ lets this particular learner experience.[^diataxis-tutorials]
 
 In Ableton’s *Make beats*, the learner starts with a musical pattern and
 can add or remove individual notes in a grid. The exercise gives a
-beginner a rhythm to vary and a way to hear what one change does. A
-lesson built around producing a polished recording would ask much more
-of the same learner.[^beats]
+beginner a rhythm to vary and a way to hear what one change does.[^beats]
+That opportunity is visible in the lesson. To tell whether someone can
+now make a change deliberately, listen to the rhythm they choose for a
+new pattern and ask what they changed.
 
 The audience matters even for a first lesson. The Python Tutorial
 assumes its readers already understand programming. An author can

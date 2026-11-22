@@ -16,7 +16,7 @@ sources:
   title: Kalyuga et al. — The expertise reversal effect
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:07:11Z'
+  at: '2026-11-22T02:13:03Z'
 ---
 
 # Learning checklist
@@ -25,8 +25,10 @@ Choose a learning checklist when learners can already attempt a bounded task
 and prompts at particular moments would help them practice a judgment they
 will later need to make independently. A novice reviewer, for example, might
 predict where a draft misleads its reader, inspect the passage, and compare
-their prediction with an experienced reader’s feedback. The activity needs
-a way to discover which predictions held up.[^checklist-design-origin]
+their prediction with an experienced reader’s feedback. A coach could ask
+the question aloud, or a practice sheet could ask for a prediction before
+revealing a reader’s account of the passage. Either way, the learner gets
+to see which predictions held up.[^checklist-design-origin]
 
 ## When the aid earns its place
 
@@ -35,8 +37,12 @@ If someone still needs a demonstration and a carefully arranged first
 experience, the prompts can sit within a [tutorial](tutorial.md). If the job
 calls for a reliable reminder every time, an
 [execution checklist](execution-checklist.md) can continue to serve an
-experienced practitioner. Removing a standing operational check changes how
-the work is controlled and requires its own justification.
+experienced practitioner. For example, a reviewer might practice predicting
+where a reader will get lost until they can spot that passage unaided.
+If the same team requires every reviewer to attach the reviewed revision
+when sending comments, that reminder still serves a purpose after the
+reviewer masters the skill. Removing a standing check changes how the
+work is controlled and requires its own justification.
 
 The learning form costs effort to design feedback, adjust prompts, and
 observe later performance. Learners may copy an answer or come to rely on
