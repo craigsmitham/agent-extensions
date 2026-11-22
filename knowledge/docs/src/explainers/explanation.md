@@ -79,7 +79,10 @@ a kitchen habit, a test of what the habit achieves, and McGee’s two
 theories about why it works, one of them since discarded. There are
 judgments too, the pastry cooks’ in keeping the bowl and McGee’s in
 doubting it. Making those connections is how an explainer builds
-understanding. A reader who will never own a copper bowl can still
+understanding. A reader wondering why a team chose one design over another
+needs the same kind of connection between the options people saw, the
+constraints they faced, and what mattered to them at the time.
+A reader who will never own a copper bowl can still
 appreciate what the pastry cooks knew and why there was still something to
 discover.[^explanation][^mcgee]
 
