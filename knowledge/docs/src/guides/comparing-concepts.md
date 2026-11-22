@@ -20,13 +20,14 @@ sources:
   title: Documentation organization and discovery
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T01:50:06Z'
+  at: '2026-11-22T02:02:34Z'
 ---
 
 # Comparing concepts
 
-Start with a choice someone got stuck on. In a music archive, a volunteer
-finds two recordings of the same piece. They have a correction to make.
+Start with the terms readers confuse and a choice that depends on telling
+them apart. For example, a music archive volunteer finds two recordings
+of the same piece. They have a correction to make.
 How should they decide which catalog entry to change?
 
 ## Find the distinction that changes the choice
@@ -60,10 +61,10 @@ work through the reasoning behind the choice.[^documentation-craft]
 
 ## Check
 
-Try a fresh correction from each entry point. Suppose the composer credit
-is wrong for the piece and only the second recording lists the wrong
-soloist. Can the volunteer reach the comparison from either term and tell
-which record needs each edit? If one route leaves them guessing, repair
+Try a fresh case from each entry point. In the archive, suppose the
+composer credit is wrong for the piece and only the second recording
+lists the wrong soloist. Can the volunteer reach the comparison from
+either term and tell which record needs each edit? If one route leaves them guessing, repair
 that link or wording and retry the case.
 Recheck the comparison when a definition changes. If only one local
 question remains, fold the answer back into the page where it arises.

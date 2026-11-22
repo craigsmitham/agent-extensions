@@ -4,7 +4,7 @@ title: How to curate a pattern collection
 description: When readers have several documented patterns to choose from, build and test routes from their design questions to useful entries, then revise the collection from experience of use.
 tags: [docs, pattern-collection, pattern-language, curation, indexing, feedback, maintenance]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-22T01:50:06Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:02:34Z }
 sources:
   - id: readers
     resource: https://wirfs-brock.com/rebecca/papers/whowillread/
@@ -67,7 +67,8 @@ The first two links offer alternatives for a choice about recipients.
 The last adds a separate design decision about repeated delivery.
 Attach that relationship wherever a practitioner could encounter the
 problem. Give readers who remember a name a direct lookup. If the topic
-is unfamiliar, use a short story about one order to introduce the terms.
+is unfamiliar, introduce the terms through a case the reader recognizes.
+For this collection, follow one order from placement to packing.
 Keep the full account of each pattern at its own address.[^idempotent][^readers]
 
 ## 3. Try an unfamiliar case before calling it a language
@@ -93,9 +94,8 @@ applied it. In the order example, did each job reach just one packing
 station? Did billing receive the events it needed? Finding a relevant
 pattern and getting the intended result answer different questions. Keep
 the case and its conditions so future readers can judge how far the
-lesson travels. Wirfs-Brock and Hvatum’s
-2026 preprint discusses feedback and obsolescence across a collection’s
-life.[^value]
+lesson travels. Use that feedback when deciding which entries to revise
+or retire.[^value]
 
 When a reader chooses an unsuitable entry, try their actual search wording
 and inspect the first misleading cue. Change the cue if discovery failed.

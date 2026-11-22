@@ -4,7 +4,7 @@ title: How to write a tutorial
 description: When someone needs a first experience with a skill, build a short lesson around something they can do, observe, and try again.
 tags: [docs, tutorial, lesson, authoring, revision, learning, diataxis]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-22T00:06:36Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:00:19Z }
 sources:
   - id: lesson
     resource: https://diataxis.fr/tutorials/
@@ -16,10 +16,11 @@ sources:
 
 # How to write a tutorial
 
-Suppose a volunteer who sets out chairs for a concert wants a first
-experience with Python. Start with something they already recognize.
-Six rows of eight seats gives them a result they can check while they
-are getting used to the interpreter.
+Start with the skill someone wants to learn. Choose a first attempt
+whose result they can recognize from their own experience. Suppose a
+volunteer who sets out chairs for a concert wants to learn Python.
+A layout of six rows of eight seats gives them a result they can check
+while they are getting used to the interpreter.
 
 ## Choose a small piece of the skill
 
@@ -70,16 +71,17 @@ whose consequences they have yet to encounter.[^lesson]
 
 ## Replay the lesson and try a small variation
 
-Start a fresh session and use the text as written. The expected sequence
-is 48, a quiet prompt, 48 again, another quiet prompt, and 56. Repair the
-first mismatch and replay from the beginning. This checks the path a
-learner must travel.
+Return to the starting conditions you set for the learner and use the text
+as written. In a fresh Python session, the expected sequence is 48, a
+quiet prompt, 48 again, another quiet prompt, and 56. Repair the first
+mismatch and replay from the beginning.
 
 If you can observe a learner, let them take that path without supplying
-the missing steps aloud. At the end, give them a related seating problem.
-The room still has seven rows, but it can fit nine chairs in each. See
-whether they can use the shell to obtain 63 and point to the value they
-changed. Their actions tell you which part of the lesson to revisit.
+the missing steps aloud. At the end, vary one detail so they can use what
+they just practiced. For the concert, the room still has seven rows, but
+it can fit nine chairs in each. See whether they can use the shell to
+obtain 63 and point to the value they changed. Their actions tell you
+which part of the lesson to revisit.
 Without a learner, report the replay and leave the learning outcome open.
 
 [^lesson]: Daniele Procida, [Tutorials](https://diataxis.fr/tutorials/).

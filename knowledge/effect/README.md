@@ -1,7 +1,8 @@
 # Effect v4 checklists
 
-From a TypeScript project using Effect 4.1.4 or later in the 4.x line,
-install this standalone bundle to look up design and review checklists.
+These design and review checklists cover TypeScript targeting Effect 4.1.4
+or later in the 4.x line. Install the standalone bundle in the workspace
+where you want to consult them.
 
 ```sh
 axm install @craigsmitham/knowledge/effect

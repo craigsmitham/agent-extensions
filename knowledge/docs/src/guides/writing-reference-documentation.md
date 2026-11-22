@@ -12,7 +12,7 @@ tags:
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:06:36Z'
+  at: '2026-11-22T02:00:19Z'
 sources:
 - id: reference
   resource: https://diataxis.fr/reference/
@@ -69,9 +69,11 @@ someone looking up the function might want to continue.[^reference]
 
 ## Test a lookup from the middle of the page
 
-Start at the entry and answer both original questions using its text.
-Run the example with a fresh iterator. Then vary the argument that
-caused confusion. On a fresh copy of the same input,
+Start at the entry and answer the original lookup request using its text.
+Check the answer against the source that governs the entry. For the bird
+club, compare the species name and code with its adopted checklist. For
+the reporting team, run the example with a fresh iterator, then vary the
+argument that caused confusion. On a fresh copy of the same input,
 `list(islice(rows, 2, None))` should yield only `['ash']`. Check the
 limits against the supported version as well. A successful example
 cannot establish every allowed argument.[^iter]

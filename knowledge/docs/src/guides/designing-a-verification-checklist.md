@@ -4,7 +4,7 @@ title: How to design a verification checklist
 description: When someone must check completed work, write a checklist that ties each conclusion to evidence from the finished item and sends discrepancies for correction and recheck.
 tags: [docs, verification-checklist, authoring, verification, comparison, discrepancy]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-22T00:10:03Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:02:34Z }
 sources:
   - id: bagit
     resource: https://www.rfc-editor.org/rfc/rfc8493.html
@@ -14,9 +14,12 @@ sources:
 # How to design a verification checklist
 
 Take the finished item, a criterion for accepting it, and an example of
-something that went wrong. Suppose an archive receives concerts packaged
-using BagIt. Staff already run a validator, but a report for yesterday’s
-delivery could be attached to today’s accession record. Put the prompts
+something that went wrong. Find an observation, measurement, or test
+result that would reveal that discrepancy on this item.
+
+Suppose an archive receives concerts packaged using BagIt. Staff already
+run a validator, but a report for yesterday’s delivery could be attached
+to today’s accession record. Put the prompts
 in that record so the receiver checks which delivery the result belongs to.
 
 ## 1. Define the claim and find evidence that could disprove it
@@ -34,11 +37,13 @@ own check. Restrict the checksum result to the comparison it performed.
 
 ## 2. Write the comparisons and the response to a discrepancy
 
+Write what the reviewer will compare, how to identify the item the
+evidence belongs to, and who can resolve a missing or failed check.
 In this example the archive gives each received copy a delivery ID and
 keeps the copy unchanged during intake. Its validation tool records that
 ID on the report. The receiving team resolves identification problems
 locally and asks the sender for a replacement when the files fail
-validation. Write the prompts using the agreements at your receiving desk.
+validation. The prompts reflect the agreements at that receiving desk.
 
 | At receipt | Evidence and response |
 | --- | --- |
@@ -46,13 +51,16 @@ validation. Write the prompts using the agreements at your receiving desk.
 | Does the report establish validity for that copy? | Match the report’s delivery ID to the confirmed copy and inspect the result. For a missing or mismatched report, retrieve the full report for this copy or rerun validation on it. If checks were skipped or only totals were compared, run full validation. |
 | What did full validation find? | On success, attach the report to the accession record. On a missing required file or checksum mismatch, record the failing path, hold the copy, and request a replacement. Check the replacement under its own delivery ID before closing the hold. |
 
-Keep mechanical comparisons in the validator. When translating criteria
+Where a tool already makes a comparison, ask the reviewer to check which
+item it tested and what it found. When translating criteria
 into prompts staff will use, follow the shared [checklist design guide](designing-a-checklist.md)
 for item wording and the use protocol.
 
 ## 3. Try a correct case and cases that look correct
 
-Prepare two test deliveries from a known-good package. Leave one intact.
+Try an item that meets the criterion, then one with a discrepancy the
+check should catch. For the archive, prepare two test deliveries from a
+known-good package. Leave one intact.
 In the other, change one payload byte without altering its length or
 the manifest. Receive each under its own ID and run full validation.
 The damaged copy should trigger a replacement request even

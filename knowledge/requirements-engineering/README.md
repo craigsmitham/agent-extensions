@@ -12,7 +12,7 @@ If AXM prompts for project setup, select the agents that should discover the
 bundle and enable instruction syncing to give them its lookup route. For
 command-line lookup alone, you can leave the agent selection empty.
 
-Before accepting a requirement, use the individual review checklist to check its authority, meaning, and assessment basis.
+When reviewing a requirement, use the individual review checklist to assess its authority, meaning, and how its satisfaction can be checked.
 
 ```sh
 axm knowledge concepts get '@craigsmitham/knowledge/requirements-engineering#review/reviewing-individual-requirements'

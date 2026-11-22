@@ -2,6 +2,8 @@
 
 ## 2026-11-22
 
+- Clarified how to establish the authority for a constraint, classify a requirement without a project taxonomy, select a conditional form, trace inspection evidence, and assess delivery impact using the project's own planning method.
+
 - Restored the rental obligations behind the EARS and 29148 examples, tested the atomic-replacement counterexample, and clarified the scope of tailored conformance.
 
 - Clarified how to draft and check constraints, quantitative targets, and stateful obligations, choose a specification method, and prepare a change for decision. Added practical checks for classification and lineage.

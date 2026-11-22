@@ -4,7 +4,7 @@ title: How to design a readiness checklist
 description: When a named person must decide whether work can proceed, turn the governing conditions into current evidence, a disposition, and a way to reopen a held decision.
 tags: [docs, readiness-checklist, authoring, readiness, evidence, decision, hold]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-22T00:07:11Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:02:34Z }
 sources:
   - id: orr
     resource: https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_7123_001C_&page_name=all
@@ -13,10 +13,11 @@ sources:
 
 # How to design a readiness checklist
 
-Get the decision owner and the people who know what must be true before
-the decision. Start with their actual criteria and authority. Suppose a box
-office asks for a checklist to decide when to open ticket sales for a
-concert. The following conditions are illustrative agreements for that desk.
+Identify who can authorize the work and what must be true for them to do
+so. Use the governing agreement and take any unclear criterion to its
+owner. Suppose a box office asks for a checklist to decide when to open
+ticket sales for a concert. The following conditions are illustrative
+agreements for that desk.
 
 ## 1. Identify the point at which someone can still choose
 
@@ -26,11 +27,10 @@ matches the venue’s current seating plan. Agree who can confirm the
 plan, what evidence counts, and which changes invalidate a previous check.
 Trace a supposed exception to whoever has the authority to allow it.
 
-Look for conditions that merely make a review possible. Receipt of the
-seating-plan file lets a technician start checking inventory. It does
-not establish agreement between the two. NASA’s operational readiness
-review likewise gives distinct criteria for entering the review and for
-its successful conclusion.[^orr]
+Separate the evidence needed to start a review from the evidence needed
+to authorize the work.[^orr] Receipt of the seating-plan file lets a
+technician start checking inventory. To open sales, the lead needs the
+result of that comparison against the venue’s current plan.
 
 ## 2. Put the decision and its alternatives on the page
 
@@ -76,4 +76,4 @@ discrepant seat reached public sales. For a reusable candidate, include the
 [maintainer note](designing-a-checklist.md#decide-what-would-justify-keeping-it)
 with the checklist and identify any open ownership or evidence questions.
 
-[^orr]: NASA, [Systems Engineering Processes and Requirements](https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_7123_001C_&page_name=all), appendix G.12, table G-12.
+[^orr]: NASA, [Systems Engineering Processes and Requirements](https://nodis3.gsfc.nasa.gov/displayAll.cfm?Internal_ID=N_PR_7123_001C_&page_name=all), retired edition NPR 7123.1C, appendix G.12, table G-12.

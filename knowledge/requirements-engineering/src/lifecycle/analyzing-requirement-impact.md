@@ -3,7 +3,7 @@ type: Guide
 title: Analyzing and specifying requirement change
 description: Traces a proposed requirement change through sources, dependents, realization, verification, validation, and operations, then states the exact change put up for decision. Use when a requirement change is proposed and either its reach across dependents and existing evidence or its precise before and after meaning is not yet written down.
 tags: [impact-analysis, requirement-change, before-after, traceability, evidence, dependency, requirements-engineering]
-generated: { by: codex/gpt-6, at: 2026-11-22T01:50:08Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:01:18Z }
 ---
 
 # Analyzing and specifying requirement change
@@ -52,17 +52,20 @@ and the test that expects the download to fail. Ask whether exports already
 deleted at the transition are covered. If the proposal leaves that open,
 name who can settle it.
 
-Read the proposal as the decision maker. Can you tell which behavior would
-change on day eight, which evidence still applies, and which decisions
+Read the proposal as the decision maker. Can you tell which cases would
+be decided differently, which evidence still applies, and which questions
 remain? Keep the proposal pending until the authorized decision is known.
 Record the outcome and effective point when decided.
 
-When the proposed change affects project capability, cost, or timing,
-Alleman's performance-based project management (optional companion reading: `@craigsmitham/knowledge/project-management#foundations/alleman-performance-based-project-management`)
-connects revised scope and evidence to the plan and forecast. The requirement
-analysis here states the changed obligation; a forecast does not authorize it.
+If the proposal changes what the project can deliver, when, or at what cost,
+identify the affected commitments and estimates for the people maintaining
+the plan. Mark any forecast that depends on a pending decision.
 
-## Continue exploring
+## Optional companion readings
 
-- Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
-  covers the continued authority and evidence of affected executable specifications.
+- For an example of connecting capability and evidence to a delivery forecast,
+  see Glen Alleman's approach to performance-based project management at
+  `@craigsmitham/knowledge/project-management#foundations/alleman-performance-based-project-management`.
+- If automated examples express or verify the changed rule, the *Executable
+  specifications* pattern explains how to check their authority and evidence.
+  See `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`.

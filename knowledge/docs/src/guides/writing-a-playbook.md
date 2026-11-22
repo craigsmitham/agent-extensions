@@ -8,17 +8,15 @@ sources:
 - id: aws
   resource: https://docs.aws.amazon.com/wellarchitected/latest/framework/rel12-bp01.html
   title: AWS — Use playbooks to investigate failures
-generated: { by: codex/gpt-6, at: 2026-11-22T01:48:28Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:00:19Z }
 ---
 
 # How to write a playbook
 
-Start with an occasion when competent people had to decide what to do.
-Collect the information they actually had at the time, the people they
-could call on, and how they found out whether their response helped.
-AWS recommends making decision points and escalation paths explicit in
-investigation playbooks. The same questions can expose missing guidance
-in a team’s own recurring situation.[^aws]
+Start with an occasion when the team faced several plausible responses.
+Ask what the people involved could observe at the time, which decisions
+they could make themselves, and when they needed to bring someone else
+in.[^aws] Find out how they judged whether their response helped.
 
 ## Recover the first decision from the case
 

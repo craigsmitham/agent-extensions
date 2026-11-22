@@ -12,7 +12,7 @@ If AXM prompts for project setup, select the agents that should discover the
 bundle and enable instruction syncing to give them its lookup route. For
 command-line lookup alone, you can leave the agent selection empty.
 
-When a team has six weeks to invest in a proposed change, read how Shape Up uses appetite to shape the scope of a bet.
+When a team has a fixed amount of time to invest, read how Shape Up uses that limit to decide how much work to take on.
 
 ```sh
 axm knowledge concepts get '@craigsmitham/knowledge/project-management#foundations/shape-up'

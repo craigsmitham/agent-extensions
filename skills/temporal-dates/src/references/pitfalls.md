@@ -4,7 +4,9 @@ Temporal removes most `Date` footguns. These are the ones it deliberately keeps 
 
 ## DST: the two ambiguities
 
-Local time is not a function. Twice a year it is either undefined or two-valued.
+When a zone’s clock moves forward, it skips a range of local times. When it
+moves back, a range of local times occurs twice. Here are the two changes
+in Chicago in 2026.
 
 **Spring forward — the time doesn't exist.** In `America/Chicago`, 2026-03-08 jumps 02:00 → 03:00. There is no 02:30.
 

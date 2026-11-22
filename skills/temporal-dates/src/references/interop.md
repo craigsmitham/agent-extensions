@@ -1,10 +1,9 @@
 # Temporal at the boundaries
 
-Temporal is not yet what Effect clocks, drivers, ORMs, and third-party SDKs
-necessarily speak. Within a Temporal-selected scope, use a **thin shell**:
-convert on the way in, convert on the way out, and keep Temporal values in
-between. Do not use this boundary pattern to override another module's
-intentional Effect `DateTime` or native `Date` representation.
+When a module uses Temporal and a caller expects a different representation,
+convert where the value crosses between them. Keep the representation each
+side expects. For example, a browser API that accepts a JavaScript `Date`
+can receive one even when your application stores a `Temporal.Instant`.
 
 ## Effect programs with Temporal value models
 
@@ -75,6 +74,10 @@ const PlainDate = z.string().transform((s, ctx) => {
 Do the same for `Instant` and `ZonedDateTime`. Once the schema owns parsing, everything downstream is typed and no `from()` calls leak into handlers.
 
 ## SQL type mapping
+
+Choose the Temporal type from what the stored value represents. The table
+uses PostgreSQL column types. For another database, check what its column
+preserves and what its driver returns before choosing the conversion.
 
 | Column type | Temporal type |
 |---|---|

@@ -4,7 +4,7 @@ title: How to write an explainer
 description: When readers know the steps or facts but still can’t account for what happens, or when a topic needs an introduction, turn their question into a focused, source-backed explainer.
 tags: [docs, explanation, explainer, conceptual-documentation, authoring, how-to, diataxis]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:00:19Z }
 sources:
   - id: explanation
     resource: https://diataxis.fr/explanation/
@@ -78,9 +78,10 @@ start there. The library page could open with the puzzle in the figures.
 > from shortest to longest and the middle one, which the NIST handbook
 > calls the *median*, is two days.
 
-The sample names the handbook where it introduces the median. Name the
-source for a definition wherever you use it. Keep the reasoning and the
-numbers close enough that a reader can check the claim without having
+The sample names the handbook where it introduces the median. Cite the
+source where you use a definition. When the choice of definition affects
+the answer, tell the reader whose usage governs it. Keep the reasoning and
+the numbers close enough that a reader can check the claim without having
 the original report open.[^location]
 
 Choose a different order when the question warrants one. An account of

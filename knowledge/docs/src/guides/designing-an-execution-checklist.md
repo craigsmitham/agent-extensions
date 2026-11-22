@@ -12,7 +12,7 @@ tags:
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T01:50:06Z'
+  at: '2026-11-22T02:02:34Z'
 sources:
 - id: flight
   resource: https://ntrs.nasa.gov/citations/19910017830
@@ -21,22 +21,22 @@ sources:
 
 # How to design an execution checklist
 
-Ask someone to perform the existing task while you follow one work item.
-A librarian preparing recorders moves from an empty kit to a fitted card,
-then adds the headset and sends the kit to the loan desk. The loan desk
-also handles telephone calls, so interruptions during packing are ordinary.
+Follow one work item while someone does the job. Find the point where an
+interruption could leave the next person unsure what still needs doing.
+For example, a librarian preparing recorders moves from an empty kit to
+a fitted card, then adds the headset and sends the kit to the loan desk.
+The desk also handles telephone calls, so interruptions during packing are ordinary.
 Use the [shared checklist guide](designing-a-checklist.md) for item wording,
-authority, placement, and validation. For this design, concentrate on how
-someone can tell what remains to be done on one kit.
+authority, placement, and validation.
 
 ## Find where the sequence can lose its place
 
 Find the first action that depends on an earlier one. Releasing
 a kit depends on both the card and the headset being present. Either can
 be fitted first. Preserve that freedom unless the local procedure requires
-a specific order. Ask the librarian what would still be visible if they
-left the room halfway through each action. The NASA flight-deck study
-examines this same placekeeping problem in a different working setting.[^flight]
+a specific order. Ask what would still tell someone where to resume
+after an interruption.[^flight] For the librarian, check what they could
+see on returning to a half-packed case.
 
 ## Draft prompts that travel with the work
 
@@ -59,8 +59,9 @@ which actions remain for that kit.
 
 ## Interrupt a rehearsal twice
 
-Break off once just before fitting the recording card and once just after
-fitting it but before marking the line. Hand each case to someone else.
+Break off once before an action and once after doing it but before
+marking it complete. In the library, interrupt the fitting of the
+recording card at those two points. Hand each case to someone else.
 The mark looks the same in both situations. Observe whether the second
 person checks the actual slot, completes only the outstanding action,
 and sends the correct kit on. A draft that tells them simply to repeat

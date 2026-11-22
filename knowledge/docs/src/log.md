@@ -6,6 +6,12 @@
   implies about the reader and their tools. The runbook guide cites AWS
   at the rehearsal step that its operational guidance supports.
 
+- Reviewed the other authoring guides from a second intended setting.
+  The playbook guide now opens with the team’s decision. The tutorial
+  and verification-checklist guides distinguish what the author needs
+  to test from the Python interpreter and BagIt validator used in their
+  examples. The organization guide covers hosts with fixed page IDs.
+
 - Reviewed the 17 how-to guides against their readers’ tasks. Revised the
   guides to comparing concepts, organizing documentation, describing and
   collecting patterns, designing execution checklists, and writing playbooks

@@ -13,7 +13,7 @@ tags:
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:07:11Z'
+  at: '2026-11-22T02:02:34Z'
 sources:
 - id: flight
   resource: https://ntrs.nasa.gov/citations/19910017830
@@ -44,9 +44,9 @@ the record, where the registrar can still hold the crate.
 In **read-do**, someone reads a prompt and then performs the action. In
 **do-confirm**, they use the prompt to check work already performed. A
 **challenge-response** exchange can accompany either sequence. One person
-calls an item and another reports what they observe. Degani and Wiener
-describe both sequences and spoken responses on flight decks.[^flight]
-Choose an exchange the people doing your task can carry out at that moment.
+calls an item and another reports what they observe.[^flight]
+Choose a sequence the people doing your task can carry out at that moment.
+For the two-person handover, decide who can read each ID aloud.
 
 ## Write one item you could observe in use
 

@@ -8,7 +8,7 @@ sources:
 - id: prisma
   resource: https://www.prisma-statement.org/prisma-2020-checklist
   title: PRISMA 2020 checklist
-generated: { by: codex/gpt-6, at: 2026-11-21T22:51:04Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:02:34Z }
 ---
 
 # How to design a reporting and review checklist
@@ -28,10 +28,9 @@ event and which depend on circumstances. Preserve that authority with the
 criteria so a reviewer can distinguish a reporting obligation from a
 personal preference. These example criteria come from the imagined brief.
 
-Ask for a location precise enough for the next reviewer to reopen. The
-PRISMA checklist provides a published example of connecting each reporting
-item to a location in a report. Adapt the idea to the format your authors
-use, such as paragraph titles, table rows, or linked attachments.[^prisma]
+For each reporting item, ask where the reviewer found the answer.[^prisma]
+Choose a location the next reviewer can reopen in the format your authors
+use, such as a paragraph title, a table row, or a linked attachment.
 
 ## Try the questions on the report
 

@@ -11,7 +11,7 @@ sources:
   - id: documentation-craft
     resource: ../explainers/documentation-craft.md
     title: Documentation craft
-generated: { by: codex/gpt-6, at: 2026-11-22T01:50:06Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:02:34Z }
 ---
 
 # Organizing and naming documentation
@@ -92,8 +92,10 @@ empty shelves for expected future content.
 
 ## 5. Give files stable, descriptive names
 
-Derive each filename from the document's specific subject or action, not only
-its form.
+If the host assigns permanent page IDs, use the titles and navigation
+labels in the next steps to distinguish the pages. Where you can choose
+a filename or URL slug, derive it from the document’s specific subject
+or action. Here are examples for a Markdown collection.
 
 | Document job | Filename shape | Example |
 | --- | --- | --- |
@@ -158,7 +160,7 @@ Before changing existing paths:
 
 For a proposal, give the suggested paths or title changes, the reader
 question each resolves, and the old links each move would affect. Walk
-the proposed routes on paper and stop with that mapping. For an authorized
+the proposed routes in the draft and stop with that mapping. For an authorized
 migration, check the host’s path, redirect, index, and metadata rules.
 Move a group small enough to check together, update its references, and
 retire the old copy using the host's migration policy.

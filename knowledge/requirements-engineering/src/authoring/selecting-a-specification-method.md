@@ -3,7 +3,7 @@ type: Guide
 title: Selecting a requirement specification method
 description: Selects a specification form proportional to ambiguity, consequence, interaction complexity, and assurance need. Use when prose is leaving an obligation ambiguous, or when choosing among structured syntax, examples, models, and formal notation.
 tags: [specification-method, prose, ears, examples, model, formal-method, requirements-engineering]
-generated: { by: codex/gpt-6, at: 2026-11-22T01:53:31Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T02:01:18Z }
 ---
 
 # Selecting a requirement specification method
@@ -16,7 +16,7 @@ and inspect that distinction.
 | Need | Useful forms |
 | --- | --- |
 | Simple observable obligation | Controlled natural language or structured prose |
-| Conditional or unwanted behavior | [EARS](../foundations/easy-approach-to-requirements-syntax.md)-like condition-response syntax |
+| Conditional or unwanted behavior | State the condition and required response in order. [EARS](../foundations/easy-approach-to-requirements-syntax.md) provides one syntax for this. |
 | Many rule combinations | Decision table or example table |
 | User interaction and alternatives | Scenario, use case, journey, or prototype |
 | Stateful or temporal behavior | State model, sequence, temporal rule, or invariant |
