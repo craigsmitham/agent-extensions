@@ -67,7 +67,9 @@ Git can mark where the two versions collide. What the line should say
 depends on the project.[^conflict]
 
 This is why a decision can be as much a part of a how-to guide as a typed
-command. The author knows what the markers mean and where the choice
+command. The developer has to see what each branch changed before deciding
+what to keep. Only then can they stage a line that expresses that decision.
+The author knows what the markers mean and where the choice
 falls. The developer knows what the line is for. Useful directions bring
 those two pieces of knowledge together at the moment of choice.[^how-to]
 
