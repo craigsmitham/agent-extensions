@@ -2,7 +2,7 @@
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
   "version": "0.9.1",
-  "description": "Explainers, authoring guides, and design patterns for documentation and checklists, with guidance for organization and audits",
+  "description": "Write, organize, and review documentation across domains in software engineering workspaces",
   "keywords": [
     "docs",
     "documentation",

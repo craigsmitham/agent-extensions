@@ -4,8 +4,9 @@ okf_version: "0.2"
 
 # Documentation craft knowledge
 
-Choose a starting point by the question you bring. Each page can also be
-found directly by its title and description.
+Use these pages to design documentation around the reader’s task, whether
+you maintain a product guide in a repository or a museum’s collections
+knowledge base. Choose a starting point by the question you bring.
 
 ## Understand a form or a practice
 

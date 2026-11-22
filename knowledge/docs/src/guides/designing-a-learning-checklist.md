@@ -11,7 +11,7 @@ sources:
 - id: fading
   resource: https://doi.org/10.1080/00220970209599510
   title: From Example Study to Problem Solving
-generated: { by: codex/gpt-6, at: 2026-11-21T22:51:04Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T00:00:17Z }
 ---
 
 # How to design a learning checklist
@@ -32,14 +32,14 @@ avoid claiming that the day caused the difference.
 
 ## Draft prompts that leave work for the learner
 
-Give the apprentice the table first. Keep a worked answer on the back
-of the practice card. The learner should commit to a caption before
-reading it.
+Give the apprentice the table first. Ask them to commit to a caption before
+revealing the worked answer. On a knowledge-base page, the learner can
+expand the answer when ready. On a printed practice card, put it on the back.
 
 > 1. What can you compare fairly across these two days? Write the quantity
 >    you will use and explain your choice.
 > 2. Check your arithmetic and draft one sentence the figures support.
-> 3. Turn over the card. Compare the denominator and the strength of your
+> 3. Reveal the worked answer. Compare the denominator and the strength of your
 >    claim with the worked answer. Revise any difference you cannot defend.
 
 A worked answer could say, *Each day produced 12 registrations. The share
@@ -62,11 +62,11 @@ as hypotheses to check with your own learners.[^fading][^butler]
 Arrange a later exercise with fresh material, the delay chosen for when
 the team actually expects to need the skill. For example, at the next
 editing session give the apprentice two libraries’ workshop figures. There are
-18 of 24 seats filled at one and 24 of 40 at the other. Put the practice
-card away. Ask for a caption and the reason for its comparison. A defensible
-answer can point out that the second library filled more seats but the
-first filled a larger share, 75% against 60%. Check the reasoning and
-any unwarranted causal claim alongside the figures.
+18 of 24 seats filled at one and 24 of 40 at the other. Ask for a caption
+and the reason for its comparison without supplying the practice prompts.
+A defensible answer can point out that the second library filled more seats
+but the first filled a larger share, 75% against 60%. Check the reasoning
+and any unwarranted causal claim alongside the figures.
 
 Record assisted performance, performance after feedback, and later unaided
 performance separately. If the fresh caption still needs the hidden prompt,

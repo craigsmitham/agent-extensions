@@ -1,5 +1,12 @@
 # Maintaining the docs bundle
 
+- The pack is typically used in software engineering workspaces. Let the
+  reader’s question and the subject being documented guide the choice of
+  form and worked examples.
+- Assume readers will access the documentation digitally unless the request
+  or their working conditions call for another medium. When an example uses
+  a physical artifact, explain which part of the guidance carries over to
+  other settings.
 - For every cataloged document form, maintain three standalone pages. The
   explainer shows how the form works and why. The guide helps a writer produce
   and check one. The pattern helps a reader judge when the design fits.

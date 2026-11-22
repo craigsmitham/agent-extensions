@@ -1,7 +1,9 @@
 # Documentation craft skill
 
-Use this skill to write, review, and organize documentation for the people who
-will use it. Install the [documentation craft pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/docs)
+Use this skill in your workspace to write, review, and organize documentation
+on the subject your readers need. Readers will usually consult the result
+digitally. If they need a printed checklist at the point of work, say so in
+the brief. Install the [documentation craft pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/docs)
 to supply the skill and the knowledge bundle it consults.
 
 ```sh

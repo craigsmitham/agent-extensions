@@ -20,9 +20,16 @@ description: >
 
 # Docs
 
-Create or assess documentation for the requested reader need, scope, and
-output surface. Preserve applicable local authority and source support;
-distinguish audit, review, authoring, and remediation outcomes.
+Create or assess documentation for the reader and subject in the brief.
+The typical setting is a software engineering workspace. Assume readers will
+access the documentation digitally unless the request or their working
+conditions call for another medium. Ground worked examples in the subject
+being documented. When an example uses a physical artifact, explain which
+part of the guidance carries over to other settings.
+
+Respect the requested scope and output format. Preserve applicable local
+authority and source support. Distinguish audit, review, authoring, and
+remediation outcomes.
 
 Resolve `@craigsmitham/knowledge/docs` through host discovery or
 `axm knowledge concepts get`. The following are concept IDs within that required

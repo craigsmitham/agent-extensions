@@ -1,6 +1,8 @@
 # Public agent extensions
 - Keep concepts and guidance coherent across extensions. Resolve contradictory
   terminology or claims before publishing.
+- When changing the docs pack or its members, follow the
+  [docs editorial guidance](knowledge/docs/AGENTS.md).
 
 
 <!-- axm:knowledge -->

@@ -1,7 +1,12 @@
 # Documentation craft
 
-Practical guidance for writing, reviewing, organizing, and maintaining useful
-documentation. Its pattern collection covers tutorials, how-to guides,
+Use this pack to write, review, and maintain documentation in software
+engineering workspaces, including repositories and agent-assisted workflows.
+Common uses include software product guides and domain-specific knowledge
+bases. Choose the document form around what the reader needs to learn, do,
+look up, or understand.
+
+The pattern collection covers tutorials, how-to guides,
 reference, explanation, principle documents, playbooks, runbooks, checklists,
 pattern descriptions, and pattern collections. Checklist specializations cover
 execution, verification, readiness, reporting and review, and learning. Each form has a
@@ -42,7 +47,12 @@ links, or audit a bounded documentation corpus. Search the knowledge with
 `axm knowledge concepts query` or open a concept by identity with
 `axm knowledge concepts get`.
 
-For example, ask the skill to “Draft a release-readiness checklist from our
+For a museum knowledge base, give the agent the museum’s collections policy
+and ask “Write a page for new curators explaining the difference between an
+incoming loan and an acquisition.” A curator should be able to use the page
+to classify a new arrival using the museum’s own criteria.
+
+For a release team, ask the skill to “Draft a release-readiness checklist from our
 release procedure” and supply that procedure. It opens the authoring guide
 for turning release conditions into evidence and a decision. To explore why
 the form works or judge its fit, use the companion explainer or pattern.

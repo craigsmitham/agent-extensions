@@ -2,6 +2,10 @@
 
 ## 2026-11-21
 
+- Clarified the pack’s usual workspace and digital reading context. The
+  [learning-checklist guide](guides/designing-a-learning-checklist.md) now
+  shows how learners can draft an answer before revealing feedback on a
+  knowledge-base page or a printed card.
 - Established separate understanding, authoring, and design-selection routes
   for explanation and how-to. The existing pattern paths now lead writers
   to the guides. The [explainer-writing guide](guides/writing-an-explainer.md)

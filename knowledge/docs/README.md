@@ -1,5 +1,7 @@
 # Documentation craft knowledge
 
+Use this bundle to choose a document form for the reader’s task, whether
+you maintain software guides or a knowledge base in another field.
 Install the [documentation craft pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/docs)
 for the guidance and the skill that selects it for writing and review tasks.
 
