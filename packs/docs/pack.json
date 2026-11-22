@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Write, organize, and review documentation across domains in software engineering workspaces",
   "keywords": [
     "docs",
@@ -35,7 +35,7 @@
   "type": "pack",
   "name": "docs",
   "dependencies": {
-    "@craigsmitham/knowledge/docs": ">=0.15.0",
-    "@craigsmitham/skills/docs": ">=0.6.0"
+    "@craigsmitham/knowledge/docs": ">=0.16.0",
+    "@craigsmitham/skills/docs": ">=0.7.0"
   }
 }
