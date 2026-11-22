@@ -3,8 +3,8 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "docs",
-  "version": "0.6.1",
-  "description": "Write, review, organize, and audit documentation across domains, including knowledge-base articles, product guides, reusable checklists, and pattern collections",
+  "version": "0.7.0",
+  "description": "Write, review, organize, audit, and repair documentation across domains, including knowledge-base articles, READMEs, guides, reference, runbooks, reusable checklists, and pattern collections",
   "keywords": [
     "docs",
     "documentation",
