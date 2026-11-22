@@ -4,7 +4,7 @@ Choose a guide for the document you need to produce, or find help organizing and
 
 ## Diátaxis forms
 
-- [How to write an explainer](writing-an-explainer.md) — When readers can follow a procedure but still have questions about the subject, or when a topic needs an introduction, turn their question into a focused, source-backed explainer.
+- [How to write an explainer](writing-an-explainer.md) — When readers know the steps or facts but still can’t account for what happens, or when a topic needs an introduction, turn their question into a focused, source-backed explainer.
 - [How to write a how-to guide](writing-a-how-to-guide.md) — When someone needs directions for a task, turn their request into a guide they can follow and check against the result they need.
 - [How to write a tutorial](writing-a-tutorial.md) — When someone needs a first experience with a skill, build a short lesson around something they can do, observe, and try again.
 - [How to write reference documentation](writing-reference-documentation.md) — When readers repeatedly need exact details about a subject, organize them into entries they can locate, compare, and check.

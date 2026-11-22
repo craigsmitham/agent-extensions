@@ -1,7 +1,7 @@
 ---
 type: Guide
 title: How to write an explainer
-description: When readers can follow a procedure but still have questions about the subject, or when a topic needs an introduction, turn their question into a focused, source-backed explainer.
+description: When readers know the steps or facts but still can’t account for what happens, or when a topic needs an introduction, turn their question into a focused, source-backed explainer.
 tags: [docs, explanation, explainer, conceptual-documentation, authoring, how-to, diataxis]
 status: draft
 generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
@@ -29,10 +29,10 @@ for background that would take a how-to guide too far from its task.
 ## 1. Find the question behind the topic
 
 Suppose a library volunteer asks for a knowledge-base article about
-waiting times for reserved books. What have they already seen? In this
-example, four of five borrowers waited two days, yet the desk reported
-an average wait of four days. *How can both statements be true?* That
-question gives the article a subject and a place to stop.[^explanation][^audience]
+waiting times for reserved books. What have they already seen?[^audience]
+In this example, four of five borrowers waited two days, yet the desk
+reported an average wait of four days. *How can both statements be true?*
+That question gives the article a subject and a place to stop.[^explanation]
 
 For a broad introduction, sketch the ideas a reader needs and how they
 depend on one another. Here, “average” needs a definition. The mean
@@ -57,8 +57,8 @@ is two.[^location]
 
 Match the evidence to each claim in your own explanation. If the question
 is why a group made a decision, look for its record or a participant’s
-account. The consequences you observe today may give readers a reason to
-value that decision while leaving its original motivation open.
+account. Present-day consequences can show why a decision is worth keeping
+without showing why it was made.
 
 ## 3. Draft the connection the reader is missing
 
@@ -74,12 +74,14 @@ start there. The library page could open with the puzzle in the figures.
 > group would have waited ten days altogether.
 > The last borrower’s ten extra days doubled that total. Spread those
 > twenty days across five borrowers and the mean wait is four days, even
-> though nobody in this group waited exactly four.
+> though nobody in this group waited exactly four. Line the five waits up
+> from shortest to longest and the middle one, which the NIST handbook
+> calls the *median*, is two days.
 
-Readers who wonder what a typical borrower experienced can now use the
-sorted list to see why the median is two. Name the source for a definition
-where you use it. Keep the reasoning and the numbers close enough that a
-reader can check the claim without having the original report open.[^location]
+The sample names the handbook where it introduces the median. Name the
+source for a definition wherever you use it. Keep the reasoning and the
+numbers close enough that a reader can check the claim without having
+the original report open.[^location]
 
 Choose a different order when the question warrants one. An account of
 a practice may begin with a choice people once faced, then follow the
@@ -94,13 +96,16 @@ tell where the evidence ends and a judgment begins.
 
 ## 4. Check what the draft lets a reader account for
 
-Read the title and opening from the draft’s own link. Can a reader tell
-what the page will explain? If you start with an example, can they tell
-why it belongs here? Restore any context the draft assumes the reader
-has just seen elsewhere. If it grew out of a how-to, leave that guide
+Read the title and opening as a reader arriving from search or a link
+would. Can they tell what the page will explain? If you start with an
+example, can they tell why it belongs here? Restore any context the
+draft assumes the reader has just seen elsewhere.
+
+Then check the page’s scope. If it grew out of a how-to, leave that guide
 the sentence needed for the task and link to the full explanation there.
-Detailed instructions and tables of options have their own uses.
-Keep the details that carry this explanation’s reasoning.[^reference]
+Move step-by-step instructions to a how-to and tables of options to
+reference. Keep the details that carry this explanation’s
+reasoning.[^reference]
 
 Choose a check that fits the reader’s original question. For the library
 figures, vary one wait. If the longest becomes 22 days, which measure
