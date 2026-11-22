@@ -4,7 +4,7 @@ title: How to write a how-to guide
 description: When someone needs directions for a task, turn their request into a guide they can follow and check against the result they need.
 tags: [docs, how-to, guide, authoring, drafting, revision, diataxis]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:59:18Z }
 sources:
   - id: diataxis
     resource: https://diataxis.fr/how-to-guides/
@@ -74,6 +74,12 @@ guide.[^diataxis][^edtf]
 > qualification. Check whether the researcher can see it elsewhere in
 > the record.
 
+Name a standard, product, or organization where knowing its name helps the
+reader make a choice. Here, “EDTF Level 1” tells the volunteer what support
+to check for before entering `1952~`. When a source supports a practice
+that carries across settings, describe the action in the reader’s terms
+and cite the source beside it.
+
 Where an unfamiliar detail obscures the next action, add enough context
 for the reader to continue. Readers who need other date forms can consult the
 format specification. If they keep asking why the archive distinguishes
@@ -81,6 +87,12 @@ uncertainty from approximation, give that question its own page. See
 [How to write an explainer](writing-an-explainer.md).
 
 ## 4. Try the draft and revise where it leaves someone guessing
+
+If the guide serves several settings, show its title and opening to someone
+in another intended setting. Ask who they think it is for and what tools or
+access they think it requires. If they mistake a worked example for a
+prerequisite, introduce the task first and identify the example where it
+begins.
 
 Give the draft and sample notes to someone who does this work, if one is
 available. When they pause, ask what they are deciding. A cataloger who

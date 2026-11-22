@@ -2,6 +2,10 @@
 
 ## 2026-11-22
 
+- The how-to authoring guide now asks writers to check what the opening
+  implies about the reader and their tools. The runbook guide cites AWS
+  at the rehearsal step that its operational guidance supports.
+
 - Reviewed the 17 how-to guides against their readers’ tasks. Revised the
   guides to comparing concepts, organizing documentation, describing and
   collecting patterns, designing execution checklists, and writing playbooks

@@ -11,7 +11,7 @@ tags:
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T01:48:28Z'
+  at: '2026-11-22T01:59:18Z'
 sources:
 - id: aws
   resource: https://docs.aws.amazon.com/wellarchitected/latest/operational-excellence-pillar/ops_ready_to_support_use_runbooks.html
@@ -23,9 +23,7 @@ sources:
 Start with a task the team can already perform. Obtain the maintained
 procedure or observe an authorized operator on a rehearsal target.
 Ask what request lets them start, which state changes, and what they would
-show the next person as proof of completion. For cloud operations, AWS
-recommends naming the outcome, required permissions, error handling, and
-owner, then asking a teammate to try the instructions.[^aws]
+show the next person as proof of completion.
 
 ## Pin the request to a target and an end state
 
@@ -72,7 +70,7 @@ and contact before adopting the procedure locally.
 
 ## Rehearse the handoff
 
-Give a second operator the draft and a case they can safely rehearse.
+Give a second operator the draft and a case they can safely rehearse.[^aws]
 At the station, supply a signed sample request and a rehearsal display.
 Have them run the normal case. Then supply a target that still
 shows the old revision after the controller acknowledges the change.
