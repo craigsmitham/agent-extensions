@@ -74,8 +74,8 @@ guide.[^diataxis][^edtf]
 > qualification. Check whether the researcher can see it elsewhere in
 > the record.
 
-Where an unfamiliar detail makes someone pause, add enough context to
-let them continue. Readers who need other date forms can consult the
+Where an unfamiliar detail obscures the next action, add enough context
+for the reader to continue. Readers who need other date forms can consult the
 format specification. If they keep asking why the archive distinguishes
 uncertainty from approximation, give that question its own page. See
 [How to write an explainer](writing-an-explainer.md).
@@ -83,9 +83,12 @@ uncertainty from approximation, give that question its own page. See
 ## 4. Try the draft and revise where it leaves someone guessing
 
 Give the draft and sample notes to someone who does this work, if one is
-available. Notice where they have to supply a step or make a choice that
-the draft omitted. Working alone, start again from the described inputs
-and inspect the result from the next person’s point of view.
+available. When they pause, ask what they are deciding. A cataloger who
+is weighing the wording of a source note is doing part of the job. Leave
+that judgment with them. If they have settled on an approximate year and
+are searching for the symbol to enter, put the notation where they make
+the entry. Working alone, start again from the described inputs and
+inspect the result from the next person’s point of view.
 
 Try each route with a test record. If the catalog accepts `1952~` on
 entry but later displays an unqualified “1952” to researchers, identify
