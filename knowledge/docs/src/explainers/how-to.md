@@ -1,7 +1,7 @@
 ---
 type: Explainer
 title: How-to guides and the work they serve
-description: Why a how-to guide takes its shape from the reader’s goal, how it draws on practical judgment, and why even an experienced practitioner might reach for one.
+description: Why a how-to guide takes its shape from the reader’s goal, how it draws on practical judgment, how it differs from a lesson in the same skill, and why even an experienced practitioner might reach for one.
 tags: [docs, how-to, guide, practitioner, task, tutorial, diataxis]
 status: draft
 generated: { by: claude/fable-5-2, at: 2026-11-22T01:10:10Z }
@@ -30,8 +30,8 @@ and push. How do they get this pull request ready to merge?
 
 A **how-to guide** gives a practitioner a way to accomplish a particular
 task. In Diátaxis, the reader comes to a guide with a purpose of their
-own and some skill they can put to work. The developer would recognize
-a finished merge and still needs directions for getting there. Consulting
+own and some skill they can put to work. The developer can recognize
+a finished merge yet still needs directions for getting there. Consulting
 them is a normal part of practicing a craft, even for someone who has
 done the job before.[^how-to][^foundations]
 
@@ -42,7 +42,7 @@ in a local repository that already has the conflict. It ends with the
 resolution committed and the developer free to push and merge the pull
 request. A description of the merge command could account for every
 option it accepts and still leave the developer where the command
-stopped. Their question carries on past that point. A commit counts as
+stopped.[^how-to] Their question carries on past that point. A commit counts as
 success only if the line says what the project needs and the pull request
 can go in.[^conflict]
 
@@ -68,10 +68,11 @@ depends on the project.[^conflict]
 
 This is why a decision can be as much a part of a how-to guide as a typed
 command. The developer has to see what each branch changed before deciding
-what to keep. Only then can they stage a line that expresses that decision.
-The author knows what the markers mean and where the choice
-falls. The developer knows what the line is for. Useful directions bring
-those two pieces of knowledge together at the moment of choice.[^how-to]
+what to keep. Only then can they write the line that expresses that
+decision, delete the markers, and stage the file. The guide’s author
+knows what the markers mean and where the choice falls. The developer
+knows what the line is for. Useful directions bring those two pieces of
+knowledge together at the moment of choice.[^how-to]
 
 ## The same conflict in a lesson
 
@@ -80,16 +81,18 @@ same line of a practice file and then merge. Seeing the markers appear
 is the point of the exercise. At work, the developer may learn exactly
 the same thing along the way. The fix is still waiting to go out.
 
-Diátaxis locates the difference between a tutorial and a how-to guide in
-what each owes its reader. A lesson owes the learner an experience, which
-is why the instructor arranges the collision. A guide owes the developer
-help with work already in hand.[^tutorial]
+Diátaxis distinguishes a tutorial from a how-to guide by the reader’s
+situation. A tutorial serves someone at study, which is why the instructor
+arranges the collision. A how-to guide serves someone at work, with the
+job already in hand.[^tutorial]
 
-Months later, that same developer might open the guide again when a
-teammate deletes a file they have edited. The guide gives that conflict
-directions of its own. Diátaxis notes that a chef may follow a recipe for
+## Why a practitioner comes back
+
+Months later, a teammate again edits a line the developer has changed.
+The developer knows what the markers mean and opens the guide anyway, to
+be sure of the order. Diátaxis notes that a chef may follow a recipe for
 a dish made many times, to be sure of making it correctly. Remembering
-every command was never the point of that first merge.[^conflict][^how-to]
+every command was never the point of that first merge.[^how-to]
 
 To turn a task like the developer’s into usable directions, follow
 [How to write a how-to guide](../guides/writing-a-how-to-guide.md).

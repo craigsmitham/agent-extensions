@@ -5,7 +5,7 @@ Explore how document forms serve their readers and the practices, decisions, and
 ## Diátaxis forms
 
 - [How explainers build understanding](explanation.md) — Why Diátaxis gives reflection a place in documentation, and how an explainer connects a familiar practice with the ideas, history, and judgments behind it.
-- [How-to guides and the work they serve](how-to.md) — Why a how-to guide takes its shape from the reader’s goal, how it draws on practical judgment, and why even an experienced practitioner might reach for one.
+- [How-to guides and the work they serve](how-to.md) — Why a how-to guide takes its shape from the reader’s goal, how it draws on practical judgment, how it differs from a lesson in the same skill, and why even an experienced practitioner might reach for one.
 - [Why a tutorial gives the learner something to do](tutorial.md) — How a chosen exercise, recognizable feedback, and a tutor’s decisions let a learner encounter a skill in use.
 - [Why reference follows the shape of the thing it describes](reference.md) — How stable names, comparable entries, and precise limits help a reader find a fact in the middle of work.
 
