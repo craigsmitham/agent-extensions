@@ -4,7 +4,7 @@ title: How explainers build understanding
 description: Why Diátaxis gives reflection a place in documentation, and how an explainer connects a familiar practice with the ideas, history, and judgments behind it.
 tags: [docs, explainer, explanation, understanding, reflection, diataxis]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-22T00:06:55Z }
+generated: { by: claude/fable-5-2, at: 2026-11-22T01:02:46Z }
 sources:
   - id: explanation
     resource: https://diataxis.fr/explanation/
@@ -15,6 +15,9 @@ sources:
   - id: reference
     resource: https://diataxis.fr/reference-explanation/
     title: Diátaxis — The difference between reference and explanation
+  - id: how-to
+    resource: https://diataxis.fr/how-to-guides/
+    title: Diátaxis — How-to guides
   - id: mcgee
     resource: https://haroldmcgee.substack.com/p/eggs-again-old-and-new-whipping-whites
     title: "Harold McGee — Eggs again, old and new: whipping whites"
@@ -42,11 +45,13 @@ recalls how the copper bowl found its way into that book. His account shows
 what Procida means. While looking for illustrations for the book, McGee
 came across an eighteenth-century engraving of a pastry kitchen. Its key
 identified a copper bowl specifically for whipping egg whites. McGee had
-heard a chemical reason for using copper and found it unconvincing, and he
-had taken the practice for an old cook’s tale. Its persistence across two
-centuries persuaded him to buy a bowl and try it. In his comparison, the
-whites took longer to whip in copper than in glass, and the foam stayed
-smooth.[^explanation][^mcgee]
+read in Julia Child’s *Mastering the Art of French Cooking* that copper
+acidifies the foam. The chemistry made no sense to him, and he had taken
+the practice for an old cook’s tale. Its persistence across two centuries
+persuaded him to buy a bowl and try it. In his comparison, the whites
+took longer to whip in copper than in glass. The copper bowl’s foam
+stayed creamy and never turned grainy. Plain whites, he notes, easily
+overwhip until they turn clumpy and watery.[^explanation][^mcgee]
 
 The engraving showed that the custom was already familiar in that kitchen.
 It took a comparison to show McGee what difference the metal made. Even
@@ -54,11 +59,12 @@ then the reason remained open. McGee and his colleagues found that the
 whites take up copper from the bowl. They proposed that one egg protein,
 which binds copper, was the key. That protein does not bind silver. When
 McGee happened to whip whites in a silver bowl a decade later, he expected
-them to clump. The foam was stable and creamy. The bowl contained some copper, so
-he repeated the comparison with a copper-free silver solution and again
-got a stable foam. He proposed that either metal could limit bonding
-between the egg proteins. McGee presents this as a theory and writes
-that there is more to learn.[^mcgee]
+them to clump. The foam was stable and creamy. The bowl was sterling,
+which contains a little copper, so he also tried a copper-free silver
+solution and again got a creamy foam. He proposed that either metal
+could limit bonding between the egg proteins. McGee presents this as
+a theory. Citing newer studies of egg foams, he writes that there is
+more to learn.[^mcgee]
 
 McGee took a lesson from that first comparison. Cooks, he writes, “have
 always been practical chemists and usually know what works, if not
@@ -80,12 +86,15 @@ discover.[^explanation][^mcgee]
 ## Why explanation has a place of its own
 
 In Diátaxis, *work* means applying a craft and *study* means acquiring it.
-The same cook moves between them. With the mixer running, a description
-of soft peaks helps the cook recognize when to stop. In a first lesson,
-watching those peaks form and stopping the mixer is itself part of the
-learning. Later, the cook can put the whisk down and still have plenty to
-think about. This is study as well, and it is the occasion for explanation.
-The change is in the cook’s relationship to the subject.[^foundations][^reference]
+The same cook moves between them. With the mixer running, a reference
+description of soft peaks helps the cook recognize when to stop. In
+a beginner’s tutorial, watching those peaks form and stopping the mixer
+is itself part of the learning. Later, with the mixer switched off, the
+cook still has plenty to think about. This is study as well, and it is
+the occasion for explanation. The egg whites are the same each time. The
+cook applies the craft in the first moment and acquires it in the other
+two, through practice in the lesson and through thought
+afterward.[^foundations][^reference]
 
 A sentence about copper in a recipe can give the cook confidence in a
 choice of bowl. The history of the experiment would interrupt the recipe
@@ -94,16 +103,15 @@ sentence were the whole of the documentation, the curious reader would
 never learn why the silver bowl came as a surprise. Giving the discussion
 a place of its own serves both moments. The next time the cook picks up
 the same bowl, the recipe may be exactly as before. What the cook sees
-in that ordinary utensil has changed.[^reference][^mcgee]
+in that ordinary utensil has changed.[^how-to][^explanation][^mcgee]
 
-## Related
-
-- [How to write an explainer](../guides/writing-an-explainer.md) — drafting
-  and revising an explainer from a reader’s question.
-- [Explanation](../patterns/explanation.md) — the pattern’s account of
-  scope, evidence, and tradeoffs.
+To turn a question like the cook’s into an explainer, follow
+[How to write an explainer](../guides/writing-an-explainer.md). To judge
+when the design fits and what it costs, see the
+[Explanation pattern](../patterns/explanation.md).
 
 [^explanation]: Daniele Procida, [Explanation](https://diataxis.fr/explanation/).
 [^foundations]: Daniele Procida, [Foundations](https://diataxis.fr/foundations/).
 [^reference]: Daniele Procida, [The difference between reference and explanation](https://diataxis.fr/reference-explanation/).
+[^how-to]: Daniele Procida, [How-to guides](https://diataxis.fr/how-to-guides/).
 [^mcgee]: Harold McGee, [Eggs again, old and new: whipping whites](https://haroldmcgee.substack.com/p/eggs-again-old-and-new-whipping-whites).
