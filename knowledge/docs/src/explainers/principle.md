@@ -22,7 +22,8 @@ sources:
 
 # How principles guide judgment
 
-Two reviewers agree that a function name is hard to read. One recommends
+How can two reviewers follow the same principle and give opposite
+advice? Both agree that a function name is hard to read. One recommends
 renaming it before the next release. The other wants to keep the name. The
 first is looking at a new internal function. The second is looking at a
 public function whose callers would break tomorrow.

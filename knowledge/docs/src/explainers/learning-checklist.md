@@ -16,7 +16,9 @@ generated: { by: codex/gpt-6, at: 2026-11-22T00:07:11Z }
 
 # How a learning checklist changes practice
 
-A new museum guide is learning to choose objects for a short tour. They
+A learning checklist can help a beginner explain a choice and give a
+teacher something specific to respond to. Consider a new museum guide
+learning to choose objects for a short tour. They
 can follow a colleague’s itinerary from room to room. Asked to plan a
 tour for a visiting choir, they pick three instruments but have trouble
 saying what the group could notice by seeing them together.

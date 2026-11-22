@@ -16,10 +16,12 @@ generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
 
 # Documentation audits
 
-A **documentation audit** is a bounded, snapshot-specific assessment of a
-documentation corpus. It gathers evidence about how well the corpus serves its
-readers and maintainers, identifies material gaps or defects, and produces a
-prioritized diagnostic handoff. It does not silently become a rewrite.
+When readers keep running into trouble across a collection of documents,
+which problems deserve attention first? A **documentation audit** examines
+a defined set of documents as they stood at a particular point in time.
+Its findings show where the collection falls short for readers or maintainers
+and explain which repairs deserve attention first. The repairs themselves
+are a separate piece of work.
 
 An audit is useful before a substantial remediation effort, when a collection's
 health is uncertain, or when recurring failures suggest that reviewing one page

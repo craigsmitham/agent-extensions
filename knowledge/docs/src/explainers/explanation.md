@@ -25,10 +25,10 @@ sources:
 
 # How explainers build understanding
 
-A cook can make meringues for years before wondering why pastry cooks have
-traditionally beaten egg whites in a copper bowl. The meringues may have
-turned out beautifully every time. Success can leave a question just as
-interesting as failure. What part did the bowl play?[^mcgee]
+A recipe might tell a cook to beat egg whites in a copper bowl.
+An explainer takes up a question the cook may still have after years
+of turning out beautiful meringues. What difference did the copper
+make?[^mcgee]
 
 An **explainer** is a document devoted to the understanding of a subject.
 Diátaxis calls the form *explanation* and distinguishes it by the room it

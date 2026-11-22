@@ -13,11 +13,12 @@ generated: { by: codex/gpt-6, at: 2026-11-21T22:46:21Z }
 
 # How a playbook guides a response as evidence changes
 
-The doors open in fifteen minutes, and a line already stretches from the
-registration desk into the lobby. The event coordinator could send another
-person to check tickets. That would help if each clerk has more arrivals
-than they can handle. But one glance at the desk changes the picture.
-The clerks are waiting too. Everyone is sharing one badge printer.
+A playbook can help an event coordinator decide what to check when a line
+builds up. Suppose the doors open in fifteen minutes and the line already
+stretches from the registration desk into the lobby. The coordinator could
+send another person to check tickets. That would help if each clerk has more
+arrivals than they can handle. But one glance at the desk changes the
+picture. The clerks are waiting too. Everyone is sharing one badge printer.
 
 A playbook helps people respond to a familiar kind of situation whose
 specifics they still have to discover. In this imagined event, a long

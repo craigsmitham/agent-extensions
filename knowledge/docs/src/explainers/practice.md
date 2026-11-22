@@ -28,11 +28,13 @@ generated: { by: "codex/gpt-6", at: "2026-11-22T00:10:36Z" }
 
 # Practice
 
-A **practice** is a socially sustained, purposive, normatively ordered,
-embodied, equipped, and historically transmitted structure that makes a domain
-of action intelligible and skillful participation possible. It joins people,
-dispositions, activities, artifacts, language, roles, purposes, and standards
-of better and worse performance into a coherent undertaking.
+What does someone need to learn to take part in a **practice**? Think
+of playing soccer. Knowing what to do with the ball is part of it.
+Knowing whose whistle can stop the game is another. A practice brings
+people, purposes, roles, equipment, and standards of good work together.
+People acquire its skills, habits of judgment, and shared vocabulary
+by taking part with others. What they teach the next participant helps
+the practice endure.[^wrathall-background-practices]
 
 Here *practice* does not mean rehearsal, a repeated habit, or a recommended
 “best practice.” Nor is it another documentation form. A practice is part of

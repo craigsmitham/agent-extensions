@@ -31,10 +31,11 @@ generated: { by: "codex/gpt-6", at: "2026-11-22T00:10:36Z" }
 
 # Standard authority and conformance
 
-A [standard](standard.md) supplies a common basis of expectation. Two further
-questions decide whether that basis deserves to govern a case and what
-satisfying it actually establishes: where the standard's authority comes from,
-and what evidence supports a conformance claim.
+When someone says their work meets a [standard](standard.md), there are
+two questions worth asking. What gives that standard authority over this
+case? What evidence shows the work satisfies its requirements? The
+first question concerns which expectations apply. The second concerns
+what the evidence warrants saying about the work.
 
 This concept covers those two questions. Read [Standard](standard.md) first for
 what a standard is, the kinds of expectation standards carry, and how standards

@@ -16,8 +16,9 @@ generated: { by: codex/gpt-6, at: 2026-11-21T22:51:04Z }
 
 # What a reporting checklist makes visible
 
-A systematic review mentions a study whose title seems to answer the
-review question exactly. The study is missing from the results. A reader
+A reporting checklist helps readers trace how an author made a decision.
+Suppose a systematic review mentions a study whose title seems to answer
+the review question exactly, yet the study is missing from the results. A reader
 could suspect an oversight, a different study population, or a deliberate
 decision to omit inconvenient findings. The published results alone give
 them little means of choosing among those explanations.

@@ -13,7 +13,9 @@ sources:
 
 # How a readiness checklist supports a decision
 
-At noon the box office intends to open ticket sales. Yesterday the venue
+A readiness checklist helps a team decide whether it can go ahead
+when conditions have changed. Consider a box office about to open
+ticket sales at noon. Yesterday the venue
 approved a seating plan and a technician checked every seat against the
 booking system. This morning the venue moved the performance to a smaller
 room. The technician’s record is accurate. The box office still has a

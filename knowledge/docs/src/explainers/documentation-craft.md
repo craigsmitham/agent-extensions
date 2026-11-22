@@ -27,7 +27,8 @@ sources:
 
 # Documentation craft
 
-Suppose a choir keeps its rehearsal notes in a repository. A new singer
+How can a writer tell when one subject needs two kinds of documentation?
+Suppose a choir keeps its rehearsal notes online. A new singer
 looking up a repeat sign needs a short definition. Someone learning to
 follow repeats needs a passage to sing and a way to tell where to come
 back in. Both readers can open the same site. Their questions call for

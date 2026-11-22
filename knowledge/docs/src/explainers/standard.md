@@ -13,11 +13,11 @@ generated: { by: "codex/gpt-6", at: "2026-11-22T00:10:36Z" }
 
 # Standard
 
-A **standard** is a recognized, reusable basis for judging, specifying, or
-coordinating what is acceptable, fitting, or excellent within a defined field.
-It establishes stable expectations, criteria, characteristics, or requirements
-so people can compare, communicate, interoperate, evaluate, and act without
-renegotiating the basis each time.
+How can people working independently judge their work against the same
+expectations? A **standard** gives them a recognized, reusable basis for
+judging what is acceptable, fitting, or excellent in a particular field.
+Its criteria help people compare results, specify requirements, or make
+their work fit together without settling those expectations anew each time.
 
 Here *standard* names a normative function before it names a document. A
 practice may carry standards partly in examples and trained judgment; a formal

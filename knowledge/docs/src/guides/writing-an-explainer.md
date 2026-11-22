@@ -65,11 +65,16 @@ value that decision while leaving its original motivation open.
 
 ## 3. Draft the connection the reader is missing
 
-Introduce each idea when the reader needs it. An opening for the library
-page might read like this.
+Introduce each idea when the reader needs it. If the opening example
+could be mistaken for the subject of the page, give readers a sentence
+or a descriptive heading that tells them what the example will help
+explain. When the situation itself makes the question clear, you can
+start there. The library page could open with the puzzle in the figures.
 
-> Four borrowers waited two days apiece. A fifth waited twelve. If each
-> had waited two days, the group would have waited ten days altogether.
+> How can the average wait for a library book be four days when most
+> borrowers get theirs in two? Suppose four borrowers waited two days
+> apiece and a fifth waited twelve. If each had waited two days, the
+> group would have waited ten days altogether.
 > The last borrower’s ten extra days doubled that total. Spread those
 > twenty days across five borrowers and the mean wait is four days, even
 > though nobody in this group waited exactly four.
@@ -92,10 +97,12 @@ tell where the evidence ends and a judgment begins.
 
 ## 4. Check what the draft lets a reader account for
 
-Read the draft from its own link. Restore any context it assumes the
-reader has just seen elsewhere. If it grew out of a how-to, leave that
-guide the sentence needed for the task and link to the full explanation
-there. Detailed instructions and tables of options have their own uses.
+Read the title and opening from the draft’s own link. Can a reader tell
+what the page will explain? If you start with an example, can they tell
+why it belongs here? Restore any context the draft assumes the reader
+has just seen elsewhere. If it grew out of a how-to, leave that guide
+the sentence needed for the task and link to the full explanation there.
+Detailed instructions and tables of options have their own uses.
 Keep the details that carry this explanation’s reasoning.[^reference]
 
 Try a nearby case. If the longest wait becomes 22 days, which measure

@@ -19,7 +19,9 @@ generated: { by: codex/gpt-6, at: 2026-11-21T22:48:16Z }
 
 # What a pattern description lets a designer carry to a new case
 
-A ticket printer receives the same job twice. A second ticket comes out.
+What lets a designer recognize a familiar problem in a different system?
+A pattern description names the feature to look for. Consider what happens
+when a ticket printer receives the same job twice. A second ticket comes out.
 A reservations display receives the same message twice telling it that
 seat B12 is occupied. The display still shows B12 as occupied. A network
 diagram might draw both systems with exactly the same arrow from sender

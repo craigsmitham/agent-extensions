@@ -22,12 +22,11 @@ sources:
 
 # How-to guides and the work they serve
 
-The fix has been approved, and the pull request still can’t be merged.
-While it waited for review, a teammate changed one of the same lines.
-The developer knows how to commit and push. The puzzle is the file Git
-leaves behind when the two branches meet. Both versions of the line are
-in it, one above the other, set off by Git’s conflict markers. The merge
-can’t finish until someone settles what the line should say.
+Even a developer who knows Git can need a how-to guide. Suppose their
+fix has been approved, but while it was under review a teammate edited
+the same line. Git has left both versions in the file, one above the
+other, set off by conflict markers. The developer knows how to commit
+and push. How do they get this pull request ready to merge?
 
 A **how-to guide** gives a practitioner a way to accomplish a particular
 task. In Diátaxis, the reader comes to a guide with a purpose of their

@@ -24,8 +24,9 @@ sources:
 
 # What a runbook lets an operator repeat
 
-The station clock reads 8:55. A dispatcher has an approved timetable and a
-request to put it on the passenger display. Yesterday's dispatcher knew
+A runbook helps the next person on shift recognize when a job is
+finished. Imagine a station dispatcher publishing an approved timetable
+to the passenger display. Yesterday's dispatcher knew
 which screen to check after publishing. Today's dispatcher has the same
 access, but sees two green indicators. One means the upload finished.
 The other means the display has fetched the new revision. Passengers can

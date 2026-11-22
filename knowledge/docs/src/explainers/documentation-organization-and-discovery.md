@@ -16,10 +16,11 @@ generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
 
 # Documentation organization and discovery
 
-Documentation organization is a claim about which relationships readers and
-maintainers should see first. A directory tree makes one route inexpensive and
-other routes indirect, so its primary axis should reflect the collection's
-dominant retrieval question rather than an abstract universal taxonomy.
+Where will readers look first for the document they need? Grouping pages
+by subject helps someone who knows which product they use. Grouping them
+by document form helps someone looking for a tutorial or a reference.
+A directory tree makes one of those routes easier to follow, so the
+choice depends on what readers usually know when they arrive.
 
 This is portable reasoning for choosing an organization, not a prescribed
 repository layout. Host conventions, publication systems, URLs, and migration

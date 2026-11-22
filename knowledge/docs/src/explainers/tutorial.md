@@ -16,12 +16,12 @@ sources:
 
 # Why a tutorial gives the learner something to do
 
-An arrow sits in the middle of a window. Someone types a command, the
-arrow moves, and a line appears behind it. Python’s turtle tutorial begins
-with movements like these. By the time the learner has drawn a triangle,
-they have seen two commands do quite different things. Moving forward
-draws in the current direction. Turning changes the direction the next
-line will take.[^turtle]
+Python’s turtle tutorial gives learners a way to see what their commands do.
+An arrow sits in the middle of a window. The learner types a command, the
+arrow moves, and a line appears behind it. By the time the learner has drawn
+a triangle, they have seen two commands do quite different things. Moving
+forward draws in the current direction. Turning changes the direction the
+next line will take.[^turtle]
 
 A finished picture would show the triangle immediately. Watching the
 arrow turn gives the learner something else. They can see it change

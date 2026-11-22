@@ -24,8 +24,9 @@ sources:
 
 # Why reference follows the shape of the thing it describes
 
-A volunteer editing an astronomy club’s observing notes encounters the
-abbreviation *UMi*. Is that the Great Bear or the Little Bear? In the
+A reader often comes to a reference with just one piece of information.
+For a volunteer editing an astronomy club’s observing notes, it is the
+abbreviation *UMi*. Does that stand for the Great Bear or the Little Bear? In the
 International Astronomical Union’s table of constellations, the Ursa
 Minor row puts *UMi* alongside *The Little Bear*. The neighboring row
 gives *UMa* for Ursa Major, the Great Bear. A single letter changes

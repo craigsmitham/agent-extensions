@@ -16,8 +16,9 @@ sources:
 
 # Documentation workflow
 
-Suppose volunteers for a festival keep asking when loaned instruments are
-due back. Adding the agreed return time and contact to the page they already
+When a question keeps coming up, how much new documentation does it need?
+Suppose festival volunteers keep asking when loaned instruments are due
+back. Adding the agreed return time and contact to the page they already
 consult helps the next volunteer immediately. If similar questions recur
 across events, a shared loans reference may earn a place in the collection.
 

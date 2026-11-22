@@ -16,10 +16,12 @@ sources:
 
 # What a verification checklist establishes
 
-An archive receives a folder containing a recorded concert. The sender’s
-log says that every recording was copied. All the filenames are present.
-One of the files has changed by a single byte. Both reassuring observations
-can be true while the received recording differs from the one sent.
+How can a verification checklist catch a mistake after every step has been
+marked complete? Suppose an archive receives a folder containing a recorded
+concert. The sender’s log says that every recording was copied. All the
+filenames are present. One of the files has changed by a single byte. Both
+reassuring observations can be true while the received recording differs
+from the one sent.
 
 A **verification checklist** directs attention to a claim about finished
 work and the evidence that would support or contradict it. In the BagIt

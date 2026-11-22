@@ -20,11 +20,12 @@ sources:
 
 # How an execution checklist helps work resume
 
-The librarian has three recorders to prepare for an oral-history session.
-Each needs an empty recording card and a headset. Halfway through the
-second kit the phone rings. When she returns, the box is open and the
-card is on the table. “Pack recorders” is still visible on the shift
-list. Which action comes next?
+One test of an execution checklist is whether someone can use it to pick up
+an interrupted job. A librarian is packing three recorders for an
+oral-history session. Each needs an empty recording card and a headset.
+Halfway through the second kit the phone rings. When she returns, the box is
+open and the card is on the table. “Pack recorders” is still visible on the
+shift list. Which action comes next?
 
 The problem is keeping a place in a sequence. The librarian knows how to
 assemble a kit. A list organized by equipment type may still leave her

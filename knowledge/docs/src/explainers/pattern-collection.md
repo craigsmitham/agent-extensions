@@ -19,8 +19,10 @@ sources:
 
 # What connects the patterns in a collection
 
-The Bluebird team in Lise Hvatum and Rebecca Wirfs-Brock’s backlog story
-starts out in one room. People can see their work on a wall. When the team
+A pattern collection can show when one design choice makes another
+worth considering. Lise Hvatum and Rebecca Wirfs-Brock illustrate that
+relationship through the Bluebird team’s backlog. At first everyone
+works in one room and can see the backlog on a wall. When the team
 grows, some members work elsewhere and need a view they can reach from
 their own desks. In the authors’ account, *Frame* names the way the team
 structures its backlog. *Views* lets people see the portion relevant to

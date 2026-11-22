@@ -13,11 +13,12 @@ generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
 
 # Documentation quality
 
-An accurate rehearsal schedule can still be frustrating if a singer has to
-read every entry to find where their section meets. Diátaxis distinguishes
-**functional quality**, such as getting the room and time right, from
-**deep quality**, which includes how well the schedule fits the person
-using it.[^diataxis-quality]
+Readers can judge a document both by the accuracy of its facts and by
+how easily they can use them. A rehearsal schedule may give the right
+room and time for every section, yet make a singer read every entry to
+find their own. Diátaxis calls accuracy a matter of **functional quality**.
+The fit between the schedule and the singer’s task is a matter of
+**deep quality**.[^diataxis-quality]
 
 Practical authoring principles (one job per document, match form to job, link
 rather than restate, stay accurate enough for the job, and so on) live in

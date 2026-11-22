@@ -24,8 +24,9 @@ sources:
 
 # What a checklist changes at the point of work
 
-The exhibition registrar can pack a loan without looking anything up.
-At the end of a long day she hands a sealed crate to the courier.
+Why give experienced colleagues a checklist for a job they both know?
+Consider the handoff between an exhibition registrar and a courier.
+At the end of a long day the registrar hands over a sealed crate.
 The signed receipt is still on her desk. Both people knew a receipt was
 required. Each thought the other had collected it.
 
