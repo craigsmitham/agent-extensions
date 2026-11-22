@@ -11,7 +11,7 @@ tags:
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:07:34Z'
+  at: '2026-11-22T01:48:28Z'
 sources:
 - id: aws
   resource: https://docs.aws.amazon.com/wellarchitected/latest/operational-excellence-pillar/ops_ready_to_support_use_runbooks.html
@@ -49,15 +49,16 @@ station permits one publish attempt and reserves rollback for the lead.
 Those are facts of this example to replace with the local procedure.
 
 > 1. Read the revision from the display itself and record it on the request.
->    Open the requested revision in the controller and match its timetable
->    date and display ID to the signed request.
-> 2. Select **Publish** once. Read the revision on the named display and
->    check that the first listed departure matches the approved timetable.
-> 3. If both match, record the observed revision and departure on the
->    request and hand it back to dispatch. If either differs after the
->    controller reports completion, or the controller reports a failure,
->    leave the controller state intact. Give the duty lead the target,
->    previous revision, requested revision, and the observation.
+>    In the controller, compare the selected revision ID and target display
+>    ID with the two identifiers on the signed request.
+> 2. If both match, select **Publish** once and record the attempt. When
+>    the controller reports completion, read the revision on the named
+>    display and compare its first departure with the approved timetable.
+> 3. If the display shows the requested revision and departure, record
+>    both on the request and hand it back to dispatch. If either check
+>    fails or the controller reports failure, leave the controller state
+>    intact. Give the duty lead the request with the target, previous
+>    revision, requested revision, attempt, and observed result.
 
 Ask the operator what happens if the controller never reports a result.
 The runbook needs the locally agreed timeout and escalation contact at that

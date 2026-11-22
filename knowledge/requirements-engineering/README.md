@@ -2,11 +2,15 @@
 
 Requirements development, specification, review, and maintenance.
 
-Install the [requirements-engineering pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/requirements-engineering) to get this bundle and its companion placeholder skill.
+From the project where you want to use this bundle, install the [requirements-engineering pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/requirements-engineering) to get this bundle and its companion placeholder skill.
 
 ```sh
 axm install @craigsmitham/packs/requirements-engineering
 ```
+
+If AXM prompts for project setup, select the agents that should discover the
+bundle and enable instruction syncing to give them its lookup route. For
+command-line lookup alone, you can leave the agent selection empty.
 
 Before accepting a requirement, use the individual review checklist to check its authority, meaning, and assessment basis.
 

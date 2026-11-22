@@ -3,14 +3,18 @@ type: Guide
 title: Authoring constraints and external conformance requirements
 description: States genuine restrictions and applicable external obligations with explicit scope, version, and evidence. Use when a requirement restricts the solution space or invokes a law, standard, contract, or interface obligation.
 tags: [constraint, conformance, standard, regulation, contract, interface, requirements-engineering]
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:08Z }
 ---
 
 # Authoring constraints and external conformance requirements
 
-Treat a solution choice as a constraint only when an authorized source actually
-restricts the solution space. Record its source, applicability, rationale,
-scope, exceptions, and retirement condition.
+Start with the proposed restriction and the agreement, policy, or decision
+said to require it. Find the passage that rules out an otherwise acceptable
+solution. If the team simply prefers that solution, record the preference in
+the design discussion. If the authority is unclear, keep the proposed
+constraint open and name the decision you need. For an established constraint,
+record its source, applicability, rationale, scope, exceptions, and retirement
+condition.
 
 For external conformance, identify:
 
@@ -27,4 +31,10 @@ is unknown. Preserve the uncertainty and seek the appropriate authority.
 External text may have licensing or quotation restrictions. Link and summarize
 within permitted bounds rather than copying it unnecessarily.
 
-## Worked continuation
+Suppose a partner's signed import agreement requires UTF-8 for its nightly
+catalog feed. Write the obligation against the file delivered to that partner.
+The agreement leaves the catalog's internal storage encoding open. To check
+the draft, try assessing two deliveries that differ only in encoding. Include
+a non-ASCII item name that distinguishes the agreed encoding from the
+alternative. Could a reviewer identify which file breaches the agreement
+and point to the passage that makes it a breach?

@@ -2,11 +2,15 @@
 
 Business context, strategy, customer progress, and service modeling.
 
-Install the [business-analysis pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/business-analysis) to get this bundle and its companion placeholder skill.
+From the project where you want to use this bundle, install the [business-analysis pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/business-analysis) to get this bundle and its companion placeholder skill.
 
 ```sh
 axm install @craigsmitham/packs/business-analysis
 ```
+
+If AXM prompts for project setup, select the agents that should discover the
+bundle and enable instruction syncing to give them its lookup route. For
+command-line lookup alone, you can leave the agent selection empty.
 
 To trace a customer handoff, open the service blueprinting explanation. It connects visible touchpoints to the people and processes behind them.
 

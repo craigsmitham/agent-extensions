@@ -2,6 +2,13 @@
 
 ## 2026-11-22
 
+- Reviewed the 17 how-to guides against their readers’ tasks. Revised the
+  guides to comparing concepts, organizing documentation, describing and
+  collecting patterns, designing execution checklists, and writing playbooks
+  and runbooks. Rehearsals included returning to an interrupted kit, following
+  an old booking link after a move, and checking the timetable actually shown
+  after a publish attempt.
+
 - Reviewed all 23 explainers from their own entry points. The audit example
   follows two working links to different payroll deadlines. The craft,
   quality, and organization pages explain how the same information serves

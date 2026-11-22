@@ -2,11 +2,15 @@
 
 Software architecture, domain modeling, and design.
 
-Install the [architecture-and-design pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/architecture-and-design) to get this bundle and its companion placeholder skill.
+From the project where you want to use this bundle, install the [architecture-and-design pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/architecture-and-design) to get this bundle and its companion placeholder skill.
 
 ```sh
 axm install @craigsmitham/packs/architecture-and-design
 ```
+
+If AXM prompts for project setup, select the agents that should discover the
+bundle and enable instruction syncing to give them its lookup route. For
+command-line lookup alone, you can leave the agent selection empty.
 
 When two teams use the same term differently, read how bounded contexts connect the language of each team to its model.
 

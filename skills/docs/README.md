@@ -17,5 +17,7 @@ match the project and whether a newcomer can find and complete the first task.
 
 For a named document form, ask to understand it, draft one, or decide whether
 it fits. The skill opens the corresponding explainer, guide, or design
-pattern. For example, “Write a runbook for the restore procedure below”
-starts with the runbook authoring guide.
+pattern when the installed bundle supplies that page. For example, in this
+checkout “Write a runbook for the restore procedure below” starts with the
+runbook authoring guide. To see which pages your installation supplies, run
+`axm knowledge concepts query runbook` in the project.

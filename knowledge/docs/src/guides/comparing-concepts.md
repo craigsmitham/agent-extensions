@@ -20,45 +20,53 @@ sources:
   title: Documentation organization and discovery
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:10:36Z'
+  at: '2026-11-22T01:50:06Z'
 ---
 
 # Comparing concepts
 
-Use this guide when related concepts are repeatedly confused or several pages
-repeat the same comparison. A local sentence is enough for an isolated ambiguity;
-a separate comparison earns its place only when readers or maintainers need it.
+Start with a choice someone got stuck on. In a music archive, a volunteer
+finds two recordings of the same piece. They have a correction to make.
+How should they decide which catalog entry to change?
 
-## Steps
+## Find the distinction that changes the choice
 
-1. Identify the smallest set of concepts involved and the decisions the confusion affects.
-2. Keep each concept's positive definition in its own authoritative document.
-3. Compare the relevant differences: purpose, scope, authority, overlap, and conditions for choosing each. Use only axes that resolve the confusion.
-4. Give a recurring comparison one maintained home. Link to it from the terms readers look up separately.[^documentation-organization]
-5. Use a table for quick lookup and prose or contrasting examples for relationships a table cannot express. Do not force overlap into a false hierarchy.
-6. Review the definitions and comparison together when either changes.
+Find the definitions that govern this reader’s work. Here the catalog
+defines a composition and a recorded performance separately. Try the
+reader’s correction against each definition. Does it apply to the work
+across performances, or only to this rendition? If the definitions give
+conflicting answers for the same correction, bring that case to the
+catalog owner before advising volunteers which entry to edit.
 
-## Example from a music archive
+## Put the answer where the question arises
 
-Suppose an archive’s catalog distinguishes a composition from each recorded
-performance. A volunteer finds two performances of the same piece and wonders
-which title to correct. The archive’s definitions give them a practical test.
+If only one editing instruction is ambiguous, clarify it there. If
+volunteers arrive at the same question from either entry, write the
+comparison once and link to it from both. Keep the full definitions in
+their authoritative homes.[^documentation-organization]
+
+For a quick lookup, put the decision and the resulting action side by
+side. Under the archive’s definitions a volunteer could use this table.
 
 | Entry | Question it answers | Example correction |
 | --- | --- | --- |
 | Composition | Which musical work is this? | Fix the spelling of the work’s title for both performances. |
 | Recorded performance | Which rendition is this? | Correct the venue for one performance. |
 
-The comparison owns the relationship, not every definition it mentions. Use
-reference-style presentation for lookup or explanation when reasoning is the
-main need.[^documentation-craft] Do not introduce a metadata type just to mark a comparison.
+If the categories overlap, work through an example in prose so the reader
+can see where both apply. Use the collection’s existing document types.
+A reference page can support a quick lookup, while an explainer can
+work through the reasoning behind the choice.[^documentation-craft]
 
 ## Check
 
-A reader can distinguish the concepts and explain when the difference matters.
-Each definition has one owner; the full comparison is not repeated across the
-collection. Remove or fold back a comparison that adds navigation without value.
-This is editorial guidance, not a claim of independently measured effectiveness.
+Try a fresh correction from each entry point. Suppose the composer credit
+is wrong for the piece and only the second recording lists the wrong
+soloist. Can the volunteer reach the comparison from either term and tell
+which record needs each edit? If one route leaves them guessing, repair
+that link or wording and retry the case.
+Recheck the comparison when a definition changes. If only one local
+question remains, fold the answer back into the page where it arises.
 
 ## Related
 

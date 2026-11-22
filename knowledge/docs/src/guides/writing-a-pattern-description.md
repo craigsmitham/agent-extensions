@@ -14,14 +14,16 @@ sources:
 - id: feedback
   resource: https://wirfs-brock.com/rebecca/papers/constructivefeedback/
   title: Constructive Feedback Using Pattern Smells
-generated: { by: codex/gpt-6, at: 2026-11-21T22:48:16Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:48:28Z }
 ---
 
 # How to write a pattern description
 
 Begin with a design decision someone has actually faced. Look for existing
-descriptions under names practitioners already use. If you have a
-proposed solution and have yet to find a use, record it as a candidate.
+descriptions under names practitioners already use. If one fits, use its
+name and cite it. Work out what your case adds, such as a new way to
+apply the design or a limit the earlier account leaves open. If you have
+a proposed solution and have yet to find a use, record it as a candidate.
 A plausible illustration can help people discuss it while you search.
 
 ## Mine the decision from the cases

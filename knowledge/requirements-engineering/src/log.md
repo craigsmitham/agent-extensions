@@ -4,6 +4,8 @@
 
 - Restored the rental obligations behind the EARS and 29148 examples, tested the atomic-replacement counterexample, and clarified the scope of tailored conformance.
 
+- Clarified how to draft and check constraints, quantitative targets, and stateful obligations, choose a specification method, and prepare a change for decision. Added practical checks for classification and lineage.
+
 ## 2026-11-11
 
 - **Organization:** Established `foundations/` for discipline explainers; moved existing explainers and repaired discovery routes and references.

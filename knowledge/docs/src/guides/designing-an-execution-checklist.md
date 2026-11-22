@@ -12,7 +12,7 @@ tags:
 status: draft
 generated:
   by: codex/gpt-6
-  at: '2026-11-22T00:07:11Z'
+  at: '2026-11-22T01:50:06Z'
 sources:
 - id: flight
   resource: https://ntrs.nasa.gov/citations/19910017830
@@ -45,14 +45,15 @@ library clips a numbered packing card to each case. If the library keeps
 packing status in its loan system, opening a kit’s record should show
 which actions remain for that kit.
 
-> **Recorder kit ____ · Keep this card with the open case.**
+> **Recorder kit ____ · Copy the case ID here and clip this card to the case.**
 >
 > - Fit the prepared recording card. Mark this line after it is seated.
 > - Place the headset in the case. Mark this line when it is inside.
 > - With both items marked, close the case and deliver it to the loan desk.
 >
 > **Returning to an open case?** Match the case ID to the packing card.
-> Inspect the first unmarked item. If the action was already completed,
+> If the IDs differ, keep the case open and locate its own card before
+> using any marks. Inspect the first unmarked item. If it is already in place,
 > mark it and continue. If an item is missing from stock, keep the case
 > open and tell the desk lead which kit and item are waiting.
 

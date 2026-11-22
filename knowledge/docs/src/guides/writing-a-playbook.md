@@ -8,7 +8,7 @@ sources:
 - id: aws
   resource: https://docs.aws.amazon.com/wellarchitected/latest/framework/rel12-bp01.html
   title: AWS — Use playbooks to investigate failures
-generated: { by: codex/gpt-6, at: 2026-11-21T22:46:21Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:48:28Z }
 ---
 
 # How to write a playbook
@@ -53,9 +53,11 @@ imagined venue might read as follows.
 >   manager with the waiting location and guest count. Ask them to take
 >   charge at the entrance and confirm who will update registration.
 >
-> If you cannot staff the selected desk or the evidence points to several
-> delays, tell the floor manager what you observed and agree which queue
-> each person will watch. Keep one person directing arrivals.
+> If the selected desk lacks staff, equipment, or prepared badges for
+> the guests you would send there, tell the floor manager what you found.
+> If several queues are growing, agree with the manager which queue each
+> person will watch.
+> Keep one person directing arrivals.
 
 If a response already has a local procedure, name its entry condition and
 link it where the responder chooses that action. Keep the decision and
@@ -79,9 +81,11 @@ rest of the case until they ask for the relevant evidence. If they choose
 the spare terminal, tell them both clerks are now waiting for badges.
 Can they change course, find a person with authority, and say what
 observation will show whether the response helped? Try a second pass
-in which the expected person is unavailable. Revise the first place
-where the next choice, handoff, or escalation depends on information
-the responder cannot obtain.
+in which the expected person is unavailable. Ask the shift lead who
+can accept the decision in their absence and what the responder can do
+while waiting. If the team has no agreed cover, record that gap for the
+lead to settle. Once a deputy is named, replay the handoff with the
+revised directions.
 
 Record the assumptions the rehearsal exposed and ask the local lead to
 confirm roles, equipment, and escalation contacts. A tabletop can reveal

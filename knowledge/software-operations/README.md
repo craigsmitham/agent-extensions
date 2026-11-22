@@ -2,11 +2,15 @@
 
 Software operation, service reliability, incident response, and recovery.
 
-Install the [software-operations pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/software-operations) to get this bundle and its companion placeholder skill.
+From the project where you want to use this bundle, install the [software-operations pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/software-operations) to get this bundle and its companion placeholder skill.
 
 ```sh
 axm install @craigsmitham/packs/software-operations
 ```
+
+If AXM prompts for project setup, select the agents that should discover the
+bundle and enable instruction syncing to give them its lookup route. For
+command-line lookup alone, you can leave the agent selection empty.
 
 When recording an ongoing incident, open the incident record template to put current impact and response coordination ahead of the chronology.
 

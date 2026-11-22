@@ -4,7 +4,7 @@ title: How to curate a pattern collection
 description: When readers have several documented patterns to choose from, build and test routes from their design questions to useful entries, then revise the collection from experience of use.
 tags: [docs, pattern-collection, pattern-language, curation, indexing, feedback, maintenance]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-22T00:07:34Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:06Z }
 sources:
   - id: readers
     resource: https://wirfs-brock.com/rebecca/papers/whowillread/
@@ -58,8 +58,10 @@ from the proposed collection.
 >   [Point-to-Point Channel](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PointToPointChannel.html).
 > - Shipping and billing each need to act. Start with
 >   [Publish-Subscribe Channel](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html).
-> - If one recipient sees the same message twice, ask what a repeat would
->   do to its work. See [Idempotent Receiver](https://www.enterpriseintegrationpatterns.com/patterns/messaging/IdempotentReceiver.html).
+>
+> **Could a recipient handle the same message twice?** After choosing a
+> channel, ask what a repeat would do to that recipient’s work. If it
+> could, for instance, bill the customer twice, see [Idempotent Receiver](https://www.enterpriseintegrationpatterns.com/patterns/messaging/IdempotentReceiver.html).
 
 The first two links offer alternatives for a choice about recipients.
 The last adds a separate design decision about repeated delivery.

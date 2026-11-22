@@ -52,6 +52,13 @@ Separate supported findings from hypotheses needing investigation. Retaining
 the current arrangement is a valid decision when benefit is insufficient or
 uncertainty prevents a responsible intervention.
 
+For example, suppose a maintainer asks whether they can retire an old importer.
+The scheduled job now calls its replacement, but a support runbook still tells
+operators to use the old command to replay failed imports. Check a recent
+replay with the people who handle failures. If they still need it, identify
+what the replacement must do before they can switch. If you were asked only
+for an assessment, return that dependency and the evidence for it here.
+
 ## Sequence by prerequisites
 
 | Situation | Useful ordering | Reason to reconsider |
@@ -85,6 +92,12 @@ If a transition remains open, identify remaining consumers, an owner or the
 unresolved ownership decision, and a concrete exit condition. Do not describe
 an installed replacement as a completed migration while its predecessor still
 requires support.
+
+For the importer, try replaying a failed row for customer `007` in a test
+environment. Suppose the replacement reports success but stores the ID as
+`7`. An operator following the runbook still cannot recover the record for
+`007`. Keep the old path available until the replacement preserves the ID
+and the operator can recover the expected record using the revised runbook.
 
 Report the starting point, actual change, evidence, material costs and tradeoffs,
 and remaining uncertainty. A passing build does not establish external

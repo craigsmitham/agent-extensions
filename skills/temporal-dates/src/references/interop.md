@@ -36,12 +36,20 @@ Temporal values does not displace Effect's clock and scheduling model either.
 ## Date ↔ Temporal
 
 ```js
-const instant = legacyDate.toTemporalInstant();          // Date → Instant
+const legacyDate = new Date('2026-03-14T21:00:00.123Z');
+const instant = Temporal.Instant.fromEpochMilliseconds(legacyDate.getTime());
 const zdt = instant.toZonedDateTimeISO('America/Chicago');
-const legacyDate = new Date(instant.epochMilliseconds);  // Temporal → Date
+const roundTrip = new Date(instant.epochMilliseconds);
 ```
 
-**Polyfill caveat:** `Date.prototype.toTemporalInstant` only exists if the polyfill patches globals. With the modular import you get it as a standalone function:
+Compare `roundTrip.getTime()` with `legacyDate.getTime()`. The zone changes
+the local display of the instant. Both dates should still denote the same
+millisecond. For an instant with finer precision, see
+[Precision loss at the Date boundary](pitfalls.md#precision-loss-at-the-date-boundary).
+
+If your runtime supplies `Date.prototype.toTemporalInstant`, you can call
+`legacyDate.toTemporalInstant()` for the first conversion. With a modular
+polyfill import, use the millisecond conversion above or the exported helper:
 
 ```js
 import { Temporal, toTemporalInstant } from 'temporal-polyfill';

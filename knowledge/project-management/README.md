@@ -2,11 +2,15 @@
 
 Project capabilities, plans, commitments, resources, and progress.
 
-Install the [project-management pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/project-management) to get this bundle and its companion placeholder skill.
+From the project where you want to use this bundle, install the [project-management pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/project-management) to get this bundle and its companion placeholder skill.
 
 ```sh
 axm install @craigsmitham/packs/project-management
 ```
+
+If AXM prompts for project setup, select the agents that should discover the
+bundle and enable instruction syncing to give them its lookup route. For
+command-line lookup alone, you can leave the agent selection empty.
 
 When a team has six weeks to invest in a proposed change, read how Shape Up uses appetite to shape the scope of a bet.
 

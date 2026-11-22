@@ -3,13 +3,15 @@ type: Guide
 title: Selecting a requirement specification method
 description: Selects a specification form proportional to ambiguity, consequence, interaction complexity, and assurance need. Use when prose is leaving an obligation ambiguous, or when choosing among structured syntax, examples, models, and formal notation.
 tags: [specification-method, prose, ears, examples, model, formal-method, requirements-engineering]
-generated: { by: codex/gpt-6, at: 2026-11-11T19:19:09Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:53:31Z }
 ---
 
 # Selecting a requirement specification method
 
-Choose the lightest form that makes the obligation precise enough for its
-consequence and uncertainty.
+Take the obligation you are trying to agree on and a case on which readers
+could disagree. Identify what determines the outcome in that case. Choose
+the lightest form below that lets the people making the decision express
+and inspect that distinction.
 
 | Need | Useful forms |
 | --- | --- |
@@ -25,14 +27,19 @@ Text and model should complement one another. Name the authoritative element
 when several representations overlap, and link examples as clarification or
 tests rather than letting them silently redefine the requirement.
 
-Do not force every requirement into one syntax. A structured sentence improves
-clarity only if it preserves the actual conditions, subject, and outcome.
+Try the chosen form on that case. For example, suppose a dispatcher's
+permission to reassign a machine depends on both the booking state and who
+owns the machine. Sketch the combinations in a decision table. Can a reader
+determine the result for a confirmed booking on a partner-owned machine?
+If the agreement leaves that cell open, mark the decision for the person
+who can settle it. If ownership makes no difference and one sentence covers
+every agreed case, keep the sentence. Check the subject, conditions, and
+outcome against the source obligation before adopting the form.
 
-Some obligations need a form that people outside the authoring team can read and
-that fails automatically when the system stops honoring it. Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
-connects that form to its applicability, readable rules and examples, automation
-bindings, and continuing evidence. Choosing and accepting the requirement's
-form remains a requirements decision; the software-testing pattern explains
-how to realize and sustain its executable verification. The requirement record
-stays authoritative over the rule unless the project has declared the
-specification text to be the requirement.
+If reviewers need to read the rule and see when the system violates it,
+consider an executable specification. Agree on the authoritative text first.
+The requirement record governs the rule unless the project explicitly gives
+the specification text that authority. For readable examples, automation
+bindings, and evidence from each run, see the optional *Executable
+specifications* pattern at
+`@craigsmitham/knowledge/software-testing#patterns/executable-specifications`.
