@@ -76,6 +76,16 @@ scripts are not retained. The knowledge owns the design guidance; the docs
 skill routes checklist creation, review, adaptation, and validation planning
 to it. No additional package dependency is required.
 
+## Retired guide IDs in 0.9.0
+
+If you saved links to the craft or workflow guide in docs knowledge 0.14.0,
+update the concept ID within `@craigsmitham/knowledge/docs` when moving to 0.15.0.
+
+| Former concept ID | Current concept ID |
+| --- | --- |
+| `guides/documentation-craft` | `explainers/documentation-craft` |
+| `guides/documentation-workflow` | `explainers/documentation-workflow` |
+
 ## Migration in 0.8.0
 
 Docs skill 0.5.0 uses docs knowledge 0.14.0. Update the pack together. This is a
