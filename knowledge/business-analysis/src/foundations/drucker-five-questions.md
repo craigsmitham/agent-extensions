@@ -13,11 +13,11 @@ sources:
     title: Peter F. Drucker — Managing for Results, 1964
   - id: results
     resource: https://drucker.institute/wp-content/uploads/2018/08/Reading-Drucker-on-Results.pdf
-    title: Drucker Institute — Reading Drucker on Results, adapted from The Five Most Important Questions You Will Ever Ask About Your Organization and Management, revised edition
+    title: Drucker Institute — What Are Our Results?, adapted from The Five Most Important Questions and What Business Can Learn from Nonprofits
   - id: customer-centric
     resource: https://drucker.institute/wp-content/uploads/2018/08/Reading_Drucker-on-Being-Customer-Centric.pdf
     title: Drucker Institute — Reading Drucker on Being Customer-Centric
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:48:42Z }
 ---
 
 # Drucker's five most important questions
@@ -25,6 +25,12 @@ generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
 A team can specify a product precisely and still be unable to say whom it is
 for, what they value, or how anyone will know it worked. Which questions should
 an account of a product's intent answer before its behavior is specified?
+
+Peter Drucker used five questions for organizational self-assessment.
+Consider their application at Northbank, a fictional equipment-rental company.
+Its team can tell whether the booking software sent a confirmation. The
+people who depend on it can tell whether the equipment arrived in time for
+work. Which result matters depends on whom the company exists to serve.[^five-questions]
 
 ## The five questions
 
@@ -43,8 +49,10 @@ starts from the outside environment. An organization that starts from its
 resources and looks for places to use them will, he warns, focus on
 yesterday.[^five-questions] In *Managing for Results* he makes a related point about
 effort: "Results are obtained by exploiting opportunities, not by solving
-problems."[^managing-for-results] Solving a problem restores normal operation; results come
-from opportunities.
+problems."[^managing-for-results] His distinction matters when the team
+decides where to put its next hour. Restoring the booking system can preserve
+today's service. Discovering that an earlier handover would let crews start a
+second job raises a new question about what the service could offer.
 
 For a product team, this separates the mission from the software. Northbank's
 contribution is dependable access for contractors; a reservation system is one
@@ -52,8 +60,8 @@ way to make it.
 
 ### Primary and supporting customers
 
-The primary customer is the person whose life is changed by the work, and
-Drucker asks for one primary customer rather than several. The primary
+Writing about social-sector organizations, Drucker identifies one primary
+customer, the person whose life the work changes. The primary
 customer is never the only customer: supporting customers, such as
 volunteers, members, partners, funders, referral sources, and employees, must
 also be satisfied.[^customer-centric] They can say no, and satisfying one
@@ -78,18 +86,18 @@ established by evidence, not by the offering's description of itself.
 
 ### Results are qualitative and quantitative
 
-Drucker locates results outside the organization: "results exist only on the
-outside," and inside there are only costs. The result of a business is a
-satisfied customer, and "it is the customer who creates a 'profit'"; for the
-social sector, results are changed lives and conditions, in people's
-behavior, circumstances, health, hopes, and competence and
-capacity.[^results] He adds that a business cannot last without profit,
-though whether profit alone is an adequate measure can be debated. The
-published summary's list of sales, profit, and market share as business
-results comes from a co-author's essay, not from Drucker's
-chapter.[^five-questions] Qualitative measures show how deep and broad a change
-is, and quantitative measures give definite standards; both are
-needed.[^results]
+Drucker asks social-sector organizations to look for changes in the lives of
+the people they serve. A count can establish how often a change occurs.
+An account from a participant can show what that change meant. He treats
+both kinds of evidence as necessary. For businesses, he recognizes profit
+as a condition for survival while leaving open how well it measures the
+whole result.[^results]
+
+At Northbank, shorter waits for confirmations might coexist with just as
+many lost crew days. A supervisor might explain that a prompt confirmation
+still leaves the crew waiting when the machine arrives late. The supervisor's
+account gives the lost days a possible cause that the software's response
+time alone could never reveal.
 
 ### A plan begins with abandonment
 
@@ -99,8 +107,10 @@ organization toward its goals; action steps and budgets follow. Drucker lists
 abandonment first among the elements of an effective plan: "If we were not
 committed to this today, would we go into it?"[^five-questions]
 
-For a product, the equivalent of abandonment is deciding what it will not do.
-An explicit exclusion is a commitment, as much as an inclusion is.
+For a product team, abandonment concerns an existing commitment. Suppose
+Northbank still maintains an overnight report for a depot that now uses live
+records. Finding out who still relies on the report lets the team decide
+whether retiring it would free staff to work on late handovers.
 [Drucker's four disciplines of organizational renewal](drucker-organizational-renewal.md)
 develop abandonment alongside improvement, exploiting success, and innovation.
 
@@ -118,12 +128,9 @@ answered. In this bundle's interpretation:
 | What are our results? | Objectives, each a change outside the product with quantitative and qualitative indicators |
 | What is our plan? | Strategy, the few things concentrated on now and what is set aside; and Scope, what the product takes on and what it deliberately leaves out |
 
-The mapping of the plan is an interpretation: Drucker's plan holds no scope,
-but its concentration, its abandonment, and his question of what the business
-should not be come closest. Goals, action steps, budgets, and release plans
-remain planning records rather than
-product intent; the questions show where they connect without making them part
-of a specification.
+Drucker asks an organization to concentrate its effort and reconsider old
+commitments. The table applies those ideas to product scope. A release plan
+would still need to say when and how the team will deliver on those choices.
 
 A gap under one question is informative. A product with detailed requirements
 but no stated results cannot tell whether it succeeded; one with objectives but
@@ -140,5 +147,5 @@ no evidence of customer value may be measuring the wrong change.
 
 [^five-questions]: [Audio-Tech Business Book Summaries, The Five Most Important Questions You Will Ever Ask About Your Organization](https://www.shared-impact.com/wp-content/uploads/2020/09/5.-Most-Important-Questions-You-will-ever-ask-about-your-organization.pdf), summarized by arrangement with Jossey-Bass from Peter F. Drucker et al., 2008.
 [^managing-for-results]: [Peter F. Drucker, Managing for Results](https://archive.org/details/managingforresul00pete), 1964.
-[^results]: [Drucker Institute, Reading Drucker on Results](https://drucker.institute/wp-content/uploads/2018/08/Reading-Drucker-on-Results.pdf), adapted from *The Five Most Important Questions* and *Management*, revised edition.
+[^results]: [Drucker Institute, What Are Our Results?](https://drucker.institute/wp-content/uploads/2018/08/Reading-Drucker-on-Results.pdf), adapted from *The Five Most Important Questions* and *What Business Can Learn from Nonprofits*.
 [^customer-centric]: [Drucker Institute, Reading Drucker on Being Customer-Centric](https://drucker.institute/wp-content/uploads/2018/08/Reading_Drucker-on-Being-Customer-Centric.pdf).

@@ -1,5 +1,9 @@
 # Log
 
+## 2026-11-22
+
+- Restored the rental obligations behind the EARS and 29148 examples, tested the atomic-replacement counterexample, and clarified the scope of tailored conformance.
+
 ## 2026-11-11
 
 - **Organization:** Established `foundations/` for discipline explainers; moved existing explainers and repaired discovery routes and references.

@@ -31,11 +31,11 @@ Explore how document forms serve their readers and the practices, decisions, and
 
 ## Documentation foundations
 
-- [Documentation audits](documentation-audits.md) — What a documentation audit is — a bounded, evidence-backed assessment of a documentation corpus that distinguishes diagnosis from review, linting, verification, and remediation.
-- [Documentation craft](documentation-craft.md) — What effective documentation craft is — matching form to reader need, keeping each job recognizable, and respecting host conventions over portable layout rules.
+- [Documentation audits](documentation-audits.md) — How a documentation audit can explain a reader’s difficulty across several accurate pages, and how its coverage limits the findings.
+- [Documentation craft](documentation-craft.md) — Why one subject can call for different documents, how a reader’s purpose shapes each, and how the forms can work together.
 - [Documentation organization and discovery](documentation-organization-and-discovery.md) — Why documentation organization should follow reader entry points and semantic relationships, when to prefer form-first or subject-first grouping, and how paths, titles, metadata, and indexes work together.
-- [Documentation quality](documentation-quality.md) — What functional quality and deep quality mean in documentation craft — and how form-aware craft primarily serves deep quality while exposing functional gaps.
+- [Documentation quality](documentation-quality.md) — How an accurate rehearsal schedule can still be hard to use, and how changing its arrangement can expose a missing fact.
 - [Documentation workflow](documentation-workflow.md) — Explains useful incremental documentation improvement and structure that follows reader needs without prescribing delivery units.
-- [Practice](practice.md) — What a practice is — a socially sustained, purposive, normatively ordered, embodied, equipped, and historically transmitted structure that makes skilled action intelligible.
-- [Standard authority and conformance](standard-authority-and-conformance.md) — Where a standard's authority comes from and what conformance to it proves — warrant, standing, and application; criteria, evidence, and measurement; and the bounded claim a conformance statement can honestly make.
-- [Standard](standard.md) — What a standard is — a recognized, reusable basis for judging, specifying, or coordinating within a defined field, the kinds and levels of expectation standards carry, and how standards documents relate to practices and reader needs.
+- [Practice](practice.md) — Why knowing the rules or copying a movement can leave someone outside a practice, and how people learn the skills and judgments that make participation possible.
+- [Standard authority and conformance](standard-authority-and-conformance.md) — Why adopting a standard, meeting one of its criteria, and making a conformance claim require different grounds, illustrated by an accessibility review.
+- [Standard](standard.md) — How a shared standard lets people interpret one another’s work, what variation it allows, and why meeting it can leave questions of quality open.

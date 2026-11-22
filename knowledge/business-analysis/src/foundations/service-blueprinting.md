@@ -1,7 +1,7 @@
 ---
 type: Explanation
 title: "Service blueprinting: customer actions, visibility, and supporting processes"
-description: How service blueprinting maps customer actions against onstage, backstage, and support activities separated by named lines of interaction, visibility, and internal interaction, and how that exposes touchpoints, fail points, and delivery responsibility.
+description: How a service blueprint connects what a customer sees to the work behind it, and why a confirmation can reach a renter before the equipment is ready.
 tags: [service-blueprinting, service-design, visibility, frontstage, backstage, touchpoints, fail-points, customer-journey, process-representation, business-analysis]
 status: draft
 sources:
@@ -29,7 +29,7 @@ sources:
   - id: kalbach-mapping
     resource: https://experiencinginformation.com/mapping-experiences/
     title: Jim Kalbach — Mapping Experiences, author's book page
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:07Z }
 ---
 
 # Service blueprinting: customer actions, visibility, and supporting processes
@@ -40,12 +40,13 @@ distinguishing feature is a named boundary: activity a customer perceives is
 drawn above a line of visibility, and activity a customer depends on but never
 sees is drawn below it.[^bitner-blueprinting][^nng-blueprint]
 
-The technique comes from services marketing and operations rather than software.
-The Northbank application and the comparisons with this bundle's other
-representations are this bundle's synthesis. Explaining the technique does not
-establish that it improves outcomes in software product work.
+Consider Northbank, a fictional equipment-rental company. A contractor can
+receive a confirmation and still arrive to find the machine unavailable.
+Tracing the contractor's steps shows when the promise was made and when it
+failed. A blueprint can also show which work at the depot had to make those
+two moments agree.
 
-### The five components
+## The customer action anchors each column
 
 Bitner, Ostrom, and Morgan describe five components of a typical service
 blueprint. Customer actions run chronologically across the top, and the
@@ -95,18 +96,15 @@ represented.
 
 ## Reading a blueprint
 
-Two operations produce most of the technique's findings.
+Across a row, a reader can follow a customer's experience over time. Down a
+column, the question changes. What has to happen elsewhere so the service
+can deliver at that moment? A link across the line of interaction marks an
+encounter at which the customer can judge the service. A link from a support
+process can explain what makes that encounter possible.[^bitner-blueprinting]
 
-**Read a vertical slice.** Take one customer action and read straight down. A
-deep column beneath a small visible step shows substantial machinery serving a
-brief moment. A visible step with nothing beneath it identifies work the
-customer performs that no part of the organization supports.
-
-**Count line crossings.** Crossings of the line of interaction locate where the
-customer forms quality judgments. Crossings of the line of internal interaction
-locate handoffs. Blueprinting reveals the touchpoints critical to meeting
-customer needs and helps identify likely points of service
-failure.[^bitner-blueprinting]
+An empty cell invites investigation. It could mean the customer handles a step
+alone, or that the team drawing the blueprint has overlooked someone else's
+work. Staff at the depot can help distinguish those possibilities.
 
 ### A Northbank confirmation example
 
@@ -124,73 +122,53 @@ states acceptance conditions, a *hold* is temporary secured capacity, a
 assigns a physical asset. The blueprint does not redefine those
 terms.
 
-Three observations follow from the drawing, and each is a question for
-investigation rather than a finding:
+The confirmation appears in the acceptance column. Reading down from it shows
+why the screen and the depot might tell different stories. A capacity check
+can find a free machine at offer review. If the hold expires before acceptance
+and another renter takes the last machine, that earlier check is already out
+of date. A portal that issues a confirmation from the old check can promise
+a machine the depot can no longer supply. The diagram gives staff a specific sequence to check against
+booking records.
 
-- The confirmation the customer perceives sits above a column containing a hold,
-  a capacity check, a deposit authorization, and a durable write. The case's
-  existing arrangement is that the portal can look reassuring before the
-  underlying commitment is secure. In blueprint terms that is a frontstage claim
-  crossing the line of interaction before the backstage state supports it.
-- Fleet records appear as a support process under three separate customer
-  actions. Fresh reads do not establish atomic reservation capability, so the
-  same support row carries different obligations at different steps.
-- *Ready for handover* sits entirely below the line of visibility until the
-  final step, while the customer has treated confirmation as the promise since
-  acceptance. The gap between those two judgments is invisible by construction.
+A second failure can give the contractor the same experience. Even a properly
+secured reservation depends on inspection before handover. A machine might
+fail inspection after the booking was accepted. Changing the confirmation
+screen would leave that failure untouched. The two columns help locate where
+the promise first lost its support.
 
 ## Origin and what was added later
 
-Attributing the technique carefully matters, because the form most people use is
-not the form it was introduced in.
+In G. Lynn Shostack's 1984 shoeshine blueprint, the customer can watch the
+polish go on. Someone had to select and purchase it earlier. Exhibit I labels
+the boundary between those activities the *line of visibility*. The wrong
+color is a marked fail point. Cleaning the shoe and trying again takes time,
+so the error changes both the wait and the cost of the shine. A design that
+accounts only for the successful visible steps would miss the price of
+recovery.[^shostack-blueprint]
 
-| Contribution | Source | What it established |
-| --- | --- | --- |
-| Blueprinting as a service design and process-control technique | Shostack, *Designing Services That Deliver*, 1984[^shostack-blueprint] | Mapping the processes constituting the service, isolating fail points, establishing a standard execution time with acceptable deviation, and analyzing profitability |
-| Plotting the customer process against organizational structure, and the onstage/backstage distinction | Later work identified in Bitner, Ostrom, and Morgan's account of the technique's evolution, including Shostack's 1987 *Service Positioning Through Structural Change* and Kingman-Brundage's 1989 *The ABC's of Service System Blueprinting*[^bitner-blueprinting] | The visibility division the modern form is built on |
-| Physical evidence as a component, and visual, photographic, and video blueprints | Later adaptations identified in the same account[^bitner-blueprinting] | The top row of the standard five |
-| The five-component, three-line teaching form | Bitner, Ostrom & Morgan, 2008[^bitner-blueprinting] | The layout, the moments-of-truth reading, and documented organizational applications |
+Bitner, Ostrom, and Morgan describe how later authors plotted the customer's
+process against the structure of the organization, distinguished onstage from
+backstage contact work, and gave physical evidence its own place. In their
+five-component form the contractor's confirmation is an artifact, receiving
+it is an experience, and securing the equipment takes work by people the
+contractor may never meet. Each has its own place in the same column.
+Shostack's visibility boundary survives in this more detailed account of who
+takes part in a service encounter.[^bitner-blueprinting]
 
-Shostack's 1984 article does not use the term *line of visibility*. It does
-distinguish parts of the service the consumer does not see, and argues those
-invisible processes matter because changing them can alter how consumers
-perceive the service.[^shostack-blueprint] Her four design steps, and especially
-fail points and the separation of standard from acceptable execution time, are
-the original contribution and are often omitted from later
-retellings.[^shostack-blueprint]
+## Why the drawing starts with the customer
 
-Secondary accounts differ on the origin dating, variously citing Shostack's 1977
-*Breaking Free from Product Marketing* alongside the 1984
-article.[^sdt-blueprint] Treat a specific first-publication claim as unsettled
-unless the cited edition is checked.
+For Bitner, Ostrom, and Morgan, choosing a customer and a service gives the
+blueprint its boundaries. A renter who collects a machine encounters depot
+staff. A renter who takes delivery may only meet the driver. Drawing departments
+first could hide that difference. Starting with the customer's steps lets the
+team work back to the people, processes and physical evidence each encounter
+requires.[^bitner-blueprinting]
 
-## Building a blueprint
-
-Bitner, Ostrom, and Morgan describe an order that follows from customer actions
-being the foundation.[^bitner-blueprinting]
-
-1. Articulate the service process or sub-process, and specify which customer
-   segment is the focus, because organizations modify processes for different
-   segments.
-2. Delineate customer actions first. Questions such as when the service starts
-   and stops from the customer's point of view tend to generate considerable
-   discussion.
-3. Add onstage and backstage contact employee actions, then support processes.
-4. Add the links connecting customer actions to contact activity and to needed
-   support functions.
-5. Add physical evidence last.
-
-Blueprints are ideally developed by cross-functional teams, possibly including
-customers.[^bitner-blueprinting] Published facilitation guidance treats the
-workshop, not the artifact, as the primary
-mechanism.[^tisdd-methods][^psd-guide]
-
-The level of detail depends on the purpose for which the blueprint is
-created.[^bitner-blueprinting] A *concept blueprint* shows only basic steps; any
-stage can be expanded into its own sub-process diagram, and other process
-diagramming tools may be more appropriate for detailing underlying
-systems.[^bitner-blueprinting] Granularity that hides a handoff and granularity
-that buries the decision are both failures of selection.
+People with different parts in the service can challenge the drawing. An
+employee who sends confirmations may first hear from depot staff that
+inspection happens the next day. That is one reason practitioners develop
+blueprints together. A broad view can expose the handoff before anyone needs
+a more detailed diagram of the inspection itself.[^bitner-blueprinting][^tisdd-methods][^psd-guide]
 
 ## Distinguishing blueprints from neighboring representations
 
@@ -216,7 +194,7 @@ describe the blueprint as the counterpart to a customer journey map, extending
 it into organizational infrastructure.[^nng-blueprint]
 
 The boundary against a job map is the sharpest. A blueprint represents a
-specific arrangement in full detail; a job map deliberately represents
+specific service arrangement; a job map deliberately represents
 accomplishment independently of any arrangement. They answer different questions
 and neither substitutes for the other.
 
@@ -236,8 +214,8 @@ Two cautions follow when both representations are in use:
   converts into the other.
 - Neither representation's vertical position expresses importance, and neither
   determines sourcing. A blueprint says nothing about how evolved a component
-  is, so it cannot inform a build-or-buy judgment; that question belongs to
-  evolution and its evidence.
+  is, so judging a supplier also requires evidence about available offerings. The blueprint can still show
+  which handoffs the supplier would have to support.
 
 ## Applicability, limits, and further reading
 

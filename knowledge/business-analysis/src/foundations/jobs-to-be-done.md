@@ -56,7 +56,7 @@ sources:
   - id: cohn-stories
     resource: https://www.mountaingoatsoftware.com/agile/short-answers-to-your-big-questions-about-user-stories
     title: Mike Cohn — Short Answers to Your Big Questions about User Stories
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:47:57Z }
 ---
 
 # Jobs to Be Done
@@ -72,7 +72,7 @@ shape research, and connects findings to product decisions. It is intended for
 readers evaluating a customer problem or interpreting JTBD work; it does not
 prescribe one tradition as the bundle's required method.
 
-### Two meanings of a job
+## Two meanings of a job
 
 In the **progress interpretation**, a job concerns a change someone seeks in
 particular circumstances. Christensen's account connects functional, emotional,
@@ -220,6 +220,8 @@ accomplish and the chosen means. In the example, posting a message is an
 activity; a dashboard is a solution; an assignment button is a feature.
 Establishing coordination is the purpose those means might serve.
 
+## Why someone changes an arrangement
+
 ### Current arrangements and competing alternatives
 
 A progress inquiry examines the gap between the present situation and the
@@ -295,6 +297,8 @@ A trial could also expose a handoff problem that changes the hiring criteria.
 The timeline concerns adopting an arrangement. The work of coordinating each
 incident is a different process, even when evidence about that work helps
 explain the purchase.
+
+## What responders need to accomplish
 
 ### Core, related, and consumption jobs
 
@@ -411,6 +415,8 @@ examining segments, and choosing how to respond. It includes qualitative and
 quantitative work and extends beyond a canvas or prioritization score.
 [^strategyn-odi]
 
+## Where the interpretations meet
+
 ### Abstraction and the object of inquiry
 
 The difference between progress and functional-job accounts is not captured by
@@ -454,6 +460,8 @@ Shared words are especially hazardous here. A job story's “outcome,” a progr
 account's preferred future, and an ODI desired-outcome metric can inform each
 other while remaining different statements. A useful synthesis preserves those
 distinctions so readers can assess the inference being made.
+
+## What the evidence can establish
 
 ### Methods answer different questions
 
@@ -526,8 +534,8 @@ and unresolved assumptions needed to judge them.
 
 ## A second inquiry: the contractor's progress
 
-The same company presents a different inquiry outside its engineering team.
-A contractor arranging equipment before a crew starts may want confidence that
+Consider a different purchase, a contractor arranging equipment before a
+crew starts. The contractor may want confidence that
 the job can proceed without another expensive interruption. The administrator
 placing the booking, the supervisor planning the crew, and the equipment
 operator can have different functional needs. “Use the reservation portal”
@@ -539,6 +547,8 @@ findings inferred from the fictional story. Interviews about switching and
 observation of coordination work answer different questions; a better booking
 screen cannot establish either account by itself.
 
+## How a finding changes a product decision
+
 ### Opportunities and possible responses
 
 JTBD findings can change which problem receives attention and which alternatives
@@ -547,7 +557,7 @@ competitive evaluation, and concept testing. Re-Wired's buying timeline connects
 the customer's changing concerns to sales, onboarding, and continued use.
 [^strategyn-odi][^rewired-timeline]
 
-In the example, evidence of unclear coordination could justify exploring both
+Back in the incident example, evidence of unclear coordination could justify exploring both
 an explicit responsibility agreement and supporting software. Evidence of
 anxiety about transition might favor a rehearsal or gradual introduction.
 Different evidence leads to different responses; “customers have this job” is

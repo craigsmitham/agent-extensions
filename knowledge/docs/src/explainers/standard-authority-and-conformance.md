@@ -1,7 +1,7 @@
 ---
 type: Explainer
 title: Standard authority and conformance
-description: Where a standard's authority comes from and what conformance to it proves — warrant, standing, and application; criteria, evidence, and measurement; and the bounded claim a conformance statement can honestly make.
+description: Why adopting a standard, meeting one of its criteria, and making a conformance claim require different grounds, illustrated by an accessibility review.
 tags: [docs, standard, conformance, conformity, compliance, authority, warrant, consensus, criteria, evidence, measurement, assessment, judgment, explainer]
 status: stable
 sources:
@@ -14,9 +14,6 @@ sources:
   - id: ieee-standards-bylaws
     resource: https://standards.ieee.org/about/policies/bylaws/sect1-3/
     title: IEEE Standards Association — Standards Board Bylaws
-  - id: w3c-conformance
-    resource: https://www.w3.org/WAI/WCAG20/Understanding/conformance.html
-    title: W3C — Understanding conformance
   - id: w3c-testable-requirements
     resource: https://www.w3.org/TR/test-methodology/
     title: W3C — A Method for Writing Testable Conformance Requirements
@@ -26,7 +23,13 @@ sources:
   - id: odonovan-resolving
     resource: https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Resolving.pdf
     title: Oliver O'Donovan — Resolving
-generated: { by: "codex/gpt-6", at: "2026-11-22T00:10:36Z" }
+  - id: wcag22
+    resource: https://www.w3.org/TR/WCAG22/
+    title: W3C — Web Content Accessibility Guidelines 2.2, §§2.4.2 and 5
+  - id: page-titled
+    resource: https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html
+    title: W3C — Understanding Success Criterion 2.4.2, Page Titled
+generated: { by: "codex/gpt-6", at: "2026-11-22T01:49:36Z" }
 ---
 
 # Standard authority and conformance
@@ -37,147 +40,85 @@ case? What evidence shows the work satisfies its requirements? The
 first question concerns which expectations apply. The second concerns
 what the evidence warrants saying about the work.
 
-This concept covers those two questions. Read [Standard](standard.md) first for
-what a standard is, the kinds of expectation standards carry, and how standards
-documents relate to practices and reader needs.
+Suppose a library commissions a new catalogue and the agreement calls for
+its search and borrowing pages to conform to the Web Content Accessibility
+Guidelines (WCAG) 2.2 at Level AA. A vendor reports that every page has a
+title. A reader tells the library that with two catalogue tabs open, they
+cannot tell which one contains their loan renewals. What would settle
+the disagreement?
 
-## From goods to judgment
+## How a standard acquires standing
 
-A standard occupies one part of a larger practical movement:
+W3C publishes WCAG. In this example the library and vendor gave one
+version and level of that standard force for the project by naming it in
+their agreement. Another library could adopt the same criteria in an
+internal policy. A public authority can also incorporate a standard into
+a regulation. The body that develops a standard need not be the body that
+adopts, assesses, certifies, or enforces it.[^wcag22][^iso-definitions]
 
-```text
-recognized goods and realities
-             │
-             ├── principle ── directs judgment toward the good
-             │
-             └── standard ─── establishes a common basis of expectation
-                                      │
-                         criteria + evidence + interpretation
-                                      │
-                               situated judgment
-                                      │
-                    decision, action, or conformance claim
-```
-
-This is a conceptual relation, not a mandatory production sequence. A standard
-may embody several principles, include rules, define measurements, or be
-adopted by a policy. The distinctions still matter:
-
-- The **good** is what deserves pursuit, protection, or truthful recognition.
-- A **principle** gives durable direction to judgment in service of a good.
-- A **standard** supplies a stable basis for judging or coordinating a field.
-- **Criteria** identify the features or conditions relevant to that standard.
-- **Evidence and measures** disclose how the subject bears upon the criteria.
-- A **judgment** determines what the standard and evidence mean in this case.
-- A **decision** determines what action or consequence follows.
-
-Skipping these distinctions encourages metric substitution: what can be
-measured easily takes the place of the good that made measurement worthwhile.
-
-## Reality, authority, and judgment
-
-O'Donovan asks how recognizing something good gives a person reason to
-act in a particular situation.[^odonovan-waking][^odonovan-resolving]
-Applied here, that question helps explain why people can agree that a
-standard is in force and still disagree about how well it serves its purpose.
-
-This exposes three distinguishable questions:
-
-1. **Warrant** — is the standard truthful and fitting to the goods and reality
-   it claims to order?
-2. **Standing** — who is entitled to issue, recognize, adopt, interpret, assess,
-   or enforce it?
-3. **Application** — does it apply to this subject and situation, and what does
-   responsible conformity require here?
-
-Practical judgment joins all three. A standard disciplines judgment by giving
-it a public basis, but does not perform the judgment automatically. Conversely,
-discretion is not permission to ignore the standard; a departure needs reasons
-answerable to the same or weightier goods.
-
-## Sources and degrees of authority
-
-Standards acquire different kinds of standing:
-
-| Source or adoption | Characteristic force |
-| --- | --- |
-| **Exemplar or inherited practice** | Recognized through trained judgment and tradition; may remain partly tacit |
-| **De facto convention** | Coordinates because a field widely uses it, without formal approval |
-| **Consensus standard** | Approved through a recognized process that represents materially affected interests |
-| **Organizational standard** | Adopted as the common basis within a defined authority and membership |
-| **Contractual standard** | Binding because parties incorporated it into an agreement |
-| **Regulatory adoption** | Legally required because a competent authority incorporated or referenced it |
-
-The body that develops a standard need not be the body that adopts, assesses,
-certifies, or enforces it. Keeping these authorities distinct prevents a
-publisher's reputation from silently implying legal obligation or independent
-certification.
-
-IEEE’s board looks for substantial agreement among the interests directly
+A convention can coordinate work before any organization adopts it. Two
+librarians may use the same filing order simply because everyone who
+shelves the collection learned it that way. Publication by a consensus
+body has a different history. IEEE’s
+board looks for substantial agreement among the interests directly
 affected and an effort to resolve objections. ISO describes how a committee
 judges agreement and handles sustained opposition. Either process can reach
 consensus while some participants still disagree. For a different issuing
-body, consult its own approval rules.[^ieee-standards-bylaws][^iso-directives]
+body, its own approval rules govern.[^ieee-standards-bylaws][^iso-directives]
 
-## Criteria, evidence, and measurement
+Why choose the criterion at all? Oliver O’Donovan asks how recognizing a
+good gives a person reason to act in a particular situation.[^odonovan-waking][^odonovan-resolving]
+Applied to the library, his question brings out three aspects of authority.
+The benefit to people trying to find their place gives the title requirement
+a **warrant**. The agreement gives it **standing** here. Its **application**
+requires a judgment about what titles serve that purpose on the pages in
+question. People can agree on who adopted a standard and disagree about
+how well it serves its readers.
 
-A standard becomes assessable by connecting its normative claim to evidence:
+## What would resolve the title question?
 
-| Element | Question |
-| --- | --- |
-| **Subject or class** | What kind of object, process, person, or claim may be assessed? |
-| **Scope and conditions** | Where, when, and under which version does the standard apply? |
-| **Requirement or expectation** | What must, should, or may be true? |
-| **Criterion** | Which property or condition bears on that expectation? |
-| **Evidence** | What observation, record, testimony, demonstration, or result supports judgment? |
-| **Measurement or test method** | How is evidence produced and uncertainty handled? |
-| **Decision rule** | How does evidence support a conformance level, finding, or other conclusion? |
-| **Assessor** | Who is competent and authorized to make or verify the judgment? |
+WCAG 2.2 criterion 2.4.2 calls for a title that describes the topic or
+purpose of a page. The vendor counted titles. The count would be the same
+if the search results and renewals pages were both titled “Library”.
+Inspecting each title alongside what its page lets someone do gives the
+reviewer evidence the count could never supply. “Search the catalogue”
+and “Renew borrowed books” would give the reader a way to choose the
+right tab. W3C explains this benefit in guidance accompanying the criterion.
+Other titles could serve it just as well.[^wcag22][^page-titled]
 
-Not every valuable standard can be reduced to numerical metrics or automated
-tests. Testability is especially important when a technical specification
-permits an objective conformance claim: the subject, prerequisites, required
-behavior, normative strength, and relevant terms must be clear enough to
-evaluate.[^w3c-testable-requirements] Human judgment remains legitimate when the standard names what
-competence and evidence it requires rather than disguising discretion as
-mechanical measurement.
+A *criterion* tells the reviewer what feature matters. A *test* produces
+evidence about it. Counting nonempty titles measures one necessary
+condition in the library's pages. The count became misleading when it
+stood in for the quality a reader cared about. W3C’s note on writing
+testable requirements explains why naming the subject, the applicable
+conditions, and the required behavior matters to a test designer. Here
+part of the evaluation calls for someone to read and judge a title in
+context.[^w3c-testable-requirements][^page-titled]
 
-## Conformance and its limits
+The reviewer has supplied a finding about the two pages. Acceptance of
+the catalogue is another decision. In the library's agreement the vendor
+might correct a finding, an independent reviewer might check the repair,
+and the library might decide whether to accept the delivery. The strength
+of the evidence and the authority to act on it can belong to different
+people.
 
-**Conformance** is satisfaction of the requirements a standard specifies for
-the relevant subject and version. A credible conformance claim identifies:
+## How far the finding travels
 
-- the standard and exact version;
-- the subject and applicable profile or level;
-- which provisions are normative;
-- allowed options, extensions, exceptions, or exclusions;
-- the evidence and method of assessment;
-- the assessor and degree of independence; and
-- any limits on what the claim establishes.
+**Conformance** means satisfying the requirements a standard specifies
+for the relevant subject and version. In WCAG 2.2 the title criterion
+belongs to Level A. It applies at Level AA too. Correcting the two
+titles can close this particular finding. Establishing Level AA requires
+evaluating all applicable Level A and AA success criteria and the other
+conformance requirements, including coverage of complete pages and any
+complete processes they belong to. A claim identifies the date, version,
+level, pages covered and technologies relied on.[^wcag22]
 
-Vocabulary varies by standards community. ISO commonly speaks of
-**conformity** and conformity assessment; W3C commonly speaks of
-**conformance**. Use the governing standard's term. If an organization is
-obliged to follow it, identify the policy, agreement, or regulation that
-creates that obligation.[^iso-definitions]
-
-Conformance is intentionally bounded. A conforming system can still be hard to
-use; a conforming process can still pursue a poor end; a conforming
-professional can still exercise bad judgment in an untested situation. W3C's
-accessibility guidance, for example, distinguishes satisfying testable success
-criteria from the wider question of usability.[^w3c-conformance]
-
-Standards should make their promise neither weaker nor stronger than their
-requirements. When excellence matters beyond conformance, preserve space for
-examples, qualitative review, outcomes, and practitioner judgment.
-
-## Related
-
-- [Standard](standard.md)
-- [Practice](practice.md)
-- [Principle document](../patterns/principle.md)
-- [Documentation quality](documentation-quality.md)
-- [Documentation audits](documentation-audits.md)
+The claim has a boundary even after all that work. W3C acknowledges that
+the guidelines leave some user needs unaddressed. A reader's difficulty
+in a borrowing session deserves investigation even if the pages satisfy
+the requirements. The library can ask both whether the agreed criteria
+were met and what else readers need to borrow a book successfully. Each
+question calls for its own evidence.[^wcag22]
 
 [^odonovan-waking]: Oliver O’Donovan, [Waking](https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Waking.pdf).
 [^odonovan-resolving]: Oliver O’Donovan, [Resolving](https://newcollege.unsw.edu.au/downloads/File/pdf/Lectures_Summaries/Resolving.pdf).
@@ -185,4 +126,5 @@ examples, qualitative review, outcomes, and practitioner judgment.
 [^iso-directives]: ISO/IEC Directives, [Part 1, §2.5.7](https://www.iso.org/sites/directives/current/consolidated/).
 [^iso-definitions]: ISO, [Useful definitions](https://policy.iso.org/resources.html).
 [^w3c-testable-requirements]: W3C Working Group Note, [A Method for Writing Testable Conformance Requirements](https://www.w3.org/TR/test-methodology/).
-[^w3c-conformance]: W3C, [Understanding Conformance to WCAG 2.0](https://www.w3.org/WAI/WCAG20/Understanding/conformance.html).
+[^wcag22]: [W3C — Web Content Accessibility Guidelines 2.2, §§2.4.2 and 5](https://www.w3.org/TR/WCAG22/).
+[^page-titled]: [W3C — Understanding Success Criterion 2.4.2, Page Titled](https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html).

@@ -1,5 +1,9 @@
 # Log
 
+## 2026-11-22
+
+- Reworked the incident explainer around a shift handoff and the evidence that supports closure.
+
 ## 2026-11-11
 
 - **Organization:** Established `foundations/` for discipline explainers; moved existing explainers and repaired discovery routes and references.

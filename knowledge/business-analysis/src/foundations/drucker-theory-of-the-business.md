@@ -13,7 +13,7 @@ sources:
     title: Drucker Institute — Drucker on Questioning Assumptions
 generated:
   by: codex/gpt-6
-  at: 2026-09-09T15:55:58Z
+  at: 2026-11-22T01:47:57Z
 ---
 
 # Drucker's theory of the business
@@ -141,8 +141,6 @@ practice, rather than a lifecycle prescribed by Drucker.
 - [Drucker's four disciplines of organizational renewal](drucker-organizational-renewal.md)
   explains the continuing responsibilities for stopping, improving, extending,
   and creating activities.
-  connects these concepts to participation and investment questions. Practical
-  decision guides in [Business analysis](../index.md) remain unwritten.
 
 [^theory]: [Peter F. Drucker, The Theory of the Business](https://wuecampus.uni-wuerzburg.de/moodle/pluginfile.php/2702954/mod_folder/content/0/Drucker%20%281994%29%20The%20Theory%20of%20the%20Business%2C%20S.%2095-104.pdf?forcedownload=1), Harvard Business Review, September–October 1994, pp. 95–104.
 [^assumptions]: [Drucker Institute, Drucker on Questioning Assumptions](https://drucker.institute/wp-content/uploads/2018/08/Reading_Drucker-On-Challenging-Assumptions.pdf), adapted from Management: Tasks, Responsibilities, Practices and the 1994 article.

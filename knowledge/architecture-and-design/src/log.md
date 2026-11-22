@@ -1,5 +1,9 @@
 # Log
 
+## 2026-11-22
+
+- Restored the customer decision behind the rental examples in the Brooks, Buxton, and DDD explainers and updated source links.
+
 ## 2026-11-11
 
 - **Retirement:** Removed reading routes to the retired engineering-environment and software-construction packages.

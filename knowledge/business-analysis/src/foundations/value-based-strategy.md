@@ -29,7 +29,7 @@ sources:
   - id: cagan
     resource: cagan-product-strategy.md
     title: Marty Cagan's product strategy
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:47:57Z }
 ---
 
 # Value-based strategy: Oberholzer-Gee's approach to creating and sharing value
@@ -304,12 +304,6 @@ Value* develops value drivers and comparative maps. The HBS Online articles
 supply worked explanations of the stick, WTP/WTS, and complements. Their
 occasional pricing-oriented framing is narrower than the strategy discussion
 developed here.
-
-## Follow the economics into engineering choices
-
-The dollar amounts above are independent numerical exhibits under their stated
-assumptions. They are not Northbank financial results or inputs to the project
-budget and KPI examples elsewhere in the case.
 
 ## Continue exploring
 

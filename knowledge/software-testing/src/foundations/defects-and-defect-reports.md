@@ -1,9 +1,9 @@
 ---
 type: Explanation
 title: Defects and Defect Reports
-description: Explains how observations, failures, Defects, Defect Reports, investigation, correction, verification, and closure remain distinct.
+description: Why a reported symptom, an established defect, a delivered correction, and a closed report can each have a different evidence basis.
 tags: [defect, defect-report, bug, failure, observation, expectation, diagnosis, correction, verification, software-testing]
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:43Z }
 sources:
 - id: prior-recording-defect-reports
   resource: https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/defects/recording-defect-reports.md
@@ -18,75 +18,62 @@ sources:
 
 # Defects and Defect Reports
 
+Suppose two customers report that they received the same receipt twice.
+A tester can record both observations immediately. Did the mailer send
+two messages, did the account contain two addresses leading to the same
+inbox, or did the system charge the customer twice? A Defect Report keeps
+the evidence available while those explanations are still open.
+
 An **observation** records something perceived under stated conditions. A
 **failure** is an observed inability to perform as required or intended. A
 **Defect** is a deficiency in a system or work product relative to an
-applicable expectation or intended use. A **Defect Report** is the durable work
-item that preserves evidence suggesting one or more Defects may exist.
+applicable expectation or intended use. The **Defect Report** is the work
+item that carries the evidence and its disposition. A static finding may
+establish a Defect without a witnessed runtime failure. One failure may
+result from several Defects, and one Defect may produce several
+occurrences.[^prior-recording-defect-reports]
 
-These concepts do not imply one another automatically. An anomaly may have a
-valid explanation. A static finding may establish a Defect without a witnessed
-runtime failure. One failure may result from several Defects, and one Defect may
-produce several occurrences.
+## When the symptom becomes a discrepancy
 
-## Expectation and discrepancy
+In the first report, suppose the documented promise is one receipt per
+order for each delivery address. The order records one address, and the
+outgoing mail log shows two messages to that address for the same order.
+There is now evidence of a discrepancy. Nothing in those records shows
+how many times the customer's account was charged.
 
-A useful report identifies the relevant expectation or intended use and the
-observed discrepancy. The expectation may come from a specification, contract,
-decision, policy, documented behavior, supported use, or other recognized
-source. If it is uncertain, record the candidate expectation and its authority
-rather than manufacturing a definitive requirement.
+The second report came from an account configured with two addresses.
+One receipt went to each. Those facts fit the documented rule, even
+though the forwarded receipts looked identical to the customer. A tester
+who merged the reports on the strength of their titles would lose the
+distinction that explains the different outcomes.
 
-## Report maturity
+Triage records which expectation applies, the version, configuration,
+inputs and impact, what evidence supports the discrepancy, and which
+questions remain open. An uncertain expectation can be identified as
+such. Reproduction steps help when available. A log, static finding,
+or measurement can also discriminate between explanations. The
+[Defect Report template](../defects/defect-report-template.md) gives
+this evidence a recoverable home. Sensitive evidence belongs in a
+governed channel. Severity, priority, and authorization to act follow
+the applicable local policy.[^prior-recording-defect-reports][^prior-triaging-defect-reports]
 
-The report may mature from received concern, through supported discrepancy and
-investigation, to an authorized disposition. That maturity is separate from
-priority, assignment, correction, verification, and closure. A tracker label
-such as `bug` cannot prove diagnosis.
+## What changes when a fix ships
 
-## Correction and closure
+Suppose investigation of the first report shows that retrying a completed
+delivery sends a second message. A Change authorized to correct that
+defect can be classified as a Bugfix. The report preserves the original
+discrepancy, including the affected version and retry conditions. The
+Change records the correction's scope, regression risks, acceptance
+conditions, delivery, and verification.[^prior-linking-defects-to-corrective-changes]
 
-Investigation reduces uncertainty. Correction changes a defective work product
-or compensates for an unacceptable effect. Verification gathers bounded
-evidence about stated conditions. Closure records an authorized lifecycle
-decision. A report can be closed as duplicate, not reproducible under stated
-conditions, accepted risk, out of scope, or remediated; those dispositions have
-different meanings and evidence needs.
+Verifying that a retry sends no second message on the corrected version
+provides evidence for disposing of the first report. The second report
+had a different cause and could already have been closed under local policy
+as expected behavior. Likewise, a report closed as a duplicate points
+to the report that carries the investigation. The date of that closure
+tells a reader where the evidence went. It says nothing about when a fix
+became available.[^prior-triaging-defect-reports][^prior-linking-defects-to-corrective-changes]
 
-## Evidence and disposition
-
-One report preserves one independently managed discrepancy. Related occurrences
-retain separate identities when their impact, evidence, communication, or
-closure requires it. A record includes the applicable expectation, observed
-result, revision and environment, inputs and trigger, impact, and uncertainty;
-the [Defect Report template](../defects/defect-report-template.md) supplies the fallback
-presentation.
-
-Reproduction steps are valuable when established and safe, but not universally
-required. Static findings, logs, measurements, screenshots, or unavailable
-material can be relevant evidence. Preserve provenance and limitations, including
-workaround risks. Sensitive evidence belongs in a governed channel with a safe
-public synopsis. Severity and priority remain separately authorized metadata.
-
-Triage establishes an attributable classification or explicit unknown,
-relationship decisions, and next route. It does not automatically diagnose
-root cause, set priority, authorize correction, or close a report. Applicability
-depends on the actual version, environment, configuration, and supported use;
-title similarity is insufficient evidence for a duplicate decision.
-
-## Corrective Changes
-
-A Change is classified as Bugfix only when evidence establishes a Defect and
-its authorized purpose is correction or acceptable compensation. Investigation,
-monitoring, risk acceptance, and deferment alone do not establish that purpose.
-
-The report remains an independently recoverable evidence record. The separate
-Change links the Defects or reports it remediates and states the corrected or
-compensated condition, included and excluded cases, constraints, regression
-risks, and acceptance conditions. The applicable expectation remains linked to
-its authority. Mixed work shares a Change only when outcome, authority,
-delivery, and verification form a coherent boundary.
-
-The Change records delivery and verification. Each report retains its own
-disposition and closure policy: a delivered Bugfix does not automatically verify
-or close every report, and a closed report does not prove delivery.
+[^prior-recording-defect-reports]: [Recording Defect Reports](https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/defects/recording-defect-reports.md).
+[^prior-triaging-defect-reports]: [Triaging Defect Reports](https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/defects/triaging-defect-reports.md).
+[^prior-linking-defects-to-corrective-changes]: [Linking Defects to corrective Changes](https://github.com/craigsmitham/agent-extensions/blob/333fc2fe7f67b0520f456efdb107e0730d04e069/knowledge/software-testing/src/defects/linking-defects-to-corrective-changes.md).

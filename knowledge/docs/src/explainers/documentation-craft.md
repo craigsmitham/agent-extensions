@@ -1,7 +1,7 @@
 ---
 type: Explainer
 title: Documentation craft
-description: What effective documentation craft is — matching form to reader need, keeping each job recognizable, and respecting host conventions over portable layout rules.
+description: Why one subject can call for different documents, how a reader’s purpose shapes each, and how the forms can work together.
 tags:
 - docs
 - craft
@@ -9,7 +9,7 @@ tags:
 - diataxis
 - explainer
 status: stable
-generated: { by: codex/gpt-6, at: 2026-11-22T00:10:36Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:48:07Z }
 sources:
 - id: diataxis-start
   resource: https://diataxis.fr/start-here/
@@ -34,26 +34,17 @@ follow repeats needs a passage to sing and a way to tell where to come
 back in. Both readers can open the same site. Their questions call for
 different documents.
 
-Choose documentation by what the reader needs to do: learn, complete a task,
-look up facts, or understand a subject. Diátaxis supplies these four reader
-needs in its account of skilled practice.[^diataxis-foundations] The
-[Documentation pattern collection](../patterns/index.md) describes
-reusable document designs for these and more specific situations. Use a pattern to judge how well a design fits the
-situation. For example, a runbook gives an operator a bounded, repeatable
-procedure. Someone writing that runbook needs to work through the decisions
-that make the directions usable during an incident. The
-[authoring guides](../guides/index.md) serve that second reader. A third
-reader might want to understand why an operator reaches for a runbook in
-the first place. The [explainers](index.md) take up questions of that kind.
+A software team documenting a repeatable operation such as restoring a
+backup faces a similar choice. To decide whether a runbook would help
+operators, the author can consult a [pattern](../patterns/runbook.md)
+that weighs the design and its costs. To write the runbook, they need
+an [authoring guide](../guides/writing-a-runbook.md). To understand why
+operators can follow different branches of the same procedure, they can
+turn to an [explainer](runbook.md). Someone searching for “runbook”
+could plausibly want any of the three.
 
 “Explainer” is another name for an explanation document. “Guide” can be an
-umbrella term; use **how-to guide** when specifically referring to directions
-for accomplishing a task. These names do not prescribe host metadata or folders.
-
-For iterative remediation of an existing corpus, see [Documentation workflow](documentation-workflow.md). For
-functional vs deep quality, see [Documentation quality](documentation-quality.md).
-For choosing paths and names readers can find, see [Documentation organization and
-discovery](documentation-organization-and-discovery.md).
+umbrella term. A *how-to guide* gives directions for accomplishing a task.
 
 ## Why four reader needs
 
@@ -70,84 +61,32 @@ The reader's need can change during a visit.[^diataxis-foundations][^diataxis-ma
 | Information | Reference | Work + cognition | Facts for lookup while working |
 | Understanding | Explanation | Study + cognition | Context and reflection |
 
-Crossing or blurring those boundaries is at the root of many documentation
-failures: wrong voice, wrong structure, and content that cannot meet either
-job well.
+Consider what happens if the choir puts the definition of a repeat sign
+halfway through the singing lesson. The learner can use the definition
+just where the sign appears. The singer who reaches rehearsal with five
+minutes to spare must now work through a lesson to find a fact. If the
+definition has an address of its own, the teacher can still link to it,
+and the singer can go straight there. Whether those two pages live under
+Rehearsal or under separate headings for lessons and reference depends
+on how people find them. The distinction between learning and looking up
+survives either arrangement.
 
-## Choose a form by need
+## What the reader can decide before opening a page
 
-| Reader need | Documentation pattern |
-| --- | --- |
-| Learn by doing | [Tutorial](../patterns/tutorial.md) |
-| Achieve a concrete goal | [How-to guide](../patterns/how-to.md) |
-| Look up facts or interfaces | [Reference](../patterns/reference.md) |
-| Understand context and reasoning | [Explanation](../patterns/explanation.md) |
+A heading such as “Repeats” identifies the subject of both pages.
+“Following first and second endings” tells a singer which skill the
+lesson offers. A how-to for a rehearsal leader preparing individually
+marked parts would need a different cue. Saying who wants the result and
+under what circumstances helps readers choose it from a search result.
+The materials they need once they begin belong with the directions.
 
-If a draft tries to do two of these at once, prefer splitting or making one
-job primary and linking the rest.
-
-## Cycle of interaction
-
-Users do not always walk the map in order, but craft mastery often moves
-through phases:
-
-1. **Learning** — dive in under guidance (tutorial)
-2. **Goals** — put skill to work (how-to)
-3. **Information** — consult facts the head does not hold (reference)
-4. **Understanding** — reflect away from the work (explanation)
-
-Then back again for a deeper layer or a new skill. Documentation should
-support that cycle without forcing a single linear site tour.
-
-## Quality principles
-
-Practical checks for authors. The two-layer model (functional vs deep quality)
-is in [Documentation quality](documentation-quality.md).
-
-1. **One primary reader job per ordinary document.** When a document
-   needs several coordinated parts, keep each job recognizable so readers
-   know whether they are learning, doing, looking up, or understanding.
-2. **Match form to job.** Steps belong in tutorials and how-tos; exhaustive
-   inventories in reference; discussion and rationale in explanation.
-3. **Link rather than restate.** When another document owns a procedure or
-   fact set, point to it; do not maintain a second full copy.
-4. **Prefer clarity of outcome.** State what the document is for near the
-   top so people and tools can skip the wrong page quickly.
-5. **Make action documents selectable before opening.** In a description or
-   other context-free preview, pair the supported outcome with the observable
-   situation, event, symptom, or reader intent that makes the document
-   relevant. Use a literal event only when work is event-driven; a
-   voluntarily selected guide normally states reader intent. Keep selection
-   conditions distinct from the access, knowledge, or state preconditions
-   required after selection.
-6. **Check what can change.** Revisit a page when the behavior, policy,
-   terminology, or other evidence its readers depend on changes.
-7. **Respect the host.** Paths, indexes, metadata fields, and naming are
-   project choices. Portable craft does not mandate a folder tree or a
-   single frontmatter profile.
-8. **Test the route from the reader’s question.** A topic index can lead
-   straight to a definition yet bury the lesson a newcomer needs. Follow
-   each route from the place that reader is likely to enter.
-
-Identify the authority for the claim.[^prior-documentation-craft] A recording
-can establish what happened at a rehearsal, an adopted policy settles the
-choir’s attendance rule, and a reproducible example can establish what a
-software command does. Label proposals and illustrative cases so readers
-know what they can rely on.
-
-## Neighbour bleed (where reader-need forms collapse)
-
-Each form has affinity with its neighbours; blur is common:
-
-| Shared quality | Neighbours that bleed |
-| --- | --- |
-| Guide action | tutorial ↔ how-to |
-| Serve application of skill | reference ↔ how-to |
-| Propositional knowledge | reference ↔ explanation |
-| Serve acquisition of skill | tutorial ↔ explanation |
-
-Worst case: tutorials and how-tos fully collapse, so neither study nor work
-is served. Return to the reader’s immediate purpose when the form of a draft starts to slip.
+The choice of form also changes what a writer needs to check. Can a singer
+find the sign in the score from its description? Can a learner hear where
+to come back in after following the exercise? Both depend on the score
+being accurate. Each calls for a different demonstration of usefulness.
+Other claims need other evidence. A recording can establish what happened
+at a rehearsal, an adopted policy settles the choir’s attendance rule, and
+a reproducible example can establish what a software command does.[^prior-documentation-craft]
 
 ## Other named documents
 
@@ -195,21 +134,10 @@ their relationships when another reader need emerges. Pattern descriptions
 help authors make those choices; they do not require every resulting document
 to reproduce the description's headings.
 
-The docs bundle maintainer owns this collection with the rest of the bundle.
-Apply the [collection maintenance guidance](../guides/curating-a-pattern-collection.md)
-to proposed changes, and record revisions and retirements in the bundle log.
-
-## What this bundle does not define
-
-- Where files must live in a repository
-- Required metadata keys or validators
-- Always-on agent instruction files (harness / instruction guidance)
-- Product marketing or user-facing site IA unless the host maps those
-  surfaces onto these four reader-need forms
-
-The bundle does offer portable criteria for choosing among host-compatible
-organizations. It does not prescribe the resulting paths; see [Documentation
-organization and discovery](documentation-organization-and-discovery.md).
+The docs bundle maintainer owns this collection. The
+[collection maintenance guide](../guides/curating-a-pattern-collection.md)
+covers proposed changes. Revisions and retirements belong in the
+[bundle log](../log.md).
 
 Diátaxis encourages authors to start with a change they can use today.[^diataxis-start]
 For an example of a collection growing from recurring reader questions,

@@ -53,7 +53,7 @@ sources:
   - id: whirlpool
     resource: https://www.domainlanguage.com/ddd/whirlpool/
     title: Eric Evans — Whirlpool Process of Model Exploration
-generated: { by: codex/gpt-6, at: 2026-11-11T20:34:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:02Z }
 ---
 
 # Domain-driven design
@@ -117,6 +117,11 @@ These are scales of reasoning, not consecutive project phases. A transactional
 problem inside an aggregate can reveal that the larger model needs to change.
 
 ### Running example: equipment rental
+
+Imagine Northbank, a rental company that wins business by finding an
+acceptable substitute when the promised machine breaks down. To keep that
+promise it needs a model of what the customer agreed to and a way to tell
+which machines the depot can supply.
 
 The word **available** already raises a modeling question. Booking staff may
 mean “can be promised for next week”; depot staff may mean “has passed its
@@ -475,10 +480,17 @@ context or a separately deployed service.[^evans-reference]
 
 ### Follow the model into an existing codebase
 
-In Northbank's later allocation episode, `auth/staff-actions.ts` contains
-substitution decisions and `booking-service.ts` writes machine IDs directly.
-The problem is owned meaning: identity facts cannot decide whether a candidate
-preserves the customer's terms, and assigning an ID cannot secure capacity.
+Suppose Northbank's staff permissions code decides which machine can replace
+a failed one, and the booking service records the new machine's ID. Permission
+answers whether the employee may make the change. It tells us nothing about
+whether the machine fits through the customer's loading door. And a booking
+can name a suitable machine even while a different customer holds it.
+
+A substitution policy can represent the promised capabilities, and an asset
+schedule can check for a conflicting hold. The booking service must then
+coordinate those decisions before it presents a replacement as confirmed.
+Following one substitution through the code reveals which rules the design
+needs to express.
 
 ### Isolating domain responsibilities
 

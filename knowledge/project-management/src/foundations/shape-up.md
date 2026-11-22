@@ -59,7 +59,7 @@ sources:
   - id: cagan
     resource: https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/foundations/cagan-product-strategy.md
     title: Marty Cagan's product strategy
-generated: { by: codex/gpt-6, at: 2026-11-11T20:34:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:02Z }
 ---
 
 # Shape Up: Ryan Singer's approach to shaping, betting, and building
@@ -111,9 +111,12 @@ of roughly one or two weeks grouped within a cycle. Appetite is therefore a
 choice about investment, not a claim that every feature takes six weeks.
 Narrowing the problem may reveal a much smaller intervention.[^boundaries]
 
-In the example, the immediate problem is uncertainty before dispatch. Whether
-confirmation also increases repeat rentals remains a hypothesis requiring
-separate evidence.
+Suppose contractors ask a rental service for better reservation management.
+They send crews to sites before they know whether a depot can supply the
+equipment. A designer and two engineers have one six-week cycle to improve
+that decision. Making the depot's answer visible could fit. Replacing the
+inventory system is a separate proposal whose cost the team has yet to
+assess. Whether better confirmation leads to repeat rentals remains open.
 
 ## Shaping makes an idea concrete enough to bet on
 
@@ -303,13 +306,6 @@ room for team judgment, but the decision boundary differs. Combining them
 requires saying who owns solution discovery and how the people who will build
 participate in shaping; changing the label on a feature assignment does not
 establish problem ownership.
-
-## Keep the case's investments distinct
-
-Alleman's six-week budgeted pilot is an alternative management illustration
-around the same problem, not a restatement of this appetite. The later two-depot
-KPI exhibit is also a separate observation scenario. Preserving these boundaries
-lets completion, capability, and outcome remain different claims.
 
 ## Applicability, limits, and further reading
 

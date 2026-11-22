@@ -38,7 +38,7 @@ sources:
   - id: book
     resource: https://learnwardleymapping.com/book/
     title: Wardley Maps — ebook and chapter directory, Learn Wardley Mapping
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:07Z }
 ---
 
 # Wardley mapping
@@ -48,15 +48,15 @@ components from novel and uncertain to widespread and standardized. It makes
 choices about investment, sourcing, and organization discussable on a shared
 model of the landscape.[^map][^cycle]
 
-The fictional rental example and product-engineering connections are this
-bundle's synthesis. The concepts and tables come from Simon Wardley's *Wardley
-Maps*, in the December 2020 EPUB. Explaining the approach does not prescribe
-adopting its full doctrine or organizational model.
+The rental example and its engineering implications are illustrative. The
+concepts come from the December 2020 edition of Simon Wardley's *Wardley Maps*.
+His [terms and comparisons](#wardleys-terms-and-comparisons) follow the example.
 
 ## Purpose, landscape, and strategic choice
 
-A rental company aiming to keep projects moving could improve substitution,
-expand its fleet, or connect partner depots. Purpose alone does not choose
+Northbank, a fictional equipment-rental company, wants to keep construction
+crews working when a machine breaks down. It could make substitutes easier
+to find, expand its fleet, or connect partner depots. Purpose alone does not choose
 between them. Wardley distinguishes why a purpose matters from why one move
 makes sense; situational awareness informs the latter.[^cycle]
 
@@ -66,32 +66,6 @@ The cycle connects **purpose** (why act), **landscape** (the situation),
 **climate** (forces changing it), **doctrine** (generally useful principles),
 and **leadership** (judgment and action). Consequences and new knowledge can
 change the landscape and purpose, renewing the cycle.[^cycle][^gameplay]
-
-### Key terms for Wardley mapping
-
-These are Wardley's definitions across environment, map grammar, and action.
-*Domain* here names an evolutionary region, not a DDD domain.[^practice]
-
-| Term | Meaning in Wardley mapping |
-| --- | --- |
-| Context | Our purpose and the landscape |
-| Environment | The context and how it is changing |
-| Situational awareness | Our level of understanding of the environment |
-| Actual | The map in use |
-| Domain | Uncharted vs Transitional vs Industrialised |
-| Stage | Of evolution e.g. Genesis, Custom, Product, Commodity |
-| Type | Activity, Practice, Data or Knowledge |
-| Component | A single entity in a map |
-| Anchor | The user need |
-| Position | Position of a component relative to the anchor in a chain of needs |
-| Need | Something a higher level system requires |
-| Capability | High level needs you provide to others |
-| Movement | How evolved a component is |
-| Interface | Connection between components |
-| Flow | Transfer of money, risk & information between components |
-| Climate | Rules of the game, patterns that are applied across contexts |
-| Doctrine | Approaches which can be applied regardless of context |
-| Strategy | A context specific approach |
 
 ## Reading a Wardley map
 
@@ -112,8 +86,13 @@ information flow alone does not establish evolution.[^map][^flow]
 
 ![Rental coordination map: fulfillment depends on substitution and allocation plus dispatch scheduling. Both use fleet records, which depend on compute. An automatic matching experiment could support fulfillment and depends on allocation.](../assets/wardley-rental-map.svg)
 
-Solid lines are dependencies; the dashed branch is experimental. The user and
-need anchor the map without an evolution score. Equipment, inspections,
+A contractor needs a replacement when a booked machine fails. Following the
+solid lines down from fulfillment explains why a dispatch schedule alone is
+insufficient. Staff also need to know which machines can substitute and which
+are free to promise. The dashed branch asks whether software could match a
+replacement automatically. It sits farther left than the fleet records it
+would consume because, in this example, staff know how to keep inventory
+but have yet to learn which exceptions a matcher could handle. Equipment, inspections,
 transport, and people are omitted; an analysis of physical capacity or
 whole-business fulfillment must include them.
 
@@ -175,44 +154,6 @@ although an organization may influence their rate or exploit their consequences.
 Wardley's central pattern is evolution through supply and demand competition,
 conditional on competitive pressure and survival.[^climate]
 
-### Climatic patterns
-
-Wardley groups economic patterns by their main influence. These are claims to
-investigate and refine, not independently verified laws.[^climate]
-
-| Category | Pattern |
-| --- | --- |
-| Components | Everything evolves through supply and demand competition |
-| Components | Rates of evolution can vary by ecosystem (e.g. consumer vs industrial) |
-| Components | Characteristics change as components evolve (Salaman & Storey) |
-| Components | No choice over evolution (Red Queen) |
-| Components | No single method fits all (e.g. in development or purchasing) |
-| Components | Components can co-evolve (e.g. practice with activity) |
-| Components | Evolution consists of multiple waves of diffusion with many chasms. |
-| Financial | Higher order systems create new sources of value |
-| Financial | Efficiency does not mean a reduced spend (Jevon's Paradox) |
-| Financial | Capital flows to new areas of value |
-| Financial | Creative Destruction (Joseph Schumpeter) |
-| Financial | Future value is inversely proportional to the certainty we have over it. |
-| Financial | Evolution to higher order systems results in increasing local order and energy consumption |
-| Speed | Efficiency enables innovation |
-| Speed | Evolution of communication mechanisms can increase the speed of evolution overall and the diffusion of a single example of change |
-| Speed | Increased stability of lower order systems increases agility & speed of re-combination |
-| Speed | Change is not always linear (discontinuous & exponential change exists) |
-| Speed | Shifts from product to utility tend to demonstrate a punctuated equilibrium |
-| Inertia | Success breeds inertia |
-| Inertia | Inertia can kill an organisation |
-| Inertia | Inertia increases the more successful the past model is |
-| Competitors | Competitors actions will change the game |
-| Competitors | Most competitors have poor situational awareness |
-| Prediction | Not everything is random (p[what] vs p[when]) |
-| Prediction | Economy has cycles (peace, war and wonder) |
-| Prediction | Two different forms of disruption (predictable vs non-predictable) |
-| Prediction | A “war” (point of industrialisation) causes organisations to evolve |
-| Prediction | You cannot measure evolution over time or adoption, you need to embrace uncertainty. |
-| Prediction | Evolution consists of multiple diffusion curves |
-| Prediction | The less evolved something is then the more uncertain it becomes |
-
 ### Why no single method fits all
 
 Changing component characteristics alter which methods fit. In Wardley's
@@ -256,54 +197,10 @@ to apply. Wardley distinguishes these from climatic patterns that act upon it.
 He treats doctrine as improvable and groups it by its principal organizational
 influence.[^doctrine]
 
-### Operating principles
-
-The complete introductory catalog includes communication, development,
-operation, structure, learning, and leading.[^doctrine]
-
-| Category | Doctrine |
-| --- | --- |
-| Communication | Be transparent |
-| Communication | Focus on high situational awareness (understand what is being considered) |
-| Communication | Use a common language (necessary for collaboration) |
-| Communication | Challenge assumptions (speak up and question) |
-| Development | Know your users (e.g. customers, shareholders, regulators, staff) |
-| Development | Focus on user needs |
-| Development | Think fast, inexpensive, simple and tiny |
-| Development | Remove bias and duplication |
-| Development | Use appropriate methods (e.g. agile vs lean vs six sigma) |
-| Development | Focus on the outcome not a contract (e.g. worth based development) |
-| Development | Be pragmatic (it doesn't matter if the cat is black or white as long as it catches mice) |
-| Development | Use standards where appropriate |
-| Development | Use appropriate tools (e.g. mapping, financial models) |
-| Operation | Manage inertia (e.g. existing practice, political capital, previous investment) |
-| Operation | Optimise flow (remove bottlenecks) |
-| Operation | Think small (as in know the details) |
-| Operation | Effectiveness over efficiency |
-| Operation | Do better with less (continual improvement) |
-| Operation | Set exceptional standards (great is just not good enough) |
-| Structure | Provide purpose, mastery & autonomy |
-| Structure | Think small (as in teams) |
-| Structure | Distribute power and decision making |
-| Structure | Think aptitude and attitude |
-| Structure | Design for constant evolution |
-| Structure | There is no one culture (e.g. pioneers, settlers and town planners) |
-| Structure | Seek the best |
-| Learning | Use a systematic mechanism of learning |
-| Learning | Learn by playing the game (a bias towards action) |
-| Learning | Be curious and take appropriate risks (a bias towards the new) |
-| Learning | Listen to your ecosystems (acts as future sensing engines) |
-| Leading | Be the owner (take responsibility) |
-| Leading | Move fast (an imperfect plan executed today is better than a perfect plan executed tomorrow) |
-| Leading | Think big (inspire others, provide direction) |
-| Leading | Strategy is iterative not linear (fast reactive cycles) |
-| Leading | Strategy is complex (there will be uncertainty) |
-| Leading | Commit to the direction, be adaptive along the path (crossing the river by feeling the stones) |
-| Leading | There is no core (everything is transient) |
-| Leading | Be humble (listen, be selfless, have fortitude) |
-
-Transparency needs challenge: depot staff questioning whether "recorded as
-available" means "ready to dispatch" can change both the model and investment.
+For example, Wardley recommends making assumptions visible so people can
+challenge them. On a shared map a depot mechanic can question whether a fleet
+record marked “available” means the machine is ready to dispatch. If the record
+omits inspections, improving access to it could spread an error faster.
 
 ### Applying appropriate methods and sourcing
 
@@ -371,53 +268,10 @@ Wardley teaches repeated passes through the strategy cycle: maps expose
 assumptions, action provides evidence, and reflection changes the next move.
 Trying to map everything before learning can delay that benefit.[^practice]
 
-### Distinguishing climate, doctrine, and gameplay
-
-The following comparison recaps patterns introduced through a first pass.
-Its columns are independent lists, not matched rules. It connects learning
-about the environment, developing the organization, and choosing action.
-[^practice]
-
-| Climatic (rules of the game) | Doctrine (universal actions you should take) | Gameplay (context specific actions you could take) |
-| --- | --- | --- |
-| Everything evolves | Focus on user need | Accelerator (open source) |
-| Characteristics change | Use a common language | De-accelerator (ringfencing with patents) |
-| No one size fits all | Be transparent | Exploiting constraint |
-| Efficiency enables innovation | Challenge assumptions | ILC (ecosystem model) |
-| Higher order systems create new sources of worth | Remove duplication and bias | |
-| No choice on evolution | Use appropriate methods | |
-| Past success breeds inertia | Think small | |
-| | Think aptitude and attitude | |
-| | Design for constant evolution | |
-| | Enable purpose, autonomy and mastery | |
-
 For example, evolving fleet provision is a climatic change; choosing methods
 appropriate to components applies doctrine; opening a partner interface is a
 contextual move. Confusing these categories turns an observation about the
 market into an unjustified prescription.
-
-### Reflecting on situational awareness
-
-Wardley uses organizational anti-patterns to support discussion and reflection.
-These contrasts are his guide to examining behavior, not a calibrated score or
-proof that a particular artifact establishes understanding.[^practice]
-
-| Higher levels of situational awareness | Indicator of … | Lower levels of situational awareness |
-| --- | --- | --- |
-| Visual (maps) | Navigation | Verbal (story telling) |
-| Action & reflection | Learning | Secrets of success |
-| Position and movement | Strategy | Magic thinking (SWOTs, 2x2s) |
-| Where before why | Order | Tyranny of action (how, what and when) |
-| Detailed | Landscape | Vague |
-| Context specific & universal | Patterns | Universal memes |
-| Aptitude and attitude | Organisation | Functional or business silos |
-| Thinks small | Granularity | Thinks big |
-| Mixed (agile + lean + six sigma) | Methods | Single (all agile etc) |
-| Known | Duplication and bias | Unable to quantify |
-| Embraced | Challenge | Defended against |
-| Essential | Transparency | Resisted |
-| Common | Language | Tribal factions |
-| User needs | Anchor | Own needs |
 
 Granularity should expose the decision: "IT" hides differences, while every
 function call can bury them. Distinguish current state, anticipated change,
@@ -431,6 +285,9 @@ Northbank's delivery team needs to change and release dependable behavior.
 That user and need anchor a different map from the contractor view. Domain
 verification, build, package enforcement, artifact storage, deployment,
 telemetry, and recovery form dependencies of that engineering capability.
+A build service that plays no part in deciding today's substitution could
+still determine whether the team can safely change the rule tomorrow. The
+change of user explains why it belongs on this map.
 
 ![Northbank engineering map: dependable change depends on custom domain evidence and product delivery capabilities, which depend on product build and dependency tooling and utility artifact storage and compute.](../assets/wardley-northbank-engineering.svg)
 
@@ -482,6 +339,165 @@ method suitability is a textual interpretation. Source color marking prior
 chapter coverage is omitted. Prose, arrangement, and the rental example are
 adaptations. Citations identify the corresponding public originals, not a
 claim to have reviewed every later revision.
+
+## Wardley's terms and comparisons
+
+The rental example draws on Wardley's glossary, catalogs of climatic patterns
+and operating principles, and two comparisons he uses when teaching the
+strategy cycle. The tables below collect those entries for lookup.
+
+### Key terms for Wardley mapping
+
+These are Wardley's definitions across environment, map grammar, and action.
+*Domain* here names an evolutionary region, not a DDD domain.[^practice]
+
+| Term | Meaning in Wardley mapping |
+| --- | --- |
+| Context | Our purpose and the landscape |
+| Environment | The context and how it is changing |
+| Situational awareness | Our level of understanding of the environment |
+| Actual | The map in use |
+| Domain | Uncharted vs Transitional vs Industrialised |
+| Stage | Of evolution e.g. Genesis, Custom, Product, Commodity |
+| Type | Activity, Practice, Data or Knowledge |
+| Component | A single entity in a map |
+| Anchor | The user need |
+| Position | Position of a component relative to the anchor in a chain of needs |
+| Need | Something a higher level system requires |
+| Capability | High level needs you provide to others |
+| Movement | How evolved a component is |
+| Interface | Connection between components |
+| Flow | Transfer of money, risk & information between components |
+| Climate | Rules of the game, patterns that are applied across contexts |
+| Doctrine | Approaches which can be applied regardless of context |
+| Strategy | A context specific approach |
+
+### Climatic patterns
+
+Wardley groups economic patterns by their main influence. These are claims to
+investigate and refine, not independently verified laws.[^climate]
+
+| Category | Pattern |
+| --- | --- |
+| Components | Everything evolves through supply and demand competition |
+| Components | Rates of evolution can vary by ecosystem (e.g. consumer vs industrial) |
+| Components | Characteristics change as components evolve (Salaman & Storey) |
+| Components | No choice over evolution (Red Queen) |
+| Components | No single method fits all (e.g. in development or purchasing) |
+| Components | Components can co-evolve (e.g. practice with activity) |
+| Components | Evolution consists of multiple waves of diffusion with many chasms. |
+| Financial | Higher order systems create new sources of value |
+| Financial | Efficiency does not mean a reduced spend (Jevon's Paradox) |
+| Financial | Capital flows to new areas of value |
+| Financial | Creative Destruction (Joseph Schumpeter) |
+| Financial | Future value is inversely proportional to the certainty we have over it. |
+| Financial | Evolution to higher order systems results in increasing local order and energy consumption |
+| Speed | Efficiency enables innovation |
+| Speed | Evolution of communication mechanisms can increase the speed of evolution overall and the diffusion of a single example of change |
+| Speed | Increased stability of lower order systems increases agility & speed of re-combination |
+| Speed | Change is not always linear (discontinuous & exponential change exists) |
+| Speed | Shifts from product to utility tend to demonstrate a punctuated equilibrium |
+| Inertia | Success breeds inertia |
+| Inertia | Inertia can kill an organisation |
+| Inertia | Inertia increases the more successful the past model is |
+| Competitors | Competitors actions will change the game |
+| Competitors | Most competitors have poor situational awareness |
+| Prediction | Not everything is random (p[what] vs p[when]) |
+| Prediction | Economy has cycles (peace, war and wonder) |
+| Prediction | Two different forms of disruption (predictable vs non-predictable) |
+| Prediction | A “war” (point of industrialisation) causes organisations to evolve |
+| Prediction | You cannot measure evolution over time or adoption, you need to embrace uncertainty. |
+| Prediction | Evolution consists of multiple diffusion curves |
+| Prediction | The less evolved something is then the more uncertain it becomes |
+
+### Operating principles
+
+The complete introductory catalog includes communication, development,
+operation, structure, learning, and leading.[^doctrine]
+
+| Category | Doctrine |
+| --- | --- |
+| Communication | Be transparent |
+| Communication | Focus on high situational awareness (understand what is being considered) |
+| Communication | Use a common language (necessary for collaboration) |
+| Communication | Challenge assumptions (speak up and question) |
+| Development | Know your users (e.g. customers, shareholders, regulators, staff) |
+| Development | Focus on user needs |
+| Development | Think fast, inexpensive, simple and tiny |
+| Development | Remove bias and duplication |
+| Development | Use appropriate methods (e.g. agile vs lean vs six sigma) |
+| Development | Focus on the outcome not a contract (e.g. worth based development) |
+| Development | Be pragmatic (it doesn't matter if the cat is black or white as long as it catches mice) |
+| Development | Use standards where appropriate |
+| Development | Use appropriate tools (e.g. mapping, financial models) |
+| Operation | Manage inertia (e.g. existing practice, political capital, previous investment) |
+| Operation | Optimise flow (remove bottlenecks) |
+| Operation | Think small (as in know the details) |
+| Operation | Effectiveness over efficiency |
+| Operation | Do better with less (continual improvement) |
+| Operation | Set exceptional standards (great is just not good enough) |
+| Structure | Provide purpose, mastery & autonomy |
+| Structure | Think small (as in teams) |
+| Structure | Distribute power and decision making |
+| Structure | Think aptitude and attitude |
+| Structure | Design for constant evolution |
+| Structure | There is no one culture (e.g. pioneers, settlers and town planners) |
+| Structure | Seek the best |
+| Learning | Use a systematic mechanism of learning |
+| Learning | Learn by playing the game (a bias towards action) |
+| Learning | Be curious and take appropriate risks (a bias towards the new) |
+| Learning | Listen to your ecosystems (acts as future sensing engines) |
+| Leading | Be the owner (take responsibility) |
+| Leading | Move fast (an imperfect plan executed today is better than a perfect plan executed tomorrow) |
+| Leading | Think big (inspire others, provide direction) |
+| Leading | Strategy is iterative not linear (fast reactive cycles) |
+| Leading | Strategy is complex (there will be uncertainty) |
+| Leading | Commit to the direction, be adaptive along the path (crossing the river by feeling the stones) |
+| Leading | There is no core (everything is transient) |
+| Leading | Be humble (listen, be selfless, have fortitude) |
+
+### Distinguishing climate, doctrine, and gameplay
+
+The following comparison recaps patterns introduced through a first pass.
+Its columns are independent lists, not matched rules. It connects learning
+about the environment, developing the organization, and choosing action.
+[^practice]
+
+| Climatic (rules of the game) | Doctrine (universal actions you should take) | Gameplay (context specific actions you could take) |
+| --- | --- | --- |
+| Everything evolves | Focus on user need | Accelerator (open source) |
+| Characteristics change | Use a common language | De-accelerator (ringfencing with patents) |
+| No one size fits all | Be transparent | Exploiting constraint |
+| Efficiency enables innovation | Challenge assumptions | ILC (ecosystem model) |
+| Higher order systems create new sources of worth | Remove duplication and bias | |
+| No choice on evolution | Use appropriate methods | |
+| Past success breeds inertia | Think small | |
+| | Think aptitude and attitude | |
+| | Design for constant evolution | |
+| | Enable purpose, autonomy and mastery | |
+
+### Reflecting on situational awareness
+
+Wardley uses organizational anti-patterns to support discussion and reflection.
+These contrasts are his guide to examining behavior, not a calibrated score or
+proof that a particular artifact establishes understanding.[^practice]
+
+| Higher levels of situational awareness | Indicator of … | Lower levels of situational awareness |
+| --- | --- | --- |
+| Visual (maps) | Navigation | Verbal (story telling) |
+| Action & reflection | Learning | Secrets of success |
+| Position and movement | Strategy | Magic thinking (SWOTs, 2x2s) |
+| Where before why | Order | Tyranny of action (how, what and when) |
+| Detailed | Landscape | Vague |
+| Context specific & universal | Patterns | Universal memes |
+| Aptitude and attitude | Organisation | Functional or business silos |
+| Thinks small | Granularity | Thinks big |
+| Mixed (agile + lean + six sigma) | Methods | Single (all agile etc) |
+| Known | Duplication and bias | Unable to quantify |
+| Embraced | Challenge | Defended against |
+| Essential | Transparency | Resisted |
+| Common | Language | Tribal factions |
+| User needs | Anchor | Own needs |
 
 ## Continue exploring
 

@@ -5,6 +5,9 @@ description: How the Easy Approach to Requirements Syntax constrains textual req
 tags: [ears, easy-approach-to-requirements-syntax, alistair-mavin, controlled-natural-language, requirement-syntax, preconditions, triggers, unwanted-behaviour, requirement-quality, requirements-engineering]
 status: draft
 sources:
+  - id: rental-specimens
+    resource: https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/solution/requirements/authoring/northbank-commitment-requirements.md
+    title: "Northbank commitments — original fictional requirements and witnesses"
   - id: mavin-ears-2009
     resource: https://doi.org/10.1109/RE.2009.9
     title: "Mavin, Wilkinson, Harwood & Novak — Easy Approach to Requirements Syntax (EARS), 17th IEEE International Requirements Engineering Conference (RE'09), 2009, pp. 317–322"
@@ -12,7 +15,7 @@ sources:
     resource: https://alistairmavin.com/ears/
     title: Alistair Mavin — EARS (author's current guide)
   - id: ears-ctrl-2017
-    resource: https://www.fortiss.org/en/results/scientific-publications/details/just-formal-enough-automated-analysis-of-ears-requirements
+    resource: https://www.fortiss.org/forschung/ergebnisse/publikationen/details/just-formal-enough-automated-analysis-of-ears-requirements
     title: "Lúcio et al. — Just Formal Enough? Automated Analysis of EARS Requirements, NASA Formal Methods Symposium (NFM), 2017"
   - id: kiro-feature-specs
     resource: https://kiro.dev/docs/specs/feature-specs/
@@ -23,7 +26,7 @@ sources:
   - id: selecting-method
     resource: ../authoring/selecting-a-specification-method.md
     title: Selecting a requirement specification method
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:02Z }
 ---
 
 # EARS: preconditions, triggers, and system responses
@@ -34,13 +37,11 @@ a requirement's clauses and marks each kind of condition with a keyword:
 *While* for a state, *When* for an event, *If … then* for unwanted behaviour,
 and *Where* for an optional feature.[^mavin-ears-2009]
 
-This explanation is for product, engineering, and quality readers who have met
-EARS in a template, a tool, or an AI-assisted specification workflow and want to
-judge what it contributes. After reading, you should be able to explain why EARS
-orders its clauses as it does, distinguish its patterns and recognize when
-choosing between them is a modeling judgment, identify requirements EARS
-expresses poorly, and relate an EARS statement to requirement quality, authority,
-and executable examples in this bundle.
+Changing *When a hold expires* to *While a hold is expired* looks like
+a small edit to a rental requirement. The first phrase picks out a moment.
+The second makes the obligation apply for as long as a condition holds.
+What else does the choice of keyword decide, and what must the writer
+still learn about the system?
 
 ## Where EARS came from
 
@@ -117,6 +118,14 @@ EARS's terms map onto neighboring vocabularies without replacing them:
 | Preconditions and trigger | Conditions that make the obligation assessable | “Under condition or trigger” |
 | Shall | The conventional binding keyword | A normative verb consistent with local policy |
 | System response | What the subject does, or the constraint on it | One bounded outcome, limit, or prohibition |
+
+## How the five patterns change the obligation
+
+Alongside the aircraft examples, consider Northbank, a fictional rental
+company. Its allocation service assigns machines to reservations. A hold
+keeps a machine available for one customer for a stated period. The
+numbered rental rules come from an earlier worked case. Their EARS
+versions below are illustrative rewrites.[^rental-specimens]
 
 ### Ubiquitous: always active
 
@@ -202,7 +211,11 @@ the other keywords: “While the aircraft is in-flight, if reverse thrust is
 commanded, then the control system shall inhibit thrust reverser
 deployment.”[^mavin-ears-2009]
 
-Northbank's executable witness for `NB-REPLACE-01` has the same shape:
+In the rental case, a dispatcher tries to replace machine A on reservation
+R-42 with machine B. B is already committed for the same period. The
+case's example checks that the service reports a conflict and R-42 has
+no new assignment to B. An EARS statement can express the more general
+obligation illustrated by that one attempt.[^rental-specimens]
 
 > While a reservation is assigned to an asset, if the replacement asset cannot
 > be secured for the agreed period, then the allocation service shall report
@@ -229,7 +242,9 @@ findable, not settle a debate about whether a situation is abnormal.
 **Triggers and states can describe the same situation.** “When a hold expires”
 is an event; “while a hold is expired” is a state. The event form obligates a
 response at a moment; the state form obligates it for a duration. Choosing
-between them decides whether a missed event still leaves the system obligated.
+between them affects what a later observation can establish. An expired
+hold still present tomorrow can violate a continuing state constraint even
+if no one saw the instant it expired.
 
 **EARS permits several responses.** The ruleset allows one or more system
 responses, while ISO/IEC/IEEE 29148 expects each requirement to be
@@ -247,18 +262,20 @@ It is tempting to write two EARS requirements:
 > If a replacement allocation cannot be secured, then the allocation service
 > shall preserve the prior assignment and allocation state.
 
-A system can satisfy both sentences and still violate the rule: it can update
-the assignment, then fail while recording the allocation. The accepted
-obligation is that no half-applied replacement is ever observable. That is an
-invariant across a failure path, not a trigger and a response, and it belongs
-with [authoring invariants and stateful behavior](../authoring/authoring-invariants-and-stateful-behavior.md).
+Suppose securing the replacement and updating the assignment are separate
+writes. Both complete, so the success response occurs and the failure
+condition never applies. Between the writes a staff member can still see
+the replacement allocated to a reservation that names the old machine.
+The original rule forbids even that intermediate result. This guarantee
+about every observable state belongs with [authoring invariants and stateful behavior](../authoring/authoring-invariants-and-stateful-behavior.md).
 
 **A state can sometimes rescue an ordering rule.** `NB-MIGRATE-01` requires one
 allocation writer *before* admitting replacement commands for a migrated
 cohort. “Before” resists the patterns, but restating the rule as a state works:
 
-> While a migrated cohort has more than one allocation writer, the allocation
-> service shall reject replacement commands for that cohort.
+> While a migrated group of reservations lacks exactly one authorized
+> allocation writer, the service shall reject replacement commands for
+> that group.
 
 The rewrite is not automatically equivalent. It must still be checked against
 the source: it says nothing about preserving customer terms, which remains a
@@ -285,8 +302,9 @@ beyond aerospace.
 
 The 2009 case study rewrote 36 requirements extracted from CS-E 50, which the
 team split into 47 EARS requirements while average length fell from 36.9 to
-25.6 words. A cross-discipline team, including safety and airworthiness
-engineers, classified each problem in the raw and rewritten sets. In that
+25.6 words. Safety and airworthiness specialists helped interpret the
+source. The authors counted eight kinds of problem before and after the
+rewrite. In that
 sample, the rewritten requirements showed no instances of complexity, omission,
 duplication, inappropriate implementation, or untestability, and fewer
 instances of ambiguity, vagueness, and wordiness.[^mavin-ears-2009]
@@ -303,9 +321,8 @@ The authors qualified these results:
 - Some requirements that did not fit were manipulated to fit, or the ruleset
   evolved to accommodate them.[^mavin-ears-2009]
 
-The residual ambiguity came from preconditions understood by inference but not
-recorded, and residual vagueness from high-level requirements awaiting design
-decisions. Syntax could not supply knowledge the authors did not yet have.
+The authors attributed the residual ambiguity to inferred preconditions and
+the residual vagueness to high-level requirements awaiting design decisions. Syntax could not supply knowledge the authors did not yet have.
 
 Mavin's guide reports adoption by organizations including Airbus, Bosch, Dyson,
 Honeywell, Intel, NASA, Rolls-Royce, and Siemens, and claims particular benefit
@@ -361,8 +378,8 @@ controller synthesis to check whether a set of requirements can be realized as
 a controller.[^ears-ctrl-2017] That is the direction to take when syntax alone
 cannot establish consistency or realizability.
 
-**AI-assisted specification tools.** Kiro's feature specs generate acceptance
-criteria using the template “WHEN [condition/event] THE SYSTEM SHALL [expected
+**AI-assisted specification tools.** Kiro's feature-spec documentation illustrates
+acceptance criteria with the template “WHEN [condition/event] THE SYSTEM SHALL [expected
 behavior],” citing clarity, testability, traceability, and
 completeness.[^kiro-feature-specs] That is the event-driven pattern alone. A
 workflow restricted to it has no distinct place for states, optional features,
@@ -426,14 +443,13 @@ should be read before extending its claims about practice:
     Requirements Syntax (EARS), RE'09, pp. 317–322: §2 for problems and
     scope, §4 for the ruleset and patterns (footnote 2 on unwanted behaviour),
     §5–§6 for results and limitations, §7 for future work.
-[^mavin-ears-site]: Mavin, EARS guide, alistairmavin.com, consulted
-    2026-09-15.
-[^ears-ctrl-2017]: Lúcio et al., Just Formal Enough? Automated Analysis of
-    EARS Requirements, NFM 2017; published summary.
-[^kiro-feature-specs]: Kiro, Feature Specs documentation, consulted
-    2026-09-15.
+[^mavin-ears-site]: Alistair Mavin, [EARS guide](https://alistairmavin.com/ears/).
+[^ears-ctrl-2017]: Lúcio et al., [Just Formal Enough? Automated Analysis of EARS Requirements](https://www.fortiss.org/forschung/ergebnisse/publikationen/details/just-formal-enough-automated-analysis-of-ears-requirements), published summary, NFM 2017.
+[^kiro-feature-specs]: Kiro, [Feature Specs](https://kiro.dev/docs/specs/feature-specs/), “Requirements with EARS Notation.”
 [^iso-29148-explainer]: This bundle's
     [29148 explanation](iso-iec-ieee-29148-requirement-quality.md#characteristics-of-an-individual-requirement),
     including the note that singular permits several conditions.
 [^selecting-method]: This bundle's
     [specification-method guide](../authoring/selecting-a-specification-method.md).
+
+[^rental-specimens]: [Northbank commitments, original fictional specimens](https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/solution/requirements/authoring/northbank-commitment-requirements.md).

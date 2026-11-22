@@ -6,10 +6,10 @@ tags: [bill-buxton, design, sketching, user-experience, interaction-design, alte
 status: draft
 sources:
   - id: why-sketch
-    resource: https://saul.cpsc.ucalgary.ca/sketchbook/wp-content/uploads/Chapter-1.2a-WhyShouldISketch.ppt
+    resource: https://sketchbook.cpsc.ucalgary.ca/wp-content/Presentations/Chapter-1.2a-WhyShouldISketch.ppt
     title: Greenberg, Carpendale, Marquardt, and Buxton — Why Should I Sketch? Workbook presentation
   - id: what-is-a-sketch
-    resource: https://saul.cpsc.ucalgary.ca/sketchbook/wp-content/uploads/Chapter-1.2b-WhatIsASketch.ppt
+    resource: https://sketchbook.cpsc.ucalgary.ca/wp-content/Presentations/Chapter-1.2b-WhatIsASketch.ppt
     title: Greenberg, Carpendale, Marquardt, and Buxton — What Is a Sketch? Workbook presentation
   - id: prototypes
     resource: https://www.oreilly.com/library/view/sketching-user-experiences/9780123740373/OEBPS/B9780123740373500596.htm
@@ -29,7 +29,7 @@ sources:
   - id: overview
     resource: https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/overview.md
     title: Product engineering overview
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:02Z }
 ---
 
 # Bill Buxton's approach to design: sketching, alternatives, and experience
@@ -46,9 +46,10 @@ studies. It is a focused account of these ideas, not a survey of his entire
 work. The rental-service example is fictional; its judgments and the
 connections to this bundle are editorial interpretations.
 
-The case follows Northbank's confirmation exploration. Its later allocation
-and engineering-system episodes are separate investments, not capabilities
-assumed to exist in the sketches below.
+Suppose customers of Northbank, an equipment rental service, struggle to
+arrange delivery. Improving its booking calendar seems a natural response.
+But why must the customer work out an appointment in the first place? A
+dispatcher might negotiate one, or the service might offer a choice of times.
 
 ## Getting the right design and getting the design right
 
@@ -237,13 +238,11 @@ may become preferable.
 
 ## How this informs product engineering
 
-The existing practice adopts consideration of alternatives, deliberate
-resolution, and revisable commitment. Buxton's account helps explain those
-choices. Particular media, sketch counts, workshop formats, and amounts of
-exploration remain contextual. A known correction to a familiar interaction
-may need little concept exploration; a change in who bears scheduling
-responsibility deserves more. None of this establishes a mandatory sequence
-of approval gates.
+A misspelled date in the calendar needs a correction. Asking customers to
+arrange their own delivery makes a much larger choice about whose time the
+service will consume. Sketching several ways to distribute that work gives
+the team grounds for choosing one. The point at which a depot can promise
+an appointment will still need evidence from the operating service.
 
 Shape Up (optional companion reading: `@craigsmitham/knowledge/project-management#foundations/shape-up`) adds a
 perspective on how much solution detail makes a bounded investment discussable.
@@ -259,6 +258,6 @@ keeping the chosen experience coherent as multiple contributors develop it.
 
 [^user-sketches]: Tohidi, Buxton, Baecker, and Sellen, [User Sketches: A Quick, Inexpensive, and Effective Way to Elicit More Reflective User Feedback](https://www.billbuxton.com/UserSketches.pdf), NordiCHI 2006.
 
-[^what-is-a-sketch]: Greenberg, Carpendale, Marquardt, and Buxton, [What Is a Sketch?](https://saul.cpsc.ucalgary.ca/sketchbook/wp-content/uploads/Chapter-1.2b-WhatIsASketch.ppt), companion presentation summarizing Buxton's account.
+[^what-is-a-sketch]: Greenberg, Carpendale, Marquardt, and Buxton, [What Is a Sketch?](https://sketchbook.cpsc.ucalgary.ca/wp-content/Presentations/Chapter-1.2b-WhatIsASketch.ppt), companion presentation summarizing Buxton's account.
 
-[^why-sketch]: Greenberg, Carpendale, Marquardt, and Buxton, [Why Should I Sketch?](https://saul.cpsc.ucalgary.ca/sketchbook/wp-content/uploads/Chapter-1.2a-WhyShouldISketch.ppt), presentation accompanying *Sketching User Experiences: The Workbook*.
+[^why-sketch]: Greenberg, Carpendale, Marquardt, and Buxton, [Why Should I Sketch?](https://sketchbook.cpsc.ucalgary.ca/wp-content/Presentations/Chapter-1.2a-WhyShouldISketch.ppt), presentation accompanying *Sketching User Experiences: The Workbook*.

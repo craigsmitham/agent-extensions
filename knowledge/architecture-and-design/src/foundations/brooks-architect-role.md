@@ -6,7 +6,7 @@ tags: [fred-brooks, architecture, conceptual-integrity, design-authority, user-m
 status: draft
 sources:
   - id: mythical-man-month
-    resource: https://soloway.pbworks.com/f/The.Mythical.Man.Month.F.Brooks.pdf
+    resource: https://www.informit.com/store/mythical-man-month-essays-on-software-engineering-anniversary-9780201835953
     title: "Frederick P. Brooks Jr. — The Mythical Man-Month, Anniversary Edition, chapters 4–6 and 19"
   - id: design-interview
     resource: https://www.informit.com/articles/article.aspx?p=1600886
@@ -17,7 +17,7 @@ sources:
   - id: lifecycle
     resource: https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/overview.md
     title: Product engineering overview
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:02Z }
 ---
 
 # Fred Brooks on the architect's role: conceptual integrity and responsibility to the user
@@ -42,8 +42,10 @@ conceptual effort required to use that capability. His argument gives designers
 a reason to question an attractive feature whose concepts fit poorly with the
 rest of the system.[^mythical-man-month]
 
-The problem reaches deeper than inconsistent labels. Choosing one word for all
-three states would conceal the disagreement. A coherent design must decide
+Suppose a rental website calls tomorrow's equipment “reserved.” The email
+says the request was received. At the depot, staff can promise delivery only
+after they assign a machine. Should the contractor send a crew to the site?
+Giving all three messages the same label would conceal the disagreement. A coherent design must decide
 what commitment exists, when it begins, what may change, and what the customer
 can do if the service cannot fulfill it. Those decisions connect booking,
 allocation, substitution, cancellation, and communication.
@@ -166,8 +168,8 @@ whether the opportunity deserves investment.
 
 The interpretation proposed here retains **explicit responsibility for the
 coherence of the product** while leaving the organizational arrangement open.
-It extends the bundle's iterative lifecycle and explicit model boundaries;
-it is not a claim that Brooks endorsed every team arrangement described below.
+It brings Brooks's argument into a setting where teams revise the design
+through use and may own different models of the same equipment.
 [^lifecycle][^ddd]
 
 Three distinctions make that interpretation concrete:
@@ -210,6 +212,6 @@ when individually reasonable contributions fail to make an understandable whole.
 
 [^design-interview]: [Interview with Fred Brooks on the Publication of The Design of Design](https://www.informit.com/articles/article.aspx?p=1600886), June 8, 2010.
 
-[^lifecycle]: Product engineering overview (historical source: https://github.com/craigsmitham/agent-extensions/blob/172b950b8e2d5c5823b20fb56c810f4d0b58feed/knowledge/software-engineering-foundations/src/design-and-requirements.md), especially lifecycle questions and shared foundations.
+[^lifecycle]: [Product engineering overview](https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/overview.md), the original setting for this interpretation.
 
-[^mythical-man-month]: [Brooks, The Mythical Man-Month, Anniversary Edition](https://soloway.pbworks.com/f/The.Mythical.Man.Month.F.Brooks.pdf), chapters 4–6, pp. 41–70; chapter 19, “The Central Argument: Conceptual Integrity and the Architect,” pp. 255–257.
+[^mythical-man-month]: [Brooks, The Mythical Man-Month, Anniversary Edition](https://www.informit.com/store/mythical-man-month-essays-on-software-engineering-anniversary-9780201835953), chapters 4–6, pp. 41–70; chapter 19, “The Central Argument: Conceptual Integrity and the Architect,” pp. 255–257.

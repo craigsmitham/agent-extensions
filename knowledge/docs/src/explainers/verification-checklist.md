@@ -4,7 +4,7 @@ title: What a verification checklist establishes
 description: How comparing the finished work with an independent criterion can reveal an error even when every production step was recorded as complete.
 tags: [docs, verification-checklist, evidence, discrepancy, verification]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-21T22:49:04Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:49:36Z }
 sources:
   - id: bagit
     resource: https://www.rfc-editor.org/rfc/rfc8493.html
@@ -26,8 +26,10 @@ from the one sent.
 A **verification checklist** directs attention to a claim about finished
 work and the evidence that would support or contradict it. In the BagIt
 packaging format, a manifest lists file paths and their expected checksums.
-The receiver can calculate the checksum of the file that actually arrived
-and compare it with the recorded value. Presence and agreement are
+A checksum is a value calculated from the bytes in a file. Running the
+same calculation on the bytes that arrived gives the receiver a value to
+compare with the one recorded before transfer. A mismatch exposes a
+change that the filenames alone conceal. Presence and agreement are
 different checks. RFC 8493 defines a valid bag as a complete bag whose
 manifest checksums all verify.[^bagit]
 

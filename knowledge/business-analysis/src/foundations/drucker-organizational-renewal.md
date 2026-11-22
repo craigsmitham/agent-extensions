@@ -14,7 +14,7 @@ sources:
   - id: piloting-change
     resource: https://paramountcapitalcorp.com/wp-content/uploads/2024/03/Volume-XV-Issue-5-5.15.-23.pdf#page=13
     title: The Daily Drucker — Piloting Change, reproduced in View of the Market, May 2023
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:47:57Z }
 ---
 
 # Drucker's four disciplines of organizational renewal
@@ -44,9 +44,11 @@ we would make the same commitment with what we know today, and whether we would
 carry it out in the same way. The answer may call for changing the approach as
 well as discontinuing an activity.[^change-leaders]
 
+Northbank, a fictional equipment-rental company, faces all four decisions at once.
+
 | Discipline | Northbank decision | Evidence and responsibility |
 | --- | --- | --- |
-| Abandonment | Retire an old invoice export or redundant boundary mechanism | Identify remaining consumers and obligations; migration precedes removal |
+| Abandonment | Retire an old invoice export | Identify remaining consumers and obligations; migration precedes removal |
 | Improvement | Reduce failed confirmations within the existing offering | Examine fulfilled commitments and customer consequences, not just screen speed |
 | Exploiting success | Extend a successful Central-depot practice to Riverside | Establish what made it work and whether the second depot shares those conditions |
 | Innovation | Investigate an operated-equipment service | Test new demand, competencies, and economics before committing |
@@ -55,10 +57,15 @@ A library provides a useful contrast: retiring an unused service, improving
 reservation waits, extending a literacy program, and serving homebound readers
 would pose the same four kinds of question in a different institution.
 
-**Piloting connects proposed changes to experience.** Test improvements and new
-offerings on a small scale with a committed participant or customer. Research
-and modeling can inform the proposal; they cannot substitute for seeing how it
-works in use.[^piloting-change]
+Suppose Central keeps more of its rental promises after its mechanics start
+flagging machines due for inspection before staff confirm a booking. A manager
+could reasonably want to extend that success to Riverside. But if Riverside's
+missed handovers come from late deliveries, copying the inspection flag would
+leave its main problem untouched. A pilot at the second depot could show which
+promises it keeps and why. Drucker recommends testing a change on a small
+scale with someone who wants to try it. In this case, a willing depot can
+help distinguish the circumstances that made the practice work from the
+parts another depot can use.[^piloting-change]
 
 ## Continue exploring
 

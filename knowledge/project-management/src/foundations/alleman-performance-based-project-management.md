@@ -35,7 +35,7 @@ sources:
   - id: overview
     resource: https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/overview.md
     title: Product engineering overview
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:02Z }
 ---
 
 # Glen Alleman's performance-based project management: capabilities, credible plans, and evidence of progress
@@ -288,8 +288,8 @@ failure becomes a concrete investment and capability decision.
 
 ## Project accomplishment and product value
 
-This bundle distinguishes delivered outputs from consequential changes in
-customer behavior, customer condition, or organizational results.[^outcomes]
+A delivered output and a change in the customer's circumstances can be
+observed at different times and require different evidence.[^outcomes]
 That distinction complements Alleman's concern with meaningful measures; it
 also prevents “performance” from becoming one label for unlike evidence.
 
@@ -307,9 +307,9 @@ by itself settle the product's value hypothesis.
 
 ## How this informs product engineering
 
-The following connections interpret the approach within this bundle's
-iterative lifecycle.[^overview] They do not prescribe adopting Alleman's full
-management system or moving project management into the shipping section.
+A project can gather evidence at several points between accepting a
+requirement and putting the capability into service. Consider what each
+result tells the people funding the work.[^overview]
 
 Executable specifications (optional companion reading: `@craigsmitham/knowledge/software-testing#patterns/executable-specifications`)
 can supply part of the evidence of accomplishment. Work items
@@ -325,7 +325,7 @@ lead to a smaller solution when the forecast changes.
 
 Two other terms need care. Shape Up's customer **baseline** is the current
 experience against which an improvement is judged; the performance measurement
-baseline records a project commitment. Its **hill chart** expresses the team's
+baseline records a project commitment. Shape Up's **hill chart** expresses the team's
 understanding of how to complete scopes; it is not a calculated physical
 completion measure.[^shape-up] These concepts can inform the same decision
 without being interchangeable.
@@ -341,9 +341,9 @@ compliance with any earned-value standard or contractual reporting requirement.
 
 [^change]: Alleman, [Plan the Work, Work the Plan](https://www.linkedin.com/pulse/plan-work-glen-alleman-b68cc), especially “Managing in the Presence of Change.”
 
-[^outcomes]: Outcomes and evidence (historical source: https://github.com/craigsmitham/agent-extensions/blob/172b950b8e2d5c5823b20fb56c810f4d0b58feed/knowledge/software-engineering-foundations/src/value/outcomes-and-evidence.md).
+[^outcomes]: [Outcomes and evidence](https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/problem/outcomes-and-evidence.md), the original product-engineering account.
 
-[^overview]: Product engineering overview (historical source: https://github.com/craigsmitham/agent-extensions/blob/172b950b8e2d5c5823b20fb56c810f4d0b58feed/knowledge/software-engineering-foundations/src/design-and-requirements.md), especially “Lifecycle and shared foundations.”
+[^overview]: [Product engineering overview](https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/overview.md), especially “Lifecycle and shared foundations.”
 
 [^planning]: Alleman, [Integrated Master Plan / Integrated Master Schedule Step-by-Step](https://www.research.fsu.edu/media/5277/impims-step-by-step.pdf), version 3.1.2; used for event-based planning and performance-informed forecasts, not its historical compliance rules.
 

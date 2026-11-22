@@ -11,7 +11,7 @@ sources:
 - id: fading
   resource: https://doi.org/10.1080/00220970209599510
   title: From Example Study to Problem Solving
-generated: { by: codex/gpt-6, at: 2026-11-22T00:07:11Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:49:36Z }
 ---
 
 # How a learning checklist changes practice
@@ -46,8 +46,9 @@ If every successful tour plan begins with those two questions, the
 supervisor still has to find out whether the guide can frame them unaided.
 Renkl and colleagues studied a transition from worked examples to problems
 with progressively more of the solution left to the learner. Their
-experiments found benefits on near-transfer problems. The object tour
-would need its own trial.[^fading]
+experiments found benefits on near-transfer problems, new problems
+similar to those used in practice. Whether those findings carry over to
+planning a museum tour would need its own trial.[^fading]
 
 Later, a group interested in the history of local industry requests a
 tour. Can the guide select a thread connecting the objects and identify

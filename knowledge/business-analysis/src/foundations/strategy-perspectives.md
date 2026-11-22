@@ -25,7 +25,7 @@ sources:
     title: Drucker's four disciplines of organizational renewal
 generated:
   by: codex/gpt-6
-  at: 2026-09-09T15:55:58Z
+  at: 2026-11-22T01:47:57Z
 ---
 
 # Strategy perspectives and their relationships
@@ -60,6 +60,12 @@ responsibilities concern institutions more broadly than software
 products.[^value][^choices][^landscape][^product][^theory][^renewal]
 
 ## Follow one decision through several perspectives
+
+Suppose an equipment-rental company wants more contractors to return after a
+first booking. It could invest in keeping a spare machine nearby so a breakdown
+at the depot need not delay a crew. The same spare looks valuable to the crew
+and expensive on the depot's books. Each perspective asks what would make
+that commitment worthwhile.
 
 **Value:** Avoiding idle time may increase customer willingness to pay.
 Predictable scheduling and coordinated maintenance may also improve the
@@ -161,11 +167,13 @@ standardized provision.
 
 ## Follow the investment into the engineering system
 
-A component's strategic role does not establish its evolution stage, a package
-boundary, or an allowed import. A standard fleet product can support a custom
-substitution policy. A useful custom adapter can survive a simplification.
-Maps and classifications inform those decisions; behavior, migration, cost,
-and operating evidence determine whether the particular intervention works.
+A standard fleet product might tell the booking team which machines are free.
+Substitution also requires knowing which machine can safely do the job and
+whether it can reach the site in time. A team that buys inventory software
+could still need its own substitution rules. If no replacement can arrive
+before the crew must stop work, improving those rules alone cannot make
+the service promise viable. A finding about delivery capacity can reopen a
+choice that first looked like a software purchase.
 
 ## Let evidence reopen the right question
 

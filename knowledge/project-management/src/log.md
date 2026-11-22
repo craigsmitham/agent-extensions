@@ -1,5 +1,9 @@
 # Log
 
+## 2026-11-22
+
+- Clarified the investment decision in the Shape Up rental case and the evidence and source basis for the comparison with Alleman.
+
 ## 2026-11-11
 
 - **Retirement:** Removed reading routes to the retired engineering-environment and software-construction packages.

@@ -1,5 +1,18 @@
 # Documentation craft update log
 
+## 2026-11-22
+
+- Reviewed all 23 explainers from their own entry points. The audit example
+  follows two working links to different payroll deadlines. The craft,
+  quality, and organization pages explain how the same information serves
+  different readers. The practice and standards pages use a soccer match,
+  timestamped dispatch records, and a library accessibility review to
+  connect participation, shared criteria, and evidence.
+- Corrected the reason for adding Bluebird’s architectural backlog view
+  in [What connects the patterns in a collection](explainers/pattern-collection.md).
+  Defined checksums and near transfer where the corresponding checklist
+  explainers first need those terms.
+
 ## 2026-11-21
 
 - Reviewed all 56 concepts from their individual entry points. The

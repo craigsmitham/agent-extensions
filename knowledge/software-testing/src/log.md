@@ -1,5 +1,9 @@
 # Log
 
+## 2026-11-22
+
+- Connected the defect-report vocabulary with two similar receipt reports that merit different dispositions.
+
 ## 2026-11-11
 
 - **Retirement:** Removed reading routes to the retired engineering-environment and software-construction packages.

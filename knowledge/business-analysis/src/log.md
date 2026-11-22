@@ -1,5 +1,12 @@
 # Log
 
+## 2026-11-22
+
+- Restored the rental decisions behind the strategy examples, corrected the
+  attribution of the visibility line in Shostack's blueprint and the source
+  of Drucker's results discussion, and clarified what the illustrated
+  decisions and measures can establish.
+
 ## 2026-11-11
 
 - **Retirement:** Removed reading routes to the retired engineering-environment and software-construction packages.

@@ -5,6 +5,9 @@ description: How ISO/IEC/IEEE 29148:2018 characterizes well-formed requirements 
 tags: [iso-iec-ieee-29148, requirements-engineering, requirement-quality, requirement-set, well-formed-requirements, language-criteria, requirement-attributes, conformance, verification, validation, requirements-engineering]
 status: draft
 sources:
+  - id: rental-specimens
+    resource: https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/solution/requirements/authoring/northbank-commitment-requirements.md
+    title: "Northbank commitments — original fictional requirements and witnesses"
   - id: iso-29148
     resource: https://www.iso.org/standard/72089.html
     title: ISO/IEC/IEEE 29148:2018 Systems and software engineering — Life cycle processes — Requirements engineering
@@ -17,7 +20,7 @@ sources:
   - id: reviewing-sets
     resource: ../review/reviewing-requirement-sets.md
     title: Reviewing requirement sets
-generated: { by: codex/gpt-6, at: 2026-11-11T20:13:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:50:02Z }
 ---
 
 # ISO/IEC/IEEE 29148: requirement and requirement-set quality
@@ -28,13 +31,11 @@ processes of ISO/IEC/IEEE 15288 and 12207, names the information items those
 processes produce, and states what makes an individual requirement and a set
 of requirements well formed.[^iso-29148]
 
-This explanation is for product, engineering, and quality readers who write,
-review, or accept requirements and want to know what the standard's quality
-vocabulary means, why it separates individual and set quality, and what a claim
-of conformance does and does not establish. It concentrates on the quality
-concepts of Clause 5 and the conformance model of Clause 4; the process detail
-of Clause 6 and the specification templates of Clauses 7–9 are summarized only
-where they bear on quality.
+A reviewer can find every sentence clear and testable and still have
+reason to withhold acceptance. A requirement may describe the wrong
+capability with perfect precision. A collection of correct requirements
+may omit the moment when a failed reservation has to be recovered. Why
+does quality change when the reviewer looks beyond the sentence?
 
 The account follows the second edition, published in November 2018 and
 confirmed by ISO in 2024. The standard is copyrighted and sold by ISO and IEEE.
@@ -252,7 +253,7 @@ information-item provisions, or both:
 | **Full conformance** | The provisions of §5.2.4–§5.2.7; the requirements-related 15288 and 12207 processes cited in §6.1; the information items of Clause 7; and their content under Clause 9 and Annex A |
 | **Process conformance** | The process requirements in §6.1 |
 | **Information-item conformance** | The required items are produced and their content meets the stated requirements |
-| **Tailored conformance** | Items selected or modified through the Annex C tailoring process, with the tailored text declared and satisfied |
+| **Tailored information-item conformance** | For information items, §4.5.2 requires the Annex C tailoring process, declaration of the tailored text, and evidence that its requirements were met. Section 4.5.1 points to 15288 or 12207 for process tailoring |
 
 Two notes prevent common misreadings. Conformance to ISO/IEC/IEEE 15289 does
 not imply conformance to this standard's information items, because 29148 adds
@@ -263,8 +264,8 @@ A conformance claim is bounded. It says that stated provisions were satisfied
 for the declared scope and tailoring. It does not show that the requirements
 capture the right product, that stakeholders will value the result, or that a
 lightweight team's artifacts are inadequate because they do not resemble the
-templates. The `docs` bundle's *Standard authority and conformance* explainer
-develops why conformance and excellence remain different claims.
+templates. For the reasoning behind that distinction, see *Standard authority and conformance*
+(`@craigsmitham/knowledge/docs#explainers/standard-authority-and-conformance`).
 
 ## How this bundle relates to the standard
 
@@ -306,7 +307,7 @@ gathered for the old obligation is not silently attributed to the new one. Both
 preserve history; they place the boundary differently. A project adopting 29148
 conformance would need to reconcile the two explicitly.
 
-The “never *shall not*” advice also deserves context. Stating a prohibition
+The preference for positive wording also deserves context. Stating a prohibition
 positively is often clearer, but some obligations—such as never initiating a
 second charge on replay—are most faithfully expressed as prohibitions. The
 standard frames this as a drafting preference, and the bundle's explicit
@@ -314,24 +315,31 @@ normative-force dimension keeps prohibitions visible when they are genuine.
 
 ## Applying the characteristics to a Northbank requirement
 
+Consider a fictional rental depot. When an assigned machine breaks down,
+staff can try to secure a replacement for the agreed rental period. The
+depot accepted one rule for the change. Either the replacement is secured
+and the reservation's assignment changes with it, or the original assignment
+and allocation both stay in place. Staff may still have to find another
+machine. Preserving the records avoids losing track of the commitment
+while they do so.[^rental-specimens]
+
 | Characteristic | Judgment and what it exposes |
 | --- | --- |
 | Necessary | Without it, a failed replacement could leave a reservation assigned to nothing; no other specimen prevents that |
 | Appropriate | It states the outcome at the allocation boundary and leaves transactions, locks, and retries to engineering |
 | Unambiguous | “Preserve” needed the stated condition that preservation does not assert the former machine is usable |
 | Singular | It contains *or*, which the language criteria flag. Splitting it would destroy the rule: the disjunction *is* the atomic obligation |
-| Verifiable | The executable witness covers one conflict path; interrupted persistence needs another method, such as fault-injection test or analysis |
-| Correct | It traces to the depot's account that the old assignment must remain until a replacement is secured, as accepted by decision `NB-DEC-04` |
-| Conforming | It follows the specimen table's identity, obligation, and conditions form |
+| Verifiable | One example checks that the failed attempt made no new assignment to the conflicting machine. A storage interruption is a different path and needs its own evidence |
+| Correct | Depot staff needed the old assignment to remain visible until a replacement was secured. The accepted rule preserves that commitment |
+| Conforming | The original case records an identifier, the obligation, and its conditions, as its local template requires |
 
-At the set level, the accepted Central-depot scope can be complete in the
-standard's sense. The partner-asset proposal cannot: its hold expiry and
-unknown-outcome treatment are placeholders, so that wider set is not complete
-until they are decided. Consistency requires that replacement respect
-`NB-ALLOC-01`'s rule that unexpired holds count as occupancy. Feasibility for the
-set depends on `NB-MIGRATE-01` establishing one allocation writer. Whether the
-set can be validated returns to the contractor's need for the agreed capability
-when the crew arrives.
+Now suppose a partner depot owns the replacement. How long will that depot
+hold a machine, and what happens if it accepts a request but its reply
+never arrives? Those decisions remain open in the case. The same clear
+replacement rule can belong to a set with unresolved obligations as soon
+as its scope includes partner depots. Even within the original depot,
+feasibility depends on who else can allocate that machine. Another writer
+able to take it during replacement could defeat the guarantee.[^rental-specimens]
 
 ## Limits and failure modes
 
@@ -387,3 +395,5 @@ evidence that applying its characteristics improves outcomes for every team.
 [^iso-29148]: ISO/IEC/IEEE 29148:2018, *Systems and software engineering — Life
     cycle processes — Requirements engineering*, second edition, 2018-11,
     confirmed 2024. Clauses 1, 3–5, 6.5.2–6.5.3; Annex C.
+
+[^rental-specimens]: [Northbank commitments, original fictional specimens](https://github.com/craigsmitham/agent-extensions/blob/c56a54cb5cdb2c14c0d71801709c2b38968c99dd/knowledge/product-engineering/src/solution/requirements/authoring/northbank-commitment-requirements.md).

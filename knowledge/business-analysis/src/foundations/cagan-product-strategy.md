@@ -23,7 +23,7 @@ sources:
   - id: management
     resource: https://www.svpg.com/product-strategy-management/
     title: Marty Cagan — Product Strategy – Management
-generated: { by: codex/gpt-6, at: 2026-11-11T20:34:01Z }
+generated: { by: codex/gpt-6, at: 2026-11-22T01:47:57Z }
 ---
 
 # Marty Cagan's product strategy
@@ -34,15 +34,11 @@ way. Its practical question is which problems product teams should work on.
 Product discovery determines effective solutions to those problems; product
 delivery builds solutions and brings them to market.[^overview]
 
-This explanation is for product leaders and teams trying to understand that
-connection. It follows Cagan's January–February 2020 SVPG articles. They state
-his advocated approach; they do not independently establish that it produces
-better results in every organization. The example below is fictional, and the
-connections to this bundle are an editorial interpretation.
-
-If the relationship to business strategy is unclear, read
-[Strategy perspectives and their relationships](strategy-perspectives.md#strategic-context-and-team-problems).
-It connects team problems to choices about advantage without requiring a handoff.
+Suppose an equipment-rental company wants contractors to book with it again.
+One depot asks for an easier way to confirm stock, while the sales team asks
+for discounts on second bookings. Either feature might find users. What would
+make one of the underlying problems worth a team's sustained attention?
+This fictional choice illustrates Cagan's 2020 account of product strategy.
 
 ## Strategy connects a future to present choices
 
@@ -80,8 +76,10 @@ also consumes leadership attention, decisions, and coordination. Saying no to
 some work is insufficient if the remaining commitments still overwhelm the
 organization.[^focus]
 
-Focus alone leaves a question unanswered: why should failed first rentals be
-the most promising place to intervene? That requires insight.
+In the rental company, choosing repeat use as a priority still leaves several
+claims on the booking team. It could make a first rental more dependable or a
+second rental cheaper. Why suspect that a failed first reservation is costing
+the company the second one?
 
 ## Insights: explain the opportunity
 
