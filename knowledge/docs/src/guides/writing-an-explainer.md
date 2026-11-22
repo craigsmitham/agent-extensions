@@ -51,12 +51,9 @@ actual report, check how the library defines a wait and which requests
 it counted. A statistics handbook can define the measures. The desk’s
 records establish what happened at this library.
 
-Try answering in a sentence. “The long wait pulled up the average” names
-the effect but leaves the mechanism unexplained. Work through it. With
-waits of 2, 2, 2, 2, and 12 days, the five borrowers waited 20 days in
-total. Sharing that total equally gives four days each. The middle entry
-is still two days. These calculations illustrate NIST’s distinction
-between the arithmetic mean and the median.[^location]
+Check the library example before drafting. For waits of 2, 2, 2, 2, and
+12 days, verify that the arithmetic mean is four days and the median
+is two.[^location]
 
 Match the evidence to each claim in your own explanation. If the question
 is why a group made a decision, look for its record or a participant’s
@@ -105,16 +102,22 @@ the sentence needed for the task and link to the full explanation there.
 Detailed instructions and tables of options have their own uses.
 Keep the details that carry this explanation’s reasoning.[^reference]
 
-Try a nearby case. If the longest wait becomes 22 days, which measure
+Choose a check that fits the reader’s original question. For the library
+figures, vary one wait. If the longest becomes 22 days, which measure
 changes? A reader who can explain why the mean rises to six while the
 median stays at two can use the account beyond the original figures. If
 they can repeat only that a long wait “pulls up the average,” revisit
 the sentence that connects an individual’s wait to the total.
 
-Without a reader, work the variation from the draft and identify the
-passage that makes it possible. Report the check you made. To judge
-whether the reader’s question calls for a different design, consult
-the [Explanation pattern](../patterns/explanation.md).
+For an explainer about a design decision, ask the reader why an
+alternative looked reasonable at the time and which constraint shaped
+the choice. If they can name only the winning design, revisit the
+passage about what the team knew when it decided.
+
+Without a reader, answer the question yourself using only the draft.
+Identify the passage that supports your answer and report the check you
+made. To judge whether the reader’s question calls for a different
+design, consult the [Explanation pattern](../patterns/explanation.md).
 
 [^explanation]: Daniele Procida, [Explanation](https://diataxis.fr/explanation/).
 [^reference]: Daniele Procida, [The difference between reference and explanation](https://diataxis.fr/reference-explanation/).
