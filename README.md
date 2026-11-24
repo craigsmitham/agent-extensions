@@ -42,6 +42,7 @@ remain members of the published packs.
 
 | Skill | Purpose | Install |
 | --- | --- | --- |
+| [`git-tidy`](./skills/git-tidy/README.md) | Review and apply Git housekeeping in batches across repositories and worktrees. | `axm install @craigsmitham/skills/git-tidy` |
 | [`assess`](./skills/assess/README.md) | Assess maintenance health and prioritize worthwhile interventions in a codebase or specified scope; assessment only. | `axm install @craigsmitham/skills/assess` |
 | [`stabilize`](./skills/stabilize/README.md) | Stabilize a codebase or specified scope by correcting failures and material weaknesses in behavior or engineering feedback. | `axm install @craigsmitham/skills/stabilize` |
 | [`refresh`](./skills/refresh/README.md) | Refresh a codebase or specified scope to remain supportable as dependencies, platforms, toolchains, and external contracts evolve. | `axm install @craigsmitham/skills/refresh` |

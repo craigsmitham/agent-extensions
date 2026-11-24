@@ -67,7 +67,8 @@
     "assess": "workspace",
     "stabilize": "workspace",
     "refresh": "workspace",
-    "simplify": "workspace"
+    "simplify": "workspace",
+    "git-tidy": "workspace"
   },
   "rules": {
     "use-effect": {

@@ -172,6 +172,7 @@ expected=(
   skills/devops-docs
   skills/docs
   skills/generalize
+  skills/git-tidy
   skills/improve
   skills/improve-whatever
   skills/modularize

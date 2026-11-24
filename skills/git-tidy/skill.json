@@ -1,0 +1,22 @@
+{
+  "$schema": "https://axm.sh/schemas/skill.schema.json",
+  "owner": "@craigsmitham",
+  "type": "skill",
+  "name": "git-tidy",
+  "version": "0.1.0",
+  "description": "Scan Git repositories, group branch, worktree, and stash findings by action, and apply selected housekeeping batches.",
+  "keywords": [
+    "git",
+    "worktrees",
+    "housekeeping",
+    "branches",
+    "stashes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigsmitham/agent-extensions",
+    "directory": "skills/git-tidy"
+  },
+  "homepage": "https://github.com/craigsmitham/agent-extensions",
+  "license": "MIT"
+}
