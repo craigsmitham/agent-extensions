@@ -1,7 +1,7 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Shared software engineering knowledge and a release-engineering skill for workflow design and change readiness.",
   "keywords": [
     "software-engineering",

@@ -10,9 +10,9 @@ The [knowledge index](https://github.com/craigsmitham/agent-extensions/blob/main
 
 For a release decision, ask the release-engineering skill “My change passed locally, then another agent updated the producer on main. Is my consumer ready to land?” It checks which results still apply and what would resolve the compatibility question.
 
-## Migrate to 5.0.0
+## Migrate to 5.x
 
-- **Earlier SWE pack.** Update the pack to 5.0.0 or later. A version constraint holding the pack to 4.x must be updated to admit the new major. Check the installed pack and its two members with `axm show @craigsmitham/packs/software-engineering`.
+- **Earlier SWE pack.** Update the pack to 5.x. For a workspace pinned to 4.1.0, AXM 0.53.1 can report `membership unknown (identity-mismatch)` when changing the pin in place. Record the old selection, run `axm uninstall @craigsmitham/packs/software-engineering`, then run `axm install '@craigsmitham/packs/software-engineering@^5.0.0'`. This replaces the old pack selection and resolves its two current members. Check the installed pack and its two members with `axm show @craigsmitham/packs/software-engineering`.
 - **Discipline pack.** Install the SWE pack first. Verify that you can read a moved concept, then uninstall your old pack by its full identity, for example `axm uninstall @craigsmitham/packs/release-engineering`.
 - **Direct bundle or placeholder skill.** Install the SWE pack, update saved concept references, then uninstall any retired identity you installed directly. Six placeholder skills are retired. Their subject matter is available in the corresponding discipline directory. Keep the release-engineering skill if you selected it directly.
 - **Projects staying on an older pack.** Release-engineering skill 0.1.1 can read its guides from the old release-engineering bundle supplied by release pack 0.2.0 or SWE pack 4.1.0. Historical package versions remain available for pinned workspaces.
@@ -28,6 +28,8 @@ axm knowledge concepts get '@craigsmitham/knowledge/software-engineering#softwar
 
 For a file bookmark, change `knowledge/<discipline>/src/<path>` to
 `knowledge/software-engineering/src/<discipline>/<path>`. This includes assets and the reserved index and log files, which are browsed as files. The mapping covers the seven discipline bundles consolidated in this release. Earlier versions of the historical software-engineering bundle through 2.8.1 had their own layout.
+
+A workspace with a minimum release age may need to wait for these versions to become eligible. To select a just-published version immediately, add `--ignore-release-age` to the install or update command.
 
 ## License
 
