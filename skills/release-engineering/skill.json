@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "release-engineering",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Design CI/CD workflows and assess change readiness through integration, deployment, rollout, and confirmation in use.",
   "license": "MIT",
   "homepage": "https://github.com/craigsmitham/agent-extensions",

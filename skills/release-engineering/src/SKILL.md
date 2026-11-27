@@ -16,11 +16,6 @@ Read the relevant concept in the software-engineering bundle under
 axm knowledge concepts get '@craigsmitham/knowledge/software-engineering#release-engineering/guides/direct-to-main-delivery'
 ```
 
-Older installations supply the same guides in the release-engineering bundle.
-If the shared bundle or requested concept is unavailable, resolve the same
-relative ID there, for example
-`@craigsmitham/knowledge/release-engineering#guides/direct-to-main-delivery`.
-
 ## Design a workflow
 
 For requests about how a team should deliver changes, use `foundations/delivering-a-software-change` to identify the outcome the team wants to improve. Use `guides/direct-to-main-delivery` for check placement, integration, and rollout under concurrent development.

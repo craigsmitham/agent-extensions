@@ -6,7 +6,3 @@ Use this section to shorten the time from starting a change to observing its eff
 
 - [Delivering a software change](foundations/delivering-a-software-change.md) — The developer’s job, six decisions along the way, and outcomes for shortening the time from starting a change to confirming it works for its intended users.
 - [Direct-to-main delivery with parallel agents](guides/direct-to-main-delivery.md) — Choose checks, integrate concurrent work, and confirm a release when developers and agents land changes directly on main and deploy from it.
-
-## Earlier editions
-
-- [Release engineering placeholder](placeholder.md) — Former scope notice for the release-engineering bundle, superseded by the delivery job map and direct-to-main guide.
