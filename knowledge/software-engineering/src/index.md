@@ -3,16 +3,16 @@ okf_version: "0.2"
 ---
 # Software engineering
 
-Start with the decision facing the team. A test or production observation can send a change back to design, and the examples below can be used independently.
+- [The software engineering lifecycle](software-engineering-lifecycle.md) — Six recurring activities connect the reason for a software change to what happens when people use it.
 
-| Work on a change | Where to start |
-| --- | --- |
-| Understand the need | Use [Jobs to Be Done](business-analysis/foundations/jobs-to-be-done.md) to understand the progress someone seeks. Use [Shape Up](project-management/foundations/shape-up.md) to bound the investment. |
-| Describe what should change | [Selecting a specification method](requirements-engineering/authoring/selecting-a-specification-method.md) helps express behavior, constraints, and acceptance conditions. |
-| Design and build | [Buxton on design](architecture-and-design/foundations/buxton-design.md) covers exploring alternatives. Use [domain-driven design](architecture-and-design/foundations/domain-driven-design.md) when concepts or interfaces need clearer boundaries. |
-| Get feedback while implementing | Turn an agreed example into an [executable specification](software-testing/patterns/executable-specifications.md). Choose [which components to exercise](software-testing/patterns/evidence-matched-test-world.md) so the test can expose the failure that matters. |
-| Integrate and release | Trace the decisions in [Delivering a software change](release-engineering/foundations/delivering-a-software-change.md). For teams shipping from main, use the [direct-to-main delivery guide](release-engineering/guides/direct-to-main-delivery.md) to place checks and handle concurrent changes. |
-| Confirm the result in production | Follow the change through exposure and observed behavior using the [delivery job map](release-engineering/foundations/delivering-a-software-change.md). If users are affected by a failure, use [incident policy and records](software-operations/foundations/incident-policy-and-records.md) to coordinate recovery. |
+| Activity | What do you need to decide? | Where to start |
+| --- | --- | --- |
+| **Spec** | Whose problem is worth solving, and what would count as success? | Understand the need with [Jobs to Be Done](business-analysis/foundations/jobs-to-be-done.md), bound the investment with [Shape Up](project-management/foundations/shape-up.md), and [choose a specification method](requirements-engineering/authoring/selecting-a-specification-method.md). |
+| **Design** | Which approach fits the problem and the existing system? | [Explore design alternatives](architecture-and-design/foundations/buxton-design.md) or [clarify the domain model](architecture-and-design/foundations/domain-driven-design.md). |
+| **Implement** | How can I get a working slice running alongside other changes? | Turn an agreed example into an [executable specification](software-testing/patterns/executable-specifications.md). For teams integrating on main, [check compatibility as main advances](release-engineering/guides/direct-to-main-delivery.md). |
+| **Test** | What needs to run for a consequential failure to show up? | Choose [which components to exercise](software-testing/patterns/evidence-matched-test-world.md) and [what to observe in the browser](software-testing/writing-browser-test-evidence.md). |
+| **Deploy** | Which revision can advance, and who should receive it? | Use the [delivery decisions](release-engineering/foundations/delivering-a-software-change.md) to connect evidence to a release. Teams deploying from main can use the [direct-to-main guide](release-engineering/guides/direct-to-main-delivery.md) to plan rollout. |
+| **Operate** | Did users receive the intended benefit, and what needs attention? | [Confirm the result in use](release-engineering/foundations/delivering-a-software-change.md). During a disruption, [coordinate response and record recovery](software-operations/foundations/incident-policy-and-records.md). |
 
 ## Browse by discipline
 
