@@ -1,12 +1,11 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "4.0.1",
-  "description": "Aggregate of seven software-engineering discipline packs’ members: migrated knowledge, and placeholder skills.",
+  "version": "4.1.0",
+  "description": "Seven software-engineering disciplines including release workflow design and change readiness.",
   "keywords": [
     "software-engineering",
-    "disciplines",
-    "placeholder"
+    "disciplines"
   ],
   "repository": {
     "type": "git",
@@ -26,8 +25,8 @@
     "@craigsmitham/knowledge/architecture-and-design": ">=0.1.0",
     "@craigsmitham/skills/software-testing": ">=0.0.1",
     "@craigsmitham/knowledge/software-testing": ">=0.1.0",
-    "@craigsmitham/skills/release-engineering": ">=0.0.1",
-    "@craigsmitham/knowledge/release-engineering": ">=0.1.0",
+    "@craigsmitham/skills/release-engineering": ">=0.1.0",
+    "@craigsmitham/knowledge/release-engineering": ">=0.2.0",
     "@craigsmitham/skills/software-operations": ">=0.0.1",
     "@craigsmitham/knowledge/software-operations": ">=0.1.0",
     "@craigsmitham/skills/project-management": ">=0.0.1",

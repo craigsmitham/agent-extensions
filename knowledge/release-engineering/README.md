@@ -1,23 +1,14 @@
 # Release engineering
 
-This placeholder reserves space for guidance on release preparation, packaging, distribution, deployment, and rollout. It currently contains only a scope notice.
+Use the [delivery job map](src/foundations/delivering-a-software-change.md) to choose which outcome to improve. Use the [direct-to-main guide](src/guides/direct-to-main-delivery.md) to decide how to integrate concurrent changes, deploy a verified revision, and confirm the effect for users.
 
-From the project where you want to use this bundle, install the [release-engineering pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/release-engineering) to get this bundle and its companion placeholder skill.
+Install the [release-engineering pack](https://github.com/craigsmitham/agent-extensions/tree/main/packs/release-engineering) to use the bundle with its companion skill.
 
 ```sh
 axm install @craigsmitham/packs/release-engineering
-```
-
-If AXM prompts for project setup, select the agents that should discover the
-bundle and enable instruction syncing to give them its lookup route. For
-command-line lookup alone, you can leave the agent selection empty.
-
-Read the installed bundle's [scope notice](src/placeholder.md) from the same project.
-
-```sh
-axm knowledge concepts get '@craigsmitham/knowledge/release-engineering#placeholder'
+axm knowledge concepts get '@craigsmitham/knowledge/release-engineering#guides/direct-to-main-delivery'
 ```
 
 ## License
 
-CC-BY-4.0. This package currently contains scope and placeholder metadata only.
+CC-BY-4.0.

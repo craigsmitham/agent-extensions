@@ -3,13 +3,14 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "release-engineering",
-  "version": "0.0.1",
-  "description": "Placeholder for release preparation, packaging, distribution, deployment, and rollout; task guidance has not been authored.",
+  "version": "0.1.0",
+  "description": "Design CI/CD workflows and assess change readiness through integration, deployment, rollout, and confirmation in use.",
   "license": "MIT",
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "keywords": [
     "release-engineering",
-    "placeholder",
+    "continuous-delivery",
+    "readiness",
     "software-engineering"
   ],
   "repository": {
@@ -17,7 +18,7 @@
     "url": "https://github.com/craigsmitham/agent-extensions",
     "directory": "skills/release-engineering"
   },
-  "standalone": true,
+  "standalone": false,
   "recommendedPacks": [
     "@craigsmitham/packs/release-engineering",
     "@craigsmitham/packs/software-engineering"

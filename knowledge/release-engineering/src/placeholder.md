@@ -1,13 +1,10 @@
 ---
 type: Reference
 title: Release engineering placeholder
-description: Placeholder status for the release-engineering knowledge bundle; no domain guidance has been authored.
+description: Former scope notice for the release-engineering bundle, superseded by the delivery job map and direct-to-main guide.
 tags: [release-engineering, placeholder]
-status: draft
+status: deprecated
 ---
-
 # Release engineering placeholder
 
-This knowledge bundle is a placeholder. No release-engineering guidance has
-been authored. Its pack includes the shared software-engineering foundations
-and a placeholder skill.
+The original scope notice has been superseded. Start with [Delivering a software change](foundations/delivering-a-software-change.md) for the job map or [Direct-to-main delivery with parallel agents](guides/direct-to-main-delivery.md) for workflow decisions.

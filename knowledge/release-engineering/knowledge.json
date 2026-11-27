@@ -2,14 +2,14 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "release-engineering",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "type": "knowledge",
   "format": {
     "name": "okf",
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "Release preparation, packaging, distribution, deployment, and rollout. Placeholder bundle; no domain guidance has been authored.",
+  "description": "Delivery job map, desired outcomes, and direct-to-main guidance for testing, integration, deployment, and rollout with parallel agents.",
   "license": "CC-BY-4.0",
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "keywords": [

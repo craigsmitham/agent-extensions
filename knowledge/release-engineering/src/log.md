@@ -1,5 +1,11 @@
 # Log
 
+## 2026-11-27
+
+- Defined verification priorities, measures, and project overrides. The workflow guide compares three placements for a compatibility suite.
+
+- Added the [delivery job map](foundations/delivering-a-software-change.md) and [direct-to-main workflow guide](guides/direct-to-main-delivery.md). Retained the earlier scope notice as a deprecated route.
+
 ## 2026-11-18
 
 - Removed the empty Foundations index. The bundle index links directly to the placeholder notice.

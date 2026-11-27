@@ -1,13 +1,12 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "0.1.1",
-  "description": "Release preparation, packaging, distribution, deployment, and rollout; existing knowledge where available, and a placeholder skill.",
+  "version": "0.2.0",
+  "description": "Guide a change from development through verified delivery with parallel agents and deployments from main.",
   "keywords": [
     "release-engineering",
-    "software-engineering",
-    "discipline",
-    "placeholder"
+    "continuous-delivery",
+    "trunk-based-development"
   ],
   "repository": {
     "type": "git",
@@ -19,7 +18,7 @@
   "type": "pack",
   "name": "release-engineering",
   "dependencies": {
-    "@craigsmitham/skills/release-engineering": ">=0.0.1",
-    "@craigsmitham/knowledge/release-engineering": ">=0.1.0"
+    "@craigsmitham/skills/release-engineering": ">=0.1.0",
+    "@craigsmitham/knowledge/release-engineering": ">=0.2.0"
   }
 }

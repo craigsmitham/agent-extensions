@@ -25,7 +25,7 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | [docs](knowledge/docs/src/index.md) | Explainers, authoring guides, and patterns for documentation across domains, including knowledge bases, product guides, and reusable checklists |
 | [effect](knowledge/effect/src/index.md) | Checklists to consult when designing, implementing, maintaining, or reviewing Effect v4 TypeScript |
 | [project-management](knowledge/project-management/src/index.md) | Project capabilities, plans, commitments, resources, and progress; migrated existing knowledge. |
-| [release-engineering](knowledge/release-engineering/src/index.md) | Release preparation, packaging, distribution, deployment, and rollout. Placeholder bundle; no domain guidance has been authored. |
+| [release-engineering](knowledge/release-engineering/src/index.md) | Delivery job map, desired outcomes, and direct-to-main guidance for testing, integration, deployment, and rollout with parallel agents. |
 | [requirements-engineering](knowledge/requirements-engineering/src/index.md) | Requirements development, specification, review, and maintenance; migrated existing knowledge. |
 | [software-operations](knowledge/software-operations/src/index.md) | Software operation, service reliability, incident response, and recovery; migrated existing knowledge. |
 | [software-testing](knowledge/software-testing/src/index.md) | Test design, executable specifications, execution, evidence, suite quality, and defect reporting. |

@@ -49,10 +49,7 @@
       "source": "workspace",
       "enabled": false
     },
-    "release-engineering": {
-      "source": "workspace",
-      "enabled": false
-    },
+    "release-engineering": "workspace",
     "software-operations": {
       "source": "workspace",
       "enabled": false

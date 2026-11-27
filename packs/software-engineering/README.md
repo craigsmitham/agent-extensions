@@ -1,8 +1,6 @@
 # Software engineering
 
-An optional aggregate of the seven discipline collections. It installs seven
-knowledge bundles and seven placeholder skills. Existing knowledge is partial;
-the release-engineering knowledge bundle and all seven skills are placeholders.
+An optional aggregate of the seven discipline collections. It installs seven knowledge bundles and seven skills. Release engineering includes a delivery job map, a direct-to-main guide, and a skill for workflow design and readiness decisions. The other six discipline skills are placeholders.
 
 AXM packs do not nest. This pack lists each discipline’s skill and knowledge
 bundle directly.

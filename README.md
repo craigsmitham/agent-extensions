@@ -16,13 +16,11 @@ and are not published from this repository.
 | `effect` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect` |
 | [`docs`](./packs/docs/README.md) | Write, organize, and review documentation across domains in software engineering workspaces | `axm install @craigsmitham/packs/docs` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
-| [`software-engineering`](./packs/software-engineering/README.md) | Aggregate of seven discipline collections: migrated knowledge and placeholder skills | `axm install @craigsmitham/packs/software-engineering` |
+| [`software-engineering`](./packs/software-engineering/README.md) | Seven discipline collections, including release workflow design and change readiness | `axm install @craigsmitham/packs/software-engineering` |
 
 ## Software-engineering disciplines
 
-Each discipline pack includes its same-named skill and knowledge bundle. All seven skills are placeholders. Knowledge
-coverage reflects existing migrated material; release engineering contains only
-a placeholder notice. No new domain guidance was authored for this migration.
+Each discipline pack includes its same-named skill and knowledge bundle. Release engineering includes an active delivery skill and a direct-to-main workflow guide. The other six discipline skills are placeholders with partial knowledge coverage.
 
 | Pack | Intended scope |
 | --- | --- |
@@ -30,7 +28,7 @@ a placeholder notice. No new domain guidance was authored for this migration.
 | [`requirements-engineering`](./packs/requirements-engineering/README.md) | Requirements development, specification, review, and maintenance |
 | [`architecture-and-design`](./packs/architecture-and-design/README.md) | Software architecture, domain modeling, and design |
 | [`software-testing`](./packs/software-testing/README.md) | Test design, execution, evidence, suite quality, and defect reporting |
-| [`release-engineering`](./packs/release-engineering/README.md) | Release preparation, packaging, distribution, deployment, and rollout |
+| [`release-engineering`](./packs/release-engineering/README.md) | Delivery workflow design, change readiness, deployment from main, and verification in use |
 | [`software-operations`](./packs/software-operations/README.md) | Software operation, service reliability, incident response, and recovery |
 | [`project-management`](./packs/project-management/README.md) | Project capabilities, plans, commitments, resources, and progress |
 
