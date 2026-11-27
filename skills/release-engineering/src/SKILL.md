@@ -9,11 +9,17 @@ Help a developer deliver a change and confirm it works for its intended users. U
 
 Unless project instructions specify otherwise, prioritize **speed first, efficiency second, consistency third**. Compare options that provide credible evidence in time for the decision and satisfy required checks. Choose the shortest path to actionable feedback and confirmed delivery across the team, including queueing and rework. For comparable timing, prefer lower resource and attention cost. For comparable cost as well, prefer the more reproducible verdict. Apply a scoped project override only where it governs.
 
-Read the relevant concept in the companion `@craigsmitham/knowledge/release-engineering` bundle through host discovery or AXM. For example:
+Read the relevant concept in the software-engineering bundle under
+`release-engineering/`. For example:
 
 ```sh
-axm knowledge concepts get '@craigsmitham/knowledge/release-engineering#guides/direct-to-main-delivery'
+axm knowledge concepts get '@craigsmitham/knowledge/software-engineering#release-engineering/guides/direct-to-main-delivery'
 ```
+
+Older installations supply the same guides in the release-engineering bundle.
+If the shared bundle or requested concept is unavailable, resolve the same
+relative ID there, for example
+`@craigsmitham/knowledge/release-engineering#guides/direct-to-main-delivery`.
 
 ## Design a workflow
 

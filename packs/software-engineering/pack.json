@@ -1,11 +1,12 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "4.1.0",
-  "description": "Seven software-engineering disciplines including release workflow design and change readiness.",
+  "version": "5.0.0",
+  "description": "Shared software engineering knowledge and a release-engineering skill for workflow design and change readiness.",
   "keywords": [
     "software-engineering",
-    "disciplines"
+    "software-delivery",
+    "release-engineering"
   ],
   "repository": {
     "type": "git",
@@ -17,19 +18,7 @@
   "type": "pack",
   "name": "software-engineering",
   "dependencies": {
-    "@craigsmitham/skills/business-analysis": ">=0.0.1",
-    "@craigsmitham/knowledge/business-analysis": ">=0.1.0",
-    "@craigsmitham/skills/requirements-engineering": ">=0.0.1",
-    "@craigsmitham/knowledge/requirements-engineering": ">=1.0.0",
-    "@craigsmitham/skills/architecture-and-design": ">=0.0.1",
-    "@craigsmitham/knowledge/architecture-and-design": ">=0.1.0",
-    "@craigsmitham/skills/software-testing": ">=0.0.1",
-    "@craigsmitham/knowledge/software-testing": ">=0.1.0",
-    "@craigsmitham/skills/release-engineering": ">=0.1.0",
-    "@craigsmitham/knowledge/release-engineering": ">=0.2.0",
-    "@craigsmitham/skills/software-operations": ">=0.0.1",
-    "@craigsmitham/knowledge/software-operations": ">=0.1.0",
-    "@craigsmitham/skills/project-management": ">=0.0.1",
-    "@craigsmitham/knowledge/project-management": ">=0.1.0"
+    "@craigsmitham/knowledge/software-engineering": "^3.0.0",
+    "@craigsmitham/skills/release-engineering": "^0.1.1"
   }
 }

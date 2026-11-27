@@ -143,32 +143,17 @@ find_authored_manifests() {
 }
 
 expected=(
-  knowledge/architecture-and-design
-  knowledge/business-analysis
   knowledge/docs
   knowledge/effect
-  knowledge/project-management
-  knowledge/release-engineering
-  knowledge/requirements-engineering
-  knowledge/software-operations
-  knowledge/software-testing
-  packs/architecture-and-design
-  packs/business-analysis
+  knowledge/software-engineering
   packs/docs
   packs/effect
-  packs/project-management
-  packs/release-engineering
-  packs/requirements-engineering
   packs/research
   packs/software-engineering
   packs/software-maintenance
-  packs/software-operations
-  packs/software-testing
   rules/use-effect
   skills/align
-  skills/architecture-and-design
   skills/assess
-  skills/business-analysis
   skills/devops-docs
   skills/docs
   skills/generalize
@@ -177,17 +162,13 @@ expected=(
   skills/improve-whatever
   skills/modularize
   skills/okf
-  skills/project-management
   skills/prune
   skills/reconcile
   skills/refresh
   skills/release-engineering
-  skills/requirements-engineering
   skills/research
   skills/reuse
   skills/simplify
-  skills/software-operations
-  skills/software-testing
   skills/spot-spew
   skills/stabilize
   skills/temporal-dates

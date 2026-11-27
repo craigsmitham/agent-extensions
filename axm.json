@@ -33,31 +33,7 @@
     "align": "workspace",
     "prune": "workspace",
     "improve": "workspace",
-    "business-analysis": {
-      "source": "workspace",
-      "enabled": false
-    },
-    "requirements-engineering": {
-      "source": "workspace",
-      "enabled": false
-    },
-    "architecture-and-design": {
-      "source": "workspace",
-      "enabled": false
-    },
-    "software-testing": {
-      "source": "workspace",
-      "enabled": false
-    },
     "release-engineering": "workspace",
-    "software-operations": {
-      "source": "workspace",
-      "enabled": false
-    },
-    "project-management": {
-      "source": "workspace",
-      "enabled": false
-    },
     "reconcile": "workspace",
     "modularize": "workspace",
     "reuse": "workspace",
@@ -76,13 +52,7 @@
   "knowledge": {
     "docs": "workspace",
     "effect": "workspace",
-    "business-analysis": "workspace",
-    "requirements-engineering": "workspace",
-    "architecture-and-design": "workspace",
-    "software-testing": "workspace",
-    "release-engineering": "workspace",
-    "software-operations": "workspace",
-    "project-management": "workspace"
+    "software-engineering": "workspace"
   },
   "subagents": {
     "researcher": "workspace"
@@ -92,13 +62,6 @@
     "docs": "workspace",
     "research": "workspace",
     "software-engineering": "workspace",
-    "business-analysis": "workspace",
-    "requirements-engineering": "workspace",
-    "architecture-and-design": "workspace",
-    "software-testing": "workspace",
-    "release-engineering": "workspace",
-    "software-operations": "workspace",
-    "project-management": "workspace",
     "software-maintenance": "workspace",
     "axe": "agentxm:@agentxm/packs/axe"
   },

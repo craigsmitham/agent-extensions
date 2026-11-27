@@ -42,9 +42,9 @@ patterns, the companion routes lead to the relevant domain guidance.
 
 | Pattern | Where it fits | What changes the decision |
 | --- | --- | --- |
-| [Executable specifications](../knowledge/software-testing/src/patterns/executable-specifications.md) | A membership team accepts a calendar-day refund rule. The owners can read and check the £120 and £0 outcomes on days 14 and 15. | If the same outputs come only from observing legacy software, a characterization test can preserve the observations. Accepting the rule remains an owner decision. |
-| [Evidence-matched test world](../knowledge/software-testing/src/patterns/evidence-matched-test-world.md) | A direct test suffices to check whether the exporter selects André's name. | If the downloaded name loses its accent, inspect the delivered bytes. The download handler can introduce the fault after selection succeeds. |
-| [Owned test worlds](../knowledge/software-testing/src/patterns/owned-test-world.md) | An abandoned queue item can make a different test run appear successful. Distinguishing runs lets an owner reclaim expired work while preserving active work. | A pure calculation with local inputs leaves nothing for the next run to inherit. Ordinary ownership of its test code suffices. |
+| [Executable specifications](../knowledge/software-engineering/src/software-testing/patterns/executable-specifications.md) | A membership team accepts a calendar-day refund rule. The owners can read and check the £120 and £0 outcomes on days 14 and 15. | If the same outputs come only from observing legacy software, a characterization test can preserve the observations. Accepting the rule remains an owner decision. |
+| [Evidence-matched test world](../knowledge/software-engineering/src/software-testing/patterns/evidence-matched-test-world.md) | A direct test suffices to check whether the exporter selects André's name. | If the downloaded name loses its accent, inspect the delivered bytes. The download handler can introduce the fault after selection succeeds. |
+| [Owned test worlds](../knowledge/software-engineering/src/software-testing/patterns/owned-test-world.md) | An abandoned queue item can make a different test run appear successful. Distinguishing runs lets an owner reclaim expired work while preserving active work. | A pure calculation with local inputs leaves nothing for the next run to inherit. Ordinary ownership of its test code suffices. |
 
 ## What the checks establish
 
