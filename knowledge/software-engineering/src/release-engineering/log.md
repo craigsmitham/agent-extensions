@@ -2,6 +2,8 @@
 
 ## 2026-11-27
 
+- Revised the delivery model and direct-to-main guidance to trace a change from implementation through confirmed use, prioritizing speed and then efficiency among options with sufficient coverage.
+
 - Defined verification priorities, measures, and project overrides. The workflow guide compares three placements for a compatibility suite.
 
 - Added the [delivery job map](foundations/delivering-a-software-change.md) and [direct-to-main workflow guide](guides/direct-to-main-delivery.md). Retained the earlier scope notice as a deprecated route.

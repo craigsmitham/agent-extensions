@@ -33,7 +33,6 @@
     "align": "workspace",
     "prune": "workspace",
     "improve": "workspace",
-    "release-engineering": "workspace",
     "reconcile": "workspace",
     "modularize": "workspace",
     "reuse": "workspace",
@@ -41,7 +40,8 @@
     "stabilize": "workspace",
     "refresh": "workspace",
     "simplify": "workspace",
-    "git-tidy": "workspace"
+    "git-tidy": "workspace",
+    "delivery": "workspace"
   },
   "rules": {
     "use-effect": {

@@ -22,5 +22,5 @@ Use `axm knowledge concepts --help` to search, read, and explore these bundles.
 | --- | --- |
 | [docs](knowledge/docs/src/index.md) | Explainers, authoring guides, and patterns for documentation across domains, including knowledge bases, product guides, and reusable checklists |
 | [effect](knowledge/effect/src/index.md) | Checklists to consult when designing, implementing, maintaining, or reviewing Effect v4 TypeScript |
-| [software-engineering](knowledge/software-engineering/src/index.md) | Understand a user need, design and test a change, integrate it, and confirm its behavior in production. |
+| [software-engineering](knowledge/software-engineering/src/index.md) | The software engineering lifecycle and the path from implementing a change to confirming its effect in production. |
 <!-- /axm:knowledge -->

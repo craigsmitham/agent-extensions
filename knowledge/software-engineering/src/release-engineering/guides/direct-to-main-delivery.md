@@ -20,26 +20,24 @@ sources:
   - id: willison
     title: Red/green TDD
     resource: https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/
-generated: { by: codex/gpt-6, at: 2026-11-27T17:44:17Z }
+  - id: hooks
+    title: Git hooks
+    resource: https://git-scm.com/docs/githooks
+  - id: deployment
+    title: Deployment automation
+    resource: https://dora.dev/capabilities/deployment-automation/
+generated: { by: codex/gpt-6, at: 2026-11-27T23:48:04Z }
 ---
 
 # Direct-to-main delivery with parallel agents
 
-Use this guide in a repository where developers and agents integrate directly into `main` and deployments originate there. The person or agent responsible for a change chooses when the evidence supports advancing it. They can bring in another developer for a specific uncertainty, such as two plausible interpretations of an API contract. Routine changes can proceed without a PR or a standing review queue.
+The implementer owns the change through shared main and follows its release to confirmation. A temporary branch or worktree can isolate a change while the implementer builds and tests it. Follow the repository’s integration policy, whether it accepts direct pushes, pull requests, or a merge queue. Releases originate from verified revisions of main.
 
 ## Choose a verification strategy
 
-The default order is **speed, then efficiency, then consistency**. Apply a different priority or required check wherever project instructions specify one. For each claim, ask what a failure would change and when the answer is needed. Choose one default verification point. A second run earns its place when an input changed, a different environment answers a distinct question, or project policy requires it.
+Choose the fastest path that exercises the consequential failures in time for the decision. Include queueing, rework, and the time other agents spend waiting. When two approaches finish in comparable time, prefer the one that uses fewer runner-minutes or less developer attention. A scoped project requirement can settle the choice.
 
-Consider a compatibility suite that can run on one runner or be split across several. The choice depends on the constraint:
-
-| Leading priority | Placement decision | Benefit and tradeoff |
-| --- | --- | --- |
-| Speed (pack default) | Split the suite across spare runners if that returns an actionable result sooner. Include the wait imposed on other agents when estimating the gain. | The developer can advance or correct the change sooner, at the cost of extra runner-minutes. |
-| Efficiency (project preference) | With metered runners and an acceptable detection window, share one result for the verified candidate and use the cheaper serial run. | Conserves compute. A failure can reach its author later. |
-| Consistency (project preference) | If the project calls for a reproducible compatibility verdict on a designated runner, use that environment for the release decision. | Agents can compare results under controlled conditions. Waiting for that runner can extend delivery time. |
-
-Under the default order, if two credible placements finish at roughly the same time, take the cheaper one. If cost is also comparable, choose the more repeatable one. A result already available for the relevant inputs may satisfy all three at once.
+For example, splitting a compatibility suite across spare runners can give the author an answer sooner. If those runners are already occupied, the same split may delay several other changes. When a prior run already covered the relevant inputs on the required platform, reusing its result can save both time and compute. A new platform, a changed contract, or a required independent run can justify the extra cost.
 
 ## Design the workflow around one real change
 
@@ -49,12 +47,17 @@ Choose parallel work by the assumptions it shares. An API producer and a consume
 
 ## Place checks where their results affect a decision
 
-| Decision | Evidence and placement | What a failure should affect |
+| Where work runs | Question and typical check | What depends on the result |
 | --- | --- | --- |
-| Continue implementation or correct it | Exercise the changed path in the developer or agent environment. For a reproducible bug, see the regression check fail for the original reason and pass with the fix. Use a browser, CLI, or real request when that is how the behavior can be observed.[^willison][^ball] | The author can correct the change while the cause is fresh. |
-| Integrate with current work | Compare the candidate with current main. Exercise changed contracts and dependencies together. Run the repository’s required pre-integration checks. | Hold the affected change until the evidence supports landing it. |
-| Deploy a revision from main | Use evidence valid for the integrated revision and the artifact built from it, including any required CI result. Reuse an applicable candidate result when project policy accepts it. Packaging checks may find missing assets or dependencies that a checkout supplies. | Exclude a failed or unchecked candidate from deployment. Restore a broken main promptly by correcting or reverting the responsible change. |
-| Expose the change more widely | Exercise the deployed path with a suitable initial audience and observe the consequence that matters. A smoke request may suffice for a copy edit. A database change under load may need a representative traffic window. | Pause expansion, contain the effect, or correct the release according to what the observation shows. |
+| Implementer’s checkout or worktree | Exercise the changed path. Reproduce a defect with the smallest test, browser interaction, or real request that exposes it.[^willison][^ball] | Correct the behavior while the cause is fresh. |
+| Local pre-commit hook | Does this staged snapshot pass quick, deterministic checks such as syntax or manifest validation? Check the staged content when unstaged edits could mask a failure. | Recording a commit, including a commit made directly on local main. Keep the underlying command runnable on demand. |
+| Local pre-push hook | Do the outgoing commits pass the checks that depend on this revision or destination? Run a focused compatibility check here if it can avoid an expensive remote round trip. | Sending updates to the remote. A failed hook gives the implementer a chance to fix the candidate before pushing.[^hooks] |
+| Before shared main changes | Does the candidate work with current main? Use a required CI result, merge queue, or the repository’s direct-push policy to check the combined revision where necessary. | Accepting the change on shared main. A commit to local main can still be unpublished. A hosted merge can bypass local hooks, so enforce any shared requirement at the integration point. |
+| CI for the integrated revision | Does the clean build pass the required checks? Does the packaged artifact include what an installed consumer needs? Identify the revision and artifact each result covers. | Release eligibility when CI runs after landing. On a broken main, fix or revert promptly. |
+| Deployment to a target | Does the verified artifact start or install with that target’s configuration and dependencies? Promote the same artifact through relevant environments.[^deployment] | Completing deployment. Hold the affected rollout on a failed installation or smoke test. |
+| Exposure and use | Can the initial audience perform the intended task? Observe a representative request or a suitable traffic window. | Widening, pausing, or correcting the rollout and confirming recovery. |
+
+A check can be initiated locally and exercise a remote preview. Record where it ran **and** which system it observed. Use a remote environment when hosted configuration or realistic dependencies matter, and check production when only exposure to the intended audience can answer the question.
 
 A fast private build and a shared integration build can establish different facts.[^trunk] Place longer checks according to what a late failure would cost. If a compatibility test is the only way to catch an unreadable file format before distribution, wait for it before releasing the artifact. A broad exploratory run can proceed in the background when its findings can safely arrive later and someone will act on them. Use a representative test environment when an answer needs deployment configuration or realistic data. Introduce a shared staging environment when its evidence justifies the wait for access.
 
@@ -66,7 +69,7 @@ For example, an agent adds an order summary that reads an API fixture. While its
 
 ## Choose the deployment and release boundary
 
-Tie the deploy decision to a verified main revision and its artifact. If main advances while a build is in flight, promote the artifact whose checks passed. Preserve rollout order so an older job finishing late cannot replace a newer deployment unintentionally. An automatically deployed web service and a CLI distributed on a schedule can share main. Amp describes both cadences and using feature flags or instrumentation to learn from production before expanding a release.[^amp]
+Tie the deploy decision to a verified main revision and its artifact. Record what starts deployment, such as successful main CI, a release schedule, or an authorized promotion. If main advances while a build is in flight, promote the artifact whose checks passed. Preserve rollout order so an older job finishing late cannot replace a newer deployment unintentionally. An automatically deployed web service and a CLI distributed on a schedule can share main. Amp describes both cadences and using feature flags or instrumentation to learn from production before expanding a release.[^amp]
 
 Choose exposure according to the cost of a wrong decision and the ability to recover. Use an existing flag, limited audience, or canary when it isolates a meaningful risk. Identify who or what will observe the deployed behavior and which result supports widening, pausing, or restoring it. When access or traffic is missing, state what has been established, what observation remains, and how to obtain it. A successful deployment record establishes which build reached an environment. Completion of the user’s task requires an observation tied to that behavior.
 
@@ -78,10 +81,12 @@ Choose exposure according to the cost of a wrong decision and the ability to rec
 | Add an order summary while its provider changes | Exercise the real response through the consumer on the combined candidate. Retain unrelated results. A passing fixture test alone leaves an open compatibility question. | Deploy the compatible integrated revision. Exercise the order-summary path for an eligible account and check its total against the source order. Hold wider exposure if values disagree. |
 | Change stored data while old workers are active | Use representative existing records. Exercise old and new readers and writers against the proposed schema. Rehearse interruption and resumption of the backfill. | Land compatible schema expansion first. Backfill incrementally and compare migrated values. Switch reads when evidence supports it and retire the old representation after old consumers are gone. If values diverge, pause writes or the backfill as appropriate, preserve recoverable data, and reconcile affected records. Reverting an application binary leaves persisted writes in place. |
 
-When a release goes wrong, contain the affected path, confirm recovery with the same user-visible observation that revealed the failure, and identify when unrelated releases can resume. Release engineering owns the decision to advance or hold a revision. Draw on testing expertise for the design of a discriminating check and operations expertise for diagnosis and service recovery. Use the [delivery job map](../foundations/delivering-a-software-change.md) to decide whether a workflow change reduced delay, interference, or user impact.
+When a release goes wrong, contain the affected path, confirm recovery with the same user-visible observation that revealed the failure, and identify when unrelated releases can resume. The implementer follows the decision to advance or hold the revision under the repository’s release policy. Draw on testing expertise for the design of a discriminating check and operations expertise for diagnosis and service recovery. Use [Delivering a software change](../foundations/delivering-a-software-change.md) to decide whether a workflow change reduced delay, interference, or user impact.
 
 [^trunk]: [Trunk Based Development, Fast, green builds](https://trunkbaseddevelopment.com/fast-green-builds/).
 [^steinberger]: [Peter Steinberger, Just Talk To It](https://steipete.me/posts/just-talk-to-it).
 [^ball]: [Thorsten Ball, Joy & Curiosity 71](https://registerspill.thorstenball.com/p/joy-and-curiosity-71).
 [^amp]: [Quinn Slack and Thorsten Ball, The Company of the Future](https://ampcode.com/podcast/season-02/episode-06).
 [^willison]: [Simon Willison, Red/green TDD](https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/).
+[^hooks]: [Git hook semantics](https://git-scm.com/docs/githooks).
+[^deployment]: [DORA on deployment automation](https://dora.dev/capabilities/deployment-automation/).

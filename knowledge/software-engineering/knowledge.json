@@ -2,14 +2,14 @@
   "$schema": "https://axm.sh/schemas/knowledge.schema.json",
   "owner": "@craigsmitham",
   "name": "software-engineering",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "type": "knowledge",
   "format": {
     "name": "okf",
     "version": "0.2"
   },
   "bundleRoot": "src",
-  "description": "Understand a user need, design and test a change, integrate it, and confirm its behavior in production.",
+  "description": "The software engineering lifecycle and the path from implementing a change to confirming its effect in production.",
   "license": "CC-BY-SA-4.0 AND CC-BY-4.0",
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "keywords": [

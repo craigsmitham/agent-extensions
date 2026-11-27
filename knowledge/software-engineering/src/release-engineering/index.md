@@ -1,8 +1,8 @@
 # Release engineering
 
-Use this section to shorten the time from starting a change to observing its effect in production. The job map defines the default priorities of speed, efficiency, and consistency, in that order. The workflow guide shows how to place checks under those priorities or a project-specific override.
+The implementer owns integration on shared main and follows the released artifact to its intended users. Use the delivery model to choose sufficient evidence for each decision and the direct-to-main guide to place checks in a repository’s workflow.
 
 ## Delivery decisions
 
-- [Delivering a software change](foundations/delivering-a-software-change.md) — The developer’s job, six decisions along the way, and outcomes for shortening the time from starting a change to confirming it works for its intended users.
+- [Delivering a software change](foundations/delivering-a-software-change.md) — Follow one change through Implement, Land, Release, and Confirm, from the first useful check to evidence that the change works for its intended users.
 - [Direct-to-main delivery with parallel agents](guides/direct-to-main-delivery.md) — Choose checks, integrate concurrent work, and confirm a release when developers and agents land changes directly on main and deploy from it.

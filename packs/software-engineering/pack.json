@@ -1,8 +1,8 @@
 {
   "$schema": "https://axm.sh/schemas/pack.schema.json",
   "owner": "@craigsmitham",
-  "version": "6.0.0",
-  "description": "Shared software engineering knowledge and a release-engineering skill for workflow design and change readiness.",
+  "version": "7.0.0",
+  "description": "Software engineering lifecycle knowledge and a delivery skill for shipping changes, assessing the path to production, and improving it.",
   "keywords": [
     "software-engineering",
     "software-delivery",
@@ -18,7 +18,7 @@
   "type": "pack",
   "name": "software-engineering",
   "dependencies": {
-    "@craigsmitham/knowledge/software-engineering": "^4.0.0",
-    "@craigsmitham/skills/release-engineering": "^0.2.0"
+    "@craigsmitham/knowledge/software-engineering": "^5.0.0",
+    "@craigsmitham/skills/delivery": "^0.1.0"
   }
 }

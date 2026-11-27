@@ -2,21 +2,21 @@
   "$schema": "https://axm.sh/schemas/skill.schema.json",
   "owner": "@craigsmitham",
   "type": "skill",
-  "name": "release-engineering",
-  "version": "0.2.0",
-  "description": "Design CI/CD workflows and assess change readiness through integration, deployment, rollout, and confirmation in use.",
+  "name": "delivery",
+  "version": "0.1.0",
+  "description": "Deliver software changes through main and production, assess a repository’s path to production, or improve its speed, efficiency, and verification coverage.",
   "license": "MIT",
   "homepage": "https://github.com/craigsmitham/agent-extensions",
   "keywords": [
-    "release-engineering",
+    "software-delivery",
     "continuous-delivery",
-    "readiness",
+    "verification",
     "software-engineering"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/craigsmitham/agent-extensions",
-    "directory": "skills/release-engineering"
+    "directory": "skills/delivery"
   },
   "standalone": false,
   "recommendedPacks": [

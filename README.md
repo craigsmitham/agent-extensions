@@ -16,7 +16,7 @@ and are not published from this repository.
 | `effect` | Effect v4 guidance: a rule requiring v4 conventions plus a knowledge bundle of twenty-four concise topic checklists | `axm install @craigsmitham/packs/effect` |
 | [`docs`](./packs/docs/README.md) | Write, organize, and review documentation across domains in software engineering workspaces | `axm install @craigsmitham/packs/docs` |
 | `research` | Fresh-context, read-only research framing and evidence gathering with inspectable uncertainty | `axm install @craigsmitham/packs/research` |
-| [`software-engineering`](./packs/software-engineering/README.md) | Shared engineering knowledge from user need through production, with a skill for release workflow design and change readiness | `axm install @craigsmitham/packs/software-engineering` |
+| [`software-engineering`](./packs/software-engineering/README.md) | The software engineering lifecycle and a skill for delivering changes, assessing the path to production, and improving it | `axm install @craigsmitham/packs/software-engineering` |
 
 ## Standalone skills
 

@@ -2,11 +2,11 @@
 
 Use the [bundle index](src/index.md) to follow a change from a user need through implementation, testing, release, and observation in production. It also links to all seven discipline indexes.
 
-Install the bundle and its release-engineering skill together:
+Use [Delivering a software change](src/release-engineering/foundations/delivering-a-software-change.md) for the Implement → Land → Release → Confirm cycle and measures of delivery performance. Install the bundle and delivery skill together.
 
 ```sh
 axm install @craigsmitham/packs/software-engineering
-axm knowledge concepts get '@craigsmitham/knowledge/software-engineering#release-engineering/guides/direct-to-main-delivery'
+axm knowledge concepts get '@craigsmitham/knowledge/software-engineering#release-engineering/foundations/delivering-a-software-change'
 ```
 
 ## License and attribution

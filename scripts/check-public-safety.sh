@@ -154,6 +154,7 @@ expected=(
   rules/use-effect
   skills/align
   skills/assess
+  skills/delivery
   skills/devops-docs
   skills/docs
   skills/generalize
@@ -165,7 +166,6 @@ expected=(
   skills/prune
   skills/reconcile
   skills/refresh
-  skills/release-engineering
   skills/research
   skills/reuse
   skills/simplify

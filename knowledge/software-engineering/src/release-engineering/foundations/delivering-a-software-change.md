@@ -1,53 +1,42 @@
 ---
 type: Explanation
 title: Delivering a software change
-description: The developer’s job, six decisions along the way, and outcomes for shortening the time from starting a change to confirming it works for its intended users.
-tags: [jobs-to-be-done, job-map, cycle-time, release-engineering, parallel-agents]
+description: Follow one change through Implement, Land, Release, and Confirm, from the first useful check to evidence that the change works for its intended users.
+tags: [software-delivery, cycle-time, verification, release-engineering]
 status: draft
-generated: { by: codex/gpt-6, at: 2026-11-27T17:44:17Z }
+generated: { by: codex/gpt-6, at: 2026-11-27T23:48:04Z }
 ---
 
 # Delivering a software change
 
-A developer’s job is to **deliver a change to a running product and establish that it works for the people who depend on it**. Work begins when the developer takes up the change. It ends when the intended audience can use it and there is evidence of the intended behavior. A release limited to staff can answer a rollout question while delivery to customers is still pending.
+A developer or coding agent owns a change through integration on shared main. Delivery continues from a verified main revision to the intended audience. The outcome agreed in **Spec** supplies the question to answer in **Confirm**. The [software engineering lifecycle](../../software-engineering-lifecycle.md) places this work in the life of the product.
 
-Consider a solo developer or a team of three to five, each developer directing three to five agents. While one agent tests a change, another can alter a contract it relies on. Each addition to the queue can cost the developer time piecing together what was tried, what changed since, and whether anyone followed the release. The progress the developer seeks can be expressed in their voice:
+Consider an account recovery fix. A customer requests a second recovery email, then follows the link in the first. The team wants that customer to see a clear message and regain access using the current link. A passing local check, a deployed binary, and a successful recovery answer three different questions.
 
-> When several changes are underway and the product is changing underneath each one, I want each change to reach users as soon as there’s enough evidence to proceed, so I can keep work moving and give my attention to the decisions that need me.
-
-## Verification priorities
-
-Unless project instructions specify otherwise, choose among credible ways to verify a change in this order:
-
-1. **Speed.** Minimize the elapsed time to actionable feedback and to confirmed delivery. Count queueing, rework after a late failure, and delays imposed on other changes. Spending more compute is worthwhile when it meaningfully shortens that path.
-2. **Efficiency.** When the timing is comparable, choose the option that consumes less runner time, scarce environment capacity, and developer attention. Give each claim one default place to be checked and carry its evidence forward while its assumptions hold.
-3. **Consistency.** When timing and resource cost are comparable, favor reproducible results and comparable readiness judgments across agents and environments. A flaky result that takes three reruns also carries a speed and efficiency cost.
-
-Plan comprehensive coverage across the delivery cycle. A check can run later when its result will still arrive in time to act on the failure. A failure that would make a data conversion irreversible needs evidence before conversion. The project can change the ranking for a particular release or environment and specify checks that must run there.
-
-## The job map
-
-These are decisions a developer can delegate. A new observation can reopen an earlier decision. Recovery is conditional on an adverse result.
-
-| Job step | Judgment | Desired outcome |
+| Step | Decision | Evidence for the recovery fix |
 | --- | --- | --- |
-| Define a change that can ship independently | What small result would be useful, how would we recognize it, and which concurrent work does it depend on? | Reduce rework caused by discovering a dependency or misunderstood expectation late. |
-| Establish that the change behaves as intended | Where can we exercise the behavior and the failure that matters while the change is still cheap to correct? | Shorten time to actionable feedback. Reduce the chance of accepting a change whose important behavior went unexercised. |
-| Establish that it works with concurrent changes | Which assumptions have changed since the last check? Does the combined product still work? | Detect incompatibilities sooner, reduce time lost to a broken integration, and spend fewer runner-minutes rechecking unaffected behavior. |
-| Decide whether and how to release | What can advance, for which audience, and which uncertainty would justify waiting or seeking another judgment? | Reduce the time a ready change waits and limit exposure while consequential uncertainty remains. Make comparable readiness decisions for changes with equivalent evidence. |
-| Verify the result in use | What observation shows that the intended audience received the change and can complete the affected task? | Shorten time to confirmation. Reduce the chance of declaring success while users still experience the original problem. |
-| Correct an adverse result | What will contain the impact, restore the affected behavior, and let unrelated work continue? | Reduce the duration of user impact and the amount of unrelated work interrupted by recovery. |
+| **Implement** | Does a small working change produce the intended behavior? Use a checkout, worktree, or temporary branch as appropriate. | Reproduce the two-email case, make the fix, and exercise both the expired link and the current one. |
+| **Land** | Does the change still work with the software it will join? The implementer reconciles with current main, completes the repository’s integration checks, and lands the change. | Another agent changed the token issuer. Run the issuer and recovery handler together on the combined revision. Carry forward unrelated results and verify the change reached shared main. |
+| **Release** | Which artifact can reach which users? Deploy or publish the artifact from the verified main revision. Follow any scheduled release, flag, or staged rollout through exposure. | Staff can exercise the fix after deployment. Customers receive it when recovery is enabled for their accounts. Track the deployed build and audience separately. |
+| **Confirm** | Can the intended audience now complete the task? Observe the behavior in use and follow an adverse result through containment and recovery. | Check that customers who request a second email reach a successful sign-in. If traffic has yet to exercise the path, identify the signal being watched and who follows it. |
 
-## How to tell whether delivery improved
+Verification runs throughout these steps. Choose the fastest path with sufficient evidence for the decision, including the time a late failure would cost the team. With comparable timing, conserve compute, environment capacity, and developer attention. Give each failure a place where a check can detect it in time to act. Reuse a result while its inputs and the behavior it exercised still apply. Required checks and release policy come from the repository.
 
-Follow a change from **work started** to **behavior confirmed for the intended audience**. If a deployment finishes Tuesday and customers receive the feature Thursday, keep the intervening wait visible. For a change still awaiting confirmation, record where it is waiting. Use comparable changes when examining cycle time, since a copy edit and a data migration carry different uncertainties.
+## Understand a repository’s path to production
 
-Measure speed with both time to the first actionable result and time to confirmed delivery. Measure efficiency with runner-minutes per delivered change, including repeated checks. Measure consistency by looking for conflicting verdicts on equivalent inputs or different readiness decisions for equivalent changes. Use these signals to explain a delay or compare placements. A single weighted score would hide which priority decided the tradeoff.
+Follow a recent change from the implementer’s first check to its effect in use. A repository’s **path to production** includes the actual commands, hooks, CI runs, artifact, deployment targets, exposure controls, and observations along that route. A workflow file tells you when a check is configured to run. A run record tells you whether it ran, what revision it exercised, and how long the change waited. Trace the evidence that exists and label gaps in the record. [Thoughtworks on path-to-production mapping](https://www.thoughtworks.com/radar/techniques/path-to-production-mapping)
 
-Also examine what the workflow costs the developer and the people using the product:
+For each consequential check, establish **which failure it catches, which decision needs its result, what inputs and environment it exercises, and who acts on failure**. Two runs of the same command can answer different questions. A clean installation of a built package can expose a missing file that every test in the checkout had available. The [direct-to-main guide](../guides/direct-to-main-delivery.md) covers hook placement, concurrent changes, CI, deployment, and rollout.
 
-- **Developer attention.** How much time does a developer spend reconstructing readiness? A short account of the revision, observation, and unresolved decision can save another person from repeating the investigation.
-- **Interference.** How long does otherwise-ready work wait for an unrelated change, an occupied environment, or a broken integrated build? This helps distinguish slow execution from waiting for access or repair.
-- **User impact.** How often does a release require correction, and how long are users affected? Read these alongside cycle time when deciding whether a faster workflow helped.
+## See whether delivery improves
 
-The map and measures are proposed criteria. A team can examine a recent slow change and a recent failed release to find which criteria deserve attention in its repository. For decisions about check placement, integration, and rollout in a direct-to-main workflow, use [Direct-to-main delivery with parallel agents](../guides/direct-to-main-delivery.md).
+Connect the change revision to its check runs, the artifact to its release, and the release to an observation. Use existing timestamps and results where possible. Compare similar changes over time and revisit the placement of a check when a failure escapes or a queue recurs.
+
+| Quality | What to track | What a finding might mean |
+| --- | --- | --- |
+| **Speed** | Time from starting work to the first actionable result and to confirmation in use. Break out waits to land, release, and observe. Separate queue time from execution and inspect typical and slow changes. | An eight-minute CI run that waits twenty minutes for a runner offers more opportunity in the queue than in the test code. |
+| **Efficiency** | Runner-minutes per delivered change, retries on equivalent inputs, scarce environment use, and human interventions. | Parallel runners can cost more while shortening delivery. Running an identical check twice on the same artifact warrants looking for a distinct purpose. |
+| **Verification coverage** | For the changed behavior and consequential failure modes, record what was exercised in which environment before each decision. For an escaped defect, find the earliest practical point that could have detected it. | A fixture-based test passed, but a real producer changed its response. A compatibility check on the combined change would have answered the open question. |
+| **Production outcome** | Intended behavior observed, changes awaiting confirmation, deployments requiring correction, and time to recover. | If landing gets faster while recovery takes longer, include that rework in the delivery comparison. |
+
+A configuration with no run history can support a finding about a missing check or a proposed measurement. Quantifying a time saving requires a baseline and a comparable observation after the change. DORA’s change lead time runs from commit to production. Time from work started to behavior confirmed adds the implementation and observation intervals relevant to this delivery model. [DORA’s software delivery metrics](https://dora.dev/guides/dora-metrics/)
