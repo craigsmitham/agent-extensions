@@ -52,22 +52,40 @@ Resolve either through host discovery or `axm knowledge concepts get '<reference
 
 ## Assess the path to production
 
-Trace a representative recent change through the requested scope. Connect
-configuration to actual commits, check runs, artifacts, deployments, and
-observations where available. Keep a process assessment read-only. Use three
-parts for the report.
+Trace a representative change through commits, check runs, artifacts, rollout,
+and use. Keep the assessment read-only. Present the report in this order.
 
-1. **Verdict and scope.** Name the change and what the evidence covers.
-   Identify practices worth keeping and consequential delays or coverage gaps
-   where the trace supports them.
-2. **Observed path.** At each relevant step, identify what ran, on which inputs
-   and target, which decision waited, and what failure it could detect. Separate
-   queue time from execution when measured. Label configured-only steps and
-   missing observations explicitly.
-3. **Ranked findings.** Give each actionable finding a number, its evidence,
-   the effect on speed, efficiency, or coverage, and a proposed improvement
-   with a way to verify it. Show where evidence supports the current placement.
-   When a measurement would change the ranking, name it.
+1. **Overall summary.** Name the change and scope. Say what works, where the
+   evidence warrants attention first, and which outcome is still unknown.
+2. **Step summaries.** Give **Implement → Land → Release → Confirm** one
+   sentence each for an end-to-end assessment. For a focused request cover
+   the affected steps. Place a check under the decision it informs. Describe
+   what actually ran and distinguish configuration from observed results.
+3. **Findings by step.** Number findings across the report, group them under
+   their steps, and rank them within each step. A healthy step can stand on
+   its summary. For each finding show **Current** with evidence, **Acceptable**
+   with the applicable limit or condition, and **Target** with the recommended
+   result. Explain the consequence and how to verify the improvement.
+
+Compare like measures or observable states. Identify the inputs, environment,
+sample, and time window that matter. Separate queue time from execution.
+Label limits and targets **agreed** or **proposed**, with their basis. Only
+call a measured result outside tolerance against an agreed limit. State
+“no agreed limit” or “unverified” when the threshold or evidence is missing.
+Include **Stretch** only when it changes a tradeoff. Give fixed obligations
+a pass/fail result when exercised.
+
+Put selectable actions beside the findings, with unique letters and concrete
+effects. Mark one `(Recommended)` when the evidence favors it. Let the user
+reply by letter, action name, finding with a verb, a combination, or `done`.
+Use a native picker if it can be the final choice with the same step and
+finding labels. Otherwise the report itself is the menu. Wait for a selection
+before acting. Investigating a finding stays read-only. An implementation
+selection carries that finding, its baseline, target, and verification into
+**improve**. Resolve short replies against the choices actually displayed.
+
+For a worked report and guidance on choosing limits, consult
+`@craigsmitham/knowledge/software-engineering#release-engineering/guides/assessing-the-path-to-production`.
 
 ## Improve the path to production
 

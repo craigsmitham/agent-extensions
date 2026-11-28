@@ -5,6 +5,7 @@ okf_version: "0.2"
 
 - [The software engineering lifecycle](software-engineering-lifecycle.md) — Six recurring activities connect the reason for a software change to what happens when people use it.
 - [Delivering a software change](release-engineering/foundations/delivering-a-software-change.md) — Follow one change through Implement, Land, Release, and Confirm, from the first useful check to evidence that the change works for its intended users.
+- [Assessing the path to production](release-engineering/guides/assessing-the-path-to-production.md) — Trace a change through the four delivery steps, compare observed results with acceptable limits and targets, and choose which finding to act on.
 
 | Activity | What do you need to decide? | Where to start |
 | --- | --- | --- |

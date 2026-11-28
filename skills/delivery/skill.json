@@ -3,7 +3,7 @@
   "owner": "@craigsmitham",
   "type": "skill",
   "name": "delivery",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Deliver software changes through main and production, assess a repository’s path to production, or improve its speed, efficiency, and verification coverage.",
   "license": "MIT",
   "homepage": "https://github.com/craigsmitham/agent-extensions",

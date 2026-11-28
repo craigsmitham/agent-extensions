@@ -2,6 +2,8 @@
 
 ## 2026-11-27
 
+- Added [Assessing the path to production](guides/assessing-the-path-to-production.md) with an example of using agile landing zones to interpret delivery measures.
+
 - Revised the delivery model and direct-to-main guidance to trace a change from implementation through confirmed use, prioritizing speed and then efficiency among options with sufficient coverage.
 
 - Defined verification priorities, measures, and project overrides. The workflow guide compares three placements for a compatibility suite.

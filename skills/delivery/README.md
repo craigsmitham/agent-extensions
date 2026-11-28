@@ -10,7 +10,7 @@ axm install @craigsmitham/packs/software-engineering
 | --- | --- |
 | “Ship this fix.” | The implementer verifies the change, lands it, and follows the release to the requested outcome. |
 | “My checks passed before main advanced. Can this land?” | A readiness decision grounded in the intervening changes and the checks that still apply. |
-| `$delivery assess our path to production` | An evidence-backed assessment of a recent change, with ranked findings on waiting, repeated work, and uncovered failures. |
+| `$delivery assess our path to production` | An overall summary, a summary for each delivery step, and numbered findings comparing the current state with an acceptable limit and a target. Pick an action beside a finding to investigate or improve it. |
 | `$delivery improve our slow pre-push checks` | A scoped workflow improvement with a comparison of cost and verification coverage before and after. |
 
 The model can invoke delivery from an ordinary request. “Where does delivery stall?” and “Shorten the wait before publishing” also select the corresponding process work.

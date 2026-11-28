@@ -29,7 +29,7 @@ axm install @craigsmitham/packs/software-engineering
 
 Ask “Can this change land?” or “Ship this fix” and the model can invoke the **delivery** skill directly. Calling `$delivery` uses the same behavior. Use its two named modes to work on the delivery process itself.
 
-- `$delivery assess our path to production` traces a real change, reports what ran and where it waited, and ranks opportunities with supporting evidence.
+- `$delivery assess our path to production` traces a real change. Read the overall summary, scan **Implement → Land → Release → Confirm**, then choose an action beside a numbered finding. Each finding shows the current measure or state, what is acceptable, and the target for improvement. [Example assessment](https://github.com/craigsmitham/agent-extensions/blob/main/knowledge/software-engineering/src/release-engineering/guides/assessing-the-path-to-production.md#example-assessment)
 - `$delivery improve our slow pre-push checks` starts from a baseline and verifies both the time saved and the failures the revised workflow can catch.
 
 Ordinary requests such as “Where are releases waiting?” and “Speed up our pre-push checks” work too.
